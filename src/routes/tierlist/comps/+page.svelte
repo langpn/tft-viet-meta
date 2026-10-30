@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import type { PageData } from './$types';
   import HexAvatar from '$components/HexAvatar.svelte';
   import CompDetailPanel from '$components/CompDetailPanel.svelte';
@@ -16,8 +17,7 @@
   let rawQueryText = $state('');
   let selectedStyle = $state('ALL');
   let selectedSet = $state('Set 18');
-  let selectedCompId = $state<string | null>(null);
-  let showDetailModal = $state(false);
+  let selectedCompId = $state<string | null>(data.initialCompId || null);
 
   const compStyleOptions = [
     { value: 'ALL', label: 'Comp Style' },
@@ -232,26 +232,91 @@
     return map;
   });
 
-  const selectedComp = $derived.by(() => {
-    if (!selectedCompId) return null;
-    return data.comps.find((c: any) => c.id === selectedCompId || c.slug === selectedCompId) || null;
-  });
-
-  function openModal(comp: any) {
-    selectedCompId = comp.id;
-    showDetailModal = true;
+  function findComp(param: string | null) {
+    if (!param) return null;
+    const p = param.toLowerCase().trim();
+    return data.comps.find((c: any) => {
+      if (c.id === param || c.id?.toLowerCase() === p) return true;
+      if (c.slug === param || c.slug?.toLowerCase() === p) return true;
+      const titleSlug = (c.title || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      if (titleSlug === p) return true;
+      const metaSlug = (c.metaTitle || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      if (metaSlug === p) return true;
+      return false;
+    }) || null;
   }
 
-  function closeModal() {
-    showDetailModal = false;
-    selectedCompId = null;
+  const selectedComp = $derived.by(() => {
+    if (!selectedCompId) return null;
+    return findComp(selectedCompId);
+  });
+
+  function selectComp(comp: any | null) {
+    if (!comp) {
+      selectedCompId = null;
+      if (typeof window !== 'undefined') {
+        const url = new URL(window.location.href);
+        url.searchParams.delete('comp');
+        history.replaceState({}, '', url.pathname + (url.search ? url.search : ''));
+      }
+      return;
+    }
+
+    // Toggle behavior: if already open, clicking it again closes it
+    if (selectedCompId === comp.id) {
+      selectedCompId = null;
+      if (typeof window !== 'undefined') {
+        const url = new URL(window.location.href);
+        url.searchParams.delete('comp');
+        history.replaceState({}, '', url.pathname + (url.search ? url.search : ''));
+      }
+      return;
+    }
+
+    selectedCompId = comp.id;
+    if (typeof window !== 'undefined') {
+      const url = new URL(window.location.href);
+      const titleSlug = (comp.title || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      url.searchParams.set('comp', titleSlug || comp.slug || comp.id);
+      history.replaceState({}, '', url.pathname + '?' + url.searchParams.toString());
+
+      setTimeout(() => {
+        const el = document.getElementById(`comp-detail-${comp.tier}`) || document.getElementById(`tier-${comp.tier}`);
+        el?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 60);
+    }
+  }
+
+  function handlePopState() {
+    if (typeof window === 'undefined') return;
+    const compParam = new URL(window.location.href).searchParams.get('comp');
+    if (compParam) {
+      const found = findComp(compParam);
+      selectedCompId = found ? found.id : null;
+    } else {
+      selectedCompId = null;
+    }
   }
 
   function handleKeydown(e: KeyboardEvent) {
-    if (e.key === 'Escape' && showDetailModal) {
-      closeModal();
+    if (e.key === 'Escape' && selectedCompId) {
+      selectComp(null);
     }
   }
+
+  onMount(() => {
+    const compParam = new URL(window.location.href).searchParams.get('comp');
+    if (compParam) {
+      const found = findComp(compParam);
+      if (found) {
+        selectedCompId = found.id;
+        setTimeout(() => {
+          const el = document.getElementById(`comp-detail-${found.tier}`) || document.getElementById(`tier-${found.tier}`);
+          el?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 150);
+      }
+    }
+  });
 
   const tierStyles: Record<string, {
     borderColor: string;
@@ -272,7 +337,7 @@
   <title>TFT Academy · Bảng Xếp Hạng Đội Hình, Trang Bị, Lõi Nâng Cấp (Set 18)</title>
 </svelte:head>
 
-<svelte:window onkeydown={handleKeydown} />
+<svelte:window onkeydown={handleKeydown} onpopstate={handlePopState} />
 
 <div class="flex flex-col gap-6 pb-24">
   
@@ -366,110 +431,107 @@
     </div>
   </div>
 
-  <!-- MAIN: COMPS TIERLIST (Exact Replica of Screenshot 2 & 4) -->
-  <div class="flex flex-col gap-4">
+  <!-- MAIN: COMPS TIERLIST (Exact Replica of TFT Academy: Inline Expandable Panels) -->
+  <div class="flex flex-col gap-5">
       {#each tiers as t}
         {@const style = tierStyles[t]}
         {@const groups = tierGroups[t] || []}
         
         {#if groups.length > 0}
-          <div class="relative rounded-2xl bg-[#090C12] border-2 {style.borderColor} p-2 flex flex-col sm:flex-row items-stretch gap-3 shadow-xl">
+          <div id="tier-{t}" class="flex flex-col gap-3 scroll-mt-24">
             
-            <!-- Situational Pill for X Tier -->
-            {#if style.hasTag}
-              <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-sky-400 text-black font-black text-[10px] tracking-widest uppercase shadow-md">
-                {style.hasTag}
+            <!-- Shelf Box Container -->
+            <div class="relative rounded-2xl bg-[#090C12] border-2 {style.borderColor} p-2 flex flex-col sm:flex-row items-stretch gap-3 shadow-xl">
+              
+              <!-- Situational Pill for X Tier -->
+              {#if style.hasTag}
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-sky-400 text-black font-black text-[10px] tracking-widest uppercase shadow-md">
+                  {style.hasTag}
+                </div>
+              {/if}
+
+              <!-- Left Square Badge (S/A/B/C/X Tier) -->
+              <div class="w-16 sm:w-22 shrink-0 rounded-xl {style.boxBg} border {style.borderColor} flex flex-col items-center justify-center p-2.5 text-center select-none">
+                <span class="text-3xl sm:text-5xl font-black {style.textColor} leading-none tracking-tight">{t}</span>
+                <span class="text-[9px] font-black uppercase tracking-wider text-slate-300 mt-1">{style.sublabel}</span>
+              </div>
+
+              <!-- Right Shelf Area: Compact Hexagon Champions (Grouped by Champion carry, NO visible scrollbars) -->
+              <div class="{groups.length > 12 ? 'grid grid-rows-2 grid-flow-col auto-cols-max gap-3 p-2 overflow-x-auto scrollbar-none no-scrollbar min-h-[168px] items-center' : 'flex flex-wrap items-center gap-3 flex-1 p-2 overflow-x-auto scrollbar-none no-scrollbar'}">
+                {#each groups as group (group.champKey)}
+                  {@const comp = group.primaryComp}
+                  {@const isGroupSelected = selectedComp && (selectedComp.id === comp.id || group.comps.some((c: any) => c.id === selectedComp.id))}
+                  <!-- Dimming effect when search filter is active, clean highlight for matched comps & active opened comp -->
+                  <div 
+                    class="relative transition-all duration-200 cursor-pointer select-none group {isGroupSelected ? 'ring-2 ring-amber-400 shadow-xl shadow-amber-400/40 scale-105 rounded-2xl' : isFiltering ? (group.isMatch ? 'opacity-100 scale-105 ring-2 ring-amber-400 shadow-lg shadow-amber-400/25 rounded-2xl' : 'opacity-20 hover:opacity-60') : (group.isMatch ? 'opacity-100 hover:scale-110' : 'opacity-25 hover:opacity-75')}"
+                    title="{comp.title} ({comp.mainCarry?.name_vi || comp.mainCarry?.name_en || ''}){group.hasVariation ? ` (+${group.comps.length - 1} biến thể)` : ''}"
+                    onclick={() => selectComp(group.matchedComp || comp)}
+                    role="button"
+                    tabindex="0"
+                    onkeydown={(e) => { if (e.key === 'Enter') selectComp(group.matchedComp || comp); }}
+                  >
+                    {#if group.hasVariation}
+                      <!-- Stacked double-hex effect for champion variations (TFT Academy style) -->
+                      <div 
+                        class="absolute -top-1 -right-1 w-16 h-16 pointer-events-none transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"
+                        aria-hidden="true"
+                      >
+                        <div class="absolute inset-0 hex-border {costBorderColors[comp.mainCarry?.cost || 4] ?? 'bg-slate-500'} opacity-40 shadow-md"></div>
+                        <div class="absolute inset-[3px] hex-clip bg-[#090C14]"></div>
+                      </div>
+
+                      <!-- Small variation count pill -->
+                      <div class="absolute -bottom-1 -right-1 z-30 px-1 py-0.5 rounded-md bg-black/90 border border-amber-400/60 text-[9px] font-black text-amber-300 flex items-center gap-0.5 shadow-md pointer-events-none">
+                        <Layers class="w-2.5 h-2.5 text-amber-400" />
+                        <span>{group.comps.length}</span>
+                      </div>
+                    {/if}
+
+                    <HexAvatar 
+                      id={comp.mainCarry?.id}
+                      name={comp.mainCarry?.name_en || comp.mainCarry?.name}
+                      nameVi={comp.mainCarry?.name_vi || comp.mainCarry?.name_en || comp.mainCarry?.name}
+                      iconUrl={comp.mainCarry?.icon}
+                      cost={comp.mainCarry?.cost || 4}
+                      starLevel={1}
+                      showStars={false}
+                      items={[]} 
+                      showItems={false}
+                      trend={comp.trend}
+                      sticker={comp.sticker}
+                      situationalTier={comp.situationalTier}
+                      coreBadges={comp.coreBadges || []}
+                      size="md"
+                    />
+
+                    <!-- Active downward chevron indicator when this champion is currently expanded below -->
+                    {#if isGroupSelected}
+                      <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3.5 h-3.5 bg-amber-400 rotate-45 rounded-xs z-40 shadow-md pointer-events-none"></div>
+                    {/if}
+                  </div>
+                {/each}
+              </div>
+
+            </div>
+
+            <!-- INLINE DROPDOWN DETAIL PANEL: Expands directly below this shelf row! (Matching TFT Academy exactly) -->
+            {#if selectedComp && selectedComp.tier === t}
+              <div 
+                id="comp-detail-{t}" 
+                class="w-full mt-1 rounded-2xl border-2 {style.borderColor} overflow-hidden shadow-2xl transition-all duration-300 animate-in fade-in slide-in-from-top-3"
+              >
+                <CompDetailPanel 
+                  comp={selectedComp} 
+                  allComps={data.comps}
+                  onclose={() => selectComp(null)} 
+                  onselectcomp={(c) => selectComp(c)}
+                />
               </div>
             {/if}
-
-            <!-- Left Square Badge (S/A/B/C/X Tier) -->
-            <div class="w-16 sm:w-22 shrink-0 rounded-xl {style.boxBg} border {style.borderColor} flex flex-col items-center justify-center p-2.5 text-center select-none">
-              <span class="text-3xl sm:text-5xl font-black {style.textColor} leading-none tracking-tight">{t}</span>
-              <span class="text-[9px] font-black uppercase tracking-wider text-slate-300 mt-1">{style.sublabel}</span>
-            </div>
-
-            <!-- Right Shelf Area: Compact Hexagon Champions (Grouped by Champion carry, NO visible scrollbars) -->
-            <div class="{groups.length > 12 ? 'grid grid-rows-2 grid-flow-col auto-cols-max gap-3 p-2 overflow-x-auto scrollbar-none no-scrollbar min-h-[168px] items-center' : 'flex flex-wrap items-center gap-3 flex-1 p-2 overflow-x-auto scrollbar-none no-scrollbar'}">
-              {#each groups as group (group.champKey)}
-                {@const comp = group.primaryComp}
-                <!-- Dimming effect when search filter is active, clean highlight for matched comps -->
-                <div 
-                  class="relative transition-all duration-200 cursor-pointer select-none group {isFiltering ? (group.isMatch ? 'opacity-100 scale-105 ring-2 ring-amber-400 shadow-lg shadow-amber-400/25 rounded-2xl' : 'opacity-20 hover:opacity-60') : (group.isMatch ? 'opacity-100 hover:scale-110' : 'opacity-25 hover:opacity-75')}"
-                  title="{comp.title} ({comp.mainCarry?.name_vi || comp.mainCarry?.name_en || ''}){group.hasVariation ? ` (+${group.comps.length - 1} biến thể)` : ''}"
-                  onclick={() => openModal(group.matchedComp || comp)}
-                  role="button"
-                  tabindex="0"
-                  onkeydown={(e) => { if (e.key === 'Enter') openModal(group.matchedComp || comp); }}
-                >
-                  {#if group.hasVariation}
-                    <!-- Stacked double-hex effect for champion variations (TFT Academy style) -->
-                    <div 
-                      class="absolute -top-1 -right-1 w-16 h-16 pointer-events-none transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"
-                      aria-hidden="true"
-                    >
-                      <div class="absolute inset-0 hex-border {costBorderColors[comp.mainCarry?.cost || 4] ?? 'bg-slate-500'} opacity-40 shadow-md"></div>
-                      <div class="absolute inset-[3px] hex-clip bg-[#090C14]"></div>
-                    </div>
-
-                    <!-- Small variation count pill -->
-                    <div class="absolute -bottom-1 -right-1 z-30 px-1 py-0.5 rounded-md bg-black/90 border border-amber-400/60 text-[9px] font-black text-amber-300 flex items-center gap-0.5 shadow-md pointer-events-none">
-                      <Layers class="w-2.5 h-2.5 text-amber-400" />
-                      <span>{group.comps.length}</span>
-                    </div>
-                  {/if}
-
-                  <HexAvatar 
-                    id={comp.mainCarry?.id}
-                    name={comp.mainCarry?.name_en || comp.mainCarry?.name}
-                    nameVi={comp.mainCarry?.name_vi || comp.mainCarry?.name_en || comp.mainCarry?.name}
-                    iconUrl={comp.mainCarry?.icon}
-                    cost={comp.mainCarry?.cost || 4}
-                    starLevel={1}
-                    showStars={false}
-                    items={[]} 
-                    showItems={false}
-                    trend={comp.trend}
-                    sticker={comp.sticker}
-                    situationalTier={comp.situationalTier}
-                    coreBadges={comp.coreBadges || []}
-                    size="md"
-                  />
-                </div>
-              {/each}
-            </div>
 
           </div>
         {/if}
       {/each}
     </div>
-
-
-
-  <!-- FLOATING POPUP / OVERLAY MODAL FOR COMP DETAILS -->
-  {#if showDetailModal && selectedComp}
-    <!-- svelte-ignore a11y_click_events_have_key_events -->
-    <div 
-      class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto"
-      onclick={closeModal}
-      role="dialog"
-      aria-modal="true"
-      tabindex="-1"
-    >
-      <!-- svelte-ignore a11y_click_events_have_key_events -->
-      <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-      <div 
-        class="relative w-full max-w-6xl my-auto animate-in zoom-in-95 duration-200"
-        onclick={(e) => e.stopPropagation()}
-        role="document"
-      >
-        <CompDetailPanel 
-          comp={selectedComp} 
-          allComps={data.comps}
-          onclose={closeModal} 
-          onselectcomp={(c) => (selectedCompId = c.id)}
-        />
-      </div>
-    </div>
-  {/if}
 
 </div>

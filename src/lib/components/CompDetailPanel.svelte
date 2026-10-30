@@ -220,8 +220,8 @@
 </script>
 
 {#if comp}
-  <!-- TFT Academy Exact Replica Modal Container (Ultra Dark Jet-Black Palette) -->
-  <div class="w-full max-w-6xl rounded-2xl bg-[#0B0D12] border border-[#1C202B] shadow-2xl overflow-hidden flex flex-col lg:flex-row animate-in fade-in zoom-in-95 duration-200">
+  <!-- TFT Academy Exact Replica Container (Ultra Dark Jet-Black Palette, Full Width Inline) -->
+  <div class="w-full rounded-2xl bg-[#0B0D12] border border-[#1C202B] shadow-2xl overflow-hidden flex flex-col lg:flex-row">
     
     <!-- LEFT COLUMN: Core Carry Showcase, Traits, Augments & Priority (32% width) -->
     <div class="lg:w-[32%] bg-[#0E1118] border-b lg:border-b-0 lg:border-r border-[#1C202B] p-5 sm:p-6 flex flex-col gap-5 select-none">

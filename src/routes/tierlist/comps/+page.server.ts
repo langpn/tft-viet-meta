@@ -13,9 +13,25 @@ export const load: PageServerLoad = async ({ url }) => {
     throw redirect(307, '/tierlist/augments');
   }
 
+  const compParam = url.searchParams.get('comp');
+  let initialComp = null;
+  if (compParam) {
+    const p = compParam.toLowerCase().trim();
+    initialComp = (compsData || []).find((c: any) => {
+      if (c.id === compParam || c.id?.toLowerCase() === p) return true;
+      if (c.slug === compParam || c.slug?.toLowerCase() === p) return true;
+      const titleSlug = (c.title || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      if (titleSlug === p) return true;
+      const metaSlug = (c.metaTitle || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      if (metaSlug === p) return true;
+      return false;
+    }) || null;
+  }
+
   return {
     comps: compsData || [],
     items: itemsData || { craftables: {}, radiants: {}, artifacts: {}, emblems: {} },
-    augments: augmentsData || { silver: {}, gold: {}, prismatic: {} }
+    augments: augmentsData || { silver: {}, gold: {}, prismatic: {} },
+    initialCompId: initialComp ? initialComp.id : null
   };
 };
