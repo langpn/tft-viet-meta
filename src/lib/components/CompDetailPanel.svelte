@@ -4,6 +4,8 @@
   import { resolveAugmentIcon, resolveItemIcon, resolveTraitIcon, resolveChampionIcon } from '$lib/utils/assets';
   import { translatePlaystyle, translateDifficulty, translateStrategyTip } from '$lib/utils/strategy-translator';
   import { showTooltip, hideTooltip } from '$lib/utils/tooltip-store.svelte';
+  import { settingsStore } from '$lib/utils/settings-store.svelte';
+  import newSetData from '$data/academy-new-set.json';
   import { Copy, X, Check, ExternalLink, Coins, Package, Swords, ChevronRight } from 'lucide-svelte';
 
   interface Props {
@@ -16,7 +18,69 @@
   let { comp, allComps = [], onclose, onselectcomp }: Props = $props();
 
   let copied = $state(false);
-  let showNames = $state(false);
+
+  // Pre-index champions and traits from Set 18 data
+  const champMap = new Map<string, any>();
+  for (const c of newSetData.champions || []) {
+    if (c.id) {
+      champMap.set(c.id, c);
+      champMap.set(c.id.toLowerCase(), c);
+    }
+    if (c.name_en) champMap.set(c.name_en.toLowerCase(), c);
+    if (c.name_vi) champMap.set(c.name_vi.toLowerCase(), c);
+  }
+
+  const traitMap = new Map<string, any>();
+  for (const t of newSetData.traits || []) {
+    if (t.id) {
+      traitMap.set(t.id, t);
+      traitMap.set(t.id.toLowerCase(), t);
+    }
+    if (t.name_en) traitMap.set(t.name_en.toLowerCase(), t);
+    if (t.name_vi) traitMap.set(t.name_vi.toLowerCase(), t);
+  }
+
+  const FALLBACK_COSTS: Record<string, number> = {
+    gromp: 2,
+    da_gromp18_ap: 2,
+    sentinel: 4,
+    da_sentinel18: 4,
+    'blue golem': 1,
+    golem: 1,
+    tft_bluegolem: 1,
+    lux: 5,
+    da_lux18_base: 5,
+    ivern: 5,
+    da_18_ivern: 5,
+    maokai: 5,
+    da_18_maokai: 5,
+    'elder dragon': 5,
+    elderdragon: 5
+  };
+
+  function resolveUnitCost(unit: any): number {
+    const id = (unit?.id || '').toLowerCase();
+    const name = (unit?.name_en || unit?.name || '').toLowerCase();
+
+    if (FALLBACK_COSTS[id] !== undefined) return FALLBACK_COSTS[id];
+    if (FALLBACK_COSTS[name] !== undefined) return FALLBACK_COSTS[name];
+
+    const champ = champMap.get(id) || champMap.get(name);
+    if (champ?.cost !== undefined) return champ.cost;
+
+    if (unit?.cost !== undefined && unit.cost !== null && unit.cost !== 0) {
+      return unit.cost;
+    }
+
+    return 1;
+  }
+
+  const traitTierClasses: Record<string, string> = {
+    bronze: 'bg-[#A86445] text-black',
+    silver: 'bg-[#A3B3C2] text-black',
+    gold: 'bg-[#E5A83B] text-black',
+    prismatic: 'bg-gradient-to-r from-purple-400 to-pink-400 text-black'
+  };
 
   function copyCompCode() {
     if (typeof navigator !== 'undefined' && comp?.title) {
@@ -26,17 +90,87 @@
     }
   }
 
-  // Derive variation tabs (sharing same main champion carry, exactly like TFT Academy Screenshot 4)
+  // Derive variation tabs (sharing same main champion carry and same tier, matching Screenshot 2)
   const variationComps = $derived.by(() => {
     if (!comp?.mainCarry?.id || !allComps || allComps.length === 0) return [comp];
-    const vars = allComps.filter((c: any) => c.mainCarry?.id === comp.mainCarry?.id);
+    const vars = allComps.filter((c: any) => c.mainCarry?.id === comp.mainCarry?.id && c.tier === comp.tier);
     return vars.length > 0 ? vars : [comp];
   });
 
-  // Derive trait count badges from comp.traits or board
+  // Derive active trait badges (matching Screenshot 3: compact colored pills under playstyle)
   const traits = $derived.by(() => {
-    if (comp?.traits && comp.traits.length > 0) return comp.traits;
-    return [];
+    if (comp?.traits && Array.isArray(comp.traits) && comp.traits.length > 0 && comp.traits[0].count) {
+      return comp.traits;
+    }
+
+    const units = finalChampions && finalChampions.length > 0 ? finalChampions : (comp?.board || []);
+    if (!units || units.length === 0) return [];
+
+    const traitCounts = new Map<string, number>();
+    const seenChamps = new Set<string>();
+
+    for (const u of units) {
+      if (!u || !u.id) continue;
+      const champ = champMap.get(u.id) || champMap.get(u.id.toLowerCase()) || champMap.get((u.name_en || u.name || '').toLowerCase());
+      if (!champ) continue;
+
+      if (seenChamps.has(champ.id)) continue;
+      seenChamps.add(champ.id);
+
+      for (const t of champ.traits || []) {
+        const traitDef = traitMap.get(t.id) || traitMap.get(t.id?.toLowerCase()) || traitMap.get((t.name_en || t.name || '').toLowerCase());
+        const traitId = traitDef ? traitDef.id : t.id;
+        traitCounts.set(traitId, (traitCounts.get(traitId) || 0) + 1);
+      }
+    }
+
+    const activeList: any[] = [];
+    for (const [traitId, count] of traitCounts.entries()) {
+      const tDef = traitMap.get(traitId) || traitMap.get(traitId.toLowerCase());
+      if (!tDef || !tDef.breakpoints || tDef.breakpoints.length === 0) continue;
+
+      let tierIndex = -1;
+      for (let i = tDef.breakpoints.length - 1; i >= 0; i--) {
+        if (tDef.breakpoints[i] > 0 && count >= tDef.breakpoints[i]) {
+          tierIndex = i;
+          break;
+        }
+      }
+
+      if (tierIndex >= 0) {
+        const colorCode = tDef.colors ? tDef.colors[tierIndex] : 1;
+        let tier: 'bronze' | 'silver' | 'gold' | 'prismatic' = 'bronze';
+        if (colorCode >= 6) {
+          tier = 'prismatic';
+        } else if (colorCode === 4 || colorCode === 5) {
+          tier = 'gold';
+        } else if (colorCode === 2 || colorCode === 3) {
+          tier = 'silver';
+        } else {
+          tier = 'bronze';
+        }
+
+        activeList.push({
+          id: tDef.id,
+          name_en: tDef.name_en,
+          name_vi: tDef.name_vi,
+          icon: tDef.icon,
+          count,
+          tier,
+          colorCode,
+          minUnits: tDef.breakpoints[tierIndex]
+        });
+      }
+    }
+
+    // Sort: highest count first, then highest tier
+    const tierWeight: Record<string, number> = { prismatic: 4, gold: 3, silver: 2, bronze: 1 };
+    activeList.sort((a, b) => {
+      if (b.count !== a.count) return b.count - a.count;
+      return (tierWeight[b.tier] || 0) - (tierWeight[a.tier] || 0);
+    });
+
+    return activeList;
   });
 
   // Derive Item Priority list (directly from official TFT Academy comp.carousel)
@@ -124,20 +258,20 @@
           </span>
         </div>
 
-        <!-- Trait Badges Row (Matching Screenshot 4) -->
+        <!-- Trait Badges Row (Matching Screenshot 3) -->
         {#if traits.length > 0}
           <div class="flex flex-wrap items-center justify-center gap-1.5 mt-3 pt-3 border-t border-white/5 w-full">
             {#each traits as trait}
               {@const tIcon = resolveTraitIcon(trait.icon, trait.id)}
               <div 
-                class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#161B26] border border-white/10 text-xs font-bold text-slate-200 shadow-sm hover:border-amber-400 cursor-pointer transition-colors"
-                onmouseenter={(e) => showTooltip({ type: 'trait', id: trait.id, name: trait.name_vi || trait.name }, e.currentTarget)}
+                class="flex items-center gap-1 px-1.5 py-0.5 rounded font-black text-xs shadow-sm cursor-pointer hover:scale-110 transition-transform {traitTierClasses[trait.tier] || traitTierClasses.bronze}"
+                onmouseenter={(e) => showTooltip({ type: 'trait', id: trait.id, name: trait.name_vi }, e.currentTarget)}
                 onmouseleave={() => hideTooltip()}
               >
                 {#if tIcon}
-                  <img src={tIcon} alt="" class="w-4 h-4 object-contain" />
+                  <img src={tIcon} alt="" class="w-3.5 h-3.5 object-contain brightness-0" />
                 {/if}
-                <span class="font-extrabold text-[11px]">{trait.count || ''} {trait.name_vi || trait.name}</span>
+                <span class="text-[11px] font-black leading-none">{trait.count}</span>
               </div>
             {/each}
           </div>
@@ -270,7 +404,7 @@
                 items={unit.items}
                 showItems={true}
                 size="md"
-                showName={showNames}
+                showName={settingsStore.showNames}
               />
             {/each}
           </div>
@@ -294,7 +428,7 @@
                   iconUrl={u.icon}
                   cost={u.cost}
                   size="sm"
-                  showName={showNames}
+                  showName={settingsStore.showNames}
                 />
               {/each}
             {:else}
@@ -335,14 +469,15 @@
           <div class="flex flex-wrap items-center justify-center gap-2 pt-1">
             {#if comp.maxCap && comp.maxCap.length > 0}
               {#each comp.maxCap.slice(0, 3) as cap}
+                {@const unitCost = resolveUnitCost(cap)}
                 <HexAvatar 
                   id={cap.id}
                   name={cap.name_en || cap.name}
                   nameVi={cap.name_vi || cap.name_en || cap.name}
                   iconUrl={cap.icon}
-                  cost={cap.cost || 5}
+                  cost={unitCost}
                   size="sm"
-                  showName={showNames}
+                  showName={settingsStore.showNames}
                 />
               {/each}
             {:else}
@@ -407,10 +542,12 @@
         </div>
       </div>
 
-      <!-- Tips Section (Matching Screenshot 4: General Advice + 3 Stage Cards) -->
+      <!-- Tips Section (Matching Screenshot 2 exactly!) -->
       <div class="flex flex-col gap-3 pt-2">
-        <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">
-          Tips
+        <div class="flex items-center justify-center">
+          <span class="px-5 py-1 rounded-full bg-[#141824] border border-white/10 text-xs font-black text-slate-300 uppercase tracking-widest shadow-sm">
+            Tips
+          </span>
         </div>
 
         <!-- General Tip Card -->
@@ -424,10 +561,12 @@
         {#if comp.tips && Array.isArray(comp.tips) && comp.tips.length > 0}
           <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
             {#each comp.tips as step}
-              <div class="p-4 rounded-xl bg-[#10131B] border border-[#1D2230] flex flex-col gap-2 shadow-md">
-                <span class="text-xs font-black text-amber-400 uppercase tracking-wider text-center border-b border-white/5 pb-1.5">
-                  {step.stage}
-                </span>
+              <div class="p-4 rounded-xl bg-[#10131B] border border-[#1D2230] flex flex-col gap-2.5 shadow-md">
+                <div class="flex items-center justify-center">
+                  <span class="px-4 py-0.5 rounded-full bg-[#141824] border border-white/10 text-[11px] font-black text-slate-300 uppercase tracking-wider">
+                    {step.stage === 'Stage 2' ? 'Giai đoạn 2' : step.stage === 'Stage 3' ? 'Giai đoạn 3' : step.stage === 'Stage 4' ? 'Giai đoạn 4' : step.stage}
+                  </span>
+                </div>
                 <p class="text-xs text-slate-300 leading-relaxed font-normal">
                   {translateStrategyTip(step.tip)}
                 </p>
@@ -451,7 +590,7 @@
           <span>Show names</span>
           <input 
             type="checkbox" 
-            bind:checked={showNames}
+            bind:checked={settingsStore.showNames}
             class="toggle-checkbox w-9 h-5 rounded-full bg-slate-700 checked:bg-amber-400 transition-colors cursor-pointer appearance-none relative before:content-[''] before:absolute before:top-0.5 before:left-0.5 before:w-4 before:h-4 before:rounded-full before:bg-white before:transition-transform checked:before:translate-x-4"
           />
         </label>

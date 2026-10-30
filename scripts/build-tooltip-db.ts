@@ -59,11 +59,30 @@ for (const [k, v] of Object.entries(cdragVi.setData || {})) {
     }
   }
 }
-for (const t of cdragVi.setData?.['18']?.traits || []) {
+const set18TraitsVi = cdragVi.sets?.['18']?.traits || [];
+const set18TraitsEn = cdragEn.sets?.['18']?.traits || [];
+
+for (const t of set18TraitsVi) {
   if (t.name && t.icon) {
     const clean = cleanIcon(t.icon);
     traitIconMap.set(t.name.toLowerCase().trim(), clean);
     if (t.apiName) traitIconMap.set(t.apiName.toLowerCase().trim(), clean);
+  }
+}
+for (const t of set18TraitsEn) {
+  if (t.name && t.icon) {
+    const clean = cleanIcon(t.icon);
+    traitIconMap.set(t.name.toLowerCase().trim(), clean);
+    if (t.apiName) traitIconMap.set(t.apiName.toLowerCase().trim(), clean);
+  }
+}
+for (const acTrait of academyTraits) {
+  const match = set18TraitsVi.find((x: any) => x.apiName === acTrait.apiName) ||
+                set18TraitsEn.find((x: any) => x.apiName === acTrait.apiName);
+  if (match?.icon) {
+    const clean = cleanIcon(match.icon);
+    traitIconMap.set(acTrait.name.toLowerCase().trim(), clean);
+    if (acTrait.apiName) traitIconMap.set(acTrait.apiName.toLowerCase().trim(), clean);
   }
 }
 
@@ -87,9 +106,23 @@ for (const cVi of set18ChampsVi) {
 
   // In official TFT in-game client, champions ALWAYS display international names
   // (e.g. Master Yi, Gromp, Krug, Murkwolf, Brambleback, Sentry, Sentinel, Elder Dragon)
-  const name_en = cEn.name || acChamp?.name || apiName;
+  let name_en = cEn.name || acChamp?.name || apiName;
+  if (apiName === 'TFT_BlueGolem') {
+    name_en = 'Blue Golem';
+  }
   const name_vi = name_en;
-  const cost = acChamp?.cost || cVi.cost || 1;
+  let cost = acChamp?.cost || cVi.cost || 1;
+
+  // Accurate champion costs (Gromp=2, Blue Golem=1, Lux=5, Ivern=5, Maokai=5, Taric=5, Elder Dragon=5)
+  const cleanId = apiName.replace(/^DA_18_/, '').replace(/^DA_/, '').replace(/18$/, '');
+  const costLookup = name_en.toLowerCase().trim();
+  if (costLookup === 'gromp' || cleanId.toLowerCase() === 'gromp') cost = 2;
+  else if (costLookup === 'blue golem' || costLookup === 'golem' || apiName === 'TFT_BlueGolem') cost = 1;
+  else if (costLookup === 'lux' || cleanId.toLowerCase().startsWith('lux')) cost = 5;
+  else if (costLookup === 'ivern' || cleanId.toLowerCase() === 'ivern') cost = 5;
+  else if (costLookup === 'maokai' || cleanId.toLowerCase() === 'maokai') cost = 5;
+  else if (costLookup === 'taric' || cleanId.toLowerCase() === 'taric') cost = 5;
+  else if (costLookup === 'elder dragon' || cleanId.toLowerCase().includes('elderdragon') || apiName.includes('ElderDragon')) cost = 5;
 
   // Determine Role (matching TFT Academy)
   let role_en = acChamp?.role || 'Magic Caster';
@@ -157,11 +190,20 @@ for (const cVi of set18ChampsVi) {
   championsDb[apiName] = champData;
   championsDb[apiName.toLowerCase()] = champData;
   if (acChamp?.id) championsDb[acChamp.id] = champData;
-  const cleanId = apiName.replace(/^DA_18_/, '').replace(/^DA_/, '').replace(/18$/, '');
   championsDb[cleanId] = champData;
   championsDb[cleanId.toLowerCase()] = champData;
   championsDb[name_en.toLowerCase()] = champData;
   championsDb[name_vi.toLowerCase()] = champData;
+
+  if (apiName === 'TFT_BlueGolem') {
+    championsDb['blue golem'] = champData;
+    championsDb['bluegolem'] = champData;
+    championsDb['golem'] = champData;
+  }
+  if (name_en.toLowerCase() === 'elder dragon' || apiName.includes('ElderDragon')) {
+    championsDb['elder dragon'] = champData;
+    championsDb['elderdragon'] = champData;
+  }
 }
 
 // 1.1 Index any remaining Academy champions (summons, flex units, etc.)
@@ -169,10 +211,19 @@ for (const acChamp of academyChamps) {
   if (championsDb[acChamp.apiName] || (acChamp.id && championsDb[acChamp.id])) continue;
 
   const apiName = acChamp.apiName;
-  const name_en = acChamp.name || apiName;
+  let name_en = acChamp.name || apiName;
+  if (apiName === 'TFT_BlueGolem') name_en = 'Blue Golem';
   const name_vi = name_en;
 
-  const cost = acChamp.cost || 1;
+  let cost = acChamp.cost || 1;
+  const costLookup = name_en.toLowerCase().trim();
+  if (costLookup === 'gromp') cost = 2;
+  else if (costLookup === 'blue golem' || costLookup === 'golem' || apiName === 'TFT_BlueGolem') cost = 1;
+  else if (costLookup === 'lux') cost = 5;
+  else if (costLookup === 'ivern') cost = 5;
+  else if (costLookup === 'maokai') cost = 5;
+  else if (costLookup === 'taric') cost = 5;
+  else if (costLookup === 'elder dragon' || apiName.includes('ElderDragon')) cost = 5;
   const role_en = acChamp.role || 'Tank';
   const role_vi = role_en === 'Tank' ? 'Đỡ Đòn' : 'Triệu Hồi';
 
@@ -228,14 +279,42 @@ const allCdragItemsEn = cdragEn.items || [];
 
 for (const acItem of academyItems) {
   const apiName = acItem.apiName;
-  const cVi = allCdragItemsVi.find((x: any) => 
-    x.apiName === apiName || 
-    x.apiName === `TFT_Item_${apiName.replace('DA_', '').replace('Artifact_', 'Artifact_')}` ||
-    x.name?.toLowerCase() === acItem.name?.toLowerCase()
-  ) || {};
 
-  const name_en = acItem.name || cVi.name || apiName;
+  // 1. Prioritize exact apiName match
+  let cVi = allCdragItemsVi.find((x: any) => x.apiName === apiName);
+  
+  // For DA_RedBuff, do NOT fall back to TFT_Item_RedBuff (which is Sunfire Cape / Áo Choàng Lửa in legacy Riot IDs)
+  const isRedBuff = apiName === 'DA_RedBuff' || acItem.name === 'Red Buff';
+  const isRedBuffRadiant = apiName === 'DA_RedBuffRadiant' || acItem.name === 'Radiant Red Buff';
+
+  let fallbackVi: any = null;
+  if (isRedBuff) {
+    fallbackVi = allCdragItemsVi.find((x: any) => x.apiName === 'TFT_Item_RapidFireCannon');
+  } else if (isRedBuffRadiant) {
+    fallbackVi = allCdragItemsVi.find((x: any) => x.apiName === 'TFT5_Item_RapidFirecannonRadiant');
+  } else {
+    fallbackVi = allCdragItemsVi.find((x: any) => 
+      x.apiName === `TFT_Item_${apiName.replace('DA_', '').replace('Artifact_', 'Artifact_')}` ||
+      x.name?.toLowerCase() === acItem.name?.toLowerCase()
+    );
+  }
+
+  if (!cVi) {
+    cVi = fallbackVi || {};
+  }
+
+  let name_en = acItem.name || cVi.name || apiName;
   let name_vi = cVi.name || name_en;
+
+  // Red Buff explicit fix: DA_RedBuff must be "Bùa Đỏ" / "Red Buff"
+  if (isRedBuff) {
+    name_vi = 'Bùa Đỏ';
+    name_en = 'Red Buff';
+  } else if (isRedBuffRadiant) {
+    name_vi = 'Bùa Đỏ Ánh Sáng';
+    name_en = 'Radiant Red Buff';
+  }
+
   // If item is an Ornn Artifact, the in-game client retains international names
   // (e.g. Mittens, Silvermere Dawn, Fishbones, Flickerblades, Dawncore, Trenchcoat)
   if (acItem.type === 'ornns') {
@@ -245,7 +324,7 @@ for (const acItem of academyItems) {
   // Stats formatting
   const stats: Record<string, string> = {};
   const acStats = acItem.stats || {};
-  const cEffects = cVi.effects || {};
+  const cEffects = { ...(fallbackVi?.effects || {}), ...(cVi.effects || {}) };
 
   function normalizePercent(val: any): number {
     if (val === undefined || val === null) return 0;
@@ -268,9 +347,11 @@ for (const acItem of academyItems) {
   }
 
   // Descriptions: Strip {{TFT_Keyword_*}}
-  let desc_vi = cleanText(interpolateDescription(cVi.desc, cEffects));
+  const rawItemDesc = cVi.desc || fallbackVi?.desc;
+  let desc_vi = cleanText(interpolateDescription(rawItemDesc, cEffects));
   if (!desc_vi || desc_vi.trim() === '') {
     desc_vi = cleanText(acItem.description)
+      .replace(/Attacks and Abilities (\d+)% Burn and (\d+)% Wound enemies for (\d+) seconds\.?/gi, 'Đòn đánh và kỹ năng gây $1% Thiêu Đốt và $2% Vết Thương Sâu lên kẻ địch trong $3 giây.')
       .replace(/\+10% Attack Damage/gi, '+10% Sức Mạnh Công Kích')
       .replace(/\+10% Attack Speed/gi, '+10% Tốc Độ Đánh')
       .replace(/\+10% Ability Power/gi, '+10% Sức Mạnh Phép Thuật')
@@ -298,7 +379,7 @@ for (const acItem of academyItems) {
       .replace(/While below 50% Health, double the Omnivamp/gi, 'Khi còn dưới 50% Máu, nhận gấp đôi lượng Hút Máu Toàn Phần')
       .replace(/Heal the lowest percent Health ally for (\d+)% of damage dealt/gi, 'Hồi máu cho đồng minh thấp Máu nhất bằng $1% lượng sát thương gây ra');
   }
-  let desc_en = cleanText(acItem.description || interpolateDescription(cVi.desc, cEffects));
+  let desc_en = cleanText(acItem.description || interpolateDescription(rawItemDesc, cEffects));
 
   // Recipe Components
   const recipe = (acItem.composition || []).map((compApi: string) => {
@@ -337,7 +418,7 @@ for (const acItem of academyItems) {
   const pbIcon = acItem.icon && acItem.collectionId && acItem.id
     ? `https://api.tftacademy.com/api/files/${acItem.collectionId}/${acItem.id}/${acItem.icon}`
     : '';
-  const cdIcon = cleanIcon(cVi.icon);
+  const cdIcon = cleanIcon(cVi.icon) || cleanIcon(fallbackVi?.icon);
   const icon = cdIcon || pbIcon;
 
   const itemData = {
@@ -453,16 +534,27 @@ const traitsDb: Record<string, any> = {};
 
 for (const acTrait of academyTraits) {
   const apiName = acTrait.apiName;
-  const cVi = cdragVi.setData?.['18']?.traits?.find((x: any) => x.apiName === apiName || x.name?.toLowerCase() === acTrait.name?.toLowerCase()) || {};
+  const cVi = set18TraitsVi.find((x: any) => 
+    x.apiName === apiName || 
+    x.apiName?.toLowerCase() === apiName?.toLowerCase() ||
+    x.name?.toLowerCase() === acTrait.name?.toLowerCase()
+  ) || {};
+  const cEn = set18TraitsEn.find((x: any) =>
+    x.apiName === apiName ||
+    x.apiName?.toLowerCase() === apiName?.toLowerCase() ||
+    x.name?.toLowerCase() === acTrait.name?.toLowerCase()
+  ) || {};
 
-  const name_en = acTrait.name || cVi.name || apiName;
+  const name_en = acTrait.name || cEn.name || apiName;
   const name_vi = cVi.name || name_en;
 
   const desc_vi = cleanText(interpolateDescription(cVi.desc || acTrait.description, cVi.effects || {}));
-  const desc_en = cleanText(acTrait.description || interpolateDescription(cVi.desc, cVi.effects || {}));
+  const desc_en = cleanText(acTrait.description || interpolateDescription(cEn.desc || cVi.desc, cVi.effects || {}));
 
-  const realIcon = traitIconMap.get(name_vi.toLowerCase().trim()) || 
+  const realIcon = cleanIcon(cVi.icon) || 
+                   traitIconMap.get(name_vi.toLowerCase().trim()) || 
                    traitIconMap.get(name_en.toLowerCase().trim()) || 
+                   traitIconMap.get(apiName.toLowerCase().trim()) ||
                    `assets/ux/traiticons/trait_icon_18_${name_en.toLowerCase().replace(/[^a-z0-9]/g, '')}.png`;
 
   const traitData = {
@@ -480,6 +572,9 @@ for (const acTrait of academyTraits) {
   if (acTrait.id) traitsDb[acTrait.id] = traitData;
   traitsDb[name_en.toLowerCase()] = traitData;
   traitsDb[name_vi.toLowerCase()] = traitData;
+  const cleanId = apiName.replace(/^DA_18_/, '').replace(/^DA_/, '').replace(/18$/, '');
+  traitsDb[cleanId] = traitData;
+  traitsDb[cleanId.toLowerCase()] = traitData;
 }
 
 const fullDb = {

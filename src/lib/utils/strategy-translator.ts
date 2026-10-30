@@ -28,6 +28,20 @@ export function translateDifficulty(diff?: string): string {
 }
 
 const grammarPatterns: Array<[RegExp, string]> = [
+  [/Only take Phoenix Primal buff if ahead\.? Otherwise, Execute \/ Healing Primal\.?/gi, 'Chỉ lấy bùa Nguyên Thủy Phượng Hoàng nếu đang dẫn trước; nếu không hãy chọn Kết Liễu hoặc Hồi Máu.'],
+  [/Only take Phoenix Primal buff if ahead/gi, 'Chỉ lấy bùa Nguyên Thủy Phượng Hoàng nếu đang dẫn trước'],
+  [/Otherwise, Execute \/ Healing Primal/gi, 'nếu không hãy chọn Kết Liễu hoặc Hồi Máu'],
+  [/Phoenix Primal buff/gi, 'bùa Nguyên Thủy Phượng Hoàng'],
+  [/Execute \/ Healing Primal/gi, 'Kết Liễu hoặc Hồi Máu'],
+  [/Turtle Primal buff/gi, 'bùa Nguyên Thủy Rùa'],
+  [/Turtle Primal/gi, 'Nguyên Thủy Rùa'],
+  [/Execute Primal/gi, 'Nguyên Thủy Kết Liễu'],
+  [/Healing Primal/gi, 'Nguyên Thủy Hồi Máu'],
+  [/Phoenix Primal/gi, 'Nguyên Thủy Phượng Hoàng'],
+  [/tiger primal buff/gi, 'bùa Nguyên Thủy Hổ'],
+  [/Primal buff/gi, 'bùa Nguyên Thủy'],
+  [/Primal/gi, 'Nguyên Thủy'],
+
   [/Only play from early win streak and lots of gold/gi, 'Chỉ nên chơi khi có chuỗi thắng sớm và lượng vàng dồi dào'],
   [/Because you are aiming for scaling 5 costs/gi, 'Vì đội hình hướng tới các tướng 5 vàng thăng tiến sức mạnh về late'],
   [/aim to level 9 around end of Stage 4 \/ beginning of Stage 5/gi, 'hãy đặt mục tiêu lên cấp 9 vào cuối Vòng 4 hoặc đầu Vòng 5'],
@@ -137,17 +151,27 @@ const grammarPatterns: Array<[RegExp, string]> = [
 
 export function translateStrategyTip(tip?: string): string {
   if (!tip) return '';
-  const trimmed = tip.trim();
+  let trimmed = tip.trim();
   if (COACHING_SENTENCE_DICT[trimmed]) return COACHING_SENTENCE_DICT[trimmed];
 
+  // 1. Replace multi-sentence or exact dictionary phrases first (sorted by length descending)
+  const dictEntries = Object.entries(COACHING_SENTENCE_DICT).sort((a, b) => b[0].length - a[0].length);
+  for (const [en, vi] of dictEntries) {
+    if (en.length > 10 && trimmed.includes(en)) {
+      trimmed = trimmed.replaceAll(en, vi);
+    }
+  }
+
+  // 2. Split remaining sentences
   const sentences = trimmed.split(/(?<=[.!?])\s+/);
   return sentences.map((sent) => {
     const s = sent.trim();
+    if (!s) return '';
     if (COACHING_SENTENCE_DICT[s]) return COACHING_SENTENCE_DICT[s];
     let res = s;
     for (const [re, rep] of grammarPatterns) {
       res = res.replace(re, rep);
     }
     return res;
-  }).join(' ');
+  }).filter(Boolean).join(' ');
 }

@@ -21,7 +21,12 @@
   const stages = ['All', '2-1', '3-2', '4-2'];
   const tiers = ['S', 'A', 'B', 'C', 'D'];
 
-  const currentTierData = $derived(data.augments[activeTierType] || {});
+  const currentTierData = $derived.by(() => {
+    if (selectedStage !== 'All' && data.augments?.stages?.[activeTierType]?.[selectedStage]) {
+      return data.augments.stages[activeTierType][selectedStage];
+    }
+    return data.augments[activeTierType] || {};
+  });
 
   const tierMeta: Record<string, { label: string; badge: string; border: string }> = {
     S: { label: 'S Tier', badge: 'bg-[#FE3E4B] text-white', border: 'border-[#FE3E4B]/40' },
@@ -147,11 +152,9 @@
   <div class="flex flex-col gap-8">
     {#each tiers as t}
       {@const tierAugments = (currentTierData[t] || []).filter((aug: any) => {
-        const matchQuery = matchesQuery(aug.name_vi, searchQuery) || 
-                           matchesQuery(aug.name_en, searchQuery) || 
-                           matchesQuery(aug.desc_vi, searchQuery);
-        const matchStage = selectedStage === 'All' || !aug.stage || aug.stage === selectedStage;
-        return matchQuery && matchStage;
+        return matchesQuery(aug.name_vi, searchQuery) || 
+               matchesQuery(aug.name_en, searchQuery) || 
+               matchesQuery(aug.desc_vi, searchQuery);
       })}
 
       {#if tierAugments.length > 0}

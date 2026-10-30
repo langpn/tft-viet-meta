@@ -1,5 +1,6 @@
 <script lang="ts">
   import HexAvatar from './HexAvatar.svelte';
+  import { settingsStore } from '$lib/utils/settings-store.svelte';
 
   interface BoardUnit {
     id: string;
@@ -60,6 +61,7 @@
                   items={unit.items}
                   showItems={true}
                   size="sm"
+                  showName={settingsStore.showNames}
                 />
               </div>
             {/if}

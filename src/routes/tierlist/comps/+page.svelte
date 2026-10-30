@@ -132,6 +132,16 @@
     5: 'bg-amber-400'
   };
 
+  const tiers = ['S', 'A', 'B', 'C', 'X'];
+
+  const TIER_ORDER: Record<string, number> = {
+    S: 5,
+    A: 4,
+    B: 3,
+    C: 2,
+    X: 1
+  };
+
   interface TierCompGroup {
     champKey: string;
     primaryComp: any;
@@ -141,42 +151,82 @@
     matchedComp: any;
   }
 
-  // Group comps by main champion API name per tier like TFT Academy
+  // Group comps per tier by main champion carry (matching TFT Academy's exact shelf architecture)
+  // and clicking automatically opens the best comp in that group.
   const tierGroups = $derived.by(() => {
-    const map: Record<string, TierCompGroup[]> = {};
+    const map: Record<string, TierCompGroup[]> = {
+      S: [],
+      A: [],
+      B: [],
+      C: [],
+      X: []
+    };
+
+    const origIndexMap = new Map<string, number>();
+    data.comps.forEach((c: any, idx: number) => origIndexMap.set(c.id, idx));
 
     for (const t of tiers) {
-      const tierCompEntries = compsWithMatchStatus.filter(({ comp }) => comp.tier === t);
-      const groups: TierCompGroup[] = [];
-      const groupMap = new Map<string, TierCompGroup>();
+      const tierComps = compsWithMatchStatus.filter((e) => e.comp.tier === t);
+      
+      const groupMap = new Map<string, {
+        champKey: string;
+        comps: any[];
+        matchMap: Map<string, boolean>;
+      }>();
 
-      for (const entry of tierCompEntries) {
+      for (const entry of tierComps) {
         const { comp, isMatch } = entry;
-        const key = comp.mainChampion?.apiName || comp.mainCarry?.id || comp.id;
+        const key = comp.mainCarry?.id || comp.mainChampion?.apiName || comp.id;
 
         let g = groupMap.get(key);
         if (!g) {
           g = {
             champKey: key,
-            primaryComp: comp,
-            hasVariation: false,
             comps: [comp],
-            isMatch,
-            matchedComp: comp
+            matchMap: new Map([[comp.id, isMatch]])
           };
           groupMap.set(key, g);
-          groups.push(g);
         } else {
           g.comps.push(comp);
-          g.hasVariation = true;
-          if (isMatch) {
-            g.isMatch = true;
-            g.matchedComp = comp;
-          }
+          g.matchMap.set(comp.id, isMatch);
         }
       }
 
-      map[t] = groups;
+      for (const g of groupMap.values()) {
+        // Sort comps in this group preserving TFT Academy's ranking order (best comp first)
+        g.comps.sort((a, b) => (origIndexMap.get(a.id) ?? 0) - (origIndexMap.get(b.id) ?? 0));
+
+        const primaryComp = g.comps[0];
+        const hasVariation = g.comps.length > 1;
+
+        let isMatch = false;
+        let matchedComp = primaryComp;
+
+        if (isFiltering) {
+          const matchingComps = g.comps.filter((c) => g.matchMap.get(c.id));
+          if (matchingComps.length > 0) {
+            isMatch = true;
+            matchedComp = matchingComps[0];
+          } else {
+            isMatch = false;
+            matchedComp = primaryComp;
+          }
+        } else {
+          isMatch = true;
+          matchedComp = primaryComp;
+        }
+
+        const group: TierCompGroup = {
+          champKey: g.champKey,
+          primaryComp,
+          hasVariation,
+          comps: g.comps,
+          isMatch,
+          matchedComp
+        };
+
+        map[t].push(group);
+      }
     }
 
     return map;
@@ -202,8 +252,6 @@
       closeModal();
     }
   }
-
-  const tiers = ['S', 'A', 'B', 'C', 'X'];
 
   const tierStyles: Record<string, {
     borderColor: string;
