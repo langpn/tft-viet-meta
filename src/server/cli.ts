@@ -17,6 +17,7 @@ if (command === "sync") {
   const result = await runSync({
     fetchText: async (url) => (await fetch(url)).text(),
     fetchJson: async <T>(url: string) => fetchJsonResponse<T>(url, await fetch(url)),
+    fetchExplorer: async (url) => fetchJsonResponse<unknown>(url, await fetch(url)),
   }, new Date().toISOString(), previousState);
   await saveState(statePath(root), result.state);
   console.log(JSON.stringify({ ...result.report, target, snapshot: join("data", "state.json") }, null, 2));

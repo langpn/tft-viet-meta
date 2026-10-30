@@ -29,6 +29,10 @@ for (const kind of ["item", "trait", "augment"]) {
 const dependencies: SyncDependencies = {
   fetchText: async (url) => (url === "https://tftacademy.com/sitemap.xml" ? "<urlset><url><loc>https://tftacademy.com/</loc></url></urlset>" : "<html>home</html>"),
   fetchJson: async <T>(url: string) => responses[url] as T,
+  fetchExplorer: async (url) => {
+    expect(url).toBe("https://d3.tft.tools/explorer-data/16212/1/u-TFT18_Amumu-0");
+    return { base: { count: 100, place: 325, top4: 60, won: 12 }, units: [] };
+  },
 };
 
 describe("sync pipeline", () => {
@@ -48,8 +52,14 @@ describe("sync pipeline", () => {
     expect(result.report).toMatchObject({
       academyPages: 1,
       riotEntities: 1,
-      explorerStatus: "UNVERIFIED",
+      explorerStatus: "PASS",
       diff: { added: 1, modified: 0, deleted: 0, unchanged: 0 },
+      changedUrls: {
+        added: ["https://tftacademy.com/"],
+        modified: [],
+        deleted: [],
+        unchanged: [],
+      },
     });
   });
 });

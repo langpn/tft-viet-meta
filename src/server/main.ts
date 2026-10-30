@@ -12,7 +12,7 @@ const server = Bun.serve({
     const url = new URL(request.url);
 
     if (url.pathname === "/") {
-      return new Response(renderHome({ activePatch: state.activePatch, lastSyncAt: state.lastSyncAt, documents: state.searchDocuments }), { headers: { "content-type": "text/html; charset=utf-8" } });
+      return new Response(renderHome({ activePatch: state.activePatch, lastSyncAt: state.lastSyncAt, documents: state.searchDocuments, explorerSnapshots: state.explorerSnapshots }), { headers: { "content-type": "text/html; charset=utf-8" } });
     }
     if (url.pathname === "/explorer") {
       return new Response(renderExplorer(), { headers: { "content-type": "text/html; charset=utf-8" } });
@@ -24,7 +24,7 @@ const server = Bun.serve({
       return Response.json({ query: parseExplorerQuery(url.searchParams), status: "UNVERIFIED", source: "local-explorer-contract", results: [] });
     }
     if (url.pathname === "/api/status") {
-      return Response.json({ activePatch: state.activePatch, lastSyncAt: state.lastSyncAt, indexedDocuments: state.searchDocuments.length, sourceSnapshots: state.sourceSnapshots.length });
+      return Response.json({ activePatch: state.activePatch, lastSyncAt: state.lastSyncAt, indexedDocuments: state.searchDocuments.length, sourceSnapshots: state.sourceSnapshots.length, explorerSnapshots: state.explorerSnapshots.length, explorerStatus: state.explorerSnapshots.at(-1)?.status ?? "UNVERIFIED", sourceDiff: state.sourceDiff });
     }
     if (url.pathname === "/healthz") return Response.json({ ok: true });
 
