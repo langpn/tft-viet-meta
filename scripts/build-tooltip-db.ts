@@ -159,9 +159,13 @@ for (const cVi of set18ChampsVi) {
     };
   });
 
-  const icon = acChamp?.championSquareIcon 
-    ? `https://assets.tftacademy.com/champions/champion_square_icons/${acChamp.championSquareIcon}`
+  const icon = acChamp?.championSquareIcon && acChamp?.collectionId && acChamp?.id
+    ? `https://api.tftacademy.com/api/files/${acChamp.collectionId}/${acChamp.id}/${acChamp.championSquareIcon}`
     : cleanIcon(cVi.icon);
+
+  const abilityIcon = acChamp?.abilityIcon && acChamp?.collectionId && acChamp?.id
+    ? `https://api.tftacademy.com/api/files/${acChamp.collectionId}/${acChamp.id}/${acChamp.abilityIcon}`
+    : cleanIcon(cVi.ability?.icon);
 
   const champData = {
     id: apiName,
@@ -181,7 +185,7 @@ for (const cVi of set18ChampsVi) {
       mana: `${initialMana} / ${mana}`,
       desc_vi: abilityDesc_vi,
       desc_en: abilityDesc_en,
-      icon: acChamp?.abilityIcon ? `https://assets.tftacademy.com/champions/ability_icons/${acChamp.abilityIcon}` : cleanIcon(cVi.ability?.icon)
+      icon: abilityIcon
     },
     recommendedItems: recItems.slice(0, 10),
     icon

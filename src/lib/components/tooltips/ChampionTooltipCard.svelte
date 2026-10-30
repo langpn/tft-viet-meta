@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { resolveChampionIcon, resolveItemIcon, resolveTraitIcon } from '$lib/utils/assets';
+  import { resolveChampionIcon, resolveItemIcon, resolveTraitIcon, resolveAbilityIcon } from '$lib/utils/assets';
 
   interface Props {
     data: any;
@@ -93,7 +93,19 @@
         <div class="flex items-center justify-between gap-2">
           <div class="flex items-center gap-2">
             {#if data.ability.icon}
-              <img src={data.ability.icon} alt="" class="w-8 h-8 rounded-lg bg-black border border-white/10 object-contain p-0.5" />
+              {@const abIcon = resolveAbilityIcon(data.ability.icon, data.id)}
+              {#if abIcon}
+                <img 
+                  src={abIcon} 
+                  alt={data.ability.name_vi || data.ability.name_en || ''} 
+                  class="w-8 h-8 rounded-lg bg-black border border-white/10 object-contain p-0.5 shrink-0 shadow" 
+                  loading="lazy"
+                  onerror={(e) => {
+                    const target = e.currentTarget as HTMLImageElement;
+                    target.style.display = 'none';
+                  }}
+                />
+              {/if}
             {/if}
             <span class="font-black text-sm text-white">
               {data.ability.name_vi || data.ability.name_en}

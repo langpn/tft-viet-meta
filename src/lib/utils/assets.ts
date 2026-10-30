@@ -47,3 +47,12 @@ export function resolveTraitIcon(icon?: string, id?: string): string {
   }
   return '';
 }
+
+export function resolveAbilityIcon(icon?: string, id?: string): string {
+  if (!icon) return '';
+  if (icon.startsWith('http')) return icon;
+  if (icon.startsWith('assets/')) {
+    return `https://raw.communitydragon.org/latest/game/${icon.toLowerCase()}`;
+  }
+  return icon;
+}
