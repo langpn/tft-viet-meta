@@ -20,6 +20,7 @@
     emblemIcon?: string;
     size?: 'sm' | 'md' | 'lg' | 'xl';
     showName?: boolean;
+    showItems?: boolean;
     isSelected?: boolean;
     onclick?: () => void;
   }
@@ -36,6 +37,7 @@
     emblemIcon = '',
     size = 'md',
     showName = false,
+    showItems = false,
     isSelected = false,
     onclick
   }: Props = $props();
@@ -150,8 +152,8 @@
     {/if}
   </div>
 
-  <!-- 3 Equipped Items under Hexagon (Significantly enlarged) -->
-  {#if items && items.length > 0}
+  <!-- 3 Equipped Items under Hexagon (Only shown when showItems is true) -->
+  {#if showItems && items && items.length > 0}
     <div class="flex items-center gap-1 -mt-3 z-30">
       {#each items.slice(0, 3) as item}
         {@const itemSrc = resolveItemIcon(item.icon, item.id)}

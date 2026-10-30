@@ -58,6 +58,7 @@
                   cost={unit.cost}
                   starLevel={unit.starLevel}
                   items={unit.items}
+                  showItems={true}
                   size="sm"
                 />
               </div>

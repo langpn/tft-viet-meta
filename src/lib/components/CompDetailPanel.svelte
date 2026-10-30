@@ -49,6 +49,7 @@
               cost={comp.mainCarry.cost}
               starLevel={comp.mainCarry.starLevel || 2}
               items={comp.mainCarry.items}
+              showItems={true}
               size="xl"
             />
           </div>
