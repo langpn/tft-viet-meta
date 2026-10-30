@@ -4,9 +4,12 @@ export function renderHome(state: {
   activePatch: string;
   lastSyncAt: string | null;
   documents: SearchDocument[];
+  explorerSnapshots: Array<{ status: string; metrics: { games: number } }>;
 }): string {
   const documentCount = state.documents.length;
   const syncLabel = state.lastSyncAt ?? "Chưa đồng bộ";
+  const explorer = state.explorerSnapshots.at(-1);
+  const explorerLabel = explorer?.status ?? "UNVERIFIED";
 
   return `<!doctype html>
 <html lang="vi">
@@ -47,7 +50,7 @@ export function renderHome(state: {
       <div id="results" aria-live="polite"></div>
       <section class="grid">
         <article class="card"><span class="badge">${documentCount} entities</span><h2>Encyclopedia</h2><p>Unit, item, trait, augment và alias tiếng Việt trong local canonical index.</p></article>
-        <article class="card"><span class="badge">Explorer</span><h2>Meta Explorer</h2><p>Query theo patch, rank, region, unit, item, trait và augment; output có source status.</p><a href="/explorer">Mở Explorer →</a></article>
+        <article class="card"><span class="badge">Explorer: ${escapeHtml(explorerLabel)}</span><h2>Meta Explorer</h2><p>Probe source: ${explorer ? `${explorer.metrics.games.toLocaleString("vi-VN")} games` : "chưa có snapshot"}. Full feature parity vẫn cần fixture matrix.</p><a href="/explorer">Mở Explorer →</a></article>
         <article class="card"><span class="badge">Sync</span><h2>Snapshot & diff</h2><p>Mỗi lần đồng bộ tạo snapshot mới, phát hiện added/modified/deleted và giữ rollback.</p><a href="/api/status">Xem trạng thái →</a></article>
       </section>
     </main>

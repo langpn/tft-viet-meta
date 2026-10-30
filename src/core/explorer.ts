@@ -27,6 +27,21 @@ export type ExplorerComparison = {
   mismatches: string[];
 };
 
+export type ExplorerPathInput = {
+  patchId: string;
+  rankGroup: number;
+  query: ExplorerQuery;
+};
+
+export type ExplorerPayload = {
+  base?: { count: number; place: number; top4: number; won: number };
+  units?: unknown[];
+  star_units?: unknown[];
+  traits?: unknown[];
+  augments?: unknown[];
+  items?: unknown[];
+};
+
 const arrayKeys = [
   "units",
   "traits",
@@ -54,6 +69,29 @@ export function queryHash(query: ExplorerQuery): string {
   return createHash("sha256")
     .update(JSON.stringify(normalizeExplorerQuery(query)))
     .digest("hex");
+}
+
+export function buildExplorerUrl(input: ExplorerPathInput): string {
+  const segments: string[] = [];
+  for (const unit of input.query.units ?? []) segments.push(`u-${unit}-0`);
+  for (const trait of input.query.traits ?? []) segments.push(`t-${trait}-1`);
+  for (const item of input.query.items ?? []) {
+    segments.push(item.startsWith("i-") ? item : `i-${item}`);
+  }
+  for (const augment of input.query.augments ?? []) {
+    segments.push(augment.startsWith("a-") ? augment : `a-${augment}`);
+  }
+  return `https://d3.tft.tools/explorer-data/${input.patchId}/${input.rankGroup}/${segments.join("/")}`;
+}
+
+export function normalizeExplorerPayload(payload: ExplorerPayload): ExplorerResult {
+  if (!payload.base) throw new Error("Explorer payload missing base aggregate");
+  if (payload.base.count <= 0) throw new Error("Explorer payload base aggregate is empty");
+  return {
+    averagePlacement: payload.base.place / payload.base.count,
+    topFourRate: payload.base.top4 / payload.base.count,
+    games: payload.base.count,
+  };
 }
 
 export function compareExplorerResults(
