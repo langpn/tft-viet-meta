@@ -17520,6 +17520,1021 @@
       },
       "recommendedItems": [],
       "icon": "assets/ux/tft/championsplashes/tft6_mercenarychest.png"
+    },
+    "DA_Elderwood18_StonebarkTree": {
+      "id": "DA_Elderwood18_StonebarkTree",
+      "academyId": "nsgdlpr7g4liufp",
+      "name_vi": "Cổ Thụ Vỏ Đá",
+      "name_en": "Stonebark Tree",
+      "cost": 1,
+      "role_en": "Attack Specialist",
+      "role_vi": "Triệu Hồi",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Forest's Protection",
+        "name_en": "Forest's Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Passive: On death, Stun the nearest 2 enemies for 1.5 seconds.",
+        "desc_en": "Passive: On death, Stun the nearest 2 enemies for 1.5 seconds.",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": ""
+    },
+    "da_elderwood18_stonebarktree": {
+      "id": "DA_Elderwood18_StonebarkTree",
+      "academyId": "nsgdlpr7g4liufp",
+      "name_vi": "Cổ Thụ Vỏ Đá",
+      "name_en": "Stonebark Tree",
+      "cost": 1,
+      "role_en": "Attack Specialist",
+      "role_vi": "Triệu Hồi",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Forest's Protection",
+        "name_en": "Forest's Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Passive: On death, Stun the nearest 2 enemies for 1.5 seconds.",
+        "desc_en": "Passive: On death, Stun the nearest 2 enemies for 1.5 seconds.",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": ""
+    },
+    "nsgdlpr7g4liufp": {
+      "id": "DA_Elderwood18_StonebarkTree",
+      "academyId": "nsgdlpr7g4liufp",
+      "name_vi": "Cổ Thụ Vỏ Đá",
+      "name_en": "Stonebark Tree",
+      "cost": 1,
+      "role_en": "Attack Specialist",
+      "role_vi": "Triệu Hồi",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Forest's Protection",
+        "name_en": "Forest's Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Passive: On death, Stun the nearest 2 enemies for 1.5 seconds.",
+        "desc_en": "Passive: On death, Stun the nearest 2 enemies for 1.5 seconds.",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": ""
+    },
+    "stonebark tree": {
+      "id": "DA_Elderwood18_StonebarkTree",
+      "academyId": "nsgdlpr7g4liufp",
+      "name_vi": "Cổ Thụ Vỏ Đá",
+      "name_en": "Stonebark Tree",
+      "cost": 1,
+      "role_en": "Attack Specialist",
+      "role_vi": "Triệu Hồi",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Forest's Protection",
+        "name_en": "Forest's Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Passive: On death, Stun the nearest 2 enemies for 1.5 seconds.",
+        "desc_en": "Passive: On death, Stun the nearest 2 enemies for 1.5 seconds.",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": ""
+    },
+    "cổ thụ vỏ đá": {
+      "id": "DA_Elderwood18_StonebarkTree",
+      "academyId": "nsgdlpr7g4liufp",
+      "name_vi": "Cổ Thụ Vỏ Đá",
+      "name_en": "Stonebark Tree",
+      "cost": 1,
+      "role_en": "Attack Specialist",
+      "role_vi": "Triệu Hồi",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Forest's Protection",
+        "name_en": "Forest's Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Passive: On death, Stun the nearest 2 enemies for 1.5 seconds.",
+        "desc_en": "Passive: On death, Stun the nearest 2 enemies for 1.5 seconds.",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": ""
+    },
+    "DA_Elderwood18_Lifeblossom": {
+      "id": "DA_Elderwood18_Lifeblossom",
+      "academyId": "325ld205vbfqr9b",
+      "name_vi": "Hoa Nở Sinh Mệnh",
+      "name_en": "Lifebloom",
+      "cost": 1,
+      "role_en": "Magic Specialist",
+      "role_vi": "Triệu Hồi",
+      "range": 4,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Forest's Blessing",
+        "name_en": "Forest's Blessing",
+        "mana": "0 / 0",
+        "desc_vi": "Passive: After 4 seconds of combat grant Elderwood allies 10% Attack Damage and Ability Power. Every 4 seconds thereafter, grant an additional 3% Attack Damage and 3% Ability Power.",
+        "desc_en": "Passive: After 4 seconds of combat grant Elderwood allies 10% Attack Damage and Ability Power. Every 4 seconds thereafter, grant an additional 3% Attack Damage and 3% Ability Power.",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": ""
+    },
+    "da_elderwood18_lifeblossom": {
+      "id": "DA_Elderwood18_Lifeblossom",
+      "academyId": "325ld205vbfqr9b",
+      "name_vi": "Hoa Nở Sinh Mệnh",
+      "name_en": "Lifebloom",
+      "cost": 1,
+      "role_en": "Magic Specialist",
+      "role_vi": "Triệu Hồi",
+      "range": 4,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Forest's Blessing",
+        "name_en": "Forest's Blessing",
+        "mana": "0 / 0",
+        "desc_vi": "Passive: After 4 seconds of combat grant Elderwood allies 10% Attack Damage and Ability Power. Every 4 seconds thereafter, grant an additional 3% Attack Damage and 3% Ability Power.",
+        "desc_en": "Passive: After 4 seconds of combat grant Elderwood allies 10% Attack Damage and Ability Power. Every 4 seconds thereafter, grant an additional 3% Attack Damage and 3% Ability Power.",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": ""
+    },
+    "325ld205vbfqr9b": {
+      "id": "DA_Elderwood18_Lifeblossom",
+      "academyId": "325ld205vbfqr9b",
+      "name_vi": "Hoa Nở Sinh Mệnh",
+      "name_en": "Lifebloom",
+      "cost": 1,
+      "role_en": "Magic Specialist",
+      "role_vi": "Triệu Hồi",
+      "range": 4,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Forest's Blessing",
+        "name_en": "Forest's Blessing",
+        "mana": "0 / 0",
+        "desc_vi": "Passive: After 4 seconds of combat grant Elderwood allies 10% Attack Damage and Ability Power. Every 4 seconds thereafter, grant an additional 3% Attack Damage and 3% Ability Power.",
+        "desc_en": "Passive: After 4 seconds of combat grant Elderwood allies 10% Attack Damage and Ability Power. Every 4 seconds thereafter, grant an additional 3% Attack Damage and 3% Ability Power.",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": ""
+    },
+    "lifebloom": {
+      "id": "DA_Elderwood18_Lifeblossom",
+      "academyId": "325ld205vbfqr9b",
+      "name_vi": "Hoa Nở Sinh Mệnh",
+      "name_en": "Lifebloom",
+      "cost": 1,
+      "role_en": "Magic Specialist",
+      "role_vi": "Triệu Hồi",
+      "range": 4,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Forest's Blessing",
+        "name_en": "Forest's Blessing",
+        "mana": "0 / 0",
+        "desc_vi": "Passive: After 4 seconds of combat grant Elderwood allies 10% Attack Damage and Ability Power. Every 4 seconds thereafter, grant an additional 3% Attack Damage and 3% Ability Power.",
+        "desc_en": "Passive: After 4 seconds of combat grant Elderwood allies 10% Attack Damage and Ability Power. Every 4 seconds thereafter, grant an additional 3% Attack Damage and 3% Ability Power.",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": ""
+    },
+    "hoa nở sinh mệnh": {
+      "id": "DA_Elderwood18_Lifeblossom",
+      "academyId": "325ld205vbfqr9b",
+      "name_vi": "Hoa Nở Sinh Mệnh",
+      "name_en": "Lifebloom",
+      "cost": 1,
+      "role_en": "Magic Specialist",
+      "role_vi": "Triệu Hồi",
+      "range": 4,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Forest's Blessing",
+        "name_en": "Forest's Blessing",
+        "mana": "0 / 0",
+        "desc_vi": "Passive: After 4 seconds of combat grant Elderwood allies 10% Attack Damage and Ability Power. Every 4 seconds thereafter, grant an additional 3% Attack Damage and 3% Ability Power.",
+        "desc_en": "Passive: After 4 seconds of combat grant Elderwood allies 10% Attack Damage and Ability Power. Every 4 seconds thereafter, grant an additional 3% Attack Damage and 3% Ability Power.",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": ""
+    },
+    "DA_Elderwood18_Protector": {
+      "id": "DA_Elderwood18_Protector",
+      "academyId": "0kx7jf4zb3gn7hv",
+      "name_vi": "Vệ Thần Rừng Sâu",
+      "name_en": "Deepwood Protector",
+      "cost": 1,
+      "role_en": "Magic Fighter",
+      "role_vi": "Triệu Hồi",
+      "range": 1,
+      "mana": 70,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Forest SMASH!",
+        "name_en": "Forest SMASH!",
+        "mana": "0 / 70",
+        "desc_vi": "Passive: When an Elderwood unit dies heal for 12% Health and gain 80% Attack Speed for 3 seconds. Active: Slam the ground, dealing 500 magic damage to the target and 250 magic damage to enemies within 2 hexes. Knock up and Stun the target for 50% seconds.",
+        "desc_en": "Passive: When an Elderwood unit dies heal for 12% Health and gain 80% Attack Speed for 3 seconds. Active: Slam the ground, dealing 500 magic damage to the target and 250 magic damage to enemies within 2 hexes. Knock up and Stun the target for 50% seconds.",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": ""
+    },
+    "da_elderwood18_protector": {
+      "id": "DA_Elderwood18_Protector",
+      "academyId": "0kx7jf4zb3gn7hv",
+      "name_vi": "Vệ Thần Rừng Sâu",
+      "name_en": "Deepwood Protector",
+      "cost": 1,
+      "role_en": "Magic Fighter",
+      "role_vi": "Triệu Hồi",
+      "range": 1,
+      "mana": 70,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Forest SMASH!",
+        "name_en": "Forest SMASH!",
+        "mana": "0 / 70",
+        "desc_vi": "Passive: When an Elderwood unit dies heal for 12% Health and gain 80% Attack Speed for 3 seconds. Active: Slam the ground, dealing 500 magic damage to the target and 250 magic damage to enemies within 2 hexes. Knock up and Stun the target for 50% seconds.",
+        "desc_en": "Passive: When an Elderwood unit dies heal for 12% Health and gain 80% Attack Speed for 3 seconds. Active: Slam the ground, dealing 500 magic damage to the target and 250 magic damage to enemies within 2 hexes. Knock up and Stun the target for 50% seconds.",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": ""
+    },
+    "0kx7jf4zb3gn7hv": {
+      "id": "DA_Elderwood18_Protector",
+      "academyId": "0kx7jf4zb3gn7hv",
+      "name_vi": "Vệ Thần Rừng Sâu",
+      "name_en": "Deepwood Protector",
+      "cost": 1,
+      "role_en": "Magic Fighter",
+      "role_vi": "Triệu Hồi",
+      "range": 1,
+      "mana": 70,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Forest SMASH!",
+        "name_en": "Forest SMASH!",
+        "mana": "0 / 70",
+        "desc_vi": "Passive: When an Elderwood unit dies heal for 12% Health and gain 80% Attack Speed for 3 seconds. Active: Slam the ground, dealing 500 magic damage to the target and 250 magic damage to enemies within 2 hexes. Knock up and Stun the target for 50% seconds.",
+        "desc_en": "Passive: When an Elderwood unit dies heal for 12% Health and gain 80% Attack Speed for 3 seconds. Active: Slam the ground, dealing 500 magic damage to the target and 250 magic damage to enemies within 2 hexes. Knock up and Stun the target for 50% seconds.",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": ""
+    },
+    "deepwood protector": {
+      "id": "DA_Elderwood18_Protector",
+      "academyId": "0kx7jf4zb3gn7hv",
+      "name_vi": "Vệ Thần Rừng Sâu",
+      "name_en": "Deepwood Protector",
+      "cost": 1,
+      "role_en": "Magic Fighter",
+      "role_vi": "Triệu Hồi",
+      "range": 1,
+      "mana": 70,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Forest SMASH!",
+        "name_en": "Forest SMASH!",
+        "mana": "0 / 70",
+        "desc_vi": "Passive: When an Elderwood unit dies heal for 12% Health and gain 80% Attack Speed for 3 seconds. Active: Slam the ground, dealing 500 magic damage to the target and 250 magic damage to enemies within 2 hexes. Knock up and Stun the target for 50% seconds.",
+        "desc_en": "Passive: When an Elderwood unit dies heal for 12% Health and gain 80% Attack Speed for 3 seconds. Active: Slam the ground, dealing 500 magic damage to the target and 250 magic damage to enemies within 2 hexes. Knock up and Stun the target for 50% seconds.",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": ""
+    },
+    "vệ thần rừng sâu": {
+      "id": "DA_Elderwood18_Protector",
+      "academyId": "0kx7jf4zb3gn7hv",
+      "name_vi": "Vệ Thần Rừng Sâu",
+      "name_en": "Deepwood Protector",
+      "cost": 1,
+      "role_en": "Magic Fighter",
+      "role_vi": "Triệu Hồi",
+      "range": 1,
+      "mana": 70,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Forest SMASH!",
+        "name_en": "Forest SMASH!",
+        "mana": "0 / 70",
+        "desc_vi": "Passive: When an Elderwood unit dies heal for 12% Health and gain 80% Attack Speed for 3 seconds. Active: Slam the ground, dealing 500 magic damage to the target and 250 magic damage to enemies within 2 hexes. Knock up and Stun the target for 50% seconds.",
+        "desc_en": "Passive: When an Elderwood unit dies heal for 12% Health and gain 80% Attack Speed for 3 seconds. Active: Slam the ground, dealing 500 magic damage to the target and 250 magic damage to enemies within 2 hexes. Knock up and Stun the target for 50% seconds.",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": ""
+    },
+    "TFT_Flex_Lv7": {
+      "id": "TFT_Flex_Lv7",
+      "academyId": "w0ccw23x73vl0mn",
+      "name_vi": "Cấp độ 7",
+      "name_en": "level 7",
+      "cost": 1,
+      "role_en": "Tank",
+      "role_vi": "Đỡ Đòn",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Bảo Hộ Rừng Già",
+        "name_en": "Forest Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 7",
+        "desc_en": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 7",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": "https://assets.tftacademy.com/champions/champion_icons/tft_flex_lv7_cU3jc0uZWn.webp"
+    },
+    "tft_flex_lv7": {
+      "id": "TFT_Flex_Lv7",
+      "academyId": "w0ccw23x73vl0mn",
+      "name_vi": "Cấp độ 7",
+      "name_en": "level 7",
+      "cost": 1,
+      "role_en": "Tank",
+      "role_vi": "Đỡ Đòn",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Bảo Hộ Rừng Già",
+        "name_en": "Forest Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 7",
+        "desc_en": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 7",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": "https://assets.tftacademy.com/champions/champion_icons/tft_flex_lv7_cU3jc0uZWn.webp"
+    },
+    "w0ccw23x73vl0mn": {
+      "id": "TFT_Flex_Lv7",
+      "academyId": "w0ccw23x73vl0mn",
+      "name_vi": "Cấp độ 7",
+      "name_en": "level 7",
+      "cost": 1,
+      "role_en": "Tank",
+      "role_vi": "Đỡ Đòn",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Bảo Hộ Rừng Già",
+        "name_en": "Forest Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 7",
+        "desc_en": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 7",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": "https://assets.tftacademy.com/champions/champion_icons/tft_flex_lv7_cU3jc0uZWn.webp"
+    },
+    "level 7": {
+      "id": "TFT_Flex_Lv7",
+      "academyId": "w0ccw23x73vl0mn",
+      "name_vi": "Cấp độ 7",
+      "name_en": "level 7",
+      "cost": 1,
+      "role_en": "Tank",
+      "role_vi": "Đỡ Đòn",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Bảo Hộ Rừng Già",
+        "name_en": "Forest Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 7",
+        "desc_en": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 7",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": "https://assets.tftacademy.com/champions/champion_icons/tft_flex_lv7_cU3jc0uZWn.webp"
+    },
+    "cấp độ 7": {
+      "id": "TFT_Flex_Lv7",
+      "academyId": "w0ccw23x73vl0mn",
+      "name_vi": "Cấp độ 7",
+      "name_en": "level 7",
+      "cost": 1,
+      "role_en": "Tank",
+      "role_vi": "Đỡ Đòn",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Bảo Hộ Rừng Già",
+        "name_en": "Forest Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 7",
+        "desc_en": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 7",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": "https://assets.tftacademy.com/champions/champion_icons/tft_flex_lv7_cU3jc0uZWn.webp"
+    },
+    "TFT_Flex_Lv8": {
+      "id": "TFT_Flex_Lv8",
+      "academyId": "savb3ertlmmy2hb",
+      "name_vi": "Cấp độ 8",
+      "name_en": "level 8",
+      "cost": 1,
+      "role_en": "Tank",
+      "role_vi": "Đỡ Đòn",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Bảo Hộ Rừng Già",
+        "name_en": "Forest Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 8",
+        "desc_en": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 8",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": "https://assets.tftacademy.com/champions/champion_icons/tft_flex_lv8_CrYUMIGnt3.webp"
+    },
+    "tft_flex_lv8": {
+      "id": "TFT_Flex_Lv8",
+      "academyId": "savb3ertlmmy2hb",
+      "name_vi": "Cấp độ 8",
+      "name_en": "level 8",
+      "cost": 1,
+      "role_en": "Tank",
+      "role_vi": "Đỡ Đòn",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Bảo Hộ Rừng Già",
+        "name_en": "Forest Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 8",
+        "desc_en": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 8",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": "https://assets.tftacademy.com/champions/champion_icons/tft_flex_lv8_CrYUMIGnt3.webp"
+    },
+    "savb3ertlmmy2hb": {
+      "id": "TFT_Flex_Lv8",
+      "academyId": "savb3ertlmmy2hb",
+      "name_vi": "Cấp độ 8",
+      "name_en": "level 8",
+      "cost": 1,
+      "role_en": "Tank",
+      "role_vi": "Đỡ Đòn",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Bảo Hộ Rừng Già",
+        "name_en": "Forest Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 8",
+        "desc_en": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 8",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": "https://assets.tftacademy.com/champions/champion_icons/tft_flex_lv8_CrYUMIGnt3.webp"
+    },
+    "level 8": {
+      "id": "TFT_Flex_Lv8",
+      "academyId": "savb3ertlmmy2hb",
+      "name_vi": "Cấp độ 8",
+      "name_en": "level 8",
+      "cost": 1,
+      "role_en": "Tank",
+      "role_vi": "Đỡ Đòn",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Bảo Hộ Rừng Già",
+        "name_en": "Forest Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 8",
+        "desc_en": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 8",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": "https://assets.tftacademy.com/champions/champion_icons/tft_flex_lv8_CrYUMIGnt3.webp"
+    },
+    "cấp độ 8": {
+      "id": "TFT_Flex_Lv8",
+      "academyId": "savb3ertlmmy2hb",
+      "name_vi": "Cấp độ 8",
+      "name_en": "level 8",
+      "cost": 1,
+      "role_en": "Tank",
+      "role_vi": "Đỡ Đòn",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Bảo Hộ Rừng Già",
+        "name_en": "Forest Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 8",
+        "desc_en": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 8",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": "https://assets.tftacademy.com/champions/champion_icons/tft_flex_lv8_CrYUMIGnt3.webp"
+    },
+    "TFT_Flex_Lv9": {
+      "id": "TFT_Flex_Lv9",
+      "academyId": "4uqr40am4h9mpfs",
+      "name_vi": "Cấp độ 9",
+      "name_en": "level 9",
+      "cost": 1,
+      "role_en": "Tank",
+      "role_vi": "Đỡ Đòn",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Bảo Hộ Rừng Già",
+        "name_en": "Forest Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 9",
+        "desc_en": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 9",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": "https://assets.tftacademy.com/champions/champion_icons/tft_flex_lv9_aNISuNQ6Xm.webp"
+    },
+    "tft_flex_lv9": {
+      "id": "TFT_Flex_Lv9",
+      "academyId": "4uqr40am4h9mpfs",
+      "name_vi": "Cấp độ 9",
+      "name_en": "level 9",
+      "cost": 1,
+      "role_en": "Tank",
+      "role_vi": "Đỡ Đòn",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Bảo Hộ Rừng Già",
+        "name_en": "Forest Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 9",
+        "desc_en": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 9",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": "https://assets.tftacademy.com/champions/champion_icons/tft_flex_lv9_aNISuNQ6Xm.webp"
+    },
+    "4uqr40am4h9mpfs": {
+      "id": "TFT_Flex_Lv9",
+      "academyId": "4uqr40am4h9mpfs",
+      "name_vi": "Cấp độ 9",
+      "name_en": "level 9",
+      "cost": 1,
+      "role_en": "Tank",
+      "role_vi": "Đỡ Đòn",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Bảo Hộ Rừng Già",
+        "name_en": "Forest Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 9",
+        "desc_en": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 9",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": "https://assets.tftacademy.com/champions/champion_icons/tft_flex_lv9_aNISuNQ6Xm.webp"
+    },
+    "level 9": {
+      "id": "TFT_Flex_Lv9",
+      "academyId": "4uqr40am4h9mpfs",
+      "name_vi": "Cấp độ 9",
+      "name_en": "level 9",
+      "cost": 1,
+      "role_en": "Tank",
+      "role_vi": "Đỡ Đòn",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Bảo Hộ Rừng Già",
+        "name_en": "Forest Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 9",
+        "desc_en": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 9",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": "https://assets.tftacademy.com/champions/champion_icons/tft_flex_lv9_aNISuNQ6Xm.webp"
+    },
+    "cấp độ 9": {
+      "id": "TFT_Flex_Lv9",
+      "academyId": "4uqr40am4h9mpfs",
+      "name_vi": "Cấp độ 9",
+      "name_en": "level 9",
+      "cost": 1,
+      "role_en": "Tank",
+      "role_vi": "Đỡ Đòn",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Bảo Hộ Rừng Già",
+        "name_en": "Forest Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 9",
+        "desc_en": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 9",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": "https://assets.tftacademy.com/champions/champion_icons/tft_flex_lv9_aNISuNQ6Xm.webp"
+    },
+    "TFT_Flex_Lv10": {
+      "id": "TFT_Flex_Lv10",
+      "academyId": "vbylz7q37mb0tvy",
+      "name_vi": "Cấp độ 10",
+      "name_en": "level 10",
+      "cost": 1,
+      "role_en": "Tank",
+      "role_vi": "Đỡ Đòn",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Bảo Hộ Rừng Già",
+        "name_en": "Forest Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 10",
+        "desc_en": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 10",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": "https://assets.tftacademy.com/champions/champion_icons/tft_flex_lv10_N6txgTncwH.webp"
+    },
+    "tft_flex_lv10": {
+      "id": "TFT_Flex_Lv10",
+      "academyId": "vbylz7q37mb0tvy",
+      "name_vi": "Cấp độ 10",
+      "name_en": "level 10",
+      "cost": 1,
+      "role_en": "Tank",
+      "role_vi": "Đỡ Đòn",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Bảo Hộ Rừng Già",
+        "name_en": "Forest Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 10",
+        "desc_en": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 10",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": "https://assets.tftacademy.com/champions/champion_icons/tft_flex_lv10_N6txgTncwH.webp"
+    },
+    "vbylz7q37mb0tvy": {
+      "id": "TFT_Flex_Lv10",
+      "academyId": "vbylz7q37mb0tvy",
+      "name_vi": "Cấp độ 10",
+      "name_en": "level 10",
+      "cost": 1,
+      "role_en": "Tank",
+      "role_vi": "Đỡ Đòn",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Bảo Hộ Rừng Già",
+        "name_en": "Forest Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 10",
+        "desc_en": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 10",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": "https://assets.tftacademy.com/champions/champion_icons/tft_flex_lv10_N6txgTncwH.webp"
+    },
+    "level 10": {
+      "id": "TFT_Flex_Lv10",
+      "academyId": "vbylz7q37mb0tvy",
+      "name_vi": "Cấp độ 10",
+      "name_en": "level 10",
+      "cost": 1,
+      "role_en": "Tank",
+      "role_vi": "Đỡ Đòn",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Bảo Hộ Rừng Già",
+        "name_en": "Forest Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 10",
+        "desc_en": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 10",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": "https://assets.tftacademy.com/champions/champion_icons/tft_flex_lv10_N6txgTncwH.webp"
+    },
+    "cấp độ 10": {
+      "id": "TFT_Flex_Lv10",
+      "academyId": "vbylz7q37mb0tvy",
+      "name_vi": "Cấp độ 10",
+      "name_en": "level 10",
+      "cost": 1,
+      "role_en": "Tank",
+      "role_vi": "Đỡ Đòn",
+      "range": 1,
+      "mana": 0,
+      "initialMana": 0,
+      "traits": [
+        {
+          "name_en": "Summon",
+          "name_vi": "Triệu Hồi",
+          "icon": "assets/ux/traiticons/trait_icon_18_elderwood.png"
+        }
+      ],
+      "ability": {
+        "name_vi": "Bảo Hộ Rừng Già",
+        "name_en": "Forest Protection",
+        "mana": "0 / 0",
+        "desc_vi": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 10",
+        "desc_en": "Use this in the \"Flex Units\" component to indicate to users that the associated champion should be played on level 10",
+        "icon": ""
+      },
+      "recommendedItems": [],
+      "icon": "https://assets.tftacademy.com/champions/champion_icons/tft_flex_lv10_N6txgTncwH.webp"
     }
   },
   "items": {
@@ -18313,7 +19328,9 @@
       "name_en": "Tear Of The Goddess",
       "type": "components",
       "icon": "https://assets.tftacademy.com/items/da_component_tear_of_the_goddess_LcXgeIAzlP.png",
-      "stats": {},
+      "stats": {
+        "manaRegen": "+1"
+      },
       "desc_vi": "+1 Mana Regeneration",
       "desc_en": "+1 Mana Regeneration",
       "recipe": null,
@@ -18325,7 +19342,9 @@
       "name_en": "Tear Of The Goddess",
       "type": "components",
       "icon": "https://assets.tftacademy.com/items/da_component_tear_of_the_goddess_LcXgeIAzlP.png",
-      "stats": {},
+      "stats": {
+        "manaRegen": "+1"
+      },
       "desc_vi": "+1 Mana Regeneration",
       "desc_en": "+1 Mana Regeneration",
       "recipe": null,
@@ -18337,7 +19356,9 @@
       "name_en": "Tear Of The Goddess",
       "type": "components",
       "icon": "https://assets.tftacademy.com/items/da_component_tear_of_the_goddess_LcXgeIAzlP.png",
-      "stats": {},
+      "stats": {
+        "manaRegen": "+1"
+      },
       "desc_vi": "+1 Mana Regeneration",
       "desc_en": "+1 Mana Regeneration",
       "recipe": null,
@@ -18349,7 +19370,9 @@
       "name_en": "Tear Of The Goddess",
       "type": "components",
       "icon": "https://assets.tftacademy.com/items/da_component_tear_of_the_goddess_LcXgeIAzlP.png",
-      "stats": {},
+      "stats": {
+        "manaRegen": "+1"
+      },
       "desc_vi": "+1 Mana Regeneration",
       "desc_en": "+1 Mana Regeneration",
       "recipe": null,
@@ -18361,7 +19384,9 @@
       "name_en": "Tear Of The Goddess",
       "type": "components",
       "icon": "https://assets.tftacademy.com/items/da_component_tear_of_the_goddess_LcXgeIAzlP.png",
-      "stats": {},
+      "stats": {
+        "manaRegen": "+1"
+      },
       "desc_vi": "+1 Mana Regeneration",
       "desc_en": "+1 Mana Regeneration",
       "recipe": null,
@@ -18373,7 +19398,9 @@
       "name_en": "Tear Of The Goddess",
       "type": "components",
       "icon": "https://assets.tftacademy.com/items/da_component_tear_of_the_goddess_LcXgeIAzlP.png",
-      "stats": {},
+      "stats": {
+        "manaRegen": "+1"
+      },
       "desc_vi": "+1 Mana Regeneration",
       "desc_en": "+1 Mana Regeneration",
       "recipe": null,
@@ -18385,7 +19412,9 @@
       "name_en": "Tear Of The Goddess",
       "type": "components",
       "icon": "https://assets.tftacademy.com/items/da_component_tear_of_the_goddess_LcXgeIAzlP.png",
-      "stats": {},
+      "stats": {
+        "manaRegen": "+1"
+      },
       "desc_vi": "+1 Mana Regeneration",
       "desc_en": "+1 Mana Regeneration",
       "recipe": null,
@@ -18860,7 +19889,8 @@
       "type": "craftables",
       "icon": "https://assets.tftacademy.com/items/da_archangels_staff_jzHiaVmGbV.png",
       "stats": {
-        "ap": "+30"
+        "ap": "+30",
+        "manaRegen": "+1"
       },
       "desc_vi": "Bắt đầu giao tranh: Nhận 20% Sức Mạnh Phép Thuật mỗi 5 giây trong giao tranh.",
       "desc_en": "Combat start: Gain 20% Ability Power every 5 seconds in combat.",
@@ -18916,7 +19946,8 @@
       "type": "craftables",
       "icon": "https://assets.tftacademy.com/items/da_archangels_staff_jzHiaVmGbV.png",
       "stats": {
-        "ap": "+30"
+        "ap": "+30",
+        "manaRegen": "+1"
       },
       "desc_vi": "Bắt đầu giao tranh: Nhận 20% Sức Mạnh Phép Thuật mỗi 5 giây trong giao tranh.",
       "desc_en": "Combat start: Gain 20% Ability Power every 5 seconds in combat.",
@@ -18972,7 +20003,8 @@
       "type": "craftables",
       "icon": "https://assets.tftacademy.com/items/da_archangels_staff_jzHiaVmGbV.png",
       "stats": {
-        "ap": "+30"
+        "ap": "+30",
+        "manaRegen": "+1"
       },
       "desc_vi": "Bắt đầu giao tranh: Nhận 20% Sức Mạnh Phép Thuật mỗi 5 giây trong giao tranh.",
       "desc_en": "Combat start: Gain 20% Ability Power every 5 seconds in combat.",
@@ -19028,7 +20060,8 @@
       "type": "craftables",
       "icon": "https://assets.tftacademy.com/items/da_archangels_staff_jzHiaVmGbV.png",
       "stats": {
-        "ap": "+30"
+        "ap": "+30",
+        "manaRegen": "+1"
       },
       "desc_vi": "Bắt đầu giao tranh: Nhận 20% Sức Mạnh Phép Thuật mỗi 5 giây trong giao tranh.",
       "desc_en": "Combat start: Gain 20% Ability Power every 5 seconds in combat.",
@@ -19084,7 +20117,8 @@
       "type": "craftables",
       "icon": "https://assets.tftacademy.com/items/da_archangels_staff_jzHiaVmGbV.png",
       "stats": {
-        "ap": "+30"
+        "ap": "+30",
+        "manaRegen": "+1"
       },
       "desc_vi": "Bắt đầu giao tranh: Nhận 20% Sức Mạnh Phép Thuật mỗi 5 giây trong giao tranh.",
       "desc_en": "Combat start: Gain 20% Ability Power every 5 seconds in combat.",
@@ -19140,7 +20174,8 @@
       "type": "craftables",
       "icon": "https://assets.tftacademy.com/items/da_archangels_staff_jzHiaVmGbV.png",
       "stats": {
-        "ap": "+30"
+        "ap": "+30",
+        "manaRegen": "+1"
       },
       "desc_vi": "Bắt đầu giao tranh: Nhận 20% Sức Mạnh Phép Thuật mỗi 5 giây trong giao tranh.",
       "desc_en": "Combat start: Gain 20% Ability Power every 5 seconds in combat.",
@@ -19196,7 +20231,8 @@
       "type": "craftables",
       "icon": "https://assets.tftacademy.com/items/da_archangels_staff_jzHiaVmGbV.png",
       "stats": {
-        "ap": "+30"
+        "ap": "+30",
+        "manaRegen": "+1"
       },
       "desc_vi": "Bắt đầu giao tranh: Nhận 20% Sức Mạnh Phép Thuật mỗi 5 giây trong giao tranh.",
       "desc_en": "Combat start: Gain 20% Ability Power every 5 seconds in combat.",
@@ -19252,7 +20288,8 @@
       "type": "radiants",
       "icon": "https://assets.tftacademy.com/items/da_archangels_staff_radiant_1paNLoyapC.png",
       "stats": {
-        "ap": "+60"
+        "ap": "+60",
+        "manaRegen": "+2"
       },
       "desc_vi": "Combat start: Gain 40% Ability Power every 5 seconds in combat.",
       "desc_en": "Combat start: Gain 40% Ability Power every 5 seconds in combat.",
@@ -19295,7 +20332,8 @@
       "type": "radiants",
       "icon": "https://assets.tftacademy.com/items/da_archangels_staff_radiant_1paNLoyapC.png",
       "stats": {
-        "ap": "+60"
+        "ap": "+60",
+        "manaRegen": "+2"
       },
       "desc_vi": "Combat start: Gain 40% Ability Power every 5 seconds in combat.",
       "desc_en": "Combat start: Gain 40% Ability Power every 5 seconds in combat.",
@@ -19338,7 +20376,8 @@
       "type": "radiants",
       "icon": "https://assets.tftacademy.com/items/da_archangels_staff_radiant_1paNLoyapC.png",
       "stats": {
-        "ap": "+60"
+        "ap": "+60",
+        "manaRegen": "+2"
       },
       "desc_vi": "Combat start: Gain 40% Ability Power every 5 seconds in combat.",
       "desc_en": "Combat start: Gain 40% Ability Power every 5 seconds in combat.",
@@ -19381,7 +20420,8 @@
       "type": "radiants",
       "icon": "https://assets.tftacademy.com/items/da_archangels_staff_radiant_1paNLoyapC.png",
       "stats": {
-        "ap": "+60"
+        "ap": "+60",
+        "manaRegen": "+2"
       },
       "desc_vi": "Combat start: Gain 40% Ability Power every 5 seconds in combat.",
       "desc_en": "Combat start: Gain 40% Ability Power every 5 seconds in combat.",
@@ -19424,7 +20464,8 @@
       "type": "radiants",
       "icon": "https://assets.tftacademy.com/items/da_archangels_staff_radiant_1paNLoyapC.png",
       "stats": {
-        "ap": "+60"
+        "ap": "+60",
+        "manaRegen": "+2"
       },
       "desc_vi": "Combat start: Gain 40% Ability Power every 5 seconds in combat.",
       "desc_en": "Combat start: Gain 40% Ability Power every 5 seconds in combat.",
@@ -19467,7 +20508,8 @@
       "type": "radiants",
       "icon": "https://assets.tftacademy.com/items/da_archangels_staff_radiant_1paNLoyapC.png",
       "stats": {
-        "ap": "+60"
+        "ap": "+60",
+        "manaRegen": "+2"
       },
       "desc_vi": "Combat start: Gain 40% Ability Power every 5 seconds in combat.",
       "desc_en": "Combat start: Gain 40% Ability Power every 5 seconds in combat.",
@@ -19510,7 +20552,8 @@
       "type": "radiants",
       "icon": "https://assets.tftacademy.com/items/da_archangels_staff_radiant_1paNLoyapC.png",
       "stats": {
-        "ap": "+60"
+        "ap": "+60",
+        "manaRegen": "+2"
       },
       "desc_vi": "Combat start: Gain 40% Ability Power every 5 seconds in combat.",
       "desc_en": "Combat start: Gain 40% Ability Power every 5 seconds in combat.",
@@ -21681,7 +22724,8 @@
       "icon": "https://assets.tftacademy.com/items/da_spear_of_shojin_AqBO0zksGz.png",
       "stats": {
         "ad": "+15%",
-        "ap": "+15"
+        "ap": "+15",
+        "manaRegen": "+1"
       },
       "desc_vi": "Các đòn đánh giúp hồi lại 5 Năng Lượng.",
       "desc_en": "Attacks grant 5 bonus Mana.",
@@ -21738,7 +22782,8 @@
       "icon": "https://assets.tftacademy.com/items/da_spear_of_shojin_AqBO0zksGz.png",
       "stats": {
         "ad": "+15%",
-        "ap": "+15"
+        "ap": "+15",
+        "manaRegen": "+1"
       },
       "desc_vi": "Các đòn đánh giúp hồi lại 5 Năng Lượng.",
       "desc_en": "Attacks grant 5 bonus Mana.",
@@ -21795,7 +22840,8 @@
       "icon": "https://assets.tftacademy.com/items/da_spear_of_shojin_AqBO0zksGz.png",
       "stats": {
         "ad": "+15%",
-        "ap": "+15"
+        "ap": "+15",
+        "manaRegen": "+1"
       },
       "desc_vi": "Các đòn đánh giúp hồi lại 5 Năng Lượng.",
       "desc_en": "Attacks grant 5 bonus Mana.",
@@ -21852,7 +22898,8 @@
       "icon": "https://assets.tftacademy.com/items/da_spear_of_shojin_AqBO0zksGz.png",
       "stats": {
         "ad": "+15%",
-        "ap": "+15"
+        "ap": "+15",
+        "manaRegen": "+1"
       },
       "desc_vi": "Các đòn đánh giúp hồi lại 5 Năng Lượng.",
       "desc_en": "Attacks grant 5 bonus Mana.",
@@ -21909,7 +22956,8 @@
       "icon": "https://assets.tftacademy.com/items/da_spear_of_shojin_AqBO0zksGz.png",
       "stats": {
         "ad": "+15%",
-        "ap": "+15"
+        "ap": "+15",
+        "manaRegen": "+1"
       },
       "desc_vi": "Các đòn đánh giúp hồi lại 5 Năng Lượng.",
       "desc_en": "Attacks grant 5 bonus Mana.",
@@ -21966,7 +23014,8 @@
       "icon": "https://assets.tftacademy.com/items/da_spear_of_shojin_AqBO0zksGz.png",
       "stats": {
         "ad": "+15%",
-        "ap": "+15"
+        "ap": "+15",
+        "manaRegen": "+1"
       },
       "desc_vi": "Các đòn đánh giúp hồi lại 5 Năng Lượng.",
       "desc_en": "Attacks grant 5 bonus Mana.",
@@ -22023,7 +23072,8 @@
       "icon": "https://assets.tftacademy.com/items/da_spear_of_shojin_AqBO0zksGz.png",
       "stats": {
         "ad": "+15%",
-        "ap": "+15"
+        "ap": "+15",
+        "manaRegen": "+1"
       },
       "desc_vi": "Các đòn đánh giúp hồi lại 5 Năng Lượng.",
       "desc_en": "Attacks grant 5 bonus Mana.",
@@ -32429,7 +33479,8 @@
       "icon": "https://assets.tftacademy.com/items/da_void_staff_6YBZgfUitr.png",
       "stats": {
         "as": "+15%",
-        "ap": "+35"
+        "ap": "+35",
+        "manaRegen": "+1"
       },
       "desc_vi": "Attacks and Ability damage 30% Shred the target for 5 seconds. This effect does not stack.",
       "desc_en": "Attacks and Ability damage 30% Shred the target for 5 seconds. This effect does not stack.",
@@ -32486,7 +33537,8 @@
       "icon": "https://assets.tftacademy.com/items/da_void_staff_6YBZgfUitr.png",
       "stats": {
         "as": "+15%",
-        "ap": "+35"
+        "ap": "+35",
+        "manaRegen": "+1"
       },
       "desc_vi": "Attacks and Ability damage 30% Shred the target for 5 seconds. This effect does not stack.",
       "desc_en": "Attacks and Ability damage 30% Shred the target for 5 seconds. This effect does not stack.",
@@ -32543,7 +33595,8 @@
       "icon": "https://assets.tftacademy.com/items/da_void_staff_6YBZgfUitr.png",
       "stats": {
         "as": "+15%",
-        "ap": "+35"
+        "ap": "+35",
+        "manaRegen": "+1"
       },
       "desc_vi": "Attacks and Ability damage 30% Shred the target for 5 seconds. This effect does not stack.",
       "desc_en": "Attacks and Ability damage 30% Shred the target for 5 seconds. This effect does not stack.",
@@ -32600,7 +33653,8 @@
       "icon": "https://assets.tftacademy.com/items/da_void_staff_6YBZgfUitr.png",
       "stats": {
         "as": "+15%",
-        "ap": "+35"
+        "ap": "+35",
+        "manaRegen": "+1"
       },
       "desc_vi": "Attacks and Ability damage 30% Shred the target for 5 seconds. This effect does not stack.",
       "desc_en": "Attacks and Ability damage 30% Shred the target for 5 seconds. This effect does not stack.",
@@ -32657,7 +33711,8 @@
       "icon": "https://assets.tftacademy.com/items/da_void_staff_6YBZgfUitr.png",
       "stats": {
         "as": "+15%",
-        "ap": "+35"
+        "ap": "+35",
+        "manaRegen": "+1"
       },
       "desc_vi": "Attacks and Ability damage 30% Shred the target for 5 seconds. This effect does not stack.",
       "desc_en": "Attacks and Ability damage 30% Shred the target for 5 seconds. This effect does not stack.",
@@ -32714,7 +33769,8 @@
       "icon": "https://assets.tftacademy.com/items/da_void_staff_6YBZgfUitr.png",
       "stats": {
         "as": "+15%",
-        "ap": "+35"
+        "ap": "+35",
+        "manaRegen": "+1"
       },
       "desc_vi": "Attacks and Ability damage 30% Shred the target for 5 seconds. This effect does not stack.",
       "desc_en": "Attacks and Ability damage 30% Shred the target for 5 seconds. This effect does not stack.",
@@ -32771,7 +33827,8 @@
       "icon": "https://assets.tftacademy.com/items/da_void_staff_6YBZgfUitr.png",
       "stats": {
         "as": "+15%",
-        "ap": "+35"
+        "ap": "+35",
+        "manaRegen": "+1"
       },
       "desc_vi": "Attacks and Ability damage 30% Shred the target for 5 seconds. This effect does not stack.",
       "desc_en": "Attacks and Ability damage 30% Shred the target for 5 seconds. This effect does not stack.",
@@ -32828,7 +33885,8 @@
       "icon": "https://assets.tftacademy.com/items/da_void_staff_radiant_xvSF7J3ZfX.png",
       "stats": {
         "as": "+30%",
-        "ap": "+75"
+        "ap": "+75",
+        "manaRegen": "+2"
       },
       "desc_vi": "Attacks and Ability damage 30% Shred the target for the rest of combat. This effect does not stack.",
       "desc_en": "Attacks and Ability damage 30% Shred the target for the rest of combat. This effect does not stack.",
@@ -32872,7 +33930,8 @@
       "icon": "https://assets.tftacademy.com/items/da_void_staff_radiant_xvSF7J3ZfX.png",
       "stats": {
         "as": "+30%",
-        "ap": "+75"
+        "ap": "+75",
+        "manaRegen": "+2"
       },
       "desc_vi": "Attacks and Ability damage 30% Shred the target for the rest of combat. This effect does not stack.",
       "desc_en": "Attacks and Ability damage 30% Shred the target for the rest of combat. This effect does not stack.",
@@ -32916,7 +33975,8 @@
       "icon": "https://assets.tftacademy.com/items/da_void_staff_radiant_xvSF7J3ZfX.png",
       "stats": {
         "as": "+30%",
-        "ap": "+75"
+        "ap": "+75",
+        "manaRegen": "+2"
       },
       "desc_vi": "Attacks and Ability damage 30% Shred the target for the rest of combat. This effect does not stack.",
       "desc_en": "Attacks and Ability damage 30% Shred the target for the rest of combat. This effect does not stack.",
@@ -32960,7 +34020,8 @@
       "icon": "https://assets.tftacademy.com/items/da_void_staff_radiant_xvSF7J3ZfX.png",
       "stats": {
         "as": "+30%",
-        "ap": "+75"
+        "ap": "+75",
+        "manaRegen": "+2"
       },
       "desc_vi": "Attacks and Ability damage 30% Shred the target for the rest of combat. This effect does not stack.",
       "desc_en": "Attacks and Ability damage 30% Shred the target for the rest of combat. This effect does not stack.",
@@ -33004,7 +34065,8 @@
       "icon": "https://assets.tftacademy.com/items/da_void_staff_radiant_xvSF7J3ZfX.png",
       "stats": {
         "as": "+30%",
-        "ap": "+75"
+        "ap": "+75",
+        "manaRegen": "+2"
       },
       "desc_vi": "Attacks and Ability damage 30% Shred the target for the rest of combat. This effect does not stack.",
       "desc_en": "Attacks and Ability damage 30% Shred the target for the rest of combat. This effect does not stack.",
@@ -33048,7 +34110,8 @@
       "icon": "https://assets.tftacademy.com/items/da_void_staff_radiant_xvSF7J3ZfX.png",
       "stats": {
         "as": "+30%",
-        "ap": "+75"
+        "ap": "+75",
+        "manaRegen": "+2"
       },
       "desc_vi": "Attacks and Ability damage 30% Shred the target for the rest of combat. This effect does not stack.",
       "desc_en": "Attacks and Ability damage 30% Shred the target for the rest of combat. This effect does not stack.",
@@ -33092,7 +34155,8 @@
       "icon": "https://assets.tftacademy.com/items/da_void_staff_radiant_xvSF7J3ZfX.png",
       "stats": {
         "as": "+30%",
-        "ap": "+75"
+        "ap": "+75",
+        "manaRegen": "+2"
       },
       "desc_vi": "Attacks and Ability damage 30% Shred the target for the rest of combat. This effect does not stack.",
       "desc_en": "Attacks and Ability damage 30% Shred the target for the rest of combat. This effect does not stack.",
@@ -33136,7 +34200,8 @@
       "icon": "https://assets.tftacademy.com/items/da_blue_buff_fyinsk2WWs.png",
       "stats": {
         "ad": "+15%",
-        "ap": "+15"
+        "ap": "+15",
+        "manaRegen": "+5"
       },
       "desc_vi": "Nhận thêm 10% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật từ mọi nguồn.",
       "desc_en": "Gain 10% additional Attack Damage and Ability Power from all sources.",
@@ -33193,7 +34258,8 @@
       "icon": "https://assets.tftacademy.com/items/da_blue_buff_fyinsk2WWs.png",
       "stats": {
         "ad": "+15%",
-        "ap": "+15"
+        "ap": "+15",
+        "manaRegen": "+5"
       },
       "desc_vi": "Nhận thêm 10% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật từ mọi nguồn.",
       "desc_en": "Gain 10% additional Attack Damage and Ability Power from all sources.",
@@ -33250,7 +34316,8 @@
       "icon": "https://assets.tftacademy.com/items/da_blue_buff_fyinsk2WWs.png",
       "stats": {
         "ad": "+15%",
-        "ap": "+15"
+        "ap": "+15",
+        "manaRegen": "+5"
       },
       "desc_vi": "Nhận thêm 10% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật từ mọi nguồn.",
       "desc_en": "Gain 10% additional Attack Damage and Ability Power from all sources.",
@@ -33307,7 +34374,8 @@
       "icon": "https://assets.tftacademy.com/items/da_blue_buff_fyinsk2WWs.png",
       "stats": {
         "ad": "+15%",
-        "ap": "+15"
+        "ap": "+15",
+        "manaRegen": "+5"
       },
       "desc_vi": "Nhận thêm 10% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật từ mọi nguồn.",
       "desc_en": "Gain 10% additional Attack Damage and Ability Power from all sources.",
@@ -33364,7 +34432,8 @@
       "icon": "https://assets.tftacademy.com/items/da_blue_buff_fyinsk2WWs.png",
       "stats": {
         "ad": "+15%",
-        "ap": "+15"
+        "ap": "+15",
+        "manaRegen": "+5"
       },
       "desc_vi": "Nhận thêm 10% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật từ mọi nguồn.",
       "desc_en": "Gain 10% additional Attack Damage and Ability Power from all sources.",
@@ -33421,7 +34490,8 @@
       "icon": "https://assets.tftacademy.com/items/da_blue_buff_fyinsk2WWs.png",
       "stats": {
         "ad": "+15%",
-        "ap": "+15"
+        "ap": "+15",
+        "manaRegen": "+5"
       },
       "desc_vi": "Nhận thêm 10% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật từ mọi nguồn.",
       "desc_en": "Gain 10% additional Attack Damage and Ability Power from all sources.",
@@ -33478,7 +34548,8 @@
       "icon": "https://assets.tftacademy.com/items/da_blue_buff_fyinsk2WWs.png",
       "stats": {
         "ad": "+15%",
-        "ap": "+15"
+        "ap": "+15",
+        "manaRegen": "+5"
       },
       "desc_vi": "Nhận thêm 10% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật từ mọi nguồn.",
       "desc_en": "Gain 10% additional Attack Damage and Ability Power from all sources.",
@@ -33535,7 +34606,8 @@
       "icon": "https://assets.tftacademy.com/items/da_blue_buff_radiant_ocSa5dtz32.png",
       "stats": {
         "ad": "+30%",
-        "ap": "+30"
+        "ap": "+30",
+        "manaRegen": "+10"
       },
       "desc_vi": "Gain 20% additional Attack Damage and Ability Power from all sources.",
       "desc_en": "Gain 20% additional Attack Damage and Ability Power from all sources.",
@@ -33579,7 +34651,8 @@
       "icon": "https://assets.tftacademy.com/items/da_blue_buff_radiant_ocSa5dtz32.png",
       "stats": {
         "ad": "+30%",
-        "ap": "+30"
+        "ap": "+30",
+        "manaRegen": "+10"
       },
       "desc_vi": "Gain 20% additional Attack Damage and Ability Power from all sources.",
       "desc_en": "Gain 20% additional Attack Damage and Ability Power from all sources.",
@@ -33623,7 +34696,8 @@
       "icon": "https://assets.tftacademy.com/items/da_blue_buff_radiant_ocSa5dtz32.png",
       "stats": {
         "ad": "+30%",
-        "ap": "+30"
+        "ap": "+30",
+        "manaRegen": "+10"
       },
       "desc_vi": "Gain 20% additional Attack Damage and Ability Power from all sources.",
       "desc_en": "Gain 20% additional Attack Damage and Ability Power from all sources.",
@@ -33667,7 +34741,8 @@
       "icon": "https://assets.tftacademy.com/items/da_blue_buff_radiant_ocSa5dtz32.png",
       "stats": {
         "ad": "+30%",
-        "ap": "+30"
+        "ap": "+30",
+        "manaRegen": "+10"
       },
       "desc_vi": "Gain 20% additional Attack Damage and Ability Power from all sources.",
       "desc_en": "Gain 20% additional Attack Damage and Ability Power from all sources.",
@@ -33711,7 +34786,8 @@
       "icon": "https://assets.tftacademy.com/items/da_blue_buff_radiant_ocSa5dtz32.png",
       "stats": {
         "ad": "+30%",
-        "ap": "+30"
+        "ap": "+30",
+        "manaRegen": "+10"
       },
       "desc_vi": "Gain 20% additional Attack Damage and Ability Power from all sources.",
       "desc_en": "Gain 20% additional Attack Damage and Ability Power from all sources.",
@@ -33755,7 +34831,8 @@
       "icon": "https://assets.tftacademy.com/items/da_blue_buff_radiant_ocSa5dtz32.png",
       "stats": {
         "ad": "+30%",
-        "ap": "+30"
+        "ap": "+30",
+        "manaRegen": "+10"
       },
       "desc_vi": "Gain 20% additional Attack Damage and Ability Power from all sources.",
       "desc_en": "Gain 20% additional Attack Damage and Ability Power from all sources.",
@@ -33799,7 +34876,8 @@
       "icon": "https://assets.tftacademy.com/items/da_blue_buff_radiant_ocSa5dtz32.png",
       "stats": {
         "ad": "+30%",
-        "ap": "+30"
+        "ap": "+30",
+        "manaRegen": "+10"
       },
       "desc_vi": "Gain 20% additional Attack Damage and Ability Power from all sources.",
       "desc_en": "Gain 20% additional Attack Damage and Ability Power from all sources.",
@@ -33843,7 +34921,8 @@
       "icon": "https://assets.tftacademy.com/items/da_protectors_vow_8MU45bwY6r.png",
       "stats": {
         "armor": "+25",
-        "mr": "+25"
+        "mr": "+25",
+        "manaRegen": "+1"
       },
       "desc_vi": "Combat Start: Gain 20 Mana. At 40% Health, gain 15 Mana and a Shield equal to 20% max Health.",
       "desc_en": "Combat Start: Gain 20 Mana. At 40% Health, gain 15 Mana and a Shield equal to 20% max Health.",
@@ -33900,7 +34979,8 @@
       "icon": "https://assets.tftacademy.com/items/da_protectors_vow_8MU45bwY6r.png",
       "stats": {
         "armor": "+25",
-        "mr": "+25"
+        "mr": "+25",
+        "manaRegen": "+1"
       },
       "desc_vi": "Combat Start: Gain 20 Mana. At 40% Health, gain 15 Mana and a Shield equal to 20% max Health.",
       "desc_en": "Combat Start: Gain 20 Mana. At 40% Health, gain 15 Mana and a Shield equal to 20% max Health.",
@@ -33957,7 +35037,8 @@
       "icon": "https://assets.tftacademy.com/items/da_protectors_vow_8MU45bwY6r.png",
       "stats": {
         "armor": "+25",
-        "mr": "+25"
+        "mr": "+25",
+        "manaRegen": "+1"
       },
       "desc_vi": "Combat Start: Gain 20 Mana. At 40% Health, gain 15 Mana and a Shield equal to 20% max Health.",
       "desc_en": "Combat Start: Gain 20 Mana. At 40% Health, gain 15 Mana and a Shield equal to 20% max Health.",
@@ -34014,7 +35095,8 @@
       "icon": "https://assets.tftacademy.com/items/da_protectors_vow_8MU45bwY6r.png",
       "stats": {
         "armor": "+25",
-        "mr": "+25"
+        "mr": "+25",
+        "manaRegen": "+1"
       },
       "desc_vi": "Combat Start: Gain 20 Mana. At 40% Health, gain 15 Mana and a Shield equal to 20% max Health.",
       "desc_en": "Combat Start: Gain 20 Mana. At 40% Health, gain 15 Mana and a Shield equal to 20% max Health.",
@@ -34071,7 +35153,8 @@
       "icon": "https://assets.tftacademy.com/items/da_protectors_vow_8MU45bwY6r.png",
       "stats": {
         "armor": "+25",
-        "mr": "+25"
+        "mr": "+25",
+        "manaRegen": "+1"
       },
       "desc_vi": "Combat Start: Gain 20 Mana. At 40% Health, gain 15 Mana and a Shield equal to 20% max Health.",
       "desc_en": "Combat Start: Gain 20 Mana. At 40% Health, gain 15 Mana and a Shield equal to 20% max Health.",
@@ -34128,7 +35211,8 @@
       "icon": "https://assets.tftacademy.com/items/da_protectors_vow_8MU45bwY6r.png",
       "stats": {
         "armor": "+25",
-        "mr": "+25"
+        "mr": "+25",
+        "manaRegen": "+1"
       },
       "desc_vi": "Combat Start: Gain 20 Mana. At 40% Health, gain 15 Mana and a Shield equal to 20% max Health.",
       "desc_en": "Combat Start: Gain 20 Mana. At 40% Health, gain 15 Mana and a Shield equal to 20% max Health.",
@@ -34185,7 +35269,8 @@
       "icon": "https://assets.tftacademy.com/items/da_protectors_vow_8MU45bwY6r.png",
       "stats": {
         "armor": "+25",
-        "mr": "+25"
+        "mr": "+25",
+        "manaRegen": "+1"
       },
       "desc_vi": "Combat Start: Gain 20 Mana. At 40% Health, gain 15 Mana and a Shield equal to 20% max Health.",
       "desc_en": "Combat Start: Gain 20 Mana. At 40% Health, gain 15 Mana and a Shield equal to 20% max Health.",
@@ -34242,7 +35327,8 @@
       "icon": "https://assets.tftacademy.com/items/da_protectors_vow_radiant_Pl9d1DHnMr.png",
       "stats": {
         "armor": "+50",
-        "mr": "+50"
+        "mr": "+50",
+        "manaRegen": "+2"
       },
       "desc_vi": "Combat Start: Gain 40 Mana. At 40% Health, gain 30 Mana and a Shield equal to 50% max Health",
       "desc_en": "Combat Start: Gain 40 Mana. At 40% Health, gain 30 Mana and a Shield equal to 50% max Health",
@@ -34286,7 +35372,8 @@
       "icon": "https://assets.tftacademy.com/items/da_protectors_vow_radiant_Pl9d1DHnMr.png",
       "stats": {
         "armor": "+50",
-        "mr": "+50"
+        "mr": "+50",
+        "manaRegen": "+2"
       },
       "desc_vi": "Combat Start: Gain 40 Mana. At 40% Health, gain 30 Mana and a Shield equal to 50% max Health",
       "desc_en": "Combat Start: Gain 40 Mana. At 40% Health, gain 30 Mana and a Shield equal to 50% max Health",
@@ -34330,7 +35417,8 @@
       "icon": "https://assets.tftacademy.com/items/da_protectors_vow_radiant_Pl9d1DHnMr.png",
       "stats": {
         "armor": "+50",
-        "mr": "+50"
+        "mr": "+50",
+        "manaRegen": "+2"
       },
       "desc_vi": "Combat Start: Gain 40 Mana. At 40% Health, gain 30 Mana and a Shield equal to 50% max Health",
       "desc_en": "Combat Start: Gain 40 Mana. At 40% Health, gain 30 Mana and a Shield equal to 50% max Health",
@@ -34374,7 +35462,8 @@
       "icon": "https://assets.tftacademy.com/items/da_protectors_vow_radiant_Pl9d1DHnMr.png",
       "stats": {
         "armor": "+50",
-        "mr": "+50"
+        "mr": "+50",
+        "manaRegen": "+2"
       },
       "desc_vi": "Combat Start: Gain 40 Mana. At 40% Health, gain 30 Mana and a Shield equal to 50% max Health",
       "desc_en": "Combat Start: Gain 40 Mana. At 40% Health, gain 30 Mana and a Shield equal to 50% max Health",
@@ -34418,7 +35507,8 @@
       "icon": "https://assets.tftacademy.com/items/da_protectors_vow_radiant_Pl9d1DHnMr.png",
       "stats": {
         "armor": "+50",
-        "mr": "+50"
+        "mr": "+50",
+        "manaRegen": "+2"
       },
       "desc_vi": "Combat Start: Gain 40 Mana. At 40% Health, gain 30 Mana and a Shield equal to 50% max Health",
       "desc_en": "Combat Start: Gain 40 Mana. At 40% Health, gain 30 Mana and a Shield equal to 50% max Health",
@@ -34462,7 +35552,8 @@
       "icon": "https://assets.tftacademy.com/items/da_protectors_vow_radiant_Pl9d1DHnMr.png",
       "stats": {
         "armor": "+50",
-        "mr": "+50"
+        "mr": "+50",
+        "manaRegen": "+2"
       },
       "desc_vi": "Combat Start: Gain 40 Mana. At 40% Health, gain 30 Mana and a Shield equal to 50% max Health",
       "desc_en": "Combat Start: Gain 40 Mana. At 40% Health, gain 30 Mana and a Shield equal to 50% max Health",
@@ -34506,7 +35597,8 @@
       "icon": "https://assets.tftacademy.com/items/da_protectors_vow_radiant_Pl9d1DHnMr.png",
       "stats": {
         "armor": "+50",
-        "mr": "+50"
+        "mr": "+50",
+        "manaRegen": "+2"
       },
       "desc_vi": "Combat Start: Gain 40 Mana. At 40% Health, gain 30 Mana and a Shield equal to 50% max Health",
       "desc_en": "Combat Start: Gain 40 Mana. At 40% Health, gain 30 Mana and a Shield equal to 50% max Health",
@@ -39679,7 +40771,9 @@
       "name_en": "Invoker Emblem",
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_invoker_alzgH6e5AM.png",
-      "stats": {},
+      "stats": {
+        "manaRegen": "+3"
+      },
       "desc_vi": "The holder gains the Invoker trait. On cast, gain Ability Power equal to 8% of Mana spent.",
       "desc_en": "The holder gains the Invoker trait. On cast, gain Ability Power equal to 8% of Mana spent.",
       "recipe": [
@@ -39733,7 +40827,9 @@
       "name_en": "Invoker Emblem",
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_invoker_alzgH6e5AM.png",
-      "stats": {},
+      "stats": {
+        "manaRegen": "+3"
+      },
       "desc_vi": "The holder gains the Invoker trait. On cast, gain Ability Power equal to 8% of Mana spent.",
       "desc_en": "The holder gains the Invoker trait. On cast, gain Ability Power equal to 8% of Mana spent.",
       "recipe": [
@@ -39787,7 +40883,9 @@
       "name_en": "Invoker Emblem",
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_invoker_alzgH6e5AM.png",
-      "stats": {},
+      "stats": {
+        "manaRegen": "+3"
+      },
       "desc_vi": "The holder gains the Invoker trait. On cast, gain Ability Power equal to 8% of Mana spent.",
       "desc_en": "The holder gains the Invoker trait. On cast, gain Ability Power equal to 8% of Mana spent.",
       "recipe": [
@@ -39841,7 +40939,9 @@
       "name_en": "Invoker Emblem",
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_invoker_alzgH6e5AM.png",
-      "stats": {},
+      "stats": {
+        "manaRegen": "+3"
+      },
       "desc_vi": "The holder gains the Invoker trait. On cast, gain Ability Power equal to 8% of Mana spent.",
       "desc_en": "The holder gains the Invoker trait. On cast, gain Ability Power equal to 8% of Mana spent.",
       "recipe": [
@@ -39895,7 +40995,9 @@
       "name_en": "Invoker Emblem",
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_invoker_alzgH6e5AM.png",
-      "stats": {},
+      "stats": {
+        "manaRegen": "+3"
+      },
       "desc_vi": "The holder gains the Invoker trait. On cast, gain Ability Power equal to 8% of Mana spent.",
       "desc_en": "The holder gains the Invoker trait. On cast, gain Ability Power equal to 8% of Mana spent.",
       "recipe": [
@@ -39949,7 +41051,9 @@
       "name_en": "Invoker Emblem",
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_invoker_alzgH6e5AM.png",
-      "stats": {},
+      "stats": {
+        "manaRegen": "+3"
+      },
       "desc_vi": "The holder gains the Invoker trait. On cast, gain Ability Power equal to 8% of Mana spent.",
       "desc_en": "The holder gains the Invoker trait. On cast, gain Ability Power equal to 8% of Mana spent.",
       "recipe": [
@@ -40003,7 +41107,9 @@
       "name_en": "Invoker Emblem",
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_invoker_alzgH6e5AM.png",
-      "stats": {},
+      "stats": {
+        "manaRegen": "+3"
+      },
       "desc_vi": "The holder gains the Invoker trait. On cast, gain Ability Power equal to 8% of Mana spent.",
       "desc_en": "The holder gains the Invoker trait. On cast, gain Ability Power equal to 8% of Mana spent.",
       "recipe": [
@@ -40058,7 +41164,8 @@
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_lunar_4fydsRhO9b.png",
       "stats": {
-        "as": "+20%"
+        "as": "+20%",
+        "manaRegen": "+3"
       },
       "desc_vi": "The holder gains the Lunar trait.",
       "desc_en": "The holder gains the Lunar trait.",
@@ -40114,7 +41221,8 @@
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_lunar_4fydsRhO9b.png",
       "stats": {
-        "as": "+20%"
+        "as": "+20%",
+        "manaRegen": "+3"
       },
       "desc_vi": "The holder gains the Lunar trait.",
       "desc_en": "The holder gains the Lunar trait.",
@@ -40170,7 +41278,8 @@
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_lunar_4fydsRhO9b.png",
       "stats": {
-        "as": "+20%"
+        "as": "+20%",
+        "manaRegen": "+3"
       },
       "desc_vi": "The holder gains the Lunar trait.",
       "desc_en": "The holder gains the Lunar trait.",
@@ -40226,7 +41335,8 @@
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_lunar_4fydsRhO9b.png",
       "stats": {
-        "as": "+20%"
+        "as": "+20%",
+        "manaRegen": "+3"
       },
       "desc_vi": "The holder gains the Lunar trait.",
       "desc_en": "The holder gains the Lunar trait.",
@@ -40282,7 +41392,8 @@
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_lunar_4fydsRhO9b.png",
       "stats": {
-        "as": "+20%"
+        "as": "+20%",
+        "manaRegen": "+3"
       },
       "desc_vi": "The holder gains the Lunar trait.",
       "desc_en": "The holder gains the Lunar trait.",
@@ -40338,7 +41449,8 @@
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_lunar_4fydsRhO9b.png",
       "stats": {
-        "as": "+20%"
+        "as": "+20%",
+        "manaRegen": "+3"
       },
       "desc_vi": "The holder gains the Lunar trait.",
       "desc_en": "The holder gains the Lunar trait.",
@@ -40394,7 +41506,8 @@
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_lunar_4fydsRhO9b.png",
       "stats": {
-        "as": "+20%"
+        "as": "+20%",
+        "manaRegen": "+3"
       },
       "desc_vi": "The holder gains the Lunar trait.",
       "desc_en": "The holder gains the Lunar trait.",
@@ -49123,7 +50236,8 @@
       "stats": {
         "armor": "+20",
         "mr": "+20",
-        "hp": "+250"
+        "hp": "+250",
+        "manaRegen": "+2"
       },
       "desc_vi": "Làm choáng kẻ địch sẽ triệu hồi sấm sét tấn công chúng, gây sát thương phép bằng 30% Máu tối đa của chúng.",
       "desc_en": "Stunning an enemy causes lightning to strike them, dealing 30% of their max Health as magic damage.",
@@ -49168,7 +50282,8 @@
       "stats": {
         "armor": "+20",
         "mr": "+20",
-        "hp": "+250"
+        "hp": "+250",
+        "manaRegen": "+2"
       },
       "desc_vi": "Làm choáng kẻ địch sẽ triệu hồi sấm sét tấn công chúng, gây sát thương phép bằng 30% Máu tối đa của chúng.",
       "desc_en": "Stunning an enemy causes lightning to strike them, dealing 30% of their max Health as magic damage.",
@@ -49213,7 +50328,8 @@
       "stats": {
         "armor": "+20",
         "mr": "+20",
-        "hp": "+250"
+        "hp": "+250",
+        "manaRegen": "+2"
       },
       "desc_vi": "Làm choáng kẻ địch sẽ triệu hồi sấm sét tấn công chúng, gây sát thương phép bằng 30% Máu tối đa của chúng.",
       "desc_en": "Stunning an enemy causes lightning to strike them, dealing 30% of their max Health as magic damage.",
@@ -49258,7 +50374,8 @@
       "stats": {
         "armor": "+20",
         "mr": "+20",
-        "hp": "+250"
+        "hp": "+250",
+        "manaRegen": "+2"
       },
       "desc_vi": "Làm choáng kẻ địch sẽ triệu hồi sấm sét tấn công chúng, gây sát thương phép bằng 30% Máu tối đa của chúng.",
       "desc_en": "Stunning an enemy causes lightning to strike them, dealing 30% of their max Health as magic damage.",
@@ -49303,7 +50420,8 @@
       "stats": {
         "armor": "+20",
         "mr": "+20",
-        "hp": "+250"
+        "hp": "+250",
+        "manaRegen": "+2"
       },
       "desc_vi": "Làm choáng kẻ địch sẽ triệu hồi sấm sét tấn công chúng, gây sát thương phép bằng 30% Máu tối đa của chúng.",
       "desc_en": "Stunning an enemy causes lightning to strike them, dealing 30% of their max Health as magic damage.",
@@ -49348,7 +50466,8 @@
       "stats": {
         "armor": "+20",
         "mr": "+20",
-        "hp": "+250"
+        "hp": "+250",
+        "manaRegen": "+2"
       },
       "desc_vi": "Làm choáng kẻ địch sẽ triệu hồi sấm sét tấn công chúng, gây sát thương phép bằng 30% Máu tối đa của chúng.",
       "desc_en": "Stunning an enemy causes lightning to strike them, dealing 30% of their max Health as magic damage.",
@@ -49393,7 +50512,8 @@
       "stats": {
         "armor": "+20",
         "mr": "+20",
-        "hp": "+250"
+        "hp": "+250",
+        "manaRegen": "+2"
       },
       "desc_vi": "Làm choáng kẻ địch sẽ triệu hồi sấm sét tấn công chúng, gây sát thương phép bằng 30% Máu tối đa của chúng.",
       "desc_en": "Stunning an enemy causes lightning to strike them, dealing 30% of their max Health as magic damage.",
@@ -50060,7 +51180,8 @@
       "icon": "https://assets.tftacademy.com/items/da_artifact_dawncore_88tij5vxM4.png",
       "stats": {
         "ad": "+20%",
-        "ap": "+20"
+        "ap": "+20",
+        "manaRegen": "+1"
       },
       "desc_vi": "Giảm Năng Lượng tối đa của chủ sở hữu đi 10. Những lần thi triển kỹ năng tiếp theo sẽ giảm Năng Lượng tối đa đi 10%, xuống mức tối thiểu là 10.",
       "desc_en": "Reduce the holder's max Mana by 10. Subsequent spellcasts reduce max Mana by 5%, to a minimum of 15.",
@@ -50104,7 +51225,8 @@
       "icon": "https://assets.tftacademy.com/items/da_artifact_dawncore_88tij5vxM4.png",
       "stats": {
         "ad": "+20%",
-        "ap": "+20"
+        "ap": "+20",
+        "manaRegen": "+1"
       },
       "desc_vi": "Giảm Năng Lượng tối đa của chủ sở hữu đi 10. Những lần thi triển kỹ năng tiếp theo sẽ giảm Năng Lượng tối đa đi 10%, xuống mức tối thiểu là 10.",
       "desc_en": "Reduce the holder's max Mana by 10. Subsequent spellcasts reduce max Mana by 5%, to a minimum of 15.",
@@ -50148,7 +51270,8 @@
       "icon": "https://assets.tftacademy.com/items/da_artifact_dawncore_88tij5vxM4.png",
       "stats": {
         "ad": "+20%",
-        "ap": "+20"
+        "ap": "+20",
+        "manaRegen": "+1"
       },
       "desc_vi": "Giảm Năng Lượng tối đa của chủ sở hữu đi 10. Những lần thi triển kỹ năng tiếp theo sẽ giảm Năng Lượng tối đa đi 10%, xuống mức tối thiểu là 10.",
       "desc_en": "Reduce the holder's max Mana by 10. Subsequent spellcasts reduce max Mana by 5%, to a minimum of 15.",
@@ -50192,7 +51315,8 @@
       "icon": "https://assets.tftacademy.com/items/da_artifact_dawncore_88tij5vxM4.png",
       "stats": {
         "ad": "+20%",
-        "ap": "+20"
+        "ap": "+20",
+        "manaRegen": "+1"
       },
       "desc_vi": "Giảm Năng Lượng tối đa của chủ sở hữu đi 10. Những lần thi triển kỹ năng tiếp theo sẽ giảm Năng Lượng tối đa đi 10%, xuống mức tối thiểu là 10.",
       "desc_en": "Reduce the holder's max Mana by 10. Subsequent spellcasts reduce max Mana by 5%, to a minimum of 15.",
@@ -50236,7 +51360,8 @@
       "icon": "https://assets.tftacademy.com/items/da_artifact_dawncore_88tij5vxM4.png",
       "stats": {
         "ad": "+20%",
-        "ap": "+20"
+        "ap": "+20",
+        "manaRegen": "+1"
       },
       "desc_vi": "Giảm Năng Lượng tối đa của chủ sở hữu đi 10. Những lần thi triển kỹ năng tiếp theo sẽ giảm Năng Lượng tối đa đi 10%, xuống mức tối thiểu là 10.",
       "desc_en": "Reduce the holder's max Mana by 10. Subsequent spellcasts reduce max Mana by 5%, to a minimum of 15.",
@@ -50280,7 +51405,8 @@
       "icon": "https://assets.tftacademy.com/items/da_artifact_dawncore_88tij5vxM4.png",
       "stats": {
         "ad": "+20%",
-        "ap": "+20"
+        "ap": "+20",
+        "manaRegen": "+1"
       },
       "desc_vi": "Giảm Năng Lượng tối đa của chủ sở hữu đi 10. Những lần thi triển kỹ năng tiếp theo sẽ giảm Năng Lượng tối đa đi 10%, xuống mức tối thiểu là 10.",
       "desc_en": "Reduce the holder's max Mana by 10. Subsequent spellcasts reduce max Mana by 5%, to a minimum of 15.",
@@ -53619,7 +54745,8 @@
       "icon": "https://assets.tftacademy.com/items/da_spear_of_shojin_radiant_8YFDaRy1KF.png",
       "stats": {
         "ad": "+30%",
-        "ap": "+30"
+        "ap": "+30",
+        "manaRegen": "+2"
       },
       "desc_vi": "Attacks grant 10 bonus Mana.",
       "desc_en": "Attacks grant 10 bonus Mana.",
@@ -53663,7 +54790,8 @@
       "icon": "https://assets.tftacademy.com/items/da_spear_of_shojin_radiant_8YFDaRy1KF.png",
       "stats": {
         "ad": "+30%",
-        "ap": "+30"
+        "ap": "+30",
+        "manaRegen": "+2"
       },
       "desc_vi": "Attacks grant 10 bonus Mana.",
       "desc_en": "Attacks grant 10 bonus Mana.",
@@ -53707,7 +54835,8 @@
       "icon": "https://assets.tftacademy.com/items/da_spear_of_shojin_radiant_8YFDaRy1KF.png",
       "stats": {
         "ad": "+30%",
-        "ap": "+30"
+        "ap": "+30",
+        "manaRegen": "+2"
       },
       "desc_vi": "Attacks grant 10 bonus Mana.",
       "desc_en": "Attacks grant 10 bonus Mana.",
@@ -53751,7 +54880,8 @@
       "icon": "https://assets.tftacademy.com/items/da_spear_of_shojin_radiant_8YFDaRy1KF.png",
       "stats": {
         "ad": "+30%",
-        "ap": "+30"
+        "ap": "+30",
+        "manaRegen": "+2"
       },
       "desc_vi": "Attacks grant 10 bonus Mana.",
       "desc_en": "Attacks grant 10 bonus Mana.",
@@ -53795,7 +54925,8 @@
       "icon": "https://assets.tftacademy.com/items/da_spear_of_shojin_radiant_8YFDaRy1KF.png",
       "stats": {
         "ad": "+30%",
-        "ap": "+30"
+        "ap": "+30",
+        "manaRegen": "+2"
       },
       "desc_vi": "Attacks grant 10 bonus Mana.",
       "desc_en": "Attacks grant 10 bonus Mana.",
@@ -53839,7 +54970,8 @@
       "icon": "https://assets.tftacademy.com/items/da_spear_of_shojin_radiant_8YFDaRy1KF.png",
       "stats": {
         "ad": "+30%",
-        "ap": "+30"
+        "ap": "+30",
+        "manaRegen": "+2"
       },
       "desc_vi": "Attacks grant 10 bonus Mana.",
       "desc_en": "Attacks grant 10 bonus Mana.",
@@ -53883,7 +55015,8 @@
       "icon": "https://assets.tftacademy.com/items/da_spear_of_shojin_radiant_8YFDaRy1KF.png",
       "stats": {
         "ad": "+30%",
-        "ap": "+30"
+        "ap": "+30",
+        "manaRegen": "+2"
       },
       "desc_vi": "Attacks grant 10 bonus Mana.",
       "desc_en": "Attacks grant 10 bonus Mana.",
@@ -57742,7 +58875,8 @@
       "type": "ornns",
       "icon": "https://assets.tftacademy.com/items/da_artifact_eternal_pact_1QrMPPX6Nh.png",
       "stats": {
-        "ap": "+35"
+        "ap": "+35",
+        "manaRegen": "+1"
       },
       "desc_vi": "Bắt đầu giao tranh: Kết giao ước với tướng đồng minh nhiều Máu nhất, nếu họ hy sinh, nhận 10 hồi phục Năng Lượng và 40% Sức Mạnh Phép Thuật. Khi đồng minh dùng kỹ năng, nhận 15 Năng Lượng. Mỗi 6 giây, tạo lá chắn cho đồng minh bằng 200% Sức Mạnh Phép Thuật của chủ sở hữu.",
       "desc_en": "Combat start: Form a pact with the highest Health allied champion, If they die, gain 10 Mana regen and 40% Ability Power. When the ally uses their ability, gain 15 Mana. Every 6 seconds, shield your ally for 200% of the holder's Ability Power.",
@@ -57785,7 +58919,8 @@
       "type": "ornns",
       "icon": "https://assets.tftacademy.com/items/da_artifact_eternal_pact_1QrMPPX6Nh.png",
       "stats": {
-        "ap": "+35"
+        "ap": "+35",
+        "manaRegen": "+1"
       },
       "desc_vi": "Bắt đầu giao tranh: Kết giao ước với tướng đồng minh nhiều Máu nhất, nếu họ hy sinh, nhận 10 hồi phục Năng Lượng và 40% Sức Mạnh Phép Thuật. Khi đồng minh dùng kỹ năng, nhận 15 Năng Lượng. Mỗi 6 giây, tạo lá chắn cho đồng minh bằng 200% Sức Mạnh Phép Thuật của chủ sở hữu.",
       "desc_en": "Combat start: Form a pact with the highest Health allied champion, If they die, gain 10 Mana regen and 40% Ability Power. When the ally uses their ability, gain 15 Mana. Every 6 seconds, shield your ally for 200% of the holder's Ability Power.",
@@ -57828,7 +58963,8 @@
       "type": "ornns",
       "icon": "https://assets.tftacademy.com/items/da_artifact_eternal_pact_1QrMPPX6Nh.png",
       "stats": {
-        "ap": "+35"
+        "ap": "+35",
+        "manaRegen": "+1"
       },
       "desc_vi": "Bắt đầu giao tranh: Kết giao ước với tướng đồng minh nhiều Máu nhất, nếu họ hy sinh, nhận 10 hồi phục Năng Lượng và 40% Sức Mạnh Phép Thuật. Khi đồng minh dùng kỹ năng, nhận 15 Năng Lượng. Mỗi 6 giây, tạo lá chắn cho đồng minh bằng 200% Sức Mạnh Phép Thuật của chủ sở hữu.",
       "desc_en": "Combat start: Form a pact with the highest Health allied champion, If they die, gain 10 Mana regen and 40% Ability Power. When the ally uses their ability, gain 15 Mana. Every 6 seconds, shield your ally for 200% of the holder's Ability Power.",
@@ -57871,7 +59007,8 @@
       "type": "ornns",
       "icon": "https://assets.tftacademy.com/items/da_artifact_eternal_pact_1QrMPPX6Nh.png",
       "stats": {
-        "ap": "+35"
+        "ap": "+35",
+        "manaRegen": "+1"
       },
       "desc_vi": "Bắt đầu giao tranh: Kết giao ước với tướng đồng minh nhiều Máu nhất, nếu họ hy sinh, nhận 10 hồi phục Năng Lượng và 40% Sức Mạnh Phép Thuật. Khi đồng minh dùng kỹ năng, nhận 15 Năng Lượng. Mỗi 6 giây, tạo lá chắn cho đồng minh bằng 200% Sức Mạnh Phép Thuật của chủ sở hữu.",
       "desc_en": "Combat start: Form a pact with the highest Health allied champion, If they die, gain 10 Mana regen and 40% Ability Power. When the ally uses their ability, gain 15 Mana. Every 6 seconds, shield your ally for 200% of the holder's Ability Power.",
@@ -57914,7 +59051,8 @@
       "type": "ornns",
       "icon": "https://assets.tftacademy.com/items/da_artifact_eternal_pact_1QrMPPX6Nh.png",
       "stats": {
-        "ap": "+35"
+        "ap": "+35",
+        "manaRegen": "+1"
       },
       "desc_vi": "Bắt đầu giao tranh: Kết giao ước với tướng đồng minh nhiều Máu nhất, nếu họ hy sinh, nhận 10 hồi phục Năng Lượng và 40% Sức Mạnh Phép Thuật. Khi đồng minh dùng kỹ năng, nhận 15 Năng Lượng. Mỗi 6 giây, tạo lá chắn cho đồng minh bằng 200% Sức Mạnh Phép Thuật của chủ sở hữu.",
       "desc_en": "Combat start: Form a pact with the highest Health allied champion, If they die, gain 10 Mana regen and 40% Ability Power. When the ally uses their ability, gain 15 Mana. Every 6 seconds, shield your ally for 200% of the holder's Ability Power.",
@@ -57957,7 +59095,8 @@
       "type": "ornns",
       "icon": "https://assets.tftacademy.com/items/da_artifact_eternal_pact_1QrMPPX6Nh.png",
       "stats": {
-        "ap": "+35"
+        "ap": "+35",
+        "manaRegen": "+1"
       },
       "desc_vi": "Bắt đầu giao tranh: Kết giao ước với tướng đồng minh nhiều Máu nhất, nếu họ hy sinh, nhận 10 hồi phục Năng Lượng và 40% Sức Mạnh Phép Thuật. Khi đồng minh dùng kỹ năng, nhận 15 Năng Lượng. Mỗi 6 giây, tạo lá chắn cho đồng minh bằng 200% Sức Mạnh Phép Thuật của chủ sở hữu.",
       "desc_en": "Combat start: Form a pact with the highest Health allied champion, If they die, gain 10 Mana regen and 40% Ability Power. When the ally uses their ability, gain 15 Mana. Every 6 seconds, shield your ally for 200% of the holder's Ability Power.",
@@ -58000,7 +59139,8 @@
       "type": "ornns",
       "icon": "https://assets.tftacademy.com/items/da_artifact_eternal_pact_1QrMPPX6Nh.png",
       "stats": {
-        "ap": "+35"
+        "ap": "+35",
+        "manaRegen": "+1"
       },
       "desc_vi": "Bắt đầu giao tranh: Kết giao ước với tướng đồng minh nhiều Máu nhất, nếu họ hy sinh, nhận 10 hồi phục Năng Lượng và 40% Sức Mạnh Phép Thuật. Khi đồng minh dùng kỹ năng, nhận 15 Năng Lượng. Mỗi 6 giây, tạo lá chắn cho đồng minh bằng 200% Sức Mạnh Phép Thuật của chủ sở hữu.",
       "desc_en": "Combat start: Form a pact with the highest Health allied champion, If they die, gain 10 Mana regen and 40% Ability Power. When the ally uses their ability, gain 15 Mana. Every 6 seconds, shield your ally for 200% of the holder's Ability Power.",
@@ -58044,7 +59184,8 @@
       "icon": "https://assets.tftacademy.com/items/da_artifact_manazane_6fuDRwXCL5.png",
       "stats": {
         "ad": "+15%",
-        "ap": "+15"
+        "ap": "+15",
+        "manaRegen": "+1"
       },
       "desc_vi": "After casting the first time in combat, gain 110 Mana over 5 seconds.",
       "desc_en": "After casting the first time in combat, gain 110 Mana over 5 seconds.",
@@ -58088,7 +59229,8 @@
       "icon": "https://assets.tftacademy.com/items/da_artifact_manazane_6fuDRwXCL5.png",
       "stats": {
         "ad": "+15%",
-        "ap": "+15"
+        "ap": "+15",
+        "manaRegen": "+1"
       },
       "desc_vi": "After casting the first time in combat, gain 110 Mana over 5 seconds.",
       "desc_en": "After casting the first time in combat, gain 110 Mana over 5 seconds.",
@@ -58132,7 +59274,8 @@
       "icon": "https://assets.tftacademy.com/items/da_artifact_manazane_6fuDRwXCL5.png",
       "stats": {
         "ad": "+15%",
-        "ap": "+15"
+        "ap": "+15",
+        "manaRegen": "+1"
       },
       "desc_vi": "After casting the first time in combat, gain 110 Mana over 5 seconds.",
       "desc_en": "After casting the first time in combat, gain 110 Mana over 5 seconds.",
@@ -58176,7 +59319,8 @@
       "icon": "https://assets.tftacademy.com/items/da_artifact_manazane_6fuDRwXCL5.png",
       "stats": {
         "ad": "+15%",
-        "ap": "+15"
+        "ap": "+15",
+        "manaRegen": "+1"
       },
       "desc_vi": "After casting the first time in combat, gain 110 Mana over 5 seconds.",
       "desc_en": "After casting the first time in combat, gain 110 Mana over 5 seconds.",
@@ -58220,7 +59364,8 @@
       "icon": "https://assets.tftacademy.com/items/da_artifact_manazane_6fuDRwXCL5.png",
       "stats": {
         "ad": "+15%",
-        "ap": "+15"
+        "ap": "+15",
+        "manaRegen": "+1"
       },
       "desc_vi": "After casting the first time in combat, gain 110 Mana over 5 seconds.",
       "desc_en": "After casting the first time in combat, gain 110 Mana over 5 seconds.",
@@ -58264,7 +59409,8 @@
       "icon": "https://assets.tftacademy.com/items/da_artifact_manazane_6fuDRwXCL5.png",
       "stats": {
         "ad": "+15%",
-        "ap": "+15"
+        "ap": "+15",
+        "manaRegen": "+1"
       },
       "desc_vi": "After casting the first time in combat, gain 110 Mana over 5 seconds.",
       "desc_en": "After casting the first time in combat, gain 110 Mana over 5 seconds.",
@@ -58309,7 +59455,8 @@
       "stats": {
         "armor": "+25",
         "mr": "+25",
-        "hp": "+500"
+        "hp": "+500",
+        "manaRegen": "+2"
       },
       "desc_vi": "50% giá trị lá chắn sẽ được chuyển sang Máu tối đa.",
       "desc_en": "Shields have 40% of their value converted to max Health instead.",
@@ -58354,7 +59501,8 @@
       "stats": {
         "armor": "+25",
         "mr": "+25",
-        "hp": "+500"
+        "hp": "+500",
+        "manaRegen": "+2"
       },
       "desc_vi": "50% giá trị lá chắn sẽ được chuyển sang Máu tối đa.",
       "desc_en": "Shields have 40% of their value converted to max Health instead.",
@@ -58399,7 +59547,8 @@
       "stats": {
         "armor": "+25",
         "mr": "+25",
-        "hp": "+500"
+        "hp": "+500",
+        "manaRegen": "+2"
       },
       "desc_vi": "50% giá trị lá chắn sẽ được chuyển sang Máu tối đa.",
       "desc_en": "Shields have 40% of their value converted to max Health instead.",
@@ -58444,7 +59593,8 @@
       "stats": {
         "armor": "+25",
         "mr": "+25",
-        "hp": "+500"
+        "hp": "+500",
+        "manaRegen": "+2"
       },
       "desc_vi": "50% giá trị lá chắn sẽ được chuyển sang Máu tối đa.",
       "desc_en": "Shields have 40% of their value converted to max Health instead.",
@@ -58489,7 +59639,8 @@
       "stats": {
         "armor": "+25",
         "mr": "+25",
-        "hp": "+500"
+        "hp": "+500",
+        "manaRegen": "+2"
       },
       "desc_vi": "50% giá trị lá chắn sẽ được chuyển sang Máu tối đa.",
       "desc_en": "Shields have 40% of their value converted to max Health instead.",
@@ -58534,7 +59685,8 @@
       "stats": {
         "armor": "+25",
         "mr": "+25",
-        "hp": "+500"
+        "hp": "+500",
+        "manaRegen": "+2"
       },
       "desc_vi": "50% giá trị lá chắn sẽ được chuyển sang Máu tối đa.",
       "desc_en": "Shields have 40% of their value converted to max Health instead.",
@@ -58579,7 +59731,8 @@
       "stats": {
         "armor": "+25",
         "mr": "+25",
-        "hp": "+500"
+        "hp": "+500",
+        "manaRegen": "+2"
       },
       "desc_vi": "50% giá trị lá chắn sẽ được chuyển sang Máu tối đa.",
       "desc_en": "Shields have 40% of their value converted to max Health instead.",
@@ -59735,7 +60888,8 @@
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_flora_fatalis_9hki3OuKDd.png",
       "stats": {
-        "hp": "+250"
+        "hp": "+250",
+        "manaRegen": "+2"
       },
       "desc_vi": "The holder gains the Flora Fatalis trait.",
       "desc_en": "The holder gains the Flora Fatalis trait.",
@@ -59778,7 +60932,8 @@
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_flora_fatalis_9hki3OuKDd.png",
       "stats": {
-        "hp": "+250"
+        "hp": "+250",
+        "manaRegen": "+2"
       },
       "desc_vi": "The holder gains the Flora Fatalis trait.",
       "desc_en": "The holder gains the Flora Fatalis trait.",
@@ -59821,7 +60976,8 @@
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_flora_fatalis_9hki3OuKDd.png",
       "stats": {
-        "hp": "+250"
+        "hp": "+250",
+        "manaRegen": "+2"
       },
       "desc_vi": "The holder gains the Flora Fatalis trait.",
       "desc_en": "The holder gains the Flora Fatalis trait.",
@@ -59864,7 +61020,8 @@
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_flora_fatalis_9hki3OuKDd.png",
       "stats": {
-        "hp": "+250"
+        "hp": "+250",
+        "manaRegen": "+2"
       },
       "desc_vi": "The holder gains the Flora Fatalis trait.",
       "desc_en": "The holder gains the Flora Fatalis trait.",
@@ -59907,7 +61064,8 @@
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_flora_fatalis_9hki3OuKDd.png",
       "stats": {
-        "hp": "+250"
+        "hp": "+250",
+        "manaRegen": "+2"
       },
       "desc_vi": "The holder gains the Flora Fatalis trait.",
       "desc_en": "The holder gains the Flora Fatalis trait.",
@@ -59950,7 +61108,8 @@
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_flora_fatalis_augment_BohMUGeImW.png",
       "stats": {
-        "hp": "+250"
+        "hp": "+250",
+        "manaRegen": "+2"
       },
       "desc_vi": "The holder gains the Flora Fatalis trait. They gain 50% increased benefits from Flora Fatalis.",
       "desc_en": "The holder gains the Flora Fatalis trait. They gain 50% increased benefits from Flora Fatalis.",
@@ -59993,7 +61152,8 @@
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_flora_fatalis_augment_BohMUGeImW.png",
       "stats": {
-        "hp": "+250"
+        "hp": "+250",
+        "manaRegen": "+2"
       },
       "desc_vi": "The holder gains the Flora Fatalis trait. They gain 50% increased benefits from Flora Fatalis.",
       "desc_en": "The holder gains the Flora Fatalis trait. They gain 50% increased benefits from Flora Fatalis.",
@@ -60337,7 +61497,8 @@
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_flora_fatalis_augment_BohMUGeImW.png",
       "stats": {
-        "hp": "+250"
+        "hp": "+250",
+        "manaRegen": "+2"
       },
       "desc_vi": "The holder gains the Flora Fatalis trait. They gain 50% increased benefits from Flora Fatalis.",
       "desc_en": "The holder gains the Flora Fatalis trait. They gain 50% increased benefits from Flora Fatalis.",
@@ -60380,7 +61541,8 @@
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_flora_fatalis_augment_BohMUGeImW.png",
       "stats": {
-        "hp": "+250"
+        "hp": "+250",
+        "manaRegen": "+2"
       },
       "desc_vi": "The holder gains the Flora Fatalis trait. They gain 50% increased benefits from Flora Fatalis.",
       "desc_en": "The holder gains the Flora Fatalis trait. They gain 50% increased benefits from Flora Fatalis.",
@@ -60423,7 +61585,8 @@
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_flora_fatalis_augment_BohMUGeImW.png",
       "stats": {
-        "hp": "+250"
+        "hp": "+250",
+        "manaRegen": "+2"
       },
       "desc_vi": "The holder gains the Flora Fatalis trait. They gain 50% increased benefits from Flora Fatalis.",
       "desc_en": "The holder gains the Flora Fatalis trait. They gain 50% increased benefits from Flora Fatalis.",
@@ -60466,7 +61629,8 @@
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_flora_fatalis_augment_BohMUGeImW.png",
       "stats": {
-        "hp": "+250"
+        "hp": "+250",
+        "manaRegen": "+2"
       },
       "desc_vi": "The holder gains the Flora Fatalis trait. They gain 50% increased benefits from Flora Fatalis.",
       "desc_en": "The holder gains the Flora Fatalis trait. They gain 50% increased benefits from Flora Fatalis.",
@@ -60509,7 +61673,8 @@
       "type": "emblems",
       "icon": "https://assets.tftacademy.com/items/da_18_emblem_flora_fatalis_augment_BohMUGeImW.png",
       "stats": {
-        "hp": "+250"
+        "hp": "+250",
+        "manaRegen": "+2"
       },
       "desc_vi": "The holder gains the Flora Fatalis trait. They gain 50% increased benefits from Flora Fatalis.",
       "desc_en": "The holder gains the Flora Fatalis trait. They gain 50% increased benefits from Flora Fatalis.",

@@ -92,6 +92,9 @@
             {#if data.stats.mana}
               <span class="text-blue-400 flex items-center gap-1">💧 {data.stats.mana}</span>
             {/if}
+            {#if data.stats.manaRegen}
+              <span class="text-cyan-400 flex items-center gap-1">💧 {data.stats.manaRegen}</span>
+            {/if}
           </div>
         {/if}
       </div>

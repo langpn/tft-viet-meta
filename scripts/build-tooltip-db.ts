@@ -162,6 +162,67 @@ for (const cVi of set18ChampsVi) {
   championsDb[name_vi.toLowerCase()] = champData;
 }
 
+// 1.1 Index any remaining Academy champions (summons, flex units, etc.)
+for (const acChamp of academyChamps) {
+  if (championsDb[acChamp.apiName] || (acChamp.id && championsDb[acChamp.id])) continue;
+
+  const apiName = acChamp.apiName;
+  const name_en = acChamp.name || apiName;
+  let name_vi = name_en;
+  if (name_en.includes('Stonebark Tree')) name_vi = 'Cổ Thụ Vỏ Đá';
+  else if (name_en.includes('Lifebloom')) name_vi = 'Hoa Nở Sinh Mệnh';
+  else if (name_en.includes('Deepwood Protector')) name_vi = 'Vệ Thần Rừng Sâu';
+  else if (name_en.includes('level')) name_vi = `Cấp độ ${name_en.replace(/\D/g, '')}`;
+
+  const cost = acChamp.cost || 1;
+  const role_en = acChamp.role || 'Tank';
+  const role_vi = role_en === 'Tank' ? 'Đỡ Đòn' : 'Triệu Hồi';
+
+  const icon = acChamp.championSquareIcon 
+    ? `https://assets.tftacademy.com/champions/champion_square_icons/${acChamp.championSquareIcon}`
+    : (acChamp.championIcon ? `https://assets.tftacademy.com/champions/champion_icons/${acChamp.championIcon}` : '');
+
+  const traitsList = (acChamp.traits || []).map((tId: string) => {
+    const acTrait = academyTraits.find(x => x.id === tId);
+    const tName = acTrait?.name || 'Elderwood';
+    return {
+      name_en: tName,
+      name_vi: tName === 'Elderwood' ? 'Thần Rừng' : tName,
+      icon: traitIconMap.get(tName.toLowerCase()) || 'assets/ux/traiticons/trait_icon_18_elderwood.png'
+    };
+  });
+
+  const champData = {
+    id: apiName,
+    academyId: acChamp.id,
+    name_vi,
+    name_en,
+    cost,
+    role_en,
+    role_vi,
+    range: acChamp.stats?.range || 1,
+    mana: acChamp.stats?.mana || 0,
+    initialMana: 0,
+    traits: traitsList.length > 0 ? traitsList : [{ name_en: 'Summon', name_vi: 'Triệu Hồi', icon: 'assets/ux/traiticons/trait_icon_18_elderwood.png' }],
+    ability: {
+      name_vi: acChamp.abilityName || 'Bảo Hộ Rừng Già',
+      name_en: acChamp.abilityName || 'Forest Protection',
+      mana: `0 / ${acChamp.stats?.mana || 0}`,
+      desc_vi: cleanText(acChamp.ability) || 'Triệu hồi cổ thụ che chắn và hỗ trợ đồng minh trong giao tranh.',
+      desc_en: cleanText(acChamp.ability) || 'Summon an ancient forest protector.',
+      icon: ''
+    },
+    recommendedItems: acChamp.recommendedItems || [],
+    icon
+  };
+
+  championsDb[apiName] = champData;
+  championsDb[apiName.toLowerCase()] = champData;
+  if (acChamp.id) championsDb[acChamp.id] = champData;
+  championsDb[name_en.toLowerCase()] = champData;
+  championsDb[name_vi.toLowerCase()] = champData;
+}
+
 // 2. Process Items
 const itemsDb: Record<string, any> = {};
 const allCdragItemsVi = cdragVi.items || [];
@@ -190,7 +251,8 @@ for (const acItem of academyItems) {
   if (acStats.mr || cEffects.MagicResist) stats.mr = `+${acStats.mr || Math.round(cEffects.MagicResist)}`;
   if (acStats.hp || cEffects.Health) stats.hp = `+${acStats.hp || Math.round(cEffects.Health)}`;
   if (acStats.crit || cEffects.CritChance) stats.crit = `+${acStats.crit || Math.round(cEffects.CritChance * 100)}%`;
-  if (acStats.mana || cEffects.Mana) stats.mana = `+${acStats.mana || Math.round(cEffects.Mana)}`;
+  if (acStats.manaRegen) stats.manaRegen = `+${acStats.manaRegen}`;
+  else if (acStats.mana || cEffects.Mana) stats.mana = `+${acStats.mana || Math.round(cEffects.Mana)}`;
   if (acStats.ov || cEffects.StatOmnivamp || cEffects.Omnivamp || cEffects.LifeSteal) {
     const val = acStats.ov || Math.round((cEffects.StatOmnivamp || cEffects.Omnivamp || cEffects.LifeSteal) * 100);
     stats.ov = `+${val}%`;
