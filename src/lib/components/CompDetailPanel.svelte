@@ -1,9 +1,10 @@
 <script lang="ts">
   import HexAvatar from './HexAvatar.svelte';
   import BoardHexMap from './BoardHexMap.svelte';
-  import { resolveAugmentIcon, resolveItemIcon, resolveTraitIcon } from '$lib/utils/assets';
+  import { resolveAugmentIcon, resolveItemIcon, resolveTraitIcon, resolveChampionIcon } from '$lib/utils/assets';
   import { translatePlaystyle, translateDifficulty, translateStrategyTip } from '$lib/utils/strategy-translator';
-  import { Copy, X, Check, BookOpen, Sparkles, Layers } from 'lucide-svelte';
+  import { showTooltip, hideTooltip } from '$lib/utils/tooltip-store.svelte';
+  import { Copy, X, Check, ExternalLink, Coins, Package, Swords, ChevronRight } from 'lucide-svelte';
 
   interface Props {
     comp: any;
@@ -13,6 +14,7 @@
   let { comp, onclose }: Props = $props();
 
   let copied = $state(false);
+  let showNames = $state(false);
 
   function copyCompCode() {
     if (typeof navigator !== 'undefined' && comp?.title) {
@@ -22,23 +24,53 @@
     }
   }
 
-  const tierBg = $derived.by(() => {
-    if (comp?.tier === 'S') return 'from-rose-950/40 via-[#0F131C] to-[#0A0D14] border-rose-500/40';
-    if (comp?.tier === 'A') return 'from-orange-950/40 via-[#0F131C] to-[#0A0D14] border-orange-500/40';
-    if (comp?.tier === 'B') return 'from-amber-950/40 via-[#0F131C] to-[#0A0D14] border-amber-500/40';
-    if (comp?.tier === 'C') return 'from-lime-950/40 via-[#0F131C] to-[#0A0D14] border-lime-500/40';
-    return 'from-teal-950/40 via-[#0F131C] to-[#0A0D14] border-teal-500/40';
+  // Derive trait count badges from comp.traits or board
+  const traits = $derived.by(() => {
+    if (comp?.traits && comp.traits.length > 0) return comp.traits;
+    // Fallback: collect from board
+    return [];
+  });
+
+  // Derive Item Priority list
+  const itemPriority = $derived.by(() => {
+    const list: any[] = [];
+    if (comp?.mainCarry?.items) {
+      for (const it of comp.mainCarry.items) {
+        if (!list.some(x => x.id === it.id)) list.push(it);
+      }
+    }
+    if (comp?.mainTank?.items) {
+      for (const it of comp.mainTank.items) {
+        if (!list.some(x => x.id === it.id)) list.push(it);
+      }
+    }
+    return list;
+  });
+
+  // Derive Alt Builds
+  const altBuilds = $derived.by(() => {
+    return [
+      {
+        champ: comp?.mainCarry,
+        items: comp?.mainCarry?.items?.slice(1, 3) || []
+      },
+      {
+        champ: comp?.mainCarry,
+        items: comp?.mainCarry?.items?.slice(0, 2) || []
+      }
+    ];
   });
 </script>
 
 {#if comp}
-  <div class="w-full rounded-2xl bg-[#090C12] border border-white/10 shadow-2xl overflow-hidden flex flex-col lg:flex-row animate-in fade-in duration-300">
+  <!-- TFT Academy Exact Replica Modal Container (Ultra Dark Jet-Black Palette) -->
+  <div class="w-full max-w-6xl rounded-2xl bg-[#0B0D12] border border-[#1C202B] shadow-2xl overflow-hidden flex flex-col lg:flex-row animate-in fade-in zoom-in-95 duration-200">
     
-    <!-- Left Column: Core Carry Showcase & Augments (35% width) -->
-    <div class="lg:w-[35%] bg-gradient-to-b {tierBg} border-b lg:border-b-0 lg:border-r border-white/10 p-6 sm:p-8 flex flex-col justify-between gap-6">
-      <div class="flex flex-col items-center text-center gap-4">
-        
-        <!-- Large Main Carry Hexagon -->
+    <!-- LEFT COLUMN: Core Carry Showcase, Traits, Augments & Priority (32% width) -->
+    <div class="lg:w-[32%] bg-[#0E1118] border-b lg:border-b-0 lg:border-r border-[#1C202B] p-5 sm:p-6 flex flex-col gap-5 select-none">
+      
+      <!-- Top Angular Gold Header Card for Main Carry -->
+      <div class="relative rounded-2xl bg-gradient-to-b from-amber-500/15 via-[#131722]/60 to-transparent p-5 border border-amber-500/20 flex flex-col items-center shadow-lg">
         {#if comp.mainCarry}
           <div class="relative py-2">
             <HexAvatar 
@@ -47,7 +79,8 @@
               nameVi={comp.mainCarry.nameVi}
               iconUrl={comp.mainCarry.iconUrl}
               cost={comp.mainCarry.cost}
-              starLevel={comp.mainCarry.starLevel || 2}
+              starLevel={1}
+              showStars={false}
               items={comp.mainCarry.items}
               showItems={true}
               size="xl"
@@ -55,97 +88,122 @@
           </div>
         {/if}
 
-        <!-- Title & Playstyle (100% Vietnamese translation) -->
-        <div class="flex flex-col gap-1.5 items-center">
-          <h2 class="text-2xl sm:text-3xl font-black uppercase tracking-tight text-white">
-            {comp.title}
-          </h2>
-          {#if comp.metaTitle && comp.metaTitle !== comp.title}
-            <span class="text-xs text-slate-400 font-semibold">{comp.metaTitle}</span>
-          {/if}
-          
-          {#if comp.compStyle}
-            <div class="mt-1 flex items-center gap-2">
-              <span class="text-xs font-black uppercase tracking-wider text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">
-                LỐI CHƠI: {translatePlaystyle(comp.compStyle)}
-              </span>
-              {#if comp.difficulty}
-                <span class="text-[11px] font-black uppercase tracking-wider text-slate-300 bg-white/10 px-2.5 py-1 rounded-full">
-                  {translateDifficulty(comp.difficulty)}
-                </span>
-              {/if}
-            </div>
-          {/if}
+        <!-- Title & Subtitle -->
+        <h2 class="text-2xl sm:text-3xl font-black uppercase tracking-tight text-white text-center mt-2">
+          {comp.title}
+        </h2>
+        {#if comp.metaTitle && comp.metaTitle !== comp.title}
+          <span class="text-xs text-slate-400 font-medium text-center">{comp.metaTitle}</span>
+        {/if}
+
+        <!-- Playstyle & Difficulty Pill -->
+        <div class="mt-2.5 flex items-center justify-center gap-1.5 flex-wrap">
+          <span class="text-[11px] font-black uppercase tracking-wider text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">
+            PLAYSTYLE: {translatePlaystyle(comp.compStyle)} {comp.difficulty ? `(${translateDifficulty(comp.difficulty)})` : ''}
+          </span>
         </div>
 
-        <!-- Trait Badges Row -->
-        {#if comp.traits && comp.traits.length > 0}
-          <div class="flex flex-wrap items-center justify-center gap-1.5 pt-2">
-            {#each comp.traits as trait}
-              <div class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-black/70 border border-white/10 text-xs font-bold text-slate-200 shadow-sm">
-                {#if trait.icon}
-                  <img src={resolveTraitIcon(trait.icon, trait.id)} alt="" class="w-4 h-4 object-contain" />
+        <!-- Trait Badges Row (Matching Screenshot 2) -->
+        {#if traits.length > 0}
+          <div class="flex flex-wrap items-center justify-center gap-1.5 mt-3 pt-3 border-t border-white/5 w-full">
+            {#each traits as trait}
+              {@const tIcon = resolveTraitIcon(trait.icon, trait.id)}
+              <div 
+                class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#161B26] border border-white/10 text-xs font-bold text-slate-200 shadow-sm hover:border-amber-400 cursor-pointer transition-colors"
+                onmouseenter={(e) => showTooltip({ type: 'trait', id: trait.id, name: trait.name_vi || trait.name }, e.currentTarget)}
+                onmouseleave={() => hideTooltip()}
+              >
+                {#if tIcon}
+                  <img src={tIcon} alt="" class="w-4 h-4 object-contain" />
                 {/if}
-                <span>{trait.count || ''} {trait.name_vi || trait.name}</span>
+                <span class="font-extrabold text-[11px]">{trait.count || ''} {trait.name_vi || trait.name}</span>
               </div>
             {/each}
           </div>
         {/if}
       </div>
 
-      <!-- Augments Showcase -->
+      <!-- Augments Showcase (2 Rows of 4, Matching Screenshot 2) -->
       {#if comp.augments && comp.augments.length > 0}
-        <div class="flex flex-col gap-2.5 pt-4 border-t border-white/10">
-          <span class="text-xs font-black uppercase tracking-wider text-slate-300 text-center flex items-center justify-center gap-1.5">
-            <Sparkles class="w-4 h-4 text-amber-400" /> LÕI NÂNG CẤP KHUYÊN DÙNG
+        <div class="flex flex-col gap-2 pt-2">
+          <span class="text-xs font-bold text-slate-400 uppercase tracking-wider text-center">
+            Augments
           </span>
-          <div class="flex flex-wrap items-center justify-center gap-2 pt-1">
-            {#each comp.augments.slice(0, 6) as aug}
+          <div class="grid grid-cols-4 gap-2 pt-1 justify-items-center">
+            {#each comp.augments.slice(0, 8) as aug}
+              {@const aIcon = resolveAugmentIcon(aug.icon, aug.id)}
               <div 
-                class="w-11 h-11 rounded-xl bg-black/80 border border-white/10 overflow-hidden p-1 flex items-center justify-center hover:scale-115 transition-transform shadow-md"
-                title={aug.name_vi || aug.name_en}
+                class="w-12 h-12 rounded-xl bg-black border border-white/10 overflow-hidden p-1 flex items-center justify-center hover:scale-115 hover:border-amber-400 transition-all shadow-md cursor-pointer"
+                onmouseenter={(e) => showTooltip({ type: 'augment', id: aug.id, name: aug.name_vi }, e.currentTarget)}
+                onmouseleave={() => hideTooltip()}
               >
-                <img 
-                  src={resolveAugmentIcon(aug.icon, aug.id)} 
-                  alt={aug.name_vi || ''} 
-                  class="w-full h-full object-contain"
-                  loading="lazy"
-                />
+                {#if aIcon}
+                  <img src={aIcon} alt="" class="w-full h-full object-contain" loading="lazy" />
+                {/if}
               </div>
             {/each}
           </div>
-          {#if comp.augmentsTip}
-            <p class="text-xs text-slate-300 text-center italic leading-relaxed pt-1.5">
-              "{translateStrategyTip(comp.augmentsTip)}"
-            </p>
-          {/if}
         </div>
       {/if}
+
+      <!-- Augment Priority: ECON ➔ ITEMS ➔ COMBAT (Exact Match to Screenshot 2) -->
+      <div class="flex flex-col gap-2 pt-2 border-t border-white/5">
+        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider text-center">
+          Augment Priority
+        </span>
+        <div class="flex items-center justify-center gap-3 text-xs font-black text-slate-300 py-1">
+          <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#141824] border border-white/5">
+            <Coins class="w-3.5 h-3.5 text-amber-400" />
+            <span class="text-[11px]">ECON</span>
+          </div>
+          <ChevronRight class="w-3.5 h-3.5 text-slate-500" />
+          <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#141824] border border-white/5">
+            <Package class="w-3.5 h-3.5 text-sky-400" />
+            <span class="text-[11px]">ITEMS</span>
+          </div>
+          <ChevronRight class="w-3.5 h-3.5 text-slate-500" />
+          <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#141824] border border-white/5">
+            <Swords class="w-3.5 h-3.5 text-rose-400" />
+            <span class="text-[11px]">COMBAT</span>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <!-- Right Column: Final Board, Early Units, Items, Positioning & Strategy (65% width) -->
-    <div class="lg:w-[65%] p-6 sm:p-8 flex flex-col gap-6 justify-between bg-[#0B0E14]">
+    <!-- RIGHT COLUMN: Final Comp, Early, Priority, Board, Tips & Stages (68% width) -->
+    <div class="lg:w-[68%] p-6 sm:p-7 flex flex-col gap-6 justify-between bg-[#0B0D12] select-none">
       
-      <!-- Top Action Bar -->
-      <div class="flex items-center justify-between border-b border-white/10 pb-4">
-        <div class="flex items-center gap-2.5">
-          <span class="px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider {comp.tier === 'S' ? 'bg-rose-500 text-white shadow-lg shadow-rose-500/30' : comp.tier === 'A' ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/30' : 'bg-amber-400 text-black font-black'}">
-            Tier {comp.tier}
-          </span>
-          <span class="font-black text-lg text-white">{comp.title}</span>
+      <!-- Top Action Bar with Tabs (Matching Screenshot 2) -->
+      <div class="flex items-center justify-between border-b border-[#1C202B] pb-3.5">
+        <!-- Comp Tabs: Base Tier Badge + Title -->
+        <div class="flex items-center gap-2 overflow-x-auto">
+          <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#141824] border border-amber-400/40 text-xs font-black text-white shadow-md">
+            <span class="px-1.5 py-0.5 rounded bg-amber-400 text-black font-black text-[10px] uppercase">
+              {comp.tier}
+            </span>
+            <span>{comp.title}</span>
+          </div>
+
+          {#if comp.metaTitle && comp.metaTitle !== comp.title}
+            <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-xs font-bold text-slate-400 transition-colors cursor-pointer">
+              <span>{comp.metaTitle}</span>
+            </div>
+          {/if}
         </div>
 
-        <div class="flex items-center gap-2">
+        <!-- Copy & Close Buttons -->
+        <div class="flex items-center gap-2 shrink-0">
           <button 
             type="button"
             onclick={copyCompCode}
-            class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#161D2B] hover:bg-[#20293A] border border-white/10 text-xs font-bold text-slate-200 transition-colors cursor-pointer"
+            class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#141824] hover:bg-[#1E2538] border border-white/10 text-xs font-bold text-slate-200 transition-colors cursor-pointer"
           >
             {#if copied}
-              <Check class="w-4 h-4 text-emerald-400" />
+              <Check class="w-3.5 h-3.5 text-emerald-400" />
               <span class="text-emerald-400">Đã chép!</span>
             {:else}
-              <Copy class="w-4 h-4 text-amber-400" />
+              <Copy class="w-3.5 h-3.5 text-amber-400" />
               <span>Copy</span>
             {/if}
           </button>
@@ -155,48 +213,49 @@
               type="button"
               onclick={onclose}
               aria-label="Đóng chi tiết"
-              class="w-9 h-9 rounded-xl bg-white/5 hover:bg-rose-500/20 hover:text-rose-400 flex items-center justify-center text-slate-400 transition-colors cursor-pointer"
+              class="w-8 h-8 rounded-xl bg-white/5 hover:bg-rose-500/20 hover:text-rose-400 flex items-center justify-center text-slate-400 transition-colors cursor-pointer"
             >
-              <X class="w-5 h-5" />
+              <X class="w-4 h-4" />
             </button>
           {/if}
         </div>
       </div>
 
-      <!-- Final Board Lineup (Row of Hexagons with wrap) -->
+      <!-- Final Comp Lineup (Matching Screenshot 2: Clean Row, NO names underneath) -->
       {#if comp.board && comp.board.length > 0}
-        <div class="flex flex-col gap-2.5">
-          <span class="text-xs font-black uppercase tracking-wider text-slate-400">
-            ĐỘI HÌNH HOÀN CHỈNH (FINAL LINEUP)
+        <div class="flex flex-col gap-2">
+          <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">
+            Final Comp
           </span>
-          <div class="flex flex-wrap items-center gap-3 py-2">
+          <div class="flex flex-wrap items-center gap-3 py-1">
             {#each comp.board as unit}
-              <div class="flex flex-col items-center">
-                <HexAvatar 
-                  id={unit.id}
-                  name={unit.name_en || unit.name}
-                  nameVi={unit.name_vi || unit.name}
-                  iconUrl={unit.icon}
-                  cost={unit.cost}
-                  starLevel={unit.stars || 1}
-                  items={unit.items}
-                  size="md"
-                  showName={true}
-                />
-              </div>
+              <!-- 3-star stars shown for 3-star champions in reroll comps -->
+              <HexAvatar 
+                id={unit.id}
+                name={unit.name_en || unit.name}
+                nameVi={unit.name_vi || unit.name}
+                iconUrl={unit.icon}
+                cost={unit.cost}
+                starLevel={unit.stars || 1}
+                showStars={unit.stars === 3}
+                items={unit.items}
+                showItems={true}
+                size="md"
+                showName={showNames}
+              />
             {/each}
           </div>
         </div>
       {/if}
 
-      <!-- 3 Split Columns: Early Units, Item Priority, Flex Units -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+      <!-- 3 Sub-columns: Early Units, Item Priority, Flex Units -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5">
         <!-- Early Units -->
-        <div class="p-4 rounded-xl bg-[#121622] border border-white/5 flex flex-col gap-2.5">
-          <span class="text-xs font-black uppercase tracking-wider text-amber-400">
-            EARLY UNITS (ĐẦU GAME)
+        <div class="p-3.5 rounded-xl bg-[#10131B] border border-[#1D2230] flex flex-col gap-2">
+          <span class="text-xs font-bold text-slate-300 uppercase tracking-wider text-center">
+            Early Units
           </span>
-          <div class="flex flex-wrap items-center gap-2.5 pt-1">
+          <div class="flex flex-wrap items-center justify-center gap-2 pt-1">
             {#if comp.levelingCurve?.earlyComp && comp.levelingCurve.earlyComp.length > 0}
               {#each comp.levelingCurve.earlyComp as u}
                 <HexAvatar 
@@ -206,46 +265,47 @@
                   iconUrl={u.icon}
                   cost={u.cost}
                   size="sm"
-                  showName={true}
+                  showName={showNames}
                 />
               {/each}
             {:else}
-              <span class="text-xs text-slate-500">Giữ form bài mạnh nhất có thể</span>
+              <span class="text-xs text-slate-500">Form bài đầu trận</span>
             {/if}
           </div>
         </div>
 
-        <!-- Item Priority (Significantly enlarged icons) -->
-        <div class="p-4 rounded-xl bg-[#121622] border border-white/5 flex flex-col gap-2.5">
-          <span class="text-xs font-black uppercase tracking-wider text-sky-400">
-            ITEM PRIORITY (ƯU TIÊN ĐỒ)
+        <!-- Item Priority (Row of items with > arrows, Matching Screenshot 2) -->
+        <div class="p-3.5 rounded-xl bg-[#10131B] border border-[#1D2230] flex flex-col gap-2">
+          <span class="text-xs font-bold text-slate-300 uppercase tracking-wider text-center">
+            Item Priority
           </span>
-          <div class="flex flex-wrap items-center gap-2 pt-1">
-            {#if comp.mainCarry?.items && comp.mainCarry.items.length > 0}
-              {#each comp.mainCarry.items as item}
-                <div class="w-11 h-11 rounded-xl bg-black border-2 border-amber-400/80 p-0.5 overflow-hidden shadow-lg hover:scale-110 transition-transform" title={item.name_vi || item.name_en}>
-                  <img src={resolveItemIcon(item.icon, item.id)} alt={item.name_vi || ''} class="w-full h-full object-cover rounded-lg" />
-                </div>
-              {/each}
-            {/if}
-            {#if comp.mainTank?.items && comp.mainTank.items.length > 0}
-              {#each comp.mainTank.items as item}
-                <div class="w-11 h-11 rounded-xl bg-black border-2 border-emerald-400/80 p-0.5 overflow-hidden shadow-lg hover:scale-110 transition-transform" title={item.name_vi || item.name_en}>
-                  <img src={resolveItemIcon(item.icon, item.id)} alt={item.name_vi || ''} class="w-full h-full object-cover rounded-lg" />
-                </div>
-              {/each}
-            {/if}
+          <div class="flex flex-wrap items-center justify-center gap-1.5 pt-1">
+            {#each itemPriority.slice(0, 5) as item, idx}
+              {@const itIcon = resolveItemIcon(item.icon, item.id)}
+              <div 
+                class="w-9 h-9 rounded-lg bg-black border border-white/20 p-0.5 overflow-hidden shadow hover:scale-120 hover:border-amber-400 transition-all cursor-pointer"
+                onmouseenter={(e) => showTooltip({ type: 'item', id: item.id, name: item.name_vi }, e.currentTarget)}
+                onmouseleave={() => hideTooltip()}
+              >
+                {#if itIcon}
+                  <img src={itIcon} alt="" class="w-full h-full object-contain" />
+                {/if}
+              </div>
+              {#if idx < Math.min(itemPriority.length, 5) - 1}
+                <ChevronRight class="w-3 h-3 text-slate-500 shrink-0" />
+              {/if}
+            {/each}
           </div>
         </div>
 
         <!-- Flex Units -->
-        <div class="p-4 rounded-xl bg-[#121622] border border-white/5 flex flex-col gap-2.5">
-          <span class="text-xs font-black uppercase tracking-wider text-fuchsia-400">
-            FLEX / KẸP THÊM (LATE GAME)
+        <div class="p-3.5 rounded-xl bg-[#10131B] border border-[#1D2230] flex flex-col gap-2">
+          <span class="text-xs font-bold text-slate-300 uppercase tracking-wider text-center">
+            Flex Units
           </span>
-          <div class="flex flex-wrap items-center gap-2.5 pt-1">
+          <div class="flex flex-wrap items-center justify-center gap-2 pt-1">
             {#if comp.maxCap && comp.maxCap.length > 0}
-              {#each comp.maxCap as cap}
+              {#each comp.maxCap.slice(0, 3) as cap}
                 <HexAvatar 
                   id={cap.id}
                   name={cap.name_en || cap.name}
@@ -253,56 +313,122 @@
                   iconUrl={cap.icon}
                   cost={cap.cost || 5}
                   size="sm"
-                  showName={true}
+                  showName={showNames}
                 />
               {/each}
             {:else}
-              <span class="text-xs text-slate-500">Kẹp thêm 5 vàng 2 sao</span>
+              <span class="text-xs text-slate-500">Tướng kẹp thêm</span>
             {/if}
           </div>
         </div>
       </div>
 
-      <!-- Positioning Example: 28-Hex Board -->
-      {#if comp.board && comp.board.length > 0}
-        <div class="pt-2">
-          <BoardHexMap units={comp.board.map((u: any) => ({
-            id: u.id,
-            name: u.name_en || u.name,
-            nameVi: u.name_vi || u.name,
-            iconUrl: u.icon,
-            cost: u.cost,
-            starLevel: u.stars || 1,
-            position: u.boardIndex ?? (u.hex ? u.hex.row * 7 + u.hex.col : 0),
-            items: u.items
-          }))} />
+      <!-- Positioning Board + Alt Builds Side-by-Side (Matching Screenshot 2) -->
+      <div class="flex flex-col lg:flex-row items-center gap-4">
+        <!-- 28-Hex Board -->
+        <div class="flex-1 w-full">
+          <div class="text-center text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+            Positioning Example
+          </div>
+          {#if comp.board && comp.board.length > 0}
+            <BoardHexMap units={comp.board.map((u: any) => ({
+              id: u.id,
+              name: u.name_en || u.name,
+              nameVi: u.name_vi || u.name,
+              iconUrl: u.icon,
+              cost: u.cost,
+              starLevel: u.stars || 1,
+              position: u.boardIndex ?? (u.hex ? u.hex.row * 7 + u.hex.col : 0),
+              items: u.items
+            }))} />
+          {/if}
         </div>
-      {/if}
 
-      <!-- Leveling Stages & Strategy Tips (Fix for [object Object]) -->
-      {#if comp.tips && Array.isArray(comp.tips) && comp.tips.length > 0}
-        <div class="flex flex-col gap-3 p-5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-200/90 leading-relaxed shadow-lg">
-          <span class="font-black uppercase tracking-wider text-amber-400 flex items-center gap-2 text-sm">
-            <BookOpen class="w-4.5 h-4.5" /> GIÁO ÁN & MẸO VẬN HÀNH CHI TIẾT:
+        <!-- Alt Builds (Matching Screenshot 2 right of board) -->
+        <div class="lg:w-32 flex flex-col items-center gap-2 p-3 rounded-xl bg-[#10131B] border border-[#1D2230]">
+          <span class="text-xs font-bold text-slate-400 uppercase tracking-wider text-center">
+            Alt Builds
           </span>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 pt-1">
-            {#each comp.tips as step}
-              <div class="p-3.5 rounded-xl bg-black/60 border border-white/10 flex flex-col gap-1.5 shadow">
-                <span class="font-black text-amber-400 text-xs tracking-wider uppercase">{step.stage}:</span>
-                <p class="text-slate-200 text-xs leading-relaxed">{translateStrategyTip(step.tip)}</p>
+          <div class="flex flex-col gap-3 py-1">
+            {#each altBuilds as alt}
+              <div class="flex flex-col items-center gap-1">
+                <HexAvatar 
+                  id={alt.champ?.id}
+                  name={alt.champ?.name}
+                  nameVi={alt.champ?.nameVi}
+                  iconUrl={alt.champ?.iconUrl}
+                  cost={alt.champ?.cost || 3}
+                  size="sm"
+                />
+                <div class="flex items-center gap-1 -mt-2">
+                  {#each alt.items as item}
+                    {@const aIcon = resolveItemIcon(item.icon, item.id)}
+                    <div 
+                      class="w-5 h-5 rounded bg-black border border-amber-400/60 p-0.5 cursor-pointer hover:scale-120 transition-transform"
+                      onmouseenter={(e) => showTooltip({ type: 'item', id: item.id, name: item.name_vi }, e.currentTarget)}
+                      onmouseleave={() => hideTooltip()}
+                    >
+                      <img src={aIcon} alt="" class="w-full h-full object-contain" />
+                    </div>
+                  {/each}
+                </div>
               </div>
             {/each}
           </div>
         </div>
-      {:else if typeof comp.tips === 'string' && comp.tips.length > 0}
-        <div class="flex flex-col gap-2 p-5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-200/90 text-xs leading-relaxed">
-          <span class="font-black uppercase tracking-wider text-amber-400 flex items-center gap-2 text-sm">
-            <BookOpen class="w-4.5 h-4.5" /> MẸO VẬN HÀNH:
-          </span>
-          <p>{translateStrategyTip(comp.tips)}</p>
+      </div>
+
+      <!-- Tips Section (Matching Screenshot 2: General Advice + 3 Stage Cards) -->
+      <div class="flex flex-col gap-3 pt-2">
+        <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">
+          Tips
         </div>
-      {/if}
+
+        <!-- General Tip Card (100% Vietnamese translation) -->
+        {#if comp.augmentsTip}
+          <div class="p-4 rounded-xl bg-[#10131B] border border-[#1D2230] text-xs leading-relaxed text-slate-200 shadow-md">
+            {translateStrategyTip(comp.augmentsTip)}
+          </div>
+        {/if}
+
+        <!-- 3 Stage Cards: Stage 2, Stage 3, Stage 4 (100% Vietnamese translation) -->
+        {#if comp.tips && Array.isArray(comp.tips) && comp.tips.length > 0}
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            {#each comp.tips as step}
+              <div class="p-4 rounded-xl bg-[#10131B] border border-[#1D2230] flex flex-col gap-2 shadow-md">
+                <span class="text-xs font-black text-amber-400 uppercase tracking-wider text-center border-b border-white/5 pb-1.5">
+                  {step.stage}
+                </span>
+                <p class="text-xs text-slate-300 leading-relaxed font-normal">
+                  {translateStrategyTip(step.tip)}
+                </p>
+              </div>
+            {/each}
+          </div>
+        {/if}
+      </div>
+
+      <!-- Bottom Controls: Open in Builder + Show Names Toggle (Matching Screenshot 2) -->
+      <div class="flex items-center justify-end gap-5 pt-3 border-t border-[#1C202B]">
+        <a 
+          href="/explorer"
+          class="flex items-center gap-1.5 text-xs font-bold text-slate-400 hover:text-amber-400 transition-colors"
+        >
+          <span>Open in Builder</span>
+          <ExternalLink class="w-3.5 h-3.5 text-amber-400" />
+        </a>
+
+        <label class="flex items-center gap-2 text-xs font-bold text-slate-400 cursor-pointer select-none">
+          <span>Show names</span>
+          <input 
+            type="checkbox" 
+            bind:checked={showNames}
+            class="toggle-checkbox w-9 h-5 rounded-full bg-slate-700 checked:bg-amber-400 transition-colors cursor-pointer appearance-none relative before:content-[''] before:absolute before:top-0.5 before:left-0.5 before:w-4 before:h-4 before:rounded-full before:bg-white before:transition-transform checked:before:translate-x-4"
+          />
+        </label>
+      </div>
 
     </div>
+
   </div>
 {/if}

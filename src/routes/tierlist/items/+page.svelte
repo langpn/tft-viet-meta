@@ -2,6 +2,7 @@
   import type { PageData } from './$types';
   import { resolveItemIcon } from '$lib/utils/assets';
   import { matchesQuery } from '$lib/utils/search';
+  import { showTooltip, hideTooltip } from '$lib/utils/tooltip-store.svelte';
   import { Flame, Shield, Sparkles, Search, ExternalLink } from 'lucide-svelte';
 
   let { data }: { data: PageData } = $props();
@@ -147,7 +148,11 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5">
             {#each tierItems as item (item.id || item.name_en)}
               {@const iconSrc = resolveItemIcon(item.icon, item.id)}
-              <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-[#131722] border border-white/5 hover:border-amber-400/60 hover:-translate-y-0.5 transition-all group shadow-md">
+              <div 
+                class="flex items-start gap-3.5 p-3.5 rounded-xl bg-[#131722] border border-white/5 hover:border-amber-400/60 hover:-translate-y-0.5 transition-all group shadow-md cursor-pointer"
+                onmouseenter={(e) => showTooltip({ type: 'item', id: item.id, name: item.name_vi }, e.currentTarget)}
+                onmouseleave={() => hideTooltip()}
+              >
                 <div class="w-13 h-13 rounded-xl border-2 border-white/10 overflow-hidden bg-black shrink-0 shadow-lg p-0.5 flex items-center justify-center">
                   {#if iconSrc}
                     <img 

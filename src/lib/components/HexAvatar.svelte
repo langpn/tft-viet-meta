@@ -1,5 +1,6 @@
 <script lang="ts">
   import { resolveChampionIcon, resolveItemIcon, resolveAugmentIcon } from '$lib/utils/assets';
+  import { showTooltip, hideTooltip } from '$lib/utils/tooltip-store.svelte';
 
   export interface Item {
     id?: string;
@@ -98,7 +99,11 @@
   {onclick}
 >
   <!-- Hexagon Container -->
-  <div class="relative {sizeClasses[size]} flex items-center justify-center">
+  <div 
+    class="relative {sizeClasses[size]} flex items-center justify-center"
+    onmouseenter={(e) => showTooltip({ type: 'champion', id, name: nameVi || name }, e.currentTarget)}
+    onmouseleave={() => hideTooltip()}
+  >
     
     <!-- Outer Hexagon Border with Cost Color (or Gold Glow if Selected) -->
     <div class="absolute inset-0 hex-border {isSelected ? 'bg-amber-400 shadow-xl shadow-amber-400/60 ring-2 ring-white/60' : costBorderColors[cost] ?? 'bg-slate-500'} opacity-95 transition-all"></div>
@@ -172,8 +177,9 @@
         {#each coreBadges as badge}
           {@const bSrc = resolveBadgeIcon(badge)}
           <div 
-            class="w-6 h-6 rounded-md bg-[#0A0D14] border-2 border-white/20 hover:border-amber-400 p-0.5 shadow-xl shadow-black flex items-center justify-center transition-all hover:scale-125"
-            title="{badge.name_vi || badge.name_en}"
+            class="w-6 h-6 rounded-md bg-[#0A0D14] border-2 border-white/20 hover:border-amber-400 p-0.5 shadow-xl shadow-black flex items-center justify-center transition-all hover:scale-125 cursor-pointer"
+            onmouseenter={(e) => { e.stopPropagation(); showTooltip({ type: badge.type || 'item', id: badge.id, name: badge.name_vi }, e.currentTarget); }}
+            onmouseleave={() => hideTooltip()}
           >
             {#if bSrc}
               <img src={bSrc} alt="" class="w-full h-full object-contain rounded-xs" loading="lazy" />
@@ -199,8 +205,9 @@
       {#each items.slice(0, 3) as item}
         {@const itemSrc = resolveItemIcon(item.icon, item.id)}
         <div 
-          class="{itemSizeClasses[size]} rounded-md border-1.5 border-amber-400/90 bg-black overflow-hidden shadow-lg shadow-black hover:scale-125 transition-transform"
-          title={item.name_vi || item.name_en}
+          class="{itemSizeClasses[size]} rounded-md border-1.5 border-amber-400/90 bg-black overflow-hidden shadow-lg shadow-black hover:scale-125 transition-transform cursor-pointer"
+          onmouseenter={(e) => { e.stopPropagation(); showTooltip({ type: 'item', id: item.id || '', name: item.name_vi }, e.currentTarget); }}
+          onmouseleave={() => hideTooltip()}
         >
           {#if itemSrc}
             <img 

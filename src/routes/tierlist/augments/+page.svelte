@@ -3,6 +3,7 @@
   import { resolveAugmentIcon } from '$lib/utils/assets';
   import { matchesQuery } from '$lib/utils/search';
   import { interpolateDescription } from '$lib/utils/augment-cleaner';
+  import { showTooltip, hideTooltip } from '$lib/utils/tooltip-store.svelte';
   import { Flame, Shield, Sparkles, Search, Clock, ExternalLink } from 'lucide-svelte';
 
   let { data }: { data: PageData } = $props();
@@ -167,7 +168,11 @@
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
             {#each tierAugments as aug (aug.id || aug.name_en)}
               {@const iconSrc = resolveAugmentIcon(aug.icon, aug.id)}
-              <div class="flex items-start gap-3.5 p-4 rounded-xl bg-[#131722] border border-white/5 hover:border-amber-400/60 hover:-translate-y-0.5 transition-all group shadow-md">
+              <div 
+                class="flex items-start gap-3.5 p-4 rounded-xl bg-[#131722] border border-white/5 hover:border-amber-400/60 hover:-translate-y-0.5 transition-all group shadow-md cursor-pointer"
+                onmouseenter={(e) => showTooltip({ type: 'augment', id: aug.id, name: aug.name_vi }, e.currentTarget)}
+                onmouseleave={() => hideTooltip()}
+              >
                 <div class="w-13 h-13 rounded-xl border-2 border-white/10 overflow-hidden bg-black shrink-0 p-1 flex items-center justify-center shadow-lg">
                   {#if iconSrc}
                     <img 

@@ -159,9 +159,13 @@
                   nameVi={comp.mainCarry?.nameVi}
                   iconUrl={comp.mainCarry?.iconUrl}
                   cost={comp.mainCarry?.cost || 4}
-                  starLevel={comp.mainCarry?.starLevel || 2}
-                  items={comp.mainCarry?.items}
+                  starLevel={1}
+                  showStars={false}
+                  items={[]}
                   trend={comp.trend}
+                  sticker={comp.sticker}
+                  situationalTier={comp.situationalTier}
+                  coreBadges={comp.coreBadges || []}
                   size="md"
                   onclick={() => openCompModal(comp)}
                 />
@@ -185,7 +189,7 @@
       <!-- svelte-ignore a11y_click_events_have_key_events -->
       <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
       <div 
-        class="relative w-full max-w-5xl my-auto animate-in zoom-in-95 duration-200"
+        class="relative w-full max-w-6xl my-auto animate-in zoom-in-95 duration-200"
         onclick={(e) => e.stopPropagation()}
         role="document"
       >

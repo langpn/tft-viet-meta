@@ -300,7 +300,7 @@
       <!-- svelte-ignore a11y_click_events_have_key_events -->
       <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
       <div 
-        class="relative w-full max-w-5xl my-auto animate-in zoom-in-95 duration-200"
+        class="relative w-full max-w-6xl my-auto animate-in zoom-in-95 duration-200"
         onclick={(e) => e.stopPropagation()}
         role="document"
       >

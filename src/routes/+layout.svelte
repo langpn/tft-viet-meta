@@ -1,6 +1,7 @@
 <script lang="ts">
   import '../app.css';
   import { page } from '$app/state';
+  import GlobalTooltipProvider from '$components/tooltips/GlobalTooltipProvider.svelte';
   import { ChevronDown, Globe } from 'lucide-svelte';
 
   let { children } = $props();
@@ -81,6 +82,9 @@
   <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
     {@render children?.()}
   </main>
+
+  <!-- Global Floating Tooltip Provider (Portals above everything) -->
+  <GlobalTooltipProvider />
 
   <!-- Footer (Matching Screenshot 2 bottom line) -->
   <footer class="border-t border-white/5 bg-[#05060A] py-8 text-xs text-slate-500 text-center flex flex-col items-center gap-3">
