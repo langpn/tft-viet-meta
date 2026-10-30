@@ -5,6 +5,7 @@
   import { translatePlaystyle, translateDifficulty, translateStrategyTip } from '$lib/utils/strategy-translator';
   import { showTooltip, hideTooltip } from '$lib/utils/tooltip-store.svelte';
   import { settingsStore } from '$lib/utils/settings-store.svelte';
+  import { generateRiotTeamCode } from '$lib/utils/team-code';
   import newSetData from '$data/academy-new-set.json';
   import { Copy, X, Check, ExternalLink, Coins, Package, Swords, ChevronRight } from 'lucide-svelte';
 
@@ -83,8 +84,9 @@
   };
 
   function copyCompCode() {
-    if (typeof navigator !== 'undefined' && comp?.title) {
-      navigator.clipboard.writeText(`${comp.title} - TFT Academy Meta Comp`);
+    if (typeof navigator !== 'undefined' && comp) {
+      const code = generateRiotTeamCode(comp.finalComp || comp.board);
+      navigator.clipboard.writeText(code || `${comp.title} - TFT Academy Meta Comp`);
       copied = true;
       setTimeout(() => (copied = false), 2000);
     }

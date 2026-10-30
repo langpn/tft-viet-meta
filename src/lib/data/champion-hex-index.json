@@ -1,0 +1,710 @@
+{
+  "DA_18_Akali_AD": {
+    "apiName": "DA_18_Akali_AD",
+    "name": "Akali",
+    "cost": 1,
+    "hexIndex": "3EA",
+    "traits": [
+      null,
+      null,
+      null
+    ]
+  },
+  "DA_Cinderling18": {
+    "apiName": "DA_Cinderling18",
+    "name": "Cinderling",
+    "cost": 1,
+    "hexIndex": "3F7",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Kobuko": {
+    "apiName": "DA_18_Kobuko",
+    "name": "Kobuko",
+    "cost": 1,
+    "hexIndex": "43D",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Leona": {
+    "apiName": "DA_18_Leona",
+    "name": "Leona",
+    "cost": 1,
+    "hexIndex": "411",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Rakan": {
+    "apiName": "DA_18_Rakan",
+    "name": "Rakan",
+    "cost": 1,
+    "hexIndex": "420",
+    "traits": [
+      null,
+      null,
+      null
+    ]
+  },
+  "DA_18_RekSai": {
+    "apiName": "DA_18_RekSai",
+    "name": "Rek'Sai",
+    "cost": 1,
+    "hexIndex": "423",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Sentry": {
+    "apiName": "DA_18_Sentry",
+    "name": "Pebbles",
+    "cost": 1,
+    "hexIndex": "429",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_Karma18": {
+    "apiName": "DA_Karma18",
+    "name": "Karma",
+    "cost": 1,
+    "hexIndex": "407",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Xayah": {
+    "apiName": "DA_18_Xayah",
+    "name": "Xayah",
+    "cost": 1,
+    "hexIndex": "439",
+    "traits": [
+      null,
+      null,
+      null
+    ]
+  },
+  "DA_18_Yorick": {
+    "apiName": "DA_18_Yorick",
+    "name": "Yorick",
+    "cost": 1,
+    "hexIndex": "43A",
+    "traits": [
+      null,
+      null,
+      null
+    ]
+  },
+  "DA_18_Ornn": {
+    "apiName": "DA_18_Ornn",
+    "name": "Ornn",
+    "cost": 1,
+    "hexIndex": "41F",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Veigar": {
+    "apiName": "DA_18_Veigar",
+    "name": "Veigar",
+    "cost": 1,
+    "hexIndex": "436",
+    "traits": [
+      null,
+      null,
+      null
+    ]
+  },
+  "DA_18_Varus": {
+    "apiName": "DA_18_Varus",
+    "name": "Varus",
+    "cost": 1,
+    "hexIndex": "435",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Camille": {
+    "apiName": "DA_18_Camille",
+    "name": "Camille",
+    "cost": 1,
+    "hexIndex": "3F5",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Caitlyn": {
+    "apiName": "DA_18_Caitlyn",
+    "name": "Caitlyn",
+    "cost": 2,
+    "hexIndex": "3F4",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Elise": {
+    "apiName": "DA_18_Elise",
+    "name": "Elise",
+    "cost": 2,
+    "hexIndex": "3FD",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Kayle": {
+    "apiName": "DA_18_Kayle",
+    "name": "Kayle",
+    "cost": 2,
+    "hexIndex": "40A",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Yunara": {
+    "apiName": "DA_18_Yunara",
+    "name": "Yunara",
+    "cost": 2,
+    "hexIndex": "43B",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_Murkwolf18": {
+    "apiName": "DA_Murkwolf18",
+    "name": "Murkwolf",
+    "cost": 2,
+    "hexIndex": "419",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_Gromp18_AP": {
+    "apiName": "DA_Gromp18_AP",
+    "name": "Gromp",
+    "cost": 2,
+    "hexIndex": "402",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Sejuani": {
+    "apiName": "DA_18_Sejuani",
+    "name": "Sejuani",
+    "cost": 2,
+    "hexIndex": "427",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Alistar": {
+    "apiName": "DA_18_Alistar",
+    "name": "Alistar",
+    "cost": 2,
+    "hexIndex": "3EB",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_Scuttlecrab18": {
+    "apiName": "DA_Scuttlecrab18",
+    "name": "Scuttlecrab",
+    "cost": 2,
+    "hexIndex": "426",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_LeBlanc": {
+    "apiName": "DA_18_LeBlanc",
+    "name": "LeBlanc",
+    "cost": 2,
+    "hexIndex": "410",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Shen": {
+    "apiName": "DA_18_Shen",
+    "name": "Shen",
+    "cost": 2,
+    "hexIndex": "42B",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Warwick": {
+    "apiName": "DA_18_Warwick",
+    "name": "Warwick",
+    "cost": 2,
+    "hexIndex": "438",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Teemo": {
+    "apiName": "DA_18_Teemo",
+    "name": "Teemo",
+    "cost": 2,
+    "hexIndex": "431",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Cassiopeia": {
+    "apiName": "DA_18_Cassiopeia",
+    "name": "Cassiopeia",
+    "cost": 3,
+    "hexIndex": "3F6",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_CrimsonRaptor18": {
+    "apiName": "DA_CrimsonRaptor18",
+    "name": "Mama Beak",
+    "cost": 3,
+    "hexIndex": "422",
+    "traits": [
+      null,
+      null,
+      null
+    ]
+  },
+  "DA_18_KhaZix": {
+    "apiName": "DA_18_KhaZix",
+    "name": "Kha'Zix",
+    "cost": 3,
+    "hexIndex": "40C",
+    "traits": [
+      null
+    ]
+  },
+  "DA_18_Rengar": {
+    "apiName": "DA_18_Rengar",
+    "name": "Rengar",
+    "cost": 3,
+    "hexIndex": "424",
+    "traits": [
+      null
+    ]
+  },
+  "DA_Krug18": {
+    "apiName": "DA_Krug18",
+    "name": "Krug",
+    "cost": 3,
+    "hexIndex": "40F",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Hecarim": {
+    "apiName": "DA_18_Hecarim",
+    "name": "Hecarim",
+    "cost": 3,
+    "hexIndex": "403",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_KogMaw18_AD": {
+    "apiName": "DA_KogMaw18_AD",
+    "name": "Kog'Maw",
+    "cost": 3,
+    "hexIndex": "40E",
+    "traits": [
+      null,
+      null,
+      null
+    ]
+  },
+  "DA_Vi18": {
+    "apiName": "DA_Vi18",
+    "name": "Vi",
+    "cost": 3,
+    "hexIndex": "437",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_Fiddlesticks18": {
+    "apiName": "DA_Fiddlesticks18",
+    "name": "Fiddlesticks",
+    "cost": 3,
+    "hexIndex": "400",
+    "traits": [
+      null,
+      null,
+      null
+    ]
+  },
+  "DA_18_Diana": {
+    "apiName": "DA_18_Diana",
+    "name": "Diana",
+    "cost": 3,
+    "hexIndex": "3FA",
+    "traits": [
+      null,
+      null,
+      null
+    ]
+  },
+  "DA_18_Tristana": {
+    "apiName": "DA_18_Tristana",
+    "name": "Tristana",
+    "cost": 3,
+    "hexIndex": "433",
+    "traits": [
+      null,
+      null,
+      null
+    ]
+  },
+  "DA_18_Azir": {
+    "apiName": "DA_18_Azir",
+    "name": "Azir",
+    "cost": 3,
+    "hexIndex": "3F1",
+    "traits": [
+      null,
+      null,
+      null
+    ]
+  },
+  "DA_18_Rammus": {
+    "apiName": "DA_18_Rammus",
+    "name": "Rammus",
+    "cost": 3,
+    "hexIndex": "421",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_MasterYi_AD": {
+    "apiName": "DA_18_MasterYi_AD",
+    "name": "Master Yi",
+    "cost": 3,
+    "hexIndex": "416",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Ahri": {
+    "apiName": "DA_18_Ahri",
+    "name": "Ahri",
+    "cost": 4,
+    "hexIndex": "3E9",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Lillia": {
+    "apiName": "DA_18_Lillia",
+    "name": "Lillia",
+    "cost": 4,
+    "hexIndex": "412",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Morgana": {
+    "apiName": "DA_18_Morgana",
+    "name": "Morgana",
+    "cost": 4,
+    "hexIndex": "418",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Sivir": {
+    "apiName": "DA_18_Sivir",
+    "name": "Sivir",
+    "cost": 4,
+    "hexIndex": "42C",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Zyra": {
+    "apiName": "DA_18_Zyra",
+    "name": "Zyra",
+    "cost": 4,
+    "hexIndex": "43C",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_Brambleback18": {
+    "apiName": "DA_Brambleback18",
+    "name": "Brambleback",
+    "cost": 4,
+    "hexIndex": "3F3",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_Sentinel18": {
+    "apiName": "DA_Sentinel18",
+    "name": "Sentinel",
+    "cost": 4,
+    "hexIndex": "428",
+    "traits": [
+      null,
+      null,
+      null
+    ]
+  },
+  "DA_18_Ezreal": {
+    "apiName": "DA_18_Ezreal",
+    "name": "Ezreal",
+    "cost": 4,
+    "hexIndex": "3FF",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Soraka": {
+    "apiName": "DA_18_Soraka",
+    "name": "Soraka",
+    "cost": 4,
+    "hexIndex": "42E",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_Amumu18": {
+    "apiName": "DA_Amumu18",
+    "name": "Amumu",
+    "cost": 4,
+    "hexIndex": "3ED",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Malphite": {
+    "apiName": "DA_18_Malphite",
+    "name": "Malphite",
+    "cost": 4,
+    "hexIndex": "414",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Sett": {
+    "apiName": "DA_18_Sett",
+    "name": "Sett",
+    "cost": 4,
+    "hexIndex": "42A",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Aphelios": {
+    "apiName": "DA_18_Aphelios",
+    "name": "Aphelios",
+    "cost": 4,
+    "hexIndex": "3EF",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_Nidalee18_AP": {
+    "apiName": "DA_Nidalee18_AP",
+    "name": "Nidalee",
+    "cost": 4,
+    "hexIndex": "41B",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Alune": {
+    "apiName": "DA_18_Alune",
+    "name": "Alune",
+    "cost": 5,
+    "hexIndex": "3EC",
+    "traits": [
+      null,
+      null,
+      null
+    ]
+  },
+  "DA_18_Ashe": {
+    "apiName": "DA_18_Ashe",
+    "name": "Ashe",
+    "cost": 5,
+    "hexIndex": "3F0",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_GnarSmall": {
+    "apiName": "DA_18_GnarSmall",
+    "name": "Gnar",
+    "cost": 5,
+    "hexIndex": "401",
+    "traits": [
+      null,
+      null,
+      null
+    ]
+  },
+  "DA_18_Ivern": {
+    "apiName": "DA_18_Ivern",
+    "name": "Ivern",
+    "cost": 5,
+    "hexIndex": "404",
+    "traits": [
+      null
+    ]
+  },
+  "DA_Lux18_Base": {
+    "apiName": "DA_Lux18_Base",
+    "name": "Lux",
+    "cost": 5,
+    "hexIndex": "405",
+    "traits": [
+      null
+    ]
+  },
+  "DA_18_Maokai": {
+    "apiName": "DA_18_Maokai",
+    "name": "Maokai",
+    "cost": 5,
+    "hexIndex": "415",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_ElderDragon": {
+    "apiName": "DA_18_ElderDragon",
+    "name": "Elder Dragon",
+    "cost": 5,
+    "hexIndex": "3FC",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_Taric18": {
+    "apiName": "DA_Taric18",
+    "name": "Taric",
+    "cost": 5,
+    "hexIndex": "430",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_18_Kennen": {
+    "apiName": "DA_18_Kennen",
+    "name": "Kennen",
+    "cost": 5,
+    "hexIndex": "40B",
+    "traits": [
+      null,
+      null
+    ]
+  },
+  "DA_Draven18": {
+    "apiName": "DA_Draven18",
+    "name": "Draven",
+    "cost": 5,
+    "hexIndex": "3FB",
+    "traits": [
+      null
+    ]
+  },
+  "DA_Elderwood18_StonebarkTree": {
+    "apiName": "DA_Elderwood18_StonebarkTree",
+    "name": "Stonebark Tree",
+    "cost": 0,
+    "hexIndex": "",
+    "traits": []
+  },
+  "DA_Elderwood18_Lifeblossom": {
+    "apiName": "DA_Elderwood18_Lifeblossom",
+    "name": "Lifebloom",
+    "cost": 0,
+    "hexIndex": "",
+    "traits": []
+  },
+  "DA_Elderwood18_Protector": {
+    "apiName": "DA_Elderwood18_Protector",
+    "name": "Deepwood Protector",
+    "cost": 0,
+    "hexIndex": "",
+    "traits": []
+  },
+  "TFT_Flex_Lv7": {
+    "apiName": "TFT_Flex_Lv7",
+    "name": "level 7",
+    "cost": 0,
+    "hexIndex": "",
+    "traits": []
+  },
+  "TFT_Flex_Lv8": {
+    "apiName": "TFT_Flex_Lv8",
+    "name": "level 8",
+    "cost": 0,
+    "hexIndex": "",
+    "traits": []
+  },
+  "TFT_Flex_Lv9": {
+    "apiName": "TFT_Flex_Lv9",
+    "name": "level 9",
+    "cost": 0,
+    "hexIndex": "",
+    "traits": []
+  },
+  "TFT_Flex_Lv10": {
+    "apiName": "TFT_Flex_Lv10",
+    "name": "level 10",
+    "cost": 0,
+    "hexIndex": "",
+    "traits": []
+  }
+}
