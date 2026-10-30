@@ -335,19 +335,110 @@
 
 <svelte:head>
   {#if selectedComp}
+    {@const compSlug = (selectedComp.title || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || selectedComp.slug || selectedComp.id}
     <title>{selectedComp.title} - Đội Hình {selectedComp.mainCarry?.name_vi || selectedComp.mainCarry?.name_en || ''} ĐTCL Mùa 18 (Bậc {selectedComp.tier}) | TFT Academy VI</title>
     <meta name="title" content="{selectedComp.title} - Đội Hình {selectedComp.mainCarry?.name_vi || selectedComp.mainCarry?.name_en || ''} ĐTCL Mùa 18" />
     <meta name="description" content="Giáo án chi tiết đội hình {selectedComp.title} (Bậc {selectedComp.tier}) ĐTCL Mùa 18. Đầy đủ sơ đồ xếp cờ 28 ô hex, đồ chuẩn BIS, thứ tự nhặt đồ và hướng dẫn từng giai đoạn." />
     <meta property="og:title" content="{selectedComp.title} - Đội Hình ĐTCL Mùa 18 (Bậc {selectedComp.tier})" />
     <meta property="og:description" content="Giáo án chi tiết đội hình {selectedComp.title}: sơ đồ xếp cờ 28 ô hex, đồ chuẩn BIS và mẹo vận hành." />
-    <link rel="canonical" href="https://tft.langpn.xyz/tierlist/comps?comp={(selectedComp.title || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || selectedComp.slug || selectedComp.id}" />
+    <meta property="og:url" content="https://tft.langpn.xyz/tierlist/comps?comp={compSlug}" />
+    <link rel="canonical" href="https://tft.langpn.xyz/tierlist/comps?comp={compSlug}" />
+
+    <!-- BreadcrumbList Schema for Google Search -->
+    {@html `<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Trang Chủ",
+          "item": "https://tft.langpn.xyz"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Đội Hình",
+          "item": "https://tft.langpn.xyz/tierlist/comps"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "${selectedComp.title}",
+          "item": "https://tft.langpn.xyz/tierlist/comps?comp=${compSlug}"
+        }
+      ]
+    }
+    </script>`}
   {:else}
     <title>Bảng Xếp Hạng Đội Hình ĐTCL Mùa 18 (Bản 18.5c) · TFT Academy VI</title>
     <meta name="title" content="Bảng Xếp Hạng Đội Hình ĐTCL Mùa 18 (Bản 18.5c) · TFT Academy VI" />
     <meta name="description" content="Bảng xếp hạng 73 đội hình meta Đấu Trường Chân Lý Mùa 18 chuẩn nhất từ TFT Academy (Dishsoap & Frodan). Đầy đủ vị trí xếp cờ 28 ô, trang bị chuẩn BIS và mẹo vận hành tiếng Việt." />
     <meta property="og:title" content="Bảng Xếp Hạng Đội Hình ĐTCL Mùa 18 (Bản 18.5c) · TFT Academy VI" />
     <meta property="og:description" content="Bảng xếp hạng 73 đội hình meta Đấu Trường Chân Lý Mùa 18 chuẩn nhất từ TFT Academy." />
+    <meta property="og:url" content="https://tft.langpn.xyz/tierlist/comps" />
     <link rel="canonical" href="https://tft.langpn.xyz/tierlist/comps" />
+
+    <!-- ItemList Schema for Comps Tierlist -->
+    {@html `<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Bảng Xếp Hạng Đội Hình ĐTCL Mùa 18",
+      "description": "Danh sách 73 đội hình meta Đấu Trường Chân Lý Mùa 18 phân loại theo bậc S, A, B, C, X.",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Draven Ezreal 9 (Bậc S)",
+          "url": "https://tft.langpn.xyz/tierlist/comps?comp=draven-ezreal-9"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AP Fast 9 (Bậc S)",
+          "url": "https://tft.langpn.xyz/tierlist/comps?comp=ap-fast-9"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Elderwood Executioners (Bậc A)",
+          "url": "https://tft.langpn.xyz/tierlist/comps?comp=elderwood-executioners"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Tempo Riftbeast (Bậc A)",
+          "url": "https://tft.langpn.xyz/tierlist/comps?comp=tempo-riftbeast"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Ahri Zyra (Bậc A)",
+          "url": "https://tft.langpn.xyz/tierlist/comps?comp=ahri-zyra"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Primal Sivir (Bậc A)",
+          "url": "https://tft.langpn.xyz/tierlist/comps?comp=primal-sivir"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Solar Blossom (Bậc A)",
+          "url": "https://tft.langpn.xyz/tierlist/comps?comp=solar-blossom"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Adaptor Reroll (Bậc A)",
+          "url": "https://tft.langpn.xyz/tierlist/comps?comp=adaptor-reroll"
+        }
+      ]
+    }
+    </script>`}
   {/if}
 </svelte:head>
 
@@ -379,6 +470,7 @@
         <span>COMPS</span>
         <span class="text-amber-400">•</span>
         <span class="text-amber-400">TIERLIST</span>
+        <span class="sr-only">Bảng Xếp Hạng Đội Hình ĐTCL Mùa 18 Chuẩn Meta</span>
       </h1>
     </div>
   </div>

@@ -46,6 +46,7 @@
   <meta name="description" content="Bảng xếp hạng 123 trang bị ĐTCL Mùa 18 phân loại theo bậc S, A, B, C, D: Đồ ghép thường, Trang bị ánh sáng, 30 Cổ vật Ornn tiếng Việt và 21 Ấn tộc hệ chuẩn in-game." />
   <meta property="og:title" content="Bảng Xếp Hạng Trang Bị ĐTCL Mùa 18 · TFT Academy VI" />
   <meta property="og:description" content="Bảng xếp hạng 123 trang bị ĐTCL Mùa 18: Đồ ghép thường, Trang bị ánh sáng, 30 Cổ vật Ornn tiếng Việt và 21 Ấn tộc hệ." />
+  <meta property="og:url" content="https://tft.langpn.xyz/tierlist/items" />
   <link rel="canonical" href="https://tft.langpn.xyz/tierlist/items" />
 </svelte:head>
 

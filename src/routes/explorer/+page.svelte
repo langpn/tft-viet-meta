@@ -287,6 +287,7 @@
   <meta name="description" content="Công cụ tra cứu số liệu thống kê thời gian thực từ hơn 750k trận đấu ĐTCL Mùa 18 từ tactics.tools: tỷ lệ thắng, tỷ lệ top 4, delta, số trận cho từng tướng, tộc hệ và trang bị." />
   <meta property="og:title" content="Khám Phá Thống Kê Meta ĐTCL Mùa 18 · tactics.tools Live" />
   <meta property="og:description" content="Tra cứu số liệu thống kê thời gian thực từ hơn 750k trận đấu ĐTCL Mùa 18." />
+  <meta property="og:url" content="https://tft.langpn.xyz/explorer" />
   <link rel="canonical" href="https://tft.langpn.xyz/explorer" />
 </svelte:head>
 
@@ -297,6 +298,7 @@
     <div class="flex items-center gap-3">
       <h1 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
         Khám Phá Thống Kê (Stats Explorer)
+        <span class="sr-only">Thống Kê Meta ĐTCL Mùa 18 tactics.tools Live</span>
       </h1>
       <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-bold text-emerald-400">
         tactics.tools live

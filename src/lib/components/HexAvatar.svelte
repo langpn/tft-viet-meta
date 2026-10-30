@@ -124,7 +124,7 @@
       {#if resolvedSrc}
         <img 
           src={resolvedSrc} 
-          alt={nameVi || name} 
+          alt="Tướng {nameVi || name} ĐTCL Mùa 18" 
           class="w-full h-full object-cover scale-110 group-hover:scale-125 transition-transform duration-300"
           loading="lazy"
           onerror={(e) => {
@@ -248,7 +248,7 @@
           {#if itemSrc}
             <img 
               src={itemSrc} 
-              alt={item.name_vi || ''} 
+              alt="Trang bị {item.name_vi || item.name_en || ''} ĐTCL" 
               class="w-full h-full object-cover"
               loading="lazy"
             />

@@ -50,6 +50,12 @@
 
 <svelte:head>
   <title>Khám Phá Mùa 18: Enchanted Wilds (Rừng Phép Thuật) · TFT Academy VI</title>
+  <meta name="title" content="Khám Phá Mùa 18: Enchanted Wilds (Rừng Phép Thuật) · TFT Academy VI" />
+  <meta name="description" content="Toàn bộ thông tin cập nhật ĐTCL Mùa 18 Enchanted Wilds: 65 tướng mới, 36 tộc hệ, 246 lõi nâng cấp và cơ chế Linh Linh (Wisps) độc quyền." />
+  <meta property="og:title" content="Khám Phá Mùa 18: Enchanted Wilds · TFT Academy VI" />
+  <meta property="og:description" content="Toàn bộ thông tin cập nhật ĐTCL Mùa 18: tướng, tộc hệ và cơ chế Linh Linh (Wisps)." />
+  <meta property="og:url" content="https://tft.langpn.xyz/learn/new-set" />
+  <link rel="canonical" href="https://tft.langpn.xyz/learn/new-set" />
 </svelte:head>
 
 <div class="flex flex-col gap-8 pb-16">

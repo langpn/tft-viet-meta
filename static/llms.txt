@@ -1,0 +1,30 @@
+# TFT Academy Việt Nam (tft.langpn.xyz)
+
+> Nền tảng cẩm nang meta Đấu Trường Chân Lý (TFT) số 1 Việt Nam. Bảng xếp hạng 73 đội hình meta giám tuyển bởi Dishsoap (2x Vô địch thế giới) & Frodan, đối soát dữ liệu Riot Games & tactics.tools với 100% bản địa hóa tiếng Việt.
+
+## Thông Tin Meta Hiện Tại
+- Phiên bản: ĐTCL Mùa 18 (Enchanted Wilds - Rừng Phép Thuật), Patch 18.5c
+- Tổng số đội hình meta: 73 đội hình (phân loại S, A, B, C, X)
+- Cơ chế mùa: Linh Linh (Wisps) tại cửa hàng, tướng Thích Ứng, Hoa Linh, Tàn Phá
+- Dữ liệu trực tuyến: https://tft.langpn.xyz
+
+## Các Trang Chính
+- [Bảng Xếp Hạng Đội Hình (Comps Tierlist)](https://tft.langpn.xyz/tierlist/comps): 73 bài đấu kèm sơ đồ xếp cờ 28 ô hex, trang bị chuẩn BIS, thứ tự nhặt đồ và hướng dẫn từng giai đoạn.
+- [Bảng Xếp Hạng Trang Bị (Items Tierlist)](https://tft.langpn.xyz/tierlist/items): 123 trang bị gồm Đồ ghép thường, Đồ Ánh Sáng, 30 Cổ vật Ornn tiếng Việt và 21 Ấn tộc hệ.
+- [Bảng Xếp Hạng Lõi Nâng Cấp (Augments Tierlist)](https://tft.langpn.xyz/tierlist/augments): 249 lõi nâng cấp Bạc, Vàng, Kim Cương phân loại theo vòng 2-1, 3-2, 4-2.
+- [Khám Phá Thống Kê (tactics.tools Explorer)](https://tft.langpn.xyz/explorer): Tra cứu số liệu hơn 750k trận đấu xếp hạng (Tỷ lệ thắng, Top 4, Hạng TB, Delta).
+- [Thông Tin Mùa 18 (Set 18 Info)](https://tft.langpn.xyz/learn/new-set): Chi tiết 65 tướng mới, 36 tộc hệ và 200 loại Linh Linh (Wisps).
+
+## Top Đội Hình Bậc S & A (Mùa 18)
+- Draven Ezreal 9 (Bậc S): https://tft.langpn.xyz/tierlist/comps?comp=draven-ezreal-9
+- AP Fast 9 (Bậc S): https://tft.langpn.xyz/tierlist/comps?comp=ap-fast-9
+- Elderwood Executioners (Bậc A): https://tft.langpn.xyz/tierlist/comps?comp=elderwood-executioners
+- Tempo Riftbeast (Bậc A): https://tft.langpn.xyz/tierlist/comps?comp=tempo-riftbeast
+- Ahri Zyra (Bậc A): https://tft.langpn.xyz/tierlist/comps?comp=ahri-zyra
+- Primal Sivir (Bậc A): https://tft.langpn.xyz/tierlist/comps?comp=primal-sivir
+- Solar Blossom (Bậc A): https://tft.langpn.xyz/tierlist/comps?comp=solar-blossom
+- Adaptor Reroll (Bậc A): https://tft.langpn.xyz/tierlist/comps?comp=adaptor-reroll
+- Cursed Crown Kayle (Bậc X - S tình huống): https://tft.langpn.xyz/tierlist/comps?comp=cursed-crown-kayle
+
+## Chi Tiết Toàn Bộ
+- Xem tệp đầy đủ: https://tft.langpn.xyz/llms-full.txt
