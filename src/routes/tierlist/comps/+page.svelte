@@ -457,13 +457,13 @@
               </div>
 
               <!-- Right Shelf Area: Compact Hexagon Champions (Grouped by Champion carry, NO visible scrollbars) -->
-              <div class="{groups.length > 12 ? 'grid grid-rows-2 grid-flow-col auto-cols-max gap-3 p-2 overflow-x-auto scrollbar-none no-scrollbar min-h-[168px] items-center' : 'flex flex-wrap items-center gap-3 flex-1 p-2 overflow-x-auto scrollbar-none no-scrollbar'}">
+              <div class="{groups.length > 12 ? 'grid grid-rows-2 grid-flow-col auto-cols-max gap-3.5 py-3 px-3 overflow-x-auto overflow-y-hidden scrollbar-none no-scrollbar min-h-[176px] items-center' : 'flex flex-wrap items-center gap-3.5 flex-1 p-3 overflow-visible'}">
                 {#each groups as group (group.champKey)}
                   {@const comp = group.primaryComp}
                   {@const isGroupSelected = selectedComp && (selectedComp.id === comp.id || group.comps.some((c: any) => c.id === selectedComp.id))}
                   <!-- Dimming effect when search filter is active, clean highlight for matched comps & active opened comp -->
                   <div 
-                    class="relative transition-all duration-200 cursor-pointer select-none group {isGroupSelected ? 'ring-2 ring-amber-400 shadow-xl shadow-amber-400/40 scale-105 rounded-2xl' : isFiltering ? (group.isMatch ? 'opacity-100 scale-105 ring-2 ring-amber-400 shadow-lg shadow-amber-400/25 rounded-2xl' : 'opacity-20 hover:opacity-60') : (group.isMatch ? 'opacity-100 hover:scale-110' : 'opacity-25 hover:opacity-75')}"
+                    class="relative transition-all duration-200 cursor-pointer select-none group {isGroupSelected ? 'ring-2 ring-amber-400 shadow-xl shadow-amber-400/40 scale-105 rounded-2xl' : isFiltering ? (group.isMatch ? 'opacity-100 scale-105 ring-2 ring-amber-400 shadow-lg shadow-amber-400/25 rounded-2xl' : 'opacity-20 hover:opacity-60') : (group.isMatch ? 'opacity-100 hover:scale-105' : 'opacity-25 hover:opacity-75')}"
                     title="{comp.title} ({comp.mainCarry?.name_vi || comp.mainCarry?.name_en || ''}){group.hasVariation ? ` (+${group.comps.length - 1} biến thể)` : ''}"
                     onclick={() => selectComp(group.matchedComp || comp)}
                     role="button"

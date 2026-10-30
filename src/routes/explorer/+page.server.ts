@@ -1,7 +1,7 @@
 import type { PageServerLoad } from './$types';
 import { getChampionVi, getItemVi, getTraitVi, getAugmentVi } from '$lib/server/dictionary';
 
-export const load: PageServerLoad = async ({ fetch }) => {
+export const load: PageServerLoad = async ({ fetch, url }) => {
   const patch = '16212';
   const rank = '1';
   const apiUrl = `https://d3.tft.tools/explorer-data/${patch}/${rank}/0`;
