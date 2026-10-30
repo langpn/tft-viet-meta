@@ -4,3 +4,5 @@ data/state.json
 data/raw/
 data/snapshots/
 *.log
+.svelte-kit/
+build/

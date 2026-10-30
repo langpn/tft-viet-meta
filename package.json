@@ -1,17 +1,29 @@
 {
   "name": "tft-viet-meta",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
+    "dev": "vite dev",
+    "start": "node build/index.js",
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "bun test",
-    "typecheck": "tsc --noEmit",
-    "dev": "bun run src/server/main.ts",
+    "typecheck": "bunx svelte-kit sync && tsc --noEmit",
     "sync": "bun run src/server/cli.ts sync all",
     "verify": "bun run src/server/cli.ts verify all"
   },
   "devDependencies": {
-    "@types/bun": "latest",
-    "typescript": "latest"
+    "@lucide/svelte": "latest",
+    "@sveltejs/adapter-node": "^6.0.1",
+    "@sveltejs/kit": "^3.1.1",
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/bun": "^1.4.4",
+    "lucide-svelte": "^1.0.1",
+    "svelte": "^5.57.3",
+    "tailwindcss": "^4.3.3",
+    "typescript": "5.8.2",
+    "vite": "^8.3.5"
   }
 }

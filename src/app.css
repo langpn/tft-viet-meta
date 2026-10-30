@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    color-scheme: dark;
+  }
+}
+
+/* Hallmark Hexagon Clips for TFT Champion Avatars */
+.hex-clip {
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+}
+
+.hex-border {
+  clip-path: polygon(50% 0%, 94% 25%, 94% 75%, 50% 100%, 6% 75%, 6% 25%);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080A0F;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E2738;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Numeric alignment */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Hallmark Glows & Tier Accents */
+.glow-s {
+  box-shadow: 0 0 25px -5px rgba(244, 63, 94, 0.25);
+}
+.glow-a {
+  box-shadow: 0 0 25px -5px rgba(249, 115, 22, 0.25);
+}
+.glow-b {
+  box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.25);
+}
+.glow-c {
+  box-shadow: 0 0 25px -5px rgba(132, 204, 22, 0.25);
+}
+.glow-gold {
+  box-shadow: 0 0 20px -3px rgba(245, 158, 11, 0.35);
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(18, 22, 30, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-nav {
+  background: rgba(8, 10, 15, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}

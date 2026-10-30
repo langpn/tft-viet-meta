@@ -1,0 +1,2057 @@
+{
+  "categories": {
+    "craftables": {
+      "S": [
+        {
+          "id": "DA_ThiefsGloves",
+          "name_en": "Thief's Gloves",
+          "name_vi": "Găng Đạo Tặc",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_thiefsgloves.png"
+        },
+        {
+          "id": "DA_GargoyleStoneplate",
+          "name_en": "Gargoyle Stoneplate",
+          "name_vi": "Thú Tượng Thạch Giáp",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_gargoylestoneplate.png"
+        },
+        {
+          "id": "DA_SpearOfShojin",
+          "name_en": "Spear of Shojin",
+          "name_vi": "Ngọn Giáo Shojin",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_spearofshojin.png"
+        },
+        {
+          "id": "DA_RabadonsDeathcap",
+          "name_en": "Rabadon's Deathcap",
+          "name_vi": "Mũ Phù Thủy Rabadon",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_rabadonsdeathcap.png"
+        },
+        {
+          "id": "DA_Deathblade",
+          "name_en": "Deathblade",
+          "name_vi": "Kiếm Tử Thần",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_deathblade.png"
+        },
+        {
+          "id": "DA_AdaptiveHelm",
+          "name_en": "Adaptive Helm",
+          "name_vi": "Mũ Thích Nghi",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_adaptivehelm.png"
+        },
+        {
+          "id": "DA_VoidStaff",
+          "name_en": "Void Staff",
+          "name_vi": "Trượng Hư Vô",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_voidstaff.png"
+        },
+        {
+          "id": "DA_GiantSlayer",
+          "name_en": "Giant Slayer",
+          "name_vi": "Diệt Khổng Lồ",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_madredsbloodrazor.png"
+        }
+      ],
+      "A": [
+        {
+          "id": "DA_BrambleVest",
+          "name_en": "Bramble Vest",
+          "name_vi": "Áo Choàng Gai",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_bramblevest.png"
+        },
+        {
+          "id": "DA_ProtectorsVow",
+          "name_en": "Protector's Vow",
+          "name_vi": "Lời Thề Hộ Vệ",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_frozenheart.png"
+        },
+        {
+          "id": "DA_InfinityEdge",
+          "name_en": "Infinity Edge",
+          "name_vi": "Vô Cực Kiếm",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_infinityedge.png"
+        },
+        {
+          "id": "DA_StrikersFlail",
+          "name_en": "Striker's Flail",
+          "name_vi": "Chùy Đoản Côn",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_powergauntlet.png"
+        },
+        {
+          "id": "DA_RedBuff",
+          "name_en": "Red Buff",
+          "name_vi": "Bùa Đỏ",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_rapidfirecannon.png"
+        },
+        {
+          "id": "DA_Bloodthirster",
+          "name_en": "Bloodthirster",
+          "name_vi": "Huyết Kiếm",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_bloodthirster.png"
+        },
+        {
+          "id": "DA_Evenshroud",
+          "name_en": "Evenshroud",
+          "name_vi": "Giáp Vai Nguyệt Thần",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_spectralgauntlet.png"
+        },
+        {
+          "id": "DA_IonicSpark",
+          "name_en": "Ionic Spark",
+          "name_vi": "Nỏ Sét",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_ionicspark.png"
+        },
+        {
+          "id": "DA_LastWhisper",
+          "name_en": "Last Whisper",
+          "name_vi": "Cung Xanh",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_lastwhisper.png"
+        },
+        {
+          "id": "DA_SpiritVisage",
+          "name_en": "Spirit Visage",
+          "name_vi": "Giáp Tâm Linh",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_spiritvisagerr.png"
+        },
+        {
+          "id": "DA_Morellonomicon",
+          "name_en": "Morellonomicon",
+          "name_vi": "Quỷ Thư Morello",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_morellonomicon.png"
+        },
+        {
+          "id": "DA_WarmogsArmor",
+          "name_en": "Warmog's Armor",
+          "name_vi": "Giáp Máu Warmog",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_warmogsarmor.png"
+        },
+        {
+          "id": "DA_Crownguard",
+          "name_en": "Crownguard",
+          "name_vi": "Vương Miện Hoàng Gia",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_crownguard.png"
+        },
+        {
+          "id": "DA_SunfireCape",
+          "name_en": "Sunfire Cape",
+          "name_vi": "Áo Choàng Lửa",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_redbuff.png"
+        },
+        {
+          "id": "DA_SteadfastHeart",
+          "name_en": "Steadfast Heart",
+          "name_vi": "Trái Tim Kiên Định",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_nightharvester.png"
+        },
+        {
+          "id": "DA_SteraksGage",
+          "name_en": "Sterak's Gage",
+          "name_vi": "Móng Vuốt Sterak",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_steraksgage.png"
+        },
+        {
+          "id": "DA_HandOfJustice",
+          "name_en": "Hand of Justice",
+          "name_vi": "Bàn Tay Công Lý",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_unstableconcoction.png"
+        },
+        {
+          "id": "DA_DragonsClaw",
+          "name_en": "Dragon's Claw",
+          "name_vi": "Vuốt Rồng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_dragonsclaw.png"
+        },
+        {
+          "id": "DA_BlueBuff",
+          "name_en": "Blue Buff",
+          "name_vi": "Bùa Xanh",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_bluebuff.png"
+        },
+        {
+          "id": "DA_ArchangelsStaff",
+          "name_en": "Archangel's Staff",
+          "name_vi": "Quyền Trượng Thiên Thần",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_archangelsstaff.png"
+        },
+        {
+          "id": "DA_HextechGunblade",
+          "name_en": "Hextech Gunblade",
+          "name_vi": "Kiếm Súng Hextech",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_hextechgunblade.png"
+        },
+        {
+          "id": "DA_TitansResolve",
+          "name_en": "Titan's Resolve",
+          "name_vi": "Quyền Năng Khổng Lồ",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_titansresolve.png"
+        },
+        {
+          "id": "DA_EdgeOfNight",
+          "name_en": "Edge of Night",
+          "name_vi": "Áo Choàng Bóng Tối",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_guardianangel.png"
+        },
+        {
+          "id": "DA_Quicksilver",
+          "name_en": "Quicksilver",
+          "name_vi": "Áo Choàng Thủy Ngân",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_quicksilver.png"
+        },
+        {
+          "id": "DA_KrakensFury",
+          "name_en": "Kraken's Fury",
+          "name_vi": "Thịnh Nộ Thủy Quái",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_krakenslayer.png"
+        },
+        {
+          "id": "DA_GuinsoosRageblade",
+          "name_en": "Guinsoo's Rageblade",
+          "name_vi": "Cuồng Đao Guinsoo",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_guinsoosrageblade.png"
+        },
+        {
+          "id": "DA_JeweledGauntlet",
+          "name_en": "Jeweled Gauntlet",
+          "name_vi": "Găng Bảo Thạch",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_jeweledgauntlet.png"
+        },
+        {
+          "id": "DA_NashorsTooth",
+          "name_en": "Nashor's Tooth",
+          "name_vi": "Nanh Nashor",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_leviathan.png"
+        }
+      ],
+      "B": [],
+      "C": [],
+      "D": []
+    },
+    "radiants": {
+      "S": [
+        {
+          "id": "DA_LastWhisperRadiant",
+          "name_en": "Radiant Last Whisper",
+          "name_vi": "Cung Xanh Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_lastwhisperradiant.png"
+        },
+        {
+          "id": "DA_BlueBuffRadiant",
+          "name_en": "Radiant Blue Buff",
+          "name_vi": "Bùa Xanh Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_bluebuffradiant.png"
+        },
+        {
+          "id": "DA_GuinsoosRagebladeRadiant",
+          "name_en": "Radiant Guinsoo's Rageblade",
+          "name_vi": "Cuồng Đao Guinsoo Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_guinsoosragebladeradiant.png"
+        },
+        {
+          "id": "DA_GiantSlayer_Radiant",
+          "name_en": "Radiant Giant Slayer",
+          "name_vi": "Diệt Khổng Lồ Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_giantslayerradiant.png"
+        },
+        {
+          "id": "DA_RabadonsDeathcap_Radiant",
+          "name_en": "Radiant Rabadon's Deathcap",
+          "name_vi": "Mũ Phù Thủy Rabadon Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_rabadonsdeathcapradiant.png"
+        },
+        {
+          "id": "DA_ThiefsGlovesRadiant",
+          "name_en": "Radiant Thief's Gloves",
+          "name_vi": "Găng Đạo Tặc Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_thiefsglovesradiant.png"
+        }
+      ],
+      "A": [
+        {
+          "id": "DA_QuicksilverRadiant",
+          "name_en": "Radiant Quicksilver",
+          "name_vi": "Áo Choàng Thủy Ngân Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_quicksilverradiant.png"
+        },
+        {
+          "id": "DA_HandOfJusticeRadiant",
+          "name_en": "Radiant Hand of Justice",
+          "name_vi": "Bàn Tay Công Lý Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_handofjusticeradiant.png"
+        },
+        {
+          "id": "DA_BrambleVestRadiant",
+          "name_en": "Radiant Bramble Vest",
+          "name_vi": "Áo Choàng Gai Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_bramblevestradiant.png"
+        },
+        {
+          "id": "DA_JeweledGauntletRadiant",
+          "name_en": "Radiant Jeweled Gauntlet",
+          "name_vi": "Găng Bảo Thạch Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_jeweledgauntletradiant.png"
+        },
+        {
+          "id": "DA_StrikersFlailRadiant",
+          "name_en": "Radiant Striker's Flail",
+          "name_vi": "Chùy Đoản Côn Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_trapclawradiant.png"
+        },
+        {
+          "id": "DA_InfinityEdgeRadiant",
+          "name_en": "Radiant Infinity Edge",
+          "name_vi": "Vô Cực Kiếm Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_infinityedgeradiant.png"
+        },
+        {
+          "id": "DA_RedBuffRadiant",
+          "name_en": "Radiant Red Buff",
+          "name_vi": "Bùa Đỏ Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_rapidfirecannonradiant.png"
+        },
+        {
+          "id": "DA_EdgeOfNightRadiant",
+          "name_en": "Radiant Edge of Night",
+          "name_vi": "Áo Choàng Bóng Tối Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_guardianangelradiant.png"
+        },
+        {
+          "id": "DA_DeathbladeRadiant",
+          "name_en": "Radiant Deathblade",
+          "name_vi": "Kiếm Tử Thần Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_deathbladeradiant.png"
+        },
+        {
+          "id": "DA_NashorsToothRadiant",
+          "name_en": "Radiant Nashor's Tooth",
+          "name_vi": "Nanh Nashor Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_leviathanradiant.png"
+        },
+        {
+          "id": "DA_SpearOfShojinRadiant",
+          "name_en": "Radiant Spear of Shojin",
+          "name_vi": "Ngọn Giáo Shojin Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_spearofshojinradiant.png"
+        },
+        {
+          "id": "DA_SpiritVisage_Radiant",
+          "name_en": "Radiant Spirit Visage",
+          "name_vi": "Giáp Tâm Linh Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_spiritvisagerr.png"
+        },
+        {
+          "id": "DA_AdaptiveHelm_Radiant",
+          "name_en": "Radiant Adaptive Helm",
+          "name_vi": "Mũ Thích Nghi Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_adaptivehelmradiant.png"
+        },
+        {
+          "id": "DA_KrakensFury_Radiant",
+          "name_en": "Radiant Kraken's Fury",
+          "name_vi": "Thịnh Nộ Thủy Quái Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_krakenslayerradiant.png"
+        },
+        {
+          "id": "DA_SteraksGageRadiant",
+          "name_en": "Radiant Sterak's Gage",
+          "name_vi": "Móng Vuốt Sterak Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_steraksgageradiant.png"
+        },
+        {
+          "id": "DA_SunfireCape_Radiant",
+          "name_en": "Radiant Sunfire Cape",
+          "name_vi": "Áo Choàng Lửa Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_sunfirecaperadiant.png"
+        },
+        {
+          "id": "DA_MorellonomiconRadiant",
+          "name_en": "Radiant Morellonomicon",
+          "name_vi": "Quỷ Thư Morello Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_morellonomiconradiant.png"
+        },
+        {
+          "id": "DA_VoidStaffRadiant",
+          "name_en": "Radiant Void Staff",
+          "name_vi": "Trượng Hư Vô Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_voidstaffradiant.png"
+        }
+      ],
+      "B": [
+        {
+          "id": "DA_HextechGunbladeRadiant",
+          "name_en": "Radiant Hextech Gunblade",
+          "name_vi": "Kiếm Súng Hextech Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_hextechgunbladeradiant.png"
+        },
+        {
+          "id": "DA_WarmogsArmorRadiant",
+          "name_en": "Radiant Warmog's Armor",
+          "name_vi": "Giáp Máu Warmog Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_warmogsarmorradiant.png"
+        },
+        {
+          "id": "DA_GargoyleStoneplate_Radiant",
+          "name_en": "Radiant Gargoyle Stoneplate",
+          "name_vi": "Thú Tượng Thạch Giáp Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_gargoylestoneplateradiant.png"
+        },
+        {
+          "id": "DA_TitansResolve_Radiant",
+          "name_en": "Radiant Titan's Resolve",
+          "name_vi": "Quyền Năng Khổng Lồ Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_titansresolveradiant.png"
+        },
+        {
+          "id": "DA_DragonsClawRadiant",
+          "name_en": "Radiant Dragon's Claw",
+          "name_vi": "Vuốt Rồng Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_dragonsclawradiant.png"
+        },
+        {
+          "id": "DA_ArchangelsStaffRadiant",
+          "name_en": "Radiant Archangel's Staff",
+          "name_vi": "Quyền Trượng Thiên Thần Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_archangelsstaffradiant.png"
+        },
+        {
+          "id": "DA_IonicSparkRadiant",
+          "name_en": "Radiant Ionic Spark",
+          "name_vi": "Nỏ Sét Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_ionicsparkradiant.png"
+        },
+        {
+          "id": "DA_BloodthirsterRadiant",
+          "name_en": "Radiant Bloodthirster",
+          "name_vi": "Huyết Kiếm Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_bloodthirsterradiant.png"
+        }
+      ],
+      "C": [
+        {
+          "id": "DA_CrownguardRadiant",
+          "name_en": "Radiant Crownguard",
+          "name_vi": "Vương Miện Hoàng Gia Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_crownguardradiant.png"
+        },
+        {
+          "id": "DA_EvenshroudRadiant",
+          "name_en": "Radiant Evenshroud",
+          "name_vi": "Giáp Vai Nguyệt Thần Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_spectralgauntletradiant.png"
+        },
+        {
+          "id": "DA_ProtectorsVowRadiant",
+          "name_en": "Radiant Protector's Vow",
+          "name_vi": "Lời Thề Hộ Vệ Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_frozenheartradiant.png"
+        },
+        {
+          "id": "DA_SteadfastHeartRadiant",
+          "name_en": "Radiant Steadfast Heart",
+          "name_vi": "Trái Tim Kiên Định Ánh Sáng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_nightharvesterradiant.png"
+        }
+      ],
+      "D": []
+    },
+    "artifacts": {
+      "S": [
+        {
+          "id": "DA_Artifact_SilvermereDawn",
+          "name_en": "Silvermere Dawn",
+          "name_vi": "Chùy Bạch Ngân",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_silvermeredawn.png"
+        },
+        {
+          "id": "DA_Artifact_WitsEnd",
+          "name_en": "Wit's End",
+          "name_vi": "Đao Tím",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_witsend.png"
+        },
+        {
+          "id": "DA_Artifact_HellfireHatchet",
+          "name_en": "Hellfire Hatchet",
+          "name_vi": "Rìu Hỏa Ngục",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_hellfirehatchet.png"
+        },
+        {
+          "id": "DA_Artifact_EternalPact",
+          "name_en": "Eternal Pact",
+          "name_vi": "Khế Ước Vĩnh Hằng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_eternalpact.png"
+        },
+        {
+          "id": "DA_Artifact_GoldCollector",
+          "name_en": "Gold Collector",
+          "name_vi": "Đại Bác Hải Tặc",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnthecollector.png"
+        }
+      ],
+      "A": [
+        {
+          "id": "DA_Artifact_RapidFireCannon",
+          "name_en": "Rapid Firecannon",
+          "name_vi": "Đại Bác Liên Thanh",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_rapidfirecannon.png"
+        },
+        {
+          "id": "DA_Artifact_LightshieldCrest",
+          "name_en": "Lightshield Crest",
+          "name_vi": "Huy Hiệu Thánh Khiên",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_lightshieldcrest.png"
+        },
+        {
+          "id": "DA_Artifact_LudensTempest",
+          "name_en": "Luden's Tempest",
+          "name_vi": "Bão Tố Luden",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_ludenstempest.png"
+        },
+        {
+          "id": "DA_Artifact_HorizonFocus",
+          "name_en": "Horizon Focus",
+          "name_vi": "Kính Nhắm Ma Pháp",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_horizonfocus.png"
+        },
+        {
+          "id": "DA_Artifact_Dawncore",
+          "name_en": "Dawncore",
+          "name_vi": "Lõi Bình Minh",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_dawncore.png"
+        },
+        {
+          "id": "DA_Artifact_Mittens",
+          "name_en": "Mittens",
+          "name_vi": "Găng Đấu Sĩ",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_mittens.png"
+        },
+        {
+          "id": "DA_Artifact_NavoriFlickerblade",
+          "name_en": "Flickerblades",
+          "name_vi": "Đao Chớp",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_navoriflickerplade.png"
+        }
+      ],
+      "B": [
+        {
+          "id": "DA_Artifact_InfinityForce",
+          "name_en": "Infinity Force",
+          "name_vi": "Tam Luyện Kiếm",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornninfinityforce.png"
+        },
+        {
+          "id": "DA_Item_Artifact_TalismanOfAscension",
+          "name_en": "Talisman of Ascension",
+          "name_vi": "Bùa Thăng Hoa",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_talismanofascension.png"
+        },
+        {
+          "id": "DA_Artifact_Fishbones",
+          "name_en": "Fishbones",
+          "name_vi": "Pháo Xương Cá",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_fishbones.png"
+        },
+        {
+          "id": "DA_Artifact_TheIndomitable",
+          "name_en": "The Indomitable",
+          "name_vi": "Bất Khuất",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_theindomitable.png"
+        },
+        {
+          "id": "DA_Artifact_BlightingJewel",
+          "name_en": "Blighting Jewel",
+          "name_vi": "Đá Hắc Hóa",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_blightingjewel.png"
+        },
+        {
+          "id": "DA_Artifact_MogulsMail",
+          "name_en": "Mogul's Mail",
+          "name_vi": "Giáp Đại Hãn",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalemogulsmail.png"
+        },
+        {
+          "id": "DA_Artifact_GamblersBlade",
+          "name_en": "Gambler's Blade",
+          "name_vi": "Kiếm Của Tay Bạc",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalegamblersblade.png"
+        },
+        {
+          "id": "DA_Artifact_Manazane",
+          "name_en": "Manazane",
+          "name_vi": "Thánh Kiếm Manazane",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnmuramana.png"
+        },
+        {
+          "id": "DA_Artifact_VoidGauntlet",
+          "name_en": "Void Gauntlet",
+          "name_vi": "Găng Hư Không",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_voidgauntlet.png"
+        },
+        {
+          "id": "DA_Artifact_AegisOfDawn",
+          "name_en": "Aegis of Dawn",
+          "name_vi": "Khiên Hừng Đông",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdawn.png"
+        },
+        {
+          "id": "DA_Artifact_SeekersArmguard",
+          "name_en": "Seeker's Armguard",
+          "name_vi": "Giáp Tay Seeker",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_seekersarmguard.png"
+        },
+        {
+          "id": "DA_Artifact_TitanicHydra",
+          "name_en": "Titanic Hydra",
+          "name_vi": "Rìu Đại Mãng Xà",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_titanichydra.png"
+        },
+        {
+          "id": "DA_Artifact_Hullcrusher",
+          "name_en": "Hullcrusher",
+          "name_vi": "Thần Búa Tiến Công",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft9_ornnitem_hullbreaker.png"
+        },
+        {
+          "id": "DA_Artifact_LichBane",
+          "name_en": "Lich Bane",
+          "name_vi": "Kiếm Tai Ương",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft_item_artifact_lichbane.png"
+        }
+      ],
+      "C": [
+        {
+          "id": "DA_Artifact_StatikkShiv",
+          "name_en": "Statikk Shiv",
+          "name_vi": "Dao Điện Statikk",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_stattikshiv.png"
+        },
+        {
+          "id": "DA_Artifact_AegisOfDusk",
+          "name_en": "Aegis of Dusk",
+          "name_vi": "Khiên Hoàng Hôn",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdusk.png"
+        },
+        {
+          "id": "DA_Artifact_ForbiddenIdol",
+          "name_en": "Forbidden Idol",
+          "name_vi": "Dị Vật Tai Ương",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_forbiddenidol.png"
+        },
+        {
+          "id": "DA_Artifact_ZhonyasParadox",
+          "name_en": "Zhonya's Paradox",
+          "name_vi": "Lưỡng Cực Zhonya",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnzhonyasparadox.png"
+        }
+      ],
+      "D": []
+    },
+    "emblems": {
+      "S": [
+        {
+          "id": "DA_18_EmblemJuggernaut",
+          "name_en": "Juggernaut Emblem",
+          "name_vi": "Ấn Dũng Sĩ",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_juggernaut.png"
+        },
+        {
+          "id": "DA_18_EmblemBrawler",
+          "name_en": "Brawler Emblem",
+          "name_vi": "Ấn Đấu Sĩ",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_brawler.png"
+        },
+        {
+          "id": "DA_18_EmblemVanguard",
+          "name_en": "Vanguard Emblem",
+          "name_vi": "Ấn Tiên Phong",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_vanguard.png"
+        },
+        {
+          "id": "DA_18_EmblemExecutioner",
+          "name_en": "Executioner Emblem",
+          "name_vi": "Ấn Đao Phủ",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_executioner.png"
+        },
+        {
+          "id": "DA_18_EmblemElderwood",
+          "name_en": "Elderwood Emblem",
+          "name_vi": "Ấn Thần Rừng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_elderwood.png"
+        },
+        {
+          "id": "DA_18_EmblemFloraFatalis",
+          "name_en": "Flora Fatalis Emblem",
+          "name_vi": "Ấn Thực Vật",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_florafatalis.png"
+        },
+        {
+          "id": "DA_18_EmblemLunar",
+          "name_en": "Lunar Emblem",
+          "name_vi": "Ấn Mặt Trăng",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_lunar.png"
+        }
+      ],
+      "A": [
+        {
+          "id": "DA_18_EmblemFloraFatalisAugment",
+          "name_en": "Flora Fatalis Emblem",
+          "name_vi": "Ấn Thực Vật",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_florafatalis.png"
+        },
+        {
+          "id": "DA_18_EmblemFae",
+          "name_en": "Fae Emblem",
+          "name_vi": "Ấn Tiên Linh",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_fae.png"
+        },
+        {
+          "id": "DA_18_EmblemDefender",
+          "name_en": "Defender Emblem",
+          "name_vi": "Ấn Vệ Quân",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_defender.png"
+        },
+        {
+          "id": "DA_18_EmblemSlayer",
+          "name_en": "Ravager Emblem",
+          "name_vi": "Ấn Tàn Phá",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_ravager.png"
+        },
+        {
+          "id": "DA_18_EmblemSpellweaver",
+          "name_en": "Spellweaver Emblem",
+          "name_vi": "Ấn Thuật Sư",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_spellweaver.png"
+        },
+        {
+          "id": "DA_18_EmblemRapidfire",
+          "name_en": "Rapidfire Emblem",
+          "name_vi": "Ấn Liên Kích",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_rapidfire.png"
+        },
+        {
+          "id": "DA_18_EmblemInvoker",
+          "name_en": "Invoker Emblem",
+          "name_vi": "Ấn Thuật Sĩ",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_invoker.png"
+        }
+      ],
+      "B": [
+        {
+          "id": "DA_18_EmblemInferno",
+          "name_en": "Inferno Emblem",
+          "name_vi": "Ấn Hỏa Ngục",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_inferno.png"
+        },
+        {
+          "id": "DA_18_EmblemBlackthorn",
+          "name_en": "Blackthorn Emblem",
+          "name_vi": "Ấn Gai Đen",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_blackthorn.png"
+        },
+        {
+          "id": "DA_18_EmblemPrimal",
+          "name_en": "Primal Emblem",
+          "name_vi": "Ấn Nguyên Sinh",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_primal.png"
+        },
+        {
+          "id": "DA_18_EmblemHunter",
+          "name_en": "Hunter Emblem",
+          "name_vi": "Ấn Thợ Săn",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_hunter.png"
+        },
+        {
+          "id": "DA_18_EmblemBlossom",
+          "name_en": "Blossom Emblem",
+          "name_vi": "Ấn Hoa Linh",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_blossom.png"
+        },
+        {
+          "id": "DA_18_EmblemSprykin",
+          "name_en": "Sprykin Emblem",
+          "name_vi": "Ấn Tinh Nghịch",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_sprykin.png"
+        }
+      ],
+      "C": [
+        {
+          "id": "DA_18_EmblemCoven",
+          "name_en": "Coven Emblem",
+          "name_vi": "Ấn Tiên Hắc Ám",
+          "desc_en": "",
+          "desc_vi": "",
+          "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_coven.png"
+        }
+      ],
+      "D": []
+    }
+  },
+  "craftables": {
+    "S": [
+      {
+        "id": "DA_ThiefsGloves",
+        "name_en": "Thief's Gloves",
+        "name_vi": "Găng Đạo Tặc",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_thiefsgloves.png"
+      },
+      {
+        "id": "DA_GargoyleStoneplate",
+        "name_en": "Gargoyle Stoneplate",
+        "name_vi": "Thú Tượng Thạch Giáp",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_gargoylestoneplate.png"
+      },
+      {
+        "id": "DA_SpearOfShojin",
+        "name_en": "Spear of Shojin",
+        "name_vi": "Ngọn Giáo Shojin",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_spearofshojin.png"
+      },
+      {
+        "id": "DA_RabadonsDeathcap",
+        "name_en": "Rabadon's Deathcap",
+        "name_vi": "Mũ Phù Thủy Rabadon",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_rabadonsdeathcap.png"
+      },
+      {
+        "id": "DA_Deathblade",
+        "name_en": "Deathblade",
+        "name_vi": "Kiếm Tử Thần",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_deathblade.png"
+      },
+      {
+        "id": "DA_AdaptiveHelm",
+        "name_en": "Adaptive Helm",
+        "name_vi": "Mũ Thích Nghi",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_adaptivehelm.png"
+      },
+      {
+        "id": "DA_VoidStaff",
+        "name_en": "Void Staff",
+        "name_vi": "Trượng Hư Vô",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_voidstaff.png"
+      },
+      {
+        "id": "DA_GiantSlayer",
+        "name_en": "Giant Slayer",
+        "name_vi": "Diệt Khổng Lồ",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_madredsbloodrazor.png"
+      }
+    ],
+    "A": [
+      {
+        "id": "DA_BrambleVest",
+        "name_en": "Bramble Vest",
+        "name_vi": "Áo Choàng Gai",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_bramblevest.png"
+      },
+      {
+        "id": "DA_ProtectorsVow",
+        "name_en": "Protector's Vow",
+        "name_vi": "Lời Thề Hộ Vệ",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_frozenheart.png"
+      },
+      {
+        "id": "DA_InfinityEdge",
+        "name_en": "Infinity Edge",
+        "name_vi": "Vô Cực Kiếm",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_infinityedge.png"
+      },
+      {
+        "id": "DA_StrikersFlail",
+        "name_en": "Striker's Flail",
+        "name_vi": "Chùy Đoản Côn",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_powergauntlet.png"
+      },
+      {
+        "id": "DA_RedBuff",
+        "name_en": "Red Buff",
+        "name_vi": "Bùa Đỏ",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_rapidfirecannon.png"
+      },
+      {
+        "id": "DA_Bloodthirster",
+        "name_en": "Bloodthirster",
+        "name_vi": "Huyết Kiếm",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_bloodthirster.png"
+      },
+      {
+        "id": "DA_Evenshroud",
+        "name_en": "Evenshroud",
+        "name_vi": "Giáp Vai Nguyệt Thần",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_spectralgauntlet.png"
+      },
+      {
+        "id": "DA_IonicSpark",
+        "name_en": "Ionic Spark",
+        "name_vi": "Nỏ Sét",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_ionicspark.png"
+      },
+      {
+        "id": "DA_LastWhisper",
+        "name_en": "Last Whisper",
+        "name_vi": "Cung Xanh",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_lastwhisper.png"
+      },
+      {
+        "id": "DA_SpiritVisage",
+        "name_en": "Spirit Visage",
+        "name_vi": "Giáp Tâm Linh",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_spiritvisagerr.png"
+      },
+      {
+        "id": "DA_Morellonomicon",
+        "name_en": "Morellonomicon",
+        "name_vi": "Quỷ Thư Morello",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_morellonomicon.png"
+      },
+      {
+        "id": "DA_WarmogsArmor",
+        "name_en": "Warmog's Armor",
+        "name_vi": "Giáp Máu Warmog",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_warmogsarmor.png"
+      },
+      {
+        "id": "DA_Crownguard",
+        "name_en": "Crownguard",
+        "name_vi": "Vương Miện Hoàng Gia",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_crownguard.png"
+      },
+      {
+        "id": "DA_SunfireCape",
+        "name_en": "Sunfire Cape",
+        "name_vi": "Áo Choàng Lửa",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_redbuff.png"
+      },
+      {
+        "id": "DA_SteadfastHeart",
+        "name_en": "Steadfast Heart",
+        "name_vi": "Trái Tim Kiên Định",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_nightharvester.png"
+      },
+      {
+        "id": "DA_SteraksGage",
+        "name_en": "Sterak's Gage",
+        "name_vi": "Móng Vuốt Sterak",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_steraksgage.png"
+      },
+      {
+        "id": "DA_HandOfJustice",
+        "name_en": "Hand of Justice",
+        "name_vi": "Bàn Tay Công Lý",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_unstableconcoction.png"
+      },
+      {
+        "id": "DA_DragonsClaw",
+        "name_en": "Dragon's Claw",
+        "name_vi": "Vuốt Rồng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_dragonsclaw.png"
+      },
+      {
+        "id": "DA_BlueBuff",
+        "name_en": "Blue Buff",
+        "name_vi": "Bùa Xanh",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_bluebuff.png"
+      },
+      {
+        "id": "DA_ArchangelsStaff",
+        "name_en": "Archangel's Staff",
+        "name_vi": "Quyền Trượng Thiên Thần",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_archangelsstaff.png"
+      },
+      {
+        "id": "DA_HextechGunblade",
+        "name_en": "Hextech Gunblade",
+        "name_vi": "Kiếm Súng Hextech",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_hextechgunblade.png"
+      },
+      {
+        "id": "DA_TitansResolve",
+        "name_en": "Titan's Resolve",
+        "name_vi": "Quyền Năng Khổng Lồ",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_titansresolve.png"
+      },
+      {
+        "id": "DA_EdgeOfNight",
+        "name_en": "Edge of Night",
+        "name_vi": "Áo Choàng Bóng Tối",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_guardianangel.png"
+      },
+      {
+        "id": "DA_Quicksilver",
+        "name_en": "Quicksilver",
+        "name_vi": "Áo Choàng Thủy Ngân",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_quicksilver.png"
+      },
+      {
+        "id": "DA_KrakensFury",
+        "name_en": "Kraken's Fury",
+        "name_vi": "Thịnh Nộ Thủy Quái",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_krakenslayer.png"
+      },
+      {
+        "id": "DA_GuinsoosRageblade",
+        "name_en": "Guinsoo's Rageblade",
+        "name_vi": "Cuồng Đao Guinsoo",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_guinsoosrageblade.png"
+      },
+      {
+        "id": "DA_JeweledGauntlet",
+        "name_en": "Jeweled Gauntlet",
+        "name_vi": "Găng Bảo Thạch",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_jeweledgauntlet.png"
+      },
+      {
+        "id": "DA_NashorsTooth",
+        "name_en": "Nashor's Tooth",
+        "name_vi": "Nanh Nashor",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_leviathan.png"
+      }
+    ],
+    "B": [],
+    "C": [],
+    "D": []
+  },
+  "radiants": {
+    "S": [
+      {
+        "id": "DA_LastWhisperRadiant",
+        "name_en": "Radiant Last Whisper",
+        "name_vi": "Cung Xanh Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_lastwhisperradiant.png"
+      },
+      {
+        "id": "DA_BlueBuffRadiant",
+        "name_en": "Radiant Blue Buff",
+        "name_vi": "Bùa Xanh Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_bluebuffradiant.png"
+      },
+      {
+        "id": "DA_GuinsoosRagebladeRadiant",
+        "name_en": "Radiant Guinsoo's Rageblade",
+        "name_vi": "Cuồng Đao Guinsoo Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_guinsoosragebladeradiant.png"
+      },
+      {
+        "id": "DA_GiantSlayer_Radiant",
+        "name_en": "Radiant Giant Slayer",
+        "name_vi": "Diệt Khổng Lồ Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_giantslayerradiant.png"
+      },
+      {
+        "id": "DA_RabadonsDeathcap_Radiant",
+        "name_en": "Radiant Rabadon's Deathcap",
+        "name_vi": "Mũ Phù Thủy Rabadon Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_rabadonsdeathcapradiant.png"
+      },
+      {
+        "id": "DA_ThiefsGlovesRadiant",
+        "name_en": "Radiant Thief's Gloves",
+        "name_vi": "Găng Đạo Tặc Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_thiefsglovesradiant.png"
+      }
+    ],
+    "A": [
+      {
+        "id": "DA_QuicksilverRadiant",
+        "name_en": "Radiant Quicksilver",
+        "name_vi": "Áo Choàng Thủy Ngân Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_quicksilverradiant.png"
+      },
+      {
+        "id": "DA_HandOfJusticeRadiant",
+        "name_en": "Radiant Hand of Justice",
+        "name_vi": "Bàn Tay Công Lý Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_handofjusticeradiant.png"
+      },
+      {
+        "id": "DA_BrambleVestRadiant",
+        "name_en": "Radiant Bramble Vest",
+        "name_vi": "Áo Choàng Gai Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_bramblevestradiant.png"
+      },
+      {
+        "id": "DA_JeweledGauntletRadiant",
+        "name_en": "Radiant Jeweled Gauntlet",
+        "name_vi": "Găng Bảo Thạch Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_jeweledgauntletradiant.png"
+      },
+      {
+        "id": "DA_StrikersFlailRadiant",
+        "name_en": "Radiant Striker's Flail",
+        "name_vi": "Chùy Đoản Côn Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_trapclawradiant.png"
+      },
+      {
+        "id": "DA_InfinityEdgeRadiant",
+        "name_en": "Radiant Infinity Edge",
+        "name_vi": "Vô Cực Kiếm Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_infinityedgeradiant.png"
+      },
+      {
+        "id": "DA_RedBuffRadiant",
+        "name_en": "Radiant Red Buff",
+        "name_vi": "Bùa Đỏ Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_rapidfirecannonradiant.png"
+      },
+      {
+        "id": "DA_EdgeOfNightRadiant",
+        "name_en": "Radiant Edge of Night",
+        "name_vi": "Áo Choàng Bóng Tối Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_guardianangelradiant.png"
+      },
+      {
+        "id": "DA_DeathbladeRadiant",
+        "name_en": "Radiant Deathblade",
+        "name_vi": "Kiếm Tử Thần Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_deathbladeradiant.png"
+      },
+      {
+        "id": "DA_NashorsToothRadiant",
+        "name_en": "Radiant Nashor's Tooth",
+        "name_vi": "Nanh Nashor Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_leviathanradiant.png"
+      },
+      {
+        "id": "DA_SpearOfShojinRadiant",
+        "name_en": "Radiant Spear of Shojin",
+        "name_vi": "Ngọn Giáo Shojin Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_spearofshojinradiant.png"
+      },
+      {
+        "id": "DA_SpiritVisage_Radiant",
+        "name_en": "Radiant Spirit Visage",
+        "name_vi": "Giáp Tâm Linh Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_spiritvisagerr.png"
+      },
+      {
+        "id": "DA_AdaptiveHelm_Radiant",
+        "name_en": "Radiant Adaptive Helm",
+        "name_vi": "Mũ Thích Nghi Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_adaptivehelmradiant.png"
+      },
+      {
+        "id": "DA_KrakensFury_Radiant",
+        "name_en": "Radiant Kraken's Fury",
+        "name_vi": "Thịnh Nộ Thủy Quái Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_krakenslayerradiant.png"
+      },
+      {
+        "id": "DA_SteraksGageRadiant",
+        "name_en": "Radiant Sterak's Gage",
+        "name_vi": "Móng Vuốt Sterak Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_steraksgageradiant.png"
+      },
+      {
+        "id": "DA_SunfireCape_Radiant",
+        "name_en": "Radiant Sunfire Cape",
+        "name_vi": "Áo Choàng Lửa Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_sunfirecaperadiant.png"
+      },
+      {
+        "id": "DA_MorellonomiconRadiant",
+        "name_en": "Radiant Morellonomicon",
+        "name_vi": "Quỷ Thư Morello Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_morellonomiconradiant.png"
+      },
+      {
+        "id": "DA_VoidStaffRadiant",
+        "name_en": "Radiant Void Staff",
+        "name_vi": "Trượng Hư Vô Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_voidstaffradiant.png"
+      }
+    ],
+    "B": [
+      {
+        "id": "DA_HextechGunbladeRadiant",
+        "name_en": "Radiant Hextech Gunblade",
+        "name_vi": "Kiếm Súng Hextech Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_hextechgunbladeradiant.png"
+      },
+      {
+        "id": "DA_WarmogsArmorRadiant",
+        "name_en": "Radiant Warmog's Armor",
+        "name_vi": "Giáp Máu Warmog Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_warmogsarmorradiant.png"
+      },
+      {
+        "id": "DA_GargoyleStoneplate_Radiant",
+        "name_en": "Radiant Gargoyle Stoneplate",
+        "name_vi": "Thú Tượng Thạch Giáp Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_gargoylestoneplateradiant.png"
+      },
+      {
+        "id": "DA_TitansResolve_Radiant",
+        "name_en": "Radiant Titan's Resolve",
+        "name_vi": "Quyền Năng Khổng Lồ Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_titansresolveradiant.png"
+      },
+      {
+        "id": "DA_DragonsClawRadiant",
+        "name_en": "Radiant Dragon's Claw",
+        "name_vi": "Vuốt Rồng Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_dragonsclawradiant.png"
+      },
+      {
+        "id": "DA_ArchangelsStaffRadiant",
+        "name_en": "Radiant Archangel's Staff",
+        "name_vi": "Quyền Trượng Thiên Thần Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_archangelsstaffradiant.png"
+      },
+      {
+        "id": "DA_IonicSparkRadiant",
+        "name_en": "Radiant Ionic Spark",
+        "name_vi": "Nỏ Sét Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_ionicsparkradiant.png"
+      },
+      {
+        "id": "DA_BloodthirsterRadiant",
+        "name_en": "Radiant Bloodthirster",
+        "name_vi": "Huyết Kiếm Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_bloodthirsterradiant.png"
+      }
+    ],
+    "C": [
+      {
+        "id": "DA_CrownguardRadiant",
+        "name_en": "Radiant Crownguard",
+        "name_vi": "Vương Miện Hoàng Gia Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_crownguardradiant.png"
+      },
+      {
+        "id": "DA_EvenshroudRadiant",
+        "name_en": "Radiant Evenshroud",
+        "name_vi": "Giáp Vai Nguyệt Thần Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_spectralgauntletradiant.png"
+      },
+      {
+        "id": "DA_ProtectorsVowRadiant",
+        "name_en": "Radiant Protector's Vow",
+        "name_vi": "Lời Thề Hộ Vệ Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_frozenheartradiant.png"
+      },
+      {
+        "id": "DA_SteadfastHeartRadiant",
+        "name_en": "Radiant Steadfast Heart",
+        "name_vi": "Trái Tim Kiên Định Ánh Sáng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_nightharvesterradiant.png"
+      }
+    ],
+    "D": []
+  },
+  "artifacts": {
+    "S": [
+      {
+        "id": "DA_Artifact_SilvermereDawn",
+        "name_en": "Silvermere Dawn",
+        "name_vi": "Chùy Bạch Ngân",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_silvermeredawn.png"
+      },
+      {
+        "id": "DA_Artifact_WitsEnd",
+        "name_en": "Wit's End",
+        "name_vi": "Đao Tím",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_witsend.png"
+      },
+      {
+        "id": "DA_Artifact_HellfireHatchet",
+        "name_en": "Hellfire Hatchet",
+        "name_vi": "Rìu Hỏa Ngục",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_hellfirehatchet.png"
+      },
+      {
+        "id": "DA_Artifact_EternalPact",
+        "name_en": "Eternal Pact",
+        "name_vi": "Khế Ước Vĩnh Hằng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_eternalpact.png"
+      },
+      {
+        "id": "DA_Artifact_GoldCollector",
+        "name_en": "Gold Collector",
+        "name_vi": "Đại Bác Hải Tặc",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnthecollector.png"
+      }
+    ],
+    "A": [
+      {
+        "id": "DA_Artifact_RapidFireCannon",
+        "name_en": "Rapid Firecannon",
+        "name_vi": "Đại Bác Liên Thanh",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_rapidfirecannon.png"
+      },
+      {
+        "id": "DA_Artifact_LightshieldCrest",
+        "name_en": "Lightshield Crest",
+        "name_vi": "Huy Hiệu Thánh Khiên",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_lightshieldcrest.png"
+      },
+      {
+        "id": "DA_Artifact_LudensTempest",
+        "name_en": "Luden's Tempest",
+        "name_vi": "Bão Tố Luden",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_ludenstempest.png"
+      },
+      {
+        "id": "DA_Artifact_HorizonFocus",
+        "name_en": "Horizon Focus",
+        "name_vi": "Kính Nhắm Ma Pháp",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_horizonfocus.png"
+      },
+      {
+        "id": "DA_Artifact_Dawncore",
+        "name_en": "Dawncore",
+        "name_vi": "Lõi Bình Minh",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_dawncore.png"
+      },
+      {
+        "id": "DA_Artifact_Mittens",
+        "name_en": "Mittens",
+        "name_vi": "Găng Đấu Sĩ",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_mittens.png"
+      },
+      {
+        "id": "DA_Artifact_NavoriFlickerblade",
+        "name_en": "Flickerblades",
+        "name_vi": "Đao Chớp",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_navoriflickerplade.png"
+      }
+    ],
+    "B": [
+      {
+        "id": "DA_Artifact_InfinityForce",
+        "name_en": "Infinity Force",
+        "name_vi": "Tam Luyện Kiếm",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornninfinityforce.png"
+      },
+      {
+        "id": "DA_Item_Artifact_TalismanOfAscension",
+        "name_en": "Talisman of Ascension",
+        "name_vi": "Bùa Thăng Hoa",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_talismanofascension.png"
+      },
+      {
+        "id": "DA_Artifact_Fishbones",
+        "name_en": "Fishbones",
+        "name_vi": "Pháo Xương Cá",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_fishbones.png"
+      },
+      {
+        "id": "DA_Artifact_TheIndomitable",
+        "name_en": "The Indomitable",
+        "name_vi": "Bất Khuất",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_theindomitable.png"
+      },
+      {
+        "id": "DA_Artifact_BlightingJewel",
+        "name_en": "Blighting Jewel",
+        "name_vi": "Đá Hắc Hóa",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_blightingjewel.png"
+      },
+      {
+        "id": "DA_Artifact_MogulsMail",
+        "name_en": "Mogul's Mail",
+        "name_vi": "Giáp Đại Hãn",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalemogulsmail.png"
+      },
+      {
+        "id": "DA_Artifact_GamblersBlade",
+        "name_en": "Gambler's Blade",
+        "name_vi": "Kiếm Của Tay Bạc",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalegamblersblade.png"
+      },
+      {
+        "id": "DA_Artifact_Manazane",
+        "name_en": "Manazane",
+        "name_vi": "Thánh Kiếm Manazane",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnmuramana.png"
+      },
+      {
+        "id": "DA_Artifact_VoidGauntlet",
+        "name_en": "Void Gauntlet",
+        "name_vi": "Găng Hư Không",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_voidgauntlet.png"
+      },
+      {
+        "id": "DA_Artifact_AegisOfDawn",
+        "name_en": "Aegis of Dawn",
+        "name_vi": "Khiên Hừng Đông",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdawn.png"
+      },
+      {
+        "id": "DA_Artifact_SeekersArmguard",
+        "name_en": "Seeker's Armguard",
+        "name_vi": "Giáp Tay Seeker",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_seekersarmguard.png"
+      },
+      {
+        "id": "DA_Artifact_TitanicHydra",
+        "name_en": "Titanic Hydra",
+        "name_vi": "Rìu Đại Mãng Xà",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_titanichydra.png"
+      },
+      {
+        "id": "DA_Artifact_Hullcrusher",
+        "name_en": "Hullcrusher",
+        "name_vi": "Thần Búa Tiến Công",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft9_ornnitem_hullbreaker.png"
+      },
+      {
+        "id": "DA_Artifact_LichBane",
+        "name_en": "Lich Bane",
+        "name_vi": "Kiếm Tai Ương",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft_item_artifact_lichbane.png"
+      }
+    ],
+    "C": [
+      {
+        "id": "DA_Artifact_StatikkShiv",
+        "name_en": "Statikk Shiv",
+        "name_vi": "Dao Điện Statikk",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_stattikshiv.png"
+      },
+      {
+        "id": "DA_Artifact_AegisOfDusk",
+        "name_en": "Aegis of Dusk",
+        "name_vi": "Khiên Hoàng Hôn",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdusk.png"
+      },
+      {
+        "id": "DA_Artifact_ForbiddenIdol",
+        "name_en": "Forbidden Idol",
+        "name_vi": "Dị Vật Tai Ương",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_forbiddenidol.png"
+      },
+      {
+        "id": "DA_Artifact_ZhonyasParadox",
+        "name_en": "Zhonya's Paradox",
+        "name_vi": "Lưỡng Cực Zhonya",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnzhonyasparadox.png"
+      }
+    ],
+    "D": []
+  },
+  "emblems": {
+    "S": [
+      {
+        "id": "DA_18_EmblemJuggernaut",
+        "name_en": "Juggernaut Emblem",
+        "name_vi": "Ấn Dũng Sĩ",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_juggernaut.png"
+      },
+      {
+        "id": "DA_18_EmblemBrawler",
+        "name_en": "Brawler Emblem",
+        "name_vi": "Ấn Đấu Sĩ",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_brawler.png"
+      },
+      {
+        "id": "DA_18_EmblemVanguard",
+        "name_en": "Vanguard Emblem",
+        "name_vi": "Ấn Tiên Phong",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_vanguard.png"
+      },
+      {
+        "id": "DA_18_EmblemExecutioner",
+        "name_en": "Executioner Emblem",
+        "name_vi": "Ấn Đao Phủ",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_executioner.png"
+      },
+      {
+        "id": "DA_18_EmblemElderwood",
+        "name_en": "Elderwood Emblem",
+        "name_vi": "Ấn Thần Rừng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_elderwood.png"
+      },
+      {
+        "id": "DA_18_EmblemFloraFatalis",
+        "name_en": "Flora Fatalis Emblem",
+        "name_vi": "Ấn Thực Vật",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_florafatalis.png"
+      },
+      {
+        "id": "DA_18_EmblemLunar",
+        "name_en": "Lunar Emblem",
+        "name_vi": "Ấn Mặt Trăng",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_lunar.png"
+      }
+    ],
+    "A": [
+      {
+        "id": "DA_18_EmblemFloraFatalisAugment",
+        "name_en": "Flora Fatalis Emblem",
+        "name_vi": "Ấn Thực Vật",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_florafatalis.png"
+      },
+      {
+        "id": "DA_18_EmblemFae",
+        "name_en": "Fae Emblem",
+        "name_vi": "Ấn Tiên Linh",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_fae.png"
+      },
+      {
+        "id": "DA_18_EmblemDefender",
+        "name_en": "Defender Emblem",
+        "name_vi": "Ấn Vệ Quân",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_defender.png"
+      },
+      {
+        "id": "DA_18_EmblemSlayer",
+        "name_en": "Ravager Emblem",
+        "name_vi": "Ấn Tàn Phá",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_ravager.png"
+      },
+      {
+        "id": "DA_18_EmblemSpellweaver",
+        "name_en": "Spellweaver Emblem",
+        "name_vi": "Ấn Thuật Sư",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_spellweaver.png"
+      },
+      {
+        "id": "DA_18_EmblemRapidfire",
+        "name_en": "Rapidfire Emblem",
+        "name_vi": "Ấn Liên Kích",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_rapidfire.png"
+      },
+      {
+        "id": "DA_18_EmblemInvoker",
+        "name_en": "Invoker Emblem",
+        "name_vi": "Ấn Thuật Sĩ",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_invoker.png"
+      }
+    ],
+    "B": [
+      {
+        "id": "DA_18_EmblemInferno",
+        "name_en": "Inferno Emblem",
+        "name_vi": "Ấn Hỏa Ngục",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_inferno.png"
+      },
+      {
+        "id": "DA_18_EmblemBlackthorn",
+        "name_en": "Blackthorn Emblem",
+        "name_vi": "Ấn Gai Đen",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_blackthorn.png"
+      },
+      {
+        "id": "DA_18_EmblemPrimal",
+        "name_en": "Primal Emblem",
+        "name_vi": "Ấn Nguyên Sinh",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_primal.png"
+      },
+      {
+        "id": "DA_18_EmblemHunter",
+        "name_en": "Hunter Emblem",
+        "name_vi": "Ấn Thợ Săn",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_hunter.png"
+      },
+      {
+        "id": "DA_18_EmblemBlossom",
+        "name_en": "Blossom Emblem",
+        "name_vi": "Ấn Hoa Linh",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_blossom.png"
+      },
+      {
+        "id": "DA_18_EmblemSprykin",
+        "name_en": "Sprykin Emblem",
+        "name_vi": "Ấn Tinh Nghịch",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_sprykin.png"
+      }
+    ],
+    "C": [
+      {
+        "id": "DA_18_EmblemCoven",
+        "name_en": "Coven Emblem",
+        "name_vi": "Ấn Tiên Hắc Ám",
+        "desc_en": "",
+        "desc_vi": "",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_coven.png"
+      }
+    ],
+    "D": []
+  },
+  "updatedAt": "2026-10-30T04:25:57.316Z"
+}

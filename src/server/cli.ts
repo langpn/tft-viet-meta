@@ -13,6 +13,14 @@ if (command === "sync") {
     console.error(`Unsupported sync target: ${target}`);
     process.exit(1);
   }
+  if (target === "all" || target === "tft-academy") {
+    try {
+      const { syncAcademyData } = await import("../lib/server/academy-sync.js");
+      await syncAcademyData();
+    } catch (err) {
+      console.warn("Academy sync warning:", err);
+    }
+  }
   const previousState = await loadState(statePath(root));
   const result = await runSync({
     fetchText: async (url) => (await fetch(url)).text(),
