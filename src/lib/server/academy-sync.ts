@@ -116,6 +116,12 @@ export type ParsedAcademyComp = {
   mainItem?: LocalizedItem | null;
   mainAugment?: LocalizedAugment | null;
   board: LocalizedUnit[];
+  finalChampions: LocalizedUnit[];
+  carousel: LocalizedItem[];
+  altBuildsList: Array<{
+    champ: LocalizedChampion;
+    items: LocalizedItem[];
+  }>;
   levelingCurve: CompLevelingCurve;
   tips: Array<{ stage: string; tip: string }>;
   augments: Array<{
@@ -691,6 +697,27 @@ export function parseComps(rawGuides: any[]): ParsedAcademyComp[] {
       };
     });
 
+    const NON_CHAMPION_UNITS = new Set([
+      "DA_Elderwood18_StonebarkTree",
+      "DA_Elderwood18_Lifeblossom",
+      "DA_Elderwood18_Protector",
+      "TFT_TrainingDummy",
+      "TFT_Voidspawn",
+      "TFT17_Relic",
+      "TFT17_Summon"
+    ]);
+    const finalChampions = board.filter((u) => !NON_CHAMPION_UNITS.has(u.id));
+
+    const carousel = (g.carousel || []).map((c: any) => localizeItem(c.apiName));
+
+    const altBuildsList = (g.altBuilds || []).map((ab: any) => {
+      const champ = localizeChampion(ab.apiName, 4);
+      return {
+        champ,
+        items: (ab.items || []).map((itId: string) => localizeItem(itId))
+      };
+    });
+
     return {
       id: g.id || slug,
       slug,
@@ -708,6 +735,9 @@ export function parseComps(rawGuides: any[]): ParsedAcademyComp[] {
       mainItem,
       mainAugment,
       board,
+      finalChampions,
+      carousel,
+      altBuildsList,
       levelingCurve: {
         earlyComp,
         midComp,

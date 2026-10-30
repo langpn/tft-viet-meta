@@ -193,7 +193,12 @@
         onclick={(e) => e.stopPropagation()}
         role="document"
       >
-        <CompDetailPanel comp={selectedComp} onclose={closeCompModal} />
+        <CompDetailPanel 
+          comp={selectedComp} 
+          allComps={data.comps}
+          onclose={closeCompModal} 
+          onselectcomp={(c) => (selectedCompId = c.id)}
+        />
       </div>
     </div>
   {/if}

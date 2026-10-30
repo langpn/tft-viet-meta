@@ -251,19 +251,19 @@
               <span class="text-[9px] font-black uppercase tracking-wider text-slate-300 mt-1">{style.sublabel}</span>
             </div>
 
-            <!-- Right Shelf Area: Compact Hexagon Champions (NO items glued on shelf!) -->
-            <div class="flex flex-wrap items-center gap-3 flex-1 p-2 overflow-x-auto">
+            <!-- Right Shelf Area: Compact Hexagon Champions (Matching TFT Academy Screenshot 2: 2 rows for B & C) -->
+            <div class="{tierCompEntries.length > 12 ? 'grid grid-rows-2 grid-flow-col auto-cols-max gap-3 p-2 overflow-x-auto min-h-[168px] items-center' : 'flex flex-wrap items-center gap-3 flex-1 p-2 overflow-x-auto'}">
               {#each tierCompEntries as { comp, isMatch } (comp.id)}
                 <!-- Dimming effect when search filter is active (Screenshot 4) -->
                 <div 
                   class="relative transition-all duration-200 cursor-pointer {isMatch ? 'opacity-100 hover:scale-110' : 'opacity-25 hover:opacity-75'}"
-                  title="{comp.title} ({comp.mainCarry?.nameVi || comp.mainCarry?.name || ''})"
+                  title="{comp.title} ({comp.mainCarry?.name_vi || comp.mainCarry?.name_en || ''})"
                 >
                   <HexAvatar 
                     id={comp.mainCarry?.id}
-                    name={comp.mainCarry?.name}
-                    nameVi={comp.mainCarry?.nameVi}
-                    iconUrl={comp.mainCarry?.iconUrl}
+                    name={comp.mainCarry?.name_en || comp.mainCarry?.name}
+                    nameVi={comp.mainCarry?.name_vi || comp.mainCarry?.name_en || comp.mainCarry?.name}
+                    iconUrl={comp.mainCarry?.icon}
                     cost={comp.mainCarry?.cost || 4}
                     starLevel={1}
                     showStars={false}
@@ -304,7 +304,12 @@
         onclick={(e) => e.stopPropagation()}
         role="document"
       >
-        <CompDetailPanel comp={selectedComp} onclose={closeModal} />
+        <CompDetailPanel 
+          comp={selectedComp} 
+          allComps={data.comps}
+          onclose={closeModal} 
+          onselectcomp={(c) => (selectedCompId = c.id)}
+        />
       </div>
     </div>
   {/if}
