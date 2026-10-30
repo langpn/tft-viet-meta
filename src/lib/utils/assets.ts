@@ -38,10 +38,12 @@ export function resolveAugmentIcon(icon?: string, id?: string): string {
 export function resolveTraitIcon(icon?: string, id?: string): string {
   if (icon && icon.startsWith('http')) return icon;
   if (icon && icon.startsWith('assets/')) {
-    return `https://raw.communitydragon.org/latest/game/${icon.toLowerCase()}`;
+    const corrected = icon.replace('assets/maps/tft/icons/traits/trait_icon_18_', 'assets/ux/traiticons/trait_icon_18_');
+    return `https://raw.communitydragon.org/latest/game/${corrected.toLowerCase()}`;
   }
   if (id) {
-    return `https://assets.tftacademy.com/traits/${id}.webp`;
+    const cleanId = id.toLowerCase().replace(/[^a-z0-9]/g, '');
+    return `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_18_${cleanId}.png`;
   }
   return '';
 }

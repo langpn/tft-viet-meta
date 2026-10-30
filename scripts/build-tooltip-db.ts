@@ -27,9 +27,36 @@ function cleanIcon(icon: string | undefined | null): string {
   return icon;
 }
 
+function cleanAbilityDesc(txt: string | undefined | null): string {
+  if (!txt) return '';
+  return txt
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/<\/p>/gi, '\n')
+    .replace(/<[^>]+>/g, '')
+    .replace(/%i:[a-zA-Z0-9]+%/g, '')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/\\r|\\n/g, '\n')
+    .replace(/\r/g, '')
+    .replace(/\n{3,}/g, '\n\n')
+    .replace(/ +/g, ' ')
+    .trim();
+}
+
 const cdragVi = JSON.parse(fs.readFileSync(path.join(RAW_DIR, 'cdragon_tft_vi_vn.json'), 'utf8'));
 const cdragEn = JSON.parse(fs.readFileSync(path.join(RAW_DIR, 'cdragon_tft_en_us.json'), 'utf8'));
 const comps = JSON.parse(fs.readFileSync(path.resolve(import.meta.dir, '../src/lib/data/academy-comps.json'), 'utf8'));
+
+// Build trait name -> icon map
+const traitIconMap = new Map<string, string>();
+for (const [k, v] of Object.entries(cdragVi.setData || {})) {
+  for (const t of (v as any).traits || []) {
+    if (t.name && t.icon) {
+      const clean = cleanIcon(t.icon);
+      traitIconMap.set(t.name.toLowerCase().trim(), clean);
+      if (t.apiName) traitIconMap.set(t.apiName.toLowerCase().trim(), clean);
+    }
+  }
+}
 
 // 1. Build Item <-> Champion co-occurrence map from 73 comps
 const champToItemsMap = new Map<string, Map<string, number>>();
@@ -102,8 +129,8 @@ for (const cVi of set18ChampsVi) {
   // Ability
   const abilityName_vi = cVi.ability?.name || 'Kỹ năng';
   const abilityName_en = cEn.ability?.name || abilityName_vi;
-  const abilityDesc_vi = cleanText(interpolateDescription(cVi.ability?.desc, cVi.ability?.variables || {}));
-  const abilityDesc_en = cleanText(interpolateDescription(cEn.ability?.desc, cEn.ability?.variables || {}));
+  const abilityDesc_vi = cleanAbilityDesc(interpolateDescription(cVi.ability?.desc, cVi.ability?.variables || {}));
+  const abilityDesc_en = cleanAbilityDesc(interpolateDescription(cEn.ability?.desc, cEn.ability?.variables || {}));
 
   // Recommended Items (top items held in comps)
   const itemCounts = champToItemsMap.get(apiName);
@@ -121,13 +148,16 @@ for (const cVi of set18ChampsVi) {
     }
   }
 
-  // Traits with icons
+  // Traits with real CommunityDragon icons
   const traitsList = (cVi.traits || []).map((tVi: string, idx: number) => {
     const tEn = cEn.traits?.[idx] || tVi;
+    const realIcon = traitIconMap.get(tVi.toLowerCase().trim()) || 
+                     traitIconMap.get(tEn.toLowerCase().trim()) || 
+                     `assets/ux/traiticons/trait_icon_18_${tEn.toLowerCase().replace(/[^a-z0-9]/g, '')}.png`;
     return {
       name_vi: tVi,
       name_en: tEn,
-      icon: `assets/maps/tft/icons/traits/trait_icon_18_${tEn.toLowerCase().replace(/[^a-z0-9]/g, '')}.png`
+      icon: realIcon
     };
   });
 

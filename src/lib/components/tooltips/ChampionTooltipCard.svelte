@@ -52,9 +52,22 @@
       <div class="flex flex-wrap items-center gap-2">
         {#each (data.traits || []) as trait}
           {@const tIcon = resolveTraitIcon(trait.icon, trait.name_en)}
-          <div class="flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-[#121622] border border-white/5">
+          <div class="flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-[#121622] border border-white/5 shadow-sm">
             {#if tIcon}
-              <img src={tIcon} alt="" class="w-3.5 h-3.5 object-contain" />
+              <img 
+                src={tIcon} 
+                alt={trait.name_vi || trait.name_en} 
+                class="w-4 h-4 object-contain shrink-0" 
+                loading="lazy"
+                onerror={(e) => {
+                  const target = e.currentTarget as HTMLImageElement;
+                  if (!target.dataset.triedBackup) {
+                    target.dataset.triedBackup = 'true';
+                    const cleanId = (trait.name_en || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+                    target.src = `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_18_${cleanId}.png`;
+                  }
+                }}
+              />
             {/if}
             <span class="font-bold text-slate-200 text-[11px]">{trait.name_vi || trait.name_en}</span>
           </div>
@@ -95,8 +108,8 @@
         </div>
 
         {#if data.ability.desc_vi || data.ability.desc_en}
-          <p class="text-xs text-slate-300 leading-relaxed font-normal">
-            {data.ability.desc_vi || data.ability.desc_en}
+          <p class="text-xs text-slate-300 leading-relaxed font-normal whitespace-pre-line">
+            {(data.ability.desc_vi || data.ability.desc_en || '').replace(/\\n/g, '\n')}
           </p>
         {/if}
       </div>
