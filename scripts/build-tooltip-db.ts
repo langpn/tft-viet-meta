@@ -247,18 +247,24 @@ for (const acItem of academyItems) {
   const acStats = acItem.stats || {};
   const cEffects = cVi.effects || {};
 
-  if (acStats.as || cEffects.AS) stats.as = `+${acStats.as || Math.round(cEffects.AS)}%`;
-  if (acStats.ad || cEffects.AD) stats.ad = `+${acStats.ad || Math.round(cEffects.AD * 100)}%`;
-  if (acStats.ap || cEffects.AP) stats.ap = `+${acStats.ap || Math.round(cEffects.AP)}`;
-  if (acStats.ar || cEffects.Armor) stats.armor = `+${acStats.ar || Math.round(cEffects.Armor)}`;
-  if (acStats.mr || cEffects.MagicResist) stats.mr = `+${acStats.mr || Math.round(cEffects.MagicResist)}`;
-  if (acStats.hp || cEffects.Health) stats.hp = `+${acStats.hp || Math.round(cEffects.Health)}`;
-  if (acStats.crit || cEffects.CritChance) stats.crit = `+${acStats.crit || Math.round(cEffects.CritChance * 100)}%`;
-  if (acStats.manaRegen) stats.manaRegen = `+${acStats.manaRegen}`;
-  else if (acStats.mana || cEffects.Mana) stats.mana = `+${acStats.mana || Math.round(cEffects.Mana)}`;
+  function normalizePercent(val: any): number {
+    if (val === undefined || val === null) return 0;
+    const num = Number(val);
+    return num <= 1 ? Math.round(num * 100) : Math.round(num);
+  }
+
+  if (acStats.as || cEffects.AS) stats.as = `+${normalizePercent(acStats.as || cEffects.AS)}%`;
+  if (acStats.ad || cEffects.AD) stats.ad = `+${normalizePercent(acStats.ad || cEffects.AD)}%`;
+  if (acStats.ap || cEffects.AP) stats.ap = `+${Math.round(acStats.ap || cEffects.AP)}`;
+  if (acStats.ar || cEffects.Armor) stats.armor = `+${Math.round(acStats.ar || cEffects.Armor)}`;
+  if (acStats.mr || cEffects.MagicResist) stats.mr = `+${Math.round(acStats.mr || cEffects.MagicResist)}`;
+  if (acStats.hp || cEffects.Health) stats.hp = `+${Math.round(acStats.hp || cEffects.Health)}`;
+  if (acStats.crit || cEffects.CritChance) stats.crit = `+${normalizePercent(acStats.crit || cEffects.CritChance)}%`;
+  if (acStats.manaRegen) stats.manaRegen = `+${Math.round(acStats.manaRegen)}`;
+  else if (acStats.mana || cEffects.Mana) stats.mana = `+${Math.round(acStats.mana || cEffects.Mana)}`;
   if (acStats.ov || cEffects.StatOmnivamp || cEffects.Omnivamp || cEffects.LifeSteal) {
-    const val = acStats.ov || Math.round((cEffects.StatOmnivamp || cEffects.Omnivamp || cEffects.LifeSteal) * 100);
-    stats.ov = `+${val}%`;
+    const rawVal = acStats.ov || cEffects.StatOmnivamp || cEffects.Omnivamp || cEffects.LifeSteal;
+    stats.ov = `+${normalizePercent(rawVal)}%`;
   }
 
   // Descriptions: Strip {{TFT_Keyword_*}}
@@ -284,6 +290,10 @@ for (const acItem of academyItems) {
       .replace(/Gain a (\d+)% max Health Shield for (\d+) seconds/gi, 'Nhận lá chắn bằng $1% Máu tối đa trong $2 giây')
       .replace(/When the shield expires, gain (\d+)% Ability Power/gi, 'Khi lá chắn hết hiệu lực, nhận $1% Sức Mạnh Phép Thuật')
       .replace(/Gain 2 effects:/gi, 'Nhận 2 hiệu ứng:')
+      .replace(/Combat Start:/gi, 'Bắt đầu giao tranh:')
+      .replace(/At (\d+)% Health/gi, 'Khi còn $1% Máu')
+      .replace(/gain (\d+) Mana/gi, 'nhận $1 Năng Lượng')
+      .replace(/and a Shield equal to (\d+)% max Health/gi, 'và lá chắn tương đương $1% Máu tối đa')
       .replace(/While above 50% health, double the Attack Damage and Ability Power/gi, 'Khi còn trên 50% Máu, tăng gấp đôi Sức Mạnh Công Kích và Sức Mạnh Phép Thuật')
       .replace(/While below 50% Health, double the Omnivamp/gi, 'Khi còn dưới 50% Máu, nhận gấp đôi lượng Hút Máu Toàn Phần')
       .replace(/Heal the lowest percent Health ally for (\d+)% of damage dealt/gi, 'Hồi máu cho đồng minh thấp Máu nhất bằng $1% lượng sát thương gây ra');
@@ -294,11 +304,15 @@ for (const acItem of academyItems) {
   const recipe = (acItem.composition || []).map((compApi: string) => {
     const compAc = academyItems.find(x => x.apiName === compApi);
     const compVi = allCdragItemsVi.find((x: any) => x.apiName === compApi);
+    const compPbIcon = compAc?.icon && compAc?.collectionId && compAc?.id
+      ? `https://api.tftacademy.com/api/files/${compAc.collectionId}/${compAc.id}/${compAc.icon}`
+      : '';
+    const compCdIcon = cleanIcon(compVi?.icon);
     return {
       id: compApi,
       name_en: compAc?.name || compApi,
       name_vi: compVi?.name || compAc?.name || compApi,
-      icon: compAc?.icon ? `https://assets.tftacademy.com/items/${compAc.icon}` : cleanIcon(compVi?.icon)
+      icon: compCdIcon || compPbIcon
     };
   });
 
@@ -307,20 +321,24 @@ for (const acItem of academyItems) {
     const champ = academyChampById.get(cId);
     if (!champ) return null;
     const cData = championsDb[champ.apiName] || championsDb[champ.name.toLowerCase()];
+    const hPbIcon = champ.championSquareIcon && champ.collectionId && champ.id
+      ? `https://api.tftacademy.com/api/files/${champ.collectionId}/${champ.id}/${champ.championSquareIcon}`
+      : '';
+    const hCdIcon = cleanIcon(cData?.icon);
     return {
       id: champ.apiName,
       name_en: champ.name,
       name_vi: cData?.name_vi || champ.name,
       cost: champ.cost,
-      icon: champ.championSquareIcon 
-        ? `https://assets.tftacademy.com/champions/champion_square_icons/${champ.championSquareIcon}`
-        : (cData?.icon || `https://assets.tftacademy.com/champions/champion_icons/${champ.apiName}.webp`)
+      icon: hPbIcon || hCdIcon
     };
   }).filter(Boolean);
 
-  const icon = acItem.icon 
-    ? `https://assets.tftacademy.com/items/${acItem.icon}`
-    : cleanIcon(cVi.icon);
+  const pbIcon = acItem.icon && acItem.collectionId && acItem.id
+    ? `https://api.tftacademy.com/api/files/${acItem.collectionId}/${acItem.id}/${acItem.icon}`
+    : '';
+  const cdIcon = cleanIcon(cVi.icon);
+  const icon = cdIcon || pbIcon;
 
   const itemData = {
     id: apiName,

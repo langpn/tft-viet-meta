@@ -50,7 +50,22 @@
     <section class="flex w-full items-start gap-2.5">
       <div class="w-10 h-10 rounded-lg bg-black border border-white/20 p-0.5 shrink-0 shadow overflow-hidden flex items-center justify-center">
         {#if iconSrc}
-          <img src={iconSrc} alt="" class="w-full h-full object-contain rounded-md" />
+          <img 
+            src={iconSrc} 
+            alt={data.name_vi || ''} 
+            class="w-full h-full object-contain rounded-md"
+            onerror={(e) => {
+              const target = e.currentTarget as HTMLImageElement;
+              if (!target.dataset.triedBackup) {
+                target.dataset.triedBackup = 'true';
+                if (data.id?.includes('Protector')) {
+                  target.src = 'https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_frozenheart.png';
+                } else if (data.id) {
+                  target.src = `https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/${data.id.toLowerCase().replace('da_', 'tft_item_')}.png`;
+                }
+              }
+            }}
+          />
         {/if}
       </div>
 
@@ -116,12 +131,54 @@
       {@const comp1Icon = resolveItemIcon(data.recipe[0].icon, data.recipe[0].id)}
       {@const comp2Icon = resolveItemIcon(data.recipe[1].icon, data.recipe[1].id)}
       <div class="flex items-center gap-2 pt-0.5">
-        <div class="w-6 h-6 rounded-md bg-black border border-white/20 p-0.5 shadow" title={data.recipe[0].name_vi}>
-          <img src={comp1Icon} alt="" class="w-full h-full object-contain" />
+        <div class="w-6 h-6 rounded-md bg-black border border-white/20 p-0.5 shadow flex items-center justify-center" title={data.recipe[0].name_vi}>
+          <img 
+            src={comp1Icon} 
+            alt="" 
+            class="w-full h-full object-contain"
+            onerror={(e) => {
+              const target = e.currentTarget as HTMLImageElement;
+              if (!target.dataset.triedBackup) {
+                target.dataset.triedBackup = 'true';
+                const id = (data.recipe[0]?.id || '').toLowerCase();
+                if (id.includes('chain')) target.src = 'https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_chainvest.png';
+                else if (id.includes('tear')) target.src = 'https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_tearofthegoddess.png';
+                else if (id.includes('sword') || id.includes('bf')) target.src = 'https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_bfsword.png';
+                else if (id.includes('bow')) target.src = 'https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_recurvebow.png';
+                else if (id.includes('rod')) target.src = 'https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_needlesslylargerod.png';
+                else if (id.includes('cloak')) target.src = 'https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_negatroncloak.png';
+                else if (id.includes('belt')) target.src = 'https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_giantsbelt.png';
+                else if (id.includes('glove')) target.src = 'https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_sparringgloves.png';
+                else if (id.includes('spatula')) target.src = 'https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_spatula.png';
+                else if (id.includes('pan')) target.src = 'https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_fryingpan.png';
+              }
+            }}
+          />
         </div>
         <span class="text-xs font-black text-slate-400">+</span>
-        <div class="w-6 h-6 rounded-md bg-black border border-white/20 p-0.5 shadow" title={data.recipe[1].name_vi}>
-          <img src={comp2Icon} alt="" class="w-full h-full object-contain" />
+        <div class="w-6 h-6 rounded-md bg-black border border-white/20 p-0.5 shadow flex items-center justify-center" title={data.recipe[1].name_vi}>
+          <img 
+            src={comp2Icon} 
+            alt="" 
+            class="w-full h-full object-contain"
+            onerror={(e) => {
+              const target = e.currentTarget as HTMLImageElement;
+              if (!target.dataset.triedBackup) {
+                target.dataset.triedBackup = 'true';
+                const id = (data.recipe[1]?.id || '').toLowerCase();
+                if (id.includes('chain')) target.src = 'https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_chainvest.png';
+                else if (id.includes('tear')) target.src = 'https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_tearofthegoddess.png';
+                else if (id.includes('sword') || id.includes('bf')) target.src = 'https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_bfsword.png';
+                else if (id.includes('bow')) target.src = 'https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_recurvebow.png';
+                else if (id.includes('rod')) target.src = 'https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_needlesslylargerod.png';
+                else if (id.includes('cloak')) target.src = 'https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_negatroncloak.png';
+                else if (id.includes('belt')) target.src = 'https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_giantsbelt.png';
+                else if (id.includes('glove')) target.src = 'https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_sparringgloves.png';
+                else if (id.includes('spatula')) target.src = 'https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_spatula.png';
+                else if (id.includes('pan')) target.src = 'https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/items/hexcore/tft_item_fryingpan.png';
+              }
+            }}
+          />
         </div>
       </div>
     {/if}
