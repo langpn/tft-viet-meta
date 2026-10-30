@@ -48,13 +48,26 @@
       let matchText = true;
       if (rawQueryText.trim()) {
         const q = rawQueryText.trim();
-        const inCarry = matchesQuery(comp.mainCarry?.name, q) || matchesQuery(comp.mainCarry?.nameVi, q);
-        const inTank = matchesQuery(comp.mainTank?.name, q) || matchesQuery(comp.mainTank?.nameVi, q);
-        const inBoard = comp.board?.some((u: any) => matchesQuery(u.name_en, q) || matchesQuery(u.name_vi, q));
-        const inItems = comp.mainCarry?.items?.some((i: any) => matchesQuery(i.name_en, q) || matchesQuery(i.name_vi, q)) ||
-                        comp.mainTank?.items?.some((i: any) => matchesQuery(i.name_en, q) || matchesQuery(i.name_vi, q));
-        const inTraits = comp.traits?.some((t: any) => matchesQuery(t.name, q) || matchesQuery(t.name_vi, q));
-        const inAugs = comp.augments?.some((a: any) => matchesQuery(a.name_en, q) || matchesQuery(a.name_vi, q));
+        const inCarry = matchesQuery(comp.mainCarry?.name_en, q) || 
+                        matchesQuery(comp.mainCarry?.name_vi, q) || 
+                        matchesQuery(comp.mainCarry?.name, q) || 
+                        matchesQuery(comp.mainCarry?.nameVi, q) ||
+                        matchesQuery(comp.mainCarry?.id, q);
+        const inTank = matchesQuery(comp.mainTank?.name_en, q) || 
+                       matchesQuery(comp.mainTank?.name_vi, q) || 
+                       matchesQuery(comp.mainTank?.name, q) || 
+                       matchesQuery(comp.mainTank?.nameVi, q) ||
+                       matchesQuery(comp.mainTank?.id, q);
+        const inBoard = comp.board?.some((u: any) => 
+          matchesQuery(u.name_en, q) || 
+          matchesQuery(u.name_vi, q) || 
+          matchesQuery(u.name, q) || 
+          matchesQuery(u.id, q)
+        );
+        const inItems = comp.mainCarry?.items?.some((i: any) => matchesQuery(i.name_en, q) || matchesQuery(i.name_vi, q) || matchesQuery(i.id, q)) ||
+                        comp.mainTank?.items?.some((i: any) => matchesQuery(i.name_en, q) || matchesQuery(i.name_vi, q) || matchesQuery(i.id, q));
+        const inTraits = comp.traits?.some((t: any) => matchesQuery(t.name, q) || matchesQuery(t.name_vi, q) || matchesQuery(t.id, q));
+        const inAugs = comp.augments?.some((a: any) => matchesQuery(a.name_en, q) || matchesQuery(a.name_vi, q) || matchesQuery(a.id, q));
         const inTitle = matchesQuery(comp.title, q) || matchesQuery(comp.metaTitle, q);
 
         matchText = inCarry || inTank || inBoard || inItems || inTraits || inAugs || inTitle;
@@ -69,16 +82,29 @@
           const fnameEn = filter.nameEn;
 
           // Check carry
-          if (matchesQuery(comp.mainCarry?.id, fid) || matchesQuery(comp.mainCarry?.name, fnameEn) || matchesQuery(comp.mainCarry?.nameVi, fnameVi)) return true;
+          if (matchesQuery(comp.mainCarry?.id, fid) || 
+              matchesQuery(comp.mainCarry?.name_en, fnameEn) || 
+              matchesQuery(comp.mainCarry?.name_vi, fnameVi) ||
+              matchesQuery(comp.mainCarry?.name, fnameEn) || 
+              matchesQuery(comp.mainCarry?.nameVi, fnameVi)) return true;
           // Check tank
-          if (matchesQuery(comp.mainTank?.id, fid) || matchesQuery(comp.mainTank?.name, fnameEn) || matchesQuery(comp.mainTank?.nameVi, fnameVi)) return true;
+          if (matchesQuery(comp.mainTank?.id, fid) || 
+              matchesQuery(comp.mainTank?.name_en, fnameEn) || 
+              matchesQuery(comp.mainTank?.name_vi, fnameVi) ||
+              matchesQuery(comp.mainTank?.name, fnameEn) || 
+              matchesQuery(comp.mainTank?.nameVi, fnameVi)) return true;
           // Check board units
-          if (comp.board?.some((u: any) => matchesQuery(u.id, fid) || matchesQuery(u.name_en, fnameEn) || matchesQuery(u.name_vi, fnameVi))) return true;
+          if (comp.board?.some((u: any) => 
+            matchesQuery(u.id, fid) || 
+            matchesQuery(u.name_en, fnameEn) || 
+            matchesQuery(u.name_vi, fnameVi) ||
+            matchesQuery(u.name, fnameEn)
+          )) return true;
           // Check items on carry or tank
           if (comp.mainCarry?.items?.some((i: any) => matchesQuery(i.id, fid) || matchesQuery(i.name_en, fnameEn) || matchesQuery(i.name_vi, fnameVi))) return true;
           if (comp.mainTank?.items?.some((i: any) => matchesQuery(i.id, fid) || matchesQuery(i.name_en, fnameEn) || matchesQuery(i.name_vi, fnameVi))) return true;
           // Check traits
-          if (comp.traits?.some((t: any) => matchesQuery(t.name, fnameEn) || matchesQuery(t.name_vi, fnameVi))) return true;
+          if (comp.traits?.some((t: any) => matchesQuery(t.id, fid) || matchesQuery(t.name, fnameEn) || matchesQuery(t.name_vi, fnameVi))) return true;
           // Check augments
           if (comp.augments?.some((a: any) => matchesQuery(a.id, fid) || matchesQuery(a.name_en, fnameEn) || matchesQuery(a.name_vi, fnameVi))) return true;
           // Check title
@@ -91,6 +117,69 @@
       const isMatch = matchStyle && matchText && matchChips;
       return { comp, isMatch };
     });
+  });
+
+  const isFiltering = $derived(
+    Boolean(rawQueryText.trim() || activeFilters.length > 0 || (selectedStyle !== 'ALL' && selectedStyle !== 'Show All'))
+  );
+
+  const costBorderColors: Record<number, string> = {
+    0: 'bg-slate-600',
+    1: 'bg-slate-400',
+    2: 'bg-emerald-500',
+    3: 'bg-sky-500',
+    4: 'bg-fuchsia-500',
+    5: 'bg-amber-400'
+  };
+
+  interface TierCompGroup {
+    champKey: string;
+    primaryComp: any;
+    hasVariation: boolean;
+    comps: any[];
+    isMatch: boolean;
+    matchedComp: any;
+  }
+
+  // Group comps by main champion API name per tier like TFT Academy
+  const tierGroups = $derived.by(() => {
+    const map: Record<string, TierCompGroup[]> = {};
+
+    for (const t of tiers) {
+      const tierCompEntries = compsWithMatchStatus.filter(({ comp }) => comp.tier === t);
+      const groups: TierCompGroup[] = [];
+      const groupMap = new Map<string, TierCompGroup>();
+
+      for (const entry of tierCompEntries) {
+        const { comp, isMatch } = entry;
+        const key = comp.mainChampion?.apiName || comp.mainCarry?.id || comp.id;
+
+        let g = groupMap.get(key);
+        if (!g) {
+          g = {
+            champKey: key,
+            primaryComp: comp,
+            hasVariation: false,
+            comps: [comp],
+            isMatch,
+            matchedComp: comp
+          };
+          groupMap.set(key, g);
+          groups.push(g);
+        } else {
+          g.comps.push(comp);
+          g.hasVariation = true;
+          if (isMatch) {
+            g.isMatch = true;
+            g.matchedComp = comp;
+          }
+        }
+      }
+
+      map[t] = groups;
+    }
+
+    return map;
   });
 
   const selectedComp = $derived.by(() => {
@@ -233,9 +322,9 @@
   <div class="flex flex-col gap-4">
       {#each tiers as t}
         {@const style = tierStyles[t]}
-        {@const tierCompEntries = compsWithMatchStatus.filter(({ comp }) => comp.tier === t)}
+        {@const groups = tierGroups[t] || []}
         
-        {#if tierCompEntries.length > 0}
+        {#if groups.length > 0}
           <div class="relative rounded-2xl bg-[#090C12] border-2 {style.borderColor} p-2 flex flex-col sm:flex-row items-stretch gap-3 shadow-xl">
             
             <!-- Situational Pill for X Tier -->
@@ -251,14 +340,36 @@
               <span class="text-[9px] font-black uppercase tracking-wider text-slate-300 mt-1">{style.sublabel}</span>
             </div>
 
-            <!-- Right Shelf Area: Compact Hexagon Champions (Matching TFT Academy Screenshot 2: 2 rows for B & C) -->
-            <div class="{tierCompEntries.length > 12 ? 'grid grid-rows-2 grid-flow-col auto-cols-max gap-3 p-2 overflow-x-auto min-h-[168px] items-center' : 'flex flex-wrap items-center gap-3 flex-1 p-2 overflow-x-auto'}">
-              {#each tierCompEntries as { comp, isMatch } (comp.id)}
-                <!-- Dimming effect when search filter is active (Screenshot 4) -->
+            <!-- Right Shelf Area: Compact Hexagon Champions (Grouped by Champion carry, NO visible scrollbars) -->
+            <div class="{groups.length > 12 ? 'grid grid-rows-2 grid-flow-col auto-cols-max gap-3 p-2 overflow-x-auto scrollbar-none no-scrollbar min-h-[168px] items-center' : 'flex flex-wrap items-center gap-3 flex-1 p-2 overflow-x-auto scrollbar-none no-scrollbar'}">
+              {#each groups as group (group.champKey)}
+                {@const comp = group.primaryComp}
+                <!-- Dimming effect when search filter is active, clean highlight for matched comps -->
                 <div 
-                  class="relative transition-all duration-200 cursor-pointer {isMatch ? 'opacity-100 hover:scale-110' : 'opacity-25 hover:opacity-75'}"
-                  title="{comp.title} ({comp.mainCarry?.name_vi || comp.mainCarry?.name_en || ''})"
+                  class="relative transition-all duration-200 cursor-pointer select-none group {isFiltering ? (group.isMatch ? 'opacity-100 scale-105 ring-2 ring-amber-400 shadow-lg shadow-amber-400/25 rounded-2xl' : 'opacity-20 hover:opacity-60') : (group.isMatch ? 'opacity-100 hover:scale-110' : 'opacity-25 hover:opacity-75')}"
+                  title="{comp.title} ({comp.mainCarry?.name_vi || comp.mainCarry?.name_en || ''}){group.hasVariation ? ` (+${group.comps.length - 1} biến thể)` : ''}"
+                  onclick={() => openModal(group.matchedComp || comp)}
+                  role="button"
+                  tabindex="0"
+                  onkeydown={(e) => { if (e.key === 'Enter') openModal(group.matchedComp || comp); }}
                 >
+                  {#if group.hasVariation}
+                    <!-- Stacked double-hex effect for champion variations (TFT Academy style) -->
+                    <div 
+                      class="absolute -top-1 -right-1 w-16 h-16 pointer-events-none transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"
+                      aria-hidden="true"
+                    >
+                      <div class="absolute inset-0 hex-border {costBorderColors[comp.mainCarry?.cost || 4] ?? 'bg-slate-500'} opacity-40 shadow-md"></div>
+                      <div class="absolute inset-[3px] hex-clip bg-[#090C14]"></div>
+                    </div>
+
+                    <!-- Small variation count pill -->
+                    <div class="absolute -bottom-1 -right-1 z-30 px-1 py-0.5 rounded-md bg-black/90 border border-amber-400/60 text-[9px] font-black text-amber-300 flex items-center gap-0.5 shadow-md pointer-events-none">
+                      <Layers class="w-2.5 h-2.5 text-amber-400" />
+                      <span>{group.comps.length}</span>
+                    </div>
+                  {/if}
+
                   <HexAvatar 
                     id={comp.mainCarry?.id}
                     name={comp.mainCarry?.name_en || comp.mainCarry?.name}
@@ -274,7 +385,6 @@
                     situationalTier={comp.situationalTier}
                     coreBadges={comp.coreBadges || []}
                     size="md"
-                    onclick={() => openModal(comp)}
                   />
                 </div>
               {/each}

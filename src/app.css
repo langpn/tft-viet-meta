@@ -33,6 +33,17 @@
   background: #334155;
 }
 
+/* Hide scrollbars utilities (Firefox, Chrome, Safari, Edge) */
+.scrollbar-none,
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-none::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
 /* Numeric alignment */
 .tabular-nums {
   font-variant-numeric: tabular-nums;

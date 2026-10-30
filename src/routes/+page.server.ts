@@ -8,6 +8,7 @@ export const load: PageServerLoad = async () => {
 
   return {
     featuredComps: [...sTierComps, ...aTierComps],
+    allComps: comps,
     totalComps: comps.length
   };
 };

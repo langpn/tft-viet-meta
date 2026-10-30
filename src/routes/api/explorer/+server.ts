@@ -90,9 +90,28 @@ export const GET: RequestHandler = async ({ url }) => {
         nameEn: aug?.name_en || augmentId,
         icon: aug?.icon || '',
         games: stats.count,
-        avgPlace: stats.place / stats.count,
-        top4Rate: stats.top4 / stats.count,
-        winRate: stats.won / stats.count,
+        avgPlace: stats.count > 0 ? stats.place / stats.count : 0,
+        top4Rate: stats.count > 0 ? stats.top4 / stats.count : 0,
+        winRate: stats.count > 0 ? stats.won / stats.count : 0,
+        delta: stats.delta ?? 0
+      };
+    });
+
+    // Normalize star_units (Split by star level)
+    const starUnits = (data.star_units || []).map(([id, star, stats]: [string, number, any]) => {
+      const entity = getChampionVi(id);
+      return {
+        id,
+        star,
+        nameVi: entity?.name_vi || id,
+        nameEn: entity?.name_en || id,
+        icon: entity?.icon || '',
+        cost: entity?.cost || 1,
+        games: stats.count,
+        pickRate: games > 0 ? stats.count / games : 0,
+        avgPlace: stats.count > 0 ? stats.place / stats.count : 0,
+        top4Rate: stats.count > 0 ? stats.top4 / stats.count : 0,
+        winRate: stats.count > 0 ? stats.won / stats.count : 0,
         delta: stats.delta ?? 0
       };
     });
@@ -108,6 +127,7 @@ export const GET: RequestHandler = async ({ url }) => {
         winRate: base.count > 0 ? base.won / base.count : 0
       },
       units,
+      starUnits,
       items,
       traits,
       augments
