@@ -344,12 +344,13 @@ export function cleanItemName(id: string): string {
 }
 
 export function localizeItem(id: string): LocalizedItem {
+  const isArtifact = id.includes("Artifact") || id.includes("Mitten") || id.includes("Silvermere") || id.includes("Fishbone");
   const canonical = getItemVi(id);
   if (canonical) {
     return {
       id,
       name_en: canonical.name_en,
-      name_vi: canonical.name_vi,
+      name_vi: isArtifact ? canonical.name_en : canonical.name_vi,
       desc_en: canonical.desc_en,
       desc_vi: canonical.desc_vi,
       icon: canonical.icon || `https://assets.tftacademy.com/items/${id}.webp`,
@@ -363,7 +364,7 @@ export function localizeItem(id: string): LocalizedItem {
     return {
       id,
       name_en: fallback.name_en,
-      name_vi: fallback.name_vi,
+      name_vi: isArtifact ? fallback.name_en : fallback.name_vi,
       desc_en: fallback.desc_en,
       desc_vi: fallback.desc_vi,
       icon: fallback.icon || `https://assets.tftacademy.com/items/${id}.webp`,
@@ -431,10 +432,11 @@ export function localizeAugment(id: string): LocalizedAugment {
 export function localizeChampion(apiName: string, cost = 1): LocalizedChampion {
   const fallback = CHAMPION_FALLBACKS[apiName];
   if (fallback) {
+    const name_en = fallback.name_en || apiName;
     return {
       id: apiName,
-      name_en: fallback.name_en || apiName,
-      name_vi: fallback.name_vi || apiName,
+      name_en,
+      name_vi: name_en, // In-game client never translates champion names!
       cost: fallback.cost ?? cost,
       icon: fallback.icon || `https://assets.tftacademy.com/champions/champion_icons/${apiName}.webp`,
       traits: fallback.traits || [],
@@ -443,10 +445,11 @@ export function localizeChampion(apiName: string, cost = 1): LocalizedChampion {
 
   const canonical = getChampionVi(apiName);
   if (canonical) {
+    const name_en = canonical.name_en;
     return {
       id: apiName,
-      name_en: canonical.name_en,
-      name_vi: canonical.name_vi,
+      name_en,
+      name_vi: name_en, // In-game client never translates champion names!
       cost: canonical.cost || cost,
       icon: canonical.icon || `https://assets.tftacademy.com/champions/champion_icons/${apiName}.webp`,
       traits: canonical.traits || [],
@@ -456,10 +459,11 @@ export function localizeChampion(apiName: string, cost = 1): LocalizedChampion {
   const cleanName = apiName.replace(/^DA_18_/, "").replace(/^DA_/, "").replace(/18$/, "");
   const byClean = getChampionVi(cleanName);
   if (byClean) {
+    const name_en = byClean.name_en;
     return {
       id: apiName,
-      name_en: byClean.name_en,
-      name_vi: byClean.name_vi,
+      name_en,
+      name_vi: name_en, // In-game client never translates champion names!
       cost: byClean.cost || cost,
       icon: byClean.icon || `https://assets.tftacademy.com/champions/champion_icons/${apiName}.webp`,
       traits: byClean.traits || [],

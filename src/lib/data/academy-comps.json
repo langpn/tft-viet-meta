@@ -83,7 +83,7 @@
       {
         "id": "DA_Elderwood18_Lifeblossom",
         "name_en": "Lifeblossom",
-        "name_vi": "Hoa Thần Rừng",
+        "name_vi": "Lifeblossom",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
         "boardIndex": 23,
@@ -98,7 +98,7 @@
       {
         "id": "DA_Elderwood18_StonebarkTree",
         "name_en": "Stonebark Tree",
-        "name_vi": "Cây Vỏ Đá",
+        "name_vi": "Stonebark Tree",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
         "boardIndex": 0,
@@ -404,7 +404,7 @@
         {
           "id": "DA_Elderwood18_Lifeblossom",
           "name_en": "Lifeblossom",
-          "name_vi": "Hoa Thần Rừng",
+          "name_vi": "Lifeblossom",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
           "boardIndex": 23,
@@ -419,7 +419,7 @@
         {
           "id": "DA_Elderwood18_StonebarkTree",
           "name_en": "Stonebark Tree",
-          "name_vi": "Cây Vỏ Đá",
+          "name_vi": "Stonebark Tree",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
           "boardIndex": 0,
@@ -760,7 +760,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "predecessors": [
           "DA_18_Ivern"
         ]
@@ -822,7 +822,7 @@
     "mainTank": {
       "id": "DA_Sentinel18",
       "name_en": "Sentinel",
-      "name_vi": "Người Đá",
+      "name_vi": "Sentinel",
       "cost": 4,
       "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
       "items": [
@@ -936,7 +936,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "cost": 4,
         "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
         "boardIndex": 3,
@@ -1193,7 +1193,7 @@
         {
           "id": "DA_Sentinel18",
           "name_en": "Sentinel",
-          "name_vi": "Người Đá",
+          "name_vi": "Sentinel",
           "cost": 4,
           "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
           "boardIndex": 3,
@@ -1547,7 +1547,7 @@
       {
         "id": "DA_Elderwood18_Lifeblossom",
         "name_en": "Lifeblossom",
-        "name_vi": "Hoa Thần Rừng",
+        "name_vi": "Lifeblossom",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
         "boardIndex": 23,
@@ -1562,7 +1562,7 @@
       {
         "id": "DA_Elderwood18_StonebarkTree",
         "name_en": "Stonebark Tree",
-        "name_vi": "Cây Vỏ Đá",
+        "name_vi": "Stonebark Tree",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
         "boardIndex": 0,
@@ -1577,7 +1577,7 @@
       {
         "id": "DA_Elderwood18_StonebarkTree",
         "name_en": "Stonebark Tree",
-        "name_vi": "Cây Vỏ Đá",
+        "name_vi": "Stonebark Tree",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
         "boardIndex": 6,
@@ -1884,7 +1884,7 @@
         {
           "id": "DA_Elderwood18_Lifeblossom",
           "name_en": "Lifeblossom",
-          "name_vi": "Hoa Thần Rừng",
+          "name_vi": "Lifeblossom",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
           "boardIndex": 23,
@@ -1899,7 +1899,7 @@
         {
           "id": "DA_Elderwood18_StonebarkTree",
           "name_en": "Stonebark Tree",
-          "name_vi": "Cây Vỏ Đá",
+          "name_vi": "Stonebark Tree",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
           "boardIndex": 0,
@@ -1914,7 +1914,7 @@
         {
           "id": "DA_Elderwood18_StonebarkTree",
           "name_en": "Stonebark Tree",
-          "name_vi": "Cây Vỏ Đá",
+          "name_vi": "Stonebark Tree",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
           "boardIndex": 6,
@@ -2276,7 +2276,7 @@
     "mainCarry": {
       "id": "DA_Brambleback18",
       "name_en": "Brambleback",
-      "name_vi": "Bụi Gai Đỏ",
+      "name_vi": "Brambleback",
       "cost": 4,
       "icon": "assets/characters/tft18_brambleback/skins/base/images/t_18_brambleback_teamplannersplash.png",
       "items": [
@@ -2309,7 +2309,7 @@
     "mainTank": {
       "id": "DA_Krug18",
       "name_en": "Krug",
-      "name_vi": "Quái Đá Krug",
+      "name_vi": "Krug",
       "cost": 3,
       "icon": "assets/characters/tft18_krug/skins/base/images/t_18_krug_teamplannersplash.png",
       "items": [
@@ -2346,7 +2346,7 @@
       {
         "id": "DA_18_Sentry",
         "name_en": "Pebbles",
-        "name_vi": "Sỏi",
+        "name_vi": "Pebbles",
         "cost": 1,
         "icon": "assets/characters/tft18_sentry/skins/base/images/t_18_sentry_teamplannersplash.png",
         "boardIndex": 23,
@@ -2361,7 +2361,7 @@
       {
         "id": "DA_Murkwolf18",
         "name_en": "Murkwolf",
-        "name_vi": "Sói Hắc Ám",
+        "name_vi": "Murkwolf",
         "cost": 2,
         "icon": "assets/characters/tft18_murkwolf/skins/base/images/t_18_murkwolf_teamplannersplash.png",
         "boardIndex": 22,
@@ -2376,7 +2376,7 @@
       {
         "id": "DA_Krug18",
         "name_en": "Krug",
-        "name_vi": "Quái Đá Krug",
+        "name_vi": "Krug",
         "cost": 3,
         "icon": "assets/characters/tft18_krug/skins/base/images/t_18_krug_teamplannersplash.png",
         "boardIndex": 3,
@@ -2416,7 +2416,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "cost": 4,
         "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
         "boardIndex": 14,
@@ -2431,7 +2431,7 @@
       {
         "id": "DA_Brambleback18",
         "name_en": "Brambleback",
-        "name_vi": "Bụi Gai Đỏ",
+        "name_vi": "Brambleback",
         "cost": 4,
         "icon": "assets/characters/tft18_brambleback/skins/base/images/t_18_brambleback_teamplannersplash.png",
         "boardIndex": 21,
@@ -2501,7 +2501,7 @@
       {
         "id": "DA_18_ElderDragon",
         "name_en": "Elder Dragon",
-        "name_vi": "Rồng Ngàn Tuổi",
+        "name_vi": "Elder Dragon",
         "cost": 5,
         "icon": "assets/characters/tft18_elderdragon/skins/base/images/t_18_elderdragon_teamplannersplash.png",
         "boardIndex": 24,
@@ -2536,7 +2536,7 @@
         {
           "id": "DA_18_Sentry",
           "name_en": "Pebbles",
-          "name_vi": "Sỏi",
+          "name_vi": "Pebbles",
           "cost": 1,
           "stars": 1,
           "items": []
@@ -2552,7 +2552,7 @@
         {
           "id": "DA_Scuttlecrab18",
           "name_en": "Scuttlecrab",
-          "name_vi": "Cua Kỳ Cục",
+          "name_vi": "Scuttlecrab",
           "cost": 2,
           "stars": 1,
           "items": []
@@ -2560,7 +2560,7 @@
         {
           "id": "DA_Murkwolf18",
           "name_en": "Murkwolf",
-          "name_vi": "Sói Hắc Ám",
+          "name_vi": "Murkwolf",
           "cost": 2,
           "stars": 1,
           "items": [
@@ -2588,7 +2588,7 @@
         {
           "id": "DA_18_Sentry",
           "name_en": "Pebbles",
-          "name_vi": "Sỏi",
+          "name_vi": "Pebbles",
           "cost": 1,
           "icon": "assets/characters/tft18_sentry/skins/base/images/t_18_sentry_teamplannersplash.png",
           "boardIndex": 23,
@@ -2603,7 +2603,7 @@
         {
           "id": "DA_Murkwolf18",
           "name_en": "Murkwolf",
-          "name_vi": "Sói Hắc Ám",
+          "name_vi": "Murkwolf",
           "cost": 2,
           "icon": "assets/characters/tft18_murkwolf/skins/base/images/t_18_murkwolf_teamplannersplash.png",
           "boardIndex": 22,
@@ -2618,7 +2618,7 @@
         {
           "id": "DA_Krug18",
           "name_en": "Krug",
-          "name_vi": "Quái Đá Krug",
+          "name_vi": "Krug",
           "cost": 3,
           "icon": "assets/characters/tft18_krug/skins/base/images/t_18_krug_teamplannersplash.png",
           "boardIndex": 3,
@@ -2658,7 +2658,7 @@
         {
           "id": "DA_Sentinel18",
           "name_en": "Sentinel",
-          "name_vi": "Người Đá",
+          "name_vi": "Sentinel",
           "cost": 4,
           "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
           "boardIndex": 14,
@@ -2673,7 +2673,7 @@
         {
           "id": "DA_Brambleback18",
           "name_en": "Brambleback",
-          "name_vi": "Bụi Gai Đỏ",
+          "name_vi": "Brambleback",
           "cost": 4,
           "icon": "assets/characters/tft18_brambleback/skins/base/images/t_18_brambleback_teamplannersplash.png",
           "boardIndex": 21,
@@ -2743,7 +2743,7 @@
         {
           "id": "DA_18_ElderDragon",
           "name_en": "Elder Dragon",
-          "name_vi": "Rồng Ngàn Tuổi",
+          "name_vi": "Elder Dragon",
           "cost": 5,
           "icon": "assets/characters/tft18_elderdragon/skins/base/images/t_18_elderdragon_teamplannersplash.png",
           "boardIndex": 24,
@@ -3797,7 +3797,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "cost": 4,
         "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
         "boardIndex": 3,
@@ -3885,7 +3885,7 @@
         {
           "id": "DA_Cinderling18",
           "name_en": "Cinderling",
-          "name_vi": "Mầm Non",
+          "name_vi": "Cinderling",
           "cost": 1,
           "stars": 1,
           "items": [
@@ -3918,7 +3918,7 @@
         {
           "id": "DA_Gromp18_AP",
           "name_en": "Gromp",
-          "name_vi": "Cóc Thành Tinh",
+          "name_vi": "Gromp",
           "cost": 2,
           "stars": 1,
           "items": []
@@ -3926,7 +3926,7 @@
         {
           "id": "DA_Scuttlecrab18",
           "name_en": "Scuttlecrab",
-          "name_vi": "Cua Kỳ Cục",
+          "name_vi": "Scuttlecrab",
           "cost": 2,
           "stars": 1,
           "items": []
@@ -4047,7 +4047,7 @@
         {
           "id": "DA_Sentinel18",
           "name_en": "Sentinel",
-          "name_vi": "Người Đá",
+          "name_vi": "Sentinel",
           "cost": 4,
           "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
           "boardIndex": 3,
@@ -5004,7 +5004,7 @@
       {
         "id": "DA_Krug18",
         "name_en": "Krug",
-        "name_vi": "Quái Đá Krug",
+        "name_vi": "Krug",
         "cost": 3,
         "icon": "assets/characters/tft18_krug/skins/base/images/t_18_krug_teamplannersplash.png",
         "boardIndex": 13,
@@ -5205,7 +5205,7 @@
         {
           "id": "DA_Gromp18_AP",
           "name_en": "Gromp",
-          "name_vi": "Cóc Thành Tinh",
+          "name_vi": "Gromp",
           "cost": 2,
           "stars": 1,
           "items": []
@@ -5239,7 +5239,7 @@
         {
           "id": "DA_Krug18",
           "name_en": "Krug",
-          "name_vi": "Quái Đá Krug",
+          "name_vi": "Krug",
           "cost": 3,
           "icon": "assets/characters/tft18_krug/skins/base/images/t_18_krug_teamplannersplash.png",
           "boardIndex": 13,
@@ -5511,13 +5511,13 @@
       {
         "id": "DA_Gromp18_AP",
         "name_en": "Gromp",
-        "name_vi": "Cóc Thành Tinh",
+        "name_vi": "Gromp",
         "predecessors": []
       },
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "predecessors": []
       }
     ]
@@ -6157,7 +6157,7 @@
       {
         "id": "DA_18_ElderDragon",
         "name_en": "Elder Dragon",
-        "name_vi": "Rồng Ngàn Tuổi",
+        "name_vi": "Elder Dragon",
         "predecessors": [
           "DA_18_Sivir"
         ]
@@ -6178,7 +6178,7 @@
     "mainCarry": {
       "id": "DA_18_Sentry",
       "name_en": "Pebbles",
-      "name_vi": "Sỏi",
+      "name_vi": "Pebbles",
       "cost": 1,
       "icon": "assets/characters/tft18_sentry/skins/base/images/t_18_sentry_teamplannersplash.png",
       "items": [
@@ -6211,7 +6211,7 @@
     "mainTank": {
       "id": "DA_Krug18",
       "name_en": "Krug",
-      "name_vi": "Quái Đá Krug",
+      "name_vi": "Krug",
       "cost": 3,
       "icon": "assets/characters/tft18_krug/skins/base/images/t_18_krug_teamplannersplash.png",
       "items": [
@@ -6248,7 +6248,7 @@
       {
         "id": "DA_Cinderling18",
         "name_en": "Cinderling",
-        "name_vi": "Mầm Non",
+        "name_vi": "Cinderling",
         "cost": 1,
         "icon": "assets/characters/tft18_cinderling/skins/base/images/t_18_cinderling_teamplannersplash.png",
         "boardIndex": 27,
@@ -6288,7 +6288,7 @@
       {
         "id": "DA_18_Sentry",
         "name_en": "Pebbles",
-        "name_vi": "Sỏi",
+        "name_vi": "Pebbles",
         "cost": 1,
         "icon": "assets/characters/tft18_sentry/skins/base/images/t_18_sentry_teamplannersplash.png",
         "boardIndex": 26,
@@ -6328,7 +6328,7 @@
       {
         "id": "DA_Murkwolf18",
         "name_en": "Murkwolf",
-        "name_vi": "Sói Hắc Ám",
+        "name_vi": "Murkwolf",
         "cost": 2,
         "icon": "assets/characters/tft18_murkwolf/skins/base/images/t_18_murkwolf_teamplannersplash.png",
         "boardIndex": 17,
@@ -6343,7 +6343,7 @@
       {
         "id": "DA_Scuttlecrab18",
         "name_en": "Scuttlecrab",
-        "name_vi": "Cua Kỳ Cục",
+        "name_vi": "Scuttlecrab",
         "cost": 2,
         "icon": "assets/characters/tft18_scuttlecrab/skins/base/images/t_18_scuttlecrab_teamplannersplash.png",
         "boardIndex": 18,
@@ -6358,7 +6358,7 @@
       {
         "id": "DA_Krug18",
         "name_en": "Krug",
-        "name_vi": "Quái Đá Krug",
+        "name_vi": "Krug",
         "cost": 3,
         "icon": "assets/characters/tft18_krug/skins/base/images/t_18_krug_teamplannersplash.png",
         "boardIndex": 4,
@@ -6398,7 +6398,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "cost": 4,
         "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
         "boardIndex": 16,
@@ -6413,7 +6413,7 @@
       {
         "id": "DA_Brambleback18",
         "name_en": "Brambleback",
-        "name_vi": "Bụi Gai Đỏ",
+        "name_vi": "Brambleback",
         "cost": 4,
         "icon": "assets/characters/tft18_brambleback/skins/base/images/t_18_brambleback_teamplannersplash.png",
         "boardIndex": 20,
@@ -6455,7 +6455,7 @@
         {
           "id": "DA_Cinderling18",
           "name_en": "Cinderling",
-          "name_vi": "Mầm Non",
+          "name_vi": "Cinderling",
           "cost": 1,
           "stars": 1,
           "items": []
@@ -6463,7 +6463,7 @@
         {
           "id": "DA_18_Sentry",
           "name_en": "Pebbles",
-          "name_vi": "Sỏi",
+          "name_vi": "Pebbles",
           "cost": 1,
           "stars": 1,
           "items": []
@@ -6479,7 +6479,7 @@
         {
           "id": "DA_Scuttlecrab18",
           "name_en": "Scuttlecrab",
-          "name_vi": "Cua Kỳ Cục",
+          "name_vi": "Scuttlecrab",
           "cost": 2,
           "stars": 1,
           "items": []
@@ -6490,7 +6490,7 @@
         {
           "id": "DA_Cinderling18",
           "name_en": "Cinderling",
-          "name_vi": "Mầm Non",
+          "name_vi": "Cinderling",
           "cost": 1,
           "icon": "assets/characters/tft18_cinderling/skins/base/images/t_18_cinderling_teamplannersplash.png",
           "boardIndex": 27,
@@ -6530,7 +6530,7 @@
         {
           "id": "DA_18_Sentry",
           "name_en": "Pebbles",
-          "name_vi": "Sỏi",
+          "name_vi": "Pebbles",
           "cost": 1,
           "icon": "assets/characters/tft18_sentry/skins/base/images/t_18_sentry_teamplannersplash.png",
           "boardIndex": 26,
@@ -6570,7 +6570,7 @@
         {
           "id": "DA_Murkwolf18",
           "name_en": "Murkwolf",
-          "name_vi": "Sói Hắc Ám",
+          "name_vi": "Murkwolf",
           "cost": 2,
           "icon": "assets/characters/tft18_murkwolf/skins/base/images/t_18_murkwolf_teamplannersplash.png",
           "boardIndex": 17,
@@ -6585,7 +6585,7 @@
         {
           "id": "DA_Scuttlecrab18",
           "name_en": "Scuttlecrab",
-          "name_vi": "Cua Kỳ Cục",
+          "name_vi": "Scuttlecrab",
           "cost": 2,
           "icon": "assets/characters/tft18_scuttlecrab/skins/base/images/t_18_scuttlecrab_teamplannersplash.png",
           "boardIndex": 18,
@@ -6600,7 +6600,7 @@
         {
           "id": "DA_Krug18",
           "name_en": "Krug",
-          "name_vi": "Quái Đá Krug",
+          "name_vi": "Krug",
           "cost": 3,
           "icon": "assets/characters/tft18_krug/skins/base/images/t_18_krug_teamplannersplash.png",
           "boardIndex": 4,
@@ -6640,7 +6640,7 @@
         {
           "id": "DA_Sentinel18",
           "name_en": "Sentinel",
-          "name_vi": "Người Đá",
+          "name_vi": "Sentinel",
           "cost": 4,
           "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
           "boardIndex": 16,
@@ -6655,7 +6655,7 @@
         {
           "id": "DA_Brambleback18",
           "name_en": "Brambleback",
-          "name_vi": "Bụi Gai Đỏ",
+          "name_vi": "Brambleback",
           "cost": 4,
           "icon": "assets/characters/tft18_brambleback/skins/base/images/t_18_brambleback_teamplannersplash.png",
           "boardIndex": 20,
@@ -6784,7 +6784,7 @@
       {
         "id": "DA_Gromp18_AP",
         "name_en": "Gromp",
-        "name_vi": "Cóc Thành Tinh",
+        "name_vi": "Gromp",
         "predecessors": [
           "DA_Cinderling18"
         ]
@@ -6792,7 +6792,7 @@
       {
         "id": "DA_18_ElderDragon",
         "name_en": "Elder Dragon",
-        "name_vi": "Rồng Ngàn Tuổi",
+        "name_vi": "Elder Dragon",
         "predecessors": [
           "DA_Brambleback18"
         ]
@@ -6846,7 +6846,7 @@
     "mainTank": {
       "id": "DA_Sentinel18",
       "name_en": "Sentinel",
-      "name_vi": "Người Đá",
+      "name_vi": "Sentinel",
       "cost": 4,
       "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
       "items": [
@@ -7038,7 +7038,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "cost": 4,
         "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
         "boardIndex": 3,
@@ -7296,7 +7296,7 @@
         {
           "id": "DA_Sentinel18",
           "name_en": "Sentinel",
-          "name_vi": "Người Đá",
+          "name_vi": "Sentinel",
           "cost": 4,
           "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
           "boardIndex": 3,
@@ -7426,7 +7426,7 @@
       {
         "id": "DA_Scuttlecrab18",
         "name_en": "Scuttlecrab",
-        "name_vi": "Cua Kỳ Cục",
+        "name_vi": "Scuttlecrab",
         "predecessors": [
           "DA_Vi18"
         ]
@@ -7434,7 +7434,7 @@
       {
         "id": "DA_Brambleback18",
         "name_en": "Brambleback",
-        "name_vi": "Bụi Gai Đỏ",
+        "name_vi": "Brambleback",
         "predecessors": [
           "DA_Nidalee18_AP"
         ]
@@ -7570,7 +7570,7 @@
       {
         "id": "DA_Scuttlecrab18",
         "name_en": "Scuttlecrab",
-        "name_vi": "Cua Kỳ Cục",
+        "name_vi": "Scuttlecrab",
         "cost": 2,
         "icon": "assets/characters/tft18_scuttlecrab/skins/base/images/t_18_scuttlecrab_teamplannersplash.png",
         "boardIndex": 2,
@@ -7852,7 +7852,7 @@
         {
           "id": "DA_Scuttlecrab18",
           "name_en": "Scuttlecrab",
-          "name_vi": "Cua Kỳ Cục",
+          "name_vi": "Scuttlecrab",
           "cost": 2,
           "icon": "assets/characters/tft18_scuttlecrab/skins/base/images/t_18_scuttlecrab_teamplannersplash.png",
           "boardIndex": 2,
@@ -9485,7 +9485,7 @@
       {
         "id": "DA_Scuttlecrab18",
         "name_en": "Scuttlecrab",
-        "name_vi": "Cua Kỳ Cục",
+        "name_vi": "Scuttlecrab",
         "cost": 2,
         "icon": "assets/characters/tft18_scuttlecrab/skins/base/images/t_18_scuttlecrab_teamplannersplash.png",
         "boardIndex": 2,
@@ -9767,7 +9767,7 @@
         {
           "id": "DA_Scuttlecrab18",
           "name_en": "Scuttlecrab",
-          "name_vi": "Cua Kỳ Cục",
+          "name_vi": "Scuttlecrab",
           "cost": 2,
           "icon": "assets/characters/tft18_scuttlecrab/skins/base/images/t_18_scuttlecrab_teamplannersplash.png",
           "boardIndex": 2,
@@ -10069,7 +10069,7 @@
       {
         "id": "DA_18_ElderDragon",
         "name_en": "Elder Dragon",
-        "name_vi": "Rồng Ngàn Tuổi",
+        "name_vi": "Elder Dragon",
         "predecessors": [
           "DA_18_Yunara"
         ]
@@ -10828,7 +10828,7 @@
       {
         "id": "DA_Elderwood18_Lifeblossom",
         "name_en": "Lifeblossom",
-        "name_vi": "Hoa Thần Rừng",
+        "name_vi": "Lifeblossom",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
         "boardIndex": 23,
@@ -10843,7 +10843,7 @@
       {
         "id": "DA_Elderwood18_StonebarkTree",
         "name_en": "Stonebark Tree",
-        "name_vi": "Cây Vỏ Đá",
+        "name_vi": "Stonebark Tree",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
         "boardIndex": 0,
@@ -11000,7 +11000,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "cost": 4,
         "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
         "boardIndex": 11,
@@ -11100,7 +11100,7 @@
         {
           "id": "DA_Elderwood18_Lifeblossom",
           "name_en": "Lifeblossom",
-          "name_vi": "Hoa Thần Rừng",
+          "name_vi": "Lifeblossom",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
           "boardIndex": 23,
@@ -11115,7 +11115,7 @@
         {
           "id": "DA_Elderwood18_StonebarkTree",
           "name_en": "Stonebark Tree",
-          "name_vi": "Cây Vỏ Đá",
+          "name_vi": "Stonebark Tree",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
           "boardIndex": 0,
@@ -11272,7 +11272,7 @@
         {
           "id": "DA_Sentinel18",
           "name_en": "Sentinel",
-          "name_vi": "Người Đá",
+          "name_vi": "Sentinel",
           "cost": 4,
           "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
           "boardIndex": 11,
@@ -11494,7 +11494,7 @@
     "mainTank": {
       "id": "DA_Scuttlecrab18",
       "name_en": "Scuttlecrab",
-      "name_vi": "Cua Kỳ Cục",
+      "name_vi": "Scuttlecrab",
       "cost": 2,
       "icon": "assets/characters/tft18_scuttlecrab/skins/base/images/t_18_scuttlecrab_teamplannersplash.png",
       "items": [
@@ -11616,7 +11616,7 @@
       {
         "id": "DA_Scuttlecrab18",
         "name_en": "Scuttlecrab",
-        "name_vi": "Cua Kỳ Cục",
+        "name_vi": "Scuttlecrab",
         "cost": 2,
         "icon": "assets/characters/tft18_scuttlecrab/skins/base/images/t_18_scuttlecrab_teamplannersplash.png",
         "boardIndex": 4,
@@ -11834,7 +11834,7 @@
         {
           "id": "DA_Scuttlecrab18",
           "name_en": "Scuttlecrab",
-          "name_vi": "Cua Kỳ Cục",
+          "name_vi": "Scuttlecrab",
           "cost": 2,
           "icon": "assets/characters/tft18_scuttlecrab/skins/base/images/t_18_scuttlecrab_teamplannersplash.png",
           "boardIndex": 4,
@@ -12906,7 +12906,7 @@
       {
         "id": "DA_Elderwood18_StonebarkTree",
         "name_en": "Stonebark Tree",
-        "name_vi": "Cây Vỏ Đá",
+        "name_vi": "Stonebark Tree",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
         "boardIndex": 13,
@@ -12951,7 +12951,7 @@
       {
         "id": "DA_Elderwood18_Lifeblossom",
         "name_en": "Lifeblossom",
-        "name_vi": "Hoa Thần Rừng",
+        "name_vi": "Lifeblossom",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
         "boardIndex": 18,
@@ -13195,7 +13195,7 @@
         {
           "id": "DA_Elderwood18_StonebarkTree",
           "name_en": "Stonebark Tree",
-          "name_vi": "Cây Vỏ Đá",
+          "name_vi": "Stonebark Tree",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
           "boardIndex": 13,
@@ -13240,7 +13240,7 @@
         {
           "id": "DA_Elderwood18_Lifeblossom",
           "name_en": "Lifeblossom",
-          "name_vi": "Hoa Thần Rừng",
+          "name_vi": "Lifeblossom",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
           "boardIndex": 18,
@@ -14039,7 +14039,7 @@
     "mainCarry": {
       "id": "DA_CrimsonRaptor18",
       "name_en": "Mama Beak",
-      "name_vi": "Chim Mẹ",
+      "name_vi": "Mama Beak",
       "cost": 3,
       "icon": "assets/characters/tft18_raptor/skins/base/images/t_18_crimsonraptor_teamplannersplash.png",
       "items": [
@@ -14109,7 +14109,7 @@
       {
         "id": "DA_Elderwood18_Lifeblossom",
         "name_en": "Lifeblossom",
-        "name_vi": "Hoa Thần Rừng",
+        "name_vi": "Lifeblossom",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
         "boardIndex": 25,
@@ -14124,7 +14124,7 @@
       {
         "id": "DA_Elderwood18_StonebarkTree",
         "name_en": "Stonebark Tree",
-        "name_vi": "Cây Vỏ Đá",
+        "name_vi": "Stonebark Tree",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
         "boardIndex": 6,
@@ -14169,7 +14169,7 @@
       {
         "id": "DA_Krug18",
         "name_en": "Krug",
-        "name_vi": "Quái Đá Krug",
+        "name_vi": "Krug",
         "cost": 3,
         "icon": "assets/characters/tft18_krug/skins/base/images/t_18_krug_teamplannersplash.png",
         "boardIndex": 3,
@@ -14241,7 +14241,7 @@
       {
         "id": "DA_CrimsonRaptor18",
         "name_en": "Mama Beak",
-        "name_vi": "Chim Mẹ",
+        "name_vi": "Mama Beak",
         "cost": 3,
         "icon": "assets/characters/tft18_raptor/skins/base/images/t_18_crimsonraptor_teamplannersplash.png",
         "boardIndex": 21,
@@ -14281,7 +14281,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "cost": 4,
         "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
         "boardIndex": 4,
@@ -14366,7 +14366,7 @@
         {
           "id": "DA_Elderwood18_Lifeblossom",
           "name_en": "Lifeblossom",
-          "name_vi": "Hoa Thần Rừng",
+          "name_vi": "Lifeblossom",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
           "boardIndex": 25,
@@ -14381,7 +14381,7 @@
         {
           "id": "DA_Elderwood18_StonebarkTree",
           "name_en": "Stonebark Tree",
-          "name_vi": "Cây Vỏ Đá",
+          "name_vi": "Stonebark Tree",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
           "boardIndex": 6,
@@ -14426,7 +14426,7 @@
         {
           "id": "DA_Krug18",
           "name_en": "Krug",
-          "name_vi": "Quái Đá Krug",
+          "name_vi": "Krug",
           "cost": 3,
           "icon": "assets/characters/tft18_krug/skins/base/images/t_18_krug_teamplannersplash.png",
           "boardIndex": 3,
@@ -14498,7 +14498,7 @@
         {
           "id": "DA_CrimsonRaptor18",
           "name_en": "Mama Beak",
-          "name_vi": "Chim Mẹ",
+          "name_vi": "Mama Beak",
           "cost": 3,
           "icon": "assets/characters/tft18_raptor/skins/base/images/t_18_crimsonraptor_teamplannersplash.png",
           "boardIndex": 21,
@@ -14538,7 +14538,7 @@
         {
           "id": "DA_Sentinel18",
           "name_en": "Sentinel",
-          "name_vi": "Người Đá",
+          "name_vi": "Sentinel",
           "cost": 4,
           "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
           "boardIndex": 4,
@@ -16033,7 +16033,7 @@
       {
         "id": "DA_Murkwolf18",
         "name_en": "Murkwolf",
-        "name_vi": "Sói Hắc Ám",
+        "name_vi": "Murkwolf",
         "cost": 2,
         "icon": "assets/characters/tft18_murkwolf/skins/base/images/t_18_murkwolf_teamplannersplash.png",
         "boardIndex": 0,
@@ -16128,7 +16128,7 @@
       {
         "id": "DA_Krug18",
         "name_en": "Krug",
-        "name_vi": "Quái Đá Krug",
+        "name_vi": "Krug",
         "cost": 3,
         "icon": "assets/characters/tft18_krug/skins/base/images/t_18_krug_teamplannersplash.png",
         "boardIndex": 17,
@@ -16143,7 +16143,7 @@
       {
         "id": "DA_Brambleback18",
         "name_en": "Brambleback",
-        "name_vi": "Bụi Gai Đỏ",
+        "name_vi": "Brambleback",
         "cost": 4,
         "icon": "assets/characters/tft18_brambleback/skins/base/images/t_18_brambleback_teamplannersplash.png",
         "boardIndex": 14,
@@ -16226,7 +16226,7 @@
         {
           "id": "DA_Murkwolf18",
           "name_en": "Murkwolf",
-          "name_vi": "Sói Hắc Ám",
+          "name_vi": "Murkwolf",
           "cost": 2,
           "stars": 1,
           "items": []
@@ -16300,7 +16300,7 @@
         {
           "id": "DA_Murkwolf18",
           "name_en": "Murkwolf",
-          "name_vi": "Sói Hắc Ám",
+          "name_vi": "Murkwolf",
           "cost": 2,
           "icon": "assets/characters/tft18_murkwolf/skins/base/images/t_18_murkwolf_teamplannersplash.png",
           "boardIndex": 0,
@@ -16395,7 +16395,7 @@
         {
           "id": "DA_Krug18",
           "name_en": "Krug",
-          "name_vi": "Quái Đá Krug",
+          "name_vi": "Krug",
           "cost": 3,
           "icon": "assets/characters/tft18_krug/skins/base/images/t_18_krug_teamplannersplash.png",
           "boardIndex": 17,
@@ -16410,7 +16410,7 @@
         {
           "id": "DA_Brambleback18",
           "name_en": "Brambleback",
-          "name_vi": "Bụi Gai Đỏ",
+          "name_vi": "Brambleback",
           "cost": 4,
           "icon": "assets/characters/tft18_brambleback/skins/base/images/t_18_brambleback_teamplannersplash.png",
           "boardIndex": 14,
@@ -16626,7 +16626,7 @@
     "mainTank": {
       "id": "DA_Sentinel18",
       "name_en": "Sentinel",
-      "name_vi": "Người Đá",
+      "name_vi": "Sentinel",
       "cost": 4,
       "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
       "items": [
@@ -16678,7 +16678,7 @@
       {
         "id": "DA_18_Sentry",
         "name_en": "Pebbles",
-        "name_vi": "Sỏi",
+        "name_vi": "Pebbles",
         "cost": 1,
         "icon": "assets/characters/tft18_sentry/skins/base/images/t_18_sentry_teamplannersplash.png",
         "boardIndex": 23,
@@ -16738,7 +16738,7 @@
       {
         "id": "DA_Brambleback18",
         "name_en": "Brambleback",
-        "name_vi": "Bụi Gai Đỏ",
+        "name_vi": "Brambleback",
         "cost": 4,
         "icon": "assets/characters/tft18_brambleback/skins/base/images/t_18_brambleback_teamplannersplash.png",
         "boardIndex": 19,
@@ -16818,7 +16818,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "cost": 4,
         "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
         "boardIndex": 4,
@@ -16908,7 +16908,7 @@
         {
           "id": "DA_18_Sentry",
           "name_en": "Pebbles",
-          "name_vi": "Sỏi",
+          "name_vi": "Pebbles",
           "cost": 1,
           "stars": 1,
           "items": []
@@ -16952,7 +16952,7 @@
         {
           "id": "DA_18_Sentry",
           "name_en": "Pebbles",
-          "name_vi": "Sỏi",
+          "name_vi": "Pebbles",
           "cost": 1,
           "icon": "assets/characters/tft18_sentry/skins/base/images/t_18_sentry_teamplannersplash.png",
           "boardIndex": 23,
@@ -17012,7 +17012,7 @@
         {
           "id": "DA_Brambleback18",
           "name_en": "Brambleback",
-          "name_vi": "Bụi Gai Đỏ",
+          "name_vi": "Brambleback",
           "cost": 4,
           "icon": "assets/characters/tft18_brambleback/skins/base/images/t_18_brambleback_teamplannersplash.png",
           "boardIndex": 19,
@@ -17092,7 +17092,7 @@
         {
           "id": "DA_Sentinel18",
           "name_en": "Sentinel",
-          "name_vi": "Người Đá",
+          "name_vi": "Sentinel",
           "cost": 4,
           "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
           "boardIndex": 4,
@@ -17908,7 +17908,7 @@
     "mainTank": {
       "id": "DA_Sentinel18",
       "name_en": "Sentinel",
-      "name_vi": "Người Đá",
+      "name_vi": "Sentinel",
       "cost": 4,
       "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
       "items": [
@@ -17945,7 +17945,7 @@
       {
         "id": "DA_18_Sentry",
         "name_en": "Pebbles",
-        "name_vi": "Sỏi",
+        "name_vi": "Pebbles",
         "cost": 1,
         "icon": "assets/characters/tft18_sentry/skins/base/images/t_18_sentry_teamplannersplash.png",
         "boardIndex": 27,
@@ -17960,7 +17960,7 @@
       {
         "id": "DA_Scuttlecrab18",
         "name_en": "Scuttlecrab",
-        "name_vi": "Cua Kỳ Cục",
+        "name_vi": "Scuttlecrab",
         "cost": 2,
         "icon": "assets/characters/tft18_scuttlecrab/skins/base/images/t_18_scuttlecrab_teamplannersplash.png",
         "boardIndex": 4,
@@ -18085,7 +18085,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "cost": 4,
         "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
         "boardIndex": 3,
@@ -18159,7 +18159,7 @@
         {
           "id": "DA_Scuttlecrab18",
           "name_en": "Scuttlecrab",
-          "name_vi": "Cua Kỳ Cục",
+          "name_vi": "Scuttlecrab",
           "cost": 2,
           "stars": 1,
           "items": []
@@ -18195,7 +18195,7 @@
         {
           "id": "DA_18_Sentry",
           "name_en": "Pebbles",
-          "name_vi": "Sỏi",
+          "name_vi": "Pebbles",
           "cost": 1,
           "icon": "assets/characters/tft18_sentry/skins/base/images/t_18_sentry_teamplannersplash.png",
           "boardIndex": 27,
@@ -18210,7 +18210,7 @@
         {
           "id": "DA_Scuttlecrab18",
           "name_en": "Scuttlecrab",
-          "name_vi": "Cua Kỳ Cục",
+          "name_vi": "Scuttlecrab",
           "cost": 2,
           "icon": "assets/characters/tft18_scuttlecrab/skins/base/images/t_18_scuttlecrab_teamplannersplash.png",
           "boardIndex": 4,
@@ -18335,7 +18335,7 @@
         {
           "id": "DA_Sentinel18",
           "name_en": "Sentinel",
-          "name_vi": "Người Đá",
+          "name_vi": "Sentinel",
           "cost": 4,
           "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
           "boardIndex": 3,
@@ -18643,7 +18643,7 @@
       {
         "id": "DA_CrimsonRaptor18",
         "name_en": "Mama Beak",
-        "name_vi": "Chim Mẹ",
+        "name_vi": "Mama Beak",
         "cost": 3,
         "icon": "assets/characters/tft18_raptor/skins/base/images/t_18_crimsonraptor_teamplannersplash.png",
         "boardIndex": 21,
@@ -18738,7 +18738,7 @@
       {
         "id": "DA_Brambleback18",
         "name_en": "Brambleback",
-        "name_vi": "Bụi Gai Đỏ",
+        "name_vi": "Brambleback",
         "cost": 4,
         "icon": "assets/characters/tft18_brambleback/skins/base/images/t_18_brambleback_teamplannersplash.png",
         "boardIndex": 8,
@@ -18753,7 +18753,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "cost": 4,
         "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
         "boardIndex": 6,
@@ -18902,7 +18902,7 @@
         {
           "id": "DA_CrimsonRaptor18",
           "name_en": "Mama Beak",
-          "name_vi": "Chim Mẹ",
+          "name_vi": "Mama Beak",
           "cost": 3,
           "icon": "assets/characters/tft18_raptor/skins/base/images/t_18_crimsonraptor_teamplannersplash.png",
           "boardIndex": 21,
@@ -18997,7 +18997,7 @@
         {
           "id": "DA_Brambleback18",
           "name_en": "Brambleback",
-          "name_vi": "Bụi Gai Đỏ",
+          "name_vi": "Brambleback",
           "cost": 4,
           "icon": "assets/characters/tft18_brambleback/skins/base/images/t_18_brambleback_teamplannersplash.png",
           "boardIndex": 8,
@@ -19012,7 +19012,7 @@
         {
           "id": "DA_Sentinel18",
           "name_en": "Sentinel",
-          "name_vi": "Người Đá",
+          "name_vi": "Sentinel",
           "cost": 4,
           "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
           "boardIndex": 6,
@@ -20184,7 +20184,7 @@
       {
         "id": "DA_Elderwood18_Lifeblossom",
         "name_en": "Lifeblossom",
-        "name_vi": "Hoa Thần Rừng",
+        "name_vi": "Lifeblossom",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
         "boardIndex": 21,
@@ -20199,7 +20199,7 @@
       {
         "id": "DA_Elderwood18_StonebarkTree",
         "name_en": "Stonebark Tree",
-        "name_vi": "Cây Vỏ Đá",
+        "name_vi": "Stonebark Tree",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
         "boardIndex": 0,
@@ -20456,7 +20456,7 @@
         {
           "id": "DA_Elderwood18_Lifeblossom",
           "name_en": "Lifeblossom",
-          "name_vi": "Hoa Thần Rừng",
+          "name_vi": "Lifeblossom",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
           "boardIndex": 21,
@@ -20471,7 +20471,7 @@
         {
           "id": "DA_Elderwood18_StonebarkTree",
           "name_en": "Stonebark Tree",
-          "name_vi": "Cây Vỏ Đá",
+          "name_vi": "Stonebark Tree",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
           "boardIndex": 0,
@@ -20868,7 +20868,7 @@
       {
         "id": "DA_Elderwood18_Lifeblossom",
         "name_en": "Lifeblossom",
-        "name_vi": "Hoa Thần Rừng",
+        "name_vi": "Lifeblossom",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
         "boardIndex": 18,
@@ -20883,7 +20883,7 @@
       {
         "id": "DA_Elderwood18_StonebarkTree",
         "name_en": "Stonebark Tree",
-        "name_vi": "Cây Vỏ Đá",
+        "name_vi": "Stonebark Tree",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
         "boardIndex": 6,
@@ -20898,7 +20898,7 @@
       {
         "id": "DA_Elderwood18_StonebarkTree",
         "name_en": "Stonebark Tree",
-        "name_vi": "Cây Vỏ Đá",
+        "name_vi": "Stonebark Tree",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
         "boardIndex": 1,
@@ -21101,7 +21101,7 @@
       {
         "id": "DA_Elderwood18_Protector",
         "name_en": "Elderwood Protector",
-        "name_vi": "Hộ Vệ Thần Rừng",
+        "name_vi": "Elderwood Protector",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Protector.webp",
         "boardIndex": 3,
@@ -21212,7 +21212,7 @@
         {
           "id": "DA_Elderwood18_Lifeblossom",
           "name_en": "Lifeblossom",
-          "name_vi": "Hoa Thần Rừng",
+          "name_vi": "Lifeblossom",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
           "boardIndex": 18,
@@ -21227,7 +21227,7 @@
         {
           "id": "DA_Elderwood18_StonebarkTree",
           "name_en": "Stonebark Tree",
-          "name_vi": "Cây Vỏ Đá",
+          "name_vi": "Stonebark Tree",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
           "boardIndex": 6,
@@ -21242,7 +21242,7 @@
         {
           "id": "DA_Elderwood18_StonebarkTree",
           "name_en": "Stonebark Tree",
-          "name_vi": "Cây Vỏ Đá",
+          "name_vi": "Stonebark Tree",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
           "boardIndex": 1,
@@ -21445,7 +21445,7 @@
         {
           "id": "DA_Elderwood18_Protector",
           "name_en": "Elderwood Protector",
-          "name_vi": "Hộ Vệ Thần Rừng",
+          "name_vi": "Elderwood Protector",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Protector.webp",
           "boardIndex": 3,
@@ -22167,7 +22167,7 @@
         {
           "id": "DA_Artifact_Dawncore",
           "name_en": "Dawncore",
-          "name_vi": "Lõi Bình Minh",
+          "name_vi": "Dawncore",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_dawncore.png"
@@ -22219,14 +22219,14 @@
         "type": "item",
         "id": "DA_Artifact_Dawncore",
         "name_en": "Dawncore",
-        "name_vi": "Lõi Bình Minh",
+        "name_vi": "Dawncore",
         "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_dawncore.png"
       }
     ],
     "mainItem": {
       "id": "DA_Artifact_Dawncore",
       "name_en": "Dawncore",
-      "name_vi": "Lõi Bình Minh",
+      "name_vi": "Dawncore",
       "desc_en": "",
       "desc_vi": "",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_dawncore.png"
@@ -22243,7 +22243,7 @@
       {
         "id": "DA_Elderwood18_Lifeblossom",
         "name_en": "Lifeblossom",
-        "name_vi": "Hoa Thần Rừng",
+        "name_vi": "Lifeblossom",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
         "boardIndex": 17,
@@ -22258,7 +22258,7 @@
       {
         "id": "DA_Elderwood18_StonebarkTree",
         "name_en": "Stonebark Tree",
-        "name_vi": "Cây Vỏ Đá",
+        "name_vi": "Stonebark Tree",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
         "boardIndex": 6,
@@ -22357,7 +22357,7 @@
           {
             "id": "DA_Artifact_Dawncore",
             "name_en": "Dawncore",
-            "name_vi": "Lõi Bình Minh",
+            "name_vi": "Dawncore",
             "desc_en": "",
             "desc_vi": "",
             "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_dawncore.png"
@@ -22483,7 +22483,7 @@
         {
           "id": "DA_Elderwood18_Lifeblossom",
           "name_en": "Lifeblossom",
-          "name_vi": "Hoa Thần Rừng",
+          "name_vi": "Lifeblossom",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
           "boardIndex": 17,
@@ -22498,7 +22498,7 @@
         {
           "id": "DA_Elderwood18_StonebarkTree",
           "name_en": "Stonebark Tree",
-          "name_vi": "Cây Vỏ Đá",
+          "name_vi": "Stonebark Tree",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
           "boardIndex": 6,
@@ -22597,7 +22597,7 @@
             {
               "id": "DA_Artifact_Dawncore",
               "name_en": "Dawncore",
-              "name_vi": "Lõi Bình Minh",
+              "name_vi": "Dawncore",
               "desc_en": "",
               "desc_vi": "",
               "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_dawncore.png"
@@ -22889,7 +22889,7 @@
       {
         "id": "DA_Elderwood18_Lifeblossom",
         "name_en": "Lifeblossom",
-        "name_vi": "Hoa Thần Rừng",
+        "name_vi": "Lifeblossom",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
         "boardIndex": 27,
@@ -22904,7 +22904,7 @@
       {
         "id": "DA_Elderwood18_StonebarkTree",
         "name_en": "Stonebark Tree",
-        "name_vi": "Cây Vỏ Đá",
+        "name_vi": "Stonebark Tree",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
         "boardIndex": 20,
@@ -23153,7 +23153,7 @@
         {
           "id": "DA_Elderwood18_Lifeblossom",
           "name_en": "Lifeblossom",
-          "name_vi": "Hoa Thần Rừng",
+          "name_vi": "Lifeblossom",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
           "boardIndex": 27,
@@ -23168,7 +23168,7 @@
         {
           "id": "DA_Elderwood18_StonebarkTree",
           "name_en": "Stonebark Tree",
-          "name_vi": "Cây Vỏ Đá",
+          "name_vi": "Stonebark Tree",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
           "boardIndex": 20,
@@ -24092,7 +24092,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "predecessors": [
           "DA_18_Shen"
         ]
@@ -25587,7 +25587,7 @@
       {
         "id": "DA_Murkwolf18",
         "name_en": "Murkwolf",
-        "name_vi": "Sói Hắc Ám",
+        "name_vi": "Murkwolf",
         "cost": 2,
         "icon": "assets/characters/tft18_murkwolf/skins/base/images/t_18_murkwolf_teamplannersplash.png",
         "boardIndex": 17,
@@ -25830,7 +25830,7 @@
         {
           "id": "DA_Murkwolf18",
           "name_en": "Murkwolf",
-          "name_vi": "Sói Hắc Ám",
+          "name_vi": "Murkwolf",
           "cost": 2,
           "icon": "assets/characters/tft18_murkwolf/skins/base/images/t_18_murkwolf_teamplannersplash.png",
           "boardIndex": 17,
@@ -26301,7 +26301,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "cost": 4,
         "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
         "boardIndex": 11,
@@ -26544,7 +26544,7 @@
         {
           "id": "DA_Sentinel18",
           "name_en": "Sentinel",
-          "name_vi": "Người Đá",
+          "name_vi": "Sentinel",
           "cost": 4,
           "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
           "boardIndex": 11,
@@ -26824,7 +26824,7 @@
       {
         "id": "DA_Elderwood18_Lifeblossom",
         "name_en": "Lifeblossom",
-        "name_vi": "Hoa Thần Rừng",
+        "name_vi": "Lifeblossom",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
         "boardIndex": 25,
@@ -26839,7 +26839,7 @@
       {
         "id": "DA_Elderwood18_StonebarkTree",
         "name_en": "Stonebark Tree",
-        "name_vi": "Cây Vỏ Đá",
+        "name_vi": "Stonebark Tree",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
         "boardIndex": 13,
@@ -27089,7 +27089,7 @@
         {
           "id": "DA_Elderwood18_Lifeblossom",
           "name_en": "Lifeblossom",
-          "name_vi": "Hoa Thần Rừng",
+          "name_vi": "Lifeblossom",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
           "boardIndex": 25,
@@ -27104,7 +27104,7 @@
         {
           "id": "DA_Elderwood18_StonebarkTree",
           "name_en": "Stonebark Tree",
-          "name_vi": "Cây Vỏ Đá",
+          "name_vi": "Stonebark Tree",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
           "boardIndex": 13,
@@ -27470,7 +27470,7 @@
     "mainTank": {
       "id": "DA_Sentinel18",
       "name_en": "Sentinel",
-      "name_vi": "Người Đá",
+      "name_vi": "Sentinel",
       "cost": 4,
       "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
       "items": [
@@ -27537,7 +27537,7 @@
       {
         "id": "DA_Murkwolf18",
         "name_en": "Murkwolf",
-        "name_vi": "Sói Hắc Ám",
+        "name_vi": "Murkwolf",
         "cost": 2,
         "icon": "assets/characters/tft18_murkwolf/skins/base/images/t_18_murkwolf_teamplannersplash.png",
         "boardIndex": 16,
@@ -27656,7 +27656,7 @@
       {
         "id": "DA_Brambleback18",
         "name_en": "Brambleback",
-        "name_vi": "Bụi Gai Đỏ",
+        "name_vi": "Brambleback",
         "cost": 4,
         "icon": "assets/characters/tft18_brambleback/skins/base/images/t_18_brambleback_teamplannersplash.png",
         "boardIndex": 27,
@@ -27703,7 +27703,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "cost": 4,
         "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
         "boardIndex": 1,
@@ -27796,7 +27796,7 @@
         {
           "id": "DA_Murkwolf18",
           "name_en": "Murkwolf",
-          "name_vi": "Sói Hắc Ám",
+          "name_vi": "Murkwolf",
           "cost": 2,
           "icon": "assets/characters/tft18_murkwolf/skins/base/images/t_18_murkwolf_teamplannersplash.png",
           "boardIndex": 16,
@@ -27915,7 +27915,7 @@
         {
           "id": "DA_Brambleback18",
           "name_en": "Brambleback",
-          "name_vi": "Bụi Gai Đỏ",
+          "name_vi": "Brambleback",
           "cost": 4,
           "icon": "assets/characters/tft18_brambleback/skins/base/images/t_18_brambleback_teamplannersplash.png",
           "boardIndex": 27,
@@ -27962,7 +27962,7 @@
         {
           "id": "DA_Sentinel18",
           "name_en": "Sentinel",
-          "name_vi": "Người Đá",
+          "name_vi": "Sentinel",
           "cost": 4,
           "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
           "boardIndex": 1,
@@ -28614,7 +28614,7 @@
         {
           "id": "DA_Artifact_NavoriFlickerblade",
           "name_en": "Flickerblades",
-          "name_vi": "Đao Chớp",
+          "name_vi": "Flickerblades",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_navoriflickerplade.png"
@@ -28684,7 +28684,7 @@
       {
         "id": "DA_Elderwood18_Lifeblossom",
         "name_en": "Lifeblossom",
-        "name_vi": "Hoa Thần Rừng",
+        "name_vi": "Lifeblossom",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
         "boardIndex": 22,
@@ -28699,7 +28699,7 @@
       {
         "id": "DA_Elderwood18_StonebarkTree",
         "name_en": "Stonebark Tree",
-        "name_vi": "Cây Vỏ Đá",
+        "name_vi": "Stonebark Tree",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
         "boardIndex": 0,
@@ -28860,7 +28860,7 @@
           {
             "id": "DA_Artifact_NavoriFlickerblade",
             "name_en": "Flickerblades",
-            "name_vi": "Đao Chớp",
+            "name_vi": "Flickerblades",
             "desc_en": "",
             "desc_vi": "",
             "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_navoriflickerplade.png"
@@ -28950,7 +28950,7 @@
         {
           "id": "DA_Elderwood18_Lifeblossom",
           "name_en": "Lifeblossom",
-          "name_vi": "Hoa Thần Rừng",
+          "name_vi": "Lifeblossom",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
           "boardIndex": 22,
@@ -28965,7 +28965,7 @@
         {
           "id": "DA_Elderwood18_StonebarkTree",
           "name_en": "Stonebark Tree",
-          "name_vi": "Cây Vỏ Đá",
+          "name_vi": "Stonebark Tree",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
           "boardIndex": 0,
@@ -29126,7 +29126,7 @@
             {
               "id": "DA_Artifact_NavoriFlickerblade",
               "name_en": "Flickerblades",
-              "name_vi": "Đao Chớp",
+              "name_vi": "Flickerblades",
               "desc_en": "",
               "desc_vi": "",
               "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_navoriflickerplade.png"
@@ -29466,7 +29466,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "cost": 4,
         "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
         "boardIndex": 5,
@@ -29675,7 +29675,7 @@
         {
           "id": "DA_Sentinel18",
           "name_en": "Sentinel",
-          "name_vi": "Người Đá",
+          "name_vi": "Sentinel",
           "cost": 4,
           "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
           "boardIndex": 5,
@@ -29860,7 +29860,7 @@
       {
         "id": "DA_Cinderling18",
         "name_en": "Cinderling",
-        "name_vi": "Mầm Non",
+        "name_vi": "Cinderling",
         "cost": 1,
         "icon": "assets/characters/tft18_cinderling/skins/base/images/t_18_cinderling_teamplannersplash.png",
         "boardIndex": 21,
@@ -30015,7 +30015,7 @@
       {
         "id": "DA_18_ElderDragon",
         "name_en": "Elder Dragon",
-        "name_vi": "Rồng Ngàn Tuổi",
+        "name_vi": "Elder Dragon",
         "cost": 5,
         "icon": "assets/characters/tft18_elderdragon/skins/base/images/t_18_elderdragon_teamplannersplash.png",
         "boardIndex": 19,
@@ -30093,7 +30093,7 @@
         {
           "id": "DA_Cinderling18",
           "name_en": "Cinderling",
-          "name_vi": "Mầm Non",
+          "name_vi": "Cinderling",
           "cost": 1,
           "icon": "assets/characters/tft18_cinderling/skins/base/images/t_18_cinderling_teamplannersplash.png",
           "boardIndex": 21,
@@ -30248,7 +30248,7 @@
         {
           "id": "DA_18_ElderDragon",
           "name_en": "Elder Dragon",
-          "name_vi": "Rồng Ngàn Tuổi",
+          "name_vi": "Elder Dragon",
           "cost": 5,
           "icon": "assets/characters/tft18_elderdragon/skins/base/images/t_18_elderdragon_teamplannersplash.png",
           "boardIndex": 19,
@@ -30484,7 +30484,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "cost": 4,
         "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
         "boardIndex": 3,
@@ -30587,7 +30587,7 @@
       {
         "id": "DA_18_ElderDragon",
         "name_en": "Elder Dragon",
-        "name_vi": "Rồng Ngàn Tuổi",
+        "name_vi": "Elder Dragon",
         "cost": 5,
         "icon": "assets/characters/tft18_elderdragon/skins/base/images/t_18_elderdragon_teamplannersplash.png",
         "boardIndex": 20,
@@ -30710,7 +30710,7 @@
         {
           "id": "DA_Cinderling18",
           "name_en": "Cinderling",
-          "name_vi": "Mầm Non",
+          "name_vi": "Cinderling",
           "cost": 1,
           "stars": 1,
           "items": []
@@ -30718,7 +30718,7 @@
         {
           "id": "DA_18_Sentry",
           "name_en": "Pebbles",
-          "name_vi": "Sỏi",
+          "name_vi": "Pebbles",
           "cost": 1,
           "stars": 1,
           "items": []
@@ -30734,7 +30734,7 @@
         {
           "id": "DA_Scuttlecrab18",
           "name_en": "Scuttlecrab",
-          "name_vi": "Cua Kỳ Cục",
+          "name_vi": "Scuttlecrab",
           "cost": 2,
           "stars": 1,
           "items": []
@@ -30760,7 +30760,7 @@
         {
           "id": "DA_Sentinel18",
           "name_en": "Sentinel",
-          "name_vi": "Người Đá",
+          "name_vi": "Sentinel",
           "cost": 4,
           "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
           "boardIndex": 3,
@@ -30863,7 +30863,7 @@
         {
           "id": "DA_18_ElderDragon",
           "name_en": "Elder Dragon",
-          "name_vi": "Rồng Ngàn Tuổi",
+          "name_vi": "Elder Dragon",
           "cost": 5,
           "icon": "assets/characters/tft18_elderdragon/skins/base/images/t_18_elderdragon_teamplannersplash.png",
           "boardIndex": 20,
@@ -31671,7 +31671,7 @@
     "mainCarry": {
       "id": "DA_18_Sentry",
       "name_en": "Pebbles",
-      "name_vi": "Sỏi",
+      "name_vi": "Pebbles",
       "cost": 1,
       "icon": "assets/characters/tft18_sentry/skins/base/images/t_18_sentry_teamplannersplash.png",
       "items": [
@@ -31704,7 +31704,7 @@
     "mainTank": {
       "id": "DA_Sentinel18",
       "name_en": "Sentinel",
-      "name_vi": "Người Đá",
+      "name_vi": "Sentinel",
       "cost": 4,
       "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
       "items": [
@@ -31741,7 +31741,7 @@
       {
         "id": "DA_18_Sentry",
         "name_en": "Pebbles",
-        "name_vi": "Sỏi",
+        "name_vi": "Pebbles",
         "cost": 1,
         "icon": "assets/characters/tft18_sentry/skins/base/images/t_18_sentry_teamplannersplash.png",
         "boardIndex": 27,
@@ -31781,7 +31781,7 @@
       {
         "id": "DA_Scuttlecrab18",
         "name_en": "Scuttlecrab",
-        "name_vi": "Cua Kỳ Cục",
+        "name_vi": "Scuttlecrab",
         "cost": 2,
         "icon": "assets/characters/tft18_scuttlecrab/skins/base/images/t_18_scuttlecrab_teamplannersplash.png",
         "boardIndex": 3,
@@ -31858,7 +31858,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "cost": 4,
         "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
         "boardIndex": 4,
@@ -31946,7 +31946,7 @@
         {
           "id": "DA_18_Sentry",
           "name_en": "Pebbles",
-          "name_vi": "Sỏi",
+          "name_vi": "Pebbles",
           "cost": 1,
           "stars": 1,
           "items": []
@@ -31954,7 +31954,7 @@
         {
           "id": "DA_Gromp18_AP",
           "name_en": "Gromp",
-          "name_vi": "Cóc Thành Tinh",
+          "name_vi": "Gromp",
           "cost": 2,
           "stars": 1,
           "items": []
@@ -31962,7 +31962,7 @@
         {
           "id": "DA_Scuttlecrab18",
           "name_en": "Scuttlecrab",
-          "name_vi": "Cua Kỳ Cục",
+          "name_vi": "Scuttlecrab",
           "cost": 2,
           "stars": 1,
           "items": []
@@ -31981,7 +31981,7 @@
         {
           "id": "DA_18_Sentry",
           "name_en": "Pebbles",
-          "name_vi": "Sỏi",
+          "name_vi": "Pebbles",
           "cost": 1,
           "icon": "assets/characters/tft18_sentry/skins/base/images/t_18_sentry_teamplannersplash.png",
           "boardIndex": 27,
@@ -32021,7 +32021,7 @@
         {
           "id": "DA_Scuttlecrab18",
           "name_en": "Scuttlecrab",
-          "name_vi": "Cua Kỳ Cục",
+          "name_vi": "Scuttlecrab",
           "cost": 2,
           "icon": "assets/characters/tft18_scuttlecrab/skins/base/images/t_18_scuttlecrab_teamplannersplash.png",
           "boardIndex": 3,
@@ -32098,7 +32098,7 @@
         {
           "id": "DA_Sentinel18",
           "name_en": "Sentinel",
-          "name_vi": "Người Đá",
+          "name_vi": "Sentinel",
           "cost": 4,
           "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
           "boardIndex": 4,
@@ -32372,7 +32372,7 @@
       {
         "id": "DA_Elderwood18_Lifeblossom",
         "name_en": "Lifeblossom",
-        "name_vi": "Hoa Thần Rừng",
+        "name_vi": "Lifeblossom",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
         "boardIndex": 24,
@@ -32387,7 +32387,7 @@
       {
         "id": "DA_Elderwood18_StonebarkTree",
         "name_en": "Stonebark Tree",
-        "name_vi": "Cây Vỏ Đá",
+        "name_vi": "Stonebark Tree",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
         "boardIndex": 27,
@@ -32677,7 +32677,7 @@
         {
           "id": "DA_Elderwood18_Lifeblossom",
           "name_en": "Lifeblossom",
-          "name_vi": "Hoa Thần Rừng",
+          "name_vi": "Lifeblossom",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
           "boardIndex": 24,
@@ -32692,7 +32692,7 @@
         {
           "id": "DA_Elderwood18_StonebarkTree",
           "name_en": "Stonebark Tree",
-          "name_vi": "Cây Vỏ Đá",
+          "name_vi": "Stonebark Tree",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
           "boardIndex": 27,
@@ -33017,7 +33017,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "predecessors": [
           "TFT_Flex_Lv9"
         ]
@@ -33054,7 +33054,7 @@
     "mainCarry": {
       "id": "DA_Brambleback18",
       "name_en": "Brambleback",
-      "name_vi": "Bụi Gai Đỏ",
+      "name_vi": "Brambleback",
       "cost": 4,
       "icon": "assets/characters/tft18_brambleback/skins/base/images/t_18_brambleback_teamplannersplash.png",
       "items": [
@@ -33087,7 +33087,7 @@
     "mainTank": {
       "id": "DA_Sentinel18",
       "name_en": "Sentinel",
-      "name_vi": "Người Đá",
+      "name_vi": "Sentinel",
       "cost": 4,
       "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
       "items": [
@@ -33124,7 +33124,7 @@
       {
         "id": "DA_18_Sentry",
         "name_en": "Pebbles",
-        "name_vi": "Sỏi",
+        "name_vi": "Pebbles",
         "cost": 1,
         "icon": "assets/characters/tft18_sentry/skins/base/images/t_18_sentry_teamplannersplash.png",
         "boardIndex": 23,
@@ -33139,7 +33139,7 @@
       {
         "id": "DA_Gromp18_AP",
         "name_en": "Gromp",
-        "name_vi": "Cóc Thành Tinh",
+        "name_vi": "Gromp",
         "cost": 2,
         "icon": "assets/characters/tft18_gromp/skins/base/images/t_18_gromp_teamplannersplash.png",
         "boardIndex": 21,
@@ -33154,7 +33154,7 @@
       {
         "id": "DA_Murkwolf18",
         "name_en": "Murkwolf",
-        "name_vi": "Sói Hắc Ám",
+        "name_vi": "Murkwolf",
         "cost": 2,
         "icon": "assets/characters/tft18_murkwolf/skins/base/images/t_18_murkwolf_teamplannersplash.png",
         "boardIndex": 27,
@@ -33169,7 +33169,7 @@
       {
         "id": "DA_Scuttlecrab18",
         "name_en": "Scuttlecrab",
-        "name_vi": "Cua Kỳ Cục",
+        "name_vi": "Scuttlecrab",
         "cost": 2,
         "icon": "assets/characters/tft18_scuttlecrab/skins/base/images/t_18_scuttlecrab_teamplannersplash.png",
         "boardIndex": 1,
@@ -33184,7 +33184,7 @@
       {
         "id": "DA_Krug18",
         "name_en": "Krug",
-        "name_vi": "Quái Đá Krug",
+        "name_vi": "Krug",
         "cost": 3,
         "icon": "assets/characters/tft18_krug/skins/base/images/t_18_krug_teamplannersplash.png",
         "boardIndex": 0,
@@ -33199,7 +33199,7 @@
       {
         "id": "DA_CrimsonRaptor18",
         "name_en": "Mama Beak",
-        "name_vi": "Chim Mẹ",
+        "name_vi": "Mama Beak",
         "cost": 3,
         "icon": "assets/characters/tft18_raptor/skins/base/images/t_18_crimsonraptor_teamplannersplash.png",
         "boardIndex": 25,
@@ -33214,7 +33214,7 @@
       {
         "id": "DA_Brambleback18",
         "name_en": "Brambleback",
-        "name_vi": "Bụi Gai Đỏ",
+        "name_vi": "Brambleback",
         "cost": 4,
         "icon": "assets/characters/tft18_brambleback/skins/base/images/t_18_brambleback_teamplannersplash.png",
         "boardIndex": 2,
@@ -33254,7 +33254,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "cost": 4,
         "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
         "boardIndex": 3,
@@ -33333,7 +33333,7 @@
       {
         "id": "DA_18_ElderDragon",
         "name_en": "Elder Dragon",
-        "name_vi": "Rồng Ngàn Tuổi",
+        "name_vi": "Elder Dragon",
         "cost": 5,
         "icon": "assets/characters/tft18_elderdragon/skins/base/images/t_18_elderdragon_teamplannersplash.png",
         "boardIndex": 17,
@@ -33376,7 +33376,7 @@
         {
           "id": "DA_18_Sentry",
           "name_en": "Pebbles",
-          "name_vi": "Sỏi",
+          "name_vi": "Pebbles",
           "cost": 1,
           "stars": 1,
           "items": []
@@ -33392,7 +33392,7 @@
         {
           "id": "DA_Cinderling18",
           "name_en": "Cinderling",
-          "name_vi": "Mầm Non",
+          "name_vi": "Cinderling",
           "cost": 1,
           "stars": 1,
           "items": [
@@ -33409,7 +33409,7 @@
         {
           "id": "DA_Scuttlecrab18",
           "name_en": "Scuttlecrab",
-          "name_vi": "Cua Kỳ Cục",
+          "name_vi": "Scuttlecrab",
           "cost": 2,
           "stars": 1,
           "items": []
@@ -33420,7 +33420,7 @@
         {
           "id": "DA_18_Sentry",
           "name_en": "Pebbles",
-          "name_vi": "Sỏi",
+          "name_vi": "Pebbles",
           "cost": 1,
           "icon": "assets/characters/tft18_sentry/skins/base/images/t_18_sentry_teamplannersplash.png",
           "boardIndex": 23,
@@ -33435,7 +33435,7 @@
         {
           "id": "DA_Gromp18_AP",
           "name_en": "Gromp",
-          "name_vi": "Cóc Thành Tinh",
+          "name_vi": "Gromp",
           "cost": 2,
           "icon": "assets/characters/tft18_gromp/skins/base/images/t_18_gromp_teamplannersplash.png",
           "boardIndex": 21,
@@ -33450,7 +33450,7 @@
         {
           "id": "DA_Murkwolf18",
           "name_en": "Murkwolf",
-          "name_vi": "Sói Hắc Ám",
+          "name_vi": "Murkwolf",
           "cost": 2,
           "icon": "assets/characters/tft18_murkwolf/skins/base/images/t_18_murkwolf_teamplannersplash.png",
           "boardIndex": 27,
@@ -33465,7 +33465,7 @@
         {
           "id": "DA_Scuttlecrab18",
           "name_en": "Scuttlecrab",
-          "name_vi": "Cua Kỳ Cục",
+          "name_vi": "Scuttlecrab",
           "cost": 2,
           "icon": "assets/characters/tft18_scuttlecrab/skins/base/images/t_18_scuttlecrab_teamplannersplash.png",
           "boardIndex": 1,
@@ -33480,7 +33480,7 @@
         {
           "id": "DA_Krug18",
           "name_en": "Krug",
-          "name_vi": "Quái Đá Krug",
+          "name_vi": "Krug",
           "cost": 3,
           "icon": "assets/characters/tft18_krug/skins/base/images/t_18_krug_teamplannersplash.png",
           "boardIndex": 0,
@@ -33495,7 +33495,7 @@
         {
           "id": "DA_CrimsonRaptor18",
           "name_en": "Mama Beak",
-          "name_vi": "Chim Mẹ",
+          "name_vi": "Mama Beak",
           "cost": 3,
           "icon": "assets/characters/tft18_raptor/skins/base/images/t_18_crimsonraptor_teamplannersplash.png",
           "boardIndex": 25,
@@ -33510,7 +33510,7 @@
         {
           "id": "DA_Brambleback18",
           "name_en": "Brambleback",
-          "name_vi": "Bụi Gai Đỏ",
+          "name_vi": "Brambleback",
           "cost": 4,
           "icon": "assets/characters/tft18_brambleback/skins/base/images/t_18_brambleback_teamplannersplash.png",
           "boardIndex": 2,
@@ -33550,7 +33550,7 @@
         {
           "id": "DA_Sentinel18",
           "name_en": "Sentinel",
-          "name_vi": "Người Đá",
+          "name_vi": "Sentinel",
           "cost": 4,
           "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
           "boardIndex": 3,
@@ -33629,7 +33629,7 @@
         {
           "id": "DA_18_ElderDragon",
           "name_en": "Elder Dragon",
-          "name_vi": "Rồng Ngàn Tuổi",
+          "name_vi": "Elder Dragon",
           "cost": 5,
           "icon": "assets/characters/tft18_elderdragon/skins/base/images/t_18_elderdragon_teamplannersplash.png",
           "boardIndex": 17,
@@ -33829,7 +33829,7 @@
     "mainTank": {
       "id": "DA_Sentinel18",
       "name_en": "Sentinel",
-      "name_vi": "Người Đá",
+      "name_vi": "Sentinel",
       "cost": 4,
       "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
       "items": [
@@ -33881,7 +33881,7 @@
       {
         "id": "DA_18_Sentry",
         "name_en": "Pebbles",
-        "name_vi": "Sỏi",
+        "name_vi": "Pebbles",
         "cost": 1,
         "icon": "assets/characters/tft18_sentry/skins/base/images/t_18_sentry_teamplannersplash.png",
         "boardIndex": 25,
@@ -33896,7 +33896,7 @@
       {
         "id": "DA_Krug18",
         "name_en": "Krug",
-        "name_vi": "Quái Đá Krug",
+        "name_vi": "Krug",
         "cost": 3,
         "icon": "assets/characters/tft18_krug/skins/base/images/t_18_krug_teamplannersplash.png",
         "boardIndex": 16,
@@ -33998,7 +33998,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "cost": 4,
         "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
         "boardIndex": 3,
@@ -34123,7 +34123,7 @@
         {
           "id": "DA_18_Sentry",
           "name_en": "Pebbles",
-          "name_vi": "Sỏi",
+          "name_vi": "Pebbles",
           "cost": 1,
           "icon": "assets/characters/tft18_sentry/skins/base/images/t_18_sentry_teamplannersplash.png",
           "boardIndex": 25,
@@ -34138,7 +34138,7 @@
         {
           "id": "DA_Krug18",
           "name_en": "Krug",
-          "name_vi": "Quái Đá Krug",
+          "name_vi": "Krug",
           "cost": 3,
           "icon": "assets/characters/tft18_krug/skins/base/images/t_18_krug_teamplannersplash.png",
           "boardIndex": 16,
@@ -34240,7 +34240,7 @@
         {
           "id": "DA_Sentinel18",
           "name_en": "Sentinel",
-          "name_vi": "Người Đá",
+          "name_vi": "Sentinel",
           "cost": 4,
           "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
           "boardIndex": 3,
@@ -34507,7 +34507,7 @@
       {
         "id": "DA_Elderwood18_Lifeblossom",
         "name_en": "Lifeblossom",
-        "name_vi": "Hoa Thần Rừng",
+        "name_vi": "Lifeblossom",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
         "boardIndex": 21,
@@ -34522,7 +34522,7 @@
       {
         "id": "DA_Elderwood18_StonebarkTree",
         "name_en": "Stonebark Tree",
-        "name_vi": "Cây Vỏ Đá",
+        "name_vi": "Stonebark Tree",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
         "boardIndex": 0,
@@ -34771,7 +34771,7 @@
         {
           "id": "DA_Elderwood18_Lifeblossom",
           "name_en": "Lifeblossom",
-          "name_vi": "Hoa Thần Rừng",
+          "name_vi": "Lifeblossom",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
           "boardIndex": 21,
@@ -34786,7 +34786,7 @@
         {
           "id": "DA_Elderwood18_StonebarkTree",
           "name_en": "Stonebark Tree",
-          "name_vi": "Cây Vỏ Đá",
+          "name_vi": "Stonebark Tree",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
           "boardIndex": 0,
@@ -35190,7 +35190,7 @@
       {
         "id": "DA_Krug18",
         "name_en": "Krug",
-        "name_vi": "Quái Đá Krug",
+        "name_vi": "Krug",
         "cost": 3,
         "icon": "assets/characters/tft18_krug/skins/base/images/t_18_krug_teamplannersplash.png",
         "boardIndex": 1,
@@ -35399,7 +35399,7 @@
         {
           "id": "DA_Gromp18_AP",
           "name_en": "Gromp",
-          "name_vi": "Cóc Thành Tinh",
+          "name_vi": "Gromp",
           "cost": 2,
           "stars": 1,
           "items": []
@@ -35442,7 +35442,7 @@
         {
           "id": "DA_Krug18",
           "name_en": "Krug",
-          "name_vi": "Quái Đá Krug",
+          "name_vi": "Krug",
           "cost": 3,
           "icon": "assets/characters/tft18_krug/skins/base/images/t_18_krug_teamplannersplash.png",
           "boardIndex": 1,
@@ -35873,7 +35873,7 @@
       {
         "id": "DA_CrimsonRaptor18",
         "name_en": "Mama Beak",
-        "name_vi": "Chim Mẹ",
+        "name_vi": "Mama Beak",
         "cost": 3,
         "icon": "assets/characters/tft18_raptor/skins/base/images/t_18_crimsonraptor_teamplannersplash.png",
         "boardIndex": 22,
@@ -35897,7 +35897,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "cost": 4,
         "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
         "boardIndex": 9,
@@ -36001,7 +36001,7 @@
       {
         "id": "DA_Brambleback18",
         "name_en": "Brambleback",
-        "name_vi": "Bụi Gai Đỏ",
+        "name_vi": "Brambleback",
         "cost": 4,
         "icon": "assets/characters/tft18_brambleback/skins/base/images/t_18_brambleback_teamplannersplash.png",
         "boardIndex": 14,
@@ -36141,7 +36141,7 @@
         {
           "id": "DA_CrimsonRaptor18",
           "name_en": "Mama Beak",
-          "name_vi": "Chim Mẹ",
+          "name_vi": "Mama Beak",
           "cost": 3,
           "icon": "assets/characters/tft18_raptor/skins/base/images/t_18_crimsonraptor_teamplannersplash.png",
           "boardIndex": 22,
@@ -36165,7 +36165,7 @@
         {
           "id": "DA_Sentinel18",
           "name_en": "Sentinel",
-          "name_vi": "Người Đá",
+          "name_vi": "Sentinel",
           "cost": 4,
           "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
           "boardIndex": 9,
@@ -36269,7 +36269,7 @@
         {
           "id": "DA_Brambleback18",
           "name_en": "Brambleback",
-          "name_vi": "Bụi Gai Đỏ",
+          "name_vi": "Brambleback",
           "cost": 4,
           "icon": "assets/characters/tft18_brambleback/skins/base/images/t_18_brambleback_teamplannersplash.png",
           "boardIndex": 14,
@@ -38421,7 +38421,7 @@
       {
         "id": "DA_Elderwood18_StonebarkTree",
         "name_en": "Stonebark Tree",
-        "name_vi": "Cây Vỏ Đá",
+        "name_vi": "Stonebark Tree",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
         "boardIndex": 0,
@@ -38505,7 +38505,7 @@
       {
         "id": "DA_Elderwood18_Lifeblossom",
         "name_en": "Lifeblossom",
-        "name_vi": "Hoa Thần Rừng",
+        "name_vi": "Lifeblossom",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
         "boardIndex": 22,
@@ -38700,7 +38700,7 @@
         {
           "id": "DA_Elderwood18_StonebarkTree",
           "name_en": "Stonebark Tree",
-          "name_vi": "Cây Vỏ Đá",
+          "name_vi": "Stonebark Tree",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
           "boardIndex": 0,
@@ -38784,7 +38784,7 @@
         {
           "id": "DA_Elderwood18_Lifeblossom",
           "name_en": "Lifeblossom",
-          "name_vi": "Hoa Thần Rừng",
+          "name_vi": "Lifeblossom",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
           "boardIndex": 22,
@@ -39011,7 +39011,7 @@
     "mainCarry": {
       "id": "DA_CrimsonRaptor18",
       "name_en": "Mama Beak",
-      "name_vi": "Chim Mẹ",
+      "name_vi": "Mama Beak",
       "cost": 3,
       "icon": "assets/characters/tft18_raptor/skins/base/images/t_18_crimsonraptor_teamplannersplash.png",
       "items": [
@@ -39096,7 +39096,7 @@
       {
         "id": "DA_CrimsonRaptor18",
         "name_en": "Mama Beak",
-        "name_vi": "Chim Mẹ",
+        "name_vi": "Mama Beak",
         "cost": 3,
         "icon": "assets/characters/tft18_raptor/skins/base/images/t_18_crimsonraptor_teamplannersplash.png",
         "boardIndex": 21,
@@ -39298,7 +39298,7 @@
         {
           "id": "DA_CrimsonRaptor18",
           "name_en": "Mama Beak",
-          "name_vi": "Chim Mẹ",
+          "name_vi": "Mama Beak",
           "cost": 3,
           "icon": "assets/characters/tft18_raptor/skins/base/images/t_18_crimsonraptor_teamplannersplash.png",
           "boardIndex": 21,
@@ -40094,7 +40094,7 @@
     "mainTank": {
       "id": "DA_Sentinel18",
       "name_en": "Sentinel",
-      "name_vi": "Người Đá",
+      "name_vi": "Sentinel",
       "cost": 4,
       "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
       "items": [
@@ -40161,7 +40161,7 @@
       {
         "id": "DA_CrimsonRaptor18",
         "name_en": "Mama Beak",
-        "name_vi": "Chim Mẹ",
+        "name_vi": "Mama Beak",
         "cost": 3,
         "icon": "assets/characters/tft18_raptor/skins/base/images/t_18_crimsonraptor_teamplannersplash.png",
         "boardIndex": 22,
@@ -40240,7 +40240,7 @@
       {
         "id": "DA_Brambleback18",
         "name_en": "Brambleback",
-        "name_vi": "Bụi Gai Đỏ",
+        "name_vi": "Brambleback",
         "cost": 4,
         "icon": "assets/characters/tft18_brambleback/skins/base/images/t_18_brambleback_teamplannersplash.png",
         "boardIndex": 8,
@@ -40280,7 +40280,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "cost": 4,
         "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
         "boardIndex": 3,
@@ -40420,7 +40420,7 @@
         {
           "id": "DA_CrimsonRaptor18",
           "name_en": "Mama Beak",
-          "name_vi": "Chim Mẹ",
+          "name_vi": "Mama Beak",
           "cost": 3,
           "icon": "assets/characters/tft18_raptor/skins/base/images/t_18_crimsonraptor_teamplannersplash.png",
           "boardIndex": 22,
@@ -40499,7 +40499,7 @@
         {
           "id": "DA_Brambleback18",
           "name_en": "Brambleback",
-          "name_vi": "Bụi Gai Đỏ",
+          "name_vi": "Brambleback",
           "cost": 4,
           "icon": "assets/characters/tft18_brambleback/skins/base/images/t_18_brambleback_teamplannersplash.png",
           "boardIndex": 8,
@@ -40539,7 +40539,7 @@
         {
           "id": "DA_Sentinel18",
           "name_en": "Sentinel",
-          "name_vi": "Người Đá",
+          "name_vi": "Sentinel",
           "cost": 4,
           "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
           "boardIndex": 3,
@@ -40692,7 +40692,7 @@
       {
         "id": "DA_Scuttlecrab18",
         "name_en": "Scuttlecrab",
-        "name_vi": "Cua Kỳ Cục",
+        "name_vi": "Scuttlecrab",
         "predecessors": [
           "DA_Brambleback18"
         ]
@@ -41904,7 +41904,7 @@
       {
         "id": "DA_Cinderling18",
         "name_en": "Cinderling",
-        "name_vi": "Mầm Non",
+        "name_vi": "Cinderling",
         "cost": 1,
         "icon": "assets/characters/tft18_cinderling/skins/base/images/t_18_cinderling_teamplannersplash.png",
         "boardIndex": 27,
@@ -41949,7 +41949,7 @@
       {
         "id": "DA_Krug18",
         "name_en": "Krug",
-        "name_vi": "Quái Đá Krug",
+        "name_vi": "Krug",
         "cost": 3,
         "icon": "assets/characters/tft18_krug/skins/base/images/t_18_krug_teamplannersplash.png",
         "boardIndex": 17,
@@ -41964,7 +41964,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "cost": 4,
         "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
         "boardIndex": 19,
@@ -42110,7 +42110,7 @@
         {
           "id": "DA_Cinderling18",
           "name_en": "Cinderling",
-          "name_vi": "Mầm Non",
+          "name_vi": "Cinderling",
           "cost": 1,
           "stars": 1,
           "items": [
@@ -42135,7 +42135,7 @@
         {
           "id": "DA_Gromp18_AP",
           "name_en": "Gromp",
-          "name_vi": "Cóc Thành Tinh",
+          "name_vi": "Gromp",
           "cost": 2,
           "stars": 1,
           "items": []
@@ -42143,7 +42143,7 @@
         {
           "id": "DA_Scuttlecrab18",
           "name_en": "Scuttlecrab",
-          "name_vi": "Cua Kỳ Cục",
+          "name_vi": "Scuttlecrab",
           "cost": 2,
           "stars": 1,
           "items": []
@@ -42154,7 +42154,7 @@
         {
           "id": "DA_Cinderling18",
           "name_en": "Cinderling",
-          "name_vi": "Mầm Non",
+          "name_vi": "Cinderling",
           "cost": 1,
           "icon": "assets/characters/tft18_cinderling/skins/base/images/t_18_cinderling_teamplannersplash.png",
           "boardIndex": 27,
@@ -42199,7 +42199,7 @@
         {
           "id": "DA_Krug18",
           "name_en": "Krug",
-          "name_vi": "Quái Đá Krug",
+          "name_vi": "Krug",
           "cost": 3,
           "icon": "assets/characters/tft18_krug/skins/base/images/t_18_krug_teamplannersplash.png",
           "boardIndex": 17,
@@ -42214,7 +42214,7 @@
         {
           "id": "DA_Sentinel18",
           "name_en": "Sentinel",
-          "name_vi": "Người Đá",
+          "name_vi": "Sentinel",
           "cost": 4,
           "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
           "boardIndex": 19,
@@ -42569,7 +42569,7 @@
       {
         "id": "DA_Elderwood18_Lifeblossom",
         "name_en": "Lifeblossom",
-        "name_vi": "Hoa Thần Rừng",
+        "name_vi": "Lifeblossom",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
         "boardIndex": 14,
@@ -42584,7 +42584,7 @@
       {
         "id": "DA_Elderwood18_StonebarkTree",
         "name_en": "Stonebark Tree",
-        "name_vi": "Cây Vỏ Đá",
+        "name_vi": "Stonebark Tree",
         "cost": 0,
         "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
         "boardIndex": 0,
@@ -42858,7 +42858,7 @@
         {
           "id": "DA_Elderwood18_Lifeblossom",
           "name_en": "Lifeblossom",
-          "name_vi": "Hoa Thần Rừng",
+          "name_vi": "Lifeblossom",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_Lifeblossom.webp",
           "boardIndex": 14,
@@ -42873,7 +42873,7 @@
         {
           "id": "DA_Elderwood18_StonebarkTree",
           "name_en": "Stonebark Tree",
-          "name_vi": "Cây Vỏ Đá",
+          "name_vi": "Stonebark Tree",
           "cost": 0,
           "icon": "https://assets.tftacademy.com/champions/champion_icons/DA_Elderwood18_StonebarkTree.webp",
           "boardIndex": 0,
@@ -43839,7 +43839,7 @@
       {
         "id": "DA_Krug18",
         "name_en": "Krug",
-        "name_vi": "Quái Đá Krug",
+        "name_vi": "Krug",
         "predecessors": [
           "DA_18_GnarSmall"
         ]
@@ -45197,7 +45197,7 @@
     "mainTank": {
       "id": "DA_Sentinel18",
       "name_en": "Sentinel",
-      "name_vi": "Người Đá",
+      "name_vi": "Sentinel",
       "cost": 4,
       "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
       "items": [
@@ -45234,7 +45234,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "cost": 4,
         "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
         "boardIndex": 3,
@@ -45491,7 +45491,7 @@
         {
           "id": "DA_Sentinel18",
           "name_en": "Sentinel",
-          "name_vi": "Người Đá",
+          "name_vi": "Sentinel",
           "cost": 4,
           "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
           "boardIndex": 3,
@@ -45904,7 +45904,7 @@
       {
         "id": "DA_Krug18",
         "name_en": "Krug",
-        "name_vi": "Quái Đá Krug",
+        "name_vi": "Krug",
         "cost": 3,
         "icon": "assets/characters/tft18_krug/skins/base/images/t_18_krug_teamplannersplash.png",
         "boardIndex": 10,
@@ -45919,7 +45919,7 @@
       {
         "id": "DA_CrimsonRaptor18",
         "name_en": "Mama Beak",
-        "name_vi": "Chim Mẹ",
+        "name_vi": "Mama Beak",
         "cost": 3,
         "icon": "assets/characters/tft18_raptor/skins/base/images/t_18_crimsonraptor_teamplannersplash.png",
         "boardIndex": 27,
@@ -45949,7 +45949,7 @@
       {
         "id": "DA_Sentinel18",
         "name_en": "Sentinel",
-        "name_vi": "Người Đá",
+        "name_vi": "Sentinel",
         "cost": 4,
         "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
         "boardIndex": 3,
@@ -46130,7 +46130,7 @@
         {
           "id": "DA_Krug18",
           "name_en": "Krug",
-          "name_vi": "Quái Đá Krug",
+          "name_vi": "Krug",
           "cost": 3,
           "icon": "assets/characters/tft18_krug/skins/base/images/t_18_krug_teamplannersplash.png",
           "boardIndex": 10,
@@ -46145,7 +46145,7 @@
         {
           "id": "DA_CrimsonRaptor18",
           "name_en": "Mama Beak",
-          "name_vi": "Chim Mẹ",
+          "name_vi": "Mama Beak",
           "cost": 3,
           "icon": "assets/characters/tft18_raptor/skins/base/images/t_18_crimsonraptor_teamplannersplash.png",
           "boardIndex": 27,
@@ -46175,7 +46175,7 @@
         {
           "id": "DA_Sentinel18",
           "name_en": "Sentinel",
-          "name_vi": "Người Đá",
+          "name_vi": "Sentinel",
           "cost": 4,
           "icon": "assets/characters/tft18_sentinel/skins/base/images/t_18_sentinel_teamplannersplash.png",
           "boardIndex": 3,
@@ -46393,7 +46393,7 @@
       {
         "id": "DA_Scuttlecrab18",
         "name_en": "Scuttlecrab",
-        "name_vi": "Cua Kỳ Cục",
+        "name_vi": "Scuttlecrab",
         "predecessors": [
           "DA_Krug18"
         ]

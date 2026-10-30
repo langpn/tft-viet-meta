@@ -601,7 +601,7 @@
         {
           "id": "DA_Artifact_SilvermereDawn",
           "name_en": "Silvermere Dawn",
-          "name_vi": "Chùy Bạch Ngân",
+          "name_vi": "Silvermere Dawn",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_silvermeredawn.png"
@@ -609,7 +609,7 @@
         {
           "id": "DA_Artifact_WitsEnd",
           "name_en": "Wit's End",
-          "name_vi": "Đao Tím",
+          "name_vi": "Wit's End",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_witsend.png"
@@ -617,7 +617,7 @@
         {
           "id": "DA_Artifact_HellfireHatchet",
           "name_en": "Hellfire Hatchet",
-          "name_vi": "Rìu Hỏa Ngục",
+          "name_vi": "Hellfire Hatchet",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_hellfirehatchet.png"
@@ -625,7 +625,7 @@
         {
           "id": "DA_Artifact_EternalPact",
           "name_en": "Eternal Pact",
-          "name_vi": "Khế Ước Vĩnh Hằng",
+          "name_vi": "Eternal Pact",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_eternalpact.png"
@@ -633,7 +633,7 @@
         {
           "id": "DA_Artifact_GoldCollector",
           "name_en": "Gold Collector",
-          "name_vi": "Đại Bác Hải Tặc",
+          "name_vi": "Gold Collector",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnthecollector.png"
@@ -643,7 +643,7 @@
         {
           "id": "DA_Artifact_RapidFireCannon",
           "name_en": "Rapid Firecannon",
-          "name_vi": "Đại Bác Liên Thanh",
+          "name_vi": "Rapid Firecannon",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_rapidfirecannon.png"
@@ -651,7 +651,7 @@
         {
           "id": "DA_Artifact_LightshieldCrest",
           "name_en": "Lightshield Crest",
-          "name_vi": "Huy Hiệu Thánh Khiên",
+          "name_vi": "Lightshield Crest",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_lightshieldcrest.png"
@@ -659,7 +659,7 @@
         {
           "id": "DA_Artifact_LudensTempest",
           "name_en": "Luden's Tempest",
-          "name_vi": "Bão Tố Luden",
+          "name_vi": "Luden's Tempest",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_ludenstempest.png"
@@ -667,7 +667,7 @@
         {
           "id": "DA_Artifact_HorizonFocus",
           "name_en": "Horizon Focus",
-          "name_vi": "Kính Nhắm Ma Pháp",
+          "name_vi": "Horizon Focus",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_horizonfocus.png"
@@ -675,7 +675,7 @@
         {
           "id": "DA_Artifact_Dawncore",
           "name_en": "Dawncore",
-          "name_vi": "Lõi Bình Minh",
+          "name_vi": "Dawncore",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_dawncore.png"
@@ -683,7 +683,7 @@
         {
           "id": "DA_Artifact_Mittens",
           "name_en": "Mittens",
-          "name_vi": "Găng Đấu Sĩ",
+          "name_vi": "Mittens",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_mittens.png"
@@ -691,7 +691,7 @@
         {
           "id": "DA_Artifact_NavoriFlickerblade",
           "name_en": "Flickerblades",
-          "name_vi": "Đao Chớp",
+          "name_vi": "Flickerblades",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_navoriflickerplade.png"
@@ -701,7 +701,7 @@
         {
           "id": "DA_Artifact_InfinityForce",
           "name_en": "Infinity Force",
-          "name_vi": "Tam Luyện Kiếm",
+          "name_vi": "Infinity Force",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornninfinityforce.png"
@@ -709,7 +709,7 @@
         {
           "id": "DA_Item_Artifact_TalismanOfAscension",
           "name_en": "Talisman of Ascension",
-          "name_vi": "Bùa Thăng Hoa",
+          "name_vi": "Talisman of Ascension",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_talismanofascension.png"
@@ -717,7 +717,7 @@
         {
           "id": "DA_Artifact_Fishbones",
           "name_en": "Fishbones",
-          "name_vi": "Pháo Xương Cá",
+          "name_vi": "Fishbones",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_fishbones.png"
@@ -725,7 +725,7 @@
         {
           "id": "DA_Artifact_TheIndomitable",
           "name_en": "The Indomitable",
-          "name_vi": "Bất Khuất",
+          "name_vi": "The Indomitable",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_theindomitable.png"
@@ -733,7 +733,7 @@
         {
           "id": "DA_Artifact_BlightingJewel",
           "name_en": "Blighting Jewel",
-          "name_vi": "Đá Hắc Hóa",
+          "name_vi": "Blighting Jewel",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_blightingjewel.png"
@@ -741,7 +741,7 @@
         {
           "id": "DA_Artifact_MogulsMail",
           "name_en": "Mogul's Mail",
-          "name_vi": "Giáp Đại Hãn",
+          "name_vi": "Mogul's Mail",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalemogulsmail.png"
@@ -749,7 +749,7 @@
         {
           "id": "DA_Artifact_GamblersBlade",
           "name_en": "Gambler's Blade",
-          "name_vi": "Kiếm Của Tay Bạc",
+          "name_vi": "Gambler's Blade",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalegamblersblade.png"
@@ -757,7 +757,7 @@
         {
           "id": "DA_Artifact_Manazane",
           "name_en": "Manazane",
-          "name_vi": "Thánh Kiếm Manazane",
+          "name_vi": "Manazane",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnmuramana.png"
@@ -765,7 +765,7 @@
         {
           "id": "DA_Artifact_VoidGauntlet",
           "name_en": "Void Gauntlet",
-          "name_vi": "Găng Hư Không",
+          "name_vi": "Void Gauntlet",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_voidgauntlet.png"
@@ -773,7 +773,7 @@
         {
           "id": "DA_Artifact_AegisOfDawn",
           "name_en": "Aegis of Dawn",
-          "name_vi": "Khiên Hừng Đông",
+          "name_vi": "Aegis of Dawn",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdawn.png"
@@ -781,7 +781,7 @@
         {
           "id": "DA_Artifact_SeekersArmguard",
           "name_en": "Seeker's Armguard",
-          "name_vi": "Giáp Tay Seeker",
+          "name_vi": "Seeker's Armguard",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_seekersarmguard.png"
@@ -789,7 +789,7 @@
         {
           "id": "DA_Artifact_TitanicHydra",
           "name_en": "Titanic Hydra",
-          "name_vi": "Rìu Đại Mãng Xà",
+          "name_vi": "Titanic Hydra",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_titanichydra.png"
@@ -797,7 +797,7 @@
         {
           "id": "DA_Artifact_Hullcrusher",
           "name_en": "Hullcrusher",
-          "name_vi": "Thần Búa Tiến Công",
+          "name_vi": "Hullcrusher",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft9_ornnitem_hullbreaker.png"
@@ -805,7 +805,7 @@
         {
           "id": "DA_Artifact_LichBane",
           "name_en": "Lich Bane",
-          "name_vi": "Kiếm Tai Ương",
+          "name_vi": "Lich Bane",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft_item_artifact_lichbane.png"
@@ -815,7 +815,7 @@
         {
           "id": "DA_Artifact_StatikkShiv",
           "name_en": "Statikk Shiv",
-          "name_vi": "Dao Điện Statikk",
+          "name_vi": "Statikk Shiv",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_stattikshiv.png"
@@ -823,7 +823,7 @@
         {
           "id": "DA_Artifact_AegisOfDusk",
           "name_en": "Aegis of Dusk",
-          "name_vi": "Khiên Hoàng Hôn",
+          "name_vi": "Aegis of Dusk",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdusk.png"
@@ -831,7 +831,7 @@
         {
           "id": "DA_Artifact_ForbiddenIdol",
           "name_en": "Forbidden Idol",
-          "name_vi": "Dị Vật Tai Ương",
+          "name_vi": "Forbidden Idol",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_forbiddenidol.png"
@@ -839,7 +839,7 @@
         {
           "id": "DA_Artifact_ZhonyasParadox",
           "name_en": "Zhonya's Paradox",
-          "name_vi": "Lưỡng Cực Zhonya",
+          "name_vi": "Zhonya's Paradox",
           "desc_en": "",
           "desc_vi": "",
           "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnzhonyasparadox.png"
@@ -1628,7 +1628,7 @@
       {
         "id": "DA_Artifact_SilvermereDawn",
         "name_en": "Silvermere Dawn",
-        "name_vi": "Chùy Bạch Ngân",
+        "name_vi": "Silvermere Dawn",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_silvermeredawn.png"
@@ -1636,7 +1636,7 @@
       {
         "id": "DA_Artifact_WitsEnd",
         "name_en": "Wit's End",
-        "name_vi": "Đao Tím",
+        "name_vi": "Wit's End",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_witsend.png"
@@ -1644,7 +1644,7 @@
       {
         "id": "DA_Artifact_HellfireHatchet",
         "name_en": "Hellfire Hatchet",
-        "name_vi": "Rìu Hỏa Ngục",
+        "name_vi": "Hellfire Hatchet",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_hellfirehatchet.png"
@@ -1652,7 +1652,7 @@
       {
         "id": "DA_Artifact_EternalPact",
         "name_en": "Eternal Pact",
-        "name_vi": "Khế Ước Vĩnh Hằng",
+        "name_vi": "Eternal Pact",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_eternalpact.png"
@@ -1660,7 +1660,7 @@
       {
         "id": "DA_Artifact_GoldCollector",
         "name_en": "Gold Collector",
-        "name_vi": "Đại Bác Hải Tặc",
+        "name_vi": "Gold Collector",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnthecollector.png"
@@ -1670,7 +1670,7 @@
       {
         "id": "DA_Artifact_RapidFireCannon",
         "name_en": "Rapid Firecannon",
-        "name_vi": "Đại Bác Liên Thanh",
+        "name_vi": "Rapid Firecannon",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_rapidfirecannon.png"
@@ -1678,7 +1678,7 @@
       {
         "id": "DA_Artifact_LightshieldCrest",
         "name_en": "Lightshield Crest",
-        "name_vi": "Huy Hiệu Thánh Khiên",
+        "name_vi": "Lightshield Crest",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_lightshieldcrest.png"
@@ -1686,7 +1686,7 @@
       {
         "id": "DA_Artifact_LudensTempest",
         "name_en": "Luden's Tempest",
-        "name_vi": "Bão Tố Luden",
+        "name_vi": "Luden's Tempest",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_ludenstempest.png"
@@ -1694,7 +1694,7 @@
       {
         "id": "DA_Artifact_HorizonFocus",
         "name_en": "Horizon Focus",
-        "name_vi": "Kính Nhắm Ma Pháp",
+        "name_vi": "Horizon Focus",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_horizonfocus.png"
@@ -1702,7 +1702,7 @@
       {
         "id": "DA_Artifact_Dawncore",
         "name_en": "Dawncore",
-        "name_vi": "Lõi Bình Minh",
+        "name_vi": "Dawncore",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_dawncore.png"
@@ -1710,7 +1710,7 @@
       {
         "id": "DA_Artifact_Mittens",
         "name_en": "Mittens",
-        "name_vi": "Găng Đấu Sĩ",
+        "name_vi": "Mittens",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_mittens.png"
@@ -1718,7 +1718,7 @@
       {
         "id": "DA_Artifact_NavoriFlickerblade",
         "name_en": "Flickerblades",
-        "name_vi": "Đao Chớp",
+        "name_vi": "Flickerblades",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_navoriflickerplade.png"
@@ -1728,7 +1728,7 @@
       {
         "id": "DA_Artifact_InfinityForce",
         "name_en": "Infinity Force",
-        "name_vi": "Tam Luyện Kiếm",
+        "name_vi": "Infinity Force",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornninfinityforce.png"
@@ -1736,7 +1736,7 @@
       {
         "id": "DA_Item_Artifact_TalismanOfAscension",
         "name_en": "Talisman of Ascension",
-        "name_vi": "Bùa Thăng Hoa",
+        "name_vi": "Talisman of Ascension",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_talismanofascension.png"
@@ -1744,7 +1744,7 @@
       {
         "id": "DA_Artifact_Fishbones",
         "name_en": "Fishbones",
-        "name_vi": "Pháo Xương Cá",
+        "name_vi": "Fishbones",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_fishbones.png"
@@ -1752,7 +1752,7 @@
       {
         "id": "DA_Artifact_TheIndomitable",
         "name_en": "The Indomitable",
-        "name_vi": "Bất Khuất",
+        "name_vi": "The Indomitable",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_theindomitable.png"
@@ -1760,7 +1760,7 @@
       {
         "id": "DA_Artifact_BlightingJewel",
         "name_en": "Blighting Jewel",
-        "name_vi": "Đá Hắc Hóa",
+        "name_vi": "Blighting Jewel",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_blightingjewel.png"
@@ -1768,7 +1768,7 @@
       {
         "id": "DA_Artifact_MogulsMail",
         "name_en": "Mogul's Mail",
-        "name_vi": "Giáp Đại Hãn",
+        "name_vi": "Mogul's Mail",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalemogulsmail.png"
@@ -1776,7 +1776,7 @@
       {
         "id": "DA_Artifact_GamblersBlade",
         "name_en": "Gambler's Blade",
-        "name_vi": "Kiếm Của Tay Bạc",
+        "name_vi": "Gambler's Blade",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalegamblersblade.png"
@@ -1784,7 +1784,7 @@
       {
         "id": "DA_Artifact_Manazane",
         "name_en": "Manazane",
-        "name_vi": "Thánh Kiếm Manazane",
+        "name_vi": "Manazane",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnmuramana.png"
@@ -1792,7 +1792,7 @@
       {
         "id": "DA_Artifact_VoidGauntlet",
         "name_en": "Void Gauntlet",
-        "name_vi": "Găng Hư Không",
+        "name_vi": "Void Gauntlet",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_voidgauntlet.png"
@@ -1800,7 +1800,7 @@
       {
         "id": "DA_Artifact_AegisOfDawn",
         "name_en": "Aegis of Dawn",
-        "name_vi": "Khiên Hừng Đông",
+        "name_vi": "Aegis of Dawn",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdawn.png"
@@ -1808,7 +1808,7 @@
       {
         "id": "DA_Artifact_SeekersArmguard",
         "name_en": "Seeker's Armguard",
-        "name_vi": "Giáp Tay Seeker",
+        "name_vi": "Seeker's Armguard",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_seekersarmguard.png"
@@ -1816,7 +1816,7 @@
       {
         "id": "DA_Artifact_TitanicHydra",
         "name_en": "Titanic Hydra",
-        "name_vi": "Rìu Đại Mãng Xà",
+        "name_vi": "Titanic Hydra",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_titanichydra.png"
@@ -1824,7 +1824,7 @@
       {
         "id": "DA_Artifact_Hullcrusher",
         "name_en": "Hullcrusher",
-        "name_vi": "Thần Búa Tiến Công",
+        "name_vi": "Hullcrusher",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft9_ornnitem_hullbreaker.png"
@@ -1832,7 +1832,7 @@
       {
         "id": "DA_Artifact_LichBane",
         "name_en": "Lich Bane",
-        "name_vi": "Kiếm Tai Ương",
+        "name_vi": "Lich Bane",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft_item_artifact_lichbane.png"
@@ -1842,7 +1842,7 @@
       {
         "id": "DA_Artifact_StatikkShiv",
         "name_en": "Statikk Shiv",
-        "name_vi": "Dao Điện Statikk",
+        "name_vi": "Statikk Shiv",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_stattikshiv.png"
@@ -1850,7 +1850,7 @@
       {
         "id": "DA_Artifact_AegisOfDusk",
         "name_en": "Aegis of Dusk",
-        "name_vi": "Khiên Hoàng Hôn",
+        "name_vi": "Aegis of Dusk",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdusk.png"
@@ -1858,7 +1858,7 @@
       {
         "id": "DA_Artifact_ForbiddenIdol",
         "name_en": "Forbidden Idol",
-        "name_vi": "Dị Vật Tai Ương",
+        "name_vi": "Forbidden Idol",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_forbiddenidol.png"
@@ -1866,7 +1866,7 @@
       {
         "id": "DA_Artifact_ZhonyasParadox",
         "name_en": "Zhonya's Paradox",
-        "name_vi": "Lưỡng Cực Zhonya",
+        "name_vi": "Zhonya's Paradox",
         "desc_en": "",
         "desc_vi": "",
         "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnzhonyasparadox.png"
@@ -2053,5 +2053,5 @@
     ],
     "D": []
   },
-  "updatedAt": "2026-10-30T07:02:33.585Z"
+  "updatedAt": "2026-10-30T07:16:55.941Z"
 }

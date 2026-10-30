@@ -85,8 +85,10 @@ for (const cVi of set18ChampsVi) {
   const cEn = set18ChampsEn.find((x: any) => x.apiName === apiName) || {};
   const acChamp = academyChampByApi.get(apiName);
 
-  const name_vi = cVi.name || apiName;
-  const name_en = cEn.name || acChamp?.name || name_vi;
+  // In official TFT in-game client, champions ALWAYS display international names
+  // (e.g. Master Yi, Gromp, Krug, Murkwolf, Brambleback, Sentry, Sentinel, Elder Dragon)
+  const name_en = cEn.name || acChamp?.name || apiName;
+  const name_vi = name_en;
   const cost = acChamp?.cost || cVi.cost || 1;
 
   // Determine Role (matching TFT Academy)
@@ -168,11 +170,7 @@ for (const acChamp of academyChamps) {
 
   const apiName = acChamp.apiName;
   const name_en = acChamp.name || apiName;
-  let name_vi = name_en;
-  if (name_en.includes('Stonebark Tree')) name_vi = 'Cổ Thụ Vỏ Đá';
-  else if (name_en.includes('Lifebloom')) name_vi = 'Hoa Nở Sinh Mệnh';
-  else if (name_en.includes('Deepwood Protector')) name_vi = 'Vệ Thần Rừng Sâu';
-  else if (name_en.includes('level')) name_vi = `Cấp độ ${name_en.replace(/\D/g, '')}`;
+  const name_vi = name_en;
 
   const cost = acChamp.cost || 1;
   const role_en = acChamp.role || 'Tank';
@@ -237,7 +235,12 @@ for (const acItem of academyItems) {
   ) || {};
 
   const name_en = acItem.name || cVi.name || apiName;
-  const name_vi = cVi.name || name_en;
+  let name_vi = cVi.name || name_en;
+  // If item is an Ornn Artifact, the in-game client retains international names
+  // (e.g. Mittens, Silvermere Dawn, Fishbones, Flickerblades, Dawncore, Trenchcoat)
+  if (acItem.type === 'ornns') {
+    name_vi = name_en;
+  }
 
   // Stats formatting
   const stats: Record<string, string> = {};
@@ -261,7 +264,29 @@ for (const acItem of academyItems) {
   // Descriptions: Strip {{TFT_Keyword_*}}
   let desc_vi = cleanText(interpolateDescription(cVi.desc, cEffects));
   if (!desc_vi || desc_vi.trim() === '') {
-    desc_vi = cleanText(acItem.description);
+    desc_vi = cleanText(acItem.description)
+      .replace(/\+10% Attack Damage/gi, '+10% Sức Mạnh Công Kích')
+      .replace(/\+10% Attack Speed/gi, '+10% Tốc Độ Đánh')
+      .replace(/\+10% Ability Power/gi, '+10% Sức Mạnh Phép Thuật')
+      .replace(/\+20 Magic Resist/gi, '+20 Kháng Phép')
+      .replace(/\+150 Health/gi, '+150 Máu')
+      .replace(/\+1 Mana Regeneration/gi, '+1 Hồi Năng Lượng')
+      .replace(/\+20% Critical Strike Chance/gi, '+20% Tỉ Lệ Chí Mạng')
+      .replace(/\+20 Armor/gi, '+20 Giáp')
+      .replace(/Combat start:/gi, 'Bắt đầu giao tranh:')
+      .replace(/Gain (\d+)% Ability Power every (\d+) seconds in combat/gi, 'Nhận $1% Sức Mạnh Phép Thuật mỗi $2 giây trong giao tranh')
+      .replace(/Gain (\d+)% max Health/gi, 'Nhận $1% Máu tối đa')
+      .replace(/Every (\d+) seconds, heal (\d+)% max Health/gi, 'Mỗi $1 giây, hồi $2% Máu tối đa')
+      .replace(/Gain (\d+)% Durability/gi, 'Nhận $1% Giảm Sát Thương')
+      .replace(/While above (\d+)% Health, instead gain (\d+)% Durability/gi, 'Khi còn trên $1% Máu, thay vào đó nhận $2% Giảm Sát Thương')
+      .replace(/Gain (\d+)% stacking Attack Speed every second/gi, 'Nhận $1% Tốc Độ Đánh cộng dồn mỗi giây')
+      .replace(/Gain \+1 Attack Range, increased by 1 whenever the holder kills an enemy/gi, 'Tăng +1 Tầm Đánh, tăng thêm 1 mỗi khi chủ sở hữu hạ gục một kẻ địch')
+      .replace(/Gain a (\d+)% max Health Shield for (\d+) seconds/gi, 'Nhận lá chắn bằng $1% Máu tối đa trong $2 giây')
+      .replace(/When the shield expires, gain (\d+)% Ability Power/gi, 'Khi lá chắn hết hiệu lực, nhận $1% Sức Mạnh Phép Thuật')
+      .replace(/Gain 2 effects:/gi, 'Nhận 2 hiệu ứng:')
+      .replace(/While above 50% health, double the Attack Damage and Ability Power/gi, 'Khi còn trên 50% Máu, tăng gấp đôi Sức Mạnh Công Kích và Sức Mạnh Phép Thuật')
+      .replace(/While below 50% Health, double the Omnivamp/gi, 'Khi còn dưới 50% Máu, nhận gấp đôi lượng Hút Máu Toàn Phần')
+      .replace(/Heal the lowest percent Health ally for (\d+)% of damage dealt/gi, 'Hồi máu cho đồng minh thấp Máu nhất bằng $1% lượng sát thương gây ra');
   }
   let desc_en = cleanText(acItem.description || interpolateDescription(cVi.desc, cEffects));
 
@@ -323,15 +348,53 @@ for (const acItem of academyItems) {
 // 3. Process Augments
 const augmentsDb: Record<string, any> = {};
 
+const untranslatedAugmentNames = new Set([
+  'Double Trouble',
+  'Level Up!',
+  'Late Game Specialist',
+  'Late Game Scaling',
+  'AFK',
+  'Pandora\'s Items',
+  'Pandora\'s Items II',
+  'Bronze For Life',
+  'Portable Forge',
+  'Cursed Crown',
+  'Trait Ladder',
+  'Tiny Titans',
+  'Birthday Present',
+  'U.R.F.',
+  '10.000 IQ',
+  'Isekai',
+  'Aura Farming',
+  'Kamekameha',
+  'Arcane Viktor-y',
+  'Cruel Pact',
+  'Trade Sector',
+  'Golden Ticket',
+  'Rich Get Richer',
+  'Clear Mind',
+  'Cluttered Mind',
+  'March of Progress'
+]);
+
 for (const acAug of academyAugs) {
   const apiName = acAug.apiName;
   const cVi = allCdragItemsVi.find((x: any) => x.apiName === apiName || x.name?.toLowerCase() === acAug.name?.toLowerCase()) || {};
 
   const name_en = acAug.name || cVi.name || apiName;
-  const name_vi = cVi.name || name_en;
+  let name_vi = cVi.name || name_en;
+  if (untranslatedAugmentNames.has(name_en)) {
+    name_vi = name_en;
+  }
 
-  const desc_vi = cleanText(interpolateDescription(cVi.desc || acAug.description, cVi.effects || {}));
-  const desc_en = cleanText(acAug.description || interpolateDescription(cVi.desc, cVi.effects || {}));
+  let desc_vi = cleanText(interpolateDescription(cVi.desc || acAug.description, cVi.effects || {}));
+  let desc_en = cleanText(acAug.description || interpolateDescription(cVi.desc, cVi.effects || {}));
+
+  if (name_en === 'Double Trouble') {
+    desc_vi = 'Khi bạn ra sân đúng 2 bản sao của một tướng, cả hai đều nhận thêm 30% Sức Mạnh Công Kích, 30 Sức Mạnh Phép Thuật, 30 Giáp và 30 Kháng Phép. Khi bạn nâng cấp lên 3 sao, nhận 1 bản sao 2 sao.';
+  } else if (name_en.includes('Pandora')) {
+    desc_vi = 'Bắt đầu vòng đấu: các trang bị trên hàng dự bị được biến đổi ngẫu nhiên. Nhận 2 trang bị thành phần ngẫu nhiên.';
+  }
 
   // Rules / Tournament subtitle
   let subtitle_vi = '';
