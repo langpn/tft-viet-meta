@@ -1,0 +1,14 @@
+services:
+  tft-viet-meta:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - HOST=0.0.0.0
+      - NODE_ENV=production
+    labels:
+      - "coolify.managed=true"
