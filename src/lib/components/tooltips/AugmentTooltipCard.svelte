@@ -18,7 +18,20 @@
     <div class="flex items-center gap-3.5">
       <div class="w-12 h-12 rounded-xl bg-black border border-white/20 p-1 shrink-0 shadow-lg flex items-center justify-center">
         {#if iconSrc}
-          <img src={iconSrc} alt="" class="w-full h-full object-contain" />
+          <img 
+            src={iconSrc} 
+            alt={data.name_vi || data.name_en || ''} 
+            class="w-full h-full object-contain" 
+            loading="lazy"
+            onerror={(e) => {
+              const target = e.currentTarget as HTMLImageElement;
+              if (!target.dataset.triedBackup && data.id) {
+                target.dataset.triedBackup = 'true';
+                const clean = (data.id || '').replace(/^DA_/, '').replace(/^TFT_Augment_/, '').toLowerCase();
+                target.src = `https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/augments/hexcore/${clean}.png`;
+              }
+            }}
+          />
         {/if}
       </div>
 

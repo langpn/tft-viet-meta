@@ -503,9 +503,11 @@ for (const acAug of academyAugs) {
   const ruleMatchEn = (cVi.desc || '').match(/<tftitemrules>(.*?)<\/tftitemrules>/i);
   if (ruleMatchEn) subtitle_en = cleanText(ruleMatchEn[1]);
 
-  const icon = acAug.icon 
-    ? `https://assets.tftacademy.com/augments/${acAug.icon}`
-    : cleanIcon(cVi.icon);
+  const pbIcon = acAug.icon && acAug.collectionId && acAug.id
+    ? `https://api.tftacademy.com/api/files/${acAug.collectionId}/${acAug.id}/${acAug.icon}`
+    : '';
+  const cdIcon = cleanIcon(cVi.icon);
+  const icon = cdIcon || pbIcon;
 
   const augData = {
     id: apiName,
