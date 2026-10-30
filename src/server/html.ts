@@ -1,80 +1,45 @@
 import type { SearchDocument } from "../core/search.js";
+import type { TftAcademyPage } from "../core/tft-academy-parser.js";
 
-export function renderHome(state: {
+type PageState = {
   activePatch: string;
   lastSyncAt: string | null;
   documents: SearchDocument[];
   explorerSnapshots: Array<{ status: string; metrics: { games: number } }>;
-}): string {
-  const documentCount = state.documents.length;
-  const syncLabel = state.lastSyncAt ?? "Chưa đồng bộ";
-  const explorer = state.explorerSnapshots.at(-1);
-  const explorerLabel = explorer?.status ?? "UNVERIFIED";
+  page?: TftAcademyPage;
+};
 
-  return `<!doctype html>
-<html lang="vi">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TFT Việt Meta</title>
-    <style>
-      :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, sans-serif; background: #0d1017; color: #eef4ff; }
-      * { box-sizing: border-box; }
-      body { margin: 0; background: radial-gradient(circle at top right, #27335a 0, #0d1017 38rem); min-height: 100vh; }
-      header { display: flex; justify-content: space-between; gap: 1rem; align-items: center; padding: 1.25rem max(1rem, calc((100vw - 1120px) / 2)); border-bottom: 1px solid #283147; background: #101522cc; backdrop-filter: blur(14px); position: sticky; top: 0; z-index: 2; }
-      main { max-width: 1120px; margin: 0 auto; padding: 4rem 1rem 6rem; }
-      h1 { max-width: 720px; font-size: clamp(2.4rem, 7vw, 5rem); line-height: .95; margin: 0 0 1.25rem; letter-spacing: -.06em; }
-      h2 { margin-top: 0; }
-      p { color: #aab7d4; line-height: 1.65; }
-      .eyebrow { color: #79e2cc; text-transform: uppercase; letter-spacing: .18em; font-size: .75rem; font-weight: 700; }
-      .search { display: flex; gap: .75rem; margin: 2rem 0; }
-      input, button { border: 1px solid #35425e; border-radius: .8rem; background: #151d30; color: inherit; padding: .9rem 1rem; font: inherit; }
-      input { flex: 1; min-width: 0; }
-      button { cursor: pointer; background: #67d8bd; border-color: #67d8bd; color: #071018; font-weight: 800; }
-      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 2rem; }
-      .card { border: 1px solid #283147; border-radius: 1.1rem; padding: 1.25rem; background: #121827cc; }
-      .muted { color: #8090b0; font-size: .9rem; }
-      .badge { display: inline-flex; padding: .35rem .55rem; border-radius: 999px; background: #1d2942; color: #9edacb; font-size: .78rem; }
-      #results { display: grid; gap: .75rem; }
-      a { color: #79e2cc; }
-      @media (max-width: 600px) { header { align-items: flex-start; flex-direction: column; } .search { flex-direction: column; } }
-    </style>
-  </head>
-  <body>
-    <header><strong>TFT Việt Meta</strong><span class="muted">Patch ${escapeHtml(state.activePatch)} · ${escapeHtml(syncLabel)}</span></header>
-    <main>
-      <div class="eyebrow">Source-locked local mirror</div>
-      <h1>Tra cứu TFT bằng tiếng Việt, không đoán dữ liệu.</h1>
-      <p>Search local ưu tiên dữ liệu đã chuẩn hóa theo patch. Explorer và nội dung nguồn sẽ chỉ được đánh dấu đã xác minh khi parity check có bằng chứng.</p>
-      <form class="search" id="search-form"><input id="query" autocomplete="off" placeholder="Tìm Ahri, áo choàng bóng tối, fast 8..." /><button>Tìm kiếm</button></form>
-      <div id="results" aria-live="polite"></div>
-      <section class="grid">
-        <article class="card"><span class="badge">${documentCount} entities</span><h2>Encyclopedia</h2><p>Unit, item, trait, augment và alias tiếng Việt trong local canonical index.</p></article>
-        <article class="card"><span class="badge">Explorer: ${escapeHtml(explorerLabel)}</span><h2>Meta Explorer</h2><p>Probe source: ${explorer ? `${explorer.metrics.games.toLocaleString("vi-VN")} games` : "chưa có snapshot"}. Full feature parity vẫn cần fixture matrix.</p><a href="/explorer">Mở Explorer →</a></article>
-        <article class="card"><span class="badge">Sync</span><h2>Snapshot & diff</h2><p>Mỗi lần đồng bộ tạo snapshot mới, phát hiện added/modified/deleted và giữ rollback.</p><a href="/api/status">Xem trạng thái →</a></article>
-      </section>
-    </main>
-    <script>
-      const form = document.querySelector('#search-form');
-      const input = document.querySelector('#query');
-      const results = document.querySelector('#results');
-      form.addEventListener('submit', async (event) => {
-        event.preventDefault();
-        const query = input.value.trim();
-        if (!query) { results.innerHTML = ''; return; }
-        const response = await fetch('/api/search?q=' + encodeURIComponent(query));
-        const data = await response.json();
-        results.innerHTML = data.results.length ? data.results.map((item) => '<div class="card"><strong>' + item.titleVi + '</strong><div class="muted">' + item.entityType + ' · ' + item.patch + ' · ' + item.source + '</div></div>').join('') : '<div class="card">Không tìm thấy kết quả canonical.</div>';
-      });
-    </script>
-  </body>
-</html>`;
+export function renderHome(state: PageState): string {
+  return shell("TFT Việt Meta", `
+    <section class="hero"><p class="kicker">TFT META / TIẾNG VIỆT</p><h1>Đọc meta nhanh.<br><em>Chơi có cơ sở.</em></h1><p class="lede">Tra cứu đội hình, trang bị, Augment và dữ liệu Explorer theo patch hiện tại.</p><div class="hero-actions"><a class="button primary" href="/tierlist/comps">Xem đội hình</a><a class="button ghost" href="/explorer">Mở Explorer</a></div></section>
+    <section class="home-grid"><article class="feature-card mint"><span class="feature-mark">01</span><h2>Tierlist</h2><p>Comps, Items và Augments theo snapshot TFT Academy đã đồng bộ.</p><a href="/tierlist/comps">Mở tierlist →</a></article><article class="feature-card violet"><span class="feature-mark">02</span><h2>Explorer</h2><p>Query dữ liệu public theo patch, rank, unit, trait, item và augment.</p><a href="/explorer">Phân tích meta →</a></article><article class="feature-card orange"><span class="feature-mark">03</span><h2>Set Info</h2><p>Khám phá nội dung Set 18 từ nguồn TFT Academy.</p><a href="/learn/new-set">Xem Set 18 →</a></article></section>
+    <section class="stats-row"><div><strong>${state.documents.length.toLocaleString("vi-VN")}</strong><span>thực thể Riot</span></div><div><strong>${escapeHtml(state.activePatch)}</strong><span>patch dữ liệu</span></div><div><strong>${state.explorerSnapshots.at(-1)?.status ?? "UNVERIFIED"}</strong><span>Explorer source</span></div></section>
+  `, state);
 }
 
-export function renderExplorer(): string {
-  return `<!doctype html><html lang="vi"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Explorer · TFT Việt Meta</title><style>body{font-family:system-ui;background:#0d1017;color:#eef4ff;max-width:960px;margin:0 auto;padding:2rem 1rem}input,button{padding:.8rem;border-radius:.6rem;border:1px solid #35425e;background:#151d30;color:inherit}input{width:100%;margin:.5rem 0}.card{margin-top:1rem;padding:1rem;border:1px solid #283147;border-radius:1rem;background:#121827}a{color:#79e2cc}</style></head><body><a href="/">← Trang chủ</a><h1>Meta Explorer</h1><p>Local query contract. Dữ liệu chưa được đánh dấu parity nếu chưa có source fixture.</p><form id="form"><label>Patch<input name="patch" value="18.5c"/></label><label>Rank<input name="rank" value="diamond_plus"/></label><label>Units<input name="units" value="Ahri"/></label><button>Chạy query</button></form><pre id="output" class="card"></pre><script>const form=document.querySelector('#form');const output=document.querySelector('#output');form.addEventListener('submit',async(e)=>{e.preventDefault();const p=new URLSearchParams(new FormData(form));const r=await fetch('/api/explorer?'+p);output.textContent=JSON.stringify(await r.json(),null,2)});</script></body></html>`;
+export function renderAcademyPage(page: TftAcademyPage, state: PageState): string {
+  const title = page.kind === "comps" ? "Comps" : page.kind === "items" ? "Items" : page.kind === "augments" ? "Augments" : "Set 18";
+  const content = page.kind === "new-set" ? `<div class="source-copy"><h2>${escapeHtml(page.title || "Set 18")}</h2><p>Đã snapshot nguồn TFT Academy. Nội dung chi tiết sẽ được trình bày theo các section của trang Set Info.</p><a class="button primary" href="${page.url}" target="_blank">Mở nguồn gốc ↗</a></div>` : renderTierSections(page);
+  return shell(title, `<div class="page-heading"><p class="kicker">TFT ACADEMY / PATCH ${escapeHtml(state.activePatch)}</p><h1>${title}</h1><p>Source snapshot: <a href="${page.url}" target="_blank">${page.url} ↗</a></p></div><div class="tier-tabs"><a class="active" href="/tierlist/comps">Comps</a><a href="/tierlist/items">Items</a><a href="/tierlist/augments">Augments</a></div><div class="page-tools"><select aria-label="Patch"><option>${escapeHtml(state.activePatch)}</option></select><select aria-label="Set"><option>Set 18</option><option>Set 17</option></select><label class="inline-search"><span>⌕</span><input placeholder="Tìm trong ${title.toLowerCase()}..." data-filter /></label></div>${content}`, state);
 }
 
-function escapeHtml(value: string): string {
-  return value.replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[character] ?? character);
+export function renderExplorerPage(state: PageState): string {
+  return shell("Meta Explorer", `<div class="page-heading"><p class="kicker">TACTICS.TOOLS / PUBLIC RUNTIME</p><h1>Explorer</h1><p>Chọn bộ lọc để truy vấn dữ liệu theo cùng path contract của source.</p></div><section class="explorer-panel"><div class="filter-grid"><label>Patch<select id="patch"><option value="18.5c">18.5c</option></select></label><label>Rank<select id="rank"><option value="diamond_plus">Diamond+</option><option value="master_plus">Master+</option><option value="gm_plus">GM+</option></select></label><div class="combo" data-type="unit"><label>Unit</label><input id="unit-search" autocomplete="off" placeholder="Tìm unit..." /><div class="suggestions" id="unit-suggestions"></div></div><div class="combo" data-type="trait"><label>Trait</label><input id="trait-search" autocomplete="off" placeholder="Tìm trait..." /><div class="suggestions" id="trait-suggestions"></div></div><div class="combo" data-type="item"><label>Item</label><input id="item-search" autocomplete="off" placeholder="Tìm item..." /><div class="suggestions" id="item-suggestions"></div></div><div class="combo" data-type="augment"><label>Augment</label><input id="augment-search" autocomplete="off" placeholder="Tìm augment..." /><div class="suggestions" id="augment-suggestions"></div></div></div><div id="chips" class="chips"></div><button class="button primary" id="run-explorer">Chạy Explorer</button></section><section id="explorer-results" class="explorer-results"><div class="empty-state">Chọn bộ lọc rồi chạy query.</div></section>`, state, explorerScript());
 }
+
+function renderTierSections(page: TftAcademyPage): string {
+  if (!page.sections.length) return `<div class="source-copy"><h2>Snapshot đã sẵn sàng</h2><p>Parser chưa nhận được tier cards của route này. Dữ liệu raw vẫn được giữ nguyên và có thể mở từ nguồn.</p><a class="button ghost" href="${page.url}" target="_blank">Mở TFT Academy ↗</a></div>`;
+  return `<div class="tier-sections">${page.sections.map((section) => `<section class="tier-section" data-tier="${section.tier ?? ""}"><div class="tier-label tier-${section.tier}"><span>${section.tier ?? ""}</span><small>Tier</small></div><div class="comp-grid">${section.cards.map((card) => `<a class="comp-card" href="${card.href ?? page.url}" target="_blank"><div class="comp-icons">${card.imageUrls.slice(0, 5).map((url) => `<img src="${escapeHtml(url)}" loading="lazy" />`).join("")}</div><strong>${escapeHtml(card.href?.split("/").pop()?.replace(/-/g, " ") ?? "TFT composition")}</strong><span>Open source detail ↗</span></a>`).join("")}</div></section>`).join("")}</div>`;
+}
+
+function shell(title: string, content: string, state: PageState, extraScript = ""): string {
+  return `<!doctype html><html lang="vi"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>${escapeHtml(title)} · TFT Việt Meta</title><style>${styles()}</style></head><body><header class="topbar"><a class="brand" href="/"><span class="brand-glyph">T</span><span>TFT Việt <b>Meta</b></span></a><nav><a href="/tierlist/comps">Tierlist</a><a href="/explorer">Explorer</a><a href="/learn/new-set">Set 18</a></nav><span class="patch-pill">PATCH ${escapeHtml(state.activePatch)}</span></header><main>${content}</main><footer>Local source-locked mirror · Last sync ${escapeHtml(state.lastSyncAt ?? "chưa có")}</footer><script>${baseScript()}${extraScript}</script></body></html>`;
+}
+
+function styles(): string { return `:root{font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:#edf2f8;background:#0b0e13;--surface:#141920;--line:#2b333e;--muted:#84909d;--mint:#9bf4d8;--orange:#ff9b55;--violet:#b8a5ff}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 75% -10%,#263a45 0,transparent 35rem),#0b0e13}a{color:inherit;text-decoration:none}.topbar{height:70px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:2rem;padding:0 max(1rem,calc((100vw - 1200px)/2));position:sticky;top:0;background:#0b0e13e8;backdrop-filter:blur(16px);z-index:5}.brand{display:flex;align-items:center;gap:.65rem;font-weight:800;letter-spacing:-.03em;white-space:nowrap}.brand b{color:var(--mint)}.brand-glyph{display:grid;place-items:center;width:30px;height:30px;background:var(--mint);color:#08100f;border-radius:8px;font-weight:900}.topbar nav{display:flex;gap:1.4rem;font-size:.92rem;color:#aeb8c5}.topbar nav a:hover{color:var(--mint)}.patch-pill{margin-left:auto;color:var(--mint);font-size:.72rem;letter-spacing:.14em}.hero,.page-heading{padding:5rem 0 2.5rem;max-width:820px}.hero h1,.page-heading h1{font-size:clamp(3rem,8vw,6.8rem);letter-spacing:-.08em;line-height:.9;margin:.6rem 0 1.3rem}.hero h1 em{color:var(--mint);font-style:normal}.kicker{font-size:.72rem;letter-spacing:.2em;color:var(--mint);font-weight:800}.lede,.page-heading p{color:var(--muted);font-size:1.1rem;line-height:1.7;max-width:650px}.hero-actions{display:flex;gap:.7rem;margin-top:2rem}.button{display:inline-flex;border:1px solid var(--line);border-radius:8px;padding:.8rem 1rem;font-weight:800;cursor:pointer}.button.primary{background:var(--mint);color:#07100e;border-color:var(--mint)}.button.ghost:hover{border-color:var(--mint);color:var(--mint)}main{max-width:1200px;margin:auto;padding:0 1rem 5rem}.home-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.feature-card{min-height:210px;padding:1.5rem;border:1px solid var(--line);background:var(--surface);border-radius:16px}.feature-card.mint{border-top:3px solid var(--mint)}.feature-card.violet{border-top:3px solid var(--violet)}.feature-card.orange{border-top:3px solid var(--orange)}.feature-mark{color:var(--muted);font-size:.75rem}.feature-card h2{font-size:2rem;margin:2rem 0 .5rem}.feature-card p{color:var(--muted);line-height:1.55}.feature-card a{color:var(--mint);font-weight:800}.stats-row{display:flex;gap:5rem;padding:3rem 0}.stats-row div{display:grid;gap:.3rem}.stats-row strong{font-size:2rem}.stats-row span{color:var(--muted);font-size:.85rem}.tier-tabs{display:flex;gap:1.2rem;border-bottom:1px solid var(--line);margin-bottom:1.2rem}.tier-tabs a{padding:.8rem 0;color:var(--muted);font-weight:800}.tier-tabs a.active{color:var(--mint);border-bottom:2px solid var(--mint)}.page-tools{display:flex;gap:.7rem;align-items:center;margin-bottom:2rem}.page-tools select,.filter-grid select,.combo input,.inline-search{background:var(--surface);border:1px solid var(--line);color:#edf2f8;border-radius:8px;padding:.75rem}.inline-search{display:flex;gap:.5rem;flex:1;max-width:320px}.inline-search input{background:none;border:0;color:inherit;outline:0;width:100%}.tier-section{margin:2rem 0}.tier-section{display:grid;grid-template-columns:100px 1fr;gap:1rem}.tier-label{border-radius:12px;min-height:110px;display:grid;place-content:center;text-align:center;background:#1e252d}.tier-label span{font-size:3rem;font-weight:900}.tier-label small{text-transform:uppercase;color:var(--muted);letter-spacing:.1em}.tier-S{background:#55202b;color:#ff6578}.tier-A{background:#543019;color:#ffad62}.tier-B{background:#4d461d;color:#ffe47d}.tier-C{background:#284624;color:#a8f47b}.comp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:.7rem}.comp-card{border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:1rem;min-height:130px;display:grid;gap:.5rem}.comp-card:hover{border-color:var(--mint);transform:translateY(-2px)}.comp-card strong{text-transform:capitalize}.comp-card span{font-size:.75rem;color:var(--muted)}.comp-icons{display:flex;gap:-.2rem}.comp-icons img{width:38px;height:38px;object-fit:cover;border-radius:50%;border:2px solid #111;margin-right:-6px}.source-copy{border:1px solid var(--line);background:var(--surface);border-radius:14px;padding:2rem}.explorer-panel{border:1px solid var(--line);background:#11161d;padding:1.2rem;border-radius:14px}.filter-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem}.filter-grid label,.combo label{display:grid;gap:.4rem;color:var(--muted);font-size:.78rem}.filter-grid select,.combo input{width:100%;margin:0}.combo{position:relative}.suggestions{position:absolute;top:100%;left:0;right:0;z-index:4;background:#1b232d;border:1px solid var(--line);border-radius:8px;display:none;overflow:hidden}.suggestions.open{display:block}.suggestion{padding:.65rem .7rem;cursor:pointer}.suggestion:hover{background:#27333d;color:var(--mint)}.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.chip{border:1px solid #456057;background:#1d302b;color:var(--mint);padding:.4rem .6rem;border-radius:999px;font-size:.78rem;cursor:pointer}.explorer-results{margin-top:1rem}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem}.metric,.result-section{border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:1rem}.metric strong{display:block;font-size:1.5rem}.metric span,.result-row small{color:var(--muted);font-size:.76rem}.result-section{margin-top:1rem}.result-row{display:flex;justify-content:space-between;border-bottom:1px solid #28303a;padding:.7rem 0}.empty-state{padding:3rem;text-align:center;border:1px dashed var(--line);color:var(--muted)}footer{border-top:1px solid var(--line);padding:1.5rem max(1rem,calc((100vw - 1200px)/2));color:var(--muted);font-size:.75rem}@media(max-width:800px){.topbar nav{display:none}.home-grid{grid-template-columns:1fr}.stats-row{gap:1.2rem;justify-content:space-between}.filter-grid{grid-template-columns:repeat(2,1fr)}.tier-section{grid-template-columns:1fr}.tier-label{min-height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 1rem}.tier-label span{font-size:2rem}.page-tools{flex-wrap:wrap}}@media(max-width:500px){.filter-grid{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}.hero{padding-top:3rem}}`; }
+
+function baseScript(): string { return `document.querySelectorAll('[data-filter]').forEach(input=>input.addEventListener('input',()=>{const q=input.value.toLowerCase();document.querySelectorAll('.comp-card').forEach(card=>card.style.display=card.textContent.toLowerCase().includes(q)?'grid':'none')}));`; }
+
+function explorerScript(): string { return `const filters={units:[],traits:[],items:[],augments:[]};const labels={unit:'units',trait:'traits',item:'items',augment:'augments'};for(const type of Object.keys(labels)){const input=document.querySelector('#'+type+'-search');const box=document.querySelector('#'+type+'-suggestions');input.addEventListener('input',async()=>{const q=input.value.trim();if(!q){box.classList.remove('open');return}const data=await fetch('/api/options?q='+encodeURIComponent(q)+'&type='+type).then(r=>r.json());box.innerHTML=data.results.map(x=>'<div class="suggestion" data-id="'+x.id+'">'+x.titleVi+' <small>'+x.titleEn+'</small></div>').join('');box.classList.add('open');box.querySelectorAll('.suggestion').forEach(el=>el.onclick=()=>{filters[labels[type]].push(el.dataset.id);input.value='';box.classList.remove('open');renderChips()})})}function renderChips(){document.querySelector('#chips').innerHTML=Object.entries(filters).flatMap(([type,ids])=>ids.map((id,i)=>'<button class="chip" data-type="'+type+'" data-index="'+i+'">'+id+' ×</button>')).join('');document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{filters[c.dataset.type].splice(Number(c.dataset.index),1);renderChips()})}document.querySelector('#run-explorer').onclick=async()=>{const p=new URLSearchParams({patch:document.querySelector('#patch').value,rank:document.querySelector('#rank').value});for(const [key,ids] of Object.entries(filters))ids.forEach(id=>p.append(key,id));const out=document.querySelector('#explorer-results');out.innerHTML='<div class="empty-state">Đang tải dữ liệu source…</div>';try{const data=await fetch('/api/explorer?'+p).then(r=>r.json());if(data.error){out.innerHTML='<div class="empty-state">'+data.error+'</div>';return}out.innerHTML='<div class="metrics">'+[['Games',data.base.games],['Avg placement',data.base.averagePlacement.toFixed(2)],['Top 4',Math.round(data.base.topFourRate*100)+'%'],['Win rate',Math.round(data.base.winRate*100)+'%']].map(x=>'<div class="metric"><strong>'+x[1]+'</strong><span>'+x[0]+'</span></div>').join('')+'</div>'+Object.entries(data.sections).map(([name,rows])=>'<section class="result-section"><h3>'+name+'</h3>'+rows.slice(0,10).map(x=>'<div class="result-row"><span>'+x.id+'</span><small>'+x.games+' games · avg '+x.averagePlacement.toFixed(2)+' · top4 '+Math.round(x.topFourRate*100)+'%</small></div>').join('')+'</section>').join('')}catch(e){out.innerHTML='<div class="empty-state">Không thể lấy dữ liệu Explorer source.</div>'}};`; }
+
+export function escapeHtml(value: string): string { return value.replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[character] ?? character); }
