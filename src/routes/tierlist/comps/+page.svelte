@@ -11,9 +11,6 @@
 
   let { data }: { data: PageData } = $props();
 
-  // Instant SPA Tab Switcher (0ms switch, zero reload)
-  let activeMainTab = $state<'comps' | 'items' | 'augments'>('comps');
-
   // Comp filters
   let activeFilters = $state<ActiveFilter[]>([]);
   let rawQueryText = $state('');
@@ -21,15 +18,6 @@
   let selectedSet = $state('Set 18');
   let selectedCompId = $state<string | null>(null);
   let showDetailModal = $state(false);
-
-  // Item filters
-  let activeItemCategory = $state<'craftables' | 'radiants' | 'artifacts' | 'emblems'>('craftables');
-  let itemSearchText = $state('');
-
-  // Augment filters
-  let activeAugmentTier = $state<'silver' | 'gold' | 'prismatic'>('gold');
-  let selectedAugmentStage = $state('All');
-  let augmentSearchText = $state('');
 
   const compStyleOptions = [
     { value: 'ALL', label: 'Comp Style' },
@@ -172,80 +160,77 @@
         <span class="font-black text-black text-xl tracking-wider">T</span>
       </div>
       <h1 class="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white flex items-center gap-2" style="font-family: 'Plus Jakarta Sans', sans-serif;">
-        <span>{activeMainTab === 'comps' ? 'COMPS' : activeMainTab === 'items' ? 'ITEMS' : 'AUGMENTS'}</span>
+        <span>COMPS</span>
         <span class="text-amber-400">•</span>
         <span class="text-amber-400">TIERLIST</span>
       </h1>
     </div>
   </div>
 
-  <!-- Subheader Navigation Bar (Matching Screenshot 2 & 6: SPA instantaneous tabs) -->
+  <!-- Subheader Navigation Bar (Matching Screenshot 2 & 6: SvelteKit client-side routing) -->
   <div class="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4">
     
     <!-- Subnav Tabs (Comps, Items, Augments) -->
     <div class="flex items-center gap-7 text-sm font-bold tracking-tight select-none">
-      <button 
-        type="button"
-        onclick={() => (activeMainTab = 'comps')}
-        class="flex items-center gap-2 pb-1.5 transition-all cursor-pointer {activeMainTab === 'comps' ? 'text-amber-400 border-b-2 border-amber-400 font-black' : 'text-slate-400 hover:text-white'}"
+      <a 
+        href="/tierlist/comps"
+        data-sveltekit-preload-data="hover"
+        class="flex items-center gap-2 pb-1.5 transition-all text-amber-400 border-b-2 border-amber-400 font-black cursor-pointer"
       >
         <Flame class="w-4 h-4 fill-current" />
         <span>Comps</span>
-      </button>
+      </a>
 
-      <button 
-        type="button"
-        onclick={() => (activeMainTab = 'items')}
-        class="flex items-center gap-2 pb-1.5 transition-all cursor-pointer {activeMainTab === 'items' ? 'text-amber-400 border-b-2 border-amber-400 font-black' : 'text-slate-400 hover:text-white'}"
+      <a 
+        href="/tierlist/items"
+        data-sveltekit-preload-data="hover"
+        class="flex items-center gap-2 pb-1.5 transition-all text-slate-400 hover:text-white cursor-pointer"
       >
         <Shield class="w-4 h-4" />
         <span>Items</span>
-      </button>
+      </a>
 
-      <button 
-        type="button"
-        onclick={() => (activeMainTab = 'augments')}
-        class="flex items-center gap-2 pb-1.5 transition-all cursor-pointer {activeMainTab === 'augments' ? 'text-amber-400 border-b-2 border-amber-400 font-black' : 'text-slate-400 hover:text-white'}"
+      <a 
+        href="/tierlist/augments"
+        data-sveltekit-preload-data="hover"
+        class="flex items-center gap-2 pb-1.5 transition-all text-slate-400 hover:text-white cursor-pointer"
       >
         <Sparkles class="w-4 h-4" />
         <span>Augments</span>
-      </button>
+      </a>
     </div>
 
     <!-- Right Controls: Multi-Search Bar, Comp Style Dropdown, Set Selector -->
     <div class="flex flex-wrap items-center gap-2.5">
-      {#if activeMainTab === 'comps'}
-        <!-- Search bar with chips & typeahead (Screenshot 3 & 4) -->
-        <TftSearchBar 
-          activeFilters={activeFilters}
-          onfilterchange={(next) => (activeFilters = next)}
-          ontextchange={(txt) => (rawQueryText = txt)}
-        />
+      <!-- Search bar with chips & typeahead (Screenshot 3 & 4) -->
+      <TftSearchBar 
+        activeFilters={activeFilters}
+        onfilterchange={(next) => (activeFilters = next)}
+        ontextchange={(txt) => (rawQueryText = txt)}
+      />
 
-        <!-- Custom Dropdown for Comp Style (Screenshot 5) -->
-        <CustomDropdown 
-          options={compStyleOptions}
-          selected={selectedStyle}
-          onselect={(val) => (selectedStyle = val)}
-          title="Comp Style ▼"
-          variant="pill"
-        />
+      <!-- Custom Dropdown for Comp Style (Screenshot 5) -->
+      <CustomDropdown 
+        options={compStyleOptions}
+        selected={selectedStyle}
+        onselect={(val) => (selectedStyle = val)}
+        title="Comp Style ▼"
+        variant="pill"
+      />
 
-        <!-- Custom Set Selector Dropdown -->
-        <CustomDropdown 
-          options={setOptions}
-          selected={selectedSet}
-          onselect={(val) => (selectedSet = val)}
-          title="Set 18 ▼"
-          variant="yellow-pill"
-        />
-      {/if}
+      <!-- Custom Set Selector Dropdown -->
+      <CustomDropdown 
+        options={setOptions}
+        selected={selectedSet}
+        onselect={(val) => (selectedSet = val)}
+        title="Set 18 ▼"
+        variant="yellow-pill"
+      />
     </div>
   </div>
 
-  <!-- MAIN TAB 1: COMPS TIERLIST (Exact Replica of Screenshot 2 & 4) -->
-  {#if activeMainTab === 'comps'}
-    <div class="flex flex-col gap-4">
+  <!-- MAIN: COMPS TIERLIST (Exact Replica of Screenshot 2 & 4) -->
+  <div class="flex flex-col gap-4">
       {#each tiers as t}
         {@const style = tierStyles[t]}
         {@const tierCompEntries = compsWithMatchStatus.filter(({ comp }) => comp.tier === t)}
@@ -296,155 +281,7 @@
       {/each}
     </div>
 
-  <!-- MAIN TAB 2: ITEMS TIERLIST (100% Fixed Images & Vietnamese) -->
-  {:else if activeMainTab === 'items'}
-    {@const currentCategoryData = data.items[activeItemCategory] || {}}
 
-    <div class="flex flex-col gap-6">
-      <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 p-3 rounded-2xl bg-[#0F131C] border border-white/10 shadow-lg">
-        <div class="flex items-center gap-1.5 overflow-x-auto p-1 bg-[#161B26] rounded-xl border border-white/5">
-          {#each (['craftables', 'radiants', 'artifacts', 'emblems'] as const) as cat}
-            <button
-              onclick={() => (activeItemCategory = cat)}
-              class="px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer whitespace-nowrap {activeItemCategory === cat ? 'bg-amber-400 text-black shadow-md' : 'text-slate-400 hover:text-white'}"
-            >
-              {cat === 'craftables' ? 'Đồ Ghép' : cat === 'radiants' ? 'Ánh Sáng' : cat === 'artifacts' ? 'Cổ Vật' : 'Ấn Tộc Hệ'}
-            </button>
-          {/each}
-        </div>
-
-        <div class="relative w-full md:w-72">
-          <input 
-            type="text" 
-            bind:value={itemSearchText}
-            placeholder="Tìm kiếm trang bị..."
-            class="w-full px-4 py-2 rounded-xl bg-[#161B26] border border-white/10 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-amber-400"
-          />
-        </div>
-      </div>
-
-      <div class="flex flex-col gap-6">
-        {#each tiers as t}
-          {@const tierItems = (currentCategoryData[t] || []).filter((item: any) => {
-            const q = itemSearchText.toLowerCase().trim();
-            return !q || item.name_vi?.toLowerCase().includes(q) || item.name_en?.toLowerCase().includes(q);
-          })}
-
-          {#if tierItems.length > 0}
-            <section class="flex flex-col gap-3">
-              <div class="flex items-center gap-3 p-2.5 rounded-xl bg-[#121620] border-l-4 border-amber-400 border-t border-r border-b border-white/5 text-xs font-black">
-                <span class="px-2.5 py-0.5 rounded bg-amber-400 text-black">{t} Tier</span>
-                <span class="text-slate-400">{tierItems.length} Trang bị</span>
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-                {#each tierItems as item (item.id || item.name_en)}
-                  {@const iconSrc = resolveItemIcon(item.icon, item.id)}
-                  <div class="flex items-start gap-3 p-3 rounded-xl bg-[#131722] border border-white/5 hover:border-amber-400/50 transition-all shadow-md">
-                    <div class="w-12 h-12 rounded-xl border border-white/10 overflow-hidden bg-black shrink-0 p-0.5 flex items-center justify-center">
-                      {#if iconSrc}
-                        <img src={iconSrc} alt="" class="w-full h-full object-cover rounded-lg" loading="lazy" />
-                      {/if}
-                    </div>
-                    <div class="flex flex-col flex-1 overflow-hidden">
-                      <span class="font-extrabold text-xs text-white truncate">{item.name_vi || item.name_en}</span>
-                      <span class="text-[10px] text-slate-400 truncate">{item.name_en}</span>
-                      {#if item.desc_vi}
-                        <p class="text-[11px] text-slate-300 mt-1 leading-snug line-clamp-2">{item.desc_vi}</p>
-                      {/if}
-                    </div>
-                  </div>
-                {/each}
-              </div>
-            </section>
-          {/if}
-        {/each}
-      </div>
-    </div>
-
-  <!-- MAIN TAB 3: AUGMENTS TIERLIST (100% Fixed Images & Vietnamese) -->
-  {:else if activeMainTab === 'augments'}
-    {@const currentAugmentData = data.augments[activeAugmentTier] || {}}
-
-    <div class="flex flex-col gap-6">
-      <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 p-3 rounded-2xl bg-[#0F131C] border border-white/10 shadow-lg">
-        <div class="flex items-center gap-1.5 p-1 bg-[#161B26] rounded-xl border border-white/5">
-          {#each (['silver', 'gold', 'prismatic'] as const) as type}
-            <button
-              onclick={() => (activeAugmentTier = type)}
-              class="px-4 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer whitespace-nowrap {activeAugmentTier === type ? 'bg-amber-400 text-black shadow-md' : 'text-slate-400 hover:text-white'}"
-            >
-              {type === 'silver' ? 'Lõi Bạc' : type === 'gold' ? 'Lõi Vàng' : 'Lõi Kim Cương'}
-            </button>
-          {/each}
-        </div>
-
-        <div class="flex items-center gap-2">
-          <select 
-            bind:value={selectedAugmentStage}
-            class="px-3 py-1.5 rounded-xl bg-[#161B26] border border-white/10 text-xs font-bold text-amber-400 focus:outline-none cursor-pointer"
-          >
-            <option value="All">Tất cả Vòng</option>
-            <option value="2-1">Vòng 2-1</option>
-            <option value="3-2">Vòng 3-2</option>
-            <option value="4-2">Vòng 4-2</option>
-          </select>
-
-          <input 
-            type="text" 
-            bind:value={augmentSearchText}
-            placeholder="Tìm kiếm lõi..."
-            class="px-3 py-1.5 rounded-xl bg-[#161B26] border border-white/10 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-amber-400 w-48"
-          />
-        </div>
-      </div>
-
-      <div class="flex flex-col gap-6">
-        {#each tiers as t}
-          {@const tierAugments = (currentAugmentData[t] || []).filter((aug: any) => {
-            const q = augmentSearchText.toLowerCase().trim();
-            const matchQ = !q || aug.name_vi?.toLowerCase().includes(q) || aug.name_en?.toLowerCase().includes(q) || aug.desc_vi?.toLowerCase().includes(q);
-            const matchSt = selectedAugmentStage === 'All' || !aug.stage || aug.stage === selectedAugmentStage;
-            return matchQ && matchSt;
-          })}
-
-          {#if tierAugments.length > 0}
-            <section class="flex flex-col gap-3">
-              <div class="flex items-center gap-3 p-2.5 rounded-xl bg-[#121620] border-l-4 border-amber-400 border-t border-r border-b border-white/5 text-xs font-black">
-                <span class="px-2.5 py-0.5 rounded bg-amber-400 text-black">{t} Tier</span>
-                <span class="text-slate-400">{tierAugments.length} Lõi nâng cấp</span>
-              </div>
-
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-                {#each tierAugments as aug (aug.id || aug.name_en)}
-                  {@const iconSrc = resolveAugmentIcon(aug.icon, aug.id)}
-                  <div class="flex items-start gap-3 p-3.5 rounded-xl bg-[#131722] border border-white/5 hover:border-amber-400/50 transition-all shadow-md">
-                    <div class="w-12 h-12 rounded-xl border border-white/10 overflow-hidden bg-black shrink-0 p-1 flex items-center justify-center">
-                      {#if iconSrc}
-                        <img src={iconSrc} alt="" class="w-full h-full object-contain" loading="lazy" />
-                      {/if}
-                    </div>
-                    <div class="flex flex-col flex-1 overflow-hidden">
-                      <div class="flex items-center justify-between gap-1">
-                        <span class="font-bold text-xs text-white truncate">{aug.name_vi || aug.name_en}</span>
-                        {#if aug.stage}
-                          <span class="text-[9px] font-black text-amber-400 px-1 py-0.5 rounded bg-black/40">{aug.stage}</span>
-                        {/if}
-                      </div>
-                      <span class="text-[10px] text-slate-400 truncate">{aug.name_en}</span>
-                      {#if aug.desc_vi}
-                        <p class="text-xs text-slate-300 mt-1 leading-relaxed">{aug.desc_vi}</p>
-                      {/if}
-                    </div>
-                  </div>
-                {/each}
-              </div>
-            </section>
-          {/if}
-        {/each}
-      </div>
-    </div>
-  {/if}
 
   <!-- FLOATING POPUP / OVERLAY MODAL FOR COMP DETAILS -->
   {#if showDetailModal && selectedComp}

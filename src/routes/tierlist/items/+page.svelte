@@ -2,7 +2,7 @@
   import type { PageData } from './$types';
   import { resolveItemIcon } from '$lib/utils/assets';
   import { matchesQuery } from '$lib/utils/search';
-  import { Shield, Sparkles, Search } from 'lucide-svelte';
+  import { Flame, Shield, Sparkles, Search, ExternalLink } from 'lucide-svelte';
 
   let { data }: { data: PageData } = $props();
 
@@ -34,6 +34,67 @@
 
 <div class="flex flex-col gap-6 pb-20">
   
+  <!-- Top Banner: Patch & Title (Matching Screenshot 2 exactly!) -->
+  <div class="flex flex-col gap-3">
+    <!-- Patch & Update Tag -->
+    <div class="flex items-center gap-3 text-xs font-bold">
+      <div class="px-3.5 py-1 rounded-full bg-[#161B26] border border-white/10 text-white flex items-center gap-2">
+        <span class="text-slate-400">Patch</span>
+        <span class="font-black text-amber-400">18.5c</span>
+      </div>
+
+      <a href="https://tftacademy.com/tierlist/updates/comps" target="_blank" class="text-slate-400 hover:text-amber-400 transition-colors flex items-center gap-1">
+        <span>Last Updated 13 Hours Ago</span>
+        <ExternalLink class="w-3 h-3 text-amber-400" />
+      </a>
+    </div>
+
+    <!-- Stylized Header Title: Gold Crown Logo + ITEMS • TIERLIST -->
+    <div class="flex items-center gap-3 py-1">
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-300 via-amber-400 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-400/20 shrink-0">
+        <span class="font-black text-black text-xl tracking-wider">T</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white flex items-center gap-2" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+        <span>ITEMS</span>
+        <span class="text-amber-400">•</span>
+        <span class="text-amber-400">TIERLIST</span>
+      </h1>
+    </div>
+  </div>
+
+  <!-- Subheader Navigation Bar (Matching Screenshot 2 & 6: SvelteKit client-side routing) -->
+  <div class="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4">
+    <!-- Subnav Tabs (Comps, Items, Augments) -->
+    <div class="flex items-center gap-7 text-sm font-bold tracking-tight select-none">
+      <a 
+        href="/tierlist/comps"
+        data-sveltekit-preload-data="hover"
+        class="flex items-center gap-2 pb-1.5 transition-all text-slate-400 hover:text-white cursor-pointer"
+      >
+        <Flame class="w-4 h-4" />
+        <span>Comps</span>
+      </a>
+
+      <a 
+        href="/tierlist/items"
+        data-sveltekit-preload-data="hover"
+        class="flex items-center gap-2 pb-1.5 transition-all text-amber-400 border-b-2 border-amber-400 font-black cursor-pointer"
+      >
+        <Shield class="w-4 h-4 fill-current" />
+        <span>Items</span>
+      </a>
+
+      <a 
+        href="/tierlist/augments"
+        data-sveltekit-preload-data="hover"
+        class="flex items-center gap-2 pb-1.5 transition-all text-slate-400 hover:text-white cursor-pointer"
+      >
+        <Sparkles class="w-4 h-4" />
+        <span>Augments</span>
+      </a>
+    </div>
+  </div>
+
   <!-- Category Filter Buttons & Search Bar -->
   <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 p-3.5 rounded-2xl bg-[#0F131C] border border-white/10 shadow-xl">
     
