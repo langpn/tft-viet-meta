@@ -1,5 +1,9 @@
 import { describe, expect, test } from "bun:test";
-import { parseSitemapUrls, snapshotPublicPages } from "../src/connectors/tft-academy.js";
+import {
+  filterTftAcademyScope,
+  parseSitemapUrls,
+  snapshotPublicPages,
+} from "../src/connectors/tft-academy.js";
 import { fetchDataDragonDataset, normalizeDataDragonCatalog } from "../src/connectors/riot-ddragon.js";
 import { fetchJsonResponse } from "../src/server/http.js";
 
@@ -14,6 +18,24 @@ describe("source connectors", () => {
     expect(parseSitemapUrls(xml)).toEqual([
       "https://tftacademy.com/",
       "https://tftacademy.com/guides",
+    ]);
+  });
+
+  test("keeps only the explicitly enabled TFT Academy routes", () => {
+    expect(
+      filterTftAcademyScope([
+        "https://tftacademy.com/tierlist/comps",
+        "https://tftacademy.com/tierlist/items",
+        "https://tftacademy.com/tierlist/augments",
+        "https://tftacademy.com/learn/new-set",
+        "https://tftacademy.com/guides",
+        "https://tftacademy.com/tierlist/comps/set-18-solar-kayle",
+      ]),
+    ).toEqual([
+      "https://tftacademy.com/tierlist/comps",
+      "https://tftacademy.com/tierlist/items",
+      "https://tftacademy.com/tierlist/augments",
+      "https://tftacademy.com/learn/new-set",
     ]);
   });
 

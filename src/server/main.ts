@@ -24,7 +24,7 @@ const server = Bun.serve({
       return Response.json({ query: parseExplorerQuery(url.searchParams), status: "UNVERIFIED", source: "local-explorer-contract", results: [] });
     }
     if (url.pathname === "/api/status") {
-      return Response.json({ activePatch: state.activePatch, lastSyncAt: state.lastSyncAt, indexedDocuments: state.searchDocuments.length, sourceSnapshots: state.sourceSnapshots.length, explorerSnapshots: state.explorerSnapshots.length, explorerStatus: state.explorerSnapshots.at(-1)?.status ?? "UNVERIFIED", sourceDiff: state.sourceDiff });
+      return Response.json({ activePatch: state.activePatch, lastSyncAt: state.lastSyncAt, indexedDocuments: state.searchDocuments.length, sourceSnapshots: state.sourceSnapshots.length, explorerSnapshots: state.explorerSnapshots.length, explorerStatus: state.explorerSnapshots.at(-1)?.status ?? "UNVERIFIED", sourceDiff: state.sourceDiff, academyUpdateTrigger: state.academyUpdateTrigger });
     }
     if (url.pathname === "/healthz") return Response.json({ ok: true });
 

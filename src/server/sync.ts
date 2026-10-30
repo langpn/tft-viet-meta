@@ -1,4 +1,11 @@
-import { fetchSitemap, snapshotPublicPages, type FetchText } from "../connectors/tft-academy.js";
+import {
+  filterTftAcademyScope,
+  fetchSitemap,
+  snapshotPublicPages,
+  TFT_ACADEMY_REFRESH_TARGETS,
+  TFT_ACADEMY_UPDATE_TRIGGER,
+  type FetchText,
+} from "../connectors/tft-academy.js";
 import { fetchDataDragonDataset, normalizeDataDragonCatalog } from "../connectors/riot-ddragon.js";
 import { classifySnapshotDiff } from "../core/source-lock.js";
 import { fetchExplorerSnapshot } from "../connectors/tactics-tools.js";
@@ -24,6 +31,9 @@ export type SyncReport = {
     unchanged: number;
   };
   changedUrls: SourceDiffManifest;
+  academyUpdateChanged: boolean;
+  refreshReason: "academy_update_trigger" | "routine_sync";
+  refreshTargets: string[];
 };
 
 export async function runSync(
@@ -36,6 +46,7 @@ export async function runSync(
     lastSyncAt: null,
     explorerSnapshots: [],
     sourceDiff: { added: [], modified: [], deleted: [], unchanged: [] },
+    academyUpdateTrigger: null,
   },
 ): Promise<{ state: LocalState; report: SyncReport }> {
   const versions = await dependencies.fetchJson<string[]>(
@@ -48,13 +59,33 @@ export async function runSync(
     dependencies.fetchText,
     "https://tftacademy.com/sitemap.xml",
   );
+  const [updateTrigger] = await snapshotPublicPages(
+    dependencies.fetchText,
+    [TFT_ACADEMY_UPDATE_TRIGGER],
+    retrievedAt,
+    { concurrency: 1, retries: 2 },
+  );
+  const triggerDiff = classifySnapshotDiff(
+    previousState.academyUpdateTrigger ? [previousState.academyUpdateTrigger] : [],
+    updateTrigger ? [updateTrigger] : [],
+  );
+  const academyUpdateChanged = triggerDiff.added.length > 0 || triggerDiff.modified.length > 0;
+  const scopedUrls = filterTftAcademyScope(sitemapUrls);
+  const academyPageUrls = academyUpdateChanged
+    ? [...new Set([...scopedUrls, ...TFT_ACADEMY_REFRESH_TARGETS])]
+    : scopedUrls;
   const sourceSnapshots = await snapshotPublicPages(
     dependencies.fetchText,
-    sitemapUrls,
+    academyPageUrls,
     retrievedAt,
     { concurrency: 8, retries: 2 },
   );
-  const diff = classifySnapshotDiff(previousState.sourceSnapshots, sourceSnapshots);
+  const diff = classifySnapshotDiff(
+    filterTftAcademyScope(previousState.sourceSnapshots.map((snapshot) => snapshot.url)).map(
+      (url) => previousState.sourceSnapshots.find((snapshot) => snapshot.url === url)!,
+    ),
+    sourceSnapshots,
+  );
   const changedUrls: SourceDiffManifest = {
     added: diff.added.map((snapshot) => snapshot.url),
     modified: diff.modified.map(({ current }) => current.url),
@@ -105,13 +136,18 @@ export async function runSync(
       lastSyncAt: retrievedAt,
       explorerSnapshots,
       sourceDiff: changedUrls,
+      academyUpdateTrigger: updateTrigger ?? previousState.academyUpdateTrigger ?? null,
     },
     report: {
       status: "PARTIAL",
       academyPages: sourceSnapshots.length,
       riotEntities: searchDocuments.length,
       explorerStatus,
-      sourceOfTruth: ["tftacademy.com public sitemap/pages", "Riot Data Dragon en_US + vi_VN", "tactics.tools public Explorer runtime probe"],
+      sourceOfTruth: [
+        "tftacademy.com scoped routes: /tierlist/comps, /tierlist/items, /tierlist/augments, /learn/new-set",
+        "Riot Data Dragon en_US + vi_VN",
+        "tactics.tools public Explorer runtime probe",
+      ],
       diff: {
         added: diff.added.length,
         modified: diff.modified.length,
@@ -119,6 +155,9 @@ export async function runSync(
         unchanged: diff.unchanged.length,
       },
       changedUrls,
+      academyUpdateChanged,
+      refreshReason: academyUpdateChanged ? "academy_update_trigger" : "routine_sync",
+      refreshTargets: academyUpdateChanged ? [...TFT_ACADEMY_REFRESH_TARGETS] : [],
     },
   };
 }

@@ -12,6 +12,9 @@ The repository contains the first vertical slice:
 - Stable Explorer query hashing and parity comparison.
 - Bun HTTP server with Vietnamese home page, search API, Explorer contract and status API.
 - Explicit `BLOCKED`/`UNVERIFIED` sync states. The system never invents source data.
+- TFT Academy sync scope is intentionally limited to `/tierlist/comps`, `/tierlist/items`, `/tierlist/augments`, and `/learn/new-set`.
+- `/tierlist/updates/comps` is monitored as an update trigger; when it changes, the next sync refreshes all three tier-list pages: comps, items, and augments.
+- Guides, Study Hall, Academy+, tools, creator pages, policies, historical comp detail pages, and other routes are currently out of scope.
 
 ## Run locally
 

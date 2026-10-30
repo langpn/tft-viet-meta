@@ -28,6 +28,7 @@ export type LocalState = {
   lastSyncAt: string | null;
   explorerSnapshots: ExplorerSnapshotRecord[];
   sourceDiff: SourceDiffManifest;
+  academyUpdateTrigger: SourceSnapshot | null;
 };
 
 export const defaultState: LocalState = {
@@ -37,6 +38,7 @@ export const defaultState: LocalState = {
   lastSyncAt: null,
   explorerSnapshots: [],
   sourceDiff: { added: [], modified: [], deleted: [], unchanged: [] },
+  academyUpdateTrigger: null,
 };
 
 export async function loadState(path: string): Promise<LocalState> {
@@ -47,6 +49,7 @@ export async function loadState(path: string): Promise<LocalState> {
       ...state,
       explorerSnapshots: state.explorerSnapshots ?? [],
       sourceDiff: state.sourceDiff ?? defaultState.sourceDiff,
+      academyUpdateTrigger: state.academyUpdateTrigger ?? null,
     };
   } catch (error) {
     if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;

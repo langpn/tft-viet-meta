@@ -7,6 +7,26 @@ export type SnapshotOptions = {
   retries?: number;
 };
 
+export const TFT_ACADEMY_SCOPE = [
+  "https://tftacademy.com/tierlist/comps",
+  "https://tftacademy.com/tierlist/items",
+  "https://tftacademy.com/tierlist/augments",
+  "https://tftacademy.com/learn/new-set",
+] as const;
+
+export const TFT_ACADEMY_UPDATE_TRIGGER = "https://tftacademy.com/tierlist/updates/comps";
+
+export const TFT_ACADEMY_REFRESH_TARGETS = [
+  "https://tftacademy.com/tierlist/comps",
+  "https://tftacademy.com/tierlist/items",
+  "https://tftacademy.com/tierlist/augments",
+] as const;
+
+export function filterTftAcademyScope(urls: string[]): string[] {
+  const allowed = new Set<string>(TFT_ACADEMY_SCOPE);
+  return urls.filter((url) => allowed.has(url));
+}
+
 export function parseSitemapUrls(xml: string): string[] {
   const urls = [...xml.matchAll(/<loc>\s*([^<]+?)\s*<\/loc>/g)].map((match) => match[1]);
   return [...new Set(urls)];
