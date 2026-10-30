@@ -5,6 +5,8 @@
   import CustomDropdown from '$components/CustomDropdown.svelte';
   import TftSearchBar, { type ActiveFilter } from '$components/TftSearchBar.svelte';
   import { resolveItemIcon, resolveAugmentIcon } from '$lib/utils/assets';
+  import { matchesQuery } from '$lib/utils/search';
+  import { interpolateDescription } from '$lib/utils/augment-cleaner';
   import { Flame, Shield, Sparkles, ExternalLink, Clock, Layers } from 'lucide-svelte';
 
   let { data }: { data: PageData } = $props();
@@ -14,6 +16,7 @@
 
   // Comp filters
   let activeFilters = $state<ActiveFilter[]>([]);
+  let rawQueryText = $state('');
   let selectedStyle = $state('ALL');
   let selectedSet = $state('Set 18');
   let selectedCompId = $state<string | null>(null);
@@ -53,35 +56,51 @@
         matchStyle = Boolean(comp.compStyle?.toLowerCase().includes(selectedStyle.toLowerCase()));
       }
 
-      // 2. Check multi-filters (units, items, traits, augments)
-      let matchSearch = true;
+      // 2. Check typed text search (accent-insensitive)
+      let matchText = true;
+      if (rawQueryText.trim()) {
+        const q = rawQueryText.trim();
+        const inCarry = matchesQuery(comp.mainCarry?.name, q) || matchesQuery(comp.mainCarry?.nameVi, q);
+        const inTank = matchesQuery(comp.mainTank?.name, q) || matchesQuery(comp.mainTank?.nameVi, q);
+        const inBoard = comp.board?.some((u: any) => matchesQuery(u.name_en, q) || matchesQuery(u.name_vi, q));
+        const inItems = comp.mainCarry?.items?.some((i: any) => matchesQuery(i.name_en, q) || matchesQuery(i.name_vi, q)) ||
+                        comp.mainTank?.items?.some((i: any) => matchesQuery(i.name_en, q) || matchesQuery(i.name_vi, q));
+        const inTraits = comp.traits?.some((t: any) => matchesQuery(t.name, q) || matchesQuery(t.name_vi, q));
+        const inAugs = comp.augments?.some((a: any) => matchesQuery(a.name_en, q) || matchesQuery(a.name_vi, q));
+        const inTitle = matchesQuery(comp.title, q) || matchesQuery(comp.metaTitle, q);
+
+        matchText = inCarry || inTank || inBoard || inItems || inTraits || inAugs || inTitle;
+      }
+
+      // 3. Check multi-filters (units, items, traits, augments)
+      let matchChips = true;
       if (activeFilters.length > 0) {
-        matchSearch = activeFilters.every(filter => {
-          const fid = filter.id.toLowerCase();
-          const fnameVi = filter.nameVi.toLowerCase();
-          const fnameEn = filter.nameEn.toLowerCase();
+        matchChips = activeFilters.every(filter => {
+          const fid = filter.id;
+          const fnameVi = filter.nameVi;
+          const fnameEn = filter.nameEn;
 
           // Check carry
-          if (comp.mainCarry?.id?.toLowerCase().includes(fid) || comp.mainCarry?.name?.toLowerCase().includes(fnameEn) || comp.mainCarry?.nameVi?.toLowerCase().includes(fnameVi)) return true;
+          if (matchesQuery(comp.mainCarry?.id, fid) || matchesQuery(comp.mainCarry?.name, fnameEn) || matchesQuery(comp.mainCarry?.nameVi, fnameVi)) return true;
           // Check tank
-          if (comp.mainTank?.id?.toLowerCase().includes(fid) || comp.mainTank?.name?.toLowerCase().includes(fnameEn) || comp.mainTank?.nameVi?.toLowerCase().includes(fnameVi)) return true;
+          if (matchesQuery(comp.mainTank?.id, fid) || matchesQuery(comp.mainTank?.name, fnameEn) || matchesQuery(comp.mainTank?.nameVi, fnameVi)) return true;
           // Check board units
-          if (comp.board?.some((u: any) => u.id?.toLowerCase().includes(fid) || u.name_en?.toLowerCase().includes(fnameEn) || u.name_vi?.toLowerCase().includes(fnameVi))) return true;
+          if (comp.board?.some((u: any) => matchesQuery(u.id, fid) || matchesQuery(u.name_en, fnameEn) || matchesQuery(u.name_vi, fnameVi))) return true;
           // Check items on carry or tank
-          if (comp.mainCarry?.items?.some((i: any) => i.id?.toLowerCase().includes(fid) || i.name_en?.toLowerCase().includes(fnameEn) || i.name_vi?.toLowerCase().includes(fnameVi))) return true;
-          if (comp.mainTank?.items?.some((i: any) => i.id?.toLowerCase().includes(fid) || i.name_en?.toLowerCase().includes(fnameEn) || i.name_vi?.toLowerCase().includes(fnameVi))) return true;
+          if (comp.mainCarry?.items?.some((i: any) => matchesQuery(i.id, fid) || matchesQuery(i.name_en, fnameEn) || matchesQuery(i.name_vi, fnameVi))) return true;
+          if (comp.mainTank?.items?.some((i: any) => matchesQuery(i.id, fid) || matchesQuery(i.name_en, fnameEn) || matchesQuery(i.name_vi, fnameVi))) return true;
           // Check traits
-          if (comp.traits?.some((t: any) => t.name?.toLowerCase().includes(fnameEn) || t.name_vi?.toLowerCase().includes(fnameVi))) return true;
+          if (comp.traits?.some((t: any) => matchesQuery(t.name, fnameEn) || matchesQuery(t.name_vi, fnameVi))) return true;
           // Check augments
-          if (comp.augments?.some((a: any) => a.id?.toLowerCase().includes(fid) || a.name_en?.toLowerCase().includes(fnameEn) || a.name_vi?.toLowerCase().includes(fnameVi))) return true;
+          if (comp.augments?.some((a: any) => matchesQuery(a.id, fid) || matchesQuery(a.name_en, fnameEn) || matchesQuery(a.name_vi, fnameVi))) return true;
           // Check title
-          if (comp.title?.toLowerCase().includes(fnameEn) || comp.title?.toLowerCase().includes(fnameVi)) return true;
+          if (matchesQuery(comp.title, fnameEn) || matchesQuery(comp.title, fnameVi) || matchesQuery(comp.metaTitle, fnameEn) || matchesQuery(comp.metaTitle, fnameVi)) return true;
 
           return false;
         });
       }
 
-      const isMatch = matchStyle && matchSearch;
+      const isMatch = matchStyle && matchText && matchChips;
       return { comp, isMatch };
     });
   });
@@ -200,6 +219,7 @@
         <TftSearchBar 
           activeFilters={activeFilters}
           onfilterchange={(next) => (activeFilters = next)}
+          ontextchange={(txt) => (rawQueryText = txt)}
         />
 
         <!-- Custom Dropdown for Comp Style (Screenshot 5) -->

@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { PageData } from './$types';
   import HexAvatar from '$components/HexAvatar.svelte';
+  import { matchesQuery } from '$lib/utils/search';
   import { Sparkles, Wand2, Users, Flame, Shield, Search } from 'lucide-svelte';
 
   let { data }: { data: PageData } = $props();
@@ -13,8 +14,9 @@
 
   const filteredWisps = $derived.by(() => {
     return (data.newSet.wisps || []).filter((w: any) => {
-      const q = searchQuery.toLowerCase().trim();
-      const matchQuery = !q || w.name_vi?.toLowerCase().includes(q) || w.name_en?.toLowerCase().includes(q) || w.desc_vi?.toLowerCase().includes(q);
+      const matchQuery = matchesQuery(w.name_vi, searchQuery) || 
+                         matchesQuery(w.name_en, searchQuery) || 
+                         matchesQuery(w.desc_vi, searchQuery);
       const matchCategory = selectedWispCategory === 'All' || w.category === selectedWispCategory;
       return matchQuery && matchCategory;
     });
@@ -22,15 +24,16 @@
 
   const filteredChampions = $derived.by(() => {
     return (data.newSet.champions || []).filter((c: any) => {
-      const q = searchQuery.toLowerCase().trim();
-      return !q || c.name_vi?.toLowerCase().includes(q) || c.name?.toLowerCase().includes(q) || c.traits?.some((t: string) => t.toLowerCase().includes(q));
+      return matchesQuery(c.name_vi, searchQuery) || 
+             matchesQuery(c.name, searchQuery) || 
+             c.traits?.some((t: string) => matchesQuery(t, searchQuery));
     });
   });
 
   const filteredTraits = $derived.by(() => {
     return (data.newSet.traits || []).filter((t: any) => {
-      const q = searchQuery.toLowerCase().trim();
-      return !q || t.name_vi?.toLowerCase().includes(q) || t.name?.toLowerCase().includes(q);
+      return matchesQuery(t.name_vi, searchQuery) || 
+             matchesQuery(t.name, searchQuery);
     });
   });
 </script>

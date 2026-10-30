@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { PageData } from './$types';
   import { resolveItemIcon } from '$lib/utils/assets';
+  import { matchesQuery } from '$lib/utils/search';
   import { Shield, Sparkles, Search } from 'lucide-svelte';
 
   let { data }: { data: PageData } = $props();
@@ -64,8 +65,9 @@
   <div class="flex flex-col gap-8">
     {#each tiers as t}
       {@const tierItems = (currentCategoryData[t] || []).filter((item: any) => {
-        const q = searchQuery.toLowerCase().trim();
-        return !q || item.name_vi?.toLowerCase().includes(q) || item.name_en?.toLowerCase().includes(q) || item.desc_vi?.toLowerCase().includes(q);
+        return matchesQuery(item.name_vi, searchQuery) || 
+               matchesQuery(item.name_en, searchQuery) || 
+               matchesQuery(item.desc_vi, searchQuery);
       })}
 
       {#if tierItems.length > 0}

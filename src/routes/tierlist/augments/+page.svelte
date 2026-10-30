@@ -1,6 +1,8 @@
 <script lang="ts">
   import type { PageData } from './$types';
   import { resolveAugmentIcon } from '$lib/utils/assets';
+  import { matchesQuery } from '$lib/utils/search';
+  import { interpolateDescription } from '$lib/utils/augment-cleaner';
   import { Sparkles, Search, Clock } from 'lucide-svelte';
 
   let { data }: { data: PageData } = $props();
@@ -83,8 +85,9 @@
   <div class="flex flex-col gap-8">
     {#each tiers as t}
       {@const tierAugments = (currentTierData[t] || []).filter((aug: any) => {
-        const q = searchQuery.toLowerCase().trim();
-        const matchQuery = !q || aug.name_vi?.toLowerCase().includes(q) || aug.name_en?.toLowerCase().includes(q) || aug.desc_vi?.toLowerCase().includes(q);
+        const matchQuery = matchesQuery(aug.name_vi, searchQuery) || 
+                           matchesQuery(aug.name_en, searchQuery) || 
+                           matchesQuery(aug.desc_vi, searchQuery);
         const matchStage = selectedStage === 'All' || !aug.stage || aug.stage === selectedStage;
         return matchQuery && matchStage;
       })}
@@ -134,7 +137,7 @@
                   {/if}
                   
                   {#if aug.desc_vi}
-                    <p class="text-xs text-slate-300 mt-1.5 leading-relaxed">{aug.desc_vi}</p>
+                    <p class="text-xs text-slate-300 mt-1.5 leading-relaxed">{interpolateDescription(aug.desc_vi)}</p>
                   {/if}
                 </div>
               </div>

@@ -47,7 +47,7 @@
       "category": "Combat",
       "cost": 15,
       "desc_en": "Kill EVERYONE without items after 10 seconds.",
-      "desc_vi": "Tiêu diệt TẤT CẢ ĐƠN VỊ không có trang bị sau @KillDelay@ giây.",
+      "desc_vi": "Tiêu diệt TẤT CẢ ĐƠN VỊ không có trang bị sau 10 giây.",
       "rules": "at least 3 itemized units on team"
     },
     {
@@ -74,7 +74,7 @@
       "category": "GoldXP",
       "cost": 10,
       "desc_en": "Gain 16 XP.",
-      "desc_vi": "Nhận @XP@ XP.",
+      "desc_vi": "Nhận 10 XP.",
       "rules": ""
     },
     {
@@ -101,7 +101,7 @@
       "category": "GoldXP",
       "cost": 10,
       "desc_en": "Rerolls and XP are half price.",
-      "desc_vi": "Trong vòng này, làm mới sẽ tốn @RerollCost@ vàng và mua XP sẽ tốn @XPCost@ vàng.",
+      "desc_vi": "Trong vòng này, làm mới sẽ tốn 1 vàng và mua XP sẽ tốn 3 vàng.",
       "rules": "have at least 30 gold"
     },
     {
@@ -128,7 +128,7 @@
       "category": "Shop",
       "cost": 8,
       "desc_en": "For 20 seconds, your shop refreshes for free every 2 seconds.",
-      "desc_vi": "Trong @Duration@ giây, cửa hàng của bạn sẽ làm mới miễn phí sau mỗi @Period@ giây.",
+      "desc_vi": "Trong 18 giây, cửa hàng của bạn sẽ làm mới miễn phí sau mỗi 2 giây.",
       "rules": ""
     },
     {
@@ -155,7 +155,7 @@
       "category": "Shop",
       "cost": 7,
       "desc_en": "Gain 7 shop rerolls.",
-      "desc_vi": "Nhận @NumRerolls@ lượt đổi cửa hàng.",
+      "desc_vi": "Nhận 7 lượt đổi cửa hàng.",
       "rules": ""
     },
     {
@@ -164,7 +164,7 @@
       "category": "Combat",
       "cost": 6,
       "desc_en": "After 12 seconds, 1 random equipped item temporarily becomes Radiant.",
-      "desc_vi": "Sau @DelayUpgrade@ giây, @NumItemsUpgrade@ trang bị ngẫu nhiên đang được trang bị sẽ tạm thời trở thành dạng Ánh Sáng.",
+      "desc_vi": "Sau 5 giây, 1 trang bị ngẫu nhiên đang được trang bị sẽ tạm thời trở thành dạng Ánh Sáng.",
       "rules": ""
     },
     {
@@ -173,7 +173,7 @@
       "category": "Combat",
       "cost": 6,
       "desc_en": "A temporary 1-star 5-cost with 1 recommended item joins your team.",
-      "desc_vi": "1 tướng @UnitTier@ vàng @StarLevel@ sao tạm thời với @NumRecommendedItems@ trang bị khuyên dùng sẽ gia nhập đội của bạn.",
+      "desc_vi": "1 tướng 5 vàng 1 sao tạm thời với 1 trang bị khuyên dùng sẽ gia nhập đội của bạn.",
       "rules": ""
     },
     {
@@ -182,7 +182,7 @@
       "category": "Combat",
       "cost": 6,
       "desc_en": "Slow, Burn, Shred, and Sunder enemies for 8 seconds.",
-      "desc_vi": "Gây Làm Chậm, Thiêu Đốt, Cào Xé và Phân Tách lên kẻ địch trong @DurationUpgrade@ giây.",
+      "desc_vi": "Gây Làm Chậm, Thiêu Đốt, Cào Xé và Phân Tách lên kẻ địch trong 12 giây.",
       "rules": ""
     },
     {
@@ -200,7 +200,7 @@
       "category": "Combat",
       "cost": 6,
       "desc_en": "Every 8 seconds, stun enemies for 1 second.",
-      "desc_vi": "Mỗi @StunInterval@ giây, Làm Choáng kẻ địch trong @StunDuration@ giây.",
+      "desc_vi": "Mỗi 8 giây, Làm Choáng kẻ địch trong 1 giây.",
       "rules": ""
     },
     {
@@ -209,7 +209,7 @@
       "category": "Item",
       "cost": 6,
       "desc_en": "Open a store where you can buy an item. They cost 0 to 10 gold.",
-      "desc_vi": "Mở cửa hàng trang bị ngẫu nhiên. Trang bị ngẫu nhiên có giá từ 0 đến @TooltipMaxCostOfItem@ vàng.",
+      "desc_vi": "Mở cửa hàng trang bị ngẫu nhiên. Trang bị ngẫu nhiên có giá từ 0 đến 14 vàng.",
       "rules": ""
     },
     {
@@ -254,7 +254,7 @@
       "category": "Combat",
       "cost": 5,
       "desc_en": "Your first 3 champions to die stun their killer for 1 second.",
-      "desc_vi": "@NumUnits@ tướng đầu tiên của bạn bị hạ gục sẽ làm choáng kẻ đã hạ gục họ trong @StunDuration@ giây.",
+      "desc_vi": "3 tướng đầu tiên của bạn bị hạ gục sẽ làm choáng kẻ đã hạ gục họ trong 1.5 giây.",
       "rules": ""
     },
     {
@@ -263,7 +263,7 @@
       "category": "Misc",
       "cost": 5,
       "desc_en": "Gain 5 random consumables that give Armor, Magic Resist, or Health.",
-      "desc_vi": "Nhận @Boost3_Num@ vật phẩm tiêu thụ giúp tăng vĩnh viễn Giáp & Kháng Phép hoặc Máu.",
+      "desc_vi": "Nhận 3 vật phẩm tiêu thụ giúp tăng vĩnh viễn Giáp & Kháng Phép hoặc Máu.",
       "rules": ""
     },
     {
@@ -281,7 +281,7 @@
       "category": "Misc",
       "cost": 5,
       "desc_en": "Gain 4 random consumables that give Attack Damage or Attack Speed.",
-      "desc_vi": "Nhận @Boost3_Num@ vật phẩm tiêu thụ giúp tăng vĩnh viễn Sức Mạnh Công Kích hoặc Tốc Độ Đánh.",
+      "desc_vi": "Nhận 3 vật phẩm tiêu thụ giúp tăng vĩnh viễn Sức Mạnh Công Kích hoặc Tốc Độ Đánh.",
       "rules": ""
     },
     {
@@ -290,7 +290,7 @@
       "category": "Combat",
       "cost": 5,
       "desc_en": "Clone your highest damage champion. The clone deals 20% damage.",
-      "desc_vi": "Nhân bản tướng gây sát thương cao nhất của bạn. Bản sao gây @CloneDamageMultiplierPrismatic*100@% sát thương.",
+      "desc_vi": "Nhân bản tướng gây sát thương cao nhất của bạn. Bản sao gây 100% sát thương.",
       "rules": ""
     },
     {
@@ -299,7 +299,7 @@
       "category": "Combat",
       "cost": 5,
       "desc_en": "Your champions explode on death, dealing 20% max health magic damage.",
-      "desc_vi": "Tướng của bạn phát nổ khi bị hạ gục, gây sát thương phép bằng @maxHealthExplosionDamage*100@% Máu Tối Đa.",
+      "desc_vi": "Tướng của bạn phát nổ khi bị hạ gục, gây sát thương phép bằng 15% Máu Tối Đa.",
       "rules": ""
     },
     {
@@ -317,7 +317,7 @@
       "category": "Combat",
       "cost": 5,
       "desc_en": "Every 1 second deal 7% max health true damage to an enemy.",
-      "desc_vi": "Mỗi @Frequency@ giây, gây sát thương chuẩn bằng @HPPercentDamage*100@% Máu Tối Đa lên 1 kẻ địch.",
+      "desc_vi": "Mỗi 1 giây, gây sát thương chuẩn bằng 5% Máu Tối Đa lên 1 kẻ địch.",
       "rules": ""
     },
     {
@@ -335,7 +335,7 @@
       "category": "Combat",
       "cost": 5,
       "desc_en": "A temporary 3 star 1-cost with 1 recommended item joins your team.",
-      "desc_vi": "Một biệt đội gồm @PrismaticNumUnits@ tướng @UnitTier@ vàng @PrismaticStarLevel@ sao sẽ tạm thời gia nhập đội của bạn.",
+      "desc_vi": "Một biệt đội gồm 5 tướng 1 vàng 4 sao sẽ tạm thời gia nhập đội của bạn.",
       "rules": ""
     },
     {
@@ -398,7 +398,7 @@
       "category": "Combat",
       "cost": 4,
       "desc_en": "After 8 seconds, the leftmost benched champion joins combat with 2 items.",
-      "desc_vi": "Sau @UnitJoinDelay@ giây, tướng ngoài cùng bên trái trên hàng chờ tham gia giao tranh và nhận @NumRecItems@ trang bị khuyên dùng.",
+      "desc_vi": "Sau 8 giây, tướng ngoài cùng bên trái trên hàng chờ tham gia giao tranh và nhận 2 trang bị khuyên dùng.",
       "rules": ""
     },
     {
@@ -407,7 +407,7 @@
       "category": "Combat",
       "cost": 4,
       "desc_en": "Up to 2 1-star champions temporarily star up during combat.",
-      "desc_vi": "Tối đa @UpgradeNumChampsToStarUp@ tướng 1 sao sẽ tạm thời được nâng sao trong giao tranh.",
+      "desc_vi": "Tối đa 3 tướng 1 sao sẽ tạm thời được nâng sao trong giao tranh.",
       "rules": "1 or more 1* 3-5 cost champion on board"
     },
     {
@@ -416,7 +416,7 @@
       "category": "Combat",
       "cost": 4,
       "desc_en": "A random back row champion gains 75% AS for 7 seconds.",
-      "desc_vi": "Một tướng ngẫu nhiên ở hàng sau nhận @ASMultiplier*100@% Tốc Độ Đánh trong @ASDuration@ giây.",
+      "desc_vi": "Một tướng ngẫu nhiên ở hàng sau nhận 100% Tốc Độ Đánh trong 7 giây.",
       "rules": ""
     },
     {
@@ -425,7 +425,7 @@
       "category": "Combat",
       "cost": 4,
       "desc_en": "The BFF eats enemies he damages under 10% Max Health.",
-      "desc_vi": "LXKL nuốt sống những kẻ địch còn dưới @ExecuteThresholdUpgrade*100@% Máu Tối Đa mà nó gây sát thương lên.",
+      "desc_vi": "LXKL nuốt sống những kẻ địch còn dưới 22% Máu Tối Đa mà nó gây sát thương lên.",
       "rules": "sprykin trait active"
     },
     {
@@ -434,7 +434,7 @@
       "category": "Combat",
       "cost": 4,
       "desc_en": "At combat start up to 2 inactive traits activate at the lowest level.",
-      "desc_vi": "Bắt đầu giao tranh: Tối đa @NumTraitsActivated@ tộc/hệ chưa kích hoạt sẽ được kích hoạt ở mốc thấp nhất.",
+      "desc_vi": "Bắt đầu giao tranh: Tối đa 2 tộc/hệ chưa kích hoạt sẽ được kích hoạt ở mốc thấp nhất.",
       "rules": ""
     },
     {
@@ -443,7 +443,7 @@
       "category": "Combat",
       "cost": 4,
       "desc_en": "Champions gain 4% Max Health Shield and 4% Damage Amp per adjacent ally.",
-      "desc_vi": "Tướng nhận Lá Chắn bằng @MaxHealthShield*100@% Máu Tối Đa và @DamageAmp*100@% Khuếch Đại Sát Thương với mỗi đồng minh liền kề.",
+      "desc_vi": "Tướng nhận Lá Chắn bằng 4% Máu Tối Đa và 4% Khuếch Đại Sát Thương với mỗi đồng minh liền kề.",
       "rules": ""
     },
     {
@@ -452,7 +452,7 @@
       "category": "Combat",
       "cost": 4,
       "desc_en": "Your highest health champion gains 600 health and grows in size.",
-      "desc_vi": "Đơn vị có lượng Máu cao nhất của bạn sẽ lớn lên, nhận thêm @HPGain@ Máu.",
+      "desc_vi": "Đơn vị có lượng Máu cao nhất của bạn sẽ lớn lên, nhận thêm 800 Máu.",
       "rules": ""
     },
     {
@@ -461,7 +461,7 @@
       "category": "Combat",
       "cost": 4,
       "desc_en": "Your highest Health ally deals 2% max Health damage per second in an area.",
-      "desc_vi": "Đồng minh nhiều Máu nhất của bạn gây sát thương bằng @Damage_Upgrade*100@% Máu tối đa mỗi giây trong một khu vực.",
+      "desc_vi": "Đồng minh nhiều Máu nhất của bạn gây sát thương bằng 3% Máu tối đa mỗi giây trong một khu vực.",
       "rules": ""
     },
     {
@@ -479,7 +479,7 @@
       "category": "Shop",
       "cost": 4,
       "desc_en": "Reroll your shop with all 4-cost champions.",
-      "desc_vi": "Làm mới cửa hàng với toàn tướng 4 vàng. Nhận @AllFoursUpgradeGold@ vàng.",
+      "desc_vi": "Làm mới cửa hàng với toàn tướng 4 vàng. Nhận 2 vàng.",
       "rules": ""
     },
     {
@@ -560,7 +560,7 @@
       "category": "Combat",
       "cost": 3,
       "desc_en": "Champions with 3 items gain HEROIC POWER, but other allies are sacrificed.",
-      "desc_vi": "@NumAllies@ tướng mạnh nhất nhận SỨC MẠNH ANH HÙNG, các đồng minh khác bị hiến tế.",
+      "desc_vi": "3 tướng mạnh nhất nhận SỨC MẠNH ANH HÙNG , các đồng minh khác bị hiến tế.",
       "rules": ""
     },
     {
@@ -569,7 +569,7 @@
       "category": "Shop",
       "cost": 3,
       "desc_en": "The next 2 rerolls this round will have 2+ champions fielded last combat.",
-      "desc_vi": "@NumShops@ lượt đổi tiếp theo trong vòng này sẽ có @NumUnitsPerShop@+ tướng đã triển khai ở giao tranh trước.",
+      "desc_vi": "2 lượt đổi tiếp theo trong vòng này sẽ có 2+ tướng đã triển khai ở giao tranh trước.",
       "rules": ""
     },
     {
@@ -578,7 +578,7 @@
       "category": "GoldXP",
       "cost": 3,
       "desc_en": "For each ally champion alive at 15 seconds, gain 2 XP.",
-      "desc_vi": "Với mỗi tướng đồng minh còn sống sau @WaitTime@ giây, nhận @XPAdded@ XP.",
+      "desc_vi": "Với mỗi tướng đồng minh còn sống sau 15 giây, nhận 2 XP.",
       "rules": ""
     },
     {
@@ -587,7 +587,7 @@
       "category": "Misc",
       "cost": 3,
       "desc_en": "Gain 3 random consumables that give Armor, Magic Resist, or Health.",
-      "desc_vi": "Nhận @Boost2_Num@ vật phẩm tiêu thụ giúp tăng vĩnh viễn Giáp & Kháng Phép hoặc Máu.",
+      "desc_vi": "Nhận 2 vật phẩm tiêu thụ giúp tăng vĩnh viễn Giáp & Kháng Phép hoặc Máu.",
       "rules": ""
     },
     {
@@ -605,7 +605,7 @@
       "category": "Combat",
       "cost": 3,
       "desc_en": "Champions alone in their row gain 15% Health and 15% Damage Amp.",
-      "desc_vi": "Tướng đứng một mình một hàng nhận được @Health_Upgrade*100@% Máu và @DamageAmp_Upgrade*100@% Khuếch Đại Sát Thương.",
+      "desc_vi": "Tướng đứng một mình một hàng nhận được 20% Máu và 20% Khuếch Đại Sát Thương.",
       "rules": "elderwood trait not active"
     },
     {
@@ -614,7 +614,7 @@
       "category": "Combat",
       "cost": 3,
       "desc_en": "Casters spawn a firefly per 20 mana spent. Each deals 150 magic damage.",
-      "desc_vi": "Tướng Thuật Sư của bạn sinh ra 1 đom đóm với mỗi @ManaPerFirefly@ Năng Lượng đã tiêu hao. Mỗi đom đóm gây @FireflyDamage@ sát thương phép.",
+      "desc_vi": "Tướng Thuật Sư của bạn sinh ra 1 đom đóm với mỗi 20 Năng Lượng đã tiêu hao. Mỗi đom đóm gây 110 sát thương phép.",
       "rules": "2 or more casters on board"
     },
     {
@@ -632,7 +632,7 @@
       "category": "Combat",
       "cost": 3,
       "desc_en": "Your tanks gain a 20% Max Health shield upon falling below 50% Health.",
-      "desc_vi": "Tướng Đỡ Đòn của bạn nhận lá chắn bằng @ShieldPercentHealth*100@% Máu Tối Đa khi còn dưới @HealthThreshold*100@% Máu.",
+      "desc_vi": "Tướng Đỡ Đòn của bạn nhận lá chắn bằng 20% Máu Tối Đa khi còn dưới 50% Máu.",
       "rules": "2 or more tanks on board"
     },
     {
@@ -641,7 +641,7 @@
       "category": "Combat",
       "cost": 3,
       "desc_en": "Enemies attacking your highest health champion deal 10% less damage.",
-      "desc_vi": "Kẻ địch tấn công tướng có lượng máu cao nhất của bạn sẽ bị giảm @DamageReduction_Upgrade*100@% sát thương gây ra.",
+      "desc_vi": "Kẻ địch tấn công tướng có lượng máu cao nhất của bạn sẽ bị giảm 20% sát thương gây ra.",
       "rules": ""
     },
     {
@@ -650,7 +650,7 @@
       "category": "Combat",
       "cost": 3,
       "desc_en": "Your units with Precision gain 25% Critical Strike Damage.",
-      "desc_vi": "Các đồng minh có Chuẩn Xác nhận @CritDamage*100@% Sát Thương Chí Mạng.",
+      "desc_vi": "Các đồng minh có Chuẩn Xác nhận 25% Sát Thương Chí Mạng.",
       "rules": "at least 1 unit in army has precision"
     },
     {
@@ -659,7 +659,7 @@
       "category": "Combat",
       "cost": 3,
       "desc_en": "Your casters have 15% less max mana.",
-      "desc_vi": "Tướng Thuật Sư của bạn được giảm @MaxManaMultiplier*100@% Năng Lượng Tối Đa.",
+      "desc_vi": "Tướng Thuật Sư của bạn được giảm 15% Năng Lượng Tối Đa.",
       "rules": "2 or more casters on board"
     },
     {
@@ -668,7 +668,7 @@
       "category": "Combat",
       "cost": 3,
       "desc_en": "Increase all enemies' Max Mana by 15 until their next cast.",
-      "desc_vi": "Tăng Năng Lượng Tối Đa của tất cả kẻ địch thêm @ManaIncreasePrismatic@ cho đến lần tung chiêu tiếp theo của chúng.",
+      "desc_vi": "Tăng Năng Lượng Tối Đa của tất cả kẻ địch thêm 150 cho đến lần tung chiêu tiếp theo của chúng.",
       "rules": ""
     },
     {
@@ -677,7 +677,7 @@
       "category": "Combat",
       "cost": 3,
       "desc_en": "Fighters gain 1 range.",
-      "desc_vi": "Các Tướng Đấu Sĩ của bạn được tăng @RangeIncrease@ tầm đánh.",
+      "desc_vi": "Các Tướng Đấu Sĩ của bạn được tăng 1 tầm đánh.",
       "rules": "2 or more fighters on board"
     },
     {
@@ -686,7 +686,7 @@
       "category": "Combat",
       "cost": 3,
       "desc_en": "Fighters execute targets under 10% Health. They gain 15% Attack Speed on kill.",
-      "desc_vi": "Các Tướng Đấu Sĩ hành quyết mục tiêu khi mục tiêu còn dưới @ExecuteThreshold@% Máu. Họ nhận @OnKillAtkSpdAmount*100@% Tốc Độ Đánh khi hạ gục.",
+      "desc_vi": "Các Tướng Đấu Sĩ hành quyết mục tiêu khi mục tiêu còn dưới 12% Máu. Họ nhận 30% Tốc Độ Đánh khi hạ gục.",
       "rules": "2 or more fighters on board"
     },
     {
@@ -695,7 +695,7 @@
       "category": "Combat",
       "cost": 3,
       "desc_en": "Your marksmen have a 25% chance to double attack.",
-      "desc_vi": "Tướng Xạ Thủ của bạn có @DoubleAttackChance_Upgrade*100@% cơ hội tung đòn đánh đôi.",
+      "desc_vi": "Tướng Xạ Thủ của bạn có 45% cơ hội tung đòn đánh đôi.",
       "rules": "2 or more marksmen on board"
     },
     {
@@ -713,7 +713,7 @@
       "category": "Combat",
       "cost": 3,
       "desc_en": "Champions with no adjacent allies gain 10% Max HP and Damage Amp.",
-      "desc_vi": "Các tướng không có đồng minh liền kề nhận @MaxHPBuffUpgrade*100@% Máu Tối Đa và @DamageAmpUpgrade*100@% Khuếch Đại Sát Thương.",
+      "desc_vi": "Các tướng không có đồng minh liền kề nhận 15% Máu Tối Đa và 15% Khuếch Đại Sát Thương.",
       "rules": "can't appear if sunbeam or moonbeam is active"
     },
     {
@@ -722,7 +722,7 @@
       "category": "Combat",
       "cost": 3,
       "desc_en": "Whenever an ally dies, your champions gain 4% stacking Damage Amp.",
-      "desc_vi": "Mỗi khi một đồng minh hy sinh, các tướng của bạn nhận @DamageAmp*100@% Khuếch Đại Sát Thương cộng dồn.",
+      "desc_vi": "Mỗi khi một đồng minh hy sinh, các tướng của bạn nhận 4% Khuếch Đại Sát Thương cộng dồn.",
       "rules": ""
     },
     {
@@ -749,7 +749,7 @@
       "category": "Shop",
       "cost": 3,
       "desc_en": "Reroll your shop. Inferno lights 2 shop slots on fire, upgrading them.",
-      "desc_vi": "Làm mới cửa hàng của bạn. Tướng Hỏa Ngục thắp lửa @Upgrade_FireSlots@ ô cửa hàng, nâng cấp chúng.",
+      "desc_vi": "Làm mới cửa hàng của bạn. Tướng Hỏa Ngục thắp lửa 3 ô cửa hàng, nâng cấp chúng.",
       "rules": "Inferno trait active"
     },
     {
@@ -776,7 +776,7 @@
       "category": "Combat",
       "cost": 3,
       "desc_en": "2 champions without items gain a temporary recommended item.",
-      "desc_vi": "Bắt đầu giao tranh: @NumChamps@ tướng không có trang bị nhận 1 trang bị khuyên dùng tạm thời.",
+      "desc_vi": "Bắt đầu giao tranh: 2 tướng không có trang bị nhận 1 trang bị khuyên dùng tạm thời.",
       "rules": ""
     },
     {
@@ -785,7 +785,7 @@
       "category": "Combat",
       "cost": 3,
       "desc_en": "Gain 2 Training Dummies each with a random tank item.",
-      "desc_vi": "Nhận @NumDummiesUpgrade@ Hình Nhân, mỗi Hình Nhân mang 1 trang bị đỡ đòn ngẫu nhiên.",
+      "desc_vi": "Nhận 3 Hình Nhân, mỗi Hình Nhân mang 1 trang bị đỡ đòn ngẫu nhiên.",
       "rules": ""
     },
     {
@@ -794,7 +794,7 @@
       "category": "Combat",
       "cost": 3,
       "desc_en": "Gain 3% damage amp for every 10 gold you have.",
-      "desc_vi": "Nhận @DamageAmpUpgrade*100@% Khuếch Đại Sát Thương với mỗi @PerXGold@ vàng bạn có.",
+      "desc_vi": "Nhận 4% Khuếch Đại Sát Thương với mỗi 10 vàng bạn có.",
       "rules": "more than 30 gold."
     },
     {
@@ -803,7 +803,7 @@
       "category": "Combat",
       "cost": 3,
       "desc_en": "Allies have a 99% chance to dodge attacks for 4 seconds.",
-      "desc_vi": "Đồng minh có @DodgeChance@% cơ hội né đòn trong @Duration@ giây.",
+      "desc_vi": "Đồng minh có 99% cơ hội né đòn trong 4 giây.",
       "rules": ""
     },
     {
@@ -821,7 +821,7 @@
       "category": "Risky",
       "cost": 3,
       "desc_en": "Every 5 seconds, your champions have a 20% chance to drop 1 gold.",
-      "desc_vi": "Mỗi @Timer_Upgraded@ giây, các tướng của bạn có @PercentChance*100@% xác suất rơi ra @GoldDrop@ Vàng.",
+      "desc_vi": "Mỗi 4 giây, các tướng của bạn có 20% xác suất rơi ra 1 Vàng.",
       "rules": ""
     },
     {
@@ -830,7 +830,7 @@
       "category": "Shop",
       "cost": 3,
       "desc_en": "You have a 60% chance to get a free reroll with each kill.",
-      "desc_vi": "@RerollChanceOnKillUpgrade*100@% cơ hội nhận được 1 lượt đổi với mỗi mạng hạ gục và nhận thêm @RerollsOnWinUpgrade@ lượt đổi nếu bạn chiến thắng.",
+      "desc_vi": "60% cơ hội nhận được 1 lượt đổi với mỗi mạng hạ gục và nhận thêm 1 lượt đổi nếu bạn chiến thắng.",
       "rules": ""
     },
     {
@@ -839,7 +839,7 @@
       "category": "Risky",
       "cost": 3,
       "desc_en": "For each ally champion that survives combat, gain 2 gold.",
-      "desc_vi": "Với mỗi tướng đồng minh sống sót sau giao tranh, nhận @UpgradeGoldPerSurvivor@ Vàng.",
+      "desc_vi": "Với mỗi tướng đồng minh sống sót sau giao tranh, nhận 3 Vàng.",
       "rules": ""
     },
     {
@@ -857,7 +857,7 @@
       "category": "Combat",
       "cost": 3,
       "desc_en": "Your team heals 1% Max Health per second.",
-      "desc_vi": "Đội của bạn hồi @HealPerSecondUpgrade*100@% Máu tối đa mỗi giây.",
+      "desc_vi": "Đội của bạn hồi 2% Máu tối đa mỗi giây.",
       "rules": ""
     },
     {
@@ -866,7 +866,7 @@
       "category": "GoldXP",
       "cost": 3,
       "desc_en": "Gain 6 XP.",
-      "desc_vi": "Nhận @XP@ XP.",
+      "desc_vi": "Nhận 4 XP.",
       "rules": ""
     },
     {
@@ -875,7 +875,7 @@
       "category": "Item",
       "cost": 3,
       "desc_en": "After 20 champion deaths, gain a component anvil.",
-      "desc_vi": "Sau @NumDeathsToProc@ lần tướng tử trận, nhận 1 gói trang bị thành phần.",
+      "desc_vi": "Sau 20 lần tướng tử trận, nhận 1 gói trang bị thành phần.",
       "rules": ""
     },
     {
@@ -884,7 +884,7 @@
       "category": "Shop",
       "cost": 3,
       "desc_en": "For each ally champion alive at 18 seconds, gain a reroll.",
-      "desc_vi": "Với mỗi tướng đồng minh còn sống sau @Upgrade_WaitTime@ giây, nhận 1 lượt đổi.",
+      "desc_vi": "Với mỗi tướng đồng minh còn sống sau 16 giây, nhận 1 lượt đổi.",
       "rules": ""
     },
     {
@@ -902,7 +902,7 @@
       "category": "Champion",
       "cost": 3,
       "desc_en": "Gain a Rengar or a Kha'Zix. They gain 3 takedowns.",
-      "desc_vi": "Nhận 1 Rengar hoặc 1 Kha'Zix. Tướng này nhận @NumStacks@ điểm hạ gục.",
+      "desc_vi": "Nhận 1 Rengar hoặc 1 Kha'Zix. Tướng này nhận 3 điểm hạ gục.",
       "rules": ""
     },
     {
@@ -974,7 +974,7 @@
       "category": "Combat",
       "cost": 2,
       "desc_en": "Shields are 15% stronger. Allies gain 150 shield for 10 seconds.",
-      "desc_vi": "Lá Chắn sẽ mạnh hơn @BonusShieldPercent*100@%. Đồng minh nhận @ShieldAmount@ lá chắn trong @ShieldDuration@ giây.",
+      "desc_vi": "Lá Chắn sẽ mạnh hơn 15%. Đồng minh nhận 150 lá chắn trong 10 giây.",
       "rules": ""
     },
     {
@@ -983,7 +983,7 @@
       "category": "Combat",
       "cost": 2,
       "desc_en": "Your tanks reflect 12% of damage taken to adjacent enemies every 4 seconds.",
-      "desc_vi": "Tướng Chống Chịu của bạn phản lại @DamageReflectionMult*100@% sát thương nhận vào lên những kẻ địch liền kề mỗi @ReflectFrequency@ giây.",
+      "desc_vi": "Tướng Chống Chịu của bạn phản lại 12% sát thương nhận vào lên những kẻ địch liền kề mỗi 4 giây.",
       "rules": "only if you have 2 or more tanks on your team"
     },
     {
@@ -992,7 +992,7 @@
       "category": "Combat",
       "cost": 2,
       "desc_en": "Your Marksmen's attacks grant 3% stacking AS.",
-      "desc_vi": "Đòn đánh của Xạ Thủ tăng @AttackSpeed*100@% Tốc Độ Đánh cộng dồn.",
+      "desc_vi": "Đòn đánh của Xạ Thủ tăng 3% Tốc Độ Đánh cộng dồn.",
       "rules": "2 or more marksmen on board"
     },
     {
@@ -1001,7 +1001,7 @@
       "category": "Combat",
       "cost": 2,
       "desc_en": "After 10 seconds, stun all enemies for 1.5 seconds.",
-      "desc_vi": "Sau @ActivationDelay@ và @SecondActivationDelayUpgrade@ giây, làm choáng tất cả kẻ địch trong @StunDurationUpgrade@ giây.",
+      "desc_vi": "Sau 8 và 18 giây, làm choáng tất cả kẻ địch trong 1.5 giây.",
       "rules": ""
     },
     {
@@ -1010,7 +1010,7 @@
       "category": "Combat",
       "cost": 2,
       "desc_en": "Every 3 ally deaths, summon a random Riftbeast.",
-      "desc_vi": "Mỗi @ChampionDeathsPerSummon_Upgrade@ lần đồng minh bị hạ gục, triệu hồi 1 tướng Quái Rừng ngẫu nhiên, đôi khi được nâng lên 2 sao.",
+      "desc_vi": "Mỗi 3 lần đồng minh bị hạ gục, triệu hồi 1 tướng Quái Rừng ngẫu nhiên, đôi khi được nâng lên 2 sao .",
       "rules": ""
     },
     {
@@ -1019,7 +1019,7 @@
       "category": "Combat",
       "cost": 2,
       "desc_en": "Tanks reduce each instance of incoming damage by 15.",
-      "desc_vi": "Tướng Đỡ Đòn được giảm @FlatDmgBlock@ sát thương nhận vào mỗi lần nhận sát thương.",
+      "desc_vi": "Tướng Đỡ Đòn được giảm 10 sát thương nhận vào mỗi lần nhận sát thương.",
       "rules": ""
     },
     {
@@ -1028,7 +1028,7 @@
       "category": "Combat",
       "cost": 2,
       "desc_en": "Your champions are Unstoppable and gain 15% Attack Speed for 10 seconds.",
-      "desc_vi": "Các tướng của bạn trở nên không thể cản phá và nhận thêm @AttackSpeed*100@% Tốc Độ Đánh trong @DurationUpgrade@ giây.",
+      "desc_vi": "Các tướng của bạn trở nên không thể cản phá và nhận thêm 15% Tốc Độ Đánh trong 15 giây.",
       "rules": ""
     },
     {
@@ -1037,7 +1037,7 @@
       "category": "Misc",
       "cost": 2,
       "desc_en": "Gain 5 Greenfather seeds at the start of combat.",
-      "desc_vi": "Nhận @Seeds@ hạt giống khi bắt đầu giao tranh.",
+      "desc_vi": "Nhận 7 hạt giống khi bắt đầu giao tranh.",
       "rules": "greenfather trait active"
     },
     {
@@ -1046,7 +1046,7 @@
       "category": "Combat",
       "cost": 2,
       "desc_en": "Allies gain 1000 Shield, decaying over 5 seconds.",
-      "desc_vi": "Đồng minh nhận được @Shield@ Lá Chắn, giảm dần trong @Duration@ giây.",
+      "desc_vi": "Đồng minh nhận được 1250 Lá Chắn, giảm dần trong 6 giây.",
       "rules": ""
     },
     {
@@ -1055,7 +1055,7 @@
       "category": "Combat",
       "cost": 2,
       "desc_en": "Your team gains 2 mana regen.",
-      "desc_vi": "Đội của bạn nhận @Prismatic_ManaRegen@ Hồi Năng Lượng.",
+      "desc_vi": "Đội của bạn nhận 15 Hồi Năng Lượng.",
       "rules": ""
     },
     {
@@ -1064,7 +1064,7 @@
       "category": "Misc",
       "cost": 2,
       "desc_en": "Cast 2 random Wisps.",
-      "desc_vi": "Thi triển @NumCharms@ Tinh Linh ngẫu nhiên.",
+      "desc_vi": "Thi triển 2 Tinh Linh ngẫu nhiên.",
       "rules": ""
     },
     {
@@ -1073,7 +1073,7 @@
       "category": "Combat",
       "cost": 2,
       "desc_en": "10% Slow enemies and reduce their shields by 20% for 10 seconds.",
-      "desc_vi": "Làm chậm kẻ địch @ChillAmount@% và giảm @UpgradeShieldMultiplier*100@% lá chắn của chúng trong @Duration@ giây.",
+      "desc_vi": "Làm chậm kẻ địch 10% và giảm 30% lá chắn của chúng trong 10 giây.",
       "rules": ""
     },
     {
@@ -1109,7 +1109,7 @@
       "category": "Combat",
       "cost": 2,
       "desc_en": "Your team gains 30 Health for each active trait.",
-      "desc_vi": "Đội của bạn nhận @AddedHealthUpgrade@ Máu cho mỗi tộc/hệ không phải duy nhất đang kích hoạt.",
+      "desc_vi": "Đội của bạn nhận 45 Máu cho mỗi tộc/hệ không phải duy nhất đang kích hoạt.",
       "rules": "at least 4 non-unique traits active"
     },
     {
@@ -1118,7 +1118,7 @@
       "category": "Combat",
       "cost": 2,
       "desc_en": "Your front center champion gains 4% Max Health per front-row unit.",
-      "desc_vi": "Tướng ở vị trí trung tâm hàng trước của bạn nhận @UpgradeMaxHealthPerFrontRowUnit*100@% Máu tối đa cho mỗi đơn vị ở hàng trước.",
+      "desc_vi": "Tướng ở vị trí trung tâm hàng trước của bạn nhận 8% Máu tối đa cho mỗi đơn vị ở hàng trước.",
       "rules": ""
     },
     {
@@ -1127,7 +1127,7 @@
       "category": "Combat",
       "cost": 2,
       "desc_en": "After 10 seconds, increase Lunar's effects by 100%.",
-      "desc_vi": "Sau @ActivationDelay@ giây, tăng hiệu ứng của Mặt Trăng thêm @IncreaseRatio*100@%.",
+      "desc_vi": "Sau 8 giây, tăng hiệu ứng của Mặt Trăng thêm 100%.",
       "rules": "Lunar trait active"
     },
     {
@@ -1136,7 +1136,7 @@
       "category": "GoldXP",
       "cost": 2,
       "desc_en": "Gain 1 gold for every 1000 damage your highest damage champion deals.",
-      "desc_vi": "Nhận @GoldEarned@ vàng cho mỗi @EarnGoldForEveryNDamage@ sát thương mà tướng có sát thương cao nhất của bạn gây ra.",
+      "desc_vi": "Nhận 1 vàng cho mỗi 1700 sát thương mà tướng có sát thương cao nhất của bạn gây ra.",
       "rules": ""
     },
     {
@@ -1145,7 +1145,7 @@
       "category": "Combat",
       "cost": 2,
       "desc_en": "Deal 10% max [HP] true damage to enemies.",
-      "desc_vi": "Gây sát thương chuẩn bằng @HPPercentDamage*100@% Máu Tối Đa lên tất cả kẻ địch.",
+      "desc_vi": "Gây sát thương chuẩn bằng 10% Máu Tối Đa lên tất cả kẻ địch.",
       "rules": ""
     },
     {
@@ -1154,7 +1154,7 @@
       "category": "Combat",
       "cost": 2,
       "desc_en": "Every 4 seconds, roots stun an enemy for 1 second.",
-      "desc_vi": "Mỗi @RootFrequency@ giây, rễ cây làm choáng @RootTargets_Upgrade@ kẻ địch trong @RootDuration@ giây.",
+      "desc_vi": "Mỗi 4 giây, rễ cây làm choáng 2 kẻ địch trong 1 giây.",
       "rules": ""
     },
     {
@@ -1190,7 +1190,7 @@
       "category": "Combat",
       "cost": 2,
       "desc_en": "Your first champion to die turns into a 1000 Health target dummy with their defenses.",
-      "desc_vi": "Tướng đầu tiên bị hạ gục của bạn sẽ biến thành hình nhân @StatueHealth_Upgrade@ Máu với các chỉ số phòng thủ của tướng đó.",
+      "desc_vi": "Tướng đầu tiên bị hạ gục của bạn sẽ biến thành hình nhân 1350 Máu với các chỉ số phòng thủ của tướng đó.",
       "rules": ""
     },
     {
@@ -1226,7 +1226,7 @@
       "category": "Combat",
       "cost": 2,
       "desc_en": "30% Shred and Sunder enemies for 10 seconds.",
-      "desc_vi": "Gây Cào Xé và Phân Tách @UpgradeShredSunderPercent@% lên kẻ địch trong @UpgradeDuration@ giây.",
+      "desc_vi": "Gây Cào Xé và Phân Tách 30% lên kẻ địch trong 15 giây.",
       "rules": ""
     },
     {
@@ -1235,7 +1235,7 @@
       "category": "Combat",
       "cost": 2,
       "desc_en": "On cast, your champions gain 25% Attack Speed for 3 seconds.",
-      "desc_vi": "Khi thi triển, các tướng của bạn nhận @AttackSpeedGain*100@% Tốc Độ Đánh trong @Duration@ giây.",
+      "desc_vi": "Khi thi triển, các tướng của bạn nhận 30% Tốc Độ Đánh trong 4 giây.",
       "rules": ""
     },
     {
@@ -1244,7 +1244,7 @@
       "category": "Combat",
       "cost": 2,
       "desc_en": "Burn and Wound enemies for 10 seconds.",
-      "desc_vi": "Gây Thiêu Đốt và Vết Thương Sâu lên kẻ địch trong @Duration@ giây.",
+      "desc_vi": "Gây Thiêu Đốt và Vết Thương Sâu lên kẻ địch trong 10 giây.",
       "rules": ""
     },
     {
@@ -1262,7 +1262,7 @@
       "category": "Shop",
       "cost": 2,
       "desc_en": "Gain 2 rerolls.",
-      "desc_vi": "Nhận @Upgrade_Rerolls@ lượt đổi.",
+      "desc_vi": "Nhận 3 lượt đổi.",
       "rules": ""
     },
     {
@@ -1271,7 +1271,7 @@
       "category": "Combat",
       "cost": 2,
       "desc_en": "The first ally to die explodes, dealing 20% Max Health magic damage.",
-      "desc_vi": "Đồng minh đầu tiên hy sinh sẽ phát nổ, gây sát thương phép bằng @maxHealthExplosionDamage*100@% Máu Tối Đa.",
+      "desc_vi": "Đồng minh đầu tiên hy sinh sẽ phát nổ, gây sát thương phép bằng 25% Máu Tối Đa.",
       "rules": ""
     },
     {
@@ -1316,7 +1316,7 @@
       "category": "Combat",
       "cost": 1,
       "desc_en": "Your 2 strongest Fighters or Assassins are untargetable for 6 seconds.",
-      "desc_vi": "@NumChampionsUpgrade@ tướng ngẫu nhiên ở hàng sau trở nên không thể chỉ định trong @UntargetableDurationUpgrade@ giây.",
+      "desc_vi": "3 tướng ngẫu nhiên ở hàng sau trở nên không thể chỉ định trong 12 giây.",
       "rules": ""
     },
     {
@@ -1334,7 +1334,7 @@
       "category": "Combat",
       "cost": 1,
       "desc_en": "Reveal your next opponent. Your team gains 12% Attack Speed.",
-      "desc_vi": "Bật mí đối thủ tiếp theo của bạn. Đội của bạn nhận @AttackSpeed*100@% Tốc Độ Đánh.",
+      "desc_vi": "Bật mí đối thủ tiếp theo của bạn. Đội của bạn nhận 12% Tốc Độ Đánh.",
       "rules": "4 or more players left"
     },
     {
@@ -1352,7 +1352,7 @@
       "category": "GoldXP",
       "cost": 1,
       "desc_en": "The next champion sold sells for 200% gold.",
-      "desc_vi": "Tướng tiếp theo được bán trong vòng này sẽ cho @SellMultiplierUpgrade*100@% vàng.",
+      "desc_vi": "Tướng tiếp theo được bán trong vòng này sẽ cho 250% vàng.",
       "rules": ""
     },
     {
@@ -1361,7 +1361,7 @@
       "category": "Misc",
       "cost": 1,
       "desc_en": "Gain 2 random consumables that give Attack Damage or Attack Speed.",
-      "desc_vi": "Nhận @Boost2_Num@ vật phẩm tiêu thụ giúp tăng vĩnh viễn Sức Mạnh Công Kích hoặc Tốc Độ Đánh.",
+      "desc_vi": "Nhận 2 vật phẩm tiêu thụ giúp tăng vĩnh viễn Sức Mạnh Công Kích hoặc Tốc Độ Đánh.",
       "rules": ""
     },
     {
@@ -1388,7 +1388,7 @@
       "category": "GoldXP",
       "cost": 1,
       "desc_en": "Gain 1 gold for every champion you kill.",
-      "desc_vi": "Nhận @UpgradeGoldOnDeath@ vàng cho mỗi tướng bạn hạ gục. Nhận @UpgradeBaseGold@ vàng.",
+      "desc_vi": "Nhận 1 vàng cho mỗi tướng bạn hạ gục. Nhận 1 vàng.",
       "rules": ""
     },
     {
@@ -1424,7 +1424,7 @@
       "category": "Combat",
       "cost": 1,
       "desc_en": "Your team gains 1 mana regen.",
-      "desc_vi": "Đội của bạn nhận @Upgrade_ManaRegen@ Hồi Năng Lượng.",
+      "desc_vi": "Đội của bạn nhận 2 Hồi Năng Lượng.",
       "rules": ""
     },
     {
@@ -1433,7 +1433,7 @@
       "category": "Risky",
       "cost": 1,
       "desc_en": "Gain 1 XP for each enemy that dies.",
-      "desc_vi": "Nhận @XPonDeath@ XP cho mỗi kẻ địch bị hạ gục. Nhận @BaseXPUpgrade@ XP.",
+      "desc_vi": "Nhận 1 XP cho mỗi kẻ địch bị hạ gục. Nhận 2 XP.",
       "rules": ""
     },
     {
@@ -1442,7 +1442,7 @@
       "category": "Risky",
       "cost": 1,
       "desc_en": "Gain 50% bonus Coven Essence this combat.",
-      "desc_vi": "Nhận thêm @UpgradeBonus*100@% Tinh Hoa Tiên Hắc Ám trong giao tranh này.",
+      "desc_vi": "Nhận thêm 90% Tinh Hoa Tiên Hắc Ám trong giao tranh này.",
       "rules": "coven trait active"
     },
     {
@@ -1460,7 +1460,7 @@
       "category": "Shop",
       "cost": 1,
       "desc_en": "When you reroll the shop, the lowest cost champion becomes 2-star.",
-      "desc_vi": "@UpgradeShopLimit@ lần đầu bạn làm mới cửa hàng trong vòng này, tướng có giá thấp nhất sẽ trở thành 2 sao.",
+      "desc_vi": "8 lần đầu bạn làm mới cửa hàng trong vòng này, tướng có giá thấp nhất sẽ trở thành 2 sao.",
       "rules": ""
     },
     {
@@ -1469,7 +1469,7 @@
       "category": "Shop",
       "cost": 1,
       "desc_en": "Reroll your shop with all 2-cost champions.",
-      "desc_vi": "Làm mới cửa hàng với toàn tướng 2 vàng. Nhận @AllTwosUpgradeGold@ vàng.",
+      "desc_vi": "Làm mới cửa hàng với toàn tướng 2 vàng. Nhận 1 vàng.",
       "rules": ""
     },
     {
@@ -1478,7 +1478,7 @@
       "category": "Risky",
       "cost": 1,
       "desc_en": "Flip a coin, gain 1 gold if it's heads. Continue until you flip tails.",
-      "desc_vi": "Tung đồng xu, nhận @GoldIfHeads@ vàng nếu ra mặt ngửa. Tiếp tục cho đến khi bạn lật ra mặt ngửa.",
+      "desc_vi": "Tung đồng xu, nhận 1 vàng nếu ra mặt ngửa. Tiếp tục cho đến khi bạn lật ra mặt ngửa.",
       "rules": ""
     },
     {
@@ -1487,7 +1487,7 @@
       "category": "Combat",
       "cost": 1,
       "desc_en": "Your highest Health unit bulks up, gaining 350 [HP].",
-      "desc_vi": "Tướng có lượng Máu cao nhất của bạn sẽ tăng trưởng, nhận thêm @Health@ Máu.",
+      "desc_vi": "Tướng có lượng Máu cao nhất của bạn sẽ tăng trưởng, nhận thêm 350 Máu.",
       "rules": ""
     },
     {
@@ -1496,7 +1496,7 @@
       "category": "Combat",
       "cost": 1,
       "desc_en": "Your highest [AS] unit shrinks, gaining 20% [AS].",
-      "desc_vi": "Tướng có Tốc Độ Đánh cao nhất của bạn sẽ bị thu nhỏ, nhận thêm @ASGainUpgrade*100@% Tốc Độ Đánh.",
+      "desc_vi": "Tướng có Tốc Độ Đánh cao nhất của bạn sẽ bị thu nhỏ, nhận thêm 35% Tốc Độ Đánh.",
       "rules": ""
     },
     {
@@ -1505,7 +1505,7 @@
       "category": "Misc",
       "cost": 1,
       "desc_en": "Cast a random Wisp.",
-      "desc_vi": "Thi triển 1 Tinh Linh ngẫu nhiên có giá trị @UpgradeGoldLowerBound@ vàng trở lên.",
+      "desc_vi": "Thi triển 1 Tinh Linh ngẫu nhiên có giá trị 1 vàng trở lên .",
       "rules": ""
     },
     {
@@ -1523,7 +1523,7 @@
       "category": "GoldXP",
       "cost": 1,
       "desc_en": "Your 1-star champions drop 1 gold on death.",
-      "desc_vi": "Tướng 1 sao của bạn sẽ rơi ra @GoldOnDeath@ vàng khi bị hạ gục. Nhận @UpgradeGoldGranted@ vàng.",
+      "desc_vi": "Tướng 1 sao của bạn sẽ rơi ra 1 vàng khi bị hạ gục. Nhận 1 vàng.",
       "rules": ""
     },
     {
@@ -1532,7 +1532,7 @@
       "category": "Combat",
       "cost": 1,
       "desc_en": "Your champions gain 150 shield for 10 seconds.",
-      "desc_vi": "Các tướng của bạn nhận @ShieldAmount@ lá chắn trong @Duration@ giây.",
+      "desc_vi": "Các tướng của bạn nhận 150 lá chắn trong 10 giây.",
       "rules": ""
     },
     {
@@ -1541,7 +1541,7 @@
       "category": "GoldXP",
       "cost": 1,
       "desc_en": "Gain 2 XP.",
-      "desc_vi": "Nhận @UpgradeXP@ XP.",
+      "desc_vi": "Nhận 2 XP.",
       "rules": ""
     },
     {
@@ -1550,7 +1550,7 @@
       "category": "Combat",
       "cost": 1,
       "desc_en": "Gain a Training Dummy with a Giant's Belt.",
-      "desc_vi": "Nhận 1 Hình Nhân mang Áo Choàng Lửa.",
+      "desc_vi": "Nhận 1 Hình Nhân mang Áo Choàng Lửa .",
       "rules": ""
     },
     {
@@ -1649,7 +1649,7 @@
       "category": "Misc",
       "cost": 0,
       "desc_en": "Gain 1 random consumable that gives Armor, Magic Resist, or Health.",
-      "desc_vi": "Nhận @Boost1_Num@ vật phẩm tiêu thụ giúp tăng vĩnh viễn Giáp & Kháng Phép hoặc Máu.",
+      "desc_vi": "Nhận 1 vật phẩm tiêu thụ giúp tăng vĩnh viễn Giáp & Kháng Phép hoặc Máu.",
       "rules": ""
     },
     {
@@ -1667,7 +1667,7 @@
       "category": "Misc",
       "cost": 0,
       "desc_en": "Any units you bench have items removed and broken apart.",
-      "desc_vi": "Sử dụng lên một tướng để gỡ tất cả trang bị và tách chúng thành các trang bị thành phần.\n\n[Tiêu Thụ - Trang bị này sẽ biến mất sau khi sử dụng.]",
+      "desc_vi": "Sử dụng lên một tướng để gỡ tất cả trang bị và tách chúng thành các trang bị thành phần. [Tiêu Thụ - Trang bị này sẽ biến mất sau khi sử dụng.]",
       "rules": ""
     },
     {
@@ -1676,7 +1676,7 @@
       "category": "GoldXP",
       "cost": 0,
       "desc_en": "Gain 1 gold for every 10 missing Player Health.",
-      "desc_vi": "Nhận @GoldPerMissingHealth@ vàng cho mỗi @MissingHealthAmount@ Máu người chơi đã mất. Sau đó hồi lại @UpgradeHealing@ Máu.",
+      "desc_vi": "Nhận 1 vàng cho mỗi 12 Máu người chơi đã mất. Sau đó hồi lại 3 Máu.",
       "rules": "missing at least 70 player health"
     },
     {
@@ -1685,7 +1685,7 @@
       "category": "Misc",
       "cost": 0,
       "desc_en": "Gain 1 random consumable that give Attack Damage or Attack Speed.",
-      "desc_vi": "Nhận @Upgrade_Boost1_Num@ vật phẩm tiêu thụ giúp tăng vĩnh viễn Sức Mạnh Công Kích hoặc Tốc Độ Đánh.",
+      "desc_vi": "Nhận 2 vật phẩm tiêu thụ giúp tăng vĩnh viễn Sức Mạnh Công Kích hoặc Tốc Độ Đánh.",
       "rules": ""
     },
     {
@@ -1694,7 +1694,7 @@
       "category": "Risky",
       "cost": 0,
       "desc_en": "Sell your board and bench, gain 10 gold, 10 XP, and 5 rerolls.",
-      "desc_vi": "Bán toàn bộ bàn đấu và hàng chờ của bạn, nhận @Gold@ vàng và @Rerolls@ lượt đổi.",
+      "desc_vi": "Bán toàn bộ bàn đấu và hàng chờ của bạn, nhận 6 vàng và 8 lượt đổi.",
       "rules": ""
     },
     {
@@ -1703,7 +1703,7 @@
       "category": "Item",
       "cost": 0,
       "desc_en": "Lose 3 components, including ones built into items. Gain an artifact anvil.",
-      "desc_vi": "Mất @NumComponents@ trang bị thành phần, bao gồm cả những trang bị đã được ghép thành trang bị hoàn chỉnh. Nhận 1 gói Trang Bị Tạo Tác.",
+      "desc_vi": "Mất 3 trang bị thành phần, bao gồm cả những trang bị đã được ghép thành trang bị hoàn chỉnh. Nhận 1 gói Trang Bị Tạo Tác.",
       "rules": "have at least 3 components"
     },
     {
@@ -1721,7 +1721,7 @@
       "category": "Shop",
       "cost": 0,
       "desc_en": "Reroll your shop with all 1-cost units.",
-      "desc_vi": "Làm mới cửa hàng với toàn tướng 1 vàng. Nhận @AllOnesUpgradeGold@ Vàng.",
+      "desc_vi": "Làm mới cửa hàng với toàn tướng 1 vàng. Nhận 1 Vàng.",
       "rules": ""
     },
     {
@@ -1730,7 +1730,7 @@
       "category": "GoldXP",
       "cost": 0,
       "desc_en": "Flip a coin, gain 1 gold if it's heads.",
-      "desc_vi": "Tung @UpgradeNumCoinsFlipped@ đồng xu, nhận @GoldIfHeads@ vàng nếu ra mặt ngửa.",
+      "desc_vi": "Tung 2 đồng xu , nhận 1 vàng nếu ra mặt ngửa.",
       "rules": ""
     },
     {
@@ -1739,7 +1739,7 @@
       "category": "Misc",
       "cost": 0,
       "desc_en": "Gain 1 reforger.",
-      "desc_vi": "Nhận @NumReforgers@ Búa Rèn Trang Bị.",
+      "desc_vi": "Nhận 1 Búa Rèn Trang Bị.",
       "rules": ""
     },
     {
@@ -1757,7 +1757,7 @@
       "category": "Combat",
       "cost": 0,
       "desc_en": "After 25 seconds, allies gain 300% [DA].",
-      "desc_vi": "Sau @PrismaticActivationDelay@ giây, đồng minh nhận được @DamageAmp*100@% Khuếch Đại Sát Thương.",
+      "desc_vi": "Sau 12 giây, đồng minh nhận được 300% Khuếch Đại Sát Thương.",
       "rules": ""
     },
     {
@@ -1766,7 +1766,7 @@
       "category": "Combat",
       "cost": 0,
       "desc_en": "Your champions gain 125 Health.",
-      "desc_vi": "Các tướng của bạn nhận @UpgradeHealthAmount@ Máu.",
+      "desc_vi": "Các tướng của bạn nhận 75 Máu.",
       "rules": ""
     },
     {
@@ -1775,7 +1775,7 @@
       "category": "Combat",
       "cost": 0,
       "desc_en": "Your champions gain 8% Attack Damage and Ability Power.",
-      "desc_vi": "Các tướng của bạn nhận @UpgradeADAP*100@% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật.",
+      "desc_vi": "Các tướng của bạn nhận 6% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật.",
       "rules": ""
     },
     {
@@ -4066,7 +4066,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Gain a Recurve Bow. After your champions attack times, get more.",
-      "desc_vi": "Nhận 1 Cung Gỗ. Sau khi đội của bạn tấn công @StacksForReward@ lần, nhận thêm @NumDelayed@.\n\nĐòn Đánh: @TFTUnitProperty.item:TFT_Augment_ComponentQuest_Tracker@",
+      "desc_vi": "Nhận 1 Cung Gỗ. Sau khi đội của bạn tấn công 1000 lần, nhận thêm 2. Đòn Đánh:",
       "icon": "assets/maps/tft/icons/augments/hexcore/recurvewrecker_i.png"
     },
     {
@@ -4076,7 +4076,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Gain Thief's Gloves.",
-      "desc_vi": "Nhận @NumGloves@ Găng Đạo Tặc",
+      "desc_vi": "Nhận 1 Găng Đạo Tặc",
       "icon": "assets/maps/tft/icons/augments/hexcore/bandthieves1.png"
     },
     {
@@ -4086,7 +4086,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Your team gains Health for each ally that starts combat in the front row.",
-      "desc_vi": "Đội của bạn nhận @Health@ Máu với mỗi đồng minh bắt đầu giao tranh ở 2 hàng đầu.",
+      "desc_vi": "Đội của bạn nhận 30 Máu với mỗi đồng minh bắt đầu giao tranh ở 2 hàng đầu.",
       "icon": "assets/maps/tft/icons/augments/hexcore/boxinglessons_i.png"
     },
     {
@@ -4106,7 +4106,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Gain a random Emblem and a Reforger.",
-      "desc_vi": "Nhận 1 Ấn ngẫu nhiên và 1 Búa Rèn.\n\nBúa Rèn cho phép bạn tái tạo bất kỳ trang bị nào.",
+      "desc_vi": "Nhận 1 Ấn ngẫu nhiên và 1 Búa Rèn. Búa Rèn cho phép bạn tái tạo bất kỳ trang bị nào.",
       "icon": "assets/maps/tft/icons/augments/hexcore/branching-out-i.png"
     },
     {
@@ -4116,7 +4116,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Set your win streak to +. Gain gold.",
-      "desc_vi": "Đặt chuỗi thắng của bạn thành @Streak@. Nhận @Gold@ vàng.",
+      "desc_vi": "Đặt chuỗi thắng của bạn thành 4. Nhận 4 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/calledshot_i.png"
     },
     {
@@ -4126,7 +4126,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Store gold equal to of the interest you earn. On -, gain all the stored gold. Gain gold now.",
-      "desc_vi": "Tích trữ vàng bằng với lượng lợi tức bạn kiếm được. Ở vòng @Stage@-@Round@, nhận lượng vàng bằng @InterestRatio*100@% số vàng đã tích trữ. Nhận ngay @StartingGold@ vàng.",
+      "desc_vi": "Tích trữ vàng bằng với lượng lợi tức bạn kiếm được. Ở vòng 3-3, nhận lượng vàng bằng 100% số vàng đã tích trữ. Nhận ngay 1 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t1.png"
     },
     {
@@ -4136,7 +4136,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Gain a random 2-cost champion now. Gain the same one again every time you level up.",
-      "desc_vi": "Lập tức nhận một tướng @UnitTier@-vàng ngẫu nhiên. Mỗi lần thăng cấp, nhận được tướng này một lần nữa.\n\nTướng: @TFTUnitProperty.item:TFT_Augment_WorthTheWait@",
+      "desc_vi": "Lập tức nhận một tướng 2-vàng ngẫu nhiên. Mỗi lần thăng cấp, nhận được tướng này một lần nữa. Tướng:",
       "icon": "assets/maps/tft/icons/augments/hexcore/caretaker_s-chosen-i.png"
     },
     {
@@ -4146,7 +4146,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Gain a B.F. Sword. After your team deals physical damage, gain more.",
-      "desc_vi": "Nhận 1 Kiếm B.F. Sau khi đội của bạn gây @StacksForReward@ sát thương vật lý, nhận thêm @NumDelayed@.\n\nSát thương gây ra: @TFTUnitProperty.item:TFT_Augment_ComponentQuest_Tracker@",
+      "desc_vi": "Nhận 1 Kiếm B.F. Sau khi đội của bạn gây 82000 sát thương vật lý, nhận thêm 2. Sát thương gây ra:",
       "icon": "assets/maps/tft/icons/augments/hexcore/carveapath_i.png"
     },
     {
@@ -4156,7 +4156,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Your team gains Omnivamp. Excess healing is converted to a shield up to Health.",
-      "desc_vi": "Đội của bạn nhận @Omnivamp@% Hút Máu Toàn Phần. Lượng hồi máu phụ trội sẽ được chuyển thành lá chắn, tối đa @MaxShield@ Máu.",
+      "desc_vi": "Đội của bạn nhận 12% Hút Máu Toàn Phần. Lượng hồi máu phụ trội sẽ được chuyển thành lá chắn, tối đa 200 Máu.",
       "icon": "assets/maps/tft/icons/augments/hexcore/celestialblessing1.png"
     },
     {
@@ -4166,7 +4166,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Gain -cost champions. After rounds, gain more.",
-      "desc_vi": "Nhận @NumInitialChamps@ tướng @ChampCost@ vàng. Sau @Delay@ vòng, nhận thêm @NumDelayedChamps@ tướng cùng bậc.",
+      "desc_vi": "Nhận 3 tướng 2 vàng. Sau 6 vòng, nhận thêm 3 tướng cùng bậc.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t1.png"
     },
     {
@@ -4196,7 +4196,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Gain gold and XP.",
-      "desc_vi": "Nhận @Gold@ vàng và @XP@ XP.",
+      "desc_vi": "Nhận 8 vàng và 1 XP.",
       "icon": "assets/maps/tft/icons/augments/hexcore/cognitivetax_i.png"
     },
     {
@@ -4206,7 +4206,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Gain gold and XP.",
-      "desc_vi": "Nhận @Gold@ vàng và @XP@ XP.",
+      "desc_vi": "Nhận 12 vàng và 3 XP.",
       "icon": "assets/maps/tft/icons/augments/hexcore/cognitivetax_i.png"
     },
     {
@@ -4216,7 +4216,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Whenever you would get a component, gain a component anvil instead. Gain a random component.The anvil offers 4 choices.",
-      "desc_vi": "Mỗi khi nhận 1 trang bị thành phần, nó biến đổi thành gói trang bị thành phần. Nhận ngay 1 trang bị thành phần ngẫu nhiên.\n\nGói trang bị này sẽ đưa ra 4 lựa chọn.",
+      "desc_vi": "Mỗi khi nhận 1 trang bị thành phần, nó biến đổi thành gói trang bị thành phần. Nhận ngay 1 trang bị thành phần ngẫu nhiên. Gói trang bị này sẽ đưa ra 4 lựa chọn.",
       "icon": "assets/maps/tft/icons/augments/hexcore/the-customer-is-always-right-i.png"
     },
     {
@@ -4226,7 +4226,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Gain a Needlessly Large Rod. After your team deals magic damage, gain more.",
-      "desc_vi": "Nhận 1 Gậy Quá Khổ. Sau khi đội của bạn gây @StacksForReward@ sát thương phép, nhận thêm @NumDelayed@.\n\nSát thương gây ra: @TFTUnitProperty.item:TFT_Augment_ComponentQuest_Tracker@",
+      "desc_vi": "Nhận 1 Gậy Quá Khổ. Sau khi đội của bạn gây 42000 sát thương phép, nhận thêm 2. Sát thương gây ra:",
       "icon": "assets/maps/tft/icons/augments/hexcore/hyperbolicrodextender_i.png"
     },
     {
@@ -4236,7 +4236,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Enemies in the first two rows lose Armor and Magic Resist every seconds.",
-      "desc_vi": "Tướng địch đứng ở 2 hàng trên sẽ bị mất @ResistLoss@ Giáp và Kháng Phép sau mỗi @Time@ giây.",
+      "desc_vi": "Tướng địch đứng ở 2 hàng trên sẽ bị mất 4 Giáp và Kháng Phép sau mỗi 2 giây.",
       "icon": "assets/maps/tft/icons/augments/hexcore/corrosion_i.png"
     },
     {
@@ -4246,7 +4246,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Whenever you craft a completed item, gain rerolls.",
-      "desc_vi": "Mỗi khi bạn chế tạo 1 trang bị hoàn chỉnh, nhận @Rerolls@ lượt đổi.",
+      "desc_vi": "Mỗi khi bạn chế tạo 1 trang bị hoàn chỉnh, nhận 2 lượt đổi.",
       "icon": "assets/maps/tft/icons/augments/hexcore/craftedcrafting_i.png"
     },
     {
@@ -4256,7 +4256,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Lose all champions on your board and bench. Gain a Training Dummy with of their combined health. The dummy gains Health per stage. Gain a random non-tank 2-star 2 cost champion.",
-      "desc_vi": "Mất đi tất cả tướng trên bàn đấu và trên hàng dự bị của bạn. Nhận 1 Hình Nhân mang @HealthPercent@% tổng Máu của tất cả các tướng đó. Hình Nhân nhận thêm @HPPerStage@ Máu mỗi giai đoạn. Nhận 1 tướng @ChampCost@ vàng 2 sao không phải Đỡ Đòn.",
+      "desc_vi": "Mất đi tất cả tướng trên bàn đấu và trên hàng dự bị của bạn. Nhận 1 Hình Nhân mang 60% tổng Máu của tất cả các tướng đó. Hình Nhân nhận thêm 1000 Máu mỗi giai đoạn. Nhận 1 tướng 2 vàng 2 sao không phải Đỡ Đòn.",
       "icon": "assets/maps/tft/icons/augments/hexcore/dummify_i.png"
     },
     {
@@ -4266,7 +4266,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Every attacks an ally takes, they deal - (based on current Stage) magic damage to nearby enemies ( second cooldown).",
-      "desc_vi": "Mỗi khi đồng minh nhận @AttacksToProc@ đòn đánh, họ sẽ gây @Damage1@ - @Damage4@ (dựa trên Giai Đoạn hiện tại) sát thương phép lên kẻ địch gần đó (@ICD@ giây hồi chiêu).",
+      "desc_vi": "Mỗi khi đồng minh nhận 4 đòn đánh, họ sẽ gây 30 - 90 (dựa trên Giai Đoạn hiện tại) sát thương phép lên kẻ địch gần đó (1 giây hồi chiêu).",
       "icon": "assets/maps/tft/icons/augments/hexcore/electrocharge-i.png"
     },
     {
@@ -4276,7 +4276,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "At the start of every round, lose the champion in the rightmost bench slot. After losing gold of champions in this way, gain a powerful reward. Gain a 3-cost champion now.",
-      "desc_vi": "Khi bắt đầu giao tranh, mất đi vị tướng ở ô ngoài cùng bên phải hàng dự bị. Sau khi tổng giá tướng mất đi theo cách này là @CashoutCost@ vàng, nhận một phần thưởng mạnh mẽ. Nhận ngay 1 tướng 3 vàng. @TFTUnitProperty.item:TFT_Augment_Expedition_Tooltip@",
+      "desc_vi": "Khi bắt đầu giao tranh, mất đi vị tướng ở ô ngoài cùng bên phải hàng dự bị. Sau khi tổng giá tướng mất đi theo cách này là 33 vàng, nhận một phần thưởng mạnh mẽ. Nhận ngay 1 tướng 3 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/expedition_i.png"
     },
     {
@@ -4286,7 +4286,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Gain a Giant's Belt. After your team takes damage, get more.",
-      "desc_vi": "Nhận 1 Đai Khổng Lồ. Sau khi đội của bạn nhận @StacksForReward@ sát thương, nhận thêm @NumDelayed@.\n\nSát thương gánh chịu: @TFTUnitProperty.item:TFT_Augment_ComponentQuest_Tracker@",
+      "desc_vi": "Nhận 1 Đai Khổng Lồ. Sau khi đội của bạn nhận 90000 sát thương, nhận thêm 2. Sát thương gánh chịu:",
       "icon": "assets/maps/tft/icons/augments/hexcore/extrabuckles_i.png"
     },
     {
@@ -4296,7 +4296,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Gain gold, then flip a coin. If heads, gain more gold.",
-      "desc_vi": "Nhận @BaseGold@ vàng, sau đó tung đồng xu. Nếu ra mặt ngửa, nhận thêm @GoldForHeads@ vàng.\n\n@TFTUnitProperty.item:TFT_Augment_FeelingLucky_Tooltip@",
+      "desc_vi": "Nhận 12 vàng, sau đó tung đồng xu. Nếu ra mặt ngửa, nhận thêm 4 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/feelinglucky_i.png"
     },
     {
@@ -4306,7 +4306,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Your champion that starts combat in the center of the front row gains Damage Amp and max Health.",
-      "desc_vi": "Tướng bắt đầu giao tranh ở chính giữa hàng trên sẽ được nhận @BonusDamage*100@% Khuếch Đại Sát Thương và @BonusHealth*100@% Máu tối đa.",
+      "desc_vi": "Tướng bắt đầu giao tranh ở chính giữa hàng trên sẽ được nhận 15% Khuếch Đại Sát Thương và 25% Máu tối đa.",
       "icon": "assets/maps/tft/icons/augments/hexcore/findyourcenter_i.png"
     },
     {
@@ -4316,7 +4316,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Each round, steal a random -cost or lower champion from the shop. Gain gold.",
-      "desc_vi": "Mỗi vòng đấu, đánh cắp 1 tướng ngẫu nhiên giá @CostLimit@ vàng hoặc thấp hơn từ cửa hàng. Nhận @Gold@ vàng.",
+      "desc_vi": "Mỗi vòng đấu, đánh cắp 1 tướng ngẫu nhiên giá 3 vàng hoặc thấp hơn từ cửa hàng. Nhận 1 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/firesale_i.png"
     },
     {
@@ -4326,7 +4326,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "The Inferno champion that dealt the most damage last combat is On Fire, gaining Attack Speed. Gain a Varus and an Akali.",
-      "desc_vi": "Các tướng Hỏa Ngục 1 và 2 vàng của bạn nhận @ADAP@ Sức Mạnh Công Kích và Sức Mạnh Phép Thuật. Tướng gây sát thương nhiều nhất trong giao tranh trước đó sẽ nhận gấp đôi. Nhận 1 Varus và 1 Akali.",
+      "desc_vi": "Các tướng Hỏa Ngục 1 và 2 vàng của bạn nhận 0.2 Sức Mạnh Công Kích và Sức Mạnh Phép Thuật. Tướng gây sát thương nhiều nhất trong giao tranh trước đó sẽ nhận gấp đôi. Nhận 1 Varus và 1 Akali.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t1.png"
     },
     {
@@ -4336,7 +4336,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Gain a Tear of the Goddess. After your team spends Mana, gain more.",
-      "desc_vi": "Nhận 1 Nước Mắt Nữ Thần. Sau khi đội của bạn tiêu hao @StacksForReward@ Năng Lượng, nhận thêm @NumDelayed@.\n\nNăng lượng đã tiêu hao: @TFTUnitProperty.item:TFT_Augment_ComponentQuest_Tracker@",
+      "desc_vi": "Nhận 1 Nước Mắt Nữ Thần. Sau khi đội của bạn tiêu hao 7800 Năng Lượng, nhận thêm 2. Năng lượng đã tiêu hao:",
       "icon": "assets/maps/tft/icons/augments/hexcore/griefofthegreatgoddess_i.png"
     },
     {
@@ -4346,7 +4346,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Your team gains Attack Damage. Every seconds, they gain more.",
-      "desc_vi": "Đội của bạn nhận @BaselineAD*100@% Sức Mạnh Công Kích. Mỗi @ProcDelay@ giây, nhận thêm @ADPerProc*100@%.",
+      "desc_vi": "Đội của bạn nhận 10% Sức Mạnh Công Kích. Mỗi 5 giây, nhận thêm 5%.",
       "icon": "assets/maps/tft/icons/augments/hexcore/marksman_i.png"
     },
     {
@@ -4356,7 +4356,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "The next -cost champion you buy is -star. Gain gold.",
-      "desc_vi": "Tướng @UnitCost@ vàng tiếp theo bạn mua được nâng lên @ActorLevel@ sao. Nhận @NumGold@ vàng.",
+      "desc_vi": "Tướng 1 vàng tiếp theo bạn mua được nâng lên 3 sao. Nhận 5 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/constructacompanion_iii.png"
     },
     {
@@ -4366,7 +4366,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Your Tactician loses Health, but after player combats, gain 4-cost champions and gold.",
-      "desc_vi": "Linh Thú của bạn mất @HealthLoss@ Máu, nhưng sau @NumRounds@ giao tranh người chơi, nhận @NumChampions@ tướng 4 vàng và @RewardGold@ vàng.",
+      "desc_vi": "Linh Thú của bạn mất 20 Máu, nhưng sau 5 giao tranh người chơi, nhận 3 tướng 4 vàng và 5 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t1.png"
     },
     {
@@ -4376,7 +4376,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Allies that start combat in the back row begin combat at Health but gain Damage Amp.",
-      "desc_vi": "Các đồng minh bắt đầu giao tranh ở hàng sau sẽ khởi đầu với @Health*100@% Máu nhưng nhận thêm @DamageAmp*100@% Khuếch Đại Sát Thương.",
+      "desc_vi": "Các đồng minh bắt đầu giao tranh ở hàng sau sẽ khởi đầu với 80% Máu nhưng nhận thêm 16% Khuếch Đại Sát Thương.",
       "icon": "assets/maps/tft/icons/augments/hexcore/glasscannon_i.png"
     },
     {
@@ -4386,7 +4386,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Champions that aren't holding items have a chance to drop gold on death.",
-      "desc_vi": "Tướng không mang trang bị có @dropchance*100@% xác suất rơi ra @Gold@ vàng khi hy sinh.",
+      "desc_vi": "Tướng không mang trang bị có 40% xác suất rơi ra 1 vàng khi hy sinh.",
       "icon": "assets/maps/tft/icons/augments/hexcore/good-for-something-i.png"
     },
     {
@@ -4396,7 +4396,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Combat start: Allies grant other adjacent allies Armor and Magic Resist. This effect stacks.",
-      "desc_vi": "Bắt đầu giao tranh: Đồng minh sẽ tăng cho các đồng minh liền kề khác @Resists@ Giáp và Kháng Phép. Hiệu ứng này có thể cộng dồn.",
+      "desc_vi": "Bắt đầu giao tranh: Đồng minh sẽ tăng cho các đồng minh liền kề khác 6 Giáp và Kháng Phép. Hiệu ứng này có thể cộng dồn.",
       "icon": "assets/maps/tft/icons/augments/hexcore/grouphug1_i.png"
     },
     {
@@ -4406,7 +4406,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "When an enemy dies, the nearest ally is healed for.",
-      "desc_vi": "Khi một kẻ địch bị hạ gục, tướng đồng minh gần nhất được hồi lại @Heal@ máu.",
+      "desc_vi": "Khi một kẻ địch bị hạ gục, tướng đồng minh gần nhất được hồi lại 250 máu.",
       "icon": "assets/maps/tft/icons/augments/hexcore/healing-orbs-i.png"
     },
     {
@@ -4416,7 +4416,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Gain a component anvil and gold.",
-      "desc_vi": "Nhận 1 gói trang bị thành phần và @Gold@ vàng.",
+      "desc_vi": "Nhận 1 gói trang bị thành phần và 3 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/iron-assets-i.png"
     },
     {
@@ -4436,7 +4436,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Gain a random -star -cost champion and gold.",
-      "desc_vi": "Nhận @Gold@ vàng và 1 tướng 2 vàng 2 sao ngẫu nhiên.",
+      "desc_vi": "Nhận 1 vàng và 1 tướng 2 vàng 2 sao ngẫu nhiên.",
       "icon": "assets/maps/tft/icons/augments/hexcore/kickstart_i.png"
     },
     {
@@ -4446,7 +4446,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "After winning player combat, gain gold. If they had more health than you, gain Gold instead. Gain gold.",
-      "desc_vi": "Ngay bây giờ và sau mỗi giao tranh người chơi, nhận @Gold@ vàng. Nếu bạn thắng một người chơi có nhiều máu hơn bạn, thay vào đó nhận @WinBonusGold@ vàng.",
+      "desc_vi": "Ngay bây giờ và sau mỗi giao tranh người chơi, nhận 1 vàng. Nếu bạn thắng một người chơi có nhiều máu hơn bạn, thay vào đó nhận 6 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/kingslayer_i.png"
     },
     {
@@ -4456,7 +4456,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "When you reach Level, gain gold.",
-      "desc_vi": "Khi đạt cấp @LevelReq@, nhận @Gold@ vàng.",
+      "desc_vi": "Khi đạt cấp 9, nhận 27 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/late-game-specialist-i.png"
     },
     {
@@ -4466,7 +4466,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "After player combats, gain an Artifact anvil.",
-      "desc_vi": "Sau @NumberOfCombats@ giao tranh với người chơi, nhận 1 Gói Trang Bị Tạo Tác. \n\nGói này sẽ đưa ra 4 lựa chọn. Tạo Tác là những trang bị mạnh mẽ hơn với hiệu ứng đặc biệt.",
+      "desc_vi": "Sau 4 giao tranh với người chơi, nhận 1 Gói Trang Bị Tạo Tác. Gói này sẽ đưa ra 4 lựa chọn. Tạo Tác là những trang bị mạnh mẽ hơn với hiệu ứng đặc biệt.",
       "icon": "assets/maps/tft/icons/augments/hexcore/long-time-crafting-i.png"
     },
     {
@@ -4476,7 +4476,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Your dice always roll 6 and your coins always flip heads.\\n \\n \\n \\n Roll a die and gain gold equal to the number rolled. Then flip a coin and gain gold if you flip heads.",
-      "desc_vi": "Xúc xắc và xu của bạn còn may mắn hơn.\n\nĐổ một xúc xắc và nhận số vàng bằng với số điểm đổ được. Sau đó tung đồng xu và nhận @Gold@ vàng nếu tung ra mặt ngửa.",
+      "desc_vi": "Xúc xắc và xu của bạn còn may mắn hơn. Đổ một xúc xắc và nhận số vàng bằng với số điểm đổ được. Sau đó tung đồng xu và nhận 1 vàng nếu tung ra mặt ngửa.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t1.png"
     },
     {
@@ -4486,7 +4486,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Allies without items equipped gain Armor and Magic Resist.",
-      "desc_vi": "Các đồng minh không mang trang bị nhận @Resists@ Giáp và Kháng Phép.",
+      "desc_vi": "Các đồng minh không mang trang bị nhận 30 Giáp và Kháng Phép.",
       "icon": "assets/maps/tft/icons/augments/hexcore/makeshift1.png"
     },
     {
@@ -4506,7 +4506,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Gain 1 1-cost champion, 1 2-cost champion, and 1 3-cost champion.",
-      "desc_vi": "Nhận @tier1champs@ tướng 1 vàng, @numchamps@ tướng 2 vàng và 1 tướng 3 vàng.",
+      "desc_vi": "Nhận 2 tướng 1 vàng, 1 tướng 2 vàng và 1 tướng 3 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/threes-company-i.png"
     },
     {
@@ -4516,7 +4516,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Gain 1 random component, gold, and 1 random 5-cost champion",
-      "desc_vi": "Nhận @NumComponents@ trang bị thành phần ngẫu nhiên, @Gold@ vàng và @NumChamps@ tướng 5-vàng ngẫu nhiên.",
+      "desc_vi": "Nhận 1 trang bị thành phần ngẫu nhiên, 2 vàng và 1 tướng 5-vàng ngẫu nhiên.",
       "icon": "assets/maps/tft/icons/augments/hexcore/one-two-five-i.png"
     },
     {
@@ -4526,7 +4526,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Round start: items on your bench are randomized.\\n \\n \\n \\n Gain random component.",
-      "desc_vi": "Bắt đầu vòng đấu: Các trang bị trên hàng chờ được đánh tráo ngẫu nhiên. \n\nNhận @NumberOfComponentsI@ trang bị thành phần ngẫu nhiên.",
+      "desc_vi": "Bắt đầu vòng đấu: Các trang bị trên hàng chờ được đánh tráo ngẫu nhiên. Nhận 1 trang bị thành phần ngẫu nhiên.",
       "icon": "assets/maps/tft/icons/augments/hexcore/pandora1.png"
     },
     {
@@ -4536,7 +4536,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "After seconds of combat, your units gain Damage Amp.",
-      "desc_vi": "Sau @Delay@ giây giao tranh, đội của bạn nhận thêm @DamageAmp@% Khuếch Đại Sát Thương.",
+      "desc_vi": "Sau 12 giây giao tranh, đội của bạn nhận thêm 20% Khuếch Đại Sát Thương.",
       "icon": "assets/maps/tft/icons/augments/hexcore/ascension1.png"
     },
     {
@@ -4546,7 +4546,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Each round, gain free rerolls if you did not buy a champion last round.",
-      "desc_vi": "Nhận ngay @RerollsUpfront@ lượt đổi lại. Mỗi vòng đấu, nhận @Rerolls@ lượt đổi miễn phí nếu bạn không mua tướng ở vòng đấu trước.",
+      "desc_vi": "Nhận ngay 4 lượt đổi lại. Mỗi vòng đấu, nhận 1 lượt đổi miễn phí nếu bạn không mua tướng ở vòng đấu trước.",
       "icon": "assets/maps/tft/icons/augments/hexcore/patienceisavirtue_i.png"
     },
     {
@@ -4556,7 +4556,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "You gain twice as much progress towards win and loss streaks. Gain gold.",
-      "desc_vi": "Bạn nhận được gấp đôi tiến trình chuỗi thắng và chuỗi thua. Nhận @Gold@ vàng.",
+      "desc_vi": "Bạn nhận được gấp đôi tiến trình chuỗi thắng và chuỗi thua. Nhận 2 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t1.png"
     },
     {
@@ -4566,7 +4566,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Champions on your board permanently transform into random champions 1 cost tier higher (max 5). Gain Magnetic Removers.",
-      "desc_vi": "Tất cả tướng trên sân đấu của bạn sẽ vĩnh viễn chuyển thành tướng ngẫu nhiên với giá cao hơn 1 bậc (tối đa 5). Nhận @NumRemovers@ Nam Châm Ma Thuật và @FreeRerolls@ lượt đổi.",
+      "desc_vi": "Tất cả tướng trên sân đấu của bạn sẽ vĩnh viễn chuyển thành tướng ngẫu nhiên với giá cao hơn 1 bậc (tối đa 5). Nhận 2 Nam Châm Ma Thuật và 3 lượt đổi.",
       "icon": "assets/maps/tft/icons/augments/hexcore/recombobulator-i.png"
     },
     {
@@ -4576,7 +4576,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Your team gains Health. Each time you purchase a Wisp, increase this by.",
-      "desc_vi": "Đội của bạn được tăng @InitialHealth@ Máu. Mỗi khi bạn mua 1 Tinh Linh, tăng hiệu ứng này thêm @HealthPerSprite@.",
+      "desc_vi": "Đội của bạn được tăng 60 Máu. Mỗi khi bạn mua 1 Tinh Linh, tăng hiệu ứng này thêm 10.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t1.png"
     },
     {
@@ -4586,7 +4586,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Your team gains Health. Each time you purchase a Wisp, increase this by.",
-      "desc_vi": "Đội của bạn được tăng @InitialHealth@ Máu. Mỗi khi bạn mua 1 Tinh Linh, tăng hiệu ứng này thêm @HealthPerSprite@.",
+      "desc_vi": "Đội của bạn được tăng 75 Máu. Mỗi khi bạn mua 1 Tinh Linh, tăng hiệu ứng này thêm 10.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t1.png"
     },
     {
@@ -4596,7 +4596,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Your team gains Health. Each time you purchase a Wisp, increase this by.",
-      "desc_vi": "Đội của bạn được tăng @InitialHealth@ Máu. Mỗi khi bạn mua 1 Tinh Linh, tăng hiệu ứng này thêm @HealthPerSprite@.",
+      "desc_vi": "Đội của bạn được tăng 90 Máu. Mỗi khi bạn mua 1 Tinh Linh, tăng hiệu ứng này thêm 10.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t1.png"
     },
     {
@@ -4606,7 +4606,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Gain free Shop rerolls.",
-      "desc_vi": "Nhận @NumFreeRerolls@ lượt đổi Cửa Hàng miễn phí.",
+      "desc_vi": "Nhận 10 lượt đổi Cửa Hàng miễn phí.",
       "icon": "assets/maps/tft/icons/augments/hexcore/rolling-for-days-i.png"
     },
     {
@@ -4616,7 +4616,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Gain XP",
-      "desc_vi": "Nhận @Experience@ XP.",
+      "desc_vi": "Nhận 10 XP.",
       "icon": "assets/maps/tft/icons/augments/hexcore/silver-spoon-i.png"
     },
     {
@@ -4626,7 +4626,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Twice per stage, gain a random champion. Its cost increases by Stage. This effect ends after receiving -cost champion.",
-      "desc_vi": "Hai lần mỗi giai đoạn, nhận 1 tướng ngẫu nhiên. Giá của tướng tăng theo Giai Đoạn. Hiệu ứng này kết thúc sau khi nhận được @Max5Costs@ tướng 5 vàng.",
+      "desc_vi": "Hai lần mỗi giai đoạn, nhận 1 tướng ngẫu nhiên. Giá của tướng tăng theo Giai Đoạn. Hiệu ứng này kết thúc sau khi nhận được 1 tướng 5 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/slice_of_life_i.png"
     },
     {
@@ -4636,7 +4636,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Roll a die. Gain rewards based on the number rolled.",
-      "desc_vi": "Đổ 1 con xúc xắc. Nhận thưởng dựa trên số xúc xắc đổ ra.\n\nPhần Thưởng: @TFTUnitProperty.item:TFT_Augment_MagicRoll@",
+      "desc_vi": "Đổ 1 con xúc xắc. Nhận thưởng dựa trên số xúc xắc đổ ra. Phần Thưởng:",
       "icon": "assets/maps/tft/icons/augments/hexcore/slightlymagicroll_i.png"
     },
     {
@@ -4646,7 +4646,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Gain random item components.",
-      "desc_vi": "Nhận @NumComponents@ trang bị thành phần ngẫu nhiên.",
+      "desc_vi": "Nhận 2 trang bị thành phần ngẫu nhiên.",
       "icon": "assets/maps/tft/icons/augments/hexcore/smallgrabbag_i.png"
     },
     {
@@ -4656,7 +4656,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Your units gain Attack Damage and Ability Power for each non-unique Trait active across your team.",
-      "desc_vi": "Nhận @AD*100@% Sức Mạnh Công Kích và @AP@% Sức Mạnh Phép Thuật với mỗi Tộc/Hệ không phải duy nhất được kích hoạt trong đội hình.\n\nThưởng Hiện Tại: @TFTUnitProperty.item:TFT_Augment_Diversify_ADCounter@%  @TFTUnitProperty.item:TFT_Augment_Diversify_APCounter@%",
+      "desc_vi": "Nhận 1.5% Sức Mạnh Công Kích và 1.5% Sức Mạnh Phép Thuật với mỗi Tộc/Hệ không phải duy nhất được kích hoạt trong đội hình. Thưởng Hiện Tại: % %",
       "icon": "assets/maps/tft/icons/augments/hexcore/standunited1.png"
     },
     {
@@ -4666,7 +4666,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Gain a Lesser Champion Duplicator. Gain another after player combats.\\n \\n \\n \\n This item allows you to copy a 3-cost or less champion.",
-      "desc_vi": "Nhận 1 Máy Sao Chép Tướng Cỡ Nhỏ. Nhận thêm 1 Máy Sao Chép Tướng Cỡ Nhỏ nữa sau @PlayerCombatNum@ vòng giao tranh người chơi.\n\nTrang bị này cho phép bạn sao chép một tướng 3 vàng trở xuống.",
+      "desc_vi": "Nhận 1 Máy Sao Chép Tướng Cỡ Nhỏ. Nhận thêm 1 Máy Sao Chép Tướng Cỡ Nhỏ nữa sau 3 vòng giao tranh người chơi. Trang bị này cho phép bạn sao chép một tướng 3 vàng trở xuống.",
       "icon": "assets/maps/tft/icons/augments/hexcore/building-an-army-i.png"
     },
     {
@@ -4676,7 +4676,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Gain a giant Training Dummy. Every seconds, it zaps the nearest enemies dealing max Health true damage.",
-      "desc_vi": "Nhận 1 Hình Nhân khổng lồ với lượng Máu tăng thêm (tăng theo Giai đoạn). Cứ mỗi @ZapInterval@ giây, nó phóng điện vào @ZapCount@ kẻ địch gần nhất, gây sát thương chuẩn tương đương @MaxHealthPct*100@% Máu tối đa.",
+      "desc_vi": "Nhận 1 Hình Nhân khổng lồ với lượng Máu tăng thêm (tăng theo Giai đoạn). Cứ mỗi 4 giây, nó phóng điện vào 3 kẻ địch gần nhất, gây sát thương chuẩn tương đương 5% Máu tối đa.",
       "icon": "assets/maps/tft/icons/augments/hexcore/thetower_i.png"
     },
     {
@@ -4686,7 +4686,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "If you have exactly allies in your first row, grant them Health, Armor, and Magic Resist.",
-      "desc_vi": "Nếu bạn có đúng @NumUnits@ đồng minh ở hàng đầu, tăng cho họ @BonusHealth@ Máu cộng thêm, @BonusAR@ Giáp và @BonusMR@ Kháng Phép.",
+      "desc_vi": "Nếu bạn có đúng 2 đồng minh ở hàng đầu, tăng cho họ 100 Máu cộng thêm, 35 Giáp và 35 Kháng Phép.",
       "icon": "assets/maps/tft/icons/augments/hexcore/twinguardians_i.png"
     },
     {
@@ -4696,7 +4696,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Champions gain Attack Damage, Ability Power, Armor, and Magic Resist for each ally that shares a trait with them.",
-      "desc_vi": "Các Tướng nhận được @ADAP*100@% Sức Mạnh Công Kích, @ADAP*100@% Sức Mạnh Phép Thuật, @resists@ Giáp và @resists@ Kháng Phép cho mỗi đồng minh có cùng tộc/hệ với họ.",
+      "desc_vi": "Các Tướng nhận được 1.5% Sức Mạnh Công Kích, 1.5% Sức Mạnh Phép Thuật, 1.5 Giáp và 1.5 Kháng Phép cho mỗi đồng minh có cùng tộc/hệ với họ.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t1.png"
     },
     {
@@ -4716,7 +4716,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "Each time you purchase a Wisp, gain gold. Gain gold now.",
-      "desc_vi": "Mỗi lần bạn mua 1 Tinh Linh, nhận @Gold@ vàng. Nhận ngay @StartingGold@ vàng.",
+      "desc_vi": "Mỗi lần bạn mua 1 Tinh Linh, nhận 2 vàng. Nhận ngay 4 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t1.png"
     },
     {
@@ -4736,7 +4736,7 @@
       "tier": 1,
       "tierName": "Silver",
       "desc_en": "You can always move freely on Carousel rounds. Gain gold.",
-      "desc_vi": "Bạn sẽ luôn được di chuyển tự do trong Vòng Đi Chợ. Nhận @Gold@ vàng.",
+      "desc_vi": "Bạn sẽ luôn được di chuyển tự do trong Vòng Đi Chợ. Nhận 5 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/young-and-wild-and-free-i.png"
     },
     {
@@ -4746,7 +4746,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain Gold. Your next augment is one tier lower.",
-      "desc_vi": "Nhận @Gold@ Vàng. Nâng cấp tiếp theo của bạn bị giảm 1 bậc.",
+      "desc_vi": "Nhận 20 Vàng. Nâng cấp tiếp theo của bạn bị giảm 1 bậc.",
       "icon": "assets/maps/tft/icons/augments/hexcore/advancedloan_ii.png"
     },
     {
@@ -4756,7 +4756,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain Gold. Your next augment is one tier lower.",
-      "desc_vi": "Nhận @Gold@ Vàng. Nâng cấp tiếp theo của bạn bị giảm 1 bậc.",
+      "desc_vi": "Nhận 33 Vàng. Nâng cấp tiếp theo của bạn bị giảm 1 bậc.",
       "icon": "assets/maps/tft/icons/augments/hexcore/advancedloan_ii.png"
     },
     {
@@ -4766,7 +4766,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "After seconds of combat, stun the enemy team for seconds. Repeat this after seconds of combat.\\n \\n \\n \\n TFT Macao Open, 2024",
-      "desc_vi": "Sau @FirstStunSeconds@ giây giao tranh, làm choáng đội địch trong @StunDuration@ giây. Lặp lại hiệu ứng này sau @SecondStunSeconds@ giây giao tranh.\n\nĐTCL Macao Open, 2024",
+      "desc_vi": "Sau 8 giây giao tranh, làm choáng đội địch trong 1.5 giây. Lặp lại hiệu ứng này sau 18 giây giao tranh. ĐTCL Macao Open, 2024",
       "icon": "assets/maps/tft/icons/augments/hexcore/arcaneviktory_ii.png"
     },
     {
@@ -4776,7 +4776,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "After seconds of combat, your units gain Damage Amp.",
-      "desc_vi": "Sau @Delay@ giây giao tranh, đội của bạn nhận thêm @DamageAmp@% Khuếch Đại Sát Thương.",
+      "desc_vi": "Sau 15 giây giao tranh, đội của bạn nhận thêm 50% Khuếch Đại Sát Thương.",
       "icon": "assets/maps/tft/icons/augments/hexcore/ascension2.png"
     },
     {
@@ -4796,7 +4796,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Primal grants an additional Blessing. Gain a Vi.",
-      "desc_vi": "Tướng Nguyên Sinh cho thêm một Phước Lành nữa.  Nhận 1 Vi ngay bây giờ và 1 Sivir sau @AugmentRoundDelay@ vòng đấu.",
+      "desc_vi": "Tướng Nguyên Sinh cho thêm một Phước Lành nữa. Nhận 1 Vi ngay bây giờ và 1 Sivir sau 3 vòng đấu.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t2.png"
     },
     {
@@ -4806,7 +4806,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain 3 random components, gold, and 1 Reforger.",
-      "desc_vi": "Nhận @NumItems@ trang bị thành phần ngẫu nhiên, @Gold@ vàng và 1 Búa Rèn. \n\nBúa Rèn cho phép bạn tái tạo bất kỳ trang bị nào.",
+      "desc_vi": "Nhận 3 trang bị thành phần ngẫu nhiên, 2 vàng và 1 Búa Rèn. Búa Rèn cho phép bạn tái tạo bất kỳ trang bị nào.",
       "icon": "assets/maps/tft/icons/augments/hexcore/grab-bag-ii.png"
     },
     {
@@ -4816,7 +4816,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain 3 Gold. At Level, gain a random -star -cost champion. At Level, gain a Thief's Gloves. At Level, gain a random -star -cost champion.\\n \\n \\n \\n Inkborn Fables Tactician's Crown, 2024",
-      "desc_vi": "Nhận @Gold@ vàng. Ở Cấp @InitialLevelBreakpoint@, nhận 1 tướng 2 vàng 2 sao ngẫu nhiên. Ở Cấp @FirstLevelBreakpoint@, nhận 1 Găng Đạo Tặc. Ở Cấp @SecondLevelBreakpoint@, nhận 1 tướng 5 vàng 2 sao ngẫu nhiên.\n\nTactician's Crown Họa Thế Chi Linh, 2024",
+      "desc_vi": "Nhận 1 vàng. Ở Cấp 5, nhận 1 tướng 2 vàng 2 sao ngẫu nhiên. Ở Cấp 7, nhận 1 Găng Đạo Tặc. Ở Cấp 9, nhận 1 tướng 5 vàng 2 sao ngẫu nhiên. Tactician's Crown Họa Thế Chi Linh, 2024",
       "icon": "assets/maps/tft/icons/augments/hexcore/birthdayreunion_ii.png"
     },
     {
@@ -4836,7 +4836,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Allies gain Armor and Magic Resist, increased by per player level.\\n \\n \\n \\n Gizmos & Gadgets Championship, 2022",
-      "desc_vi": "Các đồng minh nhận @BaseResistGained@ Giáp và Kháng Phép, tăng thêm @ResistsPerLevel@ với mỗi cấp người chơi.\n\nChung Kết Thế Giới Thời Đại Công Nghệ, 2022",
+      "desc_vi": "Các đồng minh nhận 15 Giáp và Kháng Phép, tăng thêm 2 với mỗi cấp người chơi. CKTG Thời Đại Công Nghệ 2022",
       "icon": "assets/maps/tft/icons/augments/hexcore/bodyguardstraining_ii.png"
     },
     {
@@ -4866,7 +4866,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain gold of random champions. (At least one -cost guaranteed!)",
-      "desc_vi": "Nhận các tướng ngẫu nhiên có tổng giá là @TotalValue@ vàng. (Đảm bảo có ít nhất một tướng @GuaranteedCost@ vàng!)\n\n(Mỗi tướng đều có tỉ lệ nhỏ trở thành dạng ba chiều!)",
+      "desc_vi": "Nhận các tướng ngẫu nhiên có tổng giá là 12 vàng. (Đảm bảo có ít nhất một tướng 3 vàng!) (Mỗi tướng đều có tỉ lệ nhỏ trở thành dạng ba chiều!)",
       "icon": "assets/maps/tft/icons/augments/hexcore/boosterpack1_ii.png"
     },
     {
@@ -4876,7 +4876,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain gold of random champions. (At least one -cost guaranteed!)",
-      "desc_vi": "Nhận các tướng ngẫu nhiên có tổng giá là @TotalValue@ vàng. (Đảm bảo có ít nhất một tướng @GuaranteedCost@ vàng!)\n\n(Mỗi tướng đều có tỉ lệ nhỏ trở thành dạng ba chiều!)",
+      "desc_vi": "Nhận các tướng ngẫu nhiên có tổng giá là 18 vàng. (Đảm bảo có ít nhất một tướng 4 vàng!) (Mỗi tướng đều có tỉ lệ nhỏ trở thành dạng ba chiều!)",
       "icon": "assets/maps/tft/icons/augments/hexcore/boosterpack1_ii.png"
     },
     {
@@ -4886,7 +4886,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain gold of random champions. (At least one -cost guaranteed!)",
-      "desc_vi": "Nhận các tướng ngẫu nhiên có tổng giá là @TotalValue@ vàng. (Đảm bảo có ít nhất một tướng @GuaranteedCost@ vàng!)\n\n(Mỗi tướng đều có tỉ lệ nhỏ trở thành dạng ba chiều!)",
+      "desc_vi": "Nhận các tướng ngẫu nhiên có tổng giá là 26 vàng. (Đảm bảo có ít nhất một tướng 5 vàng!) (Mỗi tướng đều có tỉ lệ nhỏ trở thành dạng ba chiều!)",
       "icon": "assets/maps/tft/icons/augments/choiceui/boosterpack1_ii.png"
     },
     {
@@ -4896,7 +4896,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Your team gains Damage Amp for each Bronze-tier trait.",
-      "desc_vi": "Đội của bạn nhận @DamageAmpBonus*100@% Khuếch Đại Sát Thương cho mỗi tộc/hệ bậc Đồng.\n\nThưởng Khuếch Đại Sát Thương: @TFTUnitProperty.item:TFT_Augment_BronzeForLife_CurrentDamageAmp@%",
+      "desc_vi": "Đội của bạn nhận 2% Khuếch Đại Sát Thương cho mỗi tộc/hệ bậc Đồng. Thưởng Khuếch Đại Sát Thương: %",
       "icon": "assets/maps/tft/icons/augments/hexcore/bronzeforlife_ii.png"
     },
     {
@@ -4906,7 +4906,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "After losing your combat, gain gold and a free Shop reroll.",
-      "desc_vi": "Sau khi thua trận, nhận @Gold@ vàng và 1 lượt đổi Cửa Hàng miễn phí.",
+      "desc_vi": "Sau khi thua trận, nhận 2 vàng và 1 lượt đổi Cửa Hàng miễn phí.",
       "icon": "assets/maps/tft/icons/augments/hexcore/calculatedloss2.png"
     },
     {
@@ -4916,7 +4916,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Store gold equal to of the interest you earn. On -, gain all the stored gold. Gain gold now.",
-      "desc_vi": "Tích trữ vàng bằng với lượng lợi tức bạn kiếm được. Ở vòng @Stage@-@Round@, nhận lượng vàng bằng @InterestRatio*100@% số vàng đã tích trữ. Nhận ngay @StartingGold@ vàng.",
+      "desc_vi": "Tích trữ vàng bằng với lượng lợi tức bạn kiếm được. Ở vòng 3-3, nhận lượng vàng bằng 125% số vàng đã tích trữ. Nhận ngay 3 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t2.png"
     },
     {
@@ -4926,7 +4926,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain a component anvil when you reach level 5, 6, 7, and 8.\\n \\n \\n \\n Component anvils offer 4 choices.",
-      "desc_vi": "Nhận một gói trang bị thành phần khi bạn đạt cấp @levelreqa@, @levelreqb@, @levelreqc@ và @levelreqd@.\n\nGói trang bị cho bạn 4 lựa chọn.",
+      "desc_vi": "Nhận một gói trang bị thành phần khi bạn đạt cấp 5, 6, 7 và 8. Gói trang bị cho bạn 4 lựa chọn.",
       "icon": "assets/maps/tft/icons/augments/hexcore/caretaker_s-chosen-ii.png"
     },
     {
@@ -4936,7 +4936,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Your team gains Omnivamp. Excess healing is converted to a shield up to Health.",
-      "desc_vi": "Đội của bạn nhận @Omnivamp@% Hút Máu Toàn Phần. Lượng hồi máu phụ trội sẽ được chuyển thành lá chắn, tối đa @MaxShield@ Máu.",
+      "desc_vi": "Đội của bạn nhận 18% Hút Máu Toàn Phần. Lượng hồi máu phụ trội sẽ được chuyển thành lá chắn, tối đa 400 Máu.",
       "icon": "assets/maps/tft/icons/augments/hexcore/celestialblessing2.png"
     },
     {
@@ -4946,7 +4946,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain a Leona, a Kayle, and a Sejuani. Leona gains permanent max Health each round, increased by for each unique 3-star champion fielded.",
-      "desc_vi": "Nhận 1 Leona, 1 Kayle và 1 Sejuani. Leona nhận được @FlatHealth@ Máu tối đa vĩnh viễn mỗi vòng, tăng thêm @HealthPerThreeStar@ với mỗi tướng 3 sao khác nhau được triển khai.",
+      "desc_vi": "Nhận 1 Leona, 1 Kayle và 1 Sejuani. Leona nhận được 70 Máu tối đa vĩnh viễn mỗi vòng, tăng thêm 10 với mỗi tướng 3 sao khác nhau được triển khai.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t1.png"
     },
     {
@@ -4956,7 +4956,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "If there are no champions on your bench at the end of player combat, gain XP.",
-      "desc_vi": "Nếu không có tướng trong hàng dự bị khi kết thúc giao tranh với người chơi, nhận @XP@ ĐKN.",
+      "desc_vi": "Nếu không có tướng trong hàng dự bị khi kết thúc giao tranh với người chơi, nhận 3 ĐKN.",
       "icon": "assets/maps/tft/icons/augments/hexcore/clearmind2.png"
     },
     {
@@ -4966,7 +4966,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Your team gains Attack Speed every seconds in combat.",
-      "desc_vi": "Đội của bạn được tăng @attackspeed*100@% Tốc Độ Đánh sau mỗi @frequency@ giây giao tranh.",
+      "desc_vi": "Đội của bạn được tăng 10% Tốc Độ Đánh sau mỗi 3 giây giao tranh.",
       "icon": "assets/maps/tft/icons/augments/hexcore/clockworkaccelerator_ii.png"
     },
     {
@@ -4976,7 +4976,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain -cost champions now. If your bench is full at the end of player combat, gain XP.",
-      "desc_vi": "Lập tức nhận @Units@ tướng 1-vàng ngẫu nhiên. Nếu hàng chờ của bạn đầy khi kết thúc một vòng giao chiến với người chơi, nhận @XP@ XP.",
+      "desc_vi": "Lập tức nhận 4 tướng 1-vàng ngẫu nhiên. Nếu hàng chờ của bạn đầy khi kết thúc một vòng giao chiến với người chơi, nhận 3 XP.",
       "icon": "assets/maps/tft/icons/augments/hexcore/dizzy-ii.png"
     },
     {
@@ -4986,7 +4986,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain gold, -star -cost champion, -cost champion, -cost champions, XP, and Shop reroll.",
-      "desc_vi": "Nhận @Gold@ vàng, @OneCostCount@ tướng 1 vàng 2 sao, @TwoCostCount@ tướng 2 vàng, @ThreeCostCount@ tướng 3 vàng, @XP@ XP, và @FreeRolls@ lượt đổi Cửa Hàng.",
+      "desc_vi": "Nhận 7 vàng, 1 tướng 1 vàng 2 sao, 1 tướng 2 vàng, 2 tướng 3 vàng, 1 XP, và 1 lượt đổi Cửa Hàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/cognitiveoverload_ii.png"
     },
     {
@@ -4996,7 +4996,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "The next -cost champion you buy is -star. Gain gold.",
-      "desc_vi": "Tướng 1 vàng tiếp theo bạn mua được nâng lên 3 sao. Nhận @Gold@ vàng.",
+      "desc_vi": "Tướng 1 vàng tiếp theo bạn mua được nâng lên 3 sao. Nhận 2 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/constructacompanion_iii.png"
     },
     {
@@ -5006,7 +5006,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain a Flora Fatalis emblem. The champion holding the emblem gains double benefits from the Flora Fatalis trait and gains Mana Regen.",
-      "desc_vi": "Nhận 1 ấn Thực Vật. Tướng mang ấn sẽ được tăng @ExtraEffectiveness*100@% hiệu ứng từ tộc/hệ Thực Vật. Nhận @Gold@ vàng.",
+      "desc_vi": "Nhận 1 ấn Thực Vật. Tướng mang ấn sẽ được tăng 50% hiệu ứng từ tộc/hệ Thực Vật. Nhận 3 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t2.png"
     },
     {
@@ -5016,7 +5016,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "At the start of each turn, all units holding a Frying Pan or Spatula item grant the nearest champion permanent Health. Gain a Frying Pan.",
-      "desc_vi": "Khi bắt đầu mỗi lượt, tất cả các đồng minh đang mang trang bị Xẻng Vàng hoặc Chảo Vàng sẽ vĩnh viễn cho tướng ở gần nhất @Health@ Máu. Nhận 1 Chảo Vàng.",
+      "desc_vi": "Khi bắt đầu mỗi lượt, tất cả các đồng minh đang mang trang bị Xẻng Vàng hoặc Chảo Vàng sẽ vĩnh viễn cho tướng ở gần nhất 70 Máu. Nhận 1 Chảo Vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/cookingpot_ii.png"
     },
     {
@@ -5026,7 +5026,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "When you choose to continue gathering Coven essence, heal Tactician health. Gain a Camille, an Elise, and a Caitlyn.",
-      "desc_vi": "Khi bạn chọn tiếp tục thu thập tinh hoa Tiên Hắc Ám, hồi @Health@ máu Linh Thú. Nhận 1 Camille, 1 Elise và 1 Caitlyn.",
+      "desc_vi": "Khi bạn chọn tiếp tục thu thập tinh hoa Tiên Hắc Ám, hồi 2 máu Linh Thú. Nhận 1 Camille, 1 Elise và 1 Caitlyn.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t2.png"
     },
     {
@@ -5036,7 +5036,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain a Tear of the Goddess. Your team gains Mana Regen. After seconds in combat, increase this to.",
-      "desc_vi": "Nhận 1 Nước Mắt Nữ Thần. Đội của bạn nhận @RegenBonus@ Hồi Năng Lượng. Sau @DelayTime@ giây giao tranh, tăng hiệu ứng này lên thành @UpgradedRegenBonus@.",
+      "desc_vi": "Nhận 1 Nước Mắt Nữ Thần. Đội của bạn nhận 1 Hồi Năng Lượng. Sau 12 giây giao tranh, tăng hiệu ứng này lên thành 4.",
       "icon": "assets/maps/tft/icons/augments/hexcore/crymeariver_ii.png"
     },
     {
@@ -5076,7 +5076,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "When you field exactly 2 copies of a champion, they both gain Attack Damage and Ability Power and Armor, and Magic Resist. When you 3-star, gain a 2-star copy.",
-      "desc_vi": "Khi triển khai đúng 2 bản sao của một tướng, cả 2 tướng đó được tăng @BonusStats@% SMCK, @BonusStats@% SMPT, Giáp và Kháng Phép. Khi ghép tướng 3 sao, nhận 1 bản sao 2 sao.",
+      "desc_vi": "Khi triển khai đúng 2 bản sao của một tướng, cả 2 tướng đó được tăng 30% SMCK, 30% SMPT, Giáp và Kháng Phép. Khi ghép tướng 3 sao, nhận 1 bản sao 2 sao.",
       "icon": "assets/maps/tft/icons/augments/hexcore/double-trouble-ii.png"
     },
     {
@@ -5086,7 +5086,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain 2 random 5-cost champions and 2 copies of a random component",
-      "desc_vi": "Nhận @NumUnits@ tướng 5 vàng ngẫu nhiên và @NumComponents@ bản sao của 1 trang bị thành phần ngẫu nhiên.",
+      "desc_vi": "Nhận 2 tướng 5 vàng ngẫu nhiên và 2 bản sao của 1 trang bị thành phần ngẫu nhiên.",
       "icon": "assets/maps/tft/icons/augments/hexcore/duoqueue_ii.png"
     },
     {
@@ -5096,7 +5096,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Your team gains% Attack Damage & Ability Power. This increases by% after each player combat. 1-cost champions gain double.\\n \\n TFT Vegas Open, 2023",
-      "desc_vi": "Đội của bạn nhận @NumADAP@% Sức Mạnh Công Kích & Sức Mạnh Phép Thuật. Lượng này sẽ tăng thêm @IncPerPlayerCombat@% sau mỗi giao tranh người chơi. Các tướng 1 vàng nhận gấp đôi.\n@TFTUnitProperty.item:TFT_Augment_EarlyLearning_TRAKey@\nĐTCL Vegas Open, 2023",
+      "desc_vi": "Đội của bạn nhận 5% Sức Mạnh Công Kích & Sức Mạnh Phép Thuật. Lượng này sẽ tăng thêm 1% sau mỗi giao tranh người chơi. Các tướng 1 vàng nhận gấp đôi. ĐTCL Vegas Open, 2023",
       "icon": "assets/maps/tft/icons/augments/hexcore/earlylearning_ii.png"
     },
     {
@@ -5106,7 +5106,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Every attacks an ally takes, they deal - (based on current Stage) magic damage to nearby enemies ( second cooldown).",
-      "desc_vi": "Mỗi khi đồng minh nhận @AttacksToProc@ đòn đánh, họ sẽ gây @Damage1@ - @Damage4@ (dựa trên Giai Đoạn hiện tại) sát thương phép lên kẻ địch gần đó (@ICD@ giây hồi chiêu).",
+      "desc_vi": "Mỗi khi đồng minh nhận 4 đòn đánh, họ sẽ gây 50 - 140 (dựa trên Giai Đoạn hiện tại) sát thương phép lên kẻ địch gần đó (1 giây hồi chiêu).",
       "icon": "assets/maps/tft/icons/augments/hexcore/electrocharge-ii.png"
     },
     {
@@ -5116,7 +5116,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Your Fae pixies are larger and grant more Attack Damage and Ability Power. Gain a Xayah and a Rakan.",
-      "desc_vi": "Các Pix Tiên Linh giờ trở nên lớn hơn và trao thêm @BonusMultiplier*100@% Sức Mạnh Công Kích & Sức Mạnh Phép Thuật. Các tướng Tiên Linh nhận @UpfrontADAP*100@% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật ngay lập tức. Nhận 1 Xayah và 1 Rakan.",
+      "desc_vi": "Các Pix Tiên Linh giờ trở nên lớn hơn và trao thêm 50% Sức Mạnh Công Kích & Sức Mạnh Phép Thuật. Các tướng Tiên Linh nhận 10% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật ngay lập tức. Nhận 1 Xayah và 1 Rakan.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t2.png"
     },
     {
@@ -5126,7 +5126,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "When you reach Level, gain Shop rerolls.\\n \\n \\n \\n Runeterra Reforged Championship, 2023",
-      "desc_vi": "Khi đạt Cấp 8, nhận @NumRerolls@ Lượt Đổi Cửa Hàng.\n\nQuán Quân Runeterra Tái Hợp, 2023",
+      "desc_vi": "Khi đạt Cấp 8, nhận 20 Lượt Đổi Cửa Hàng. Quán Quân Runeterra Tái Hợp, 2023",
       "icon": "assets/maps/tft/icons/augments/hexcore/epicrolldown_ii.png"
     },
     {
@@ -5136,7 +5136,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Now, and at the start of every stage, gain XP and free rerolls.",
-      "desc_vi": "Ngay lập tức, và khi bắt đầu mỗi giai đoạn, nhận @XP@ XP và @Rerolls@ lượt đổi miễn phí.",
+      "desc_vi": "Ngay lập tức, và khi bắt đầu mỗi giai đoạn, nhận 4 XP và 2 lượt đổi miễn phí.",
       "icon": "assets/maps/tft/icons/augments/hexcore/epoch_ii.png"
     },
     {
@@ -5146,7 +5146,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Now, and at the start of every stage, gain XP and free rerolls.",
-      "desc_vi": "Ngay lập tức, và khi bắt đầu mỗi giai đoạn, nhận @XP@ XP và @Rerolls@ lượt đổi miễn phí.",
+      "desc_vi": "Ngay lập tức, và khi bắt đầu mỗi giai đoạn, nhận 8 XP và 2 lượt đổi miễn phí.",
       "icon": "assets/maps/tft/icons/augments/hexcore/epoch_ii.png"
     },
     {
@@ -5156,7 +5156,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain a Lucky Item Chest, a Magnetic Remover and gold.",
-      "desc_vi": "Nhận 1 Rương Trang Bị May Mắn, 1 Nam Châm Ma Thuật và @Gold@ vàng.\n\nSử dụng 1 Rương Trang Bị May Mắn lên 1 tướng để chọn một trong số các trang bị gợi ý!",
+      "desc_vi": "Nhận 1 Rương Trang Bị May Mắn, 1 Nam Châm Ma Thuật và 7 vàng. Sử dụng 1 Rương Trang Bị May Mắn lên 1 tướng để chọn một trong số các trang bị gợi ý!",
       "icon": "assets/maps/tft/icons/augments/hexcore/exclusivecustomization_ii.png"
     },
     {
@@ -5166,7 +5166,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Now and at the start of the next rounds, gain XP.",
-      "desc_vi": "Nhận @XP@ XP ngay bây giờ và khi bắt đầu @Rounds@ vòng đấu tiếp theo.",
+      "desc_vi": "Nhận 7 XP ngay bây giờ và khi bắt đầu 3 vòng đấu tiếp theo.",
       "icon": "assets/maps/tft/icons/augments/hexcore/explosivegrowth_ii.png"
     },
     {
@@ -5176,7 +5176,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Now and at the start of the next rounds, gain XP.",
-      "desc_vi": "Nhận @XP@ XP ngay bây giờ và khi bắt đầu @Rounds@ vòng đấu tiếp theo.",
+      "desc_vi": "Nhận 10 XP ngay bây giờ và khi bắt đầu 3 vòng đấu tiếp theo.",
       "icon": "assets/maps/tft/icons/augments/hexcore/explosivegrowth_ii.png"
     },
     {
@@ -5186,7 +5186,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain a random 4-cost champion. For each item equipped to that champion, your team gains health.",
-      "desc_vi": "Nhận 1 tướng 4 vàng ngẫu nhiên. Với mỗi trang bị được gắn trên tướng đó, đội của bạn nhận @Health@ máu.",
+      "desc_vi": "Nhận 1 tướng 4 vàng ngẫu nhiên. Với mỗi trang bị được gắn trên tướng đó, đội của bạn nhận 100 máu.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t2.png"
     },
     {
@@ -5206,7 +5206,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain gold.",
-      "desc_vi": "Nhận @NumGold@ vàng.",
+      "desc_vi": "Nhận 21 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/windfall2.png"
     },
     {
@@ -5216,7 +5216,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain two 5-cost champions. If you field at least one 5-cost champion, your 1 to 4-cost champions gain Durability.\\n \\n \\n \\n K.O. Coliseum Tactician's Crown, 2025",
-      "desc_vi": "Nhận @NumUnits@ tướng 5 vàng không phải Đỡ Đòn. Nếu bạn triển khai ít nhất 1 tướng 5 vàng, các tướng từ 1 đến 4 vàng của bạn nhận được @Durability*100@% Chống Chịu.\n\nTactician's Crown K.O. Đại Chiến Anh Hùng, 2025",
+      "desc_vi": "Nhận 2 tướng 5 vàng không phải Đỡ Đòn. Nếu bạn triển khai ít nhất 1 tướng 5 vàng, các tướng từ 1 đến 4 vàng của bạn nhận được 8% Chống Chịu. Tactician's Crown K.O. Đại Chiến Anh Hùng, 2025",
       "icon": "assets/maps/tft/icons/augments/hexcore/gildedsteel_ii.png"
     },
     {
@@ -5226,7 +5226,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Allies that start combat in the back row begin combat at Health but gain Damage Amp.",
-      "desc_vi": "Các đồng minh bắt đầu giao tranh ở hàng sau sẽ khởi đầu với @Health*100@% Máu nhưng nhận thêm @DamageAmp*100@% Khuếch Đại Sát Thương.",
+      "desc_vi": "Các đồng minh bắt đầu giao tranh ở hàng sau sẽ khởi đầu với 80% Máu nhưng nhận thêm 25% Khuếch Đại Sát Thương.",
       "icon": "assets/maps/tft/icons/augments/hexcore/glasscannon_ii.png"
     },
     {
@@ -5236,7 +5236,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Combat start: Allies grant other adjacent allies Armor and Magic Resist. This effect stacks.",
-      "desc_vi": "Bắt đầu giao tranh: Đồng minh sẽ tăng cho các đồng minh liền kề khác @Resists@ Giáp và Kháng Phép. Hiệu ứng này có thể cộng dồn.",
+      "desc_vi": "Bắt đầu giao tranh: Đồng minh sẽ tăng cho các đồng minh liền kề khác 9 Giáp và Kháng Phép. Hiệu ứng này có thể cộng dồn.",
       "icon": "assets/maps/tft/icons/augments/hexcore/grouphug2_ii.png"
     },
     {
@@ -5246,7 +5246,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "You cannot choose your Carousel rewards. Gain an additional player health and gold each carousel round.\\n \\n When you do not pick a Carousel Reward, you are given an unpicked champion and the item it carries.",
-      "desc_vi": "Bạn không thể chọn phần thưởng trong Vòng Đi Chợ. Nhận thêm @PlayerHealth@ Máu người chơi và @Gold@ Vàng mỗi vòng đi chợ.\nKhi bạn không chọn Phần Thưởng Ở Vòng Đi Chợ, bạn sẽ được trao 1 tướng chưa có người chọn cùng trang bị đi kèm",
+      "desc_vi": "Bạn không thể chọn phần thưởng trong Vòng Đi Chợ. Nhận thêm 6 Máu người chơi và 8 Vàng mỗi vòng đi chợ. Khi bạn không chọn Phần Thưởng Ở Vòng Đi Chợ, bạn sẽ được trao 1 tướng chưa có người chọn cùng trang bị đi kèm",
       "icon": "assets/maps/tft/icons/augments/hexcore/hardbargain_ii.png"
     },
     {
@@ -5256,7 +5256,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "When an enemy dies, the nearest ally is healed for.",
-      "desc_vi": "Khi một kẻ địch bị hạ gục, tướng đồng minh gần nhất được hồi lại @Heal@ máu.",
+      "desc_vi": "Khi một kẻ địch bị hạ gục, tướng đồng minh gần nhất được hồi lại 575 máu.",
       "icon": "assets/maps/tft/icons/augments/hexcore/healing-orbs-ii.png"
     },
     {
@@ -5266,7 +5266,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain a Steadfast Heart. Every seconds of combat its holder survives, Steadfast Heart gains additional permanent max Health.",
-      "desc_vi": "Nhận 1 Trái Tim Kiên Định. Mỗi @SecondsPerGain@ giây mà chủ sở hữu sống sót trong giao tranh, Trái Tim Kiên Định nhận thêm vĩnh viễn @Health@ Máu tối đa.",
+      "desc_vi": "Nhận 1 Trái Tim Kiên Định. Mỗi 10 giây mà chủ sở hữu sống sót trong giao tranh, Trái Tim Kiên Định nhận thêm vĩnh viễn Máu tối đa.",
       "icon": "assets/maps/tft/icons/augments/hexcore/healthygains_ii.png"
     },
     {
@@ -5276,7 +5276,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain 2 Lesser Champion Duplicators. Gain Gold",
-      "desc_vi": "Nhận @LesserDuplicatorAmount@ Máy Sao Chép Tướng Cỡ Nhỏ và @Gold@ vàng.\n\nTrang bị này cho phép bạn sao chép một tướng 3 vàng trở xuống.",
+      "desc_vi": "Nhận 2 Máy Sao Chép Tướng Cỡ Nhỏ và 5 vàng. Trang bị này cho phép bạn sao chép một tướng 3 vàng trở xuống.",
       "icon": "assets/maps/tft/icons/augments/hexcore/heroic-grab-bag-ii.png"
     },
     {
@@ -5286,7 +5286,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain 2 Lesser Champion Duplicators. Gain Gold",
-      "desc_vi": "Nhận @LesserDuplicatorAmount@ Máy Sao Chép Tướng Cỡ Nhỏ và @Gold@ vàng.\n\nTrang bị này cho phép bạn sao chép một tướng 3 vàng trở xuống.",
+      "desc_vi": "Nhận 2 Máy Sao Chép Tướng Cỡ Nhỏ và 8 vàng. Trang bị này cho phép bạn sao chép một tướng 3 vàng trở xuống.",
       "icon": "assets/maps/tft/icons/augments/hexcore/heroic-grab-bag-ii.png"
     },
     {
@@ -5296,7 +5296,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain 2 Lesser Champion Duplicators. Gain Gold",
-      "desc_vi": "Nhận @LesserDuplicatorAmount@ Máy Sao Chép Tướng Cỡ Nhỏ và @Gold@ vàng.\n\nTrang bị này cho phép bạn sao chép một tướng 3 vàng trở xuống.",
+      "desc_vi": "Nhận 2 Máy Sao Chép Tướng Cỡ Nhỏ và 14 vàng. Trang bị này cho phép bạn sao chép một tướng 3 vàng trở xuống.",
       "icon": "assets/maps/tft/icons/augments/hexcore/heroic-grab-bag-ii.png"
     },
     {
@@ -5306,7 +5306,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "You no longer gain interest but gain gold at the start of every player combat round. Gain gold now.\\n \\n \\n \\n Interest is extra gold you gain per g saved.",
-      "desc_vi": "Bạn không còn lợi tức, nhưng sẽ nhận @Gold@ vàng khi bắt đầu mỗi vòng giao tranh người chơi. Nhận ngay @InitialGold@ vàng.\n\nLợi tức là lượng vàng bạn nhận được thêm từ mỗi 10 vàng bạn giữ lại.",
+      "desc_vi": "Bạn không còn lợi tức, nhưng sẽ nhận 3 vàng khi bắt đầu mỗi vòng giao tranh người chơi. Nhận ngay 3 vàng. Lợi tức là lượng vàng bạn nhận được thêm từ mỗi 10 vàng bạn giữ lại.",
       "icon": "assets/maps/tft/icons/augments/hexcore/hyperroll2.png"
     },
     {
@@ -5316,7 +5316,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain gold now. On Stage -, gain an Infinity Force. Infinity Force gives allies in the same row a Health shield.\\n \\n \\n \\n Monsters Attack Championship, 2023",
-      "desc_vi": "Nhận ngay @GoldAmount@ vàng. Ở Giai Đoạn 3-7, nhận 1 Tam Luyện Kiếm. Tam Luyện Kiếm trao cho các đồng minh cùng hàng một lá chắn bằng @HealthPercent@% Máu.\n\nGiải Vô Địch Quái Vật Tấn Công, 2023",
+      "desc_vi": "Nhận ngay 3 vàng. Ở Giai Đoạn 3-7, nhận 1 Tam Luyện Kiếm. Tam Luyện Kiếm trao cho các đồng minh cùng hàng một lá chắn bằng 12% Máu. Giải Vô Địch Quái Vật Tấn Công, 2023",
       "icon": "assets/maps/tft/icons/augments/hexcore/infinityprotection_ii.png"
     },
     {
@@ -5326,7 +5326,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Your champions gain permanent max health per interest you earn.",
-      "desc_vi": "Tướng của bạn nhận thêm vĩnh viễn @HealthPerInterest@ Máu tối đa với mỗi vàng lợi tức bạn kiếm được.",
+      "desc_vi": "Tướng của bạn nhận thêm vĩnh viễn 8 Máu tối đa với mỗi vàng lợi tức bạn kiếm được.",
       "icon": "assets/maps/tft/icons/augments/hexcore/investmentstrategy_ii.png"
     },
     {
@@ -5336,7 +5336,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "The first times you sacrifice a champion in the Eldritch hex, gain a copy of a random component they're holding. Gain a Veigar, a Rek'Sai, and item removers.",
-      "desc_vi": "Trong @NumComponents@ lần đầu tiên bạn hiến tế tướng trên ô Gai Đen, nhận 1 bản sao của một trang bị thành phần ngẫu nhiên mà tướng đó đang mang. Nhận 1 Azir và 1 Rek'Sai.",
+      "desc_vi": "Trong 3 lần đầu tiên bạn hiến tế tướng trên ô Gai Đen, nhận 1 bản sao của một trang bị thành phần ngẫu nhiên mà tướng đó đang mang. Nhận 1 Azir và 1 Rek'Sai.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t2.png"
     },
     {
@@ -5346,7 +5346,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Your team gains% Critical Strike Chance and Precision\\n \\n \\n \\n Precision: Ability damage can critically strike. Additional Precision grants 10% Critical Strike Damage.",
-      "desc_vi": "Bắt đầu giao tranh: Tướng mạnh nhất của bạn nhận thêm @CritChance@% Tỉ Lệ Chí Mạng và các kỹ năng của tướng đó có thể chí mạng.",
+      "desc_vi": "Bắt đầu giao tranh: Tướng mạnh nhất của bạn nhận thêm 40% Tỉ Lệ Chí Mạng và các kỹ năng của tướng đó có thể chí mạng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/jeweled-lotus-i.png"
     },
     {
@@ -5366,7 +5366,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "You can see who you will fight next. Your team gains Damage Amp, increased to if you and your opponent have any of the same traits active.",
-      "desc_vi": "Bạn có thể biết được đối thủ tiếp theo của mình. Đội của bạn nhận @BaseDamageAmp@% Khuếch Đại Sát Thương, tăng lên thành @FullDamageAmp@% nếu bạn và đối thủ kích hoạt trùng tộc/hệ bất kỳ.",
+      "desc_vi": "Bạn có thể biết được đối thủ tiếp theo của mình. Đội của bạn nhận 8% Khuếch Đại Sát Thương, tăng lên thành 15% nếu bạn và đối thủ kích hoạt trùng tộc/hệ bất kỳ.",
       "icon": "assets/maps/tft/icons/augments/hexcore/know-your-enemy-ii.png"
     },
     {
@@ -5376,7 +5376,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain XP at the start of player combat rounds. Your 5-cost champions gain Health and Attack Speed.\\n \\n \\n \\n Cyber City Tactician's Crown, 2025",
-      "desc_vi": "Nhận @XPGain@ XP khi bắt đầu vòng giao tranh người chơi. Tướng 5 vàng của bạn nhận @BonusHealth*100@% Máu và @AttackSpeed*100@% Tốc Độ Đánh.\n\nTactician's Crown Thành Phố Công Nghệ, 2025",
+      "desc_vi": "Nhận 2 XP khi bắt đầu vòng giao tranh người chơi. Tướng 5 vàng của bạn nhận 12% Máu và 12% Tốc Độ Đánh. Vương Miện Chiến Thuật Gia - Thành Phố Công Nghệ 2025",
       "icon": "assets/maps/tft/icons/augments/hexcore/lategamescaling_ii.png"
     },
     {
@@ -5386,7 +5386,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain a random Emblem. Your 3-cost champions and all allies equipped with an Emblem gain Health and Attack Speed.\\n \\n \\n \\n Reckoning Championship, 2021",
-      "desc_vi": "Nhận 1 Ấn ngẫu nhiên. Các tướng 3 vàng của bạn và mọi đồng minh được trang bị Ấn nhận @HealthAmount@ Máu và @AS*100@% Tốc Độ Đánh.\n\nGiải Vô Địch Ngày Phán Quyết, 2021",
+      "desc_vi": "Nhận 1 Ấn ngẫu nhiên. Các tướng 3 vàng của bạn và mọi đồng minh được trang bị Ấn nhận 150 Máu và 12% Tốc Độ Đánh. Giải Vô Địch Ngày Phán Quyết, 2021",
       "icon": "assets/maps/tft/icons/augments/hexcore/legionofthrees_ii.png"
     },
     {
@@ -5406,7 +5406,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Allies without items equipped gain Armor and Magic Resist.",
-      "desc_vi": "Các đồng minh không mang trang bị nhận @Resists@ Giáp và Kháng Phép.",
+      "desc_vi": "Các đồng minh không mang trang bị nhận 50 Giáp và Kháng Phép.",
       "icon": "assets/maps/tft/icons/augments/hexcore/makeshift2.png"
     },
     {
@@ -5416,7 +5416,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain gold. For the next rounds, enemy champions drop gold when killed.",
-      "desc_vi": "Nhận @GoldContained@ vàng. Trong @Rounds@ vòng tiếp theo, tướng địch sẽ rớt ra @PercCost@ vàng khi bị tiêu diệt.\n\n@TFTUnitProperty.item:TFT_Augment_MirroredMonetization_TotalGoldTooltip@",
+      "desc_vi": "Nhận 4 vàng. Trong 2 vòng tiếp theo, tướng địch sẽ rớt ra 2 vàng khi bị tiêu diệt.",
       "icon": "assets/maps/tft/icons/augments/hexcore/mirroredmonetization_ii.png"
     },
     {
@@ -5426,7 +5426,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain free Shop rerolls. When you reach level, gain free Shop rerolls and a Champion Duplicator.\\n \\n \\n \\n Galaxies Championship, 2020",
-      "desc_vi": "Nhận 1 Máy Sao Chép Tướng, @Gold@ vàng, và cửa hàng tiếp theo của bạn sẽ có 5 tướng 4 vàng khác nhau.\n\nGiải Vô Địch Thiên Hà, 2020",
+      "desc_vi": "Nhận 1 Máy Sao Chép Tướng, 4 vàng, và cửa hàng tiếp theo của bạn sẽ có 5 tướng 4 vàng khác nhau. Giải Vô Địch Thiên Hà, 2020",
       "icon": "assets/maps/tft/icons/augments/hexcore/maxbuild_ii.png"
     },
     {
@@ -5436,7 +5436,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain gold now, then gold at the start of every stage. Picking up gold makes your Tactician larger.",
-      "desc_vi": "Nhận @InstantGold@ vàng ngay lập tức, sau đó nhận thêm @StageGold@ vàng vào khởi đầu mỗi giai đoạn. Nhặt vàng sẽ khiến Linh Thú của bạn to hơn.",
+      "desc_vi": "Nhận 7 vàng ngay lập tức, sau đó nhận thêm 7 vàng vào khởi đầu mỗi giai đoạn. Nhặt vàng sẽ khiến Linh Thú của bạn to hơn.",
       "icon": "assets/maps/tft/icons/augments/hexcore/moneyhungry1_ii.png"
     },
     {
@@ -5446,7 +5446,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain gold now, then gold at the start of every stage. Picking up gold makes your Tactician larger.",
-      "desc_vi": "Nhận @InstantGold@ vàng ngay lập tức, sau đó nhận thêm @StageGold@ vàng vào khởi đầu mỗi giai đoạn. Nhặt vàng sẽ khiến Linh Thú của bạn to hơn.",
+      "desc_vi": "Nhận 16 vàng ngay lập tức, sau đó nhận thêm 7 vàng vào khởi đầu mỗi giai đoạn. Nhặt vàng sẽ khiến Linh Thú của bạn to hơn.",
       "icon": "assets/maps/tft/icons/augments/hexcore/moneyhungry2_ii.png"
     },
     {
@@ -5456,7 +5456,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Champions that fight in player combat cannot be benched or sold. Your team gains Health, and Attack Damage and Ability Power after player combat.",
-      "desc_vi": "Các tướng tham gia giao tranh người chơi không thể được đưa về hàng dự bị hoặc bán. Đội của bạn nhận @HPScale*100@% Máu, @APScale@% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật sau giao tranh người chơi. \n\n@TFTUnitProperty.item:TFT_Augment_NoScoutNoPivot_TrackerTRAKEY_Holder@",
+      "desc_vi": "Các tướng tham gia giao tranh người chơi không thể được đưa về hàng dự bị hoặc bán. Đội của bạn nhận 1% Máu, 1% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật sau giao tranh người chơi.",
       "icon": "assets/maps/tft/icons/augments/hexcore/noscoutnopivot_ii.png"
     },
     {
@@ -5466,7 +5466,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Champions that start combat adjacent to an Elderwood plant gain Attack Speed and heal of their maximum Health every seconds. Gain 3 Elderwood champions.",
-      "desc_vi": "Các tướng bắt đầu giao tranh ở ô liền kề cây Thần Rừng nhận @AS*100@% Tốc Độ Đánh và hồi @heal*100@% Máu tối đa mỗi @HealInterval@ giây. Nhận 1 Alistar, 1 Ornn và 1 Xayah.",
+      "desc_vi": "Các tướng bắt đầu giao tranh ở ô liền kề cây Thần Rừng nhận 15% Tốc Độ Đánh và hồi 2% Máu tối đa mỗi 2 giây. Nhận 1 Alistar, 1 Ornn và 1 Xayah.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t2.png"
     },
     {
@@ -5476,7 +5476,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "You can now choose a second Alpha Riftbeast. Gain 3 Riftbeasts.",
-      "desc_vi": "Giờ đây bạn có thể chọn thêm một Quái Rừng Đầu Đàn thứ hai. Quái Rừng Đầu Đàn nhận thêm @BonusHP*100@% Máu tối đa và @BonusAS*100@% Tốc Độ Đánh. Nhận 1 Cua Kỳ Cục, 1 Mầm Non và 1 Sỏi.",
+      "desc_vi": "Giờ đây bạn có thể chọn thêm một Quái Rừng Đầu Đàn thứ hai. Quái Rừng Đầu Đàn nhận thêm 15% Máu tối đa và 12% Tốc Độ Đánh. Nhận 1 Cua Kỳ Cục, 1 Mầm Non và 1 Sỏi.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t2.png"
     },
     {
@@ -5486,7 +5486,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Round start: items on your bench are randomized.\\n \\n \\n \\n Gain random components.",
-      "desc_vi": "Bắt đầu vòng đấu: Các trang bị trên hàng dự bị được đánh tráo ngẫu nhiên.\n\nNhận @NumComponents@ trang bị thành phần ngẫu nhiên.",
+      "desc_vi": "Bắt đầu vòng đấu: Các trang bị trên hàng dự bị được đánh tráo ngẫu nhiên. Nhận 2 trang bị thành phần ngẫu nhiên.",
       "icon": "assets/maps/tft/icons/augments/hexcore/pandora2.png"
     },
     {
@@ -5496,7 +5496,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "After player combat, gain XP if you won or XP if you lost.",
-      "desc_vi": "Sau khi giao chiến với người chơi, nhận thêm @winxp@ XP nếu bạn thắng hoặc @lossxp@ XP nếu bạn thua.",
+      "desc_vi": "Sau khi giao chiến với người chơi, nhận thêm 2 XP nếu bạn thắng hoặc 3 XP nếu bạn thua.",
       "icon": "assets/maps/tft/icons/augments/hexcore/learning-from-experience-ii.png"
     },
     {
@@ -5506,7 +5506,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Each round, gain a 1-star copy of the first champion you killed last combat. The first time you gain gold worth of champions in this way, gain a Thief's Gloves.",
-      "desc_vi": "Mỗi vòng đấu, nhận 1 bản sao 1 sao của tướng đầu tiên bạn tiêu diệt ở vòng giao tranh trước. Lần đầu tiên bạn nhận được số lượng tướng trị giá @GoldRequired@ vàng theo cách này, nhận 1 Găng Đạo Tặc. @TFTUnitProperty.item:TFT_Augment_Pilfer_Tooltip@",
+      "desc_vi": "Mỗi vòng đấu, nhận 1 bản sao 1 sao của tướng đầu tiên bạn tiêu diệt ở vòng giao tranh trước. Lần đầu tiên bạn nhận được số lượng tướng trị giá 19 vàng theo cách này, nhận 1 Găng Đạo Tặc.",
       "icon": "assets/maps/tft/icons/augments/hexcore/pilfer_ii.png"
     },
     {
@@ -5516,7 +5516,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Choose 1 of 4 Artifacts. Artifacts are more powerful items with a unique effect.",
-      "desc_vi": "Chọn 1 trong @ArmoryChoiceCount@ Tạo Tác.\n\nTạo Tác là những trang bị mạnh mẽ hơn với hiệu ứng đặc biệt.",
+      "desc_vi": "Chọn 1 trong 4 Tạo Tác. Tạo Tác là những trang bị mạnh mẽ hơn với hiệu ứng đặc biệt.",
       "icon": "assets/maps/tft/icons/augments/hexcore/portableforge2.png"
     },
     {
@@ -5526,7 +5526,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "At the start of combat, allies gain Attack Speed for seconds. On takedown, allies dash to their next target and gain this bonus again.",
-      "desc_vi": "Ở đầu giao tranh, đồng minh tăng @BonusAS*100@% Tốc Độ Đánh trong @BurstDuration@ giây. Khi tham gia hạ gục, đồng minh lướt tới mục tiêu tiếp theo và nhận lại hiệu ứng này.",
+      "desc_vi": "Ở đầu giao tranh, đồng minh tăng 25% Tốc Độ Đánh trong 3 giây. Khi tham gia hạ gục, đồng minh lướt tới mục tiêu tiếp theo và nhận lại hiệu ứng này.",
       "icon": "assets/maps/tft/icons/augments/hexcore/precisiongrace_ii.png"
     },
     {
@@ -5536,7 +5536,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain a Protector's Vow. Protector's Vow grants its holder additional Mana from all sources.",
-      "desc_vi": "Nhận 1 Lời Thề Hộ Vệ. Lời Thề Hộ Vệ cho chủ sở hữu thêm @ManaPercent@% Năng Lượng từ mọi nguồn.",
+      "desc_vi": "Nhận 1 Lời Thề Hộ Vệ. Lời Thề Hộ Vệ cho chủ sở hữu thêm 20% Năng Lượng từ mọi nguồn.",
       "icon": "assets/maps/tft/icons/augments/hexcore/promisedprotection_ii.png"
     },
     {
@@ -5556,7 +5556,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Choose 1 of 3 components. For the next rounds, gain a copy of that component.",
-      "desc_vi": "Chọn 1 trong 3 trang bị thành phần. Trong @RoundsOfBonusItems@ vòng đấu tiếp theo, nhận 1 bản sao của thành phần đó.",
+      "desc_vi": "Chọn 1 trong 3 trang bị thành phần. Trong 2 vòng đấu tiếp theo, nhận 1 bản sao của thành phần đó.",
       "icon": "assets/maps/tft/icons/augments/hexcore/replication-ii.png"
     },
     {
@@ -5566,7 +5566,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain 1 random completed item now, and 1 component after player combats. Selling champions breaks completed items into components (excluding Tactician's items and Emblems).",
-      "desc_vi": "Nhận ngay 1 trang bị hoàn chỉnh ngẫu nhiên, và 1 thành phần sau @NumRounds@ vòng giao tranh người chơi. Bán tướng sẽ tách trang bị hoàn chỉnh của tướng đó ra thành trang bị thành phần (ngoại trừ các trang bị Chiến Thuật và Ấn).",
+      "desc_vi": "Nhận ngay 1 trang bị hoàn chỉnh ngẫu nhiên, và 1 thành phần sau 3 vòng giao tranh người chơi. Bán tướng sẽ tách trang bị hoàn chỉnh của tướng đó ra thành trang bị thành phần (ngoại trừ các trang bị Chiến Thuật và Ấn).",
       "icon": "assets/maps/tft/icons/augments/hexcore/salvage2.png"
     },
     {
@@ -5576,7 +5576,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain 1 random completed item now, and 1 component after player combats. Selling champions breaks completed items into components (excluding Tactician's items and Emblems).",
-      "desc_vi": "Nhận ngay 1 trang bị hoàn chỉnh ngẫu nhiên, và 1 thành phần sau @NumRounds@ vòng giao tranh người chơi. Bán tướng sẽ tách trang bị hoàn chỉnh của tướng đó ra thành trang bị thành phần (ngoại trừ các trang bị Chiến Thuật và Ấn).",
+      "desc_vi": "Nhận ngay 1 trang bị hoàn chỉnh ngẫu nhiên, và 1 thành phần sau 2 vòng giao tranh người chơi. Bán tướng sẽ tách trang bị hoàn chỉnh của tướng đó ra thành trang bị thành phần (ngoại trừ các trang bị Chiến Thuật và Ấn).",
       "icon": "assets/maps/tft/icons/augments/hexcore/salvage2.png"
     },
     {
@@ -5586,7 +5586,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain an Archangel's Staff. Archangel's Staff grants additional Mana Regen if its holder has or more Ability Power.",
-      "desc_vi": "Nhận 1 Quyền Trượng Thiên Thần. Quyền Trượng Thiên Thần tăng thêm @IncreasedMana@ Hồi Phục Năng Lượng nếu chủ sở hữu có @APThreshold@% Sức Mạnh Phép Thuật trở lên.",
+      "desc_vi": "Nhận 1 Quyền Trượng Thiên Thần. Quyền Trượng Thiên Thần tăng thêm 2 Hồi Phục Năng Lượng nếu chủ sở hữu có 90% Sức Mạnh Phép Thuật trở lên.",
       "icon": "assets/maps/tft/icons/augments/hexcore/seraphimsstaff_ii.png"
     },
     {
@@ -5596,7 +5596,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain gold. After each player combat, if there are no items on your bench (other than consumables), gain XP.",
-      "desc_vi": "Nhận @Gold@ vàng. Sau mỗi vòng giao tranh với người chơi, nếu không có trang bị nào của bạn nằm ở hàng dự bị (ngoài các trang bị tiêu thụ), nhận @XP@ XP.",
+      "desc_vi": "Nhận 3 vàng. Sau mỗi vòng giao tranh với người chơi, nếu không có trang bị nào của bạn nằm ở hàng dự bị (ngoài các trang bị tiêu thụ), nhận 2 XP.",
       "icon": "assets/maps/tft/icons/augments/hexcore/slammin_ii.png"
     },
     {
@@ -5606,7 +5606,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain gold and XP now. After each player combat, if there are no items on your bench (other than consumables), gain XP.",
-      "desc_vi": "Nhận ngay @Gold@ vàng và @XPNow@ XP. Sau mỗi vòng giao tranh với người chơi, nếu không có trang bị nào của bạn nằm ở hàng dự bị (ngoài các trang bị tiêu thụ), nhận @XP@ XP.",
+      "desc_vi": "Nhận ngay 4 vàng và 10 XP. Sau mỗi vòng giao tranh với người chơi, nếu không có trang bị nào của bạn nằm ở hàng dự bị (ngoài các trang bị tiêu thụ), nhận 2 XP.",
       "icon": "assets/maps/tft/icons/augments/hexcore/slammin_ii.png"
     },
     {
@@ -5616,7 +5616,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "While Sprykin is active, gain a second BFF summon that is as powerful. Gain 3 Sprykin champions.",
-      "desc_vi": "Khi tộc/hệ Tinh Nghịch được kích hoạt, triệu hồi LXKL thứ hai mạnh bằng @Effectiveness_DoesntIncludeSummonSpell*100@% LXKL đầu tiên. Nhận 1 Teemo, 1 Veigar và 1 Kobuko.",
+      "desc_vi": "Khi tộc/hệ Tinh Nghịch được kích hoạt, triệu hồi LXKL thứ hai mạnh bằng 45% LXKL đầu tiên. Nhận 1 Teemo, 1 Veigar và 1 Kobuko.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t2.png"
     },
     {
@@ -5626,7 +5626,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "For the next combats, your team size is, but the champion you field has massively increased stats. Gain XP for every kill they get. Afterwards, gain item components.",
-      "desc_vi": "Trong @NumCombats@ giao tranh tiếp theo, bạn chỉ được triển khai 1 tướng, nhưng tướng đó sẽ được tăng mạnh chỉ số. Nhận @XPPerKill@ XP với mỗi mạng hạ gục tướng đó đạt được. Sau đó, nhận @NumComponents@ trang bị thành phần.",
+      "desc_vi": "Trong 5 giao tranh tiếp theo, bạn chỉ được triển khai 1 tướng, nhưng tướng đó sẽ được tăng mạnh chỉ số. Nhận 1 XP với mỗi mạng hạ gục tướng đó đạt được. Sau đó, nhận 2 trang bị thành phần.",
       "icon": "assets/maps/tft/icons/augments/hexcore/sololeveling_ii.png"
     },
     {
@@ -5636,7 +5636,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain a Gargoyle Stoneplate. Combat start: Allies holding Gargoyle Stoneplate gain max Health if they're the only one in their row.",
-      "desc_vi": "Nhận 1 Thú Tượng Thạch Giáp. Bắt đầu giao tranh: Các đồng minh mang Thú Tượng Thạch Giáp nhận @HealthIncrease*100@% Máu tối đa nếu họ đứng một mình một hàng.",
+      "desc_vi": "Nhận 1 Thú Tượng Thạch Giáp. Bắt đầu giao tranh: Các đồng minh mang Thú Tượng Thạch Giáp nhận 17% Máu tối đa nếu họ đứng một mình một hàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/soloplate_ii.png"
     },
     {
@@ -5646,7 +5646,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain a Guinsoo's Rageblade. When players are eliminated, gain gold.\\n \\n \\n \\n Fates Championship, 2021",
-      "desc_vi": "Nhận 1 Cuồng Đao Guinsoo. Khi 2 người chơi đã bị loại, nhận @GoldAmount@ vàng.\n\nGiải Vô Địch Định Mệnh, 2021",
+      "desc_vi": "Nhận 1 Cuồng Đao Guinsoo. Khi 2 người chơi đã bị loại, nhận 40 vàng. Giải Vô Địch Định Mệnh, 2021",
       "icon": "assets/maps/tft/icons/augments/hexcore/speedydoublekill_ii.png"
     },
     {
@@ -5656,7 +5656,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain a Spirit Visage. Every seconds, Spirit Visage heals allies within hex for of their missing Health.",
-      "desc_vi": "Nhận 1 Giáp Tâm Linh. Mỗi @Frequency@ giây, Giáp Tâm Linh hồi lại cho các đồng minh trong phạm vi @HexRadius@ ô @MissingHealth@% Máu đã mất của họ.",
+      "desc_vi": "Nhận 1 Giáp Tâm Linh. Mỗi 5 giây, Giáp Tâm Linh hồi lại cho các đồng minh trong phạm vi 1 ô 7.5% Máu đã mất của họ.",
       "icon": "assets/maps/tft/icons/augments/hexcore/spiritofredemption_ii.png"
     },
     {
@@ -5666,7 +5666,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain random Emblems and gold.",
-      "desc_vi": "Nhận @NumOfEmblems@ Ấn ngẫu nhiên và @Gold@ vàng.",
+      "desc_vi": "Nhận 2 Ấn ngẫu nhiên và 1 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/spreadingroots_ii.png"
     },
     {
@@ -5676,7 +5676,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain random Emblems, a Reforger, and gold.",
-      "desc_vi": "Nhận @NumOfEmblems@ Ấn ngẫu nhiên, 1 Búa Rèn và @Gold@ vàng.",
+      "desc_vi": "Nhận 2 Ấn ngẫu nhiên, 1 Búa Rèn và 2 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/spreadingroots_ii.png"
     },
     {
@@ -5686,7 +5686,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain random completed items that build from Needlessly Large Rod.",
-      "desc_vi": "Nhận @NumItems@ trang bị hoàn chỉnh ngẫu nhiên được ghép từ Gậy Quá Khổ.",
+      "desc_vi": "Nhận 2 trang bị hoàn chỉnh ngẫu nhiên được ghép từ Gậy Quá Khổ.",
       "icon": "assets/maps/tft/icons/augments/hexcore/rodsmith_ii.png"
     },
     {
@@ -5696,7 +5696,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Your Lunar champions gain Health and Damage Amp for each unique Solar champion fielded. Gain a 2-star Leona, a Kayle, and an Aphelios.",
-      "desc_vi": "Các tướng Mặt Trăng của bạn nhận được @Health@ Máu và @DamageAmp*100@% Khuếch Đại Sát Thương với mỗi tướng Mặt Trời khác biệt được triển khai. Nhận 1 Leona, 1 Kayle và 1 Diana.",
+      "desc_vi": "Các tướng Mặt Trăng của bạn nhận được 100 Máu và 8% Khuếch Đại Sát Thương với mỗi tướng Mặt Trời khác biệt được triển khai. Nhận 1 Leona, 1 Kayle và 1 Diana.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t2.png"
     },
     {
@@ -5706,7 +5706,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain random completed items that build from B.F. Sword.",
-      "desc_vi": "Nhận @NumItems@ trang bị hoàn chỉnh ngẫu nhiên được ghép từ Kiếm B.F.",
+      "desc_vi": "Nhận 2 trang bị hoàn chỉnh ngẫu nhiên được ghép từ Kiếm B.F.",
       "icon": "assets/maps/tft/icons/augments/hexcore/swordsmith_ii.png"
     },
     {
@@ -5716,7 +5716,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain a Mogul's Mail. Champions holding Mogul's Mail take up + team slot but gain Health and Durability.",
-      "desc_vi": "Nhận 1 Giáp Đại Hãn. Các tướng mang Giáp Đại Hãn chiếm 2 vị trí trong đội hình nhưng nhận thêm @BonusHealth@ Máu và @DurabilityPct*100@% Chống Chịu.\n\nGiáp Đại Hãn này mang lại vàng và tăng sức mạnh chiến đấu.\nGiải Vô Địch Thế Giới Rồng, 2022",
+      "desc_vi": "Nhận 1 Giáp Đại Hãn. Các tướng mang Giáp Đại Hãn chiếm 2 vị trí trong đội hình nhưng nhận thêm 700 Máu và 20% Chống Chịu. Giáp Đại Hãn này mang lại vàng và tăng sức mạnh chiến đấu. Giải Vô Địch Thế Giới Rồng, 2022",
       "icon": "assets/maps/tft/icons/augments/hexcore/thegoldendragon_ii.png"
     },
     {
@@ -5726,7 +5726,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Disable your Shop for the next rounds. Then gain XP.",
-      "desc_vi": "Vô hiệu hóa Cửa Hàng của bạn trong @PenaltyTurns@ vòng tiếp theo. Sau đó nhận @Experience@ XP.",
+      "desc_vi": "Vô hiệu hóa Cửa Hàng của bạn trong 3 vòng tiếp theo. Sau đó nhận 32 XP.",
       "icon": "assets/maps/tft/icons/augments/hexcore/timeskip_ii.png"
     },
     {
@@ -5736,7 +5736,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Your team gains Health, Attack Damage, Ability Power, Armor, Magic Resist, Attack Speed, and Mana.",
-      "desc_vi": "Đội của bạn nhận thêm @Health@ Máu, @AttackDamage@% Sức Mạnh Công Kích, @AbilityPower@% Sức Mạnh Phép Thuật, @Armor@ Giáp, @MR@ Kháng Phép, @AttackSpeed@% Tốc Độ Đánh và @Mana@ Năng Lượng.",
+      "desc_vi": "Đội của bạn nhận thêm Máu, % Sức Mạnh Công Kích, 5% Sức Mạnh Phép Thuật, Giáp, Kháng Phép, % Tốc Độ Đánh và Năng Lượng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/tons-of-stats-ii.png"
     },
     {
@@ -5746,7 +5746,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain a free Shop reroll every round. Gain gold.",
-      "desc_vi": "Nhận 1 lượt đổi miễn phí mỗi vòng đấu. Nhận @Gold@ vàng.",
+      "desc_vi": "Nhận 1 lượt đổi miễn phí mỗi vòng đấu. Nhận 2 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/trade2.png"
     },
     {
@@ -5766,7 +5766,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain reroll for every unique 2-cost champions fielded last player combat. Gain 2-cost champions.",
-      "desc_vi": "Nhận @FreeRerolls@ lượt đổi với mỗi @UnitCount@ tướng 2 vàng khác nhau được triển khai ở giao tranh người chơi gần nhất. Nhận @NumChampsToGrant@ tướng 2 vàng.",
+      "desc_vi": "Nhận 1 lượt đổi với mỗi 2 tướng 2 vàng khác nhau được triển khai ở giao tranh người chơi gần nhất. Nhận 1 tướng 2 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/twomuchvalue_ii.png"
     },
     {
@@ -5786,7 +5786,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Champions gain Attack Damage, Ability Power, Armor, and Magic Resist for each ally that shares a trait with them.",
-      "desc_vi": "Các Tướng nhận được @ADAP*100@% Sức Mạnh Công Kích, @ADAP*100@% Sức Mạnh Phép Thuật, @resists@ Giáp và @resists@ Kháng Phép cho mỗi đồng minh có cùng tộc/hệ với họ.",
+      "desc_vi": "Các Tướng nhận được 2.5% Sức Mạnh Công Kích, 2.5% Sức Mạnh Phép Thuật, 2 Giáp và 2 Kháng Phép cho mỗi đồng minh có cùng tộc/hệ với họ.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t2.png"
     },
     {
@@ -5796,7 +5796,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain a 2-star 2-cost champion. After dealing player damage, gain a chest of high cost champions and items.",
-      "desc_vi": "Nhận 1 tướng 2 vàng 2 sao. Sau khi gây @PlayerDamage@ sát thương lên người chơi, nhận 1 rương chứa các tướng bậc cao và trang bị.\n(Hiện tại: @TFTUnitProperty.item:TFT_Augment_Warpath_DamageCount@)",
+      "desc_vi": "Nhận 1 tướng 2 vàng 2 sao. Sau khi gây 80 sát thương lên người chơi, nhận 1 rương chứa các tướng bậc cao và trang bị. (Hiện tại: )",
       "icon": "assets/maps/tft/icons/augments/hexcore/warpath_ii.png"
     },
     {
@@ -5806,7 +5806,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain a random 1-cost champion. Gain another copy of them at the start of each round for the rest of the game.",
-      "desc_vi": "Nhận 1 tướng @UnitTier@ vàng ngẫu nhiên. Nhận 1 bản sao nữa của tướng đó khi bắt đầu mỗi vòng đấu cho đến hết trận.\n\nTướng: @TFTUnitProperty.item:TFT_Augment_WorthTheWait@",
+      "desc_vi": "Nhận 1 tướng 1 vàng ngẫu nhiên. Nhận 1 bản sao nữa của tướng đó khi bắt đầu mỗi vòng đấu cho đến hết trận. Tướng:",
       "icon": "assets/maps/tft/icons/augments/hexcore/worththewait_ii.png"
     },
     {
@@ -5816,7 +5816,7 @@
       "tier": 2,
       "tierName": "Gold",
       "desc_en": "Gain a random item component. Every Mana your team spends grants an additional component (max: |).",
-      "desc_vi": "Nhận 1 trang bị thành phần ngẫu nhiên. Mỗi @ManaPerComponent@ Năng Lượng đội của bạn tiêu hao sẽ trao thêm 1 trang bị thành phần (tối đa @TFTUnitProperty.trait:TFT_Augment_TheVidalion_NumComponents@/@ComponentMax@).\n\nNăng lượng đã tiêu hao: @TFTUnitProperty.trait:TFT_Augment_TheVidalion_TrackedMana@/@ManaPerComponent@",
+      "desc_vi": "Nhận 1 trang bị thành phần ngẫu nhiên. Mỗi 2200 Năng Lượng đội của bạn tiêu hao sẽ trao thêm 1 trang bị thành phần (tối đa /3). Năng lượng đã tiêu hao: /2200",
       "icon": "assets/maps/tft/icons/augments/hexcore/wovenmagic_iii.png"
     },
     {
@@ -5826,7 +5826,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain Thief's Gloves. After player combats, gain another.",
-      "desc_vi": "Nhận @NumGloves@ Găng Đạo Tặc. Sau @DelayTurns@ giao tranh người chơi, nhận thêm 1 Găng Đạo Tặc.",
+      "desc_vi": "Nhận 2 Găng Đạo Tặc. Sau 6 giao tranh người chơi, nhận thêm 1 Găng Đạo Tặc.",
       "icon": "assets/maps/tft/icons/augments/hexcore/bandthieves3.png"
     },
     {
@@ -5836,7 +5836,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain Thief's Gloves. After player combats, gain another.",
-      "desc_vi": "Nhận @NumGloves@ Găng Đạo Tặc. Sau @DelayTurns@ giao tranh người chơi, nhận thêm 1 Găng Đạo Tặc.",
+      "desc_vi": "Nhận 2 Găng Đạo Tặc. Sau 5 giao tranh người chơi, nhận thêm 1 Găng Đạo Tặc.",
       "icon": "assets/maps/tft/icons/augments/hexcore/bandthieves3.png"
     },
     {
@@ -5846,7 +5846,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain Thief's Gloves. After player combats, gain another.",
-      "desc_vi": "Nhận @NumGloves@ Găng Đạo Tặc. Sau @DelayTurns@ giao tranh người chơi, nhận thêm 1 Găng Đạo Tặc.",
+      "desc_vi": "Nhận 2 Găng Đạo Tặc. Sau 3 giao tranh người chơi, nhận thêm 1 Găng Đạo Tặc.",
       "icon": "assets/maps/tft/icons/augments/hexcore/bandthieves3.png"
     },
     {
@@ -5856,7 +5856,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain a random Tank item. After seconds of combat, your team gains bonus Attack Damage and Ability Power every second for the rest of combat.\\n \\n \\n \\n TFT Paris Open, 2025",
-      "desc_vi": "Nhận 1 trang bị Đỡ Đòn ngẫu nhiên. Sau @StartSeconds@ giây giao tranh, đội của bạn nhận thêm @Stats@% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật mỗi giây cho đến hết giao tranh.\n\nTFT Paris Open, 2025",
+      "desc_vi": "Nhận 1 trang bị Đỡ Đòn ngẫu nhiên. Sau 8 giây giao tranh, đội của bạn nhận thêm 5% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật mỗi giây cho đến hết giao tranh. TFT Paris Open, 2025",
       "icon": "assets/maps/tft/icons/augments/hexcore/thebaronslair_iii.png"
     },
     {
@@ -5866,7 +5866,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain Giant's Belts. Your Giant's Belts grant + bonus Health.",
-      "desc_vi": "Nhận @NumItems@ Đai Khổng Lồ. Đai Khổng Lồ của bạn cho thêm +@BonusHealth@ Máu.",
+      "desc_vi": "Nhận 4 Đai Khổng Lồ. Đai Khổng Lồ của bạn cho thêm +85 Máu.",
       "icon": "assets/maps/tft/icons/augments/hexcore/beltoverflow_iii.png"
     },
     {
@@ -5876,7 +5876,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain a 2-star champion and gold each time you level up. The champion's cost tier is your level minus (max: -cost)",
-      "desc_vi": "Nhận một tướng 2 sao và @Gold@ vàng mỗi khi bạn lên cấp. Bậc của tướng sẽ là cấp của bạn trừ 4 (tối đa: 5 vàng).",
+      "desc_vi": "Nhận một tướng 2 sao và 1 vàng mỗi khi bạn lên cấp. Bậc của tướng sẽ là cấp của bạn trừ 4 (tối đa: 5 vàng).",
       "icon": "assets/maps/tft/icons/augments/hexcore/golden-gifts-iii.png"
     },
     {
@@ -5886,7 +5886,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Your team gains Damage Amp and Armor and Magic Resist for each Bronze-tier trait.",
-      "desc_vi": "Đội của bạn nhận @DamageAmpBonus*100@% Khuếch Đại Sát Thương và @Resists@ Giáp & Kháng Phép cho mỗi tộc/hệ bậc Đồng.\n\nKhuếch Đại Sát Thương: @TFTUnitProperty.item:TFT_Augment_BronzeForLife_CurrentDamageAmp@%\nGiáp & Kháng Phép: @TFTUnitProperty.item:TFT_Augment_BronzeForLife_CurrentDurability@",
+      "desc_vi": "Đội của bạn nhận 2% Khuếch Đại Sát Thương và 4 Giáp & Kháng Phép cho mỗi tộc/hệ bậc Đồng. Khuếch Đại Sát Thương: % Giáp & Kháng Phép:",
       "icon": "assets/maps/tft/icons/augments/hexcore/bronzeforlife_iii.png"
     },
     {
@@ -5896,7 +5896,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain a random item component now and at the start of the next rounds.",
-      "desc_vi": "Nhận 1 trang bị thành phần ngẫu nhiên ngay bây giờ và khi bắt đầu @RoundsDuration@ vòng tiếp theo.",
+      "desc_vi": "Nhận 1 trang bị thành phần ngẫu nhiên ngay bây giờ và khi bắt đầu 6 vòng tiếp theo.",
       "icon": "assets/maps/tft/icons/augments/hexcore/buried-treasures-iii.png"
     },
     {
@@ -5916,7 +5916,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Your team gains Omnivamp. Excess healing is converted to a shield up to Health.",
-      "desc_vi": "Đội của bạn nhận @Omnivamp@% Hút Máu Toàn Phần. Lượng hồi máu phụ trội sẽ được chuyển thành lá chắn, tối đa @MaxShield@ Máu.",
+      "desc_vi": "Đội của bạn nhận 25% Hút Máu Toàn Phần. Lượng hồi máu phụ trội sẽ được chuyển thành lá chắn, tối đa 1000 Máu.",
       "icon": "assets/maps/tft/icons/augments/hexcore/celestialblessing3.png"
     },
     {
@@ -5926,7 +5926,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Your team gains Health and Attack Speed per missing player Health.",
-      "desc_vi": "Đội của bạn nhận @HPPerMissingHP@ Máu và @ASPerMissingHP@% Tốc Độ Đánh với mỗi Máu người chơi đã mất.\n\n@TFTUnitProperty.item:TFT_Augment_ComebackStory_Tooltip@",
+      "desc_vi": "Đội của bạn nhận 4 Máu và 0.4% Tốc Độ Đánh với mỗi Máu người chơi đã mất.",
       "icon": "assets/maps/tft/icons/augments/hexcore/comebackstory_iii.png"
     },
     {
@@ -5936,7 +5936,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain free Shop rerolls now and every round for the rest of the game.",
-      "desc_vi": "Nhận @RerollsNow@ lượt đổi cửa hàng miễn phí ngay và @RerollCount@ lượt đổi mỗi vòng đấu cho đến hết trận.",
+      "desc_vi": "Nhận 16 lượt đổi cửa hàng miễn phí ngay và 3 lượt đổi mỗi vòng đấu cho đến hết trận.",
       "icon": "assets/maps/tft/icons/augments/hexcore/trade3.png"
     },
     {
@@ -5946,7 +5946,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain a random component and gold. The next 7 times you win a player combat, gain a different random component. Afterwards, gain a Spatula.",
-      "desc_vi": "Nhận 1 trang bị thành phần ngẫu nhiên và @NumGold@ vàng. Trong 7 lần tiếp theo bạn thắng giao tranh người chơi, nhận 1 trang bị thành phần ngẫu nhiên khác nhau. Sau đó, nhận @CompletionGold@ vàng.",
+      "desc_vi": "Nhận 1 trang bị thành phần ngẫu nhiên và 1 vàng. Trong 7 lần tiếp theo bạn thắng giao tranh người chơi, nhận 1 trang bị thành phần ngẫu nhiên khác nhau. Sau đó, nhận 1 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t3.png"
     },
     {
@@ -5956,7 +5956,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain a Tactician's Crown. Tactician's Crown, Cape, and Shield grant the holder Attack Speed, Attack Damage, and Ability Power.",
-      "desc_vi": "Nhận 1 Vương Miện Chiến Thuật. Lá Chắn, Áo Choàng và Vương Miện Chiến Thuật sẽ cho chủ sở hữu thêm @BonusAS*100@% Tốc Độ Đánh, @BonusAD*100@% Sức Mạnh Công Kích và @BonusAP@% Sức Mạnh Phép Thuật.",
+      "desc_vi": "Nhận 1 Vương Miện Chiến Thuật. Lá Chắn, Áo Choàng và Vương Miện Chiến Thuật sẽ cho chủ sở hữu thêm 20% Tốc Độ Đánh, 25% Sức Mạnh Công Kích và 30% Sức Mạnh Phép Thuật.",
       "icon": "assets/maps/tft/icons/augments/hexcore/coronation_iii.png"
     },
     {
@@ -5966,7 +5966,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain + max team size and your team gains Durability, but you take double player damage when you lose a player combat.",
-      "desc_vi": "Tăng +@MaxArmySizeIncrease@ số lượng tướng tối đa và đội của bạn nhận @DurabilityBonus*100@% Chống Chịu, nhưng bạn sẽ nhận gấp đôi sát thương lên Linh Thú khi thua giao tranh người chơi.",
+      "desc_vi": "Tăng +2 số lượng tướng tối đa và đội của bạn nhận 4% Chống Chịu, nhưng bạn sẽ nhận gấp đôi sát thương lên Linh Thú khi thua giao tranh người chơi.",
       "icon": "assets/maps/tft/icons/augments/hexcore/cursedcrown-iii.png"
     },
     {
@@ -5976,7 +5976,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain a Deathblade. Deathblades permanently gain Attack Damage whenever their holders score a takedown.",
-      "desc_vi": "Nhận 1 Kiếm Tử Thần. Kiếm Tử Thần vĩnh viễn tăng thêm @AD*100@% Sức Mạnh Công Kích mỗi khi chủ sở hữu tham gia hạ gục.",
+      "desc_vi": "Nhận 1 Kiếm Tử Thần. Kiếm Tử Thần vĩnh viễn tăng thêm % Sức Mạnh Công Kích mỗi khi chủ sở hữu tham gia hạ gục.",
       "icon": "assets/maps/tft/icons/augments/hexcore/deadlierblades_ii.png"
     },
     {
@@ -5986,7 +5986,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Now and at the start of the next 2 stages, roll 3 dice. Gain various rewards based on their total.",
-      "desc_vi": "Ngay bây giờ và khi bắt đầu @NumStages@ giai đoạn tiếp theo, đổ 3 xúc xắc. Nhận nhiều loại phần thưởng dựa trên tổng số đã đổ được.",
+      "desc_vi": "Ngay bây giờ và khi bắt đầu 2 giai đoạn tiếp theo, đổ 3 xúc xắc. Nhận nhiều loại phần thưởng dựa trên tổng số đã đổ được.",
       "icon": "assets/maps/tft/icons/augments/hexcore/addicted-to-rolling-iii.png"
     },
     {
@@ -5996,7 +5996,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain 1 random Emblem. At the start of every Stage, gain a random Emblem. Your team gains Health for each Emblem they are holding.",
-      "desc_vi": "Nhận @StartingEmblems@ Ấn ngẫu nhiên. Khi bắt đầu mỗi Giai Đoạn, nhận 1 Ấn ngẫu nhiên. Đội của bạn nhận @HPPerEmblem@ Máu với mỗi Ấn mà họ đang mang.",
+      "desc_vi": "Nhận 1 Ấn ngẫu nhiên. Khi bắt đầu mỗi Giai Đoạn, nhận 1 Ấn ngẫu nhiên. Đội của bạn nhận 30 Máu với mỗi Ấn mà họ đang mang.",
       "icon": "assets/maps/tft/icons/augments/hexcore/flexible_ii.png"
     },
     {
@@ -6006,7 +6006,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain random Artifact. When you drop below Health, gain more random Artifacts.\\n \\n \\n \\n Remix Rumble Championship, 2023",
-      "desc_vi": "Nhận @InitialArtifacts@ Tạo Tác ngẫu nhiên. Khi bạn xuống dưới @Health@ Máu, nhận thêm @MoreArtifacts@ Tạo Tác ngẫu nhiên, @MoreCompletedItems@ trang bị hoàn chỉnh ngẫu nhiên, và @MoreComponents@ trang bị thành phần ngẫu nhiên.\n\nGiải Vô Địch Remix Rumble, 2023",
+      "desc_vi": "Nhận 1 Tạo Tác ngẫu nhiên. Khi bạn xuống dưới 35 Máu, nhận thêm 1 Tạo Tác ngẫu nhiên, 1 trang bị hoàn chỉnh ngẫu nhiên, và 2 trang bị thành phần ngẫu nhiên. Giải Vô Địch Remix Rumble, 2023",
       "icon": "assets/maps/tft/icons/augments/hexcore/forgedinstrength_iii.png"
     },
     {
@@ -6016,7 +6016,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Your team becomes large, gaining Health and max Health.",
-      "desc_vi": "Đội của bạn hóa lớn, được tăng @FlatHealth@ Máu và @PercentHealth*100@% Máu tối đa.",
+      "desc_vi": "Đội của bạn hóa lớn, được tăng 200 Máu và 10% Máu tối đa.",
       "icon": "assets/maps/tft/icons/augments/hexcore/giantandmighty_iii.png"
     },
     {
@@ -6026,7 +6026,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "You no longer gain interest. Gain gold now. Round start: gain XP.\\n \\n \\n \\n Interest is extra gold you gain per g saved.",
-      "desc_vi": "Bạn sẽ không còn nhận được lợi tức. Nhận ngay @Gold@ vàng. Bắt Đầu Vòng Đấu: nhận @XP@ ĐKN.\n\nLợi tức là lượng vàng bạn nhận được thêm từ mỗi 10 vàng bạn giữ lại.",
+      "desc_vi": "Bạn sẽ không còn nhận được lợi tức. Nhận ngay 16 vàng. Bắt Đầu Vòng Đấu: nhận 4 ĐKN. Lợi tức là lượng vàng bạn nhận được thêm từ mỗi 10 vàng bạn giữ lại.",
       "icon": "assets/maps/tft/icons/augments/hexcore/going-long-iii.png"
     },
     {
@@ -6036,7 +6036,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain gold and flip a coin. If heads, gain a Radiant Lucky Item Chest. If tails, gain Completed Item anvils.",
-      "desc_vi": "Nhận @gold@ vàng và tung đồng xu. Nếu ra mặt ngửa, nhận 1 Rương Trang Bị Ánh Sáng May Mắn. Nếu ra mặt sấp, nhận @CompletedAnvils@ Gói Trang Bị Hoàn Chỉnh.\n\n@TFTUnitProperty.item:TFT_Augment_GoldenGamble_Tooltip@",
+      "desc_vi": "Nhận 2 vàng và tung đồng xu. Nếu ra mặt ngửa, nhận 1 Rương Trang Bị Ánh Sáng May Mắn. Nếu ra mặt sấp, nhận 2 Gói Trang Bị Hoàn Chỉnh.",
       "icon": "assets/maps/tft/icons/augments/hexcore/goldengamble_iii.png"
     },
     {
@@ -6066,7 +6066,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain a random emblem. Now and at the start of each stage, gain a 1-star champion of that trait with a cost equal to the Stage (max 5) and 3 gold.",
-      "desc_vi": "Nhận 1 Ấn ngẫu nhiên. Ngay lập tức và khi bắt đầu mỗi Giai Đoạn, nhận 1 tướng 1 sao cùng tộc/hệ, có giá bằng với Giai Đoạn hiện tại (tối đa 5) và @GoldPerStage@ vàng.",
+      "desc_vi": "Nhận 1 Ấn ngẫu nhiên. Ngay lập tức và khi bắt đầu mỗi Giai Đoạn, nhận 1 tướng 1 sao cùng tộc/hệ, có giá bằng với Giai Đoạn hiện tại (tối đa 5) và 3 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/hardcommit_iii.png"
     },
     {
@@ -6076,7 +6076,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain gold. Your max interest is increased to 10.",
-      "desc_vi": "Nhận @Gold@ vàng. Lợi tức tối đa được tăng lên @InterestCap@.\n\nLợi tức là lượng vàng bạn nhận được thêm từ mỗi 10 vàng bạn giữ lại.",
+      "desc_vi": "Nhận 22 vàng. Lợi tức tối đa được tăng lên 10. Lợi tức là lượng vàng bạn nhận được thêm từ mỗi 10 vàng bạn giữ lại.",
       "icon": "assets/maps/tft/icons/augments/hexcore/richgetricher3.png"
     },
     {
@@ -6086,7 +6086,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Allies in your back 2 rows gain Ability Power and Attack Damage for each ally that starts combat in your front row.",
-      "desc_vi": "Các đồng minh ở 2 hàng sau nhận @AP@% Sức Mạnh Phép Thuật và @AD*100@% Sức Mạnh Công Kích với mỗi đồng minh bắt đầu giao tranh ở hàng trên.",
+      "desc_vi": "Các đồng minh ở 2 hàng sau nhận 9% Sức Mạnh Phép Thuật và 8% Sức Mạnh Công Kích với mỗi đồng minh bắt đầu giao tranh ở hàng trên.",
       "icon": "assets/maps/tft/icons/augments/hexcore/holdtheline_iii.png"
     },
     {
@@ -6096,7 +6096,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain 26 gold. At the start of each round, gain 1 Shop reroll for every 10 gold above 50 (max 80 gold).",
-      "desc_vi": "Nhận @Gold@ vàng. Sau mỗi giao tranh, nhận 1 lượt làm mới Cửa Hàng với mỗi @GoldPerReroll@ vàng vượt hơn @GoldThreshold@ (tối đa @MaxGold@ vàng).",
+      "desc_vi": "Nhận 26 vàng. Sau mỗi giao tranh, nhận 1 lượt làm mới Cửa Hàng với mỗi 10 vàng vượt hơn 50 (tối đa 80 vàng).",
       "icon": "assets/maps/tft/icons/augments/hexcore/invested-iii.png"
     },
     {
@@ -6106,7 +6106,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain 45 gold. At the start of each round, gain 1 Shop reroll for every 10 gold above 50 (max 80 gold).",
-      "desc_vi": "Nhận @Gold@ vàng. Sau mỗi giao tranh, nhận 1 lượt làm mới Cửa Hàng với mỗi @GoldPerReroll@ vàng vượt hơn @GoldThreshold@ (tối đa @MaxGold@ vàng).",
+      "desc_vi": "Nhận 40 vàng. Sau mỗi giao tranh, nhận 1 lượt làm mới Cửa Hàng với mỗi 10 vàng vượt hơn 50 (tối đa 80 vàng).",
       "icon": "assets/maps/tft/icons/augments/hexcore/invested-iii.png"
     },
     {
@@ -6116,7 +6116,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Your champions gain permanent max health per interest you earn. Your max interest is increased by. Gain gold.",
-      "desc_vi": "Tướng của bạn nhận thêm vĩnh viễn @HealthPerInterest@ Máu tối đa với mỗi vàng lợi tức bạn kiếm được. Lợi tức tối đa của bạn tăng lên thành @MaxInterest@. Nhận @Gold@ vàng.",
+      "desc_vi": "Tướng của bạn nhận thêm vĩnh viễn 8 Máu tối đa với mỗi vàng lợi tức bạn kiếm được. Lợi tức tối đa của bạn tăng lên thành 7. Nhận 3 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/investmentstrategy_iii.png"
     },
     {
@@ -6126,7 +6126,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Your team gains% Critical Strike Chance,% Critical Strike Damage, and Precision.\\n \\n \\n \\n Precision: Ability damage can critically strike. Additional Precision grants 10% Critical Strike Damage.",
-      "desc_vi": "Đội của bạn nhận @CritChance@% Tỉ Lệ Chí Mạng, @CritDamage*100@% Sát Thương Chí Mạng và Chuẩn Xác.\n\n{{TFT_Keyword_Precision}}",
+      "desc_vi": "Đội của bạn nhận 25% Tỉ Lệ Chí Mạng, 10% Sát Thương Chí Mạng và Chuẩn Xác . {{TFT_Keyword_Precision}}",
       "icon": "assets/maps/tft/icons/augments/hexcore/jeweled-lotus-iii.png"
     },
     {
@@ -6136,7 +6136,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "When you buy XP, gain an additional. Gain immediately.",
-      "desc_vi": "Khi bạn mua XP, nhận thêm @XP@ XP. Ngay lập tức nhận @InitialXP@ XP.",
+      "desc_vi": "Khi bạn mua XP, nhận thêm 2 XP. Ngay lập tức nhận 6 XP.",
       "icon": "assets/maps/tft/icons/augments/hexcore/levelup3.png"
     },
     {
@@ -6146,7 +6146,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain an Artifact Anvil now and after every player combats.",
-      "desc_vi": "Nhận ngay 1 Gói Trang Bị Tạo Tác và sau mỗi @NumberOfCombats@ vòng giao chiến với người chơi.\n\nTạo Tác là những trang bị mạnh mẽ hơn với hiệu ứng đặc biệt.",
+      "desc_vi": "Nhận ngay 1 Gói Trang Bị Tạo Tác và sau mỗi 4 vòng giao chiến với người chơi. Tạo Tác là những trang bị mạnh mẽ hơn với hiệu ứng đặc biệt.",
       "icon": "assets/maps/tft/icons/augments/hexcore/living-forge-iii.png"
     },
     {
@@ -6156,7 +6156,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Thief's Gloves will always give your champions ideal items. Gain Sparring Gloves.",
-      "desc_vi": "Găng Đạo Tặc sẽ luôn cho tướng của bạn những trang bị lý tưởng. Nhận @NumGloves@ Găng Đấu Tập và @Gold@ vàng.",
+      "desc_vi": "Găng Đạo Tặc sẽ luôn cho tướng của bạn những trang bị lý tưởng. Nhận 2 Găng Đấu Tập và 4 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/lucky-gloves-iii.png"
     },
     {
@@ -6166,7 +6166,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Thief's Gloves will always give your champions ideal items. Gain Sparring Gloves now, then another after player combats.",
-      "desc_vi": "Găng Đạo Tặc sẽ luôn cho tướng của bạn những trang bị khuyên dùng. Nhận ngay @NumGloves@ Găng Đấu Tập, nhận thêm 1 găng sau @DelayTurns@ giao tranh người chơi.",
+      "desc_vi": "Găng Đạo Tặc sẽ luôn cho tướng của bạn những trang bị khuyên dùng. Nhận ngay 2 Găng Đấu Tập, nhận thêm 1 găng sau 4 giao tranh người chơi.",
       "icon": "assets/maps/tft/icons/augments/hexcore/lucky-gloves-iii.png"
     },
     {
@@ -6176,7 +6176,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain a package containing a -cost champion, a 2-star -cost champion, and gold.\\n \\n \\n \\n At the start of the next stages, gain the package again.",
-      "desc_vi": "Nhận một gói quà chứa 1 tướng 5 vàng, 1 tướng 1 vàng 2 sao và @Gold@ vàng.\n\nKhi bắt đầu @FutureChampionCount@ giai đoạn tiếp theo, nhận gói quà một lần nữa.",
+      "desc_vi": "Nhận một gói quà chứa 1 tướng 5 vàng, 1 tướng 1 vàng 2 sao và 7 vàng. Khi bắt đầu 2 giai đoạn tiếp theo, nhận gói quà một lần nữa.",
       "icon": "assets/maps/tft/icons/augments/hexcore/luxurysubscription_iii.png"
     },
     {
@@ -6186,7 +6186,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain a Golden Item Remover and 4 random components.",
-      "desc_vi": "Nhận 1 Nam Châm Hoàng Kim và @NumItems@ trang bị thành phần ngẫu nhiên.\n\nNam Châm Hoàng Kim là 1 Nam Châm Ma Thuật với lượt sử dụng vô hạn.",
+      "desc_vi": "Nhận 1 Nam Châm Hoàng Kim và 4 trang bị thành phần ngẫu nhiên. Nam Châm Hoàng Kim là 1 Nam Châm Ma Thuật với lượt sử dụng vô hạn.",
       "icon": "assets/maps/tft/icons/augments/hexcore/minmax_iii.png"
     },
     {
@@ -6196,7 +6196,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain gold now and every round for the rest of the game.",
-      "desc_vi": "Nhận @RoundGold@ vàng ngay bây giờ và mỗi vòng đấu cho đến hết trận.",
+      "desc_vi": "Nhận 7 vàng ngay bây giờ và mỗi vòng đấu cho đến hết trận.",
       "icon": "assets/maps/tft/icons/augments/hexcore/moneymonsoon_iii.png"
     },
     {
@@ -6206,7 +6206,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain an Artifact Anvil. After you open it, gain a Completed Item Anvil. After you open that, gain a Component Anvil. After you open that, gain gold.",
-      "desc_vi": "Nhận 1 Gói Trang Bị Tạo Tác. Sau khi bạn mở nó, nhận 1 Gói Trang Bị Thành Phần. Sau khi bạn mở nó, nhận @Gold@ vàng.",
+      "desc_vi": "Nhận 1 Gói Trang Bị Tạo Tác. Sau khi bạn mở nó, nhận 1 Gói Trang Bị Thành Phần. Sau khi bạn mở nó, nhận 4 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t3.png"
     },
     {
@@ -6236,7 +6236,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain + max team size and 4-cost champion",
-      "desc_vi": "Nhận thêm +@MaxArmySizeIncrease@ số lượng tướng tối đa và @NumUnits@ tướng 4 vàng.",
+      "desc_vi": "Nhận thêm +1 số lượng tướng tối đa và 1 tướng 4 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/newrecruit3.png"
     },
     {
@@ -6266,7 +6266,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Round start: items on your bench are randomized.\\n \\n \\n \\n Gain Radiant item.",
-      "desc_vi": "Bắt đầu vòng đấu: Các trang bị trên hàng dự bị được đánh tráo ngẫu nhiên. \n\nNhận 1 Trang Bị Ánh Sáng ngẫu nhiên.",
+      "desc_vi": "Bắt đầu vòng đấu: Các trang bị trên hàng dự bị được đánh tráo ngẫu nhiên. Nhận 1 Trang Bị Ánh Sáng ngẫu nhiên.",
       "icon": "assets/maps/tft/icons/augments/hexcore/pandora3.png"
     },
     {
@@ -6276,7 +6276,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain an Infinity Force. After 5 player combats, gain another.\\n \\n \\n \\n Infinity Force: Artifact that offers tons of offensive and defensive stats",
-      "desc_vi": "Nhận 1 Tam Luyện Kiếm. Sau @CombatNum@ vòng giao tranh người chơi, nhận thêm 1 Tam Luyện Kiếm.\n\nTam Luyện Kiếm: Tạo Tác giúp tăng mạnh cả chỉ số tấn công và phòng thủ.",
+      "desc_vi": "Nhận 1 Tam Luyện Kiếm. Sau 3 vòng giao tranh người chơi, nhận thêm 1 Tam Luyện Kiếm. Tam Luyện Kiếm: Tạo Tác giúp tăng mạnh cả chỉ số tấn công và phòng thủ.",
       "icon": "assets/maps/tft/icons/augments/hexcore/phreaky-friday-iii.png"
     },
     {
@@ -6296,7 +6296,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Each time your shop is rerolled you have a% chance to gain a free reroll.",
-      "desc_vi": "Mỗi khi Cửa Hàng được đổi lại, bạn có @RerollPercent@% tỉ lệ nhận được thêm 1 lượt đổi miễn phí.",
+      "desc_vi": "Mỗi khi Cửa Hàng được đổi lại, bạn có 45% tỉ lệ nhận được thêm 1 lượt đổi miễn phí.",
       "icon": "assets/maps/tft/icons/augments/hexcore/goldenticket3.png"
     },
     {
@@ -6306,7 +6306,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain a Radiant Thief's Gloves item. This equips 2 random Radiant items every round.",
-      "desc_vi": "Nhận 1 Găng Tinh Xảo. Trang bị này sẽ tạo thêm 2 trang bị Ánh Sáng ngẫu nhiên mỗi vòng đấu.\n\nTrang Bị Ánh Sáng là phiên bản mạnh mẽ hơn của những trang bị hoàn chỉnh.",
+      "desc_vi": "Nhận 1 Găng Tinh Xảo. Trang bị này sẽ tạo thêm 2 trang bị Ánh Sáng ngẫu nhiên mỗi vòng đấu. Trang Bị Ánh Sáng là phiên bản mạnh mẽ hơn của những trang bị hoàn chỉnh.",
       "icon": "assets/maps/tft/icons/augments/hexcore/roll-the-dice-iii.png"
     },
     {
@@ -6316,7 +6316,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Choose 1 of 5 Radiant Items. Gain a Magnetic Remover.",
-      "desc_vi": "Chọn 1 trong @ArmoryChoiceCount@ Trang Bị Ánh Sáng. Nhận 1 Nam Châm Ma Thuật.\n\nTrang Bị Ánh Sáng là phiên bản mạnh mẽ hơn của những trang bị hoàn chỉnh.",
+      "desc_vi": "Chọn 1 trong 5 Trang Bị Ánh Sáng. Nhận 1 Nam Châm Ma Thuật. Trang Bị Ánh Sáng là phiên bản mạnh mẽ hơn của những trang bị hoàn chỉnh.",
       "icon": "assets/maps/tft/icons/augments/hexcore/radiantrelic-iii.png"
     },
     {
@@ -6326,7 +6326,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain Hands of Justice. Allies equipped with Hand of Justice gain Precision and Critical Strike Chance.\\n \\n \\n \\n Precision: Ability damage can critically strike. Additional Precision grants 10% Critical Strike Damage.",
-      "desc_vi": "Nhận @ItemCount@ Bàn Tay Công Lý. Đồng minh được trang bị Bàn Tay Công Lý nhận Chuẩn Xác và @CritChance*100@% Tỉ Lệ Chí Mạng.\n\n{{TFT_Keyword_Precision}}",
+      "desc_vi": "Nhận 2 Bàn Tay Công Lý. Đồng minh được trang bị Bàn Tay Công Lý nhận Chuẩn Xác và 25% Tỉ Lệ Chí Mạng. {{TFT_Keyword_Precision}}",
       "icon": "assets/maps/tft/icons/augments/hexcore/retribution_iii.png"
     },
     {
@@ -6336,7 +6336,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain a Mogul's Mail. After player combats, gain a Gamblers Blade.\\n \\n \\n \\n These items give gold as well as combat power.",
-      "desc_vi": "Nhận 1 Giáp Đại Hãn. Sau @combatnum@ vòng đấu, nhận 1 Kiếm Của Tay Bạc.\n\nNhững trang bị này mang lại vàng và tăng sức mạnh chiến đấu.",
+      "desc_vi": "Nhận 1 Giáp Đại Hãn. Sau 7 vòng đấu, nhận 1 Kiếm Của Tay Bạc. Những trang bị này mang lại vàng và tăng sức mạnh chiến đấu.",
       "icon": "assets/maps/tft/icons/augments/hexcore/shimmerscaleessence_iii.png"
     },
     {
@@ -6346,7 +6346,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "When you level up, gain a number of free shop refreshes equal to your level +. Gain gold.",
-      "desc_vi": "Khi bạn thăng cấp, nhận số lượt làm mới cửa hàng miễn phí tương đương với cấp của bạn +@BonusRollPerLevel@. Nhận @Gold@ vàng.",
+      "desc_vi": "Khi bạn thăng cấp, nhận số lượt làm mới cửa hàng miễn phí tương đương với cấp của bạn +1. Nhận 2 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/silver-ticket-iii.png"
     },
     {
@@ -6356,7 +6356,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Combat start: Your team gains Attack Damage and Ability Power per second for seconds. At max stacks, deal bonus true damage.",
-      "desc_vi": "Bắt đầu giao tranh: Đội của bạn nhận @StatsPerSecond@% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật mỗi giây trong @MaxStacks@ giây. Khi đạt cộng dồn tối đa, gây thêm @BonusTrueDamage*100@% sát thương chuẩn.",
+      "desc_vi": "Bắt đầu giao tranh: Đội của bạn nhận 1.5% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật mỗi giây trong 10 giây. Khi đạt cộng dồn tối đa, gây thêm 12% sát thương chuẩn.",
       "icon": "assets/maps/tft/icons/augments/hexcore/awakenedsoul_iii.png"
     },
     {
@@ -6376,7 +6376,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain an Artifact anvil. Your team gains Health for each item equipped on champions.",
-      "desc_vi": "Nhận 1 gói Trang Bị Tạo Tác. Đội của bạn nhận @HealthPerItem@ Máu với mỗi trang bị đang mang trên tướng.\n\nMáu Nhận Thêm: @TFTUnitProperty.item:TFT_Augment_SweetTreats_TeamHealth@\n\nTactician's Crown Hỗn Loạn Huyền Diệu, 2024",
+      "desc_vi": "Nhận 1 gói Trang Bị Tạo Tác. Đội của bạn nhận 16 Máu với mỗi trang bị đang mang trên tướng. Máu Nhận Thêm: Tactician's Crown Hỗn Loạn Huyền Diệu, 2024",
       "icon": "assets/maps/tft/icons/augments/hexcore/sweettreats_iii.png"
     },
     {
@@ -6386,7 +6386,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain BF Swords. Your BF Swords grant + Attack Speed.",
-      "desc_vi": "Nhận @NumItems@ Kiếm B.F. Kiếm B.F. của bạn sẽ cho +@BonusStat*100@% Tốc Độ Đánh.",
+      "desc_vi": "Nhận 4 Kiếm B.F. Kiếm B.F. của bạn sẽ cho +4% Tốc Độ Đánh.",
       "icon": "assets/maps/tft/icons/augments/hexcore/bladeoverflow_iii.png"
     },
     {
@@ -6396,7 +6396,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Your team gains Health, Attack Damage, Ability Power, Armor, Magic Resist, Attack Speed, and Mana.",
-      "desc_vi": "Đội của bạn nhận thêm @Health@ Máu, @ADAP*100@% Sức Mạnh Công Kích, @ADAP*100@% Sức Mạnh Phép Thuật, @Resists@ Giáp, @Resists@ Kháng Phép, @AttackSpeed*100@% Tốc Độ Đánh và @Mana@ Năng Lượng.",
+      "desc_vi": "Đội của bạn nhận thêm 88 Máu, 8% Sức Mạnh Công Kích, 8% Sức Mạnh Phép Thuật, 8 Giáp, 8 Kháng Phép, 8% Tốc Độ Đánh và 8 Năng Lượng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/tons-of-stats-ii.png"
     },
     {
@@ -6406,7 +6406,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain a random Emblem. After rounds, gain a Tactician's Cape.",
-      "desc_vi": "Nhận 1 Ấn ngẫu nhiên. Sau @TurnDelay@ vòng đấu, nhận 1 Áo Choàng Chiến Thuật.",
+      "desc_vi": "Nhận 1 Ấn ngẫu nhiên. Sau 3 vòng đấu, nhận 1 Áo Choàng Chiến Thuật.",
       "icon": "assets/maps/tft/icons/augments/hexcore/tacticianskitchen_iii.png"
     },
     {
@@ -6416,7 +6416,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain a golden egg that hatches in turns for a huge amount of loot. Winning player combat speeds up the hatch timer by an extra turn.",
-      "desc_vi": "Nhận một trứng vàng nở ra sau @EggTurns@ vòng đấu, cho lượng lớn báu vật. Chiến thắng vòng giao tranh người chơi sẽ đẩy nhanh thời gian nở trứng thêm một vòng.",
+      "desc_vi": "Nhận một trứng vàng nở ra sau 11 vòng đấu, cho lượng lớn báu vật. Chiến thắng vòng giao tranh người chơi sẽ đẩy nhanh thời gian nở trứng thêm một vòng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/the-golden-egg-iii.png"
     },
     {
@@ -6426,7 +6426,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain random Emblems and gold.",
-      "desc_vi": "Nhận @NumOfEmblems@ Ấn ngẫu nhiên, 1 Búa Rèn và @Gold@ vàng.",
+      "desc_vi": "Nhận 3 Ấn ngẫu nhiên, 1 Búa Rèn và 2 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/thetraittree_iii.png"
     },
     {
@@ -6436,7 +6436,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain random Emblems, a Reforger, and gold.",
-      "desc_vi": "Nhận @NumOfEmblems@ Ấn ngẫu nhiên, 1 Búa Rèn và @Gold@ vàng.",
+      "desc_vi": "Nhận 3 Ấn ngẫu nhiên, 1 Búa Rèn và 4 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/thetraittree_iii.png"
     },
     {
@@ -6446,7 +6446,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain a random emblem. After fielding non-unique traits in a player combat, gain a reward. Then increase the number of traits needed and the size of the reward.",
-      "desc_vi": "Nhận 1 ấn ngẫu nhiên. Sau khi triển khai @LowestTraitBreakpoint@ tộc/hệ không độc nhất trong giao tranh người chơi, nhận 1 phần thưởng. Sau đó tăng số tộc/hệ cần thiết và giá trị của phần thưởng.",
+      "desc_vi": "Nhận 1 ấn ngẫu nhiên. Sau khi triển khai 2 tộc/hệ không độc nhất trong giao tranh người chơi, nhận 1 phần thưởng. Sau đó tăng số tộc/hệ cần thiết và giá trị của phần thưởng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t3.png"
     },
     {
@@ -6456,7 +6456,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Buying XP costs less. Gain Health and free reroll whenever you level up.",
-      "desc_vi": "Giảm 1 vàng khi mua XP. Nhận @Health@ Máu và @Rerolls@ lượt đổi miễn phí mỗi khi bạn thăng cấp.",
+      "desc_vi": "Giảm 1 vàng khi mua XP. Nhận 2 Máu và 1 lượt đổi miễn phí mỗi khi bạn thăng cấp.",
       "icon": "assets/maps/tft/icons/augments/hexcore/upwardmobility_iii.png"
     },
     {
@@ -6466,7 +6466,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain Spatula, random components, and gold.",
-      "desc_vi": "Nhận @NumSpatulas@ Xẻng Vàng, @NumComponents@ trang bị thành phần ngẫu nhiên và @NumGold@ vàng.",
+      "desc_vi": "Nhận 1 Xẻng Vàng, 3 trang bị thành phần ngẫu nhiên và 5 vàng.",
       "icon": "assets/maps/tft/icons/augments/hexcore/urfs-grab-bag-iii.png"
     },
     {
@@ -6476,7 +6476,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Champions gain Attack Damage, Ability Power, Armor, and Magic Resist for each ally that shares a trait with them.",
-      "desc_vi": "Các Tướng nhận được @ADAP*100@% Sức Mạnh Công Kích, @ADAP*100@% Sức Mạnh Phép Thuật, @resists@ Giáp và @resists@ Kháng Phép cho mỗi đồng minh có cùng tộc/hệ với họ.",
+      "desc_vi": "Các Tướng nhận được 4% Sức Mạnh Công Kích, 4% Sức Mạnh Phép Thuật, 3.5 Giáp và 3.5 Kháng Phép cho mỗi đồng minh có cùng tộc/hệ với họ.",
       "icon": "assets/maps/tft/icons/augments/hexcore/missing-t3.png"
     },
     {
@@ -6486,7 +6486,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain Needlessly Large Rods. Your Needlessly Large Rods grant + Attack Speed.",
-      "desc_vi": "Nhận @NumItems@ Gậy Quá Khổ. Gậy Quá Khổ của bạn sẽ cho +@BonusStat*100@% Tốc Độ Đánh.",
+      "desc_vi": "Nhận 4 Gậy Quá Khổ. Gậy Quá Khổ của bạn sẽ cho +5% Tốc Độ Đánh.",
       "icon": "assets/maps/tft/icons/augments/hexcore/wandoverflow_iii.png"
     },
     {
@@ -6496,7 +6496,7 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain a random Emblem and a completed item anvil. Allies that share a trait with that Emblem gain Attack Speed.\\n \\n \\n \\n Into The Arcane Tactician's Crown, 2025",
-      "desc_vi": "Nhận 1 Ấn ngẫu nhiên và 1 gói trang bị hoàn chỉnh. Các đồng minh có chung tộc/hệ với Ấn đó nhận thêm @ASPercent@% Tốc Độ Đánh. @TFTUnitProperty.item:TFT_Augment_WeStickTogether_Tooltip@\n\nTactician's Crown Bước Vào Arcane, 2025",
+      "desc_vi": "Nhận 1 Ấn ngẫu nhiên và 1 gói trang bị hoàn chỉnh. Các đồng minh có chung tộc/hệ với Ấn đó nhận thêm 30% Tốc Độ Đánh. Tactician's Crown Bước Vào Arcane, 2025",
       "icon": "assets/maps/tft/icons/augments/hexcore/westicktogether_iii.png"
     },
     {
@@ -6506,9 +6506,9 @@
       "tier": 3,
       "tierName": "Prismatic",
       "desc_en": "Gain 2 copies of a random 2-cost champion. Gain another copy of them at the start of each round for the rest of the game.",
-      "desc_vi": "Nhận @InitialCopies@ bản sao của một tướng @unittier@ vàng ngẫu nhiên. Nhận 1 bản sao nữa của tướng đó khi bắt đầu mỗi vòng đấu cho đến hết trận.\n\nTướng: @TFTUnitProperty.item:TFT_Augment_WorthTheWait@",
+      "desc_vi": "Nhận 2 bản sao của một tướng 2 vàng ngẫu nhiên. Nhận 1 bản sao nữa của tướng đó khi bắt đầu mỗi vòng đấu cho đến hết trận. Tướng:",
       "icon": "assets/maps/tft/icons/augments/hexcore/worththewait_iii.png"
     }
   ],
-  "updatedAt": "2026-10-30T04:27:59.458Z"
+  "updatedAt": "2026-10-30T05:25:09.759Z"
 }

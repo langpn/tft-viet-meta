@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { normalizeVietnamese } from "../src/core/localization.js";
+import { interpolateDescription } from "../src/lib/utils/augment-cleaner.js";
 
 const RAW_DIR = path.resolve(import.meta.dir, "../data/raw");
 const OUT_FILE = path.resolve(
@@ -120,8 +121,8 @@ export function buildDictionary(): CanonicalDictionary {
     const enItem = enItemMap.get(apiName);
     const nameEn = normalizeTitleCase((enItem?.name || viItem.name).trim());
     const nameVi = viItem.name.trim();
-    const descVi = cleanDesc(viItem.desc);
-    const descEn = cleanDesc(enItem?.desc || viItem.desc);
+    const descVi = interpolateDescription(viItem.desc, viItem.effects);
+    const descEn = interpolateDescription(enItem?.desc || viItem.desc, enItem?.effects || viItem.effects);
     const icon = cleanIcon(viItem.icon || enItem?.icon);
 
     if (viItem.isAugment) {
@@ -174,8 +175,8 @@ export function buildDictionary(): CanonicalDictionary {
         id,
         name_vi: nameVi,
         name_en: nameEn,
-        desc_vi: cleanDesc(viRecord?.description),
-        desc_en: cleanDesc(enRecord.description),
+        desc_vi: interpolateDescription(viRecord?.description),
+        desc_en: interpolateDescription(enRecord.description),
         icon,
       });
     }
