@@ -429,6 +429,8 @@
                   nameVi={u.name_vi || u.name_en || u.name}
                   iconUrl={u.icon}
                   cost={u.cost}
+                  items={u.items || []}
+                  showItems={true}
                   size="sm"
                   showName={settingsStore.showNames}
                 />
@@ -478,6 +480,8 @@
                   nameVi={cap.name_vi || cap.name_en || cap.name}
                   iconUrl={cap.icon}
                   cost={unitCost}
+                  items={cap.items || []}
+                  showItems={true}
                   size="sm"
                   showName={settingsStore.showNames}
                 />

@@ -76,8 +76,8 @@
   };
 
   const itemSizeClasses = {
-    sm: 'w-5 h-5',
-    md: 'w-6 h-6',
+    sm: 'w-4 h-4',
+    md: 'w-5.5 h-5.5',
     lg: 'w-7 h-7',
     xl: 'w-8 h-8'
   };
@@ -201,11 +201,11 @@
 
   <!-- 3 Equipped Items under Hexagon (Only shown when showItems is true, e.g. in Modal or Board) -->
   {#if showItems && items && items.length > 0}
-    <div class="flex items-center gap-1 -mt-3 z-30">
+    <div class="flex items-center gap-0.5 -mt-2 z-30">
       {#each items.slice(0, 3) as item}
         {@const itemSrc = resolveItemIcon(item.icon, item.id)}
         <div 
-          class="{itemSizeClasses[size]} rounded-md border-1.5 border-amber-400/90 bg-black overflow-hidden shadow-lg shadow-black hover:scale-125 transition-transform cursor-pointer"
+          class="{itemSizeClasses[size]} rounded bg-black border border-amber-400/80 overflow-hidden shadow-md shadow-black hover:scale-125 transition-transform cursor-pointer shrink-0"
           onmouseenter={(e) => { e.stopPropagation(); showTooltip({ type: 'item', id: item.id || '', name: item.name_vi }, e.currentTarget); }}
           onmouseleave={() => hideTooltip()}
         >
