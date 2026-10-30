@@ -1,6 +1,7 @@
-# TFT Việt Meta
+# TFT Việt Meta (TFT Academy Việt Nam)
 
-Local Vietnamese TFT knowledge and meta explorer built as a source-locked mirror.
+> 🌐 **Website trực tuyến:** [https://tft.langpn.xyz](https://tft.langpn.xyz)  
+> Nền tảng cẩm nang meta Đấu Trường Chân Lý (TFT) số 1 Việt Nam. Bảng xếp hạng 73 đội hình meta giám tuyển bởi Dishsoap & Frodan, 123 trang bị, 249 lõi nâng cấp và số liệu tactics.tools live chuyển ngữ tiếng Việt 100%.
 
 ## Current status
 
