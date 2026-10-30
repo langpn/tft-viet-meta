@@ -17,6 +17,15 @@
     icon: string;
   }
 
+  export interface PredecessorUnit {
+    id?: string;
+    name?: string;
+    nameVi?: string;
+    iconUrl?: string;
+    icon?: string;
+    cost?: number;
+  }
+
   interface Props {
     id?: string;
     name?: string;
@@ -30,6 +39,7 @@
     sticker?: number;
     situationalTier?: 'S' | 'A' | 'B' | 'C' | null;
     coreBadges?: CoreBadge[];
+    predecessor?: PredecessorUnit | null;
     emblemIcon?: string;
     size?: 'sm' | 'md' | 'lg' | 'xl';
     showName?: boolean;
@@ -51,6 +61,7 @@
     sticker = 0,
     situationalTier = null,
     coreBadges = [],
+    predecessor = null,
     emblemIcon = '',
     size = 'md',
     showName = false,
@@ -133,8 +144,33 @@
       {/if}
     </div>
 
-    <!-- Top-Left Badge: Situational Tier Badge (A/B/C in X Tier) OR Trend Badge (Rising / Falling / New) -->
-    {#if situationalTier}
+    <!-- Top-Left Predecessor Unit Badge (For Flex Units replacing another unit, matching Screenshot 2) -->
+    {#if predecessor}
+      <div 
+        class="absolute -top-1.5 -left-2.5 z-30 w-6 h-6 flex items-center justify-center filter drop-shadow-md cursor-pointer hover:scale-125 transition-transform"
+        onmouseenter={(e) => { e.stopPropagation(); showTooltip({ type: 'champion', id: predecessor.id, name: predecessor.nameVi || predecessor.name }, e.currentTarget); }}
+        onmouseleave={() => hideTooltip()}
+        title="Thay thế cho: {predecessor.nameVi || predecessor.name}"
+        role="button"
+        tabindex="0"
+      >
+        <div class="absolute inset-0 hex-border {costBorderColors[predecessor.cost || 1] ?? 'bg-slate-500'} opacity-95"></div>
+        <div class="absolute inset-[1.5px] hex-clip bg-[#0D111A] overflow-hidden">
+          {#if predecessor.iconUrl || predecessor.icon}
+            <img 
+              src={resolveChampionIcon(predecessor.iconUrl || predecessor.icon, predecessor.id)} 
+              alt={predecessor.nameVi || predecessor.name} 
+              class="w-full h-full object-cover scale-110" 
+              loading="lazy" 
+            />
+          {:else}
+            <div class="w-full h-full flex items-center justify-center font-black text-[8px] text-slate-300">
+              {(predecessor.nameVi || predecessor.name || '').slice(0, 1)}
+            </div>
+          {/if}
+        </div>
+      </div>
+    {:else if situationalTier}
       <!-- Situational tier badge matching Image 2 row 5 -->
       <div 
         class="absolute -top-1.5 -left-1.5 z-30 w-5 h-5 rounded-md border-2 border-black flex items-center justify-center font-black text-[11px] shadow-lg

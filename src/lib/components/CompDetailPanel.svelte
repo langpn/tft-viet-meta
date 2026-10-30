@@ -76,6 +76,27 @@
     return 1;
   }
 
+  function resolvePredecessor(cap: any) {
+    if (!cap?.predecessors || cap.predecessors.length === 0) return null;
+    const predId = cap.predecessors[0];
+    if (!predId || predId.startsWith('TFT_Flex')) return null;
+
+    const champ = champMap.get(predId) || 
+                  champMap.get(predId.toLowerCase()) || 
+                  (tooltipDb.champions as any)[predId] || 
+                  (tooltipDb.champions as any)[predId.toLowerCase()];
+
+    const predCost = champ?.cost || FALLBACK_COSTS[predId.toLowerCase()] || 1;
+
+    return {
+      id: champ?.id || predId,
+      name: champ?.name_en || champ?.name || predId,
+      nameVi: champ?.name_vi || champ?.name_en || champ?.name || predId,
+      iconUrl: champ?.icon,
+      cost: predCost
+    };
+  }
+
   const traitTierClasses: Record<string, string> = {
     bronze: 'bg-[#A86445] text-black',
     silver: 'bg-[#A3B3C2] text-black',
@@ -470,16 +491,18 @@
           <span class="text-xs font-bold text-slate-300 uppercase tracking-wider text-center">
             Tướng Linh Hoạt (Flex Units)
           </span>
-          <div class="flex flex-wrap items-center justify-center gap-2 pt-1">
+          <div class="flex flex-wrap items-center justify-center gap-3.5 pt-1">
             {#if comp.maxCap && comp.maxCap.length > 0}
               {#each comp.maxCap.slice(0, 3) as cap}
                 {@const unitCost = resolveUnitCost(cap)}
+                {@const predUnit = resolvePredecessor(cap)}
                 <HexAvatar 
                   id={cap.id}
                   name={cap.name_en || cap.name}
                   nameVi={cap.name_vi || cap.name_en || cap.name}
                   iconUrl={cap.icon}
                   cost={unitCost}
+                  predecessor={predUnit}
                   items={cap.items || []}
                   showItems={true}
                   size="sm"
