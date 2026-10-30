@@ -350,13 +350,12 @@ export function cleanItemName(id: string): string {
 }
 
 export function localizeItem(id: string): LocalizedItem {
-  const isArtifact = id.includes("Artifact") || id.includes("Mitten") || id.includes("Silvermere") || id.includes("Fishbone");
   const canonical = getItemVi(id);
   if (canonical) {
     return {
       id,
       name_en: canonical.name_en,
-      name_vi: isArtifact ? canonical.name_en : canonical.name_vi,
+      name_vi: canonical.name_vi || canonical.name_en,
       desc_en: canonical.desc_en,
       desc_vi: canonical.desc_vi,
       icon: canonical.icon || `https://assets.tftacademy.com/items/${id}.webp`,
@@ -370,7 +369,7 @@ export function localizeItem(id: string): LocalizedItem {
     return {
       id,
       name_en: fallback.name_en,
-      name_vi: isArtifact ? fallback.name_en : fallback.name_vi,
+      name_vi: fallback.name_vi || fallback.name_en,
       desc_en: fallback.desc_en,
       desc_vi: fallback.desc_vi,
       icon: fallback.icon || `https://assets.tftacademy.com/items/${id}.webp`,

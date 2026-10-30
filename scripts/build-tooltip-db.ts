@@ -315,11 +315,7 @@ for (const acItem of academyItems) {
     name_en = 'Radiant Red Buff';
   }
 
-  // If item is an Ornn Artifact, the in-game client retains international names
-  // (e.g. Mittens, Silvermere Dawn, Fishbones, Flickerblades, Dawncore, Trenchcoat)
-  if (acItem.type === 'ornns') {
-    name_vi = name_en;
-  }
+  // Use official Riot Vietnamese item names for all items including Ornn Artifacts
 
   // Stats formatting
   const stats: Record<string, string> = {};

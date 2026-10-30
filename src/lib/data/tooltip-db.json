@@ -25079,7 +25079,7 @@
     },
     "DA_Artifact_Mittens": {
       "id": "DA_Artifact_Mittens",
-      "name_vi": "Mittens",
+      "name_vi": "Găng Đấu Sĩ",
       "name_en": "Mittens",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_mittens.png",
@@ -25122,7 +25122,7 @@
     },
     "da_artifact_mittens": {
       "id": "DA_Artifact_Mittens",
-      "name_vi": "Mittens",
+      "name_vi": "Găng Đấu Sĩ",
       "name_en": "Mittens",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_mittens.png",
@@ -25165,7 +25165,7 @@
     },
     "w731uojozfe67nr": {
       "id": "DA_Artifact_Mittens",
-      "name_vi": "Mittens",
+      "name_vi": "Găng Đấu Sĩ",
       "name_en": "Mittens",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_mittens.png",
@@ -25208,7 +25208,7 @@
     },
     "Mittens": {
       "id": "DA_Artifact_Mittens",
-      "name_vi": "Mittens",
+      "name_vi": "Găng Đấu Sĩ",
       "name_en": "Mittens",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_mittens.png",
@@ -25251,7 +25251,50 @@
     },
     "mittens": {
       "id": "DA_Artifact_Mittens",
-      "name_vi": "Mittens",
+      "name_vi": "Găng Đấu Sĩ",
+      "name_en": "Mittens",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_mittens.png",
+      "stats": {
+        "as": "+65%"
+      },
+      "desc_vi": "Thu nhỏ chủ sở hữu, tăng tốc độ di chuyển và miễn nhiễm Làm Chậm, Thiêu Đốt và Vết Thương Sâu.",
+      "desc_en": "Shrinks the holder, granting them increased movement speed and immunity to Slow, Burn, and Wound.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_Draven18",
+          "name_en": "Draven",
+          "name_vi": "Draven",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/o0sikcjzxpkr7jb/tft18_draven_Ddc6AWCn5l.png"
+        },
+        {
+          "id": "DA_18_MasterYi_AD",
+          "name_en": "Master Yi",
+          "name_vi": "Master Yi",
+          "cost": 3,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/6ku6ukznq2ew6sy/tft18_master_yi_11hqXwSUkm.png"
+        },
+        {
+          "id": "DA_18_Warwick",
+          "name_en": "Warwick",
+          "name_vi": "Warwick",
+          "cost": 2,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/0tg1410o3yh41hq/tft18_warwick_BFK6RhwPsy.png"
+        },
+        {
+          "id": "DA_Murkwolf18",
+          "name_en": "Murkwolf",
+          "name_vi": "Murkwolf",
+          "cost": 2,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/n8pnvcjz5lwlzv9/tft18_murkwolf_5WUHym2pXa.png"
+        }
+      ]
+    },
+    "găng đấu sĩ": {
+      "id": "DA_Artifact_Mittens",
+      "name_vi": "Găng Đấu Sĩ",
       "name_en": "Mittens",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_mittens.png",
@@ -25980,7 +26023,7 @@
     },
     "DA_Artifact_RapidFireCannon": {
       "id": "DA_Artifact_RapidFireCannon",
-      "name_vi": "Rapid Firecannon",
+      "name_vi": "Đại Bác Liên Thanh",
       "name_en": "Rapid Firecannon",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_rapidfirecannon.png",
@@ -26023,7 +26066,7 @@
     },
     "da_artifact_rapidfirecannon": {
       "id": "DA_Artifact_RapidFireCannon",
-      "name_vi": "Rapid Firecannon",
+      "name_vi": "Đại Bác Liên Thanh",
       "name_en": "Rapid Firecannon",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_rapidfirecannon.png",
@@ -26066,7 +26109,7 @@
     },
     "yi80fzakoa3u543": {
       "id": "DA_Artifact_RapidFireCannon",
-      "name_vi": "Rapid Firecannon",
+      "name_vi": "Đại Bác Liên Thanh",
       "name_en": "Rapid Firecannon",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_rapidfirecannon.png",
@@ -26109,7 +26152,7 @@
     },
     "RapidFireCannon": {
       "id": "DA_Artifact_RapidFireCannon",
-      "name_vi": "Rapid Firecannon",
+      "name_vi": "Đại Bác Liên Thanh",
       "name_en": "Rapid Firecannon",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_rapidfirecannon.png",
@@ -26152,7 +26195,7 @@
     },
     "rapidfirecannon": {
       "id": "DA_Artifact_RapidFireCannon",
-      "name_vi": "Rapid Firecannon",
+      "name_vi": "Đại Bác Liên Thanh",
       "name_en": "Rapid Firecannon",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_rapidfirecannon.png",
@@ -26195,7 +26238,50 @@
     },
     "rapid firecannon": {
       "id": "DA_Artifact_RapidFireCannon",
-      "name_vi": "Rapid Firecannon",
+      "name_vi": "Đại Bác Liên Thanh",
+      "name_en": "Rapid Firecannon",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_rapidfirecannon.png",
+      "stats": {
+        "as": "+55%"
+      },
+      "desc_vi": "Tăng +1 Tầm Đánh, tăng thêm 1 mỗi khi chủ sở hữu hạ gục một kẻ địch.",
+      "desc_en": "Gain +1 Attack Range, increased by 1 whenever the holder kills an enemy.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_Rengar",
+          "name_en": "Rengar",
+          "name_vi": "Rengar",
+          "cost": 3,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/h45l9gbu72vyf5v/tft18_rengar_I5Dp3EaDfg.png"
+        },
+        {
+          "id": "DA_18_MasterYi_AD",
+          "name_en": "Master Yi",
+          "name_vi": "Master Yi",
+          "cost": 3,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/6ku6ukznq2ew6sy/tft18_master_yi_11hqXwSUkm.png"
+        },
+        {
+          "id": "DA_18_Akali_AD",
+          "name_en": "Akali",
+          "name_vi": "Akali",
+          "cost": 1,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/j3fah8d9vz3a4y1/tft18_akali_xn75cMqIUo.png"
+        },
+        {
+          "id": "DA_18_Warwick",
+          "name_en": "Warwick",
+          "name_vi": "Warwick",
+          "cost": 2,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/0tg1410o3yh41hq/tft18_warwick_BFK6RhwPsy.png"
+        }
+      ]
+    },
+    "đại bác liên thanh": {
+      "id": "DA_Artifact_RapidFireCannon",
+      "name_vi": "Đại Bác Liên Thanh",
       "name_en": "Rapid Firecannon",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_rapidfirecannon.png",
@@ -28966,7 +29052,7 @@
     },
     "DA_Artifact_InfinityForce": {
       "id": "DA_Artifact_InfinityForce",
-      "name_vi": "Infinity Force",
+      "name_vi": "Tam Luyện Kiếm",
       "name_en": "Infinity Force",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornninfinityforce.png",
@@ -29014,7 +29100,7 @@
     },
     "da_artifact_infinityforce": {
       "id": "DA_Artifact_InfinityForce",
-      "name_vi": "Infinity Force",
+      "name_vi": "Tam Luyện Kiếm",
       "name_en": "Infinity Force",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornninfinityforce.png",
@@ -29062,7 +29148,7 @@
     },
     "mq67u4qo69uyvib": {
       "id": "DA_Artifact_InfinityForce",
-      "name_vi": "Infinity Force",
+      "name_vi": "Tam Luyện Kiếm",
       "name_en": "Infinity Force",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornninfinityforce.png",
@@ -29110,7 +29196,7 @@
     },
     "InfinityForce": {
       "id": "DA_Artifact_InfinityForce",
-      "name_vi": "Infinity Force",
+      "name_vi": "Tam Luyện Kiếm",
       "name_en": "Infinity Force",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornninfinityforce.png",
@@ -29158,7 +29244,7 @@
     },
     "infinityforce": {
       "id": "DA_Artifact_InfinityForce",
-      "name_vi": "Infinity Force",
+      "name_vi": "Tam Luyện Kiếm",
       "name_en": "Infinity Force",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornninfinityforce.png",
@@ -29206,7 +29292,55 @@
     },
     "infinity force": {
       "id": "DA_Artifact_InfinityForce",
-      "name_vi": "Infinity Force",
+      "name_vi": "Tam Luyện Kiếm",
+      "name_en": "Infinity Force",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornninfinityforce.png",
+      "stats": {
+        "as": "+30%",
+        "ad": "+30%",
+        "ap": "+30",
+        "armor": "+30",
+        "mr": "+30",
+        "hp": "+300"
+      },
+      "desc_vi": "",
+      "desc_en": "",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_GnarSmall",
+          "name_en": "Gnar",
+          "name_vi": "Gnar",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/b2suo7c1ugx7p51/tft18_gnar_LjYav7x6QS.png"
+        },
+        {
+          "id": "DA_18_ElderDragon",
+          "name_en": "Elder Dragon",
+          "name_vi": "Elder Dragon",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/pemzum62gsx7puw/tft18_elder_dragon_7Hu6QtDrmY.png"
+        },
+        {
+          "id": "DA_18_Camille",
+          "name_en": "Camille",
+          "name_vi": "Camille",
+          "cost": 1,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/k92clk9hj6unisd/tft18_camille_gUd0DXuPgG.png"
+        },
+        {
+          "id": "DA_Brambleback18",
+          "name_en": "Brambleback",
+          "name_vi": "Brambleback",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/2pg5tkbdazdkd14/tft18_brambleback_fBYgUre8yD.png"
+        }
+      ]
+    },
+    "tam luyện kiếm": {
+      "id": "DA_Artifact_InfinityForce",
+      "name_vi": "Tam Luyện Kiếm",
       "name_en": "Infinity Force",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornninfinityforce.png",
@@ -29961,7 +30095,7 @@
     },
     "DA_Artifact_MogulsMail": {
       "id": "DA_Artifact_MogulsMail",
-      "name_vi": "Mogul'sMail",
+      "name_vi": "Giáp Đại Hãn",
       "name_en": "Mogul'sMail",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalemogulsmail.png",
@@ -30004,7 +30138,7 @@
     },
     "da_artifact_mogulsmail": {
       "id": "DA_Artifact_MogulsMail",
-      "name_vi": "Mogul'sMail",
+      "name_vi": "Giáp Đại Hãn",
       "name_en": "Mogul'sMail",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalemogulsmail.png",
@@ -30047,7 +30181,7 @@
     },
     "ymcvlqsoqxi983x": {
       "id": "DA_Artifact_MogulsMail",
-      "name_vi": "Mogul'sMail",
+      "name_vi": "Giáp Đại Hãn",
       "name_en": "Mogul'sMail",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalemogulsmail.png",
@@ -30090,7 +30224,7 @@
     },
     "MogulsMail": {
       "id": "DA_Artifact_MogulsMail",
-      "name_vi": "Mogul'sMail",
+      "name_vi": "Giáp Đại Hãn",
       "name_en": "Mogul'sMail",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalemogulsmail.png",
@@ -30133,7 +30267,7 @@
     },
     "mogulsmail": {
       "id": "DA_Artifact_MogulsMail",
-      "name_vi": "Mogul'sMail",
+      "name_vi": "Giáp Đại Hãn",
       "name_en": "Mogul'sMail",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalemogulsmail.png",
@@ -30176,7 +30310,50 @@
     },
     "mogul'smail": {
       "id": "DA_Artifact_MogulsMail",
-      "name_vi": "Mogul'sMail",
+      "name_vi": "Giáp Đại Hãn",
+      "name_en": "Mogul'sMail",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalemogulsmail.png",
+      "stats": {
+        "hp": "+300"
+      },
+      "desc_vi": "Grants 1 Armor, 1 Magic Resist, and 5 Health when taking damage, stacking up to 35 times. At full stacks, grant 1 gold and continue gaining 1 gold every 11 seconds. Gold generated this game: 0",
+      "desc_en": "Grants 1 Armor, 1 Magic Resist, and 5 Health when taking damage, stacking up to 35 times. At full stacks, grant 1 gold and continue gaining 1 gold every 11 seconds. Gold generated this game: 0",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_Maokai",
+          "name_en": "Maokai",
+          "name_vi": "Maokai",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/y1tkqmq6nk2izrn/tft18_maokai_uSlxsyuU1I.png"
+        },
+        {
+          "id": "DA_18_Malphite",
+          "name_en": "Malphite",
+          "name_vi": "Malphite",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/hmwp0jtcck7n5vn/tft18_malphite_qX5CDK8V5K.png"
+        },
+        {
+          "id": "DA_Taric18",
+          "name_en": "Taric",
+          "name_vi": "Taric",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/qryutb8nciv7yd1/tft18_taric_hTxCPzcJnL.png"
+        },
+        {
+          "id": "DA_Amumu18",
+          "name_en": "Amumu",
+          "name_vi": "Amumu",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/y389o4ubtuwe4h1/tft18_amumu_lCIHv7EywD.png"
+        }
+      ]
+    },
+    "giáp đại hãn": {
+      "id": "DA_Artifact_MogulsMail",
+      "name_vi": "Giáp Đại Hãn",
       "name_en": "Mogul'sMail",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalemogulsmail.png",
@@ -42952,7 +43129,7 @@
     },
     "DA_Artifact_GoldCollector": {
       "id": "DA_Artifact_GoldCollector",
-      "name_vi": "Gold Collector",
+      "name_vi": "Đại Bác Hải Tặc",
       "name_en": "Gold Collector",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnthecollector.png",
@@ -42996,7 +43173,7 @@
     },
     "da_artifact_goldcollector": {
       "id": "DA_Artifact_GoldCollector",
-      "name_vi": "Gold Collector",
+      "name_vi": "Đại Bác Hải Tặc",
       "name_en": "Gold Collector",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnthecollector.png",
@@ -43040,7 +43217,7 @@
     },
     "csqblx85dss5j0q": {
       "id": "DA_Artifact_GoldCollector",
-      "name_vi": "Gold Collector",
+      "name_vi": "Đại Bác Hải Tặc",
       "name_en": "Gold Collector",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnthecollector.png",
@@ -43084,7 +43261,7 @@
     },
     "GoldCollector": {
       "id": "DA_Artifact_GoldCollector",
-      "name_vi": "Gold Collector",
+      "name_vi": "Đại Bác Hải Tặc",
       "name_en": "Gold Collector",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnthecollector.png",
@@ -43128,7 +43305,7 @@
     },
     "goldcollector": {
       "id": "DA_Artifact_GoldCollector",
-      "name_vi": "Gold Collector",
+      "name_vi": "Đại Bác Hải Tặc",
       "name_en": "Gold Collector",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnthecollector.png",
@@ -43172,7 +43349,51 @@
     },
     "gold collector": {
       "id": "DA_Artifact_GoldCollector",
-      "name_vi": "Gold Collector",
+      "name_vi": "Đại Bác Hải Tặc",
+      "name_en": "Gold Collector",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnthecollector.png",
+      "stats": {
+        "ad": "+40%",
+        "crit": "+20%"
+      },
+      "desc_vi": "Attacks and Abilities execute enemies below 12% of their maximum Health. Executions on champions have a 33% chance to drop 1 gold. Gold collected: 0",
+      "desc_en": "Attacks and Abilities execute enemies below 12% of their maximum Health. Executions on champions have a 33% chance to drop 1 gold. Gold collected: 0",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_Ezreal",
+          "name_en": "Ezreal",
+          "name_vi": "Ezreal",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/uk0uzub9m5axrpw/tft18_ezreal_OL5YNmHPQS.png"
+        },
+        {
+          "id": "DA_18_Aphelios",
+          "name_en": "Aphelios",
+          "name_vi": "Aphelios",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/qb597jw9oj6mgub/tft18_aphelios_CUmmYJoHmd.png"
+        },
+        {
+          "id": "DA_18_Yunara",
+          "name_en": "Yunara",
+          "name_vi": "Yunara",
+          "cost": 2,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/0fng07snm2jb88e/tft18_yunara_seKPQIPJLl.png"
+        },
+        {
+          "id": "DA_Draven18",
+          "name_en": "Draven",
+          "name_vi": "Draven",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/o0sikcjzxpkr7jb/tft18_draven_Ddc6AWCn5l.png"
+        }
+      ]
+    },
+    "đại bác hải tặc": {
+      "id": "DA_Artifact_GoldCollector",
+      "name_vi": "Đại Bác Hải Tặc",
       "name_en": "Gold Collector",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnthecollector.png",
@@ -48646,7 +48867,7 @@
     },
     "DA_Artifact_GamblersBlade": {
       "id": "DA_Artifact_GamblersBlade",
-      "name_vi": "Gambler's Blade",
+      "name_vi": "Kiếm Của Tay Bạc",
       "name_en": "Gambler's Blade",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalegamblersblade.png",
@@ -48689,7 +48910,7 @@
     },
     "da_artifact_gamblersblade": {
       "id": "DA_Artifact_GamblersBlade",
-      "name_vi": "Gambler's Blade",
+      "name_vi": "Kiếm Của Tay Bạc",
       "name_en": "Gambler's Blade",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalegamblersblade.png",
@@ -48732,7 +48953,7 @@
     },
     "a8zvr7srjf5w3js": {
       "id": "DA_Artifact_GamblersBlade",
-      "name_vi": "Gambler's Blade",
+      "name_vi": "Kiếm Của Tay Bạc",
       "name_en": "Gambler's Blade",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalegamblersblade.png",
@@ -48775,7 +48996,7 @@
     },
     "GamblersBlade": {
       "id": "DA_Artifact_GamblersBlade",
-      "name_vi": "Gambler's Blade",
+      "name_vi": "Kiếm Của Tay Bạc",
       "name_en": "Gambler's Blade",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalegamblersblade.png",
@@ -48818,7 +49039,7 @@
     },
     "gamblersblade": {
       "id": "DA_Artifact_GamblersBlade",
-      "name_vi": "Gambler's Blade",
+      "name_vi": "Kiếm Của Tay Bạc",
       "name_en": "Gambler's Blade",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalegamblersblade.png",
@@ -48861,7 +49082,50 @@
     },
     "gambler's blade": {
       "id": "DA_Artifact_GamblersBlade",
-      "name_vi": "Gambler's Blade",
+      "name_vi": "Kiếm Của Tay Bạc",
+      "name_en": "Gambler's Blade",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalegamblersblade.png",
+      "stats": {
+        "as": "+55%"
+      },
+      "desc_vi": "Grant 1% bonus Attack Speed per gold in your bank (up to 30 gold). Each attack has a 6% chance to drop 1 gold. Gold generated this game: 0",
+      "desc_en": "Grant 1% bonus Attack Speed per gold in your bank (up to 30 gold). Each attack has a 6% chance to drop 1 gold. Gold generated this game: 0",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_Aphelios",
+          "name_en": "Aphelios",
+          "name_vi": "Aphelios",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/qb597jw9oj6mgub/tft18_aphelios_CUmmYJoHmd.png"
+        },
+        {
+          "id": "DA_18_Kayle",
+          "name_en": "Kayle",
+          "name_vi": "Kayle",
+          "cost": 2,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/wyzrftdv5ap0l66/tft18_kayle_5qcg5jGE5s.png"
+        },
+        {
+          "id": "DA_18_Caitlyn",
+          "name_en": "Caitlyn",
+          "name_vi": "Caitlyn",
+          "cost": 2,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/he69qmefmkbjber/tft18_caitlyn_5xDN0QiLK9.png"
+        },
+        {
+          "id": "DA_Draven18",
+          "name_en": "Draven",
+          "name_vi": "Draven",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/o0sikcjzxpkr7jb/tft18_draven_Ddc6AWCn5l.png"
+        }
+      ]
+    },
+    "kiếm của tay bạc": {
+      "id": "DA_Artifact_GamblersBlade",
+      "name_vi": "Kiếm Của Tay Bạc",
       "name_en": "Gambler's Blade",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalegamblersblade.png",
@@ -48904,7 +49168,7 @@
     },
     "DA_Artifact_HorizonFocus": {
       "id": "DA_Artifact_HorizonFocus",
-      "name_vi": "Horizon Focus",
+      "name_vi": "Kính Nhắm Ma Pháp",
       "name_en": "Horizon Focus",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_horizonfocus.png",
@@ -48950,7 +49214,7 @@
     },
     "da_artifact_horizonfocus": {
       "id": "DA_Artifact_HorizonFocus",
-      "name_vi": "Horizon Focus",
+      "name_vi": "Kính Nhắm Ma Pháp",
       "name_en": "Horizon Focus",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_horizonfocus.png",
@@ -48996,7 +49260,7 @@
     },
     "g6nhnkkewb7bj3j": {
       "id": "DA_Artifact_HorizonFocus",
-      "name_vi": "Horizon Focus",
+      "name_vi": "Kính Nhắm Ma Pháp",
       "name_en": "Horizon Focus",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_horizonfocus.png",
@@ -49042,7 +49306,7 @@
     },
     "HorizonFocus": {
       "id": "DA_Artifact_HorizonFocus",
-      "name_vi": "Horizon Focus",
+      "name_vi": "Kính Nhắm Ma Pháp",
       "name_en": "Horizon Focus",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_horizonfocus.png",
@@ -49088,7 +49352,7 @@
     },
     "horizonfocus": {
       "id": "DA_Artifact_HorizonFocus",
-      "name_vi": "Horizon Focus",
+      "name_vi": "Kính Nhắm Ma Pháp",
       "name_en": "Horizon Focus",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_horizonfocus.png",
@@ -49134,7 +49398,53 @@
     },
     "horizon focus": {
       "id": "DA_Artifact_HorizonFocus",
-      "name_vi": "Horizon Focus",
+      "name_vi": "Kính Nhắm Ma Pháp",
+      "name_en": "Horizon Focus",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_horizonfocus.png",
+      "stats": {
+        "armor": "+20",
+        "mr": "+20",
+        "hp": "+250",
+        "manaRegen": "+2"
+      },
+      "desc_vi": "Làm choáng kẻ địch sẽ triệu hồi sấm sét tấn công chúng, gây sát thương phép bằng 30% Máu tối đa của chúng.",
+      "desc_en": "Stunning an enemy causes lightning to strike them, dealing 30% of their max Health as magic damage.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_GnarSmall",
+          "name_en": "Gnar",
+          "name_vi": "Gnar",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/b2suo7c1ugx7p51/tft18_gnar_LjYav7x6QS.png"
+        },
+        {
+          "id": "DA_Sentinel18",
+          "name_en": "Sentinel",
+          "name_vi": "Sentinel",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/j51gghgncfei7gk/tft18_sentinel_BayY3IX9cc.png"
+        },
+        {
+          "id": "DA_18_Lillia",
+          "name_en": "Lillia",
+          "name_vi": "Lillia",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/spnitlt8unczagz/tft18_lillia_OfqbYeyRN4.png"
+        },
+        {
+          "id": "DA_Amumu18",
+          "name_en": "Amumu",
+          "name_vi": "Amumu",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/y389o4ubtuwe4h1/tft18_amumu_lCIHv7EywD.png"
+        }
+      ]
+    },
+    "kính nhắm ma pháp": {
+      "id": "DA_Artifact_HorizonFocus",
+      "name_vi": "Kính Nhắm Ma Pháp",
       "name_en": "Horizon Focus",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_horizonfocus.png",
@@ -49180,7 +49490,7 @@
     },
     "DA_Artifact_LichBane": {
       "id": "DA_Artifact_LichBane",
-      "name_vi": "Lich Bane",
+      "name_vi": "Kiếm Tai Ương",
       "name_en": "Lich Bane",
       "type": "ornns",
       "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft_item_artifact_lichbane.png",
@@ -49224,7 +49534,7 @@
     },
     "da_artifact_lichbane": {
       "id": "DA_Artifact_LichBane",
-      "name_vi": "Lich Bane",
+      "name_vi": "Kiếm Tai Ương",
       "name_en": "Lich Bane",
       "type": "ornns",
       "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft_item_artifact_lichbane.png",
@@ -49268,7 +49578,7 @@
     },
     "2rf5t4ky7njoury": {
       "id": "DA_Artifact_LichBane",
-      "name_vi": "Lich Bane",
+      "name_vi": "Kiếm Tai Ương",
       "name_en": "Lich Bane",
       "type": "ornns",
       "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft_item_artifact_lichbane.png",
@@ -49312,7 +49622,7 @@
     },
     "LichBane": {
       "id": "DA_Artifact_LichBane",
-      "name_vi": "Lich Bane",
+      "name_vi": "Kiếm Tai Ương",
       "name_en": "Lich Bane",
       "type": "ornns",
       "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft_item_artifact_lichbane.png",
@@ -49356,7 +49666,7 @@
     },
     "lichbane": {
       "id": "DA_Artifact_LichBane",
-      "name_vi": "Lich Bane",
+      "name_vi": "Kiếm Tai Ương",
       "name_en": "Lich Bane",
       "type": "ornns",
       "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft_item_artifact_lichbane.png",
@@ -49400,7 +49710,51 @@
     },
     "lich bane": {
       "id": "DA_Artifact_LichBane",
-      "name_vi": "Lich Bane",
+      "name_vi": "Kiếm Tai Ương",
+      "name_en": "Lich Bane",
+      "type": "ornns",
+      "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft_item_artifact_lichbane.png",
+      "stats": {
+        "as": "+10%",
+        "ap": "+55"
+      },
+      "desc_vi": "Đòn đánh đầu tiên của chủ sở hữu sau mỗi lần thi triển Kỹ Năng sẽ gây thêm sát thương phép. Sát thương tăng lên theo Giai Đoạn",
+      "desc_en": "The holder’s first attack after each Ability cast deals 0 bonus magic damage.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_KhaZix",
+          "name_en": "Kha'Zix",
+          "name_vi": "Kha'Zix",
+          "cost": 3,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/k56bfiaz6fknx7c/tft18_kha_zix_uZumsWAWIA.png"
+        },
+        {
+          "id": "DA_18_Soraka",
+          "name_en": "Soraka",
+          "name_vi": "Soraka",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/q5rkczf00zt53uw/tft18_soraka_TRYaezhWVs.png"
+        },
+        {
+          "id": "DA_18_Alune",
+          "name_en": "Alune",
+          "name_vi": "Alune",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/1kbpbdf0c570czp/tft18_alune_YexVP3JuZ9.png"
+        },
+        {
+          "id": "DA_18_LeBlanc",
+          "name_en": "LeBlanc",
+          "name_vi": "LeBlanc",
+          "cost": 2,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/c9nw8u8mt5c2z1x/tft18_le_blanc_LWPkrzknIC.png"
+        }
+      ]
+    },
+    "kiếm tai ương": {
+      "id": "DA_Artifact_LichBane",
+      "name_vi": "Kiếm Tai Ương",
       "name_en": "Lich Bane",
       "type": "ornns",
       "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft_item_artifact_lichbane.png",
@@ -49444,7 +49798,7 @@
     },
     "DA_Artifact_TheIndomitable": {
       "id": "DA_Artifact_TheIndomitable",
-      "name_vi": "The Indomitable",
+      "name_vi": "Bất Khuất",
       "name_en": "The Indomitable",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_theindomitable.png",
@@ -49489,7 +49843,7 @@
     },
     "da_artifact_theindomitable": {
       "id": "DA_Artifact_TheIndomitable",
-      "name_vi": "The Indomitable",
+      "name_vi": "Bất Khuất",
       "name_en": "The Indomitable",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_theindomitable.png",
@@ -49534,7 +49888,7 @@
     },
     "mwnclir5w1fjlod": {
       "id": "DA_Artifact_TheIndomitable",
-      "name_vi": "The Indomitable",
+      "name_vi": "Bất Khuất",
       "name_en": "The Indomitable",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_theindomitable.png",
@@ -49579,7 +49933,7 @@
     },
     "TheIndomitable": {
       "id": "DA_Artifact_TheIndomitable",
-      "name_vi": "The Indomitable",
+      "name_vi": "Bất Khuất",
       "name_en": "The Indomitable",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_theindomitable.png",
@@ -49624,7 +49978,7 @@
     },
     "theindomitable": {
       "id": "DA_Artifact_TheIndomitable",
-      "name_vi": "The Indomitable",
+      "name_vi": "Bất Khuất",
       "name_en": "The Indomitable",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_theindomitable.png",
@@ -49669,7 +50023,52 @@
     },
     "the indomitable": {
       "id": "DA_Artifact_TheIndomitable",
-      "name_vi": "The Indomitable",
+      "name_vi": "Bất Khuất",
+      "name_en": "The Indomitable",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_theindomitable.png",
+      "stats": {
+        "armor": "+20",
+        "mr": "+20",
+        "hp": "+500"
+      },
+      "desc_vi": "Tốc Độ Di Chuyển của chủ sở hữu bị giảm đi đáng kể. Nhận 15% Máu tối đa, miễn nhiễm làm choáng và kéo mục tiêu hiện tại vào tầm cận chiến.",
+      "desc_en": "The holder's Move Speed is drastically reduced. Gain 15% max Health, Unstoppable, and pull the current target into melee range.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_Maokai",
+          "name_en": "Maokai",
+          "name_vi": "Maokai",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/y1tkqmq6nk2izrn/tft18_maokai_uSlxsyuU1I.png"
+        },
+        {
+          "id": "DA_18_Sett",
+          "name_en": "Sett",
+          "name_vi": "Sett",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/qu4hta71hiipyol/tft18_sett_KYPhH4i7EP.png"
+        },
+        {
+          "id": "DA_18_Alistar",
+          "name_en": "Alistar",
+          "name_vi": "Alistar",
+          "cost": 2,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/qos4tm74vs98fsl/tft18_alistar_qXMJ7Eyfv8.png"
+        },
+        {
+          "id": "DA_18_Sejuani",
+          "name_en": "Sejuani",
+          "name_vi": "Sejuani",
+          "cost": 2,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/6avobyx3ajnpbnf/tft18_sejuani_YPulYyYyq9.png"
+        }
+      ]
+    },
+    "bất khuất": {
+      "id": "DA_Artifact_TheIndomitable",
+      "name_vi": "Bất Khuất",
       "name_en": "The Indomitable",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_theindomitable.png",
@@ -49714,7 +50113,7 @@
     },
     "DA_Artifact_Dawncore": {
       "id": "DA_Artifact_Dawncore",
-      "name_vi": "Dawncore",
+      "name_vi": "Lõi Bình Minh",
       "name_en": "Dawncore",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_dawncore.png",
@@ -49759,7 +50158,7 @@
     },
     "da_artifact_dawncore": {
       "id": "DA_Artifact_Dawncore",
-      "name_vi": "Dawncore",
+      "name_vi": "Lõi Bình Minh",
       "name_en": "Dawncore",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_dawncore.png",
@@ -49804,7 +50203,7 @@
     },
     "emins1mz4i2thyt": {
       "id": "DA_Artifact_Dawncore",
-      "name_vi": "Dawncore",
+      "name_vi": "Lõi Bình Minh",
       "name_en": "Dawncore",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_dawncore.png",
@@ -49849,7 +50248,7 @@
     },
     "Dawncore": {
       "id": "DA_Artifact_Dawncore",
-      "name_vi": "Dawncore",
+      "name_vi": "Lõi Bình Minh",
       "name_en": "Dawncore",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_dawncore.png",
@@ -49894,7 +50293,52 @@
     },
     "dawncore": {
       "id": "DA_Artifact_Dawncore",
-      "name_vi": "Dawncore",
+      "name_vi": "Lõi Bình Minh",
+      "name_en": "Dawncore",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_dawncore.png",
+      "stats": {
+        "ad": "+20%",
+        "ap": "+20",
+        "manaRegen": "+1"
+      },
+      "desc_vi": "Giảm Năng Lượng tối đa của chủ sở hữu đi 10. Những lần thi triển kỹ năng tiếp theo sẽ giảm Năng Lượng tối đa đi 10%, xuống mức tối thiểu là 10.",
+      "desc_en": "Reduce the holder's max Mana by 10. Subsequent spellcasts reduce max Mana by 5%, to a minimum of 15.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_Veigar",
+          "name_en": "Veigar",
+          "name_vi": "Veigar",
+          "cost": 1,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/kzaxioh98ejolil/tft18_veigar_0jqxuDLMBn.png"
+        },
+        {
+          "id": "DA_18_Soraka",
+          "name_en": "Soraka",
+          "name_vi": "Soraka",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/q5rkczf00zt53uw/tft18_soraka_TRYaezhWVs.png"
+        },
+        {
+          "id": "DA_18_Yunara",
+          "name_en": "Yunara",
+          "name_vi": "Yunara",
+          "cost": 2,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/0fng07snm2jb88e/tft18_yunara_seKPQIPJLl.png"
+        },
+        {
+          "id": "DA_18_KhaZix",
+          "name_en": "Kha'Zix",
+          "name_vi": "Kha'Zix",
+          "cost": 3,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/k56bfiaz6fknx7c/tft18_kha_zix_uZumsWAWIA.png"
+        }
+      ]
+    },
+    "lõi bình minh": {
+      "id": "DA_Artifact_Dawncore",
+      "name_vi": "Lõi Bình Minh",
       "name_en": "Dawncore",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_dawncore.png",
@@ -49939,7 +50383,7 @@
     },
     "DA_Artifact_NavoriFlickerblade": {
       "id": "DA_Artifact_NavoriFlickerblade",
-      "name_vi": "Flickerblades",
+      "name_vi": "Đao Chớp",
       "name_en": "Flickerblades",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_navoriflickerplade.png",
@@ -49983,7 +50427,7 @@
     },
     "da_artifact_navoriflickerblade": {
       "id": "DA_Artifact_NavoriFlickerblade",
-      "name_vi": "Flickerblades",
+      "name_vi": "Đao Chớp",
       "name_en": "Flickerblades",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_navoriflickerplade.png",
@@ -50027,7 +50471,7 @@
     },
     "l78wd0kedazeohl": {
       "id": "DA_Artifact_NavoriFlickerblade",
-      "name_vi": "Flickerblades",
+      "name_vi": "Đao Chớp",
       "name_en": "Flickerblades",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_navoriflickerplade.png",
@@ -50071,7 +50515,7 @@
     },
     "NavoriFlickerblade": {
       "id": "DA_Artifact_NavoriFlickerblade",
-      "name_vi": "Flickerblades",
+      "name_vi": "Đao Chớp",
       "name_en": "Flickerblades",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_navoriflickerplade.png",
@@ -50115,7 +50559,7 @@
     },
     "navoriflickerblade": {
       "id": "DA_Artifact_NavoriFlickerblade",
-      "name_vi": "Flickerblades",
+      "name_vi": "Đao Chớp",
       "name_en": "Flickerblades",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_navoriflickerplade.png",
@@ -50159,7 +50603,51 @@
     },
     "flickerblades": {
       "id": "DA_Artifact_NavoriFlickerblade",
-      "name_vi": "Flickerblades",
+      "name_vi": "Đao Chớp",
+      "name_en": "Flickerblades",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_navoriflickerplade.png",
+      "stats": {
+        "as": "+20%",
+        "ap": "+10"
+      },
+      "desc_vi": "Attacks grant 4% stacking Attack Speed. Every 3 attacks also grant 2% Attack Damage and 2% Ability Power.",
+      "desc_en": "Attacks grant 4% stacking Attack Speed. Every 3 attacks also grant 2% Attack Damage and 2% Ability Power.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_MasterYi_AD",
+          "name_en": "Master Yi",
+          "name_vi": "Master Yi",
+          "cost": 3,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/6ku6ukznq2ew6sy/tft18_master_yi_11hqXwSUkm.png"
+        },
+        {
+          "id": "DA_Nidalee18_AP",
+          "name_en": "Nidalee",
+          "name_vi": "Nidalee",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/1ksnzxwrbtr03ig/tft18_nidalee_xIIFR20mUZ.png"
+        },
+        {
+          "id": "DA_18_Kayle",
+          "name_en": "Kayle",
+          "name_vi": "Kayle",
+          "cost": 2,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/wyzrftdv5ap0l66/tft18_kayle_5qcg5jGE5s.png"
+        },
+        {
+          "id": "DA_18_Azir",
+          "name_en": "Azir",
+          "name_vi": "Azir",
+          "cost": 3,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/46nx2vd1tfvi9zk/tft18_azir_FR1M6oGzMF.png"
+        }
+      ]
+    },
+    "đao chớp": {
+      "id": "DA_Artifact_NavoriFlickerblade",
+      "name_vi": "Đao Chớp",
       "name_en": "Flickerblades",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_navoriflickerplade.png",
@@ -50203,7 +50691,7 @@
     },
     "DA_Artifact_LightshieldCrest": {
       "id": "DA_Artifact_LightshieldCrest",
-      "name_vi": "Lightshield Crest",
+      "name_vi": "Huy Hiệu Thánh Khiên",
       "name_en": "Lightshield Crest",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_lightshieldcrest.png",
@@ -50247,7 +50735,7 @@
     },
     "da_artifact_lightshieldcrest": {
       "id": "DA_Artifact_LightshieldCrest",
-      "name_vi": "Lightshield Crest",
+      "name_vi": "Huy Hiệu Thánh Khiên",
       "name_en": "Lightshield Crest",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_lightshieldcrest.png",
@@ -50291,7 +50779,7 @@
     },
     "jdgqqbf4htv2p8a": {
       "id": "DA_Artifact_LightshieldCrest",
-      "name_vi": "Lightshield Crest",
+      "name_vi": "Huy Hiệu Thánh Khiên",
       "name_en": "Lightshield Crest",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_lightshieldcrest.png",
@@ -50335,7 +50823,7 @@
     },
     "LightshieldCrest": {
       "id": "DA_Artifact_LightshieldCrest",
-      "name_vi": "Lightshield Crest",
+      "name_vi": "Huy Hiệu Thánh Khiên",
       "name_en": "Lightshield Crest",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_lightshieldcrest.png",
@@ -50379,7 +50867,7 @@
     },
     "lightshieldcrest": {
       "id": "DA_Artifact_LightshieldCrest",
-      "name_vi": "Lightshield Crest",
+      "name_vi": "Huy Hiệu Thánh Khiên",
       "name_en": "Lightshield Crest",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_lightshieldcrest.png",
@@ -50423,7 +50911,51 @@
     },
     "lightshield crest": {
       "id": "DA_Artifact_LightshieldCrest",
-      "name_vi": "Lightshield Crest",
+      "name_vi": "Huy Hiệu Thánh Khiên",
+      "name_en": "Lightshield Crest",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_lightshieldcrest.png",
+      "stats": {
+        "armor": "+55",
+        "mr": "+55"
+      },
+      "desc_vi": "Mỗi 3 giây, tạo Lá Chắn cho đồng minh có phần trăm Máu thấp nhất, giá trị lá chắn bằng 70% tổng Giáp và Kháng Phép của chủ sở hữu trong 5 giây. Khi bị hạ gục, trao lá chắn này cho tất cả đồng minh.",
+      "desc_en": "Every 3 seconds, Shields the lowest percent Health ally for 70% of the holder’s combined Armor and Magic Resist for 5 seconds. On death grants this shield to all allies.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_Rammus",
+          "name_en": "Rammus",
+          "name_vi": "Rammus",
+          "cost": 3,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/tjvepdtmneztfi7/tft18_rammus_OfrSqqE1HG.png"
+        },
+        {
+          "id": "DA_18_Maokai",
+          "name_en": "Maokai",
+          "name_vi": "Maokai",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/y1tkqmq6nk2izrn/tft18_maokai_uSlxsyuU1I.png"
+        },
+        {
+          "id": "DA_18_Alistar",
+          "name_en": "Alistar",
+          "name_vi": "Alistar",
+          "cost": 2,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/qos4tm74vs98fsl/tft18_alistar_qXMJ7Eyfv8.png"
+        },
+        {
+          "id": "DA_Sentinel18",
+          "name_en": "Sentinel",
+          "name_vi": "Sentinel",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/j51gghgncfei7gk/tft18_sentinel_BayY3IX9cc.png"
+        }
+      ]
+    },
+    "huy hiệu thánh khiên": {
+      "id": "DA_Artifact_LightshieldCrest",
+      "name_vi": "Huy Hiệu Thánh Khiên",
       "name_en": "Lightshield Crest",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_lightshieldcrest.png",
@@ -50467,7 +50999,7 @@
     },
     "DA_Artifact_LudensTempest": {
       "id": "DA_Artifact_LudensTempest",
-      "name_vi": "Luden's Tempest",
+      "name_vi": "Bão Tố Luden",
       "name_en": "Luden's Tempest",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_ludenstempest.png",
@@ -50504,7 +51036,7 @@
     },
     "da_artifact_ludenstempest": {
       "id": "DA_Artifact_LudensTempest",
-      "name_vi": "Luden's Tempest",
+      "name_vi": "Bão Tố Luden",
       "name_en": "Luden's Tempest",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_ludenstempest.png",
@@ -50541,7 +51073,7 @@
     },
     "vgzvv6y1abyeue8": {
       "id": "DA_Artifact_LudensTempest",
-      "name_vi": "Luden's Tempest",
+      "name_vi": "Bão Tố Luden",
       "name_en": "Luden's Tempest",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_ludenstempest.png",
@@ -50578,7 +51110,7 @@
     },
     "LudensTempest": {
       "id": "DA_Artifact_LudensTempest",
-      "name_vi": "Luden's Tempest",
+      "name_vi": "Bão Tố Luden",
       "name_en": "Luden's Tempest",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_ludenstempest.png",
@@ -50615,7 +51147,7 @@
     },
     "ludenstempest": {
       "id": "DA_Artifact_LudensTempest",
-      "name_vi": "Luden's Tempest",
+      "name_vi": "Bão Tố Luden",
       "name_en": "Luden's Tempest",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_ludenstempest.png",
@@ -50652,7 +51184,44 @@
     },
     "luden's tempest": {
       "id": "DA_Artifact_LudensTempest",
-      "name_vi": "Luden's Tempest",
+      "name_vi": "Bão Tố Luden",
+      "name_en": "Luden's Tempest",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_ludenstempest.png",
+      "stats": {
+        "ad": "+55%",
+        "ap": "+55"
+      },
+      "desc_vi": "Gây sát thương phép bằng 100% sát thương kết liễu vượt trội + 100 lên 2 kẻ địch gần mục tiêu nhất.",
+      "desc_en": "100% of overkill damage plus 130 is dealt as magic damage to the two enemies nearest the target.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_Veigar",
+          "name_en": "Veigar",
+          "name_vi": "Veigar",
+          "cost": 1,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/kzaxioh98ejolil/tft18_veigar_0jqxuDLMBn.png"
+        },
+        {
+          "id": "DA_18_KhaZix",
+          "name_en": "Kha'Zix",
+          "name_vi": "Kha'Zix",
+          "cost": 3,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/k56bfiaz6fknx7c/tft18_kha_zix_uZumsWAWIA.png"
+        },
+        {
+          "id": "DA_18_Akali_AD",
+          "name_en": "Akali",
+          "name_vi": "Akali",
+          "cost": 1,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/j3fah8d9vz3a4y1/tft18_akali_xn75cMqIUo.png"
+        }
+      ]
+    },
+    "bão tố luden": {
+      "id": "DA_Artifact_LudensTempest",
+      "name_vi": "Bão Tố Luden",
       "name_en": "Luden's Tempest",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_ludenstempest.png",
@@ -50689,7 +51258,7 @@
     },
     "DA_Artifact_Fishbones": {
       "id": "DA_Artifact_Fishbones",
-      "name_vi": "Fishbones",
+      "name_vi": "Pháo Xương Cá",
       "name_en": "Fishbones",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_fishbones.png",
@@ -50733,7 +51302,7 @@
     },
     "da_artifact_fishbones": {
       "id": "DA_Artifact_Fishbones",
-      "name_vi": "Fishbones",
+      "name_vi": "Pháo Xương Cá",
       "name_en": "Fishbones",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_fishbones.png",
@@ -50777,7 +51346,7 @@
     },
     "shnw7fpzr0ozapf": {
       "id": "DA_Artifact_Fishbones",
-      "name_vi": "Fishbones",
+      "name_vi": "Pháo Xương Cá",
       "name_en": "Fishbones",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_fishbones.png",
@@ -50821,7 +51390,7 @@
     },
     "Fishbones": {
       "id": "DA_Artifact_Fishbones",
-      "name_vi": "Fishbones",
+      "name_vi": "Pháo Xương Cá",
       "name_en": "Fishbones",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_fishbones.png",
@@ -50865,7 +51434,51 @@
     },
     "fishbones": {
       "id": "DA_Artifact_Fishbones",
-      "name_vi": "Fishbones",
+      "name_vi": "Pháo Xương Cá",
+      "name_en": "Fishbones",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_fishbones.png",
+      "stats": {
+        "as": "+25%",
+        "ad": "+25%"
+      },
+      "desc_vi": "Đòn đánh của chủ sở hữu sẽ nhắm tới những kẻ địch ngẫu nhiên.",
+      "desc_en": "The holder's attacks target random enemies. Gain +2 Attack Range.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_Draven18",
+          "name_en": "Draven",
+          "name_vi": "Draven",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/o0sikcjzxpkr7jb/tft18_draven_Ddc6AWCn5l.png"
+        },
+        {
+          "id": "DA_18_ElderDragon",
+          "name_en": "Elder Dragon",
+          "name_vi": "Elder Dragon",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/pemzum62gsx7puw/tft18_elder_dragon_7Hu6QtDrmY.png"
+        },
+        {
+          "id": "DA_18_Aphelios",
+          "name_en": "Aphelios",
+          "name_vi": "Aphelios",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/qb597jw9oj6mgub/tft18_aphelios_CUmmYJoHmd.png"
+        },
+        {
+          "id": "DA_18_Camille",
+          "name_en": "Camille",
+          "name_vi": "Camille",
+          "cost": 1,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/k92clk9hj6unisd/tft18_camille_gUd0DXuPgG.png"
+        }
+      ]
+    },
+    "pháo xương cá": {
+      "id": "DA_Artifact_Fishbones",
+      "name_vi": "Pháo Xương Cá",
       "name_en": "Fishbones",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_fishbones.png",
@@ -50909,7 +51522,7 @@
     },
     "DA_Artifact_SeekersArmguard": {
       "id": "DA_Artifact_SeekersArmguard",
-      "name_vi": "Seeker's Armguard",
+      "name_vi": "Giáp Tay Seeker",
       "name_en": "Seeker's Armguard",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_seekersarmguard.png",
@@ -50955,7 +51568,7 @@
     },
     "da_artifact_seekersarmguard": {
       "id": "DA_Artifact_SeekersArmguard",
-      "name_vi": "Seeker's Armguard",
+      "name_vi": "Giáp Tay Seeker",
       "name_en": "Seeker's Armguard",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_seekersarmguard.png",
@@ -51001,7 +51614,7 @@
     },
     "au1jau7ly28grxp": {
       "id": "DA_Artifact_SeekersArmguard",
-      "name_vi": "Seeker's Armguard",
+      "name_vi": "Giáp Tay Seeker",
       "name_en": "Seeker's Armguard",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_seekersarmguard.png",
@@ -51047,7 +51660,7 @@
     },
     "SeekersArmguard": {
       "id": "DA_Artifact_SeekersArmguard",
-      "name_vi": "Seeker's Armguard",
+      "name_vi": "Giáp Tay Seeker",
       "name_en": "Seeker's Armguard",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_seekersarmguard.png",
@@ -51093,7 +51706,7 @@
     },
     "seekersarmguard": {
       "id": "DA_Artifact_SeekersArmguard",
-      "name_vi": "Seeker's Armguard",
+      "name_vi": "Giáp Tay Seeker",
       "name_en": "Seeker's Armguard",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_seekersarmguard.png",
@@ -51139,7 +51752,53 @@
     },
     "seeker's armguard": {
       "id": "DA_Artifact_SeekersArmguard",
-      "name_vi": "Seeker's Armguard",
+      "name_vi": "Giáp Tay Seeker",
+      "name_en": "Seeker's Armguard",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_seekersarmguard.png",
+      "stats": {
+        "ap": "+25",
+        "armor": "+10",
+        "mr": "+10",
+        "ov": "+20%"
+      },
+      "desc_vi": "Tham gia hạ gục sẽ tăng 20 Sức Mạnh Phép Thuật, Giáp và Kháng Phép cho chủ sở hữu.",
+      "desc_en": "Takedowns increase the holder’s Armor, Magic Resist, and Ability Power by 20.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_KhaZix",
+          "name_en": "Kha'Zix",
+          "name_vi": "Kha'Zix",
+          "cost": 3,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/k56bfiaz6fknx7c/tft18_kha_zix_uZumsWAWIA.png"
+        },
+        {
+          "id": "DA_18_Kayle",
+          "name_en": "Kayle",
+          "name_vi": "Kayle",
+          "cost": 2,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/wyzrftdv5ap0l66/tft18_kayle_5qcg5jGE5s.png"
+        },
+        {
+          "id": "DA_18_Morgana",
+          "name_en": "Morgana",
+          "name_vi": "Morgana",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/7c1lz3yeh5pebdv/tft18_morgana_shJnPIsZwh.png"
+        },
+        {
+          "id": "DA_18_Veigar",
+          "name_en": "Veigar",
+          "name_vi": "Veigar",
+          "cost": 1,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/kzaxioh98ejolil/tft18_veigar_0jqxuDLMBn.png"
+        }
+      ]
+    },
+    "giáp tay seeker": {
+      "id": "DA_Artifact_SeekersArmguard",
+      "name_vi": "Giáp Tay Seeker",
       "name_en": "Seeker's Armguard",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_seekersarmguard.png",
@@ -51185,7 +51844,7 @@
     },
     "DA_Artifact_StatikkShiv": {
       "id": "DA_Artifact_StatikkShiv",
-      "name_vi": "Statikk Shiv",
+      "name_vi": "Dao Điện Statikk",
       "name_en": "Statikk Shiv",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_stattikshiv.png",
@@ -51222,7 +51881,7 @@
     },
     "da_artifact_statikkshiv": {
       "id": "DA_Artifact_StatikkShiv",
-      "name_vi": "Statikk Shiv",
+      "name_vi": "Dao Điện Statikk",
       "name_en": "Statikk Shiv",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_stattikshiv.png",
@@ -51259,7 +51918,7 @@
     },
     "izowi0vrlexf4es": {
       "id": "DA_Artifact_StatikkShiv",
-      "name_vi": "Statikk Shiv",
+      "name_vi": "Dao Điện Statikk",
       "name_en": "Statikk Shiv",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_stattikshiv.png",
@@ -51296,7 +51955,7 @@
     },
     "StatikkShiv": {
       "id": "DA_Artifact_StatikkShiv",
-      "name_vi": "Statikk Shiv",
+      "name_vi": "Dao Điện Statikk",
       "name_en": "Statikk Shiv",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_stattikshiv.png",
@@ -51333,7 +51992,7 @@
     },
     "statikkshiv": {
       "id": "DA_Artifact_StatikkShiv",
-      "name_vi": "Statikk Shiv",
+      "name_vi": "Dao Điện Statikk",
       "name_en": "Statikk Shiv",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_stattikshiv.png",
@@ -51370,7 +52029,44 @@
     },
     "statikk shiv": {
       "id": "DA_Artifact_StatikkShiv",
-      "name_vi": "Statikk Shiv",
+      "name_vi": "Dao Điện Statikk",
+      "name_en": "Statikk Shiv",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_stattikshiv.png",
+      "stats": {
+        "as": "+40%",
+        "ap": "+15"
+      },
+      "desc_vi": "Mỗi đòn đánh thứ ba gây thêm sát thương phép bằng 30 + 50% Sức Mạnh Phép Thuật của chủ sở hữu lên 4 kẻ địch.",
+      "desc_en": "Every 3rd attack deals 15 + 35% of the holder's Ability Power as additional magic damage to 6 enemies.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_Nidalee18_AP",
+          "name_en": "Nidalee",
+          "name_vi": "Nidalee",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/1ksnzxwrbtr03ig/tft18_nidalee_xIIFR20mUZ.png"
+        },
+        {
+          "id": "DA_18_Kayle",
+          "name_en": "Kayle",
+          "name_vi": "Kayle",
+          "cost": 2,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/wyzrftdv5ap0l66/tft18_kayle_5qcg5jGE5s.png"
+        },
+        {
+          "id": "DA_18_Azir",
+          "name_en": "Azir",
+          "name_vi": "Azir",
+          "cost": 3,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/46nx2vd1tfvi9zk/tft18_azir_FR1M6oGzMF.png"
+        }
+      ]
+    },
+    "dao điện statikk": {
+      "id": "DA_Artifact_StatikkShiv",
+      "name_vi": "Dao Điện Statikk",
       "name_en": "Statikk Shiv",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_stattikshiv.png",
@@ -51407,7 +52103,7 @@
     },
     "DA_Artifact_WitsEnd": {
       "id": "DA_Artifact_WitsEnd",
-      "name_vi": "Wit's End",
+      "name_vi": "Đao Tím",
       "name_en": "Wit's End",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_witsend.png",
@@ -51453,7 +52149,7 @@
     },
     "da_artifact_witsend": {
       "id": "DA_Artifact_WitsEnd",
-      "name_vi": "Wit's End",
+      "name_vi": "Đao Tím",
       "name_en": "Wit's End",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_witsend.png",
@@ -51499,7 +52195,7 @@
     },
     "s0c0jyim6s2udz4": {
       "id": "DA_Artifact_WitsEnd",
-      "name_vi": "Wit's End",
+      "name_vi": "Đao Tím",
       "name_en": "Wit's End",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_witsend.png",
@@ -51545,7 +52241,7 @@
     },
     "WitsEnd": {
       "id": "DA_Artifact_WitsEnd",
-      "name_vi": "Wit's End",
+      "name_vi": "Đao Tím",
       "name_en": "Wit's End",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_witsend.png",
@@ -51591,7 +52287,7 @@
     },
     "witsend": {
       "id": "DA_Artifact_WitsEnd",
-      "name_vi": "Wit's End",
+      "name_vi": "Đao Tím",
       "name_en": "Wit's End",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_witsend.png",
@@ -51637,7 +52333,53 @@
     },
     "wit's end": {
       "id": "DA_Artifact_WitsEnd",
-      "name_vi": "Wit's End",
+      "name_vi": "Đao Tím",
+      "name_en": "Wit's End",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_witsend.png",
+      "stats": {
+        "as": "+25%",
+        "armor": "+20",
+        "mr": "+20",
+        "hp": "+300"
+      },
+      "desc_vi": "Đòn đánh gây thêm sát thương phép. Hồi máu cho chủ sở hữu bằng 30% tổng lượng sát thương phép đã gây ra. Sát thương tăng dựa theo Giai Đoạn.",
+      "desc_en": "Attacks deal 0 bonus magic damage. Heals the holder for 25% of all magic damage dealt.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_MasterYi_AD",
+          "name_en": "Master Yi",
+          "name_vi": "Master Yi",
+          "cost": 3,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/6ku6ukznq2ew6sy/tft18_master_yi_11hqXwSUkm.png"
+        },
+        {
+          "id": "DA_18_Kayle",
+          "name_en": "Kayle",
+          "name_vi": "Kayle",
+          "cost": 2,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/wyzrftdv5ap0l66/tft18_kayle_5qcg5jGE5s.png"
+        },
+        {
+          "id": "DA_18_Akali_AD",
+          "name_en": "Akali",
+          "name_vi": "Akali",
+          "cost": 1,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/j3fah8d9vz3a4y1/tft18_akali_xn75cMqIUo.png"
+        },
+        {
+          "id": "DA_18_KhaZix",
+          "name_en": "Kha'Zix",
+          "name_vi": "Kha'Zix",
+          "cost": 3,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/k56bfiaz6fknx7c/tft18_kha_zix_uZumsWAWIA.png"
+        }
+      ]
+    },
+    "đao tím": {
+      "id": "DA_Artifact_WitsEnd",
+      "name_vi": "Đao Tím",
       "name_en": "Wit's End",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_witsend.png",
@@ -51683,7 +52425,7 @@
     },
     "DA_Artifact_ZhonyasParadox": {
       "id": "DA_Artifact_ZhonyasParadox",
-      "name_vi": "Zhonya's Paradox",
+      "name_vi": "Lưỡng Cực Zhonya",
       "name_en": "Zhonya's Paradox",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnzhonyasparadox.png",
@@ -51728,7 +52470,7 @@
     },
     "da_artifact_zhonyasparadox": {
       "id": "DA_Artifact_ZhonyasParadox",
-      "name_vi": "Zhonya's Paradox",
+      "name_vi": "Lưỡng Cực Zhonya",
       "name_en": "Zhonya's Paradox",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnzhonyasparadox.png",
@@ -51773,7 +52515,7 @@
     },
     "rvrgwf09bw1ea8v": {
       "id": "DA_Artifact_ZhonyasParadox",
-      "name_vi": "Zhonya's Paradox",
+      "name_vi": "Lưỡng Cực Zhonya",
       "name_en": "Zhonya's Paradox",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnzhonyasparadox.png",
@@ -51818,7 +52560,7 @@
     },
     "ZhonyasParadox": {
       "id": "DA_Artifact_ZhonyasParadox",
-      "name_vi": "Zhonya's Paradox",
+      "name_vi": "Lưỡng Cực Zhonya",
       "name_en": "Zhonya's Paradox",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnzhonyasparadox.png",
@@ -51863,7 +52605,7 @@
     },
     "zhonyasparadox": {
       "id": "DA_Artifact_ZhonyasParadox",
-      "name_vi": "Zhonya's Paradox",
+      "name_vi": "Lưỡng Cực Zhonya",
       "name_en": "Zhonya's Paradox",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnzhonyasparadox.png",
@@ -51908,7 +52650,52 @@
     },
     "zhonya's paradox": {
       "id": "DA_Artifact_ZhonyasParadox",
-      "name_vi": "Zhonya's Paradox",
+      "name_vi": "Lưỡng Cực Zhonya",
+      "name_en": "Zhonya's Paradox",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnzhonyasparadox.png",
+      "stats": {
+        "ap": "+25",
+        "armor": "+25",
+        "mr": "+25"
+      },
+      "desc_vi": "Once per combat Khi còn 40% Máu, become invulnerable and untargetable for 3 seconds.",
+      "desc_en": "Once per combat at 40% Health, become invulnerable and untargetable for 3 seconds.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_KhaZix",
+          "name_en": "Kha'Zix",
+          "name_vi": "Kha'Zix",
+          "cost": 3,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/k56bfiaz6fknx7c/tft18_kha_zix_uZumsWAWIA.png"
+        },
+        {
+          "id": "DA_18_Diana",
+          "name_en": "Diana",
+          "name_vi": "Diana",
+          "cost": 3,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/gfkl88xgj3vp797/tft18_diana_AaZR62Tj6p.png"
+        },
+        {
+          "id": "DA_18_Kennen",
+          "name_en": "Kennen",
+          "name_vi": "Kennen",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/f2hte81yjnz5gdj/tft18_kennen_os843eHpqH.png"
+        },
+        {
+          "id": "DA_18_Akali_AD",
+          "name_en": "Akali",
+          "name_vi": "Akali",
+          "cost": 1,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/j3fah8d9vz3a4y1/tft18_akali_xn75cMqIUo.png"
+        }
+      ]
+    },
+    "lưỡng cực zhonya": {
+      "id": "DA_Artifact_ZhonyasParadox",
+      "name_vi": "Lưỡng Cực Zhonya",
       "name_en": "Zhonya's Paradox",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnzhonyasparadox.png",
@@ -51953,7 +52740,7 @@
     },
     "DA_Artifact_SilvermereDawn": {
       "id": "DA_Artifact_SilvermereDawn",
-      "name_vi": "Silvermere Dawn",
+      "name_vi": "Chùy Bạch Ngân",
       "name_en": "Silvermere Dawn",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_silvermeredawn.png",
@@ -51999,7 +52786,7 @@
     },
     "da_artifact_silvermeredawn": {
       "id": "DA_Artifact_SilvermereDawn",
-      "name_vi": "Silvermere Dawn",
+      "name_vi": "Chùy Bạch Ngân",
       "name_en": "Silvermere Dawn",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_silvermeredawn.png",
@@ -52045,7 +52832,7 @@
     },
     "unh5c1qbvg3bunz": {
       "id": "DA_Artifact_SilvermereDawn",
-      "name_vi": "Silvermere Dawn",
+      "name_vi": "Chùy Bạch Ngân",
       "name_en": "Silvermere Dawn",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_silvermeredawn.png",
@@ -52091,7 +52878,7 @@
     },
     "SilvermereDawn": {
       "id": "DA_Artifact_SilvermereDawn",
-      "name_vi": "Silvermere Dawn",
+      "name_vi": "Chùy Bạch Ngân",
       "name_en": "Silvermere Dawn",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_silvermeredawn.png",
@@ -52137,7 +52924,7 @@
     },
     "silvermeredawn": {
       "id": "DA_Artifact_SilvermereDawn",
-      "name_vi": "Silvermere Dawn",
+      "name_vi": "Chùy Bạch Ngân",
       "name_en": "Silvermere Dawn",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_silvermeredawn.png",
@@ -52183,7 +52970,53 @@
     },
     "silvermere dawn": {
       "id": "DA_Artifact_SilvermereDawn",
-      "name_vi": "Silvermere Dawn",
+      "name_vi": "Chùy Bạch Ngân",
+      "name_en": "Silvermere Dawn",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_silvermeredawn.png",
+      "stats": {
+        "ad": "+150%",
+        "armor": "+30",
+        "mr": "+30",
+        "ov": "+30%"
+      },
+      "desc_vi": "Trao miễn nhiễm Làm Choáng và đòn đánh của chủ sở hữu sẽ Làm Choáng kẻ địch trong 0.8 giây. Tốc Độ Đánh của chủ sở hữu được đặt cố định là 0.5.",
+      "desc_en": "Grants immunity to Stuns and the holder's attacks Stun the target for 80% seconds. The holder’s Attack Speed is locked at 50%.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_Nidalee18_AP",
+          "name_en": "Nidalee",
+          "name_vi": "Nidalee",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/1ksnzxwrbtr03ig/tft18_nidalee_xIIFR20mUZ.png"
+        },
+        {
+          "id": "DA_18_Yunara",
+          "name_en": "Yunara",
+          "name_vi": "Yunara",
+          "cost": 2,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/0fng07snm2jb88e/tft18_yunara_seKPQIPJLl.png"
+        },
+        {
+          "id": "DA_18_ElderDragon",
+          "name_en": "Elder Dragon",
+          "name_vi": "Elder Dragon",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/pemzum62gsx7puw/tft18_elder_dragon_7Hu6QtDrmY.png"
+        },
+        {
+          "id": "DA_18_Camille",
+          "name_en": "Camille",
+          "name_vi": "Camille",
+          "cost": 1,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/k92clk9hj6unisd/tft18_camille_gUd0DXuPgG.png"
+        }
+      ]
+    },
+    "chùy bạch ngân": {
+      "id": "DA_Artifact_SilvermereDawn",
+      "name_vi": "Chùy Bạch Ngân",
       "name_en": "Silvermere Dawn",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_silvermeredawn.png",
@@ -52229,7 +53062,7 @@
     },
     "DA_Artifact_TitanicHydra": {
       "id": "DA_Artifact_TitanicHydra",
-      "name_vi": "Titanic Hydra",
+      "name_vi": "Rìu Đại Mãng Xà",
       "name_en": "Titanic Hydra",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_titanichydra.png",
@@ -52274,7 +53107,7 @@
     },
     "da_artifact_titanichydra": {
       "id": "DA_Artifact_TitanicHydra",
-      "name_vi": "Titanic Hydra",
+      "name_vi": "Rìu Đại Mãng Xà",
       "name_en": "Titanic Hydra",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_titanichydra.png",
@@ -52319,7 +53152,7 @@
     },
     "nyjw727379mj4ov": {
       "id": "DA_Artifact_TitanicHydra",
-      "name_vi": "Titanic Hydra",
+      "name_vi": "Rìu Đại Mãng Xà",
       "name_en": "Titanic Hydra",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_titanichydra.png",
@@ -52364,7 +53197,7 @@
     },
     "TitanicHydra": {
       "id": "DA_Artifact_TitanicHydra",
-      "name_vi": "Titanic Hydra",
+      "name_vi": "Rìu Đại Mãng Xà",
       "name_en": "Titanic Hydra",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_titanichydra.png",
@@ -52409,7 +53242,7 @@
     },
     "titanichydra": {
       "id": "DA_Artifact_TitanicHydra",
-      "name_vi": "Titanic Hydra",
+      "name_vi": "Rìu Đại Mãng Xà",
       "name_en": "Titanic Hydra",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_titanichydra.png",
@@ -52454,7 +53287,52 @@
     },
     "titanic hydra": {
       "id": "DA_Artifact_TitanicHydra",
-      "name_vi": "Titanic Hydra",
+      "name_vi": "Rìu Đại Mãng Xà",
+      "name_en": "Titanic Hydra",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_titanichydra.png",
+      "stats": {
+        "as": "+20%",
+        "ad": "+20%",
+        "hp": "+300"
+      },
+      "desc_vi": "Đòn đánh gây 4% Máu tối đa của chủ sở hữu + 6% Sức Mạnh Công Kích của họ thành sát thương vật lý cộng thêm lên mục tiêu và những kẻ địch liền kề.",
+      "desc_en": "Attacks deal 2% of the holder's max Health plus 4% of their Attack Damage as bonus physical damage to the target and adjacent enemies.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_MasterYi_AD",
+          "name_en": "Master Yi",
+          "name_vi": "Master Yi",
+          "cost": 3,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/6ku6ukznq2ew6sy/tft18_master_yi_11hqXwSUkm.png"
+        },
+        {
+          "id": "DA_18_Camille",
+          "name_en": "Camille",
+          "name_vi": "Camille",
+          "cost": 1,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/k92clk9hj6unisd/tft18_camille_gUd0DXuPgG.png"
+        },
+        {
+          "id": "DA_18_Xayah",
+          "name_en": "Xayah",
+          "name_vi": "Xayah",
+          "cost": 1,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/uhh7vehtwgpng68/tft18_xayah_plaUYwbE2w.png"
+        },
+        {
+          "id": "DA_18_ElderDragon",
+          "name_en": "Elder Dragon",
+          "name_vi": "Elder Dragon",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/pemzum62gsx7puw/tft18_elder_dragon_7Hu6QtDrmY.png"
+        }
+      ]
+    },
+    "rìu đại mãng xà": {
+      "id": "DA_Artifact_TitanicHydra",
+      "name_vi": "Rìu Đại Mãng Xà",
       "name_en": "Titanic Hydra",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_titanichydra.png",
@@ -54683,7 +55561,7 @@
     },
     "DA_Item_Artifact_TalismanOfAscension": {
       "id": "DA_Item_Artifact_TalismanOfAscension",
-      "name_vi": "Talisman of Ascension",
+      "name_vi": "Bùa Thăng Hoa",
       "name_en": "Talisman of Ascension",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_talismanofascension.png",
@@ -54724,7 +55602,7 @@
     },
     "da_item_artifact_talismanofascension": {
       "id": "DA_Item_Artifact_TalismanOfAscension",
-      "name_vi": "Talisman of Ascension",
+      "name_vi": "Bùa Thăng Hoa",
       "name_en": "Talisman of Ascension",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_talismanofascension.png",
@@ -54765,7 +55643,7 @@
     },
     "m2t1qh7gkenvxfi": {
       "id": "DA_Item_Artifact_TalismanOfAscension",
-      "name_vi": "Talisman of Ascension",
+      "name_vi": "Bùa Thăng Hoa",
       "name_en": "Talisman of Ascension",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_talismanofascension.png",
@@ -54806,7 +55684,7 @@
     },
     "Item_Artifact_TalismanOfAscension": {
       "id": "DA_Item_Artifact_TalismanOfAscension",
-      "name_vi": "Talisman of Ascension",
+      "name_vi": "Bùa Thăng Hoa",
       "name_en": "Talisman of Ascension",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_talismanofascension.png",
@@ -54847,7 +55725,7 @@
     },
     "item_artifact_talismanofascension": {
       "id": "DA_Item_Artifact_TalismanOfAscension",
-      "name_vi": "Talisman of Ascension",
+      "name_vi": "Bùa Thăng Hoa",
       "name_en": "Talisman of Ascension",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_talismanofascension.png",
@@ -54888,7 +55766,48 @@
     },
     "talisman of ascension": {
       "id": "DA_Item_Artifact_TalismanOfAscension",
-      "name_vi": "Talisman of Ascension",
+      "name_vi": "Bùa Thăng Hoa",
+      "name_en": "Talisman of Ascension",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_talismanofascension.png",
+      "stats": {},
+      "desc_vi": "After 22 seconds Nhận 100% Máu tối đa, 12 Mana Regen, and 120% Damage Amp for the rest of combat.",
+      "desc_en": "After 22 seconds gain 100% max Health, 12 Mana Regen, and 120% Damage Amp for the rest of combat.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_Zyra",
+          "name_en": "Zyra",
+          "name_vi": "Zyra",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/c2lgqejgjbvrips/tft18_zyra_4aC9xERNQ0.png"
+        },
+        {
+          "id": "DA_18_Cassiopeia",
+          "name_en": "Cassiopeia",
+          "name_vi": "Cassiopeia",
+          "cost": 3,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/bxdmb06jt8zlwoc/tft18_cassiopeia_qr41j436sw.png"
+        },
+        {
+          "id": "DA_18_Veigar",
+          "name_en": "Veigar",
+          "name_vi": "Veigar",
+          "cost": 1,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/kzaxioh98ejolil/tft18_veigar_0jqxuDLMBn.png"
+        },
+        {
+          "id": "DA_18_Kayle",
+          "name_en": "Kayle",
+          "name_vi": "Kayle",
+          "cost": 2,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/wyzrftdv5ap0l66/tft18_kayle_5qcg5jGE5s.png"
+        }
+      ]
+    },
+    "bùa thăng hoa": {
+      "id": "DA_Item_Artifact_TalismanOfAscension",
+      "name_vi": "Bùa Thăng Hoa",
       "name_en": "Talisman of Ascension",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_talismanofascension.png",
@@ -55314,7 +56233,7 @@
     },
     "DA_Artifact_Hullcrusher": {
       "id": "DA_Artifact_Hullcrusher",
-      "name_vi": "Hullcrusher",
+      "name_vi": "Thần Búa Tiến Công",
       "name_en": "Hullcrusher",
       "type": "ornns",
       "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft9_ornnitem_hullbreaker.png",
@@ -55355,7 +56274,7 @@
     },
     "da_artifact_hullcrusher": {
       "id": "DA_Artifact_Hullcrusher",
-      "name_vi": "Hullcrusher",
+      "name_vi": "Thần Búa Tiến Công",
       "name_en": "Hullcrusher",
       "type": "ornns",
       "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft9_ornnitem_hullbreaker.png",
@@ -55396,7 +56315,7 @@
     },
     "aegcdrrnrsba178": {
       "id": "DA_Artifact_Hullcrusher",
-      "name_vi": "Hullcrusher",
+      "name_vi": "Thần Búa Tiến Công",
       "name_en": "Hullcrusher",
       "type": "ornns",
       "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft9_ornnitem_hullbreaker.png",
@@ -55437,7 +56356,7 @@
     },
     "Hullcrusher": {
       "id": "DA_Artifact_Hullcrusher",
-      "name_vi": "Hullcrusher",
+      "name_vi": "Thần Búa Tiến Công",
       "name_en": "Hullcrusher",
       "type": "ornns",
       "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft9_ornnitem_hullbreaker.png",
@@ -55478,7 +56397,48 @@
     },
     "hullcrusher": {
       "id": "DA_Artifact_Hullcrusher",
-      "name_vi": "Hullcrusher",
+      "name_vi": "Thần Búa Tiến Công",
+      "name_en": "Hullcrusher",
+      "type": "ornns",
+      "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft9_ornnitem_hullbreaker.png",
+      "stats": {},
+      "desc_vi": "Bắt đầu giao tranh: If there are no adjacent allies, gain 400 Health, 10% Attack Damage, and 10% Ability Power.",
+      "desc_en": "Combat Start: If there are no adjacent allies, gain 400 Health, 10% Attack Damage, and 10% Ability Power.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_Maokai",
+          "name_en": "Maokai",
+          "name_vi": "Maokai",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/y1tkqmq6nk2izrn/tft18_maokai_uSlxsyuU1I.png"
+        },
+        {
+          "id": "DA_Amumu18",
+          "name_en": "Amumu",
+          "name_vi": "Amumu",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/y389o4ubtuwe4h1/tft18_amumu_lCIHv7EywD.png"
+        },
+        {
+          "id": "DA_18_Sett",
+          "name_en": "Sett",
+          "name_vi": "Sett",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/qu4hta71hiipyol/tft18_sett_KYPhH4i7EP.png"
+        },
+        {
+          "id": "DA_18_Malphite",
+          "name_en": "Malphite",
+          "name_vi": "Malphite",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/hmwp0jtcck7n5vn/tft18_malphite_qX5CDK8V5K.png"
+        }
+      ]
+    },
+    "thần búa tiến công": {
+      "id": "DA_Artifact_Hullcrusher",
+      "name_vi": "Thần Búa Tiến Công",
       "name_en": "Hullcrusher",
       "type": "ornns",
       "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft9_ornnitem_hullbreaker.png",
@@ -55519,7 +56479,7 @@
     },
     "DA_Artifact_BlightingJewel": {
       "id": "DA_Artifact_BlightingJewel",
-      "name_vi": "Blighting Jewel",
+      "name_vi": "Đá Hắc Hóa",
       "name_en": "Blighting Jewel",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_blightingjewel.png",
@@ -55562,7 +56522,7 @@
     },
     "da_artifact_blightingjewel": {
       "id": "DA_Artifact_BlightingJewel",
-      "name_vi": "Blighting Jewel",
+      "name_vi": "Đá Hắc Hóa",
       "name_en": "Blighting Jewel",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_blightingjewel.png",
@@ -55605,7 +56565,7 @@
     },
     "fyel2jfb22zk8hh": {
       "id": "DA_Artifact_BlightingJewel",
-      "name_vi": "Blighting Jewel",
+      "name_vi": "Đá Hắc Hóa",
       "name_en": "Blighting Jewel",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_blightingjewel.png",
@@ -55648,7 +56608,7 @@
     },
     "BlightingJewel": {
       "id": "DA_Artifact_BlightingJewel",
-      "name_vi": "Blighting Jewel",
+      "name_vi": "Đá Hắc Hóa",
       "name_en": "Blighting Jewel",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_blightingjewel.png",
@@ -55691,7 +56651,7 @@
     },
     "blightingjewel": {
       "id": "DA_Artifact_BlightingJewel",
-      "name_vi": "Blighting Jewel",
+      "name_vi": "Đá Hắc Hóa",
       "name_en": "Blighting Jewel",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_blightingjewel.png",
@@ -55734,7 +56694,50 @@
     },
     "blighting jewel": {
       "id": "DA_Artifact_BlightingJewel",
-      "name_vi": "Blighting Jewel",
+      "name_vi": "Đá Hắc Hóa",
+      "name_en": "Blighting Jewel",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_blightingjewel.png",
+      "stats": {
+        "ap": "+60"
+      },
+      "desc_vi": "Gây sát thương phép sẽ giảm Kháng Phép của mục tiêu đi 6. Nếu Kháng Phép của mục tiêu là 0, thay vào đó, tăng 2 Năng Lượng cho chủ sở hữu. Sát thương kỹ năng chỉ có thể kích hoạt lên mỗi kẻ địch 1 lần mỗi 0.5 giây.",
+      "desc_en": "Dealing magic damage reduces the target’s Magic Resist by 3. If their Magic Resist is 0, grant the holder 4 Mana instead.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_Morgana",
+          "name_en": "Morgana",
+          "name_vi": "Morgana",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/7c1lz3yeh5pebdv/tft18_morgana_shJnPIsZwh.png"
+        },
+        {
+          "id": "DA_18_Cassiopeia",
+          "name_en": "Cassiopeia",
+          "name_vi": "Cassiopeia",
+          "cost": 3,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/bxdmb06jt8zlwoc/tft18_cassiopeia_qr41j436sw.png"
+        },
+        {
+          "id": "DA_18_Zyra",
+          "name_en": "Zyra",
+          "name_vi": "Zyra",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/c2lgqejgjbvrips/tft18_zyra_4aC9xERNQ0.png"
+        },
+        {
+          "id": "DA_18_Alune",
+          "name_en": "Alune",
+          "name_vi": "Alune",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/1kbpbdf0c570czp/tft18_alune_YexVP3JuZ9.png"
+        }
+      ]
+    },
+    "đá hắc hóa": {
+      "id": "DA_Artifact_BlightingJewel",
+      "name_vi": "Đá Hắc Hóa",
       "name_en": "Blighting Jewel",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_blightingjewel.png",
@@ -55777,7 +56780,7 @@
     },
     "DA_Artifact_CappaJuice": {
       "id": "DA_Artifact_CappaJuice",
-      "name_vi": "Cappa Juice",
+      "name_vi": "Nước Cappa",
       "name_en": "Cappa Juice",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_kappajuice.png",
@@ -55793,7 +56796,7 @@
     },
     "da_artifact_cappajuice": {
       "id": "DA_Artifact_CappaJuice",
-      "name_vi": "Cappa Juice",
+      "name_vi": "Nước Cappa",
       "name_en": "Cappa Juice",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_kappajuice.png",
@@ -55809,7 +56812,7 @@
     },
     "naa5lep5lay8g5x": {
       "id": "DA_Artifact_CappaJuice",
-      "name_vi": "Cappa Juice",
+      "name_vi": "Nước Cappa",
       "name_en": "Cappa Juice",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_kappajuice.png",
@@ -55825,7 +56828,7 @@
     },
     "CappaJuice": {
       "id": "DA_Artifact_CappaJuice",
-      "name_vi": "Cappa Juice",
+      "name_vi": "Nước Cappa",
       "name_en": "Cappa Juice",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_kappajuice.png",
@@ -55841,7 +56844,7 @@
     },
     "cappajuice": {
       "id": "DA_Artifact_CappaJuice",
-      "name_vi": "Cappa Juice",
+      "name_vi": "Nước Cappa",
       "name_en": "Cappa Juice",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_kappajuice.png",
@@ -55857,7 +56860,23 @@
     },
     "cappa juice": {
       "id": "DA_Artifact_CappaJuice",
-      "name_vi": "Cappa Juice",
+      "name_vi": "Nước Cappa",
+      "name_en": "Cappa Juice",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_kappajuice.png",
+      "stats": {
+        "as": "+25%",
+        "ad": "+25%",
+        "ap": "+25"
+      },
+      "desc_vi": "Chủ sở hữu đội thêm 1 Mũ mỗi lần tham gia hạ gục. Chủ sở hữu nhận 1% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật với mỗi Mũ. Mất 20% tổng số Mũ khi bị hạ gục. (Mũ: )",
+      "desc_en": "The holder dons a Hat on each takedown. The holder gains 1% Attack Damage and Ability Power per Hat. On death lose 20% of all Hats.",
+      "recipe": null,
+      "recommendedHolders": []
+    },
+    "nước cappa": {
+      "id": "DA_Artifact_CappaJuice",
+      "name_vi": "Nước Cappa",
       "name_en": "Cappa Juice",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_kappajuice.png",
@@ -55873,7 +56892,7 @@
     },
     "DA_Artifact_VoidGauntlet": {
       "id": "DA_Artifact_VoidGauntlet",
-      "name_vi": "Void Gauntlet",
+      "name_vi": "Găng Hư Không",
       "name_en": "Void Gauntlet",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_voidgauntlet.png",
@@ -55916,7 +56935,7 @@
     },
     "da_artifact_voidgauntlet": {
       "id": "DA_Artifact_VoidGauntlet",
-      "name_vi": "Void Gauntlet",
+      "name_vi": "Găng Hư Không",
       "name_en": "Void Gauntlet",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_voidgauntlet.png",
@@ -55959,7 +56978,7 @@
     },
     "gzuh4eb4ryh2sl7": {
       "id": "DA_Artifact_VoidGauntlet",
-      "name_vi": "Void Gauntlet",
+      "name_vi": "Găng Hư Không",
       "name_en": "Void Gauntlet",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_voidgauntlet.png",
@@ -56002,7 +57021,7 @@
     },
     "VoidGauntlet": {
       "id": "DA_Artifact_VoidGauntlet",
-      "name_vi": "Void Gauntlet",
+      "name_vi": "Găng Hư Không",
       "name_en": "Void Gauntlet",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_voidgauntlet.png",
@@ -56045,7 +57064,7 @@
     },
     "voidgauntlet": {
       "id": "DA_Artifact_VoidGauntlet",
-      "name_vi": "Void Gauntlet",
+      "name_vi": "Găng Hư Không",
       "name_en": "Void Gauntlet",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_voidgauntlet.png",
@@ -56088,7 +57107,50 @@
     },
     "void gauntlet": {
       "id": "DA_Artifact_VoidGauntlet",
-      "name_vi": "Void Gauntlet",
+      "name_vi": "Găng Hư Không",
+      "name_en": "Void Gauntlet",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_voidgauntlet.png",
+      "stats": {
+        "hp": "+300"
+      },
+      "desc_vi": "Bắt đầu giao tranh: Tích trữ 30% Máu tối đa và tích thêm 2.5% mỗi giây. Khi hy sinh, giải phóng sát thương phép tương đương lượng Máu đã tích trữ cho các kẻ địch trong phạm vi 4 ô. [Duy Nhất - chỉ 1 mỗi tướng]",
+      "desc_en": "Combat Start: Store 30% max Health and 2.5% more every second. On death, unleash the stored Health as magic damage split between enemies within 4 hexes.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_Sett",
+          "name_en": "Sett",
+          "name_vi": "Sett",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/qu4hta71hiipyol/tft18_sett_KYPhH4i7EP.png"
+        },
+        {
+          "id": "DA_18_Maokai",
+          "name_en": "Maokai",
+          "name_vi": "Maokai",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/y1tkqmq6nk2izrn/tft18_maokai_uSlxsyuU1I.png"
+        },
+        {
+          "id": "DA_18_Malphite",
+          "name_en": "Malphite",
+          "name_vi": "Malphite",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/hmwp0jtcck7n5vn/tft18_malphite_qX5CDK8V5K.png"
+        },
+        {
+          "id": "DA_Sentinel18",
+          "name_en": "Sentinel",
+          "name_vi": "Sentinel",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/j51gghgncfei7gk/tft18_sentinel_BayY3IX9cc.png"
+        }
+      ]
+    },
+    "găng hư không": {
+      "id": "DA_Artifact_VoidGauntlet",
+      "name_vi": "Găng Hư Không",
       "name_en": "Void Gauntlet",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_voidgauntlet.png",
@@ -56131,7 +57193,7 @@
     },
     "DA_Artifact_AegisOfDawn": {
       "id": "DA_Artifact_AegisOfDawn",
-      "name_vi": "Aegis of Dawn",
+      "name_vi": "Khiên Hừng Đông",
       "name_en": "Aegis of Dawn",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdawn.png",
@@ -56175,7 +57237,7 @@
     },
     "da_artifact_aegisofdawn": {
       "id": "DA_Artifact_AegisOfDawn",
-      "name_vi": "Aegis of Dawn",
+      "name_vi": "Khiên Hừng Đông",
       "name_en": "Aegis of Dawn",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdawn.png",
@@ -56219,7 +57281,7 @@
     },
     "30q45loj4fuujyk": {
       "id": "DA_Artifact_AegisOfDawn",
-      "name_vi": "Aegis of Dawn",
+      "name_vi": "Khiên Hừng Đông",
       "name_en": "Aegis of Dawn",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdawn.png",
@@ -56263,7 +57325,7 @@
     },
     "AegisOfDawn": {
       "id": "DA_Artifact_AegisOfDawn",
-      "name_vi": "Aegis of Dawn",
+      "name_vi": "Khiên Hừng Đông",
       "name_en": "Aegis of Dawn",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdawn.png",
@@ -56307,7 +57369,7 @@
     },
     "aegisofdawn": {
       "id": "DA_Artifact_AegisOfDawn",
-      "name_vi": "Aegis of Dawn",
+      "name_vi": "Khiên Hừng Đông",
       "name_en": "Aegis of Dawn",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdawn.png",
@@ -56351,7 +57413,51 @@
     },
     "aegis of dawn": {
       "id": "DA_Artifact_AegisOfDawn",
-      "name_vi": "Aegis of Dawn",
+      "name_vi": "Khiên Hừng Đông",
+      "name_en": "Aegis of Dawn",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdawn.png",
+      "stats": {
+        "armor": "+50",
+        "hp": "+400"
+      },
+      "desc_vi": "Mỗi 2.5 giây, đánh cắp 3 Giáp từ kẻ địch trong phạm vi 1 ô và hồi Máu tương đương % Giáp của chủ sở hữu. Nếu Khiên Hoàng Hôn đang được trang bị, thay vào đó kích hoạt hiệu ứng của trang bị này mỗi 1.25 giây. Hiệu ứng hồi Máu tăng theo Giai Đoạn.",
+      "desc_en": "Every 2.5 seconds, steal 3 Armor from enemies within 1-hex and heal 0 of the holder's Armor. If Aegis of Dusk is also equipped, trigger this item's effect every 1.25 seconds instead.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_Maokai",
+          "name_en": "Maokai",
+          "name_vi": "Maokai",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/y1tkqmq6nk2izrn/tft18_maokai_uSlxsyuU1I.png"
+        },
+        {
+          "id": "DA_18_Lillia",
+          "name_en": "Lillia",
+          "name_vi": "Lillia",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/spnitlt8unczagz/tft18_lillia_OfqbYeyRN4.png"
+        },
+        {
+          "id": "DA_18_RekSai",
+          "name_en": "Rek'Sai",
+          "name_vi": "Rek'Sai",
+          "cost": 1,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/z7kgn4e3tfl0yv5/tft18_rek_sai_H342C9bnSw.png"
+        },
+        {
+          "id": "DA_Amumu18",
+          "name_en": "Amumu",
+          "name_vi": "Amumu",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/y389o4ubtuwe4h1/tft18_amumu_lCIHv7EywD.png"
+        }
+      ]
+    },
+    "khiên hừng đông": {
+      "id": "DA_Artifact_AegisOfDawn",
+      "name_vi": "Khiên Hừng Đông",
       "name_en": "Aegis of Dawn",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdawn.png",
@@ -56395,7 +57501,7 @@
     },
     "DA_Artifact_AegisOfDusk": {
       "id": "DA_Artifact_AegisOfDusk",
-      "name_vi": "Aegis of Dusk",
+      "name_vi": "Khiên Hoàng Hôn",
       "name_en": "Aegis of Dusk",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdusk.png",
@@ -56439,7 +57545,7 @@
     },
     "da_artifact_aegisofdusk": {
       "id": "DA_Artifact_AegisOfDusk",
-      "name_vi": "Aegis of Dusk",
+      "name_vi": "Khiên Hoàng Hôn",
       "name_en": "Aegis of Dusk",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdusk.png",
@@ -56483,7 +57589,7 @@
     },
     "mm0f7jcpe0kc70k": {
       "id": "DA_Artifact_AegisOfDusk",
-      "name_vi": "Aegis of Dusk",
+      "name_vi": "Khiên Hoàng Hôn",
       "name_en": "Aegis of Dusk",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdusk.png",
@@ -56527,7 +57633,7 @@
     },
     "AegisOfDusk": {
       "id": "DA_Artifact_AegisOfDusk",
-      "name_vi": "Aegis of Dusk",
+      "name_vi": "Khiên Hoàng Hôn",
       "name_en": "Aegis of Dusk",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdusk.png",
@@ -56571,7 +57677,7 @@
     },
     "aegisofdusk": {
       "id": "DA_Artifact_AegisOfDusk",
-      "name_vi": "Aegis of Dusk",
+      "name_vi": "Khiên Hoàng Hôn",
       "name_en": "Aegis of Dusk",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdusk.png",
@@ -56615,7 +57721,51 @@
     },
     "aegis of dusk": {
       "id": "DA_Artifact_AegisOfDusk",
-      "name_vi": "Aegis of Dusk",
+      "name_vi": "Khiên Hoàng Hôn",
+      "name_en": "Aegis of Dusk",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdusk.png",
+      "stats": {
+        "mr": "+70",
+        "hp": "+400"
+      },
+      "desc_vi": "Mỗi 2.5 giây, đánh cắp 3 Kháng Phép từ kẻ địch trong phạm vi 1 ô và gây sát thương phép tương đương % Kháng Phép của chủ sở hữu. Nếu Khiên Hừng Đông đang được trang bị, thay vào đó kích hoạt hiệu ứng của trang bị này mỗi 1.25 giây. Sát thương tăng theo Giai Đoạn.",
+      "desc_en": "Every 2.5 seconds, steal 3 Magic Resist from enemies within 1-hex and deal 18% of the holder's Magic Resist as magic damage. If Aegis of Dawn is also equipped, trigger this item's effect every 1.25 seconds instead.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_Taric18",
+          "name_en": "Taric",
+          "name_vi": "Taric",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/qryutb8nciv7yd1/tft18_taric_hTxCPzcJnL.png"
+        },
+        {
+          "id": "DA_18_Sett",
+          "name_en": "Sett",
+          "name_vi": "Sett",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/qu4hta71hiipyol/tft18_sett_KYPhH4i7EP.png"
+        },
+        {
+          "id": "DA_18_Malphite",
+          "name_en": "Malphite",
+          "name_vi": "Malphite",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/hmwp0jtcck7n5vn/tft18_malphite_qX5CDK8V5K.png"
+        },
+        {
+          "id": "DA_Amumu18",
+          "name_en": "Amumu",
+          "name_vi": "Amumu",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/y389o4ubtuwe4h1/tft18_amumu_lCIHv7EywD.png"
+        }
+      ]
+    },
+    "khiên hoàng hôn": {
+      "id": "DA_Artifact_AegisOfDusk",
+      "name_vi": "Khiên Hoàng Hôn",
       "name_en": "Aegis of Dusk",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdusk.png",
@@ -56659,7 +57809,7 @@
     },
     "DA_Artifact_EternalPact": {
       "id": "DA_Artifact_EternalPact",
-      "name_vi": "Eternal Pact",
+      "name_vi": "Khế Ước Vĩnh Hằng",
       "name_en": "Eternal Pact",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_eternalpact.png",
@@ -56703,7 +57853,7 @@
     },
     "da_artifact_eternalpact": {
       "id": "DA_Artifact_EternalPact",
-      "name_vi": "Eternal Pact",
+      "name_vi": "Khế Ước Vĩnh Hằng",
       "name_en": "Eternal Pact",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_eternalpact.png",
@@ -56747,7 +57897,7 @@
     },
     "y0nl9tre8fkp3gu": {
       "id": "DA_Artifact_EternalPact",
-      "name_vi": "Eternal Pact",
+      "name_vi": "Khế Ước Vĩnh Hằng",
       "name_en": "Eternal Pact",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_eternalpact.png",
@@ -56791,7 +57941,7 @@
     },
     "EternalPact": {
       "id": "DA_Artifact_EternalPact",
-      "name_vi": "Eternal Pact",
+      "name_vi": "Khế Ước Vĩnh Hằng",
       "name_en": "Eternal Pact",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_eternalpact.png",
@@ -56835,7 +57985,7 @@
     },
     "eternalpact": {
       "id": "DA_Artifact_EternalPact",
-      "name_vi": "Eternal Pact",
+      "name_vi": "Khế Ước Vĩnh Hằng",
       "name_en": "Eternal Pact",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_eternalpact.png",
@@ -56879,7 +58029,51 @@
     },
     "eternal pact": {
       "id": "DA_Artifact_EternalPact",
-      "name_vi": "Eternal Pact",
+      "name_vi": "Khế Ước Vĩnh Hằng",
+      "name_en": "Eternal Pact",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_eternalpact.png",
+      "stats": {
+        "ap": "+35",
+        "manaRegen": "+1"
+      },
+      "desc_vi": "Bắt đầu giao tranh: Kết giao ước với tướng đồng minh nhiều Máu nhất, nếu họ hy sinh, nhận 10 hồi phục Năng Lượng và 40% Sức Mạnh Phép Thuật. Khi đồng minh dùng kỹ năng, nhận 15 Năng Lượng. Mỗi 6 giây, tạo lá chắn cho đồng minh bằng 200% Sức Mạnh Phép Thuật của chủ sở hữu.",
+      "desc_en": "Combat start: Form a pact with the highest Health allied champion, If they die, gain 10 Mana regen and 40% Ability Power. When the ally uses their ability, gain 15 Mana. Every 6 seconds, shield your ally for 200% of the holder's Ability Power.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_Veigar",
+          "name_en": "Veigar",
+          "name_vi": "Veigar",
+          "cost": 1,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/kzaxioh98ejolil/tft18_veigar_0jqxuDLMBn.png"
+        },
+        {
+          "id": "DA_18_Teemo",
+          "name_en": "Teemo",
+          "name_vi": "Teemo",
+          "cost": 2,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/efng0d44tjto9vy/tft18_teemo_j8Ttxr28xo.png"
+        },
+        {
+          "id": "DA_18_Sentry",
+          "name_en": "Pebbles",
+          "name_vi": "Pebbles",
+          "cost": 1,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/ab4cr4v6no1gywg/tft18_pebbles_hA5IrtB3fD.png"
+        },
+        {
+          "id": "DA_18_KhaZix",
+          "name_en": "Kha'Zix",
+          "name_vi": "Kha'Zix",
+          "cost": 3,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/k56bfiaz6fknx7c/tft18_kha_zix_uZumsWAWIA.png"
+        }
+      ]
+    },
+    "khế ước vĩnh hằng": {
+      "id": "DA_Artifact_EternalPact",
+      "name_vi": "Khế Ước Vĩnh Hằng",
       "name_en": "Eternal Pact",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_eternalpact.png",
@@ -56923,7 +58117,7 @@
     },
     "DA_Artifact_Manazane": {
       "id": "DA_Artifact_Manazane",
-      "name_vi": "Manazane",
+      "name_vi": "Thánh Kiếm Manazane",
       "name_en": "Manazane",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnmuramana.png",
@@ -56968,7 +58162,7 @@
     },
     "da_artifact_manazane": {
       "id": "DA_Artifact_Manazane",
-      "name_vi": "Manazane",
+      "name_vi": "Thánh Kiếm Manazane",
       "name_en": "Manazane",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnmuramana.png",
@@ -57013,7 +58207,7 @@
     },
     "ifqxikrrjrtdjqe": {
       "id": "DA_Artifact_Manazane",
-      "name_vi": "Manazane",
+      "name_vi": "Thánh Kiếm Manazane",
       "name_en": "Manazane",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnmuramana.png",
@@ -57058,7 +58252,7 @@
     },
     "Manazane": {
       "id": "DA_Artifact_Manazane",
-      "name_vi": "Manazane",
+      "name_vi": "Thánh Kiếm Manazane",
       "name_en": "Manazane",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnmuramana.png",
@@ -57103,7 +58297,52 @@
     },
     "manazane": {
       "id": "DA_Artifact_Manazane",
-      "name_vi": "Manazane",
+      "name_vi": "Thánh Kiếm Manazane",
+      "name_en": "Manazane",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnmuramana.png",
+      "stats": {
+        "ad": "+15%",
+        "ap": "+15",
+        "manaRegen": "+1"
+      },
+      "desc_vi": "After casting the first time in combat, nhận 110 Năng Lượng over 5 seconds.",
+      "desc_en": "After casting the first time in combat, gain 110 Mana over 5 seconds.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_Veigar",
+          "name_en": "Veigar",
+          "name_vi": "Veigar",
+          "cost": 1,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/kzaxioh98ejolil/tft18_veigar_0jqxuDLMBn.png"
+        },
+        {
+          "id": "DA_18_Teemo",
+          "name_en": "Teemo",
+          "name_vi": "Teemo",
+          "cost": 2,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/efng0d44tjto9vy/tft18_teemo_j8Ttxr28xo.png"
+        },
+        {
+          "id": "DA_Gromp18_AP",
+          "name_en": "Gromp",
+          "name_vi": "Gromp",
+          "cost": 2,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/636yy4d9drch0sc/tft18_gromp_xN1U2HauVz.png"
+        },
+        {
+          "id": "DA_18_Alune",
+          "name_en": "Alune",
+          "name_vi": "Alune",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/1kbpbdf0c570czp/tft18_alune_YexVP3JuZ9.png"
+        }
+      ]
+    },
+    "thánh kiếm manazane": {
+      "id": "DA_Artifact_Manazane",
+      "name_vi": "Thánh Kiếm Manazane",
       "name_en": "Manazane",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnmuramana.png",
@@ -57148,7 +58387,7 @@
     },
     "DA_Artifact_ForbiddenIdol": {
       "id": "DA_Artifact_ForbiddenIdol",
-      "name_vi": "Forbidden Idol",
+      "name_vi": "Dị Vật Tai Ương",
       "name_en": "Forbidden Idol",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_forbiddenidol.png",
@@ -57194,7 +58433,7 @@
     },
     "da_artifact_forbiddenidol": {
       "id": "DA_Artifact_ForbiddenIdol",
-      "name_vi": "Forbidden Idol",
+      "name_vi": "Dị Vật Tai Ương",
       "name_en": "Forbidden Idol",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_forbiddenidol.png",
@@ -57240,7 +58479,7 @@
     },
     "1sw5vrrm10rj9wj": {
       "id": "DA_Artifact_ForbiddenIdol",
-      "name_vi": "Forbidden Idol",
+      "name_vi": "Dị Vật Tai Ương",
       "name_en": "Forbidden Idol",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_forbiddenidol.png",
@@ -57286,7 +58525,7 @@
     },
     "ForbiddenIdol": {
       "id": "DA_Artifact_ForbiddenIdol",
-      "name_vi": "Forbidden Idol",
+      "name_vi": "Dị Vật Tai Ương",
       "name_en": "Forbidden Idol",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_forbiddenidol.png",
@@ -57332,7 +58571,7 @@
     },
     "forbiddenidol": {
       "id": "DA_Artifact_ForbiddenIdol",
-      "name_vi": "Forbidden Idol",
+      "name_vi": "Dị Vật Tai Ương",
       "name_en": "Forbidden Idol",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_forbiddenidol.png",
@@ -57378,7 +58617,53 @@
     },
     "forbidden idol": {
       "id": "DA_Artifact_ForbiddenIdol",
-      "name_vi": "Forbidden Idol",
+      "name_vi": "Dị Vật Tai Ương",
+      "name_en": "Forbidden Idol",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_forbiddenidol.png",
+      "stats": {
+        "armor": "+25",
+        "mr": "+25",
+        "hp": "+500",
+        "manaRegen": "+2"
+      },
+      "desc_vi": "50% giá trị lá chắn sẽ được chuyển sang Máu tối đa.",
+      "desc_en": "Shields have 40% of their value converted to max Health instead.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_Taric18",
+          "name_en": "Taric",
+          "name_vi": "Taric",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/qryutb8nciv7yd1/tft18_taric_hTxCPzcJnL.png"
+        },
+        {
+          "id": "DA_18_Sejuani",
+          "name_en": "Sejuani",
+          "name_vi": "Sejuani",
+          "cost": 2,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/6avobyx3ajnpbnf/tft18_sejuani_YPulYyYyq9.png"
+        },
+        {
+          "id": "DA_Sentinel18",
+          "name_en": "Sentinel",
+          "name_vi": "Sentinel",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/j51gghgncfei7gk/tft18_sentinel_BayY3IX9cc.png"
+        },
+        {
+          "id": "DA_18_Malphite",
+          "name_en": "Malphite",
+          "name_vi": "Malphite",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/hmwp0jtcck7n5vn/tft18_malphite_qX5CDK8V5K.png"
+        }
+      ]
+    },
+    "dị vật tai ương": {
+      "id": "DA_Artifact_ForbiddenIdol",
+      "name_vi": "Dị Vật Tai Ương",
       "name_en": "Forbidden Idol",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_forbiddenidol.png",
@@ -57424,7 +58709,7 @@
     },
     "DA_Artifact_HellfireHatchet": {
       "id": "DA_Artifact_HellfireHatchet",
-      "name_vi": "Hellfire Hatchet",
+      "name_vi": "Rìu Hỏa Ngục",
       "name_en": "Hellfire Hatchet",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_hellfirehatchet.png",
@@ -57469,7 +58754,7 @@
     },
     "da_artifact_hellfirehatchet": {
       "id": "DA_Artifact_HellfireHatchet",
-      "name_vi": "Hellfire Hatchet",
+      "name_vi": "Rìu Hỏa Ngục",
       "name_en": "Hellfire Hatchet",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_hellfirehatchet.png",
@@ -57514,7 +58799,7 @@
     },
     "xjjj63zjh6oae4f": {
       "id": "DA_Artifact_HellfireHatchet",
-      "name_vi": "Hellfire Hatchet",
+      "name_vi": "Rìu Hỏa Ngục",
       "name_en": "Hellfire Hatchet",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_hellfirehatchet.png",
@@ -57559,7 +58844,7 @@
     },
     "HellfireHatchet": {
       "id": "DA_Artifact_HellfireHatchet",
-      "name_vi": "Hellfire Hatchet",
+      "name_vi": "Rìu Hỏa Ngục",
       "name_en": "Hellfire Hatchet",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_hellfirehatchet.png",
@@ -57604,7 +58889,7 @@
     },
     "hellfirehatchet": {
       "id": "DA_Artifact_HellfireHatchet",
-      "name_vi": "Hellfire Hatchet",
+      "name_vi": "Rìu Hỏa Ngục",
       "name_en": "Hellfire Hatchet",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_hellfirehatchet.png",
@@ -57649,7 +58934,52 @@
     },
     "hellfire hatchet": {
       "id": "DA_Artifact_HellfireHatchet",
-      "name_vi": "Hellfire Hatchet",
+      "name_vi": "Rìu Hỏa Ngục",
+      "name_en": "Hellfire Hatchet",
+      "type": "ornns",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_hellfirehatchet.png",
+      "stats": {
+        "ad": "+20%",
+        "hp": "+150",
+        "ov": "+20%"
+      },
+      "desc_vi": "Các đòn đánh gây thêm sát thương vật lý bằng 3% Máu tối đa của chủ sở hữu. Với mỗi 1% Máu đã mất, nhận 1% Tốc Độ Đánh.",
+      "desc_en": "Attacks deal 3% of the holder's max Health as bonus physical damage. For every 1% missing Health, gain 1.5% Attack Speed.",
+      "recipe": null,
+      "recommendedHolders": [
+        {
+          "id": "DA_18_MasterYi_AD",
+          "name_en": "Master Yi",
+          "name_vi": "Master Yi",
+          "cost": 3,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/6ku6ukznq2ew6sy/tft18_master_yi_11hqXwSUkm.png"
+        },
+        {
+          "id": "DA_Brambleback18",
+          "name_en": "Brambleback",
+          "name_vi": "Brambleback",
+          "cost": 4,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/2pg5tkbdazdkd14/tft18_brambleback_fBYgUre8yD.png"
+        },
+        {
+          "id": "DA_18_Camille",
+          "name_en": "Camille",
+          "name_vi": "Camille",
+          "cost": 1,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/k92clk9hj6unisd/tft18_camille_gUd0DXuPgG.png"
+        },
+        {
+          "id": "DA_18_ElderDragon",
+          "name_en": "Elder Dragon",
+          "name_vi": "Elder Dragon",
+          "cost": 5,
+          "icon": "https://api.tftacademy.com/api/files/wbtb34uj7d5w580/pemzum62gsx7puw/tft18_elder_dragon_7Hu6QtDrmY.png"
+        }
+      ]
+    },
+    "rìu hỏa ngục": {
+      "id": "DA_Artifact_HellfireHatchet",
+      "name_vi": "Rìu Hỏa Ngục",
       "name_en": "Hellfire Hatchet",
       "type": "ornns",
       "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_hellfirehatchet.png",

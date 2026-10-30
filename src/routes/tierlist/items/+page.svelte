@@ -7,8 +7,19 @@
 
   let { data }: { data: PageData } = $props();
 
-  let activeCategory = $state<'craftables' | 'radiants' | 'artifacts' | 'emblems'>('craftables');
+  let activeCategory = $state<'craftables' | 'radiants' | 'artifacts' | 'emblems'>(
+    (data.initialCategory as any) || 'craftables'
+  );
   let searchQuery = $state('');
+
+  function selectCategory(cat: 'craftables' | 'radiants' | 'artifacts' | 'emblems') {
+    activeCategory = cat;
+    if (typeof window !== 'undefined') {
+      const url = new URL(window.location.href);
+      url.searchParams.set('tab', cat);
+      history.replaceState({}, '', url);
+    }
+  }
 
   const categoryLabels = {
     craftables: 'Đồ Ghép Thường (Craftables)',
@@ -103,7 +114,7 @@
     <div class="flex items-center gap-1.5 overflow-x-auto p-1 bg-[#161B26] rounded-xl border border-white/5">
       {#each (['craftables', 'radiants', 'artifacts', 'emblems'] as const) as cat}
         <button
-          onclick={() => (activeCategory = cat)}
+          onclick={() => selectCategory(cat)}
           class="px-4 py-2 rounded-lg text-xs font-extrabold transition-all duration-150 whitespace-nowrap cursor-pointer {activeCategory === cat ? 'bg-amber-400 text-black shadow-md' : 'text-slate-400 hover:text-white'}"
         >
           {categoryLabels[cat]}

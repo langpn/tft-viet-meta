@@ -27,4 +27,16 @@ describe("Vietnamese canonical localization", () => {
 
     expect(result).toEqual({ ok: true, errors: [] });
   });
+
+  test("Ornn Artifacts have official Riot Vietnamese translations", () => {
+    const itemsData = require("../src/lib/data/academy-items.json");
+    const artifacts = itemsData.categories?.artifacts || {};
+    const all = Object.values(artifacts).flat();
+    expect(all.length).toBeGreaterThan(0);
+    // Silvermere Dawn -> Chùy Bạch Ngân, Mittens -> Găng Đấu Sĩ
+    const silvermere = all.find((i: any) => i.id === "DA_Artifact_SilvermereDawn");
+    expect(silvermere?.name_vi).toBe("Chùy Bạch Ngân");
+    const mittens = all.find((i: any) => i.id === "DA_Artifact_Mittens");
+    expect(mittens?.name_vi).toBe("Găng Đấu Sĩ");
+  });
 });
