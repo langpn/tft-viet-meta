@@ -1,6 +1,8 @@
 import { join } from "node:path";
 import { saveState, loadState, statePath } from "./storage.js";
 import { runSync } from "./sync.js";
+import { syncExitCode } from "./cli-policy.js";
+import { fetchJsonResponse } from "./http.js";
 
 const root = process.cwd();
 const command = process.argv[2];
@@ -11,13 +13,14 @@ if (command === "sync") {
     console.error(`Unsupported sync target: ${target}`);
     process.exit(1);
   }
+  const previousState = await loadState(statePath(root));
   const result = await runSync({
     fetchText: async (url) => (await fetch(url)).text(),
-    fetchJson: async <T>(url: string) => (await fetch(url)).json() as Promise<T>,
-  });
+    fetchJson: async <T>(url: string) => fetchJsonResponse<T>(url, await fetch(url)),
+  }, new Date().toISOString(), previousState);
   await saveState(statePath(root), result.state);
   console.log(JSON.stringify({ ...result.report, target, snapshot: join("data", "state.json") }, null, 2));
-  process.exit(2);
+  process.exit(syncExitCode(result.report));
 }
 
 if (command === "verify") {

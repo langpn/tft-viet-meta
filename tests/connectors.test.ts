@@ -1,6 +1,7 @@
 import { describe, expect, test } from "bun:test";
-import { parseSitemapUrls } from "../src/connectors/tft-academy.js";
-import { normalizeDataDragonCatalog } from "../src/connectors/riot-ddragon.js";
+import { parseSitemapUrls, snapshotPublicPages } from "../src/connectors/tft-academy.js";
+import { fetchDataDragonDataset, normalizeDataDragonCatalog } from "../src/connectors/riot-ddragon.js";
+import { fetchJsonResponse } from "../src/server/http.js";
 
 describe("source connectors", () => {
   test("parses and de-duplicates sitemap URLs", () => {
@@ -56,5 +57,62 @@ describe("source connectors", () => {
         verifiedAgainstLocale: true,
       }),
     ]);
+  });
+
+  test("uses Riot's plural filename for augment catalogs", async () => {
+    let requestedUrl = "";
+    await fetchDataDragonDataset(
+      async <T>(url: string) => {
+        requestedUrl = url;
+        return { type: "tft-augment", version: "16.21.1", data: {} } as T;
+      },
+      "16.21.1",
+      "vi_VN",
+      "augment",
+    );
+
+    expect(requestedUrl).toBe(
+      "https://ddragon.leagueoflegends.com/cdn/16.21.1/data/vi_VN/tft-augments.json",
+    );
+  });
+
+  test("reports URL, status, and content type for non-JSON responses", async () => {
+    const response = new Response("<Error><Code>AccessDenied</Code></Error>", {
+      status: 403,
+      headers: { "content-type": "application/xml" },
+    });
+
+    await expect(fetchJsonResponse("https://example.test/catalog.json", response)).rejects.toThrow(
+      "HTTP 403 application/xml from https://example.test/catalog.json",
+    );
+  });
+
+  test("limits page fetch concurrency and retries a transient failure", async () => {
+    let inFlight = 0;
+    let maxInFlight = 0;
+    let attempts = 0;
+    const urls = [
+      "https://example.test/1",
+      "https://example.test/2",
+      "https://example.test/3",
+      "https://example.test/4",
+    ];
+
+    const snapshots = await snapshotPublicPages(
+      async (url) => {
+        inFlight += 1;
+        maxInFlight = Math.max(maxInFlight, inFlight);
+        await new Promise((resolve) => setTimeout(resolve, 1));
+        inFlight -= 1;
+        if (url.endsWith("/2") && attempts++ === 0) throw new Error("transient");
+        return url;
+      },
+      urls,
+      "2026-10-30T00:00:00.000Z",
+      { concurrency: 2, retries: 1 },
+    );
+
+    expect(maxInFlight).toBeLessThanOrEqual(2);
+    expect(snapshots).toHaveLength(4);
   });
 });

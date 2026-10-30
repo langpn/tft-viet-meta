@@ -17,7 +17,8 @@ const responses: Record<string, unknown> = {
 
 for (const kind of ["item", "trait", "augment"]) {
   for (const locale of ["en_US", "vi_VN"]) {
-    responses[`https://ddragon.leagueoflegends.com/cdn/16.21.1/data/${locale}/tft-${kind}.json`] = {
+    const fileName = kind === "augment" ? "tft-augments.json" : `tft-${kind}.json`;
+    responses[`https://ddragon.leagueoflegends.com/cdn/16.21.1/data/${locale}/${fileName}`] = {
       type: `tft-${kind}`,
       version: "0.0.0",
       data: {},
@@ -48,6 +49,7 @@ describe("sync pipeline", () => {
       academyPages: 1,
       riotEntities: 1,
       explorerStatus: "UNVERIFIED",
+      diff: { added: 1, modified: 0, deleted: 0, unchanged: 0 },
     });
   });
 });

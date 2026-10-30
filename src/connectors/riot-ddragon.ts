@@ -19,6 +19,13 @@ export type RiotCatalogOptions = {
   locale: string;
 };
 
+const DATA_DRAGON_FILES: Record<"champion" | "item" | "trait" | "augment", string> = {
+  champion: "tft-champion.json",
+  item: "tft-item.json",
+  trait: "tft-trait.json",
+  augment: "tft-augments.json",
+};
+
 export function normalizeDataDragonCatalog(
   english: DataDragonDataset,
   localized: DataDragonDataset | null,
@@ -50,7 +57,7 @@ export async function fetchDataDragonDataset(
   locale: string,
   kind: "champion" | "item" | "trait" | "augment",
 ): Promise<DataDragonDataset> {
-  const url = `https://ddragon.leagueoflegends.com/cdn/${version}/data/${locale}/tft-${kind}.json`;
+  const url = `https://ddragon.leagueoflegends.com/cdn/${version}/data/${locale}/${DATA_DRAGON_FILES[kind]}`;
   return fetchJson<DataDragonDataset>(url);
 }
 
