@@ -38,7 +38,12 @@
 </script>
 
 <svelte:head>
-  <title>Bảng Xếp Hạng Lõi Nâng Cấp TFT (Mùa 18) · TFT Academy VI</title>
+  <title>Bảng Xếp Hạng Lõi Nâng Cấp ĐTCL Mùa 18 (Bạc, Vàng, Kim Cương) · TFT Academy VI</title>
+  <meta name="title" content="Bảng Xếp Hạng Lõi Nâng Cấp ĐTCL Mùa 18 (Bạc, Vàng, Kim Cương) · TFT Academy VI" />
+  <meta name="description" content="Bảng xếp hạng 249 lõi nâng cấp ĐTCL Mùa 18: Lõi Bạc, Lõi Vàng, Lõi Kim Cương theo từng giai đoạn 2-1, 3-2, 4-2. Bố cục kệ thu gọn chuẩn TFT Academy, tooltip tiếng Việt 100%." />
+  <meta property="og:title" content="Bảng Xếp Hạng Lõi Nâng Cấp ĐTCL Mùa 18 · TFT Academy VI" />
+  <meta property="og:description" content="Bảng xếp hạng 249 lõi nâng cấp ĐTCL Mùa 18 theo bậc S, A, B, C, D và giai đoạn vòng đấu." />
+  <link rel="canonical" href="https://tft.langpn.xyz/tierlist/augments" />
 </svelte:head>
 
 <div class="flex flex-col gap-6 pb-20">

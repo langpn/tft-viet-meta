@@ -50,7 +50,12 @@
 </script>
 
 <svelte:head>
-  <title>TFT Academy Việt Nam · Bảng Xếp Hạng Đội Hình, Trang Bị & Explorer Meta Chuẩn Nhất</title>
+  <title>TFT Academy Việt Nam · Bảng Xếp Hạng Đội Hình, Trang Bị & Explorer Meta ĐTCL Mùa 18</title>
+  <meta name="title" content="TFT Academy Việt Nam · Bảng Xếp Hạng Đội Hình, Trang Bị & Explorer Meta ĐTCL Mùa 18" />
+  <meta name="description" content="Nguồn giáo án và dữ liệu Đấu Trường Chân Lý số 1 Việt Nam. Bảng xếp hạng 73 đội hình meta từ Dishsoap & Frodan, 123 trang bị, 249 lõi nâng cấp và số liệu tactics.tools live." />
+  <meta property="og:title" content="TFT Academy Việt Nam · Cẩm Nang Meta ĐTCL Số 1" />
+  <meta property="og:description" content="Nguồn giáo án và dữ liệu Đấu Trường Chân Lý số 1 Việt Nam. Bảng xếp hạng đội hình S-Tier chuẩn nhất." />
+  <link rel="canonical" href="https://tft.langpn.xyz/" />
 </svelte:head>
 
 <svelte:window onkeydown={handleKeydown} />

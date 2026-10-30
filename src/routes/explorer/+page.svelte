@@ -282,7 +282,12 @@
 </script>
 
 <svelte:head>
-  <title>Stats Explorer · Khám Phá Thống Kê Meta TFT (tactics.tools)</title>
+  <title>Khám Phá Thống Kê Meta ĐTCL Mùa 18 (tactics.tools Live) · TFT Academy VI</title>
+  <meta name="title" content="Khám Phá Thống Kê Meta ĐTCL Mùa 18 (tactics.tools Live) · TFT Academy VI" />
+  <meta name="description" content="Công cụ tra cứu số liệu thống kê thời gian thực từ hơn 750k trận đấu ĐTCL Mùa 18 từ tactics.tools: tỷ lệ thắng, tỷ lệ top 4, delta, số trận cho từng tướng, tộc hệ và trang bị." />
+  <meta property="og:title" content="Khám Phá Thống Kê Meta ĐTCL Mùa 18 · tactics.tools Live" />
+  <meta property="og:description" content="Tra cứu số liệu thống kê thời gian thực từ hơn 750k trận đấu ĐTCL Mùa 18." />
+  <link rel="canonical" href="https://tft.langpn.xyz/explorer" />
 </svelte:head>
 
 <div class="flex flex-col gap-5 pb-20 select-none">

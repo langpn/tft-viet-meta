@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tft.langpn.xyz/sitemap.xml
+Host: https://tft.langpn.xyz

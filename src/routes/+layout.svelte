@@ -89,6 +89,47 @@
 
 <svelte:window onkeydown={handleKeydown} onclick={handleClickOutside} />
 
+<svelte:head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Primary Meta Tags -->
+  <title>TFT Academy Việt Nam · Bảng Xếp Hạng Đội Hình, Trang Bị & Explorer Meta ĐTCL Mùa 18</title>
+  <meta name="title" content="TFT Academy Việt Nam · Bảng Xếp Hạng Đội Hình, Trang Bị & Explorer Meta ĐTCL Mùa 18" />
+  <meta name="description" content="Nền tảng cẩm nang meta Đấu Trường Chân Lý số 1 Việt Nam. Bảng xếp hạng đội hình S-Tier, trang bị chuẩn BIS, lõi nâng cấp và thống kê tactics.tools live chuyển ngữ tiếng Việt 100% chuẩn in-game." />
+  <meta name="keywords" content="DTCL, ĐTCL, TFT, dau truong chan ly, tft academy, doi hinh dtcl, trang bi dtcl, loi nang cap, tactics tools, meta dtcl mua 18" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="Vietnamese" />
+  <meta name="author" content="Lang Pham Ngoc" />
+  <link rel="canonical" href="https://tft.langpn.xyz{currentPath}" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tft.langpn.xyz{currentPath}" />
+  <meta property="og:site_name" content="TFT Academy Việt Nam" />
+  <meta property="og:title" content="TFT Academy Việt Nam · Bảng Xếp Hạng Đội Hình & Meta ĐTCL Mùa 18" />
+  <meta property="og:description" content="Bảng xếp hạng đội hình S-Tier, trang bị chuẩn BIS, lõi nâng cấp và thống kê tactics.tools live chuyển ngữ tiếng Việt 100% chuẩn in-game." />
+  <meta property="og:locale" content="vi_VN" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://tft.langpn.xyz{currentPath}" />
+  <meta property="twitter:title" content="TFT Academy Việt Nam · Bảng Xếp Hạng Đội Hình & Meta ĐTCL Mùa 18" />
+  <meta property="twitter:description" content="Bảng xếp hạng đội hình S-Tier, trang bị chuẩn BIS, lõi nâng cấp và thống kê tactics.tools live chuyển ngữ tiếng Việt 100% chuẩn in-game." />
+
+  <!-- Schema.org JSON-LD structured data for Google Search -->
+  {@html `<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "TFT Academy Việt Nam",
+    "url": "https://tft.langpn.xyz",
+    "description": "Bảng xếp hạng đội hình Đấu Trường Chân Lý, trang bị, lõi nâng cấp và thống kê meta tactics.tools.",
+    "inLanguage": "vi-VN"
+  }
+  </script>`}
+</svelte:head>
+
 <div class="min-h-screen flex flex-col bg-[#07090E] text-[#F1F5F9]">
   <!-- Top Navigation Bar (Matching Screenshot 2 exactly) -->
   <header class="sticky top-0 z-50 glass-nav border-b border-white/10 bg-[#07090E]/90 backdrop-blur-xl">

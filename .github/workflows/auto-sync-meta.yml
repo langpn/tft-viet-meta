@@ -1,0 +1,43 @@
+name: Auto-Sync TFT Academy Meta
+
+on:
+  schedule:
+    # Run every 6 hours (00:00, 06:00, 12:00, 18:00 UTC)
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+    # Allows manual trigger anytime from GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  sync-and-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile || bun install
+
+      - name: Run Meta Sync & Tooltip Rebuild
+        run: bun scripts/sync-and-build.ts
+
+      - name: Commit and Push if meta changed
+        run: |
+          if git diff --quiet src/lib/data/; then
+            echo "No meta changes detected. Everything is up to date."
+          else
+            echo "New meta changes found! Committing and pushing to main..."
+            git config user.name "Phạm Ngọc Lang"
+            git config user.email "langpn.dev@gmail.com"
+            git add src/lib/data/
+            git commit -m "chore: auto-sync meta data from TFT Academy (Set 18)"
+            git push origin main
+          fi

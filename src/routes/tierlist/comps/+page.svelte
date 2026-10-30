@@ -334,7 +334,21 @@
 </script>
 
 <svelte:head>
-  <title>TFT Academy · Bảng Xếp Hạng Đội Hình, Trang Bị, Lõi Nâng Cấp (Set 18)</title>
+  {#if selectedComp}
+    <title>{selectedComp.title} - Đội Hình {selectedComp.mainCarry?.name_vi || selectedComp.mainCarry?.name_en || ''} ĐTCL Mùa 18 (Bậc {selectedComp.tier}) | TFT Academy VI</title>
+    <meta name="title" content="{selectedComp.title} - Đội Hình {selectedComp.mainCarry?.name_vi || selectedComp.mainCarry?.name_en || ''} ĐTCL Mùa 18" />
+    <meta name="description" content="Giáo án chi tiết đội hình {selectedComp.title} (Bậc {selectedComp.tier}) ĐTCL Mùa 18. Đầy đủ sơ đồ xếp cờ 28 ô hex, đồ chuẩn BIS, thứ tự nhặt đồ và hướng dẫn từng giai đoạn." />
+    <meta property="og:title" content="{selectedComp.title} - Đội Hình ĐTCL Mùa 18 (Bậc {selectedComp.tier})" />
+    <meta property="og:description" content="Giáo án chi tiết đội hình {selectedComp.title}: sơ đồ xếp cờ 28 ô hex, đồ chuẩn BIS và mẹo vận hành." />
+    <link rel="canonical" href="https://tft.langpn.xyz/tierlist/comps?comp={(selectedComp.title || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || selectedComp.slug || selectedComp.id}" />
+  {:else}
+    <title>Bảng Xếp Hạng Đội Hình ĐTCL Mùa 18 (Bản 18.5c) · TFT Academy VI</title>
+    <meta name="title" content="Bảng Xếp Hạng Đội Hình ĐTCL Mùa 18 (Bản 18.5c) · TFT Academy VI" />
+    <meta name="description" content="Bảng xếp hạng 73 đội hình meta Đấu Trường Chân Lý Mùa 18 chuẩn nhất từ TFT Academy (Dishsoap & Frodan). Đầy đủ vị trí xếp cờ 28 ô, trang bị chuẩn BIS và mẹo vận hành tiếng Việt." />
+    <meta property="og:title" content="Bảng Xếp Hạng Đội Hình ĐTCL Mùa 18 (Bản 18.5c) · TFT Academy VI" />
+    <meta property="og:description" content="Bảng xếp hạng 73 đội hình meta Đấu Trường Chân Lý Mùa 18 chuẩn nhất từ TFT Academy." />
+    <link rel="canonical" href="https://tft.langpn.xyz/tierlist/comps" />
+  {/if}
 </svelte:head>
 
 <svelte:window onkeydown={handleKeydown} onpopstate={handlePopState} />
