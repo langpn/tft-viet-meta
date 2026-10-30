@@ -1,0 +1,53 @@
+import { describe, expect, test } from "bun:test";
+import { runSync, type SyncDependencies } from "../src/server/sync.js";
+
+const responses: Record<string, unknown> = {
+  "https://ddragon.leagueoflegends.com/api/versions.json": ["16.21.1"],
+  "https://ddragon.leagueoflegends.com/cdn/16.21.1/data/en_US/tft-champion.json": {
+    type: "tft-champion",
+    version: "0.0.0",
+    data: { Ahri: { id: "Ahri", name: "Ahri", tier: 2, image: { full: "Ahri.png" } } },
+  },
+  "https://ddragon.leagueoflegends.com/cdn/16.21.1/data/vi_VN/tft-champion.json": {
+    type: "tft-champion",
+    version: "0.0.0",
+    data: { Ahri: { id: "Ahri", name: "Ahri", tier: 2, image: { full: "Ahri.png" } } },
+  },
+};
+
+for (const kind of ["item", "trait", "augment"]) {
+  for (const locale of ["en_US", "vi_VN"]) {
+    responses[`https://ddragon.leagueoflegends.com/cdn/16.21.1/data/${locale}/tft-${kind}.json`] = {
+      type: `tft-${kind}`,
+      version: "0.0.0",
+      data: {},
+    };
+  }
+}
+
+const dependencies: SyncDependencies = {
+  fetchText: async (url) => (url === "https://tftacademy.com/sitemap.xml" ? "<urlset><url><loc>https://tftacademy.com/</loc></url></urlset>" : "<html>home</html>"),
+  fetchJson: async <T>(url: string) => responses[url] as T,
+};
+
+describe("sync pipeline", () => {
+  test("builds a local canonical index from source snapshots and Riot locale", async () => {
+    const result = await runSync(dependencies, "2026-10-30T00:00:00.000Z");
+
+    expect(result.state.activePatch).toBe("16.21.1");
+    expect(result.state.sourceSnapshots).toHaveLength(1);
+    expect(result.state.searchDocuments).toEqual([
+      expect.objectContaining({
+        id: "Ahri",
+        titleVi: "Ahri",
+        verifiedAgainstLocale: true,
+        patch: "16.21.1",
+      }),
+    ]);
+    expect(result.report).toMatchObject({
+      academyPages: 1,
+      riotEntities: 1,
+      explorerStatus: "UNVERIFIED",
+    });
+  });
+});

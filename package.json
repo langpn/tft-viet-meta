@@ -1,0 +1,17 @@
+{
+  "name": "tft-viet-meta",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "dev": "bun run src/server/main.ts",
+    "sync": "bun run src/server/cli.ts sync all",
+    "verify": "bun run src/server/cli.ts verify all"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "latest"
+  }
+}
