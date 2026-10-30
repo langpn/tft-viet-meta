@@ -17,21 +17,33 @@
 
   const iconSrc = $derived(resolveItemIcon(data?.icon, data?.id));
 
-  // Strip any raw Riot placeholders like {{TFT_Keyword_*}}
-  function cleanDesc(txt: string | undefined | null): string {
+  // Format and highlight keywords in description matching TFT Academy
+  function formatDescription(txt: string | undefined | null): string {
     if (!txt) return '';
-    return txt
+    const clean = txt
       .replace(/\{\{[^}]+\}\}/g, '')
       .replace(/<[^>]+>/g, '')
       .replace(/\s+,/g, ',')
       .replace(/\s+\./g, '.')
       .replace(/\s+/g, ' ')
       .trim();
+
+    return clean
+      .replace(/\b(Attack Speed|Tốc Độ Đánh)\b/gi, '<span class="text-[#FFD790] font-bold">$1</span>')
+      .replace(/\b(Attack Damage|Sức Mạnh Công Kích)\b/gi, '<span class="text-orange-400 font-bold">$1</span>')
+      .replace(/\b(Ability Power|Sức Mạnh Phép Thuật)\b/gi, '<span class="text-sky-400 font-bold">$1</span>')
+      .replace(/\b(Health|Máu)\b/gi, '<span class="text-emerald-400 font-bold">$1</span>')
+      .replace(/\b(Armor|Giáp)\b/gi, '<span class="text-amber-300 font-bold">$1</span>')
+      .replace(/\b(Magic Resist|Kháng Phép)\b/gi, '<span class="text-sky-400 font-bold">$1</span>')
+      .replace(/\b(Stuns?|Làm Choáng)\b/gi, '<span class="text-amber-300 font-bold">$1</span>')
+      .replace(/\b(Slow|Làm Chậm)\b/gi, '<span class="text-sky-300 font-bold">$1</span>')
+      .replace(/\b(Burn|Thiêu Đốt)\b/gi, '<span class="text-orange-400 font-bold">$1</span>')
+      .replace(/\b(Wound|Vết Thương Sâu)\b/gi, '<span class="text-rose-400 font-bold">$1</span>');
   }
 </script>
 
 {#if data}
-  <!-- Item Tooltip (Exact 1:1 Match to TFT Academy Screenshot 2) -->
+  <!-- Item Tooltip (Exact 1:1 Match to TFT Academy Screenshot) -->
   <div class="w-76 sm:w-82 rounded-xl bg-[#0B0D12] border-2 border-[#1E2330] p-3 text-white shadow-2xl flex flex-col gap-2.5 select-none animate-in fade-in zoom-in-95 duration-100">
     
     <!-- Top Row: Icon + Name + Stats -->
@@ -50,23 +62,26 @@
           <span class="text-[11px] text-slate-400 truncate">({data.name_en})</span>
         {/if}
 
-        <!-- Stat Badges Row (Matching Screenshot 2) -->
+        <!-- Stat Badges Row (Order matching TFT Academy: AD -> Armor -> MR -> Omnivamp -> AS -> AP -> HP -> Crit) -->
         {#if data.stats && Object.keys(data.stats).length > 0}
           <div class="flex flex-wrap items-center gap-2 mt-1 text-xs font-bold">
-            {#if data.stats.as}
-              <span class="text-[#FFD790] flex items-center gap-1">彡 {data.stats.as}</span>
-            {/if}
             {#if data.stats.ad}
               <span class="text-orange-400 flex items-center gap-1">🗡 {data.stats.ad}</span>
-            {/if}
-            {#if data.stats.ap}
-              <span class="text-sky-400 flex items-center gap-1">💧 {data.stats.ap}</span>
             {/if}
             {#if data.stats.armor}
               <span class="text-amber-300 flex items-center gap-1">🛡 {data.stats.armor}</span>
             {/if}
             {#if data.stats.mr}
-              <span class="text-indigo-400 flex items-center gap-1">🔮 {data.stats.mr}</span>
+              <span class="text-sky-400 flex items-center gap-1">🧿 {data.stats.mr}</span>
+            {/if}
+            {#if data.stats.ov}
+              <span class="text-rose-400 flex items-center gap-1">🦷 {data.stats.ov}</span>
+            {/if}
+            {#if data.stats.as}
+              <span class="text-[#FFD790] flex items-center gap-1">彡 {data.stats.as}</span>
+            {/if}
+            {#if data.stats.ap}
+              <span class="text-sky-400 flex items-center gap-1">💧 {data.stats.ap}</span>
             {/if}
             {#if data.stats.hp}
               <span class="text-emerald-400 flex items-center gap-1">❤️ {data.stats.hp}</span>
@@ -74,18 +89,22 @@
             {#if data.stats.crit}
               <span class="text-rose-400 flex items-center gap-1">💥 {data.stats.crit}</span>
             {/if}
+            {#if data.stats.mana}
+              <span class="text-blue-400 flex items-center gap-1">💧 {data.stats.mana}</span>
+            {/if}
           </div>
         {/if}
       </div>
     </section>
 
-    <!-- Thin Divider Line (Matching Screenshot 2) -->
+    <!-- Thin Divider Line (Matching TFT Academy) -->
     <div class="border-b border-[#1E2330]"></div>
 
-    <!-- Clean Description (No {{TFT_Keyword_*}} junk!) -->
+    <!-- Clean Description with Highlighting -->
     {#if data.desc_vi || data.desc_en}
       <p class="text-xs text-white/90 leading-relaxed font-normal">
-        {cleanDesc(data.desc_vi || data.desc_en)}
+        <!-- eslint-disable-next-line svelte/no-at-html-tags -->
+        {@html formatDescription(data.desc_vi || data.desc_en)}
       </p>
     {/if}
 
@@ -104,7 +123,7 @@
       </div>
     {/if}
 
-    <!-- Recommended Holders Box (Exact Match to TFT Academy Screenshot 2) -->
+    <!-- Recommended Holders Box (Exact Match to TFT Academy Screenshot) -->
     {#if data.recommendedHolders && data.recommendedHolders.length > 0}
       <section 
         class="flex w-full flex-col gap-1.5 rounded-lg border border-[#FFD790]/40 p-2 text-xs text-pretty break-words mt-0.5" 

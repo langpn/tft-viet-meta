@@ -21226,7 +21226,8 @@
       "stats": {
         "ad": "+15%",
         "ap": "+15",
-        "mr": "+20"
+        "mr": "+20",
+        "ov": "+20%"
       },
       "desc_vi": "Một lần mỗi giao tranh khi còn 40% Máu, nhận Lá Chắn bằng 25% Máu tối đa, duy trì trong 5 giây.",
       "desc_en": "Once per combat at 50% Health, gain a 30% max Health Shield that lasts up to 5 seconds.",
@@ -21284,7 +21285,8 @@
       "stats": {
         "ad": "+15%",
         "ap": "+15",
-        "mr": "+20"
+        "mr": "+20",
+        "ov": "+20%"
       },
       "desc_vi": "Một lần mỗi giao tranh khi còn 40% Máu, nhận Lá Chắn bằng 25% Máu tối đa, duy trì trong 5 giây.",
       "desc_en": "Once per combat at 50% Health, gain a 30% max Health Shield that lasts up to 5 seconds.",
@@ -21342,7 +21344,8 @@
       "stats": {
         "ad": "+15%",
         "ap": "+15",
-        "mr": "+20"
+        "mr": "+20",
+        "ov": "+20%"
       },
       "desc_vi": "Một lần mỗi giao tranh khi còn 40% Máu, nhận Lá Chắn bằng 25% Máu tối đa, duy trì trong 5 giây.",
       "desc_en": "Once per combat at 50% Health, gain a 30% max Health Shield that lasts up to 5 seconds.",
@@ -21400,7 +21403,8 @@
       "stats": {
         "ad": "+15%",
         "ap": "+15",
-        "mr": "+20"
+        "mr": "+20",
+        "ov": "+20%"
       },
       "desc_vi": "Một lần mỗi giao tranh khi còn 40% Máu, nhận Lá Chắn bằng 25% Máu tối đa, duy trì trong 5 giây.",
       "desc_en": "Once per combat at 50% Health, gain a 30% max Health Shield that lasts up to 5 seconds.",
@@ -21458,7 +21462,8 @@
       "stats": {
         "ad": "+15%",
         "ap": "+15",
-        "mr": "+20"
+        "mr": "+20",
+        "ov": "+20%"
       },
       "desc_vi": "Một lần mỗi giao tranh khi còn 40% Máu, nhận Lá Chắn bằng 25% Máu tối đa, duy trì trong 5 giây.",
       "desc_en": "Once per combat at 50% Health, gain a 30% max Health Shield that lasts up to 5 seconds.",
@@ -21516,7 +21521,8 @@
       "stats": {
         "ad": "+15%",
         "ap": "+15",
-        "mr": "+20"
+        "mr": "+20",
+        "ov": "+20%"
       },
       "desc_vi": "Một lần mỗi giao tranh khi còn 40% Máu, nhận Lá Chắn bằng 25% Máu tối đa, duy trì trong 5 giây.",
       "desc_en": "Once per combat at 50% Health, gain a 30% max Health Shield that lasts up to 5 seconds.",
@@ -21574,7 +21580,8 @@
       "stats": {
         "as": "+15%",
         "ad": "+25%",
-        "armor": "+40"
+        "armor": "+40",
+        "ov": "+25%"
       },
       "desc_vi": "50% of the damage the holder receives is instead dealt over 4 seconds as non-lethal damage.",
       "desc_en": "50% of the damage the holder receives is instead dealt over 4 seconds as non-lethal damage.",
@@ -21590,7 +21597,8 @@
       "stats": {
         "as": "+15%",
         "ad": "+25%",
-        "armor": "+40"
+        "armor": "+40",
+        "ov": "+25%"
       },
       "desc_vi": "50% of the damage the holder receives is instead dealt over 4 seconds as non-lethal damage.",
       "desc_en": "50% of the damage the holder receives is instead dealt over 4 seconds as non-lethal damage.",
@@ -21606,7 +21614,8 @@
       "stats": {
         "as": "+15%",
         "ad": "+25%",
-        "armor": "+40"
+        "armor": "+40",
+        "ov": "+25%"
       },
       "desc_vi": "50% of the damage the holder receives is instead dealt over 4 seconds as non-lethal damage.",
       "desc_en": "50% of the damage the holder receives is instead dealt over 4 seconds as non-lethal damage.",
@@ -21622,7 +21631,8 @@
       "stats": {
         "as": "+15%",
         "ad": "+25%",
-        "armor": "+40"
+        "armor": "+40",
+        "ov": "+25%"
       },
       "desc_vi": "50% of the damage the holder receives is instead dealt over 4 seconds as non-lethal damage.",
       "desc_en": "50% of the damage the holder receives is instead dealt over 4 seconds as non-lethal damage.",
@@ -21638,7 +21648,8 @@
       "stats": {
         "as": "+15%",
         "ad": "+25%",
-        "armor": "+40"
+        "armor": "+40",
+        "ov": "+25%"
       },
       "desc_vi": "50% of the damage the holder receives is instead dealt over 4 seconds as non-lethal damage.",
       "desc_en": "50% of the damage the holder receives is instead dealt over 4 seconds as non-lethal damage.",
@@ -21654,7 +21665,8 @@
       "stats": {
         "as": "+15%",
         "ad": "+25%",
-        "armor": "+40"
+        "armor": "+40",
+        "ov": "+25%"
       },
       "desc_vi": "50% of the damage the holder receives is instead dealt over 4 seconds as non-lethal damage.",
       "desc_en": "50% of the damage the holder receives is instead dealt over 4 seconds as non-lethal damage.",
@@ -27713,7 +27725,8 @@
       "icon": "https://assets.tftacademy.com/items/da_hextech_gunblade_o91UUqshXz.png",
       "stats": {
         "ad": "+20%",
-        "ap": "+20"
+        "ap": "+20",
+        "ov": "+15%"
       },
       "desc_vi": "Hồi máu cho đồng minh thấp Máu nhất bằng 20% lượng sát thương gây ra. Hồi Máu Đồng Minh:",
       "desc_en": "Heal the lowest percent Health ally for 20% of damage dealt. Ally Healing: 0",
@@ -27770,7 +27783,8 @@
       "icon": "https://assets.tftacademy.com/items/da_hextech_gunblade_o91UUqshXz.png",
       "stats": {
         "ad": "+20%",
-        "ap": "+20"
+        "ap": "+20",
+        "ov": "+15%"
       },
       "desc_vi": "Hồi máu cho đồng minh thấp Máu nhất bằng 20% lượng sát thương gây ra. Hồi Máu Đồng Minh:",
       "desc_en": "Heal the lowest percent Health ally for 20% of damage dealt. Ally Healing: 0",
@@ -27827,7 +27841,8 @@
       "icon": "https://assets.tftacademy.com/items/da_hextech_gunblade_o91UUqshXz.png",
       "stats": {
         "ad": "+20%",
-        "ap": "+20"
+        "ap": "+20",
+        "ov": "+15%"
       },
       "desc_vi": "Hồi máu cho đồng minh thấp Máu nhất bằng 20% lượng sát thương gây ra. Hồi Máu Đồng Minh:",
       "desc_en": "Heal the lowest percent Health ally for 20% of damage dealt. Ally Healing: 0",
@@ -27884,7 +27899,8 @@
       "icon": "https://assets.tftacademy.com/items/da_hextech_gunblade_o91UUqshXz.png",
       "stats": {
         "ad": "+20%",
-        "ap": "+20"
+        "ap": "+20",
+        "ov": "+15%"
       },
       "desc_vi": "Hồi máu cho đồng minh thấp Máu nhất bằng 20% lượng sát thương gây ra. Hồi Máu Đồng Minh:",
       "desc_en": "Heal the lowest percent Health ally for 20% of damage dealt. Ally Healing: 0",
@@ -27941,7 +27957,8 @@
       "icon": "https://assets.tftacademy.com/items/da_hextech_gunblade_o91UUqshXz.png",
       "stats": {
         "ad": "+20%",
-        "ap": "+20"
+        "ap": "+20",
+        "ov": "+15%"
       },
       "desc_vi": "Hồi máu cho đồng minh thấp Máu nhất bằng 20% lượng sát thương gây ra. Hồi Máu Đồng Minh:",
       "desc_en": "Heal the lowest percent Health ally for 20% of damage dealt. Ally Healing: 0",
@@ -27998,7 +28015,8 @@
       "icon": "https://assets.tftacademy.com/items/da_hextech_gunblade_o91UUqshXz.png",
       "stats": {
         "ad": "+20%",
-        "ap": "+20"
+        "ap": "+20",
+        "ov": "+15%"
       },
       "desc_vi": "Hồi máu cho đồng minh thấp Máu nhất bằng 20% lượng sát thương gây ra. Hồi Máu Đồng Minh:",
       "desc_en": "Heal the lowest percent Health ally for 20% of damage dealt. Ally Healing: 0",
@@ -28055,7 +28073,8 @@
       "icon": "https://assets.tftacademy.com/items/da_hextech_gunblade_o91UUqshXz.png",
       "stats": {
         "ad": "+20%",
-        "ap": "+20"
+        "ap": "+20",
+        "ov": "+15%"
       },
       "desc_vi": "Hồi máu cho đồng minh thấp Máu nhất bằng 20% lượng sát thương gây ra. Hồi Máu Đồng Minh:",
       "desc_en": "Heal the lowest percent Health ally for 20% of damage dealt. Ally Healing: 0",
@@ -51445,7 +51464,8 @@
       "stats": {
         "ap": "+25",
         "armor": "+10",
-        "mr": "+10"
+        "mr": "+10",
+        "ov": "+20%"
       },
       "desc_vi": "Tham gia hạ gục sẽ tăng 20 Sức Mạnh Phép Thuật, Giáp và Kháng Phép cho chủ sở hữu.",
       "desc_en": "Takedowns increase the holder’s Armor, Magic Resist, and Ability Power by 20.",
@@ -51490,7 +51510,8 @@
       "stats": {
         "ap": "+25",
         "armor": "+10",
-        "mr": "+10"
+        "mr": "+10",
+        "ov": "+20%"
       },
       "desc_vi": "Tham gia hạ gục sẽ tăng 20 Sức Mạnh Phép Thuật, Giáp và Kháng Phép cho chủ sở hữu.",
       "desc_en": "Takedowns increase the holder’s Armor, Magic Resist, and Ability Power by 20.",
@@ -51535,7 +51556,8 @@
       "stats": {
         "ap": "+25",
         "armor": "+10",
-        "mr": "+10"
+        "mr": "+10",
+        "ov": "+20%"
       },
       "desc_vi": "Tham gia hạ gục sẽ tăng 20 Sức Mạnh Phép Thuật, Giáp và Kháng Phép cho chủ sở hữu.",
       "desc_en": "Takedowns increase the holder’s Armor, Magic Resist, and Ability Power by 20.",
@@ -51580,7 +51602,8 @@
       "stats": {
         "ap": "+25",
         "armor": "+10",
-        "mr": "+10"
+        "mr": "+10",
+        "ov": "+20%"
       },
       "desc_vi": "Tham gia hạ gục sẽ tăng 20 Sức Mạnh Phép Thuật, Giáp và Kháng Phép cho chủ sở hữu.",
       "desc_en": "Takedowns increase the holder’s Armor, Magic Resist, and Ability Power by 20.",
@@ -51625,7 +51648,8 @@
       "stats": {
         "ap": "+25",
         "armor": "+10",
-        "mr": "+10"
+        "mr": "+10",
+        "ov": "+20%"
       },
       "desc_vi": "Tham gia hạ gục sẽ tăng 20 Sức Mạnh Phép Thuật, Giáp và Kháng Phép cho chủ sở hữu.",
       "desc_en": "Takedowns increase the holder’s Armor, Magic Resist, and Ability Power by 20.",
@@ -51670,7 +51694,8 @@
       "stats": {
         "ap": "+25",
         "armor": "+10",
-        "mr": "+10"
+        "mr": "+10",
+        "ov": "+20%"
       },
       "desc_vi": "Tham gia hạ gục sẽ tăng 20 Sức Mạnh Phép Thuật, Giáp và Kháng Phép cho chủ sở hữu.",
       "desc_en": "Takedowns increase the holder’s Armor, Magic Resist, and Ability Power by 20.",
@@ -51715,7 +51740,8 @@
       "stats": {
         "ap": "+25",
         "armor": "+10",
-        "mr": "+10"
+        "mr": "+10",
+        "ov": "+20%"
       },
       "desc_vi": "Tham gia hạ gục sẽ tăng 20 Sức Mạnh Phép Thuật, Giáp và Kháng Phép cho chủ sở hữu.",
       "desc_en": "Takedowns increase the holder’s Armor, Magic Resist, and Ability Power by 20.",
@@ -52656,7 +52682,8 @@
       "stats": {
         "ad": "+150%",
         "armor": "+30",
-        "mr": "+30"
+        "mr": "+30",
+        "ov": "+30%"
       },
       "desc_vi": "Trao miễn nhiễm Làm Choáng và đòn đánh của chủ sở hữu sẽ Làm Choáng kẻ địch trong 0.8 giây. Tốc Độ Đánh của chủ sở hữu được đặt cố định là 0.5.",
       "desc_en": "Grants immunity to Stuns and the holder's attacks Stun the target for 80% seconds. The holder’s Attack Speed is locked at 50%.",
@@ -52701,7 +52728,8 @@
       "stats": {
         "ad": "+150%",
         "armor": "+30",
-        "mr": "+30"
+        "mr": "+30",
+        "ov": "+30%"
       },
       "desc_vi": "Trao miễn nhiễm Làm Choáng và đòn đánh của chủ sở hữu sẽ Làm Choáng kẻ địch trong 0.8 giây. Tốc Độ Đánh của chủ sở hữu được đặt cố định là 0.5.",
       "desc_en": "Grants immunity to Stuns and the holder's attacks Stun the target for 80% seconds. The holder’s Attack Speed is locked at 50%.",
@@ -52746,7 +52774,8 @@
       "stats": {
         "ad": "+150%",
         "armor": "+30",
-        "mr": "+30"
+        "mr": "+30",
+        "ov": "+30%"
       },
       "desc_vi": "Trao miễn nhiễm Làm Choáng và đòn đánh của chủ sở hữu sẽ Làm Choáng kẻ địch trong 0.8 giây. Tốc Độ Đánh của chủ sở hữu được đặt cố định là 0.5.",
       "desc_en": "Grants immunity to Stuns and the holder's attacks Stun the target for 80% seconds. The holder’s Attack Speed is locked at 50%.",
@@ -52791,7 +52820,8 @@
       "stats": {
         "ad": "+150%",
         "armor": "+30",
-        "mr": "+30"
+        "mr": "+30",
+        "ov": "+30%"
       },
       "desc_vi": "Trao miễn nhiễm Làm Choáng và đòn đánh của chủ sở hữu sẽ Làm Choáng kẻ địch trong 0.8 giây. Tốc Độ Đánh của chủ sở hữu được đặt cố định là 0.5.",
       "desc_en": "Grants immunity to Stuns and the holder's attacks Stun the target for 80% seconds. The holder’s Attack Speed is locked at 50%.",
@@ -52836,7 +52866,8 @@
       "stats": {
         "ad": "+150%",
         "armor": "+30",
-        "mr": "+30"
+        "mr": "+30",
+        "ov": "+30%"
       },
       "desc_vi": "Trao miễn nhiễm Làm Choáng và đòn đánh của chủ sở hữu sẽ Làm Choáng kẻ địch trong 0.8 giây. Tốc Độ Đánh của chủ sở hữu được đặt cố định là 0.5.",
       "desc_en": "Grants immunity to Stuns and the holder's attacks Stun the target for 80% seconds. The holder’s Attack Speed is locked at 50%.",
@@ -52881,7 +52912,8 @@
       "stats": {
         "ad": "+150%",
         "armor": "+30",
-        "mr": "+30"
+        "mr": "+30",
+        "ov": "+30%"
       },
       "desc_vi": "Trao miễn nhiễm Làm Choáng và đòn đánh của chủ sở hữu sẽ Làm Choáng kẻ địch trong 0.8 giây. Tốc Độ Đánh của chủ sở hữu được đặt cố định là 0.5.",
       "desc_en": "Grants immunity to Stuns and the holder's attacks Stun the target for 80% seconds. The holder’s Attack Speed is locked at 50%.",
@@ -52926,7 +52958,8 @@
       "stats": {
         "ad": "+150%",
         "armor": "+30",
-        "mr": "+30"
+        "mr": "+30",
+        "ov": "+30%"
       },
       "desc_vi": "Trao miễn nhiễm Làm Choáng và đòn đánh của chủ sở hữu sẽ Làm Choáng kẻ địch trong 0.8 giây. Tốc Độ Đánh của chủ sở hữu được đặt cố định là 0.5.",
       "desc_en": "Grants immunity to Stuns and the holder's attacks Stun the target for 80% seconds. The holder’s Attack Speed is locked at 50%.",
@@ -58590,7 +58623,8 @@
       "icon": "https://assets.tftacademy.com/items/da_artifact_hellfire_hatchet_MAwUdMHTYd.png",
       "stats": {
         "ad": "+20%",
-        "hp": "+150"
+        "hp": "+150",
+        "ov": "+20%"
       },
       "desc_vi": "Các đòn đánh gây thêm sát thương vật lý bằng 3% Máu tối đa của chủ sở hữu. Với mỗi 1% Máu đã mất, nhận 1% Tốc Độ Đánh.",
       "desc_en": "Attacks deal 3% of the holder's max Health as bonus physical damage. For every 1% missing Health, gain 1.5% Attack Speed.",
@@ -58634,7 +58668,8 @@
       "icon": "https://assets.tftacademy.com/items/da_artifact_hellfire_hatchet_MAwUdMHTYd.png",
       "stats": {
         "ad": "+20%",
-        "hp": "+150"
+        "hp": "+150",
+        "ov": "+20%"
       },
       "desc_vi": "Các đòn đánh gây thêm sát thương vật lý bằng 3% Máu tối đa của chủ sở hữu. Với mỗi 1% Máu đã mất, nhận 1% Tốc Độ Đánh.",
       "desc_en": "Attacks deal 3% of the holder's max Health as bonus physical damage. For every 1% missing Health, gain 1.5% Attack Speed.",
@@ -58678,7 +58713,8 @@
       "icon": "https://assets.tftacademy.com/items/da_artifact_hellfire_hatchet_MAwUdMHTYd.png",
       "stats": {
         "ad": "+20%",
-        "hp": "+150"
+        "hp": "+150",
+        "ov": "+20%"
       },
       "desc_vi": "Các đòn đánh gây thêm sát thương vật lý bằng 3% Máu tối đa của chủ sở hữu. Với mỗi 1% Máu đã mất, nhận 1% Tốc Độ Đánh.",
       "desc_en": "Attacks deal 3% of the holder's max Health as bonus physical damage. For every 1% missing Health, gain 1.5% Attack Speed.",
@@ -58722,7 +58758,8 @@
       "icon": "https://assets.tftacademy.com/items/da_artifact_hellfire_hatchet_MAwUdMHTYd.png",
       "stats": {
         "ad": "+20%",
-        "hp": "+150"
+        "hp": "+150",
+        "ov": "+20%"
       },
       "desc_vi": "Các đòn đánh gây thêm sát thương vật lý bằng 3% Máu tối đa của chủ sở hữu. Với mỗi 1% Máu đã mất, nhận 1% Tốc Độ Đánh.",
       "desc_en": "Attacks deal 3% of the holder's max Health as bonus physical damage. For every 1% missing Health, gain 1.5% Attack Speed.",
@@ -58766,7 +58803,8 @@
       "icon": "https://assets.tftacademy.com/items/da_artifact_hellfire_hatchet_MAwUdMHTYd.png",
       "stats": {
         "ad": "+20%",
-        "hp": "+150"
+        "hp": "+150",
+        "ov": "+20%"
       },
       "desc_vi": "Các đòn đánh gây thêm sát thương vật lý bằng 3% Máu tối đa của chủ sở hữu. Với mỗi 1% Máu đã mất, nhận 1% Tốc Độ Đánh.",
       "desc_en": "Attacks deal 3% of the holder's max Health as bonus physical damage. For every 1% missing Health, gain 1.5% Attack Speed.",
@@ -58810,7 +58848,8 @@
       "icon": "https://assets.tftacademy.com/items/da_artifact_hellfire_hatchet_MAwUdMHTYd.png",
       "stats": {
         "ad": "+20%",
-        "hp": "+150"
+        "hp": "+150",
+        "ov": "+20%"
       },
       "desc_vi": "Các đòn đánh gây thêm sát thương vật lý bằng 3% Máu tối đa của chủ sở hữu. Với mỗi 1% Máu đã mất, nhận 1% Tốc Độ Đánh.",
       "desc_en": "Attacks deal 3% of the holder's max Health as bonus physical damage. For every 1% missing Health, gain 1.5% Attack Speed.",
@@ -58854,7 +58893,8 @@
       "icon": "https://assets.tftacademy.com/items/da_artifact_hellfire_hatchet_MAwUdMHTYd.png",
       "stats": {
         "ad": "+20%",
-        "hp": "+150"
+        "hp": "+150",
+        "ov": "+20%"
       },
       "desc_vi": "Các đòn đánh gây thêm sát thương vật lý bằng 3% Máu tối đa của chủ sở hữu. Với mỗi 1% Máu đã mất, nhận 1% Tốc Độ Đánh.",
       "desc_en": "Attacks deal 3% of the holder's max Health as bonus physical damage. For every 1% missing Health, gain 1.5% Attack Speed.",

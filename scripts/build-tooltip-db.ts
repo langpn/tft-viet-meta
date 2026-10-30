@@ -191,6 +191,10 @@ for (const acItem of academyItems) {
   if (acStats.hp || cEffects.Health) stats.hp = `+${acStats.hp || Math.round(cEffects.Health)}`;
   if (acStats.crit || cEffects.CritChance) stats.crit = `+${acStats.crit || Math.round(cEffects.CritChance * 100)}%`;
   if (acStats.mana || cEffects.Mana) stats.mana = `+${acStats.mana || Math.round(cEffects.Mana)}`;
+  if (acStats.ov || cEffects.StatOmnivamp || cEffects.Omnivamp || cEffects.LifeSteal) {
+    const val = acStats.ov || Math.round((cEffects.StatOmnivamp || cEffects.Omnivamp || cEffects.LifeSteal) * 100);
+    stats.ov = `+${val}%`;
+  }
 
   // Descriptions: Strip {{TFT_Keyword_*}}
   let desc_vi = cleanText(interpolateDescription(cVi.desc, cEffects));
