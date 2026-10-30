@@ -6,6 +6,8 @@
     "metaTitle": "Elderwood Draven",
     "tier": "S",
     "trend": "Rising",
+    "sticker": 2,
+    "situationalTier": null,
     "compStyle": "Fast 9",
     "difficulty": "HARD",
     "mainCarry": {
@@ -74,6 +76,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_Elderwood18_Lifeblossom",
@@ -777,6 +782,8 @@
     "metaTitle": "Alune AP Fast 9",
     "tier": "S",
     "trend": "Rising",
+    "sticker": 2,
+    "situationalTier": null,
     "compStyle": "Fast 9",
     "difficulty": "HARD",
     "mainCarry": {
@@ -845,6 +852,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Morgana",
@@ -1445,6 +1455,8 @@
     "metaTitle": "Elderwood Ezreal Soraka",
     "tier": "A",
     "trend": "Rising",
+    "sticker": 2,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -1513,6 +1525,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemElderwood",
+        "name_en": "Elderwood Emblem",
+        "name_vi": "Ấn Thần Rừng",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_elderwood.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemElderwood",
+      "name_en": "Elderwood Emblem",
+      "name_vi": "Ấn Thần Rừng",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_elderwood.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_Elderwood18_Lifeblossom",
@@ -2239,6 +2269,8 @@
     "metaTitle": "Riftbeast Brambleback",
     "tier": "A",
     "trend": "Falling",
+    "sticker": 3,
+    "situationalTier": null,
     "compStyle": "Fast 9",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -2307,6 +2339,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Sentry",
@@ -2852,6 +2887,8 @@
     "metaTitle": "Ahri Zyra",
     "tier": "A",
     "trend": "Rising",
+    "sticker": 2,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -2919,6 +2956,24 @@
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_spiritvisagerr.png"
         }
       ]
+    },
+    "coreBadges": [
+      {
+        "type": "augment",
+        "id": "DA_BronzeForLifeII",
+        "name_en": "Bronze for Life II",
+        "name_vi": "Tất Tay Bậc Đồng II",
+        "icon": "assets/maps/tft/icons/augments/hexcore/bronzeforlife_iii.png"
+      }
+    ],
+    "mainItem": null,
+    "mainAugment": {
+      "id": "DA_BronzeForLifeII",
+      "name_en": "Bronze for Life II",
+      "name_vi": "Tất Tay Bậc Đồng II",
+      "desc_en": "Your team gains 2.5% Damage Amp and 3 Armor and Magic Resist for each Bronze-tier trait.",
+      "desc_vi": "Đội của bạn nhận 2.5% Khuếch Đại Sát Thương và 3 Giáp & Kháng Phép cho mỗi tộc/hệ bậc Đồng.",
+      "icon": "assets/maps/tft/icons/augments/hexcore/bronzeforlife_iii.png"
     },
     "board": [
       {
@@ -3555,6 +3610,8 @@
     "metaTitle": "Primal Sivir Nidalee",
     "tier": "A",
     "trend": "New",
+    "sticker": 1,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -3623,6 +3680,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_Amumu18",
@@ -4184,6 +4244,8 @@
     "metaTitle": "Solar Karma Reroll",
     "tier": "A",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "2-Cost Reroll",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -4252,6 +4314,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_LeBlanc",
@@ -4832,6 +4897,8 @@
     "metaTitle": "Adaptor Kog'Maw",
     "tier": "A",
     "trend": "Rising",
+    "sticker": 2,
+    "situationalTier": null,
     "compStyle": "3-Cost Reroll",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -4899,6 +4966,24 @@
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_gargoylestoneplate.png"
         }
       ]
+    },
+    "coreBadges": [
+      {
+        "type": "augment",
+        "id": "DA_PortableForge",
+        "name_en": "Portable Forge",
+        "name_vi": "Lò Rèn Thần Thoại",
+        "icon": "assets/maps/tft/icons/augments/hexcore/portableforge2.png"
+      }
+    ],
+    "mainItem": null,
+    "mainAugment": {
+      "id": "DA_PortableForge",
+      "name_en": "Portable Forge",
+      "name_vi": "Lò Rèn Thần Thoại",
+      "desc_en": "Choose 1 of 4 Artifacts. Artifacts are more powerful items with a unique effect.",
+      "desc_vi": "Chọn 1 trong 4 Tạo Tác. Tạo Tác là những trang bị mạnh mẽ hơn với hiệu ứng đặc biệt.",
+      "icon": "assets/maps/tft/icons/augments/hexcore/portableforge2.png"
     },
     "board": [
       {
@@ -5444,6 +5529,8 @@
     "metaTitle": "Juggernaut Ashe",
     "tier": "B",
     "trend": "Rising",
+    "sticker": 2,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "HARD",
     "mainCarry": {
@@ -5512,6 +5599,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Rakan",
@@ -6081,6 +6171,8 @@
     "metaTitle": "Riftbeast Pebbles Reroll",
     "tier": "B",
     "trend": "Falling",
+    "sticker": 3,
+    "situationalTier": null,
     "compStyle": "1-Cost Reroll",
     "difficulty": "EASY",
     "mainCarry": {
@@ -6149,6 +6241,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_Cinderling18",
@@ -6711,6 +6806,8 @@
     "metaTitle": "Nidalee Aphelios",
     "tier": "B",
     "trend": "Falling",
+    "sticker": 3,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -6779,6 +6876,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Varus",
@@ -7348,6 +7448,8 @@
     "metaTitle": "Juggernaut Zyra",
     "tier": "B",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "HARD",
     "mainCarry": {
@@ -7416,6 +7518,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemJuggernaut",
+        "name_en": "Juggernaut Emblem",
+        "name_vi": "Ấn Dũng Sĩ",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_juggernaut.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemJuggernaut",
+      "name_en": "Juggernaut Emblem",
+      "name_vi": "Ấn Dũng Sĩ",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_juggernaut.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Rakan",
@@ -8057,6 +8177,8 @@
     "metaTitle": "Azir Rammus Reroll",
     "tier": "B",
     "trend": "Falling",
+    "sticker": 3,
+    "situationalTier": null,
     "compStyle": "3-Cost Reroll",
     "difficulty": "EASY",
     "mainCarry": {
@@ -8125,6 +8247,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Veigar",
@@ -8632,6 +8757,8 @@
     "metaTitle": "Defender Cassiopeia Reroll",
     "tier": "B",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "3-Cost Reroll",
     "difficulty": "EASY",
     "mainCarry": {
@@ -8700,6 +8827,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemDefender",
+        "name_en": "Defender Emblem",
+        "name_vi": "Ấn Vệ Quân",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_defender.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemDefender",
+      "name_en": "Defender Emblem",
+      "name_vi": "Ấn Vệ Quân",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_defender.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Leona",
@@ -9241,6 +9386,8 @@
     "metaTitle": "Juggernaut AD",
     "tier": "B",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "HARD",
     "mainCarry": {
@@ -9301,6 +9448,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemJuggernaut",
+        "name_en": "Juggernaut Emblem",
+        "name_vi": "Ấn Dũng Sĩ",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_juggernaut.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemJuggernaut",
+      "name_en": "Juggernaut Emblem",
+      "name_vi": "Ấn Dũng Sĩ",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_juggernaut.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Yorick",
@@ -9934,6 +10099,8 @@
     "metaTitle": "Camille Akali Reroll",
     "tier": "B",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "1-Cost Reroll",
     "difficulty": "EASY",
     "mainCarry": {
@@ -10001,6 +10168,24 @@
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_warmogsarmor.png"
         }
       ]
+    },
+    "coreBadges": [
+      {
+        "type": "augment",
+        "id": "DA_EarlyLearnings",
+        "name_en": "Early Learnings",
+        "name_vi": "Bài Học Sơ Khai",
+        "icon": "assets/maps/tft/icons/augments/hexcore/earlylearning_ii.png"
+      }
+    ],
+    "mainItem": null,
+    "mainAugment": {
+      "id": "DA_EarlyLearnings",
+      "name_en": "Early Learnings",
+      "name_vi": "Bài Học Sơ Khai",
+      "desc_en": "Your team gains 3% Attack Damage & Ability Power. This increases by 1% after each player combat. 1-cost champions gain double.",
+      "desc_vi": "Đội của bạn nhận 3% Sức Mạnh Công Kích & Sức Mạnh Phép Thuật. Lượng này sẽ tăng thêm 1% sau mỗi giao tranh người chơi. Tướng 1 vàng nhận gấp đôi.",
+      "icon": "assets/maps/tft/icons/augments/hexcore/earlylearning_ii.png"
     },
     "board": [
       {
@@ -10566,6 +10751,8 @@
     "metaTitle": "Elderwood Teemo Reroll",
     "tier": "B",
     "trend": "Rising",
+    "sticker": 2,
+    "situationalTier": null,
     "compStyle": "2-Cost Reroll",
     "difficulty": "EASY",
     "mainCarry": {
@@ -10634,6 +10821,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_Elderwood18_Lifeblossom",
@@ -11264,6 +11454,8 @@
     "metaTitle": "Juggernaut Caitlyn Reroll",
     "tier": "B",
     "trend": "Rising",
+    "sticker": 2,
+    "situationalTier": null,
     "compStyle": "2-Cost Reroll",
     "difficulty": "EASY",
     "mainCarry": {
@@ -11332,6 +11524,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_GuinsoosRagebladeRadiant",
+        "name_en": "Radiant Guinsoo's Rageblade",
+        "name_vi": "Cuồng Đao Guinsoo Ánh Sáng",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_guinsoosragebladeradiant.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_GuinsoosRagebladeRadiant",
+      "name_en": "Radiant Guinsoo's Rageblade",
+      "name_vi": "Cuồng Đao Guinsoo Ánh Sáng",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_guinsoosragebladeradiant.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Rakan",
@@ -11842,6 +12052,8 @@
     "metaTitle": "Eclipse Kayle Reroll",
     "tier": "B",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "2-Cost Reroll",
     "difficulty": "EASY",
     "mainCarry": {
@@ -11910,6 +12122,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Leona",
@@ -12449,6 +12664,8 @@
     "metaTitle": "Spellweaver Kha'Zix",
     "tier": "C",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "3-Cost Reroll",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -12517,6 +12734,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemSpellweaver",
+        "name_en": "Spellweaver Emblem",
+        "name_vi": "Ấn Thuật Sư",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_spellweaver.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemSpellweaver",
+      "name_en": "Spellweaver Emblem",
+      "name_vi": "Ấn Thuật Sư",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_spellweaver.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_KhaZix",
@@ -13148,6 +13383,8 @@
     "metaTitle": "Summoner Malphite Flex",
     "tier": "C",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -13216,6 +13453,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemExecutioner",
+        "name_en": "Executioner Emblem",
+        "name_vi": "Ấn Đao Phủ",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_executioner.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemExecutioner",
+      "name_en": "Executioner Emblem",
+      "name_vi": "Ấn Đao Phủ",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_executioner.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Yorick",
@@ -13777,6 +14032,8 @@
     "metaTitle": "Elderwood Mama Beak Reroll",
     "tier": "C",
     "trend": "Rising",
+    "sticker": 2,
+    "situationalTier": null,
     "compStyle": "3-Cost Reroll",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -13845,6 +14102,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_Elderwood18_Lifeblossom",
@@ -14420,6 +14680,8 @@
     "metaTitle": "Fae Tristana Reroll",
     "tier": "C",
     "trend": "Rising",
+    "sticker": 2,
+    "situationalTier": null,
     "compStyle": "3-Cost Reroll",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -14488,6 +14750,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemFae",
+        "name_en": "Fae Emblem",
+        "name_vi": "Ấn Tiên Linh",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_fae.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemFae",
+      "name_en": "Fae Emblem",
+      "name_vi": "Ấn Tiên Linh",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_fae.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Kobuko",
@@ -14994,6 +15274,8 @@
     "metaTitle": "Embiggen Fae Xayah",
     "tier": "C",
     "trend": "New",
+    "sticker": 1,
+    "situationalTier": null,
     "compStyle": "1-Cost Reroll",
     "difficulty": "EASY",
     "mainCarry": {
@@ -15061,6 +15343,24 @@
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_adaptivehelm.png"
         }
       ]
+    },
+    "coreBadges": [
+      {
+        "type": "augment",
+        "id": "DA_18_FaeTraitAugment",
+        "name_en": "Embiggen",
+        "name_vi": "Hóa Lớn",
+        "icon": "assets/maps/tft/icons/augments/hexcore/missing-t2.png"
+      }
+    ],
+    "mainItem": null,
+    "mainAugment": {
+      "id": "DA_18_FaeTraitAugment",
+      "name_en": "Embiggen",
+      "name_vi": "Hóa Lớn",
+      "desc_en": "Fae pixies are now larger and grant 50% more Attack Damage and Ability Power. Fae champions gain 10% Attack Damage and Ability Power immediately. Gain a Xayah and a Rakan.",
+      "desc_vi": "Các Pix Tiên Linh giờ trở nên lớn hơn và trao thêm 50% Sức Mạnh Công Kích & Sức Mạnh Phép Thuật. Các tướng Tiên Linh nhận 10% Sức Mạnh Công Kích và Sức Mạnh Phép Thuật ngay lập tức. Nhận 1 Xayah và 1 Rakan.",
+      "icon": "assets/maps/tft/icons/augments/hexcore/missing-t2.png"
     },
     "board": [
       {
@@ -15611,6 +15911,8 @@
     "metaTitle": "Blackthorn Ravager Warwick Reroll",
     "tier": "C",
     "trend": "Falling",
+    "sticker": 3,
+    "situationalTier": null,
     "compStyle": "2-Cost Reroll",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -15679,6 +15981,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemBlackthorn",
+        "name_en": "Blackthorn Emblem",
+        "name_vi": "Ấn Gai Đen",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_blackthorn.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemBlackthorn",
+      "name_en": "Blackthorn Emblem",
+      "name_vi": "Ấn Gai Đen",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_blackthorn.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Akali_AD",
@@ -16266,6 +16586,8 @@
     "metaTitle": "Invoker Morgana",
     "tier": "C",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "Lose Streak",
     "difficulty": "HARD",
     "mainCarry": {
@@ -16334,6 +16656,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemCoven",
+        "name_en": "Coven Emblem",
+        "name_vi": "Ấn Tiên Hắc Ám",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_coven.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemCoven",
+      "name_en": "Coven Emblem",
+      "name_vi": "Ấn Tiên Hắc Ám",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_coven.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Sentry",
@@ -16935,6 +17275,8 @@
     "metaTitle": "Sprykin Veigar Reroll",
     "tier": "C",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "1-Cost Reroll",
     "difficulty": "EASY",
     "mainCarry": {
@@ -17003,6 +17345,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Veigar",
@@ -17523,6 +17868,8 @@
     "metaTitle": "Invoker Nidalee",
     "tier": "C",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -17591,6 +17938,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Sentry",
@@ -18152,6 +18502,8 @@
     "metaTitle": "Vanguard Rengar Reroll",
     "tier": "C",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "3-Cost Reroll",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -18220,6 +18572,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Diana",
@@ -18782,6 +19137,8 @@
     "metaTitle": "LeBlanc Weavers",
     "tier": "C",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "2-Cost Reroll",
     "difficulty": "EASY",
     "mainCarry": {
@@ -18850,6 +19207,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_LeBlanc",
@@ -19207,6 +19567,8 @@
     "metaTitle": "Blackthorn Kha'Zix Reroll",
     "tier": "X",
     "trend": null,
+    "sticker": 7,
+    "situationalTier": null,
     "compStyle": "3-Cost Reroll",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -19275,6 +19637,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemBlackthorn",
+        "name_en": "Blackthorn Emblem",
+        "name_vi": "Ấn Gai Đen",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_blackthorn.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemBlackthorn",
+      "name_en": "Blackthorn Emblem",
+      "name_vi": "Ấn Gai Đen",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_blackthorn.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Azir",
@@ -19712,6 +20092,8 @@
     "metaTitle": "Cursed Crown Kayle Reroll",
     "tier": "X",
     "trend": null,
+    "sticker": 8,
+    "situationalTier": "S",
     "compStyle": "2-Cost Reroll",
     "difficulty": "EASY",
     "mainCarry": {
@@ -19779,6 +20161,24 @@
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_spiritvisagerr.png"
         }
       ]
+    },
+    "coreBadges": [
+      {
+        "type": "augment",
+        "id": "DA_CursedCrown",
+        "name_en": "CursedCrown",
+        "name_vi": "CursedCrown",
+        "icon": "https://assets.tftacademy.com/augments/DA_CursedCrown.webp"
+      }
+    ],
+    "mainItem": null,
+    "mainAugment": {
+      "id": "DA_CursedCrown",
+      "name_en": "CursedCrown",
+      "name_vi": "CursedCrown",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "https://assets.tftacademy.com/augments/DA_CursedCrown.webp"
     },
     "board": [
       {
@@ -20376,6 +20776,8 @@
     "metaTitle": "Elderwood Aphelios",
     "tier": "X",
     "trend": null,
+    "sticker": 9,
+    "situationalTier": "A",
     "compStyle": "4-Cost Fast 8",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -20444,6 +20846,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemElderwood",
+        "name_en": "Elderwood Emblem",
+        "name_vi": "Ấn Thần Rừng",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_elderwood.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemElderwood",
+      "name_en": "Elderwood Emblem",
+      "name_vi": "Ấn Thần Rừng",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_elderwood.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_Elderwood18_Lifeblossom",
@@ -21192,6 +21612,8 @@
     "metaTitle": "Bronze For Life Nidalee",
     "tier": "X",
     "trend": null,
+    "sticker": 9,
+    "situationalTier": "A",
     "compStyle": "4-Cost Fast 8",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -21259,6 +21681,24 @@
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_crownguard.png"
         }
       ]
+    },
+    "coreBadges": [
+      {
+        "type": "augment",
+        "id": "DA_BronzeForLifeII",
+        "name_en": "Bronze for Life II",
+        "name_vi": "Tất Tay Bậc Đồng II",
+        "icon": "assets/maps/tft/icons/augments/hexcore/bronzeforlife_iii.png"
+      }
+    ],
+    "mainItem": null,
+    "mainAugment": {
+      "id": "DA_BronzeForLifeII",
+      "name_en": "Bronze for Life II",
+      "name_vi": "Tất Tay Bậc Đồng II",
+      "desc_en": "Your team gains 2.5% Damage Amp and 3 Armor and Magic Resist for each Bronze-tier trait.",
+      "desc_vi": "Đội của bạn nhận 2.5% Khuếch Đại Sát Thương và 3 Giáp & Kháng Phép cho mỗi tộc/hệ bậc Đồng.",
+      "icon": "assets/maps/tft/icons/augments/hexcore/bronzeforlife_iii.png"
     },
     "board": [
       {
@@ -21697,6 +22137,8 @@
     "metaTitle": "Elderwood Veigar Reroll",
     "tier": "X",
     "trend": null,
+    "sticker": 10,
+    "situationalTier": "B",
     "compStyle": "1-Cost Reroll",
     "difficulty": "EASY",
     "mainCarry": {
@@ -21764,6 +22206,38 @@
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_gargoylestoneplate.png"
         }
       ]
+    },
+    "coreBadges": [
+      {
+        "type": "augment",
+        "id": "DA_PortableForge",
+        "name_en": "Portable Forge",
+        "name_vi": "Lò Rèn Thần Thoại",
+        "icon": "assets/maps/tft/icons/augments/hexcore/portableforge2.png"
+      },
+      {
+        "type": "item",
+        "id": "DA_Artifact_Dawncore",
+        "name_en": "Dawncore",
+        "name_vi": "Lõi Bình Minh",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_dawncore.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_Artifact_Dawncore",
+      "name_en": "Dawncore",
+      "name_vi": "Lõi Bình Minh",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_dawncore.png"
+    },
+    "mainAugment": {
+      "id": "DA_PortableForge",
+      "name_en": "Portable Forge",
+      "name_vi": "Lò Rèn Thần Thoại",
+      "desc_en": "Choose 1 of 4 Artifacts. Artifacts are more powerful items with a unique effect.",
+      "desc_vi": "Chọn 1 trong 4 Tạo Tác. Tạo Tác là những trang bị mạnh mẽ hơn với hiệu ứng đặc biệt.",
+      "icon": "assets/maps/tft/icons/augments/hexcore/portableforge2.png"
     },
     "board": [
       {
@@ -22339,6 +22813,8 @@
     "metaTitle": "Trait Ladder",
     "tier": "X",
     "trend": null,
+    "sticker": 10,
+    "situationalTier": "B",
     "compStyle": "Fast 9",
     "difficulty": "HARD",
     "mainCarry": {
@@ -22390,6 +22866,24 @@
           "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_ravager.png"
         }
       ]
+    },
+    "coreBadges": [
+      {
+        "type": "augment",
+        "id": "DA_TraitLadder",
+        "name_en": "Trait Ladder",
+        "name_vi": "Thứ Hạng Tộc Hệ",
+        "icon": "assets/maps/tft/icons/augments/hexcore/missing-t3.png"
+      }
+    ],
+    "mainItem": null,
+    "mainAugment": {
+      "id": "DA_TraitLadder",
+      "name_en": "Trait Ladder",
+      "name_vi": "Thứ Hạng Tộc Hệ",
+      "desc_en": "Gain a random emblem. After fielding 2 non-unique traits in a player combat, gain a reward. Then increase the number of traits needed and the size of the reward.",
+      "desc_vi": "Nhận 1 ấn ngẫu nhiên. Sau khi triển khai 2 tộc/hệ không độc nhất trong giao tranh người chơi, nhận 1 phần thưởng. Sau đó tăng số tộc/hệ cần thiết và giá trị của phần thưởng.",
+      "icon": "assets/maps/tft/icons/augments/hexcore/missing-t3.png"
     },
     "board": [
       {
@@ -23013,6 +23507,8 @@
     "metaTitle": "Solar Aphelios",
     "tier": "X",
     "trend": null,
+    "sticker": 10,
+    "situationalTier": "B",
     "compStyle": "4-Cost Fast 8",
     "difficulty": "HARD",
     "mainCarry": {
@@ -23081,6 +23577,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemLunar",
+        "name_en": "Lunar Emblem",
+        "name_vi": "Ấn Mặt Trăng",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_lunar.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemLunar",
+      "name_en": "Lunar Emblem",
+      "name_vi": "Ấn Mặt Trăng",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_lunar.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Leona",
@@ -23600,6 +24114,8 @@
     "metaTitle": "Sprykin Fae Rengar",
     "tier": "X",
     "trend": null,
+    "sticker": 10,
+    "situationalTier": "B",
     "compStyle": "3-Cost Reroll",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -23668,6 +24184,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemFae",
+        "name_en": "Fae Emblem",
+        "name_vi": "Ấn Tiên Linh",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_fae.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemFae",
+      "name_en": "Fae Emblem",
+      "name_vi": "Ấn Tiên Linh",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_fae.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Kobuko",
@@ -24165,6 +24699,8 @@
     "metaTitle": "Inferno Lux Ashe",
     "tier": "X",
     "trend": null,
+    "sticker": 11,
+    "situationalTier": "C",
     "compStyle": "4-Cost Fast 8",
     "difficulty": "HARD",
     "mainCarry": {
@@ -24233,6 +24769,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemInferno",
+        "name_en": "Inferno Emblem",
+        "name_vi": "Ấn Hỏa Ngục",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_inferno.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemInferno",
+      "name_en": "Inferno Emblem",
+      "name_vi": "Ấn Hỏa Ngục",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_inferno.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Akali_AD",
@@ -24926,6 +25480,8 @@
     "metaTitle": "Alistar Yunara Reroll",
     "tier": "X",
     "trend": null,
+    "sticker": 11,
+    "situationalTier": "C",
     "compStyle": "2-Cost Reroll",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -24994,6 +25550,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemBlackthorn",
+        "name_en": "Blackthorn Emblem",
+        "name_vi": "Ấn Gai Đen",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_blackthorn.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemBlackthorn",
+      "name_en": "Blackthorn Emblem",
+      "name_vi": "Ấn Gai Đen",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_blackthorn.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_RekSai",
@@ -25525,6 +26099,8 @@
     "metaTitle": "Dark Ritual Elise Reroll",
     "tier": "X",
     "trend": null,
+    "sticker": 11,
+    "situationalTier": "C",
     "compStyle": "2-Cost Reroll",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -25592,6 +26168,24 @@
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_archangelsstaff.png"
         }
       ]
+    },
+    "coreBadges": [
+      {
+        "type": "augment",
+        "id": "DA_18_CovenTraitAugment_LootToAP",
+        "name_en": "Dark Ritual",
+        "name_vi": "Tà Thuật",
+        "icon": "assets/maps/tft/icons/augments/hexcore/missing-t2.png"
+      }
+    ],
+    "mainItem": null,
+    "mainAugment": {
+      "id": "DA_18_CovenTraitAugment_LootToAP",
+      "name_en": "Dark Ritual",
+      "name_vi": "Tà Thuật",
+      "desc_en": "Converting Coven Essence to rewards grants Coven champions Ability Power instead of loot. Gain a Camille, an Elise, and a Caitlyn.",
+      "desc_vi": "Chuyển đổi Tinh Hoa Tiên Hắc Ám thành phần thưởng sẽ cho các tướng Tiên Hắc Ám Sức Mạnh Phép Thuật thay vì báu vật. Nhận 1 Camille, 1 Elise và 1 Caitlyn.",
+      "icon": "assets/maps/tft/icons/augments/hexcore/missing-t2.png"
     },
     "board": [
       {
@@ -26124,6 +26718,8 @@
     "metaTitle": "Unrivaled Kha'Zix Reroll",
     "tier": "X",
     "trend": null,
+    "sticker": 11,
+    "situationalTier": "C",
     "compStyle": "3-Cost Reroll",
     "difficulty": "CONDITIONAL",
     "mainCarry": {
@@ -26191,6 +26787,38 @@
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_spiritvisagerr.png"
         }
       ]
+    },
+    "coreBadges": [
+      {
+        "type": "augment",
+        "id": "DA_18_RivalsAugment",
+        "name_en": "Unrivaled",
+        "name_vi": "Không Đối Thủ",
+        "icon": "assets/maps/tft/icons/augments/hexcore/missing-t2.png"
+      },
+      {
+        "type": "item",
+        "id": "DA_EdgeOfNight",
+        "name_en": "Edge of Night",
+        "name_vi": "Áo Choàng Bóng Tối",
+        "icon": "assets/maps/tft/icons/items/hexcore/tft_item_guardianangel.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_EdgeOfNight",
+      "name_en": "Edge of Night",
+      "name_vi": "Áo Choàng Bóng Tối",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/tft/icons/items/hexcore/tft_item_guardianangel.png"
+    },
+    "mainAugment": {
+      "id": "DA_18_RivalsAugment",
+      "name_en": "Unrivaled",
+      "name_vi": "Không Đối Thủ",
+      "desc_en": "You can field Rengar and Kha'Zix together with no penalties, and they gain bonuses when the other casts. Gain a Rengar and a Kha'Zix.",
+      "desc_vi": "Bạn có thể đưa Rengar và Kha'Zix ra sân cùng nhau mà không bị hạn chế và chúng sẽ nhận thêm sức mạnh khi tướng kia tung chiêu. Nhận 1 Rengar và 1 Kha'Zix.",
+      "icon": "assets/maps/tft/icons/augments/hexcore/missing-t2.png"
     },
     "board": [
       {
@@ -26802,6 +27430,8 @@
     "metaTitle": "Ravager Vanguard Elise Reroll",
     "tier": "X",
     "trend": null,
+    "sticker": 11,
+    "situationalTier": "C",
     "compStyle": "2-Cost Reroll",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -26870,6 +27500,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemSlayer",
+        "name_en": "Ravager Emblem",
+        "name_vi": "Ấn Tàn Phá",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_ravager.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemSlayer",
+      "name_en": "Ravager Emblem",
+      "name_vi": "Ấn Tàn Phá",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_ravager.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Camille",
@@ -27449,6 +28097,8 @@
     "metaTitle": "Double Trouble Cassiopeia Reroll",
     "tier": "X",
     "trend": null,
+    "sticker": 11,
+    "situationalTier": "C",
     "compStyle": "3-Cost Reroll",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -27516,6 +28166,24 @@
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_spiritvisagerr.png"
         }
       ]
+    },
+    "coreBadges": [
+      {
+        "type": "augment",
+        "id": "DA_DoubleTrouble",
+        "name_en": "DoubleTrouble",
+        "name_vi": "DoubleTrouble",
+        "icon": "https://assets.tftacademy.com/augments/DA_DoubleTrouble.webp"
+      }
+    ],
+    "mainItem": null,
+    "mainAugment": {
+      "id": "DA_DoubleTrouble",
+      "name_en": "DoubleTrouble",
+      "name_vi": "DoubleTrouble",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "https://assets.tftacademy.com/augments/DA_DoubleTrouble.webp"
     },
     "board": [
       {
@@ -27924,6 +28592,8 @@
     "metaTitle": "Solar Kayle Reroll",
     "tier": "B",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "2-Cost Reroll",
     "difficulty": "EASY",
     "mainCarry": {
@@ -27991,6 +28661,24 @@
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_spiritvisagerr.png"
         }
       ]
+    },
+    "coreBadges": [
+      {
+        "type": "augment",
+        "id": "DA_PortableForge",
+        "name_en": "Portable Forge",
+        "name_vi": "Lò Rèn Thần Thoại",
+        "icon": "assets/maps/tft/icons/augments/hexcore/portableforge2.png"
+      }
+    ],
+    "mainItem": null,
+    "mainAugment": {
+      "id": "DA_PortableForge",
+      "name_en": "Portable Forge",
+      "name_vi": "Lò Rèn Thần Thoại",
+      "desc_en": "Choose 1 of 4 Artifacts. Artifacts are more powerful items with a unique effect.",
+      "desc_vi": "Chọn 1 trong 4 Tạo Tác. Tạo Tác là những trang bị mạnh mẽ hơn với hiệu ứng đặc biệt.",
+      "icon": "assets/maps/tft/icons/augments/hexcore/portableforge2.png"
     },
     "board": [
       {
@@ -28567,6 +29255,8 @@
     "metaTitle": "Coven Reroll",
     "tier": "C",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "",
     "difficulty": "",
     "mainCarry": {
@@ -28635,6 +29325,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Caitlyn",
@@ -29090,6 +29783,8 @@
     "metaTitle": "Ashe Dragon Fast 9",
     "tier": "C",
     "trend": "Rising",
+    "sticker": 2,
+    "situationalTier": null,
     "compStyle": "Fast 9",
     "difficulty": "HARD",
     "mainCarry": {
@@ -29158,6 +29853,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_Cinderling18",
@@ -29694,6 +30392,8 @@
     "metaTitle": "Dragon Draven",
     "tier": "A",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "Fast 9",
     "difficulty": "HARD",
     "mainCarry": {
@@ -29762,6 +30462,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_Amumu18",
@@ -30408,6 +31111,8 @@
     "metaTitle": "Sprykin Teemo Reroll",
     "tier": "C",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "2-Cost Reroll",
     "difficulty": "EASY",
     "mainCarry": {
@@ -30476,6 +31181,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemSprykin",
+        "name_en": "Sprykin Emblem",
+        "name_vi": "Ấn Tinh Nghịch",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_sprykin.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemSprykin",
+      "name_en": "Sprykin Emblem",
+      "name_vi": "Ấn Tinh Nghịch",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_sprykin.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Rammus",
@@ -30941,6 +31664,8 @@
     "metaTitle": "Invoker Pebbles",
     "tier": "C",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "1-Cost Reroll",
     "difficulty": "EASY",
     "mainCarry": {
@@ -31009,6 +31734,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Sentry",
@@ -31567,6 +32295,8 @@
     "metaTitle": "Lunar Kha'Zix Reroll",
     "tier": "C",
     "trend": "Falling",
+    "sticker": 3,
+    "situationalTier": null,
     "compStyle": "3-Cost Reroll",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -31635,6 +32365,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_Elderwood18_Lifeblossom",
@@ -32314,6 +33047,8 @@
     "metaTitle": "Riftbeast Elder Dragon",
     "tier": "B",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "Fast 9",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -32382,6 +33117,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Sentry",
@@ -33051,6 +33789,8 @@
     "metaTitle": "Invoker Ahri",
     "tier": "A",
     "trend": "Falling",
+    "sticker": 3,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -33119,6 +33859,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_Karma18",
@@ -33672,6 +34415,8 @@
     "metaTitle": "Fae Xayah Reroll",
     "tier": "C",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "1-Cost Reroll",
     "difficulty": "EASY",
     "mainCarry": {
@@ -33740,6 +34485,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemFae",
+        "name_en": "Fae Emblem",
+        "name_vi": "Ấn Tiên Linh",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_fae.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemFae",
+      "name_en": "Fae Emblem",
+      "name_vi": "Ấn Tiên Linh",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_fae.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_Elderwood18_Lifeblossom",
@@ -34320,6 +35083,8 @@
     "metaTitle": "Master Yi Rengar Reroll",
     "tier": "A",
     "trend": "Rising",
+    "sticker": 2,
+    "situationalTier": null,
     "compStyle": "3-Cost Reroll",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -34387,6 +35152,24 @@
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_spectralgauntlet.png"
         }
       ]
+    },
+    "coreBadges": [
+      {
+        "type": "augment",
+        "id": "DA_PortableForge",
+        "name_en": "Portable Forge",
+        "name_vi": "Lò Rèn Thần Thoại",
+        "icon": "assets/maps/tft/icons/augments/hexcore/portableforge2.png"
+      }
+    ],
+    "mainItem": null,
+    "mainAugment": {
+      "id": "DA_PortableForge",
+      "name_en": "Portable Forge",
+      "name_vi": "Lò Rèn Thần Thoại",
+      "desc_en": "Choose 1 of 4 Artifacts. Artifacts are more powerful items with a unique effect.",
+      "desc_vi": "Chọn 1 trong 4 Tạo Tác. Tạo Tác là những trang bị mạnh mẽ hơn với hiệu ứng đặc biệt.",
+      "icon": "assets/maps/tft/icons/augments/hexcore/portableforge2.png"
     },
     "board": [
       {
@@ -34953,6 +35736,8 @@
     "metaTitle": "Rapidfire Aphelios",
     "tier": "B",
     "trend": "Falling",
+    "sticker": 3,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -35021,6 +35806,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemRapidfire",
+        "name_en": "Rapidfire Emblem",
+        "name_vi": "Ấn Liên Kích",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_rapidfire.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemRapidfire",
+      "name_en": "Rapidfire Emblem",
+      "name_vi": "Ấn Liên Kích",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_rapidfire.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Rakan",
@@ -35610,6 +36413,8 @@
     "metaTitle": "Sivir Flex",
     "tier": "B",
     "trend": "Rising",
+    "sticker": 2,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -35678,6 +36483,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemFae",
+        "name_en": "Fae Emblem",
+        "name_vi": "Ấn Tiên Linh",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_fae.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemFae",
+      "name_en": "Fae Emblem",
+      "name_vi": "Ấn Tiên Linh",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_fae.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Shen",
@@ -36241,6 +37064,8 @@
     "metaTitle": "Azir Reroll",
     "tier": "B",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "3-Cost Reroll",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -36309,6 +37134,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_RekSai",
@@ -36774,6 +37602,8 @@
     "metaTitle": "Blackthorn Malphite",
     "tier": "C",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -36842,6 +37672,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemBlackthorn",
+        "name_en": "Blackthorn Emblem",
+        "name_vi": "Ấn Gai Đen",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_blackthorn.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemBlackthorn",
+      "name_en": "Blackthorn Emblem",
+      "name_vi": "Ấn Gai Đen",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_blackthorn.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_Lux18_Base",
@@ -37441,6 +38289,8 @@
     "metaTitle": "Fae Ezreal",
     "tier": "B",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -37509,6 +38359,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemFae",
+        "name_en": "Fae Emblem",
+        "name_vi": "Ấn Tiên Linh",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_fae.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemFae",
+      "name_en": "Fae Emblem",
+      "name_vi": "Ấn Tiên Linh",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_fae.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Ezreal",
@@ -38136,6 +39004,8 @@
     "metaTitle": "Solar Fae Mama Beak",
     "tier": "C",
     "trend": "New",
+    "sticker": 1,
+    "situationalTier": null,
     "compStyle": "3-Cost Reroll",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -38204,6 +39074,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemFae",
+        "name_en": "Fae Emblem",
+        "name_vi": "Ấn Tiên Linh",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_fae.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemFae",
+      "name_en": "Fae Emblem",
+      "name_vi": "Ấn Tiên Linh",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_fae.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_CrimsonRaptor18",
@@ -38686,6 +39574,8 @@
     "metaTitle": "Azir Master Yi Reroll",
     "tier": "C",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "3-Cost Reroll",
     "difficulty": "EASY",
     "mainCarry": {
@@ -38754,6 +39644,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Yorick",
@@ -39161,6 +40054,8 @@
     "metaTitle": "Vanguard Aphelios",
     "tier": "B",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -39229,6 +40124,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Diana",
@@ -39824,6 +40722,8 @@
     "metaTitle": "Elderwood Xayah",
     "tier": "C",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "1-Cost Reroll",
     "difficulty": "EASY",
     "mainCarry": {
@@ -39892,6 +40792,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Rakan",
@@ -40419,6 +41322,8 @@
     "metaTitle": "Inferno Kha'Zix Reroll",
     "tier": "C",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "3-Cost Reroll",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -40487,6 +41392,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Akali_AD",
@@ -40904,6 +41812,8 @@
     "metaTitle": "Primal Nidalee Sivir",
     "tier": "B",
     "trend": "Rising",
+    "sticker": 2,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -40972,6 +41882,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemHunter",
+        "name_en": "Hunter Emblem",
+        "name_vi": "Ấn Thợ Săn",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_hunter.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemHunter",
+      "name_en": "Hunter Emblem",
+      "name_vi": "Ấn Thợ Săn",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_hunter.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_Cinderling18",
@@ -41549,6 +42477,8 @@
     "metaTitle": "Elderwood Blossom",
     "tier": "B",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -41617,6 +42547,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemExecutioner",
+        "name_en": "Executioner Emblem",
+        "name_vi": "Ấn Đao Phủ",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_executioner.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemExecutioner",
+      "name_en": "Executioner Emblem",
+      "name_vi": "Ấn Đao Phủ",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_executioner.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_Elderwood18_Lifeblossom",
@@ -42253,6 +43201,8 @@
     "metaTitle": "Spellweaver Ahri",
     "tier": "B",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -42321,6 +43271,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_Karma18",
@@ -42916,6 +43869,8 @@
     "metaTitle": "Blossom Ahri Ashe",
     "tier": "B",
     "trend": "Falling",
+    "sticker": 3,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "EASY",
     "mainCarry": {
@@ -42984,6 +43939,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_Karma18",
@@ -43566,6 +44524,8 @@
     "metaTitle": "Fae Aphelios",
     "tier": "B",
     "trend": "Rising",
+    "sticker": 2,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -43634,6 +44594,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemElderwood",
+        "name_en": "Elderwood Emblem",
+        "name_vi": "Ấn Thần Rừng",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_elderwood.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemElderwood",
+      "name_en": "Elderwood Emblem",
+      "name_vi": "Ấn Thần Rừng",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_elderwood.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Rakan",
@@ -44179,6 +45157,8 @@
     "metaTitle": "Spellweaver Vanguard Ahri",
     "tier": "B",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -44247,6 +45227,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_Sentinel18",
@@ -44814,6 +45797,8 @@
     "metaTitle": "Aphelios Flex",
     "tier": "B",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -44882,6 +45867,9 @@
         }
       ]
     },
+    "coreBadges": [],
+    "mainItem": null,
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_Diana",
@@ -45419,6 +46407,8 @@
     "metaTitle": "Blackthorn Ahri",
     "tier": "B",
     "trend": null,
+    "sticker": 0,
+    "situationalTier": null,
     "compStyle": "4-Cost Fast 8",
     "difficulty": "MEDIUM",
     "mainCarry": {
@@ -45487,6 +46477,24 @@
         }
       ]
     },
+    "coreBadges": [
+      {
+        "type": "item",
+        "id": "DA_18_EmblemBlackthorn",
+        "name_en": "Blackthorn Emblem",
+        "name_vi": "Ấn Gai Đen",
+        "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_blackthorn.png"
+      }
+    ],
+    "mainItem": {
+      "id": "DA_18_EmblemBlackthorn",
+      "name_en": "Blackthorn Emblem",
+      "name_vi": "Ấn Gai Đen",
+      "desc_en": "",
+      "desc_vi": "",
+      "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_blackthorn.png"
+    },
+    "mainAugment": null,
     "board": [
       {
         "id": "DA_18_RekSai",

@@ -1,11 +1,19 @@
 <script lang="ts">
-  import { resolveChampionIcon, resolveItemIcon } from '$lib/utils/assets';
+  import { resolveChampionIcon, resolveItemIcon, resolveAugmentIcon } from '$lib/utils/assets';
 
-  interface Item {
+  export interface Item {
     id?: string;
     name_vi?: string;
     name_en?: string;
     icon?: string;
+  }
+
+  export interface CoreBadge {
+    type?: 'item' | 'augment';
+    id: string;
+    name_vi?: string;
+    name_en?: string;
+    icon: string;
   }
 
   interface Props {
@@ -15,8 +23,12 @@
     iconUrl?: string;
     cost?: number;
     starLevel?: number;
+    showStars?: boolean;
     items?: Item[];
     trend?: 'Rising' | 'Falling' | 'New' | null;
+    sticker?: number;
+    situationalTier?: 'S' | 'A' | 'B' | 'C' | null;
+    coreBadges?: CoreBadge[];
     emblemIcon?: string;
     size?: 'sm' | 'md' | 'lg' | 'xl';
     showName?: boolean;
@@ -32,8 +44,12 @@
     iconUrl = '',
     cost = 1,
     starLevel = 1,
+    showStars = false,
     items = [],
     trend = null,
+    sticker = 0,
+    situationalTier = null,
+    coreBadges = [],
     emblemIcon = '',
     size = 'md',
     showName = false,
@@ -51,16 +67,6 @@
     5: 'bg-amber-400'
   };
 
-  const costTextColors: Record<number, string> = {
-    0: 'text-slate-400',
-    1: 'text-slate-200',
-    2: 'text-emerald-400',
-    3: 'text-sky-400',
-    4: 'text-fuchsia-400',
-    5: 'text-amber-400'
-  };
-
-  // Increased sizes for high visual impact & readability
   const sizeClasses = {
     sm: 'w-12 h-12',
     md: 'w-16 h-16',
@@ -68,7 +74,6 @@
     xl: 'w-28 h-28'
   };
 
-  // Substantially enlarged item icons for crisp recognition
   const itemSizeClasses = {
     sm: 'w-5 h-5',
     md: 'w-6 h-6',
@@ -77,6 +82,13 @@
   };
 
   const resolvedSrc = $derived(resolveChampionIcon(iconUrl, id));
+
+  function resolveBadgeIcon(badge: CoreBadge): string {
+    if (badge.type === 'augment') {
+      return resolveAugmentIcon(badge.icon, badge.id);
+    }
+    return resolveItemIcon(badge.icon, badge.id);
+  }
 </script>
 
 <!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -116,34 +128,63 @@
       {/if}
     </div>
 
-    <!-- Trend Badge (Rising green arrow, Falling red arrow, New yellow badge) -->
-    {#if trend === 'Rising'}
-      <div class="absolute -top-1.5 -left-1.5 z-30 w-5 h-5 rounded-full bg-emerald-500 border-2 border-black flex items-center justify-center shadow-lg">
+    <!-- Top-Left Badge: Situational Tier Badge (A/B/C in X Tier) OR Trend Badge (Rising / Falling / New) -->
+    {#if situationalTier}
+      <!-- Situational tier badge matching Image 2 row 5 -->
+      <div 
+        class="absolute -top-1.5 -left-1.5 z-30 w-5 h-5 rounded-md border-2 border-black flex items-center justify-center font-black text-[11px] shadow-lg
+        {situationalTier === 'S' ? 'bg-[#FE3E4B] text-white' : 
+         situationalTier === 'A' ? 'bg-[#FF9C00] text-black' : 
+         situationalTier === 'B' ? 'bg-[#FFDD00] text-black' : 
+         'bg-[#63FC0D] text-black'}"
+        title="Bậc gốc: {situationalTier} Tier"
+      >
+        {situationalTier}
+      </div>
+    {:else if trend === 'Rising' || sticker === 2}
+      <div class="absolute -top-1.5 -left-1.5 z-30 w-5 h-5 rounded-full bg-emerald-500 border-2 border-black flex items-center justify-center shadow-lg" title="Rising Trend">
         <svg class="w-3 h-3 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4">
           <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
       </div>
-    {:else if trend === 'Falling'}
-      <div class="absolute -top-1.5 -left-1.5 z-30 w-5 h-5 rounded-full bg-rose-500 border-2 border-black flex items-center justify-center shadow-lg">
+    {:else if trend === 'Falling' || sticker === 3}
+      <div class="absolute -top-1.5 -left-1.5 z-30 w-5 h-5 rounded-full bg-rose-500 border-2 border-black flex items-center justify-center shadow-lg" title="Falling Trend">
         <svg class="w-3 h-3 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4">
           <polyline points="6 9 12 15 18 9"></polyline>
         </svg>
       </div>
-    {:else if trend === 'New'}
-      <div class="absolute -top-1.5 -left-1.5 z-30 w-5 h-5 rounded-full bg-amber-400 border-2 border-black flex items-center justify-center shadow-lg text-[10px] font-black text-black">
+    {:else if trend === 'New' || sticker === 1}
+      <div class="absolute -top-1.5 -left-1.5 z-30 w-5 h-5 rounded-full bg-amber-400 border-2 border-black flex items-center justify-center shadow-lg text-[10px] font-black text-black" title="New Comp">
         +
       </div>
     {/if}
 
-    <!-- Emblem Badge (if equipped with a trait emblem like Elderwood) -->
-    {#if emblemIcon}
-      <div class="absolute -top-2 -right-2 z-30 w-6 h-6 rounded-lg bg-black/95 border border-amber-400/90 p-0.5 shadow-xl">
+    <!-- Single Emblem Icon (legacy fallback) -->
+    {#if emblemIcon && (!coreBadges || coreBadges.length === 0)}
+      <div class="absolute -bottom-2 z-30 w-6 h-6 rounded-md bg-black/95 border-2 border-amber-400/90 p-0.5 shadow-xl">
         <img src={resolveItemIcon(emblemIcon)} alt="" class="w-full h-full object-contain" />
       </div>
     {/if}
 
-    <!-- Star Level Indicator -->
-    {#if starLevel > 1}
+    <!-- Core Items / Emblems / Augments at bottom of hexagon (Matching Screenshot 2 exactly!) -->
+    {#if coreBadges && coreBadges.length > 0}
+      <div class="absolute -bottom-2.5 z-30 flex items-center justify-center gap-1">
+        {#each coreBadges as badge}
+          {@const bSrc = resolveBadgeIcon(badge)}
+          <div 
+            class="w-6 h-6 rounded-md bg-[#0A0D14] border-2 border-white/20 hover:border-amber-400 p-0.5 shadow-xl shadow-black flex items-center justify-center transition-all hover:scale-125"
+            title="{badge.name_vi || badge.name_en}"
+          >
+            {#if bSrc}
+              <img src={bSrc} alt="" class="w-full h-full object-contain rounded-xs" loading="lazy" />
+            {/if}
+          </div>
+        {/each}
+      </div>
+    {/if}
+
+    <!-- Star Level Indicator (Only shown when explicitly requested, NEVER on tier shelf) -->
+    {#if showStars && starLevel > 1}
       <div class="absolute -top-1.5 z-20 flex gap-0.5 px-1.5 py-0.5 rounded-full bg-black/90 border border-amber-400/40 shadow text-[10px] font-black text-amber-300">
         {#each Array(starLevel) as _}
           <span>★</span>
@@ -152,7 +193,7 @@
     {/if}
   </div>
 
-  <!-- 3 Equipped Items under Hexagon (Only shown when showItems is true) -->
+  <!-- 3 Equipped Items under Hexagon (Only shown when showItems is true, e.g. in Modal or Board) -->
   {#if showItems && items && items.length > 0}
     <div class="flex items-center gap-1 -mt-3 z-30">
       {#each items.slice(0, 3) as item}
@@ -178,8 +219,8 @@
 
   <!-- Champion Name Below (Wrap gracefully without truncation) -->
   {#if showName}
-    <span class="mt-1.5 text-xs font-bold tracking-tight text-center max-w-[88px] leading-tight line-clamp-2 {costTextColors[cost] ?? 'text-slate-200'}">
-      {nameVi}
+    <span class="mt-2 text-xs font-bold text-center leading-tight max-w-[80px] break-words text-slate-200 group-hover:text-amber-400 transition-colors">
+      {nameVi || name}
     </span>
   {/if}
 </div>

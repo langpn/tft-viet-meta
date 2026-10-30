@@ -77,6 +77,14 @@ export type CompLevelingCurve = {
   stages: Array<{ stage: string; tip: string }>;
 };
 
+export type CoreBadge = {
+  type: "item" | "augment";
+  id: string;
+  name_en: string;
+  name_vi: string;
+  icon: string;
+};
+
 export type ParsedAcademyComp = {
   id: string;
   slug: string;
@@ -84,6 +92,8 @@ export type ParsedAcademyComp = {
   metaTitle: string;
   tier: "S" | "A" | "B" | "C" | "X";
   trend: Trend;
+  sticker?: number;
+  situationalTier?: "S" | "A" | "B" | "C" | null;
   compStyle: string;
   difficulty: string;
   mainCarry: {
@@ -102,6 +112,9 @@ export type ParsedAcademyComp = {
     icon: string;
     items: LocalizedItem[];
   };
+  coreBadges: CoreBadge[];
+  mainItem?: LocalizedItem | null;
+  mainAugment?: LocalizedAugment | null;
   board: LocalizedUnit[];
   levelingCurve: CompLevelingCurve;
   tips: Array<{ stage: string; tip: string }>;
@@ -489,7 +502,40 @@ export function parseHexCoordinates(boardIndex: number): { row: number; col: num
 export function parseComps(rawGuides: any[]): ParsedAcademyComp[] {
   return rawGuides.map((g) => {
     const tier = (g.tier || "B").toUpperCase() as "S" | "A" | "B" | "C" | "X";
-    const trend = parseTrend(g.sticker ?? 0);
+    const sticker = typeof g.sticker === "number" ? g.sticker : 0;
+    const trend = parseTrend(sticker);
+    let situationalTier: "S" | "A" | "B" | "C" | null = null;
+    if (sticker === 8) situationalTier = "S";
+    else if (sticker === 9) situationalTier = "A";
+    else if (sticker === 10) situationalTier = "B";
+    else if (sticker === 11) situationalTier = "C";
+
+    const coreBadges: CoreBadge[] = [];
+    let mainAugment: LocalizedAugment | null = null;
+    let mainItem: LocalizedItem | null = null;
+
+    if (g.mainAugment && g.mainAugment.apiName) {
+      mainAugment = localizeAugment(g.mainAugment.apiName);
+      coreBadges.push({
+        type: "augment",
+        id: mainAugment.id,
+        name_en: mainAugment.name_en,
+        name_vi: mainAugment.name_vi,
+        icon: mainAugment.icon,
+      });
+    }
+
+    if (g.mainItem && g.mainItem.apiName) {
+      mainItem = localizeItem(g.mainItem.apiName);
+      coreBadges.push({
+        type: "item",
+        id: mainItem.id,
+        name_en: mainItem.name_en,
+        name_vi: mainItem.name_vi,
+        icon: mainItem.icon,
+      });
+    }
+
     const title = g.title || "";
     const metaTitle = g.metaTitle || g.title || "";
     const compStyle = g.style || "";
@@ -648,10 +694,15 @@ export function parseComps(rawGuides: any[]): ParsedAcademyComp[] {
       metaTitle,
       tier,
       trend,
+      sticker,
+      situationalTier,
       compStyle,
       difficulty,
       mainCarry,
       mainTank,
+      coreBadges,
+      mainItem,
+      mainAugment,
       board,
       levelingCurve: {
         earlyComp,

@@ -265,10 +265,14 @@
                     nameVi={comp.mainCarry?.nameVi}
                     iconUrl={comp.mainCarry?.iconUrl}
                     cost={comp.mainCarry?.cost || 4}
-                    starLevel={comp.mainCarry?.starLevel || 2}
+                    starLevel={1}
+                    showStars={false}
                     items={[]} 
                     showItems={false}
                     trend={comp.trend}
+                    sticker={comp.sticker}
+                    situationalTier={comp.situationalTier}
+                    coreBadges={comp.coreBadges || []}
                     size="md"
                     onclick={() => openModal(comp)}
                   />
