@@ -74,6 +74,7 @@ export const GET: RequestHandler = async ({ url }) => {
         nameEn: trait?.name_en || traitId,
         icon: trait?.icon || '',
         games: stats.count,
+        pickRate: games > 0 ? stats.count / games : 0,
         avgPlace: stats.place / stats.count,
         top4Rate: stats.top4 / stats.count,
         winRate: stats.won / stats.count,

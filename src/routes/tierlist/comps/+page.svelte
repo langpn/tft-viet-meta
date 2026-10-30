@@ -20,19 +20,19 @@
   let selectedCompId = $state<string | null>(data.initialCompId || null);
 
   const compStyleOptions = [
-    { value: 'ALL', label: 'Comp Style' },
-    { value: 'Show All', label: 'Show All' },
-    { value: '1-Cost Reroll', label: '1-Cost Reroll' },
-    { value: '2-Cost Reroll', label: '2-Cost Reroll' },
-    { value: '3-Cost Reroll', label: '3-Cost Reroll' },
-    { value: '4-Cost Fast 8', label: '4-Cost Fast 8' },
-    { value: 'Fast 9', label: 'Fast 9' },
-    { value: 'Lose Streak', label: 'Lose Streak' }
+    { value: 'ALL', label: 'Lối Chơi' },
+    { value: 'Show All', label: 'Tất cả lối chơi' },
+    { value: '1-Cost Reroll', label: 'Reroll 1 Vàng' },
+    { value: '2-Cost Reroll', label: 'Reroll 2 Vàng' },
+    { value: '3-Cost Reroll', label: 'Reroll 3 Vàng' },
+    { value: '4-Cost Fast 8', label: 'Lên Cấp 8 Nhanh (Fast 8)' },
+    { value: 'Fast 9', label: 'Lên Cấp 9 Nhanh (Fast 9)' },
+    { value: 'Lose Streak', label: 'Đánh Chuỗi Thua' }
   ];
 
   const setOptions = [
-    { value: 'Set 18', label: 'Set 18' },
-    { value: 'Set 17', label: 'Set 17' }
+    { value: 'Set 18', label: 'Mùa 18' },
+    { value: 'Set 17', label: 'Mùa 17' }
   ];
 
   // Filtering comps by style and multi-search filter chips
@@ -325,11 +325,11 @@
     sublabel: string;
     hasTag?: string;
   }> = {
-    S: { borderColor: 'border-[#FE3E4B]', boxBg: 'bg-[#3D0A10]', textColor: 'text-[#FE3E4B]', sublabel: 'S TIER' },
-    A: { borderColor: 'border-[#FF9C00]', boxBg: 'bg-[#3D1A08]', textColor: 'text-[#FF9C00]', sublabel: 'A TIER' },
-    B: { borderColor: 'border-[#FFDD00]', boxBg: 'bg-[#3D3208]', textColor: 'text-[#FFDD00]', sublabel: 'B TIER' },
-    C: { borderColor: 'border-[#63FC0D]', boxBg: 'bg-[#153608]', textColor: 'text-[#63FC0D]', sublabel: 'C TIER' },
-    X: { borderColor: 'border-[#38BDF8]', boxBg: 'bg-[#082936]', textColor: 'text-[#38BDF8]', sublabel: 'X TIER', hasTag: 'SITUATIONAL' }
+    S: { borderColor: 'border-[#FE3E4B]', boxBg: 'bg-[#3D0A10]', textColor: 'text-[#FE3E4B]', sublabel: 'BẬC S' },
+    A: { borderColor: 'border-[#FF9C00]', boxBg: 'bg-[#3D1A08]', textColor: 'text-[#FF9C00]', sublabel: 'BẬC A' },
+    B: { borderColor: 'border-[#FFDD00]', boxBg: 'bg-[#3D3208]', textColor: 'text-[#FFDD00]', sublabel: 'BẬC B' },
+    C: { borderColor: 'border-[#63FC0D]', boxBg: 'bg-[#153608]', textColor: 'text-[#63FC0D]', sublabel: 'BẬC C' },
+    X: { borderColor: 'border-[#38BDF8]', boxBg: 'bg-[#082936]', textColor: 'text-[#38BDF8]', sublabel: 'BẬC X', hasTag: 'TÌNH HUỐNG (Situational)' }
   };
 </script>
 
@@ -346,12 +346,12 @@
     <!-- Patch & Update Tag -->
     <div class="flex items-center gap-3 text-xs font-bold">
       <div class="px-3.5 py-1 rounded-full bg-[#161B26] border border-white/10 text-white flex items-center gap-2">
-        <span class="text-slate-400">Patch</span>
+        <span class="text-slate-400">Bản Cập Nhật</span>
         <span class="font-black text-amber-400">18.5c</span>
       </div>
 
       <a href="https://tftacademy.com/tierlist/updates/comps" target="_blank" class="text-slate-400 hover:text-amber-400 transition-colors flex items-center gap-1">
-        <span>Last Updated 13 Hours Ago</span>
+        <span>Cập nhật 13 giờ trước</span>
         <ExternalLink class="w-3 h-3 text-amber-400" />
       </a>
     </div>
@@ -380,7 +380,7 @@
         class="flex items-center gap-2 pb-1.5 transition-all text-amber-400 border-b-2 border-amber-400 font-black cursor-pointer"
       >
         <Flame class="w-4 h-4 fill-current" />
-        <span>Comps</span>
+        <span>Đội Hình (Comps)</span>
       </a>
 
       <a 
@@ -389,7 +389,7 @@
         class="flex items-center gap-2 pb-1.5 transition-all text-slate-400 hover:text-white cursor-pointer"
       >
         <Shield class="w-4 h-4" />
-        <span>Items</span>
+        <span>Trang Bị (Items)</span>
       </a>
 
       <a 
@@ -398,7 +398,7 @@
         class="flex items-center gap-2 pb-1.5 transition-all text-slate-400 hover:text-white cursor-pointer"
       >
         <Sparkles class="w-4 h-4" />
-        <span>Augments</span>
+        <span>Lõi Nâng Cấp (Augments)</span>
       </a>
     </div>
 
@@ -416,7 +416,7 @@
         options={compStyleOptions}
         selected={selectedStyle}
         onselect={(val) => (selectedStyle = val)}
-        title="Comp Style ▼"
+        title="Lối Chơi ▼"
         variant="pill"
       />
 
@@ -425,7 +425,7 @@
         options={setOptions}
         selected={selectedSet}
         onselect={(val) => (selectedSet = val)}
-        title="Set 18 ▼"
+        title="Mùa 18 ▼"
         variant="yellow-pill"
       />
     </div>

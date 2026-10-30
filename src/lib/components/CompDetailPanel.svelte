@@ -256,7 +256,7 @@
         <!-- Playstyle & Difficulty Pill -->
         <div class="mt-2.5 flex items-center justify-center gap-1.5 flex-wrap">
           <span class="text-[11px] font-black uppercase tracking-wider text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">
-            PLAYSTYLE: {translatePlaystyle(comp.compStyle)} {comp.difficulty ? `(${translateDifficulty(comp.difficulty)})` : ''}
+            LỐI CHƠI: {translatePlaystyle(comp.compStyle)} {comp.difficulty ? `(${translateDifficulty(comp.difficulty)})` : ''}
           </span>
         </div>
 
@@ -284,7 +284,7 @@
       {#if comp.augments && comp.augments.length > 0}
         <div class="flex flex-col gap-2 pt-2">
           <span class="text-xs font-bold text-slate-400 uppercase tracking-wider text-center">
-            Augments
+            Lõi Nâng Cấp (Augments)
           </span>
           <div class="grid grid-cols-4 gap-2 pt-1 justify-items-center">
             {#each comp.augments.slice(0, 8) as aug}
@@ -303,25 +303,25 @@
         </div>
       {/if}
 
-      <!-- Augment Priority: ECON ➔ ITEMS ➔ COMBAT (Exact Match to Screenshot 4) -->
+      <!-- Augment Priority: KINH TẾ ➔ TRANG BỊ ➔ GIAO TRANH -->
       <div class="flex flex-col gap-2 pt-2 border-t border-white/5">
         <span class="text-xs font-bold text-slate-400 uppercase tracking-wider text-center">
-          Augment Priority
+          Ưu Tiên Lõi (Augment Priority)
         </span>
         <div class="flex items-center justify-center gap-3 text-xs font-black text-slate-300 py-1">
           <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#141824] border border-white/5">
             <Coins class="w-3.5 h-3.5 text-amber-400" />
-            <span class="text-[11px]">ECON</span>
+            <span class="text-[11px]">KINH TẾ</span>
           </div>
           <ChevronRight class="w-3.5 h-3.5 text-slate-500" />
           <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#141824] border border-white/5">
             <Package class="w-3.5 h-3.5 text-sky-400" />
-            <span class="text-[11px]">ITEMS</span>
+            <span class="text-[11px]">TRANG BỊ</span>
           </div>
           <ChevronRight class="w-3.5 h-3.5 text-slate-500" />
           <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#141824] border border-white/5">
             <Swords class="w-3.5 h-3.5 text-rose-400" />
-            <span class="text-[11px]">COMBAT</span>
+            <span class="text-[11px]">GIAO TRANH</span>
           </div>
         </div>
       </div>
@@ -391,7 +391,7 @@
       {#if finalChampions && finalChampions.length > 0}
         <div class="flex flex-col gap-2">
           <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">
-            Final Comp
+            Đội Hình Hoàn Thiện (Final Comp)
           </span>
           <div class="flex flex-wrap items-center gap-3 py-1">
             {#each finalChampions as unit}
@@ -418,7 +418,7 @@
         <!-- Early Units -->
         <div class="p-3.5 rounded-xl bg-[#10131B] border border-[#1D2230] flex flex-col gap-2">
           <span class="text-xs font-bold text-slate-300 uppercase tracking-wider text-center">
-            Early Units
+            Khởi Đầu Đầu Trận (Early Units)
           </span>
           <div class="flex flex-wrap items-center justify-center gap-2 pt-1">
             {#if comp.levelingCurve?.earlyComp && comp.levelingCurve.earlyComp.length > 0}
@@ -442,7 +442,7 @@
         <!-- Item Priority (Directly from comp.carousel matching Screenshot 4!) -->
         <div class="p-3.5 rounded-xl bg-[#10131B] border border-[#1D2230] flex flex-col gap-2">
           <span class="text-xs font-bold text-slate-300 uppercase tracking-wider text-center">
-            Item Priority
+            Thứ Tự Nhặt Đồ (Item Priority)
           </span>
           <div class="flex flex-wrap items-center justify-center gap-1.5 pt-1">
             {#each itemPriority.slice(0, 5) as item, idx}
@@ -466,7 +466,7 @@
         <!-- Flex Units -->
         <div class="p-3.5 rounded-xl bg-[#10131B] border border-[#1D2230] flex flex-col gap-2">
           <span class="text-xs font-bold text-slate-300 uppercase tracking-wider text-center">
-            Flex Units
+            Tướng Linh Hoạt (Flex Units)
           </span>
           <div class="flex flex-wrap items-center justify-center gap-2 pt-1">
             {#if comp.maxCap && comp.maxCap.length > 0}
@@ -494,7 +494,7 @@
         <!-- 28-Hex Board -->
         <div class="flex-1 w-full">
           <div class="text-center text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
-            Positioning Example
+            Sơ Đồ Vị Trí (Positioning Example)
           </div>
           {#if comp.board && comp.board.length > 0}
             <BoardHexMap units={comp.board.map((u: any) => ({
@@ -513,7 +513,7 @@
         <!-- Alt Builds (Directly from comp.altBuildsList matching Screenshot 4!) -->
         <div class="lg:w-36 flex flex-col items-center gap-2 p-3 rounded-xl bg-[#10131B] border border-[#1D2230]">
           <span class="text-xs font-bold text-slate-400 uppercase tracking-wider text-center">
-            Alt Builds
+            Lối Lên Đồ Phụ (Alt Builds)
           </span>
           <div class="flex flex-col gap-3 py-1">
             {#each altBuilds as alt}
@@ -548,7 +548,7 @@
       <div class="flex flex-col gap-3 pt-2">
         <div class="flex items-center justify-center">
           <span class="px-5 py-1 rounded-full bg-[#141824] border border-white/10 text-xs font-black text-slate-300 uppercase tracking-widest shadow-sm">
-            Tips
+            Mẹo Vận Hành & Lời Khuyên (Tips)
           </span>
         </div>
 
@@ -584,12 +584,12 @@
           href="/explorer"
           class="flex items-center gap-1.5 text-xs font-bold text-slate-400 hover:text-amber-400 transition-colors"
         >
-          <span>Open in Builder</span>
+          <span>Mở trong Explorer (Builder)</span>
           <ExternalLink class="w-3.5 h-3.5 text-amber-400" />
         </a>
 
         <label class="flex items-center gap-2 text-xs font-bold text-slate-400 cursor-pointer select-none">
-          <span>Show names</span>
+          <span>Hiện tên tướng</span>
           <input 
             type="checkbox" 
             bind:checked={settingsStore.showNames}

@@ -88,6 +88,7 @@ export const load: PageServerLoad = async ({ fetch }) => {
         nameEn: trait?.name_en || traitId,
         icon: trait?.icon || '',
         games: stats.count,
+        pickRate: games > 0 ? stats.count / games : 0,
         avgPlace: stats.count > 0 ? stats.place / stats.count : 0,
         top4Rate: stats.count > 0 ? stats.top4 / stats.count : 0,
         winRate: stats.count > 0 ? stats.won / stats.count : 0,
@@ -109,9 +110,14 @@ export const load: PageServerLoad = async ({ fetch }) => {
         starUnits,
         items,
         traits
-      }
+      },
+      initialTab: (url.searchParams.get('tab') === 'traits' || url.searchParams.get('tab') === 'items') ? url.searchParams.get('tab') : 'units'
     };
-  } catch (e) {
-    return { initialData: null };
+  } catch (e: any) {
+    console.error('[/explorer/+page.server.ts] Error:', e?.message || e);
+    return { 
+      initialData: null,
+      initialTab: 'units'
+    };
   }
 };

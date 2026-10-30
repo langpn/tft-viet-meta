@@ -124,7 +124,7 @@
               aria-haspopup="true"
               class="flex items-center gap-1 px-3.5 py-1.5 rounded-full {currentPath.startsWith('/tierlist') ? 'bg-amber-400 text-black shadow-md' : isTierlistOpen ? 'bg-white/10 text-white' : 'text-slate-300 hover:text-white hover:bg-white/5'} transition-all cursor-pointer select-none"
             >
-              <span>Tierlist</span>
+              <span>Bảng Xếp Hạng</span>
               <ChevronDown class="w-3 h-3 stroke-[3] transition-transform duration-200 {isTierlistOpen ? 'rotate-180' : ''}" />
             </button>
 
@@ -152,11 +152,11 @@
           </div>
 
           <a href="/learn/new-set" class="px-3 py-1.5 rounded-full {currentPath.startsWith('/learn/new-set') ? 'bg-amber-400 text-black shadow-md' : 'text-slate-300 hover:text-white hover:bg-white/5'} transition-all">
-            Set 18 Info
+            Thông Tin Mùa 18
           </a>
 
           <a href="/explorer" class="px-3 py-1.5 rounded-full {currentPath.startsWith('/explorer') ? 'bg-emerald-400 text-black shadow-md' : 'text-emerald-400 hover:bg-emerald-400/10'} transition-all">
-            Explorer
+            Khám Phá Explorer
           </a>
         </nav>
       </div>
@@ -177,7 +177,7 @@
           href="/tierlist/comps" 
           class="px-4 py-1.5 rounded-full border border-white/20 text-xs font-bold text-slate-200 hover:border-amber-400 hover:text-amber-400 transition-colors"
         >
-          Log in
+          Đăng nhập
         </a>
       </div>
 
@@ -195,11 +195,11 @@
   <!-- Footer (Matching Screenshot 2 bottom line) -->
   <footer class="border-t border-white/5 bg-[#05060A] py-8 text-xs text-slate-500 text-center flex flex-col items-center gap-3">
     <div class="flex items-center gap-4 text-slate-400 font-medium">
-      <a href="/tierlist/comps" class="hover:text-amber-400">Comps</a>
-      <a href="/tierlist/items" class="hover:text-amber-400">Items</a>
-      <a href="/tierlist/augments" class="hover:text-amber-400">Augments</a>
-      <a href="/learn/new-set" class="hover:text-amber-400">Set 18</a>
-      <a href="/explorer" class="hover:text-emerald-400">Explorer</a>
+      <a href="/tierlist/comps" class="hover:text-amber-400">Đội Hình</a>
+      <a href="/tierlist/items" class="hover:text-amber-400">Trang Bị</a>
+      <a href="/tierlist/augments" class="hover:text-amber-400">Lõi Nâng Cấp</a>
+      <a href="/learn/new-set" class="hover:text-amber-400">Mùa 18</a>
+      <a href="/explorer" class="hover:text-emerald-400">Khám Phá Explorer</a>
     </div>
     <p>© 2023 - 2026 TFT ACADEMY. Dữ liệu đối soát tiếng Việt chính thức từ Riot Games & tactics.tools.</p>
   </footer>

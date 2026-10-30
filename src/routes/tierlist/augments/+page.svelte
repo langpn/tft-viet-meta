@@ -48,12 +48,12 @@
     <!-- Patch & Update Tag -->
     <div class="flex items-center gap-3 text-xs font-bold">
       <div class="px-3.5 py-1 rounded-full bg-[#161B26] border border-white/10 text-white flex items-center gap-2">
-        <span class="text-slate-400">Patch</span>
+        <span class="text-slate-400">Bản Cập Nhật</span>
         <span class="font-black text-amber-400">18.5c</span>
       </div>
 
       <a href="https://tftacademy.com/tierlist/updates/comps" target="_blank" class="text-slate-400 hover:text-amber-400 transition-colors flex items-center gap-1">
-        <span>Last Updated 13 Hours Ago</span>
+        <span>Cập nhật 13 giờ trước</span>
         <ExternalLink class="w-3 h-3 text-amber-400" />
       </a>
     </div>
@@ -64,7 +64,7 @@
         <span class="font-black text-black text-xl tracking-wider">T</span>
       </div>
       <h1 class="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white flex items-center gap-2" style="font-family: 'Plus Jakarta Sans', sans-serif;">
-        <span>AUGMENTS</span>
+        <span>LÕI NÂNG CẤP</span>
         <span class="text-amber-400">•</span>
         <span class="text-amber-400">TIERLIST</span>
       </h1>
@@ -81,7 +81,7 @@
         class="flex items-center gap-2 pb-1.5 transition-all text-slate-400 hover:text-white cursor-pointer"
       >
         <Flame class="w-4 h-4" />
-        <span>Comps</span>
+        <span>Đội Hình (Comps)</span>
       </a>
 
       <a 
@@ -90,7 +90,7 @@
         class="flex items-center gap-2 pb-1.5 transition-all text-slate-400 hover:text-white cursor-pointer"
       >
         <Shield class="w-4 h-4" />
-        <span>Items</span>
+        <span>Trang Bị (Items)</span>
       </a>
 
       <a 
@@ -99,7 +99,7 @@
         class="flex items-center gap-2 pb-1.5 transition-all text-amber-400 border-b-2 border-amber-400 font-black cursor-pointer"
       >
         <Sparkles class="w-4 h-4 fill-current" />
-        <span>Augments</span>
+        <span>Lõi Nâng Cấp (Augments)</span>
       </a>
     </div>
   </div>

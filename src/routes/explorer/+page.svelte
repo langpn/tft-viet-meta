@@ -17,6 +17,7 @@
     icon?: string;
     cost?: number;
     starLevel?: number; // 0 = Any, 1 = 1★, 2 = 2★, 3 = 3★
+    tier?: number; // Trait tier breakpoint
     userUnitId?: string; // which filtered champion holds this item
   }
 
@@ -25,9 +26,19 @@
   let selectedPatch = $state('16212');
   let selectedRank = $state('1');
   let minSampleSize = $state(100);
-  let activeTab = $state<'units' | 'traits' | 'items'>('units');
+  let activeTab = $state<'units' | 'traits' | 'items'>((data.initialTab as any) || 'units');
   let splitByStarLevel = $state(false);
   let tableSearchQuery = $state('');
+
+  function selectTab(tab: 'units' | 'traits' | 'items') {
+    activeTab = tab;
+    sortColumn = 'games';
+    if (typeof window !== 'undefined') {
+      const url = new URL(window.location.href);
+      url.searchParams.set('tab', tab);
+      history.replaceState({}, '', url);
+    }
+  }
 
   let selectedFilters = $state<ActiveFilter[]>([]);
   let isLoading = $state(false);
@@ -81,7 +92,7 @@
         return `1-${f.id}`;
       }
       if (f.type === 't') {
-        return `t-${f.id}-1`;
+        return `t-${f.id}-${f.tier || 1}`;
       }
       if (f.type === 'a') {
         return `a-${f.id}-1`;
@@ -158,10 +169,11 @@
       icon: row.icon,
       cost: row.cost || 1,
       starLevel: row.star || 0,
+      tier: row.tier || 1,
       userUnitId: type === 'i' ? (row.unitId || selectedFilters.find(f => f.type === 'u')?.id || '') : undefined
     };
 
-    if (!selectedFilters.some(f => f.id === filterItem.id && f.type === filterItem.type)) {
+    if (!selectedFilters.some(f => f.id === filterItem.id && f.type === filterItem.type && (type !== 't' || f.tier === filterItem.tier))) {
       selectedFilters = [...selectedFilters, filterItem];
       fetchExplorerData();
     }
@@ -279,7 +291,7 @@
   <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-[#1A2E4C] pb-3">
     <div class="flex items-center gap-3">
       <h1 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
-        Stats Explorer
+        Khám Phá Thống Kê (Stats Explorer)
       </h1>
       <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-bold text-emerald-400">
         tactics.tools live
@@ -290,7 +302,7 @@
     <div class="flex items-center gap-3 self-end sm:self-auto text-xs font-bold">
       <!-- Patch Selector -->
       <div class="flex items-center gap-1.5 border-b-2 border-white/40 pb-0.5 hover:border-sky-400 transition-colors">
-        <span class="text-slate-400">Patch</span>
+        <span class="text-slate-400">Bản</span>
         <select 
           bind:value={selectedPatch} 
           onchange={fetchExplorerData}
@@ -304,6 +316,7 @@
 
       <!-- Rank Selector -->
       <div class="flex items-center gap-1.5 border-b-2 border-white/40 pb-0.5 hover:border-sky-400 transition-colors">
+        <span class="text-slate-400">Bậc rank</span>
         <select 
           bind:value={selectedRank} 
           onchange={fetchExplorerData}
@@ -356,13 +369,13 @@
           <!-- Sub Controls (Star Level for Champion, User for Item) -->
           {#if filter.type === 'u'}
             <div class="flex items-center justify-between gap-2 pt-1 border-t border-white/5 text-xs">
-              <span class="text-[11px] text-slate-400 font-medium">Star Level</span>
+              <span class="text-[11px] text-slate-400 font-medium">Số sao</span>
               <select 
                 value={filter.starLevel ?? 0}
                 onchange={(e) => updateStarLevel(idx, Number((e.target as HTMLSelectElement).value))}
                 class="bg-[#0A1628] border border-white/10 rounded-md px-2 py-0.5 text-xs text-amber-400 font-bold focus:outline-none cursor-pointer"
               >
-                <option value={0}>Any</option>
+                <option value={0}>Tất cả sao</option>
                 <option value={1}>1★</option>
                 <option value={2}>2★</option>
                 <option value={3}>3★</option>
@@ -371,13 +384,13 @@
           {:else if filter.type === 'i'}
             {@const filteredChamps = selectedFilters.filter(f => f.type === 'u')}
             <div class="flex items-center justify-between gap-2 pt-1 border-t border-white/5 text-xs">
-              <span class="text-[11px] text-slate-400 font-medium">User</span>
+              <span class="text-[11px] text-slate-400 font-medium">Tướng cầm</span>
               <select 
                 value={filter.userUnitId || ''}
                 onchange={(e) => updateUserUnit(idx, (e.target as HTMLSelectElement).value)}
                 class="bg-[#0A1628] border border-white/10 rounded-md px-2 py-0.5 text-xs text-sky-400 font-bold focus:outline-none cursor-pointer max-w-[130px] truncate"
               >
-                <option value="">Anyone</option>
+                <option value="">Bất kỳ ai</option>
                 {#each filteredChamps as champ}
                   <option value={champ.id}>{champ.nameVi || champ.nameEn}</option>
                 {/each}
@@ -484,17 +497,17 @@
           <!-- Aggregates -->
           {#if explorerData?.summary}
             <div class="flex items-center gap-4 font-extrabold text-xs">
-              <span>Games: <b class="text-white font-black">{formatGames(explorerData.summary.games)}</b></span>
-              <span>Avg.: <b class="text-amber-400 font-black">{explorerData.summary.avgPlace > 0 ? explorerData.summary.avgPlace.toFixed(2) : 'NaN'}</b></span>
+              <span>Số trận: <b class="text-white font-black">{formatGames(explorerData.summary.games)}</b></span>
+              <span>Hạng TB: <b class="text-amber-400 font-black">{explorerData.summary.avgPlace > 0 ? explorerData.summary.avgPlace.toFixed(2) : 'NaN'}</b></span>
               <span>Top 4: <b class="text-emerald-400 font-black">{explorerData.summary.top4Rate > 0 ? (explorerData.summary.top4Rate * 100).toFixed(1) + '%' : 'NaN%'}</b></span>
-              <span>Win: <b class="text-rose-400 font-black">{explorerData.summary.winRate > 0 ? (explorerData.summary.winRate * 100).toFixed(1) + '%' : 'NaN%'}</b></span>
+              <span>Tỷ lệ Thắng: <b class="text-rose-400 font-black">{explorerData.summary.winRate > 0 ? (explorerData.summary.winRate * 100).toFixed(1) + '%' : 'NaN%'}</b></span>
             </div>
           {/if}
         </div>
 
         <!-- Right: Minimum Sample Size Dropdown -->
         <div class="flex items-center gap-2 text-xs font-bold text-slate-300">
-          <span class="text-slate-400">Minimum sample size</span>
+          <span class="text-slate-400">Cỡ mẫu tối thiểu</span>
           <select 
             bind:value={minSampleSize}
             class="bg-[#0B1528] border border-white/20 rounded-md px-2 py-1 text-xs text-white font-extrabold focus:outline-none cursor-pointer"
@@ -511,26 +524,26 @@
       <div class="px-5 pt-3 border-b border-[#1A2E4C] flex items-center gap-7 text-xs font-black tracking-wider">
         <button
           type="button"
-          onclick={() => { activeTab = 'units'; sortColumn = 'games'; }}
+          onclick={() => selectTab('units')}
           class="pb-2.5 transition-all cursor-pointer {activeTab === 'units' ? 'text-sky-400 border-b-2 border-sky-400 font-black' : 'text-slate-400 hover:text-white'}"
         >
-          UNITS
+          TƯỚNG (UNITS)
         </button>
 
         <button
           type="button"
-          onclick={() => { activeTab = 'traits'; sortColumn = 'games'; }}
+          onclick={() => selectTab('traits')}
           class="pb-2.5 transition-all cursor-pointer {activeTab === 'traits' ? 'text-sky-400 border-b-2 border-sky-400 font-black' : 'text-slate-400 hover:text-white'}"
         >
-          TRAITS
+          TỘC / HỆ (TRAITS)
         </button>
 
         <button
           type="button"
-          onclick={() => { activeTab = 'items'; sortColumn = 'games'; }}
+          onclick={() => selectTab('items')}
           class="pb-2.5 transition-all cursor-pointer {activeTab === 'items' ? 'text-sky-400 border-b-2 border-sky-400 font-black' : 'text-slate-400 hover:text-white'}"
         >
-          ITEMS
+          TRANG BỊ (ITEMS)
         </button>
       </div>
 
@@ -542,7 +555,7 @@
           <input 
             type="text" 
             bind:value={tableSearchQuery}
-            placeholder="Search..."
+            placeholder="Lọc kết quả bên dưới (gõ tiếng Việt không dấu)..."
             class="w-full pl-8 pr-3 py-1.5 rounded-lg bg-[#0F1E36] border border-white/10 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-sky-400"
           />
         </div>
@@ -555,7 +568,7 @@
               bind:checked={splitByStarLevel}
               class="w-8 h-4 rounded-full bg-slate-700 checked:bg-sky-400 transition-colors cursor-pointer appearance-none relative before:content-[''] before:absolute before:top-0.5 before:left-0.5 before:w-3 before:h-3 before:rounded-full before:bg-white before:transition-transform checked:before:translate-x-4"
             />
-            <span>Split by star level</span>
+            <span>Chia theo số sao (Split by star)</span>
           </label>
         {/if}
       </div>
@@ -567,7 +580,7 @@
         </div>
       {:else if sortedTableData.length === 0}
         <div class="p-12 text-center text-sm font-medium text-slate-400">
-          No {activeTab} combos with at least {minSampleSize} games played
+          Không có dữ liệu {activeTab === 'units' ? 'tướng' : activeTab === 'traits' ? 'tộc/hệ' : 'trang bị'} nào đạt tối thiểu {minSampleSize} trận đấu
         </div>
       {:else}
         <div class="overflow-x-auto">
@@ -575,23 +588,23 @@
             <thead class="bg-[#081222] text-slate-300 uppercase font-black text-[11px] border-b border-[#1A2E4C] select-none">
               <tr>
                 <th class="p-3 pl-5">
-                  {activeTab === 'units' ? 'Unit' : activeTab === 'traits' ? 'Trait' : 'Item'}
+                  {activeTab === 'units' ? 'Tướng' : activeTab === 'traits' ? 'Tộc / Hệ' : 'Trang Bị'}
                 </th>
                 <th class="p-3 cursor-pointer hover:text-white" onclick={() => toggleSort('games')}>
                   <div class="flex items-center gap-1">
-                    <span>↑ Games</span>
+                    <span>Số trận</span>
                     <ArrowUpDown class="w-3 h-3 text-slate-500" />
                   </div>
                 </th>
                 <th class="p-3 cursor-pointer hover:text-white" onclick={() => toggleSort('pickRate')}>
                   <div class="flex items-center gap-1">
-                    <span>Play rate</span>
+                    <span>Tỷ lệ chơi</span>
                     <ArrowUpDown class="w-3 h-3 text-slate-500" />
                   </div>
                 </th>
                 <th class="p-3 cursor-pointer hover:text-white" onclick={() => toggleSort('avgPlace')}>
                   <div class="flex items-center gap-1">
-                    <span>Place</span>
+                    <span>Hạng TB</span>
                     <ArrowUpDown class="w-3 h-3 text-slate-500" />
                   </div>
                 </th>
@@ -609,7 +622,7 @@
                 </th>
                 <th class="p-3 cursor-pointer hover:text-white" onclick={() => toggleSort('winRate')}>
                   <div class="flex items-center gap-1">
-                    <span>Win%</span>
+                    <span>Thắng%</span>
                     <ArrowUpDown class="w-3 h-3 text-slate-500" />
                   </div>
                 </th>
@@ -617,7 +630,7 @@
               </tr>
             </thead>
             <tbody class="divide-y divide-[#1A2E4C]/50 text-slate-200">
-              {#each sortedTableData.slice(0, 100) as row (row.id || row.itemId || row.nameEn + (row.star ?? ''))}
+              {#each sortedTableData.slice(0, 100) as row, idx (`${activeTab}-${row.id || row.itemId || row.nameEn}-${row.tier ?? idx}-${row.star ?? ''}`)}
                 {@const iconSrc = resolveRowIcon(row)}
                 <tr class="hover:bg-[#122442] transition-colors group">
                   <!-- Entity Column: Icon + Name -->
@@ -655,6 +668,10 @@
                       {#if row.star}
                         <span class="text-amber-400 font-black text-xs shrink-0">
                           {row.star}★
+                        </span>
+                      {:else if activeTab === 'traits' && row.tier !== undefined}
+                        <span class="text-sky-400 font-black text-[11px] px-1.5 py-0.2 rounded bg-sky-400/10 border border-sky-400/20 shrink-0">
+                          Mốc {row.tier}
                         </span>
                       {/if}
                     </div>

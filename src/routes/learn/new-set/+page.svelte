@@ -11,6 +11,16 @@
   let searchQuery = $state('');
 
   const wispCategories = ['All', 'Combat', 'Champion', 'Shop', 'Gold', 'XP', 'Risky', 'Item'];
+  const wispCategoryLabels: Record<string, string> = {
+    All: 'Tất cả',
+    Combat: 'Giao tranh',
+    Champion: 'Tướng',
+    Shop: 'Cửa hàng',
+    Gold: 'Kinh tế',
+    XP: 'Kinh nghiệm',
+    Risky: 'Rủi ro',
+    Item: 'Trang bị'
+  };
 
   const filteredWisps = $derived.by(() => {
     return (data.newSet.wisps || []).filter((w: any) => {
@@ -113,7 +123,7 @@
             onclick={() => (selectedWispCategory = cat)}
             class="px-3 py-1 rounded-lg font-bold transition-all cursor-pointer {selectedWispCategory === cat ? 'bg-emerald-500 text-black' : 'bg-black/40 text-slate-300 hover:text-white'}"
           >
-            {cat}
+            {wispCategoryLabels[cat] || cat}
           </button>
         {/each}
       </div>
