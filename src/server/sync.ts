@@ -80,10 +80,11 @@ export async function runSync(
     retrievedAt,
     { concurrency: 8, retries: 2 },
   );
+  const scopedPreviousSnapshots = previousState.sourceSnapshots.filter((snapshot) =>
+    filterTftAcademyScope([snapshot.url]).includes(snapshot.url),
+  );
   const diff = classifySnapshotDiff(
-    filterTftAcademyScope(previousState.sourceSnapshots.map((snapshot) => snapshot.url)).map(
-      (url) => previousState.sourceSnapshots.find((snapshot) => snapshot.url === url)!,
-    ),
+    scopedPreviousSnapshots,
     sourceSnapshots,
   );
   const changedUrls: SourceDiffManifest = {

@@ -23,8 +23,8 @@ export const TFT_ACADEMY_REFRESH_TARGETS = [
 ] as const;
 
 export function filterTftAcademyScope(urls: string[]): string[] {
-  const allowed = new Set<string>(TFT_ACADEMY_SCOPE);
-  return urls.filter((url) => allowed.has(url));
+  void urls;
+  return [...TFT_ACADEMY_SCOPE];
 }
 
 export function parseSitemapUrls(xml: string): string[] {

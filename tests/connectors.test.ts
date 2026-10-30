@@ -39,6 +39,15 @@ describe("source connectors", () => {
     ]);
   });
 
+  test("returns the complete explicit scope even when sitemap entries are missing", () => {
+    expect(filterTftAcademyScope(["https://tftacademy.com/tierlist/comps"])).toEqual([
+      "https://tftacademy.com/tierlist/comps",
+      "https://tftacademy.com/tierlist/items",
+      "https://tftacademy.com/tierlist/augments",
+      "https://tftacademy.com/learn/new-set",
+    ]);
+  });
+
   test("normalizes Riot catalog records with Vietnamese fallback metadata", () => {
     const catalog = normalizeDataDragonCatalog(
       {
