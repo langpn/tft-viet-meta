@@ -465,7 +465,7 @@
     <div class="flex items-center gap-3 py-1">
       <img
         src="/crown-emblem.webp"
-        alt="TFT Academy Crown"
+        alt=""
         width="56"
         height="37"
         class="h-10 w-auto object-contain drop-shadow-[0_2px_10px_rgba(245,158,11,0.35)] shrink-0"

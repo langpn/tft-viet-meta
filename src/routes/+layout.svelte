@@ -102,7 +102,6 @@
   <meta property="og:locale" content="vi_VN" />
   <meta property="twitter:card" content="summary_large_image" />
 
-
   <!-- Schema.org JSON-LD structured data for Google Search -->
   {@html `<script type="application/ld+json">
   {
