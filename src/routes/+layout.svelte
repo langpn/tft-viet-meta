@@ -102,6 +102,7 @@
   <meta property="og:locale" content="vi_VN" />
   <meta property="twitter:card" content="summary_large_image" />
 
+
   <!-- Schema.org JSON-LD structured data for Google Search -->
   {@html `<script type="application/ld+json">
   {
@@ -122,14 +123,17 @@
       
       <!-- Brand & Patch Info -->
       <div class="flex items-center gap-6">
-        <a href="/" class="flex items-center gap-2.5 group">
-          <!-- Gold TFT Academy Logo Crown -->
-          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-300 via-amber-400 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-400/20 group-hover:scale-105 transition-transform">
-            <span class="font-black text-black text-base tracking-wider">T</span>
-          </div>
-          <span class="font-black text-xl tracking-tight text-white group-hover:text-amber-400 transition-colors">
-            TFT<span class="text-amber-400">Academy</span>
-          </span>
+        <a href="/" class="flex items-center gap-2.5 group" aria-label="TFT Academy Việt Nam - Trang Chủ">
+          <!-- Official TFT Academy Logo (Crown emblem + wordmark) -->
+          <img
+            src="/logo-tft-academy.webp"
+            alt="TFT Academy Việt Nam"
+            width="190"
+            height="28"
+            class="h-7 w-auto max-w-[190px] object-contain group-hover:scale-105 transition-transform duration-200"
+            fetchpriority="high"
+            decoding="async"
+          />
         </a>
 
         <!-- Main Header Nav Tabs (Matching Screenshot 2) -->

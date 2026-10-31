@@ -66,9 +66,15 @@
 
     <!-- Stylized Header Title: Gold Crown Logo + AUGMENTS • TIERLIST -->
     <div class="flex items-center gap-3 py-1">
-      <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-300 via-amber-400 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-400/20 shrink-0">
-        <span class="font-black text-black text-xl tracking-wider">T</span>
-      </div>
+      <img
+        src="/crown-emblem.webp"
+        alt="TFT Academy Crown"
+        width="56"
+        height="37"
+        class="h-10 w-auto object-contain drop-shadow-[0_2px_10px_rgba(245,158,11,0.35)] shrink-0"
+        loading="eager"
+        decoding="async"
+      />
       <h1 class="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white flex items-center gap-2" style="font-family: 'Plus Jakarta Sans', sans-serif;">
         <span>LÕI NÂNG CẤP</span>
         <span class="text-amber-400">•</span>
