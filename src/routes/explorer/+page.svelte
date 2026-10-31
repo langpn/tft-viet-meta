@@ -18,6 +18,7 @@
     cost?: number;
     starLevel?: number; // 0 = Any, 1 = 1★, 2 = 2★, 3 = 3★
     tier?: number; // Trait tier breakpoint
+    pick?: number; // Augment pick slot (0/1/2)
     userUnitId?: string; // which filtered champion holds this item
   }
 
@@ -26,11 +27,11 @@
   let selectedPatch = $state('16212');
   let selectedRank = $state('1');
   let minSampleSize = $state(100);
-  let activeTab = $state<'units' | 'traits' | 'items'>((data.initialTab as any) || 'units');
+  let activeTab = $state<'units' | 'traits' | 'items' | 'augments'>((data.initialTab as any) || 'units');
   let splitByStarLevel = $state(false);
   let tableSearchQuery = $state('');
 
-  function selectTab(tab: 'units' | 'traits' | 'items') {
+  function selectTab(tab: 'units' | 'traits' | 'items' | 'augments') {
     activeTab = tab;
     sortColumn = 'games';
     if (typeof window !== 'undefined') {
@@ -43,6 +44,7 @@
   let selectedFilters = $state<ActiveFilter[]>([]);
   let isLoading = $state(false);
   let error = $state<string | null>(null);
+  let itemError = $state<string | null>(null);
   let explorerData = $state<any>(data.initialData || null);
 
   let sortColumn = $state<string>('games');
@@ -78,24 +80,30 @@
 
   const minSampleOptions = [10, 50, 100, 200, 500, 1000];
 
-  // Convert filter stack into tactics.tools query token string
+  // Convert filter stack into tactics.tools query token string.
+  // Token grammar is fixed by tactics.tools explorer chunk:
+  //   u-<unitId>-<starLevel>   t-<traitId>-<rank>   i-<itemId>-<unitId>-<starLevel>   a-<augId>-<pick>
+  // Items must name the unit holding them; a bare item id returns HTTP 500 from the source.
   const tokenString = $derived.by(() => {
     if (selectedFilters.length === 0) return '0';
+    const firstUnit = selectedFilters.find(f => f.type === 'u');
     return selectedFilters.map(f => {
       if (f.type === 'u') {
         return `u-${f.id}-${f.starLevel ?? 0}`;
       }
       if (f.type === 'i') {
-        if (f.userUnitId) {
-          return `u-${f.userUnitId}-0-${f.id}`;
-        }
-        return `1-${f.id}`;
+        const unitId = f.userUnitId || firstUnit?.id || '';
+        const star = f.userUnitId
+          ? (selectedFilters.find(x => x.type === 'u' && x.id === f.userUnitId)?.starLevel ?? 0)
+          : (firstUnit?.starLevel ?? 0);
+        if (!unitId) return '';
+        return `i-${f.id}-${unitId}-${star}`;
       }
       if (f.type === 't') {
         return `t-${f.id}-${f.tier || 1}`;
       }
       if (f.type === 'a') {
-        return `a-${f.id}-1`;
+        return `a-${f.id}-${f.pick ?? 0}`;
       }
       return '';
     }).filter(Boolean).join('/');
@@ -146,9 +154,17 @@
       icon: item.iconUrl || item.icon,
       cost: item.cost || 1,
       starLevel: 0,
+      pick: 0,
       userUnitId: type === 'i' ? (selectedFilters.find(f => f.type === 'u')?.id || '') : undefined
     };
 
+    // tactics.tools needs a unit on the board before it returns item stats;
+    // a lone item filter returns HTTP 500 from the source.
+    if (type === 'i' && !selectedFilters.some(f => f.type === 'u')) {
+      itemError = 'Chọn một tướng trước — trang bị chỉ có thống kê khi gắn với tướng.';
+      return;
+    }
+    itemError = null;
     if (!selectedFilters.some(f => f.id === filterItem.id && f.type === filterItem.type)) {
       selectedFilters = [...selectedFilters, filterItem];
       fetchExplorerData();
@@ -160,7 +176,12 @@
   }
 
   function addRowToFilter(row: any) {
-    const type: 'u' | 'i' | 't' | 'a' = activeTab === 'units' ? 'u' : activeTab === 'items' ? 'i' : 't';
+    const type: 'u' | 'i' | 't' | 'a' = activeTab === 'units' ? 'u' : activeTab === 'items' ? 'i' : activeTab === 'traits' ? 't' : 'a';
+    if (type === 'i' && !selectedFilters.some(f => f.type === 'u')) {
+      itemError = 'Chọn một tướng trước — trang bị chỉ có thống kê khi gắn với tướng.';
+      return;
+    }
+    itemError = null;
     const filterItem: ActiveFilter = {
       type,
       id: row.id || row.itemId,
@@ -239,6 +260,8 @@
       rawList = explorerData.items || [];
     } else if (activeTab === 'traits') {
       rawList = explorerData.traits || [];
+    } else if (activeTab === 'augments') {
+      rawList = explorerData.augments || [];
     }
 
     // Filter by minSampleSize and search text
@@ -409,6 +432,11 @@
       {/each}
 
       <!-- Next Filter Button Slot (Matching Screenshot 2 & 3: Filter #... ▼) -->
+      {#if itemError}
+        <div class="w-full mb-2 px-3 py-2 rounded-lg bg-amber-500/10 border border-amber-500/30 text-[11px] font-semibold text-amber-300">
+          {itemError}
+        </div>
+      {/if}
       <div class="relative">
         <button
           type="button"
@@ -552,6 +580,14 @@
         >
           TRANG BỊ (ITEMS)
         </button>
+
+        <button
+          type="button"
+          onclick={() => selectTab('augments')}
+          class="pb-2.5 transition-all cursor-pointer {activeTab === 'augments' ? 'text-sky-400 border-b-2 border-sky-400 font-black' : 'text-slate-400 hover:text-white'}"
+        >
+          LÕI NÂNG CẤP (AUGMENTS)
+        </button>
       </div>
 
       <!-- Sub-Bar: Search + Split by star level toggle (Matching Screenshot 2 & 3) -->
@@ -587,7 +623,13 @@
         </div>
       {:else if sortedTableData.length === 0}
         <div class="p-12 text-center text-sm font-medium text-slate-400">
-          Không có dữ liệu {activeTab === 'units' ? 'tướng' : activeTab === 'traits' ? 'tộc/hệ' : 'trang bị'} nào đạt tối thiểu {minSampleSize} trận đấu
+          {#if activeTab === 'items' && selectedFilters.length === 0}
+            Chưa có bộ lọc tướng. Thêm ít nhất 1 tướng vào <span class="text-sky-400 font-bold">Filter</span> để xem thống kê trang bị — tactics.tools chỉ trả dữ liệu trang bị khi đã lọc theo tướng.
+          {:else if activeTab === 'augments'}
+            tactics.tools không trả về dữ liệu lõi (augments = 0) cho bộ lọc hiện tại. Đây là giới hạn từ nguồn, không phải lỗi của trang.
+          {:else}
+            Không có dữ liệu {activeTab === 'units' ? 'tướng' : activeTab === 'traits' ? 'tộc/hệ' : 'trang bị'} nào đạt tối thiểu {minSampleSize} trận đấu
+          {/if}
         </div>
       {:else}
         <div class="overflow-x-auto">
@@ -595,7 +637,7 @@
             <thead class="bg-[#081222] text-slate-300 uppercase font-black text-[11px] border-b border-[#1A2E4C] select-none">
               <tr>
                 <th class="p-3 pl-5">
-                  {activeTab === 'units' ? 'Tướng' : activeTab === 'traits' ? 'Tộc / Hệ' : 'Trang Bị'}
+                  {activeTab === 'units' ? 'Tướng' : activeTab === 'traits' ? 'Tộc / Hệ' : activeTab === 'items' ? 'Trang Bị' : 'Lõi Nâng Cấp'}
                 </th>
                 <th class="p-3 cursor-pointer hover:text-white" onclick={() => toggleSort('games')}>
                   <div class="flex items-center gap-1">
