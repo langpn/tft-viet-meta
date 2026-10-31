@@ -2,7 +2,7 @@
   import HexAvatar from './HexAvatar.svelte';
   import BoardHexMap from './BoardHexMap.svelte';
   import { resolveAugmentIcon, resolveItemIcon, resolveTraitIcon, resolveChampionIcon } from '$lib/utils/assets';
-  import { translatePlaystyle, translateDifficulty, translateStrategyTip } from '$lib/utils/strategy-translator';
+  import { translatePlaystyle, translateDifficulty } from '$lib/utils/strategy-translator';
   import { showTooltip, hideTooltip } from '$lib/utils/tooltip-store.svelte';
   import { settingsStore } from '$lib/utils/settings-store.svelte';
   import { generateRiotTeamCode } from '$lib/utils/team-code';
@@ -582,7 +582,7 @@
         <!-- General Tip Card -->
         {#if comp.augmentsTip}
           <div class="p-4 rounded-xl bg-[#10131B] border border-[#1D2230] text-xs leading-relaxed text-slate-200 shadow-md">
-            {translateStrategyTip(comp.augmentsTip)}
+            {comp.augmentsTip}
           </div>
         {/if}
 
@@ -597,7 +597,7 @@
                   </span>
                 </div>
                 <p class="text-xs text-slate-300 leading-relaxed font-normal">
-                  {translateStrategyTip(step.tip)}
+                  {step.tip}
                 </p>
               </div>
             {/each}

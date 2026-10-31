@@ -7,7 +7,7 @@
           "name_en": "Thief's Gloves",
           "name_vi": "Găng Đạo Tặc",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Mỗi vòng đấu: Mang 2 trang bị ngẫu nhiên\r\n\r\n<Rules>[Tốn 3 ô trang bị.]</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_thiefsgloves.png"
         },
         {
@@ -15,7 +15,7 @@
           "name_en": "Gargoyle Stoneplate",
           "name_vi": "Thú Tượng Thạch Giáp",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Tăng <TFTCurveTable row=\"ArmorPerTargetingEnemy\"/> Giáp và <TFTCurveTable row=\"MRPerTargetingEnemy\"/> Kháng Phép với mỗi kẻ địch đang nhắm vào chủ sở hữu.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_gargoylestoneplate.png"
         },
         {
@@ -23,7 +23,7 @@
           "name_en": "Spear of Shojin",
           "name_vi": "Ngọn Giáo Shojin",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Các đòn đánh giúp hồi lại <TFTCurveTable row=\"ManaPerAttack\"/> Năng Lượng.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_spearofshojin.png"
         },
         {
@@ -31,7 +31,7 @@
           "name_en": "Rabadon's Deathcap",
           "name_vi": "Mũ Phù Thủy Rabadon",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "<Rules>Chiếc mũ này có thể giúp bạn xoay chuyển cả thế giới.</>{ItemTags.RabadonsDeathcap.DeadlierCapsStacks}",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_rabadonsdeathcap.png"
         },
         {
@@ -39,7 +39,7 @@
           "name_en": "Deathblade",
           "name_vi": "Kiếm Tử Thần",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "<rules>Đem tới sự yên bình vĩnh hằng cho người mang - và cả những kẻ phải đối đầu với nó.</>{ItemTags.Deathblade.DeadlierBladeStacks}",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_deathblade.png"
         },
         {
@@ -47,7 +47,7 @@
           "name_en": "Adaptive Helm",
           "name_vi": "Mũ Thích Nghi",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận thêm <TFTCurveTable row=\"ManaMultiplierFromAllSources\" format=\"percentMinusOne\"/> Năng Lượng từ mọi nguồn. Chủ sở hữu nhận thêm hiệu ứng tùy theo Vai Trò:\r\n\r\nĐỡ Đòn và Đấu Sĩ: Nhận <TFTCurveTable row=\"ArmorForTanksAndFighters\"/> Giáp và Kháng Phép.\r\n\r\nCác Vai Trò khác: Nhận <TFTCurveTable row=\"ADForOthers\" format=\"percent\"/> Sức Mạnh Công Kích và Sức Mạnh Phép Thuật.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_adaptivehelm.png"
         },
         {
@@ -55,7 +55,7 @@
           "name_en": "Void Staff",
           "name_vi": "Trượng Hư Vô",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Sát thương Kỹ Năng và Đòn Đánh sẽ gây <TFTCurveTable row=\"ShredPercent\"/>% <Keyword>Cào Xé</> lên mục tiêu trong <TFTCurveTable row=\"ShredDuration\"/> giây. Hiệu ứng này không cộng dồn.\r\n\r\n<rules>Cào Xé: Giảm Kháng Phép</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_voidstaff.png"
         },
         {
@@ -63,7 +63,7 @@
           "name_en": "Giant Slayer",
           "name_vi": "Diệt Khổng Lồ",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận thêm <TFTCurveTable row=\"AmpRatioAgainstTanks\" format=\"percent\"/> Khuếch Đại Sát Thương khi đánh Tướng Đỡ Đòn.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_madredsbloodrazor.png"
         }
       ],
@@ -73,7 +73,7 @@
           "name_en": "Bramble Vest",
           "name_vi": "Áo Choàng Gai",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận <TFTCurveTable row=\"MaxHealthMultiplier\" format=\"percentMinusOne\"/> Máu tối đa.\r\n\r\nGiảm <TFTCurveTable row=\"AADamageReduction\" format=\"invertedPercent\"/> sát thương từ đòn đánh. Khi bị trúng đòn đánh bất kỳ, gây <TFTCurveTable row=\"MagicDamageWhenHit\" style=\"colorMagic\"/> <colorMagic>sát thương phép</> lên tất cả kẻ địch liền kề.\r\n\r\n<Rules>Hồi chiêu: </><TFTCurveTable row=\"Cooldown\" style=\"Rules\"/> <Rules>giây</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_bramblevest.png"
         },
         {
@@ -81,7 +81,7 @@
           "name_en": "Protector's Vow",
           "name_vi": "Lời Thề Hộ Vệ",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Bắt đầu giao tranh: Nhận <TFTCurveTable row=\"StartingMana\"/> Năng Lượng.\r\n\r\nKhi còn <TFTCurveTable row=\"Proc%HealthThreshold\" format=\"percent\"/> Máu, nhận <TFTCurveTable row=\"ProcGainMana\"/> Năng Lượng và một Lá Chắn tương đương <TFTCurveTable row=\"ProcShield%MaxHealth\" format=\"percent\"/> Máu tối đa.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_frozenheart.png"
         },
         {
@@ -89,7 +89,7 @@
           "name_en": "Infinity Edge",
           "name_vi": "Vô Cực Kiếm",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận <Keyword>Chuẩn Xác</>.\r\n\r\n<Rules>Chuẩn Xác: Sát thương kỹ năng có thể chí mạng. Chỉ số Chuẩn Xác cộng thêm tăng 10% Sát Thương Chí Mạng.</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_infinityedge.png"
         },
         {
@@ -97,7 +97,7 @@
           "name_en": "Striker's Flail",
           "name_vi": "Chùy Đoản Côn",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Đòn Chí Mạng sẽ cho <TFTCurveTable row=\"DABuff\" format=\"percent\"/> Khuếch Đại Sát Thương trong <TFTCurveTable row=\"BuffDuration\"/> giây, cộng dồn tối đa <TFTCurveTable row=\"MaxStacks\"/> lần.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_powergauntlet.png"
         },
         {
@@ -105,7 +105,7 @@
           "name_en": "Red Buff",
           "name_vi": "Bùa Đỏ",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Đòn Đánh và Kỹ Năng gây <Keyword>Thiêu Đốt</> <TFTCurveTable row=\"Burn\"/>% và <Keyword>Vết Thương Sâu</> <TFTCurveTable row=\"Wound\"/>% lên kẻ địch trong <TFTCurveTable row=\"Duration\"/> giây.\r\n\r\n<rules>Thiêu Đốt: Gây sát thương chuẩn mỗi giây theo Máu tối đa của mục tiêu</>\r\n<rules>Vết Thương Sâu: Giảm hồi máu nhận được</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_rapidfirecannon.png"
         },
         {
@@ -113,7 +113,7 @@
           "name_en": "Bloodthirster",
           "name_vi": "Huyết Kiếm",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Một lần mỗi giao tranh khi còn <TFTCurveTable row=\"ThresholdMaxHealthRatio\" format=\"percent\"/> Máu, nhận Lá Chắn bằng <TFTCurveTable row=\"ShieldMaxHealthRatio\" format=\"percent\"/> Máu tối đa, duy trì trong <TFTCurveTable row=\"Duration\"/> giây.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_bloodthirster.png"
         },
         {
@@ -121,7 +121,7 @@
           "name_en": "Evenshroud",
           "name_vi": "Giáp Vai Nguyệt Thần",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "<Keyword>Phân Tách</> <TFTCurveTable row=\"SunderPercent\"/>% kẻ địch trong vòng <TFTCurveTable row=\"HexRange\"/> ô. Nhận <TFTCurveTable row=\"ArmorOnBattleStart\"/> Giáp và Kháng Phép trong <TFTCurveTable row=\"OnBattleStartEffectDuration\"/> giây đầu tiên của giao tranh.\r\n\r\n<Rules>Phân Tách: Giảm Giáp</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_spectralgauntlet.png"
         },
         {
@@ -129,7 +129,7 @@
           "name_en": "Ionic Spark",
           "name_vi": "Nỏ Sét",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "<Keyword>Cào Xé</> <TFTCurveTable row=\"ShredPercent\" format=\"percent\"/> kẻ địch trong vòng <TFTCurveTable row=\"HexRange\"/> ô. Khi kẻ địch sử dụng Kỹ Năng, gây sát thương phép tương đương <TFTCurveTable row=\"EnemyCastManaAsDamagePercent\" format=\"percent\"/> Năng Lượng đã tiêu hao.\r\n\r\n<rules>Cào Xé: Giảm Kháng Phép</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_ionicspark.png"
         },
         {
@@ -137,7 +137,7 @@
           "name_en": "Last Whisper",
           "name_vi": "Cung Xanh",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Sát thương Kỹ Năng và Đòn Đánh sẽ gây <TFTCurveTable row=\"SunderPercent\"/>% <Keyword>Phân Tách</> lên mục tiêu trong <TFTCurveTable row=\"SunderDuration\"/> giây. Hiệu ứng này không cộng dồn.\r\n\r\n<Rules>Phân Tách: Giảm Giáp</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_lastwhisper.png"
         },
         {
@@ -145,7 +145,7 @@
           "name_en": "Spirit Visage",
           "name_vi": "Giáp Tâm Linh",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Hồi lại <TFTCurveTable row=\"MissingHealthRegen\"/>% Máu đã mất mỗi giây.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_spiritvisagerr.png"
         },
         {
@@ -153,7 +153,7 @@
           "name_en": "Morellonomicon",
           "name_vi": "Quỷ Thư Morello",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Đòn Đánh và Kỹ Năng gây <Keyword>Thiêu Đốt</> <TFTCurveTable row=\"BurnPercent\"/>% và <Keyword>Vết Thương Sâu</> <TFTCurveTable row=\"WoundPercent\"/>% lên kẻ địch trong <TFTCurveTable row=\"BurnAndWoundDuration\"/> giây.\r\n\r\n<rules>Thiêu Đốt: Gây sát thương chuẩn mỗi giây theo Máu tối đa của mục tiêu.</>\r\n<rules>Vết Thương Sâu: Giảm hồi máu nhận được.</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_morellonomicon.png"
         },
         {
@@ -161,7 +161,7 @@
           "name_en": "Warmog's Armor",
           "name_vi": "Giáp Máu Warmog",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận <TFTCurveTable row=\"HealthMaxMultiplier\" format=\"percentMinusOne\"/> Máu tối đa.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_warmogsarmor.png"
         },
         {
@@ -169,7 +169,7 @@
           "name_en": "Crownguard",
           "name_vi": "Vương Miện Hoàng Gia",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Bắt Đầu Giao Tranh: Nhận một lá chắn bằng <TFTCurveTable row=\"MaxHealthShieldPercent\"/>% Máu tối đa trong <TFTCurveTable row=\"ShieldDuration\"/> giây.\r\nKhi lá chắn hết hiệu lực, nhận thêm <TFTCurveTable row=\"AbilityPowerOnShieldExpire\"/>% Sức Mạnh Phép Thuật.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_crownguard.png"
         },
         {
@@ -177,7 +177,7 @@
           "name_en": "Sunfire Cape",
           "name_vi": "Áo Choàng Lửa",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận <TFTCurveTable row=\"MaxHealthMultiplier\" format=\"percentMinusOne\"/> Máu tối đa.\r\n\r\nMỗi <TFTCurveTable row=\"BurnWoundFrequency\"/> giây, gây <Keyword>Thiêu Đốt</> <TFTCurveTable row=\"BurnPercent\"/>% và <Keyword>Vết Thương Sâu</> <TFTCurveTable row=\"WoundPercent\"/>% lên 1 kẻ địch trong vòng 2 ô trong <TFTCurveTable row=\"BurnWoundDuration\"/> giây.\r\n\r\n<Rules>Thiêu Đốt: Gây sát thương chuẩn mỗi giây theo Máu tối đa của mục tiêu.</>\r\n<Rules>Vết Thương Sâu: Giảm hồi máu.</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_redbuff.png"
         },
         {
@@ -185,7 +185,7 @@
           "name_en": "Steadfast Heart",
           "name_vi": "Trái Tim Kiên Định",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận <TFTCurveTable row=\"LowHealthIncDmgMod\"/>% Chống Chịu. Khi còn hơn <TFTCurveTable row=\"MaxHealthThreshold\" format=\"percent\"/> Máu, thay vào đó nhận <TFTCurveTable row=\"HighHealthIncomingDmgMod\"/>% Chống Chịu.{Augment.Variant.HeartofSteel.Tooltip}",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_nightharvester.png"
         },
         {
@@ -193,7 +193,7 @@
           "name_en": "Sterak's Gage",
           "name_vi": "Móng Vuốt Sterak",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Khi còn <TFTCurveTable row=\"MaxHealthProcThreshold\" format=\"percent\"/> Máu, nhận Lá Chắn bằng <TFTCurveTable row=\"ShieldMaxHealthRatio\" format=\"percent\"/> Máu tối đa của chủ sở hữu, giảm dần trong vòng <TFTCurveTable row=\"Duration\"/> giây.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_steraksgage.png"
         },
         {
@@ -201,7 +201,7 @@
           "name_en": "Hand of Justice",
           "name_vi": "Bàn Tay Công Lý",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận 2 hiệu ứng:\r\n• <TFTCurveTable row=\"ADBase\" format=\"percent\"/> Sức Mạnh Công Kích và <TFTCurveTable row=\"APBase\" format=\"percent\"/> Sức Mạnh Phép Thuật.\r\n• <TFTCurveTable row=\"OmnivampBase\" format=\"percent\"/> Hút Máu Toàn Phần.\r\n\r\nKhi còn trên <TFTCurveTable row=\"HealthThreshold\" format=\"percent\"/> máu, nhận gấp đôi lượng Sức Mạnh Công Kích và Sức Mạnh Phép Thuật. Khi còn dưới <TFTCurveTable row=\"HealthThreshold\" format=\"percent\"/> Máu, nhận gấp đôi lượng Hút Máu Toàn Phần.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_unstableconcoction.png"
         },
         {
@@ -209,7 +209,7 @@
           "name_en": "Dragon's Claw",
           "name_vi": "Vuốt Rồng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận <TFTCurveTable row=\"MaxHealthMultiplier\" format=\"percentMinusOne\"/> Máu tối đa. Mỗi 2 giây, hồi <TFTCurveTable row=\"PercentHealthHeal\" format=\"percent\" precision=\"1\"/> Máu tối đa.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_dragonsclaw.png"
         },
         {
@@ -217,7 +217,7 @@
           "name_en": "Blue Buff",
           "name_vi": "Bùa Xanh",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận thêm <TFTCurveTable row=\"ADAPMultiplier\" format=\"percentMinusOne\"/> Sức Mạnh Công Kích và Sức Mạnh Phép Thuật từ mọi nguồn.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_bluebuff.png"
         },
         {
@@ -225,7 +225,7 @@
           "name_en": "Archangel's Staff",
           "name_vi": "Quyền Trượng Thiên Thần",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Bắt đầu giao tranh: Nhận <TFTCurveTable row=\"APStack\"/>% Sức Mạnh Phép Thuật mỗi <TFTCurveTable row=\"Period\"/> giây trong giao tranh.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_archangelsstaff.png"
         },
         {
@@ -233,7 +233,7 @@
           "name_en": "Hextech Gunblade",
           "name_vi": "Kiếm Súng Hextech",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Hồi máu cho đồng minh thấp Máu nhất bằng <TFTCurveTable row=\"DamageToHealRatio\" format=\"percent\"/> lượng sát thương gây ra.\r\n\r\nHồi Máu Đồng Minh: <TFTAttribute attributeID=\"TFTCalculationAttributes.HealthCalc1\" precision=\"0\"/>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_hextechgunblade.png"
         },
         {
@@ -241,7 +241,7 @@
           "name_en": "Titan's Resolve",
           "name_vi": "Quyền Năng Khổng Lồ",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận <TFTCurveTable row=\"ADAPPerStack\" format=\"percent\"/> SMCK và SMPT khi tấn công hoặc nhận sát thương, cộng dồn tối đa <TFTCurveTable row=\"MaxStacks\"/> lần.\r\n\r\nỞ cộng dồn tối đa, nhận <TFTCurveTable row=\"DamageAmpFullStacks\"/>% Khuếch Đại Sát Thương và trở nên không thể cản phá.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_titansresolve.png"
         },
         {
@@ -249,7 +249,7 @@
           "name_en": "Edge of Night",
           "name_vi": "Áo Choàng Bóng Tối",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Khi còn <TFTCurveTable row=\"HPPercentageToProcAt\" format=\"percent\"/> Máu, trở nên không thể bị nhắm tới trong thoáng chốc, loại bỏ các hiệu ứng bất lợi và hồi lại <TFTCurveTable row=\"MissingHPHeal\" format=\"percent\"/> Máu đã mất.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_guardianangel.png"
         },
         {
@@ -257,7 +257,7 @@
           "name_en": "Quicksilver",
           "name_vi": "Áo Choàng Thủy Ngân",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Bắt đầu giao tranh: Không Thể Cản Phá trong <TFTCurveTable row=\"EffectDuration\"/> giây.\r\n\r\nNhận <TFTCurveTable row=\"StacksToAtkSpd\" format=\"percentMinusOne\"/> Tốc Độ Đánh cộng dồn mỗi giây.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_quicksilver.png"
         },
         {
@@ -265,7 +265,7 @@
           "name_en": "Kraken's Fury",
           "name_vi": "Thịnh Nộ Thủy Quái",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Đòn đánh cho <TFTCurveTable row=\"ADCounter\"/>% Sức Mạnh Công Kích cộng dồn, tối đa 15 đòn đánh. Sau <TFTCurveTable row=\"MaxStacks\"/> đòn đánh, nhận <TFTCurveTable row=\"Bonus_AS\" format=\"percent\"/> Tốc Độ Đánh.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_krakenslayer.png"
         },
         {
@@ -273,7 +273,7 @@
           "name_en": "Guinsoo's Rageblade",
           "name_vi": "Cuồng Đao Guinsoo",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận <TFTCurveTable row=\"ASCounter\"/>% Tốc Độ Đánh cộng dồn mỗi giây.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_guinsoosrageblade.png"
         },
         {
@@ -281,7 +281,7 @@
           "name_en": "Jeweled Gauntlet",
           "name_vi": "Găng Bảo Thạch",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận <Keyword>Chuẩn Xác</>.\r\n\r\n<Rules>Chuẩn Xác: Sát thương kỹ năng có thể chí mạng. Chỉ số Chuẩn Xác cộng thêm tăng 10% Sát Thương Chí Mạng.</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_jeweledgauntlet.png"
         },
         {
@@ -289,7 +289,7 @@
           "name_en": "Nashor's Tooth",
           "name_vi": "Nanh Nashor",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Các đòn đánh giúp hồi lại <TFTCurveTable row=\"ManaPerAttack\"/> Năng Lượng, tăng thành <TFTAttribute attributeID=\"TFTCalculationAttributes.GenericCalc1\" fallbackRow=\"Default_CritBonus\"/> nếu là đòn chí mạng.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_leviathan.png"
         }
       ],
@@ -304,7 +304,7 @@
           "name_en": "Radiant Last Whisper",
           "name_vi": "Cung Xanh Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Đòn Đánh và sát thương Kỹ Năng gây <Keyword>Phân Tách</> <TFTCurveTable row=\"SunderPercent\"/>% lên mục tiêu cho đến <colorRadiant>hết giao tranh</>. Hiệu ứng này không cộng dồn.\r\n\r\n<Rules>Phân Tách: Giảm Giáp</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_lastwhisperradiant.png"
         },
         {
@@ -312,7 +312,7 @@
           "name_en": "Radiant Blue Buff",
           "name_vi": "Bùa Xanh Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận thêm <TFTCurveTable row=\"ADAPMultiplier\" format=\"percentMinusOne\" style=\"colorRadiant\"/> Sức Mạnh Công Kích và Sức Mạnh Phép Thuật từ mọi nguồn.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_bluebuffradiant.png"
         },
         {
@@ -320,7 +320,7 @@
           "name_en": "Radiant Guinsoo's Rageblade",
           "name_vi": "Cuồng Đao Guinsoo Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận <TFTCurveTable row=\"ASCounter\" style=\"colorRadiant\"/><colorRadiant>%</> Tốc Độ Đánh cộng dồn mỗi giây.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_guinsoosragebladeradiant.png"
         },
         {
@@ -328,7 +328,7 @@
           "name_en": "Radiant Giant Slayer",
           "name_vi": "Diệt Khổng Lồ Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận thêm <TFTCurveTable row=\"AmpRatioAgainstTanks\" format=\"percent\" style=\"colorRadiant\"/> Khuếch Đại Sát Thương khi đánh Tướng Đỡ Đòn.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_giantslayerradiant.png"
         },
         {
@@ -336,7 +336,7 @@
           "name_en": "Radiant Rabadon's Deathcap",
           "name_vi": "Mũ Phù Thủy Rabadon Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "<Rules>Nó đã từng chứng kiến và tạo ra vô số phép màu... và cả thảm họa nữa.</>{ItemTags.RabadonsDeathcap.DeadlierCapsStacks}",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_rabadonsdeathcapradiant.png"
         },
         {
@@ -344,7 +344,7 @@
           "name_en": "Radiant Thief's Gloves",
           "name_vi": "Găng Đạo Tặc Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Mỗi vòng đấu: Mang 2 trang bị <colorRadiant>Ánh Sáng</> ngẫu nhiên\r\n\r\n<Rules>[Tốn 3 ô trang bị.]</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_thiefsglovesradiant.png"
         }
       ],
@@ -354,7 +354,7 @@
           "name_en": "Radiant Quicksilver",
           "name_vi": "Áo Choàng Thủy Ngân Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Bắt đầu giao tranh: Không Thể Cản Phá trong <TFTCurveTable row=\"EffectDuration\" style=\"colorRadiant\"/> giây. \r\n\r\nNhận <TFTCurveTable row=\"StacksToAtkSpd\" format=\"percentMinusOne\" style=\"colorRadiant\"/> Tốc Độ Đánh cộng dồn mỗi giây.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_quicksilverradiant.png"
         },
         {
@@ -362,7 +362,7 @@
           "name_en": "Radiant Hand of Justice",
           "name_vi": "Bàn Tay Công Lý Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận 2 hiệu ứng:\r\n• <TFTCurveTable row=\"ADBase\" format=\"percent\" style=\"colorRadiant\"/> Sức Mạnh Công Kích và <TFTCurveTable row=\"APBase\" format=\"percent\" style=\"colorRadiant\"/> Sức Mạnh Phép Thuật.\r\n• <TFTCurveTable row=\"OmnivampBase\" format=\"percent\" style=\"colorRadiant\"/> Hút Máu Toàn Phần.\r\n\r\nKhi còn trên <TFTCurveTable row=\"HealthThreshold\" format=\"percent\"/> máu, nhận gấp đôi lượng Sức Mạnh Công Kích và Sức Mạnh Phép Thuật. Khi còn dưới <TFTCurveTable row=\"HealthThreshold\" format=\"percent\"/> Máu, nhận gấp đôi lượng Hút Máu Toàn Phần.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_handofjusticeradiant.png"
         },
         {
@@ -370,7 +370,7 @@
           "name_en": "Radiant Bramble Vest",
           "name_vi": "Áo Choàng Gai Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận <TFTCurveTable row=\"MaxHealthMultiplier\" format=\"percentMinusOne\" style=\"colorRadiant\"/> Máu tối đa.\r\n\r\nGiảm <TFTCurveTable row=\"AADamageReduction\" format=\"invertedPercent\" style=\"colorRadiant\"/> sát thương từ đòn đánh. Khi bị trúng đòn đánh bất kỳ, gây <TFTCurveTable row=\"MagicDamageWhenHit\" style=\"colorRadiant\"/> sát thương phép lên tất cả kẻ địch liền kề.\r\n\r\n<Rules>Hồi chiêu: </><TFTCurveTable row=\"Cooldown\" style=\"Rules\"/> <Rules>giây</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_bramblevestradiant.png"
         },
         {
@@ -378,7 +378,7 @@
           "name_en": "Radiant Jeweled Gauntlet",
           "name_vi": "Găng Bảo Thạch Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận <Keyword>Chuẩn Xác</>.\r\n\r\n<Rules>Chuẩn Xác: Sát thương kỹ năng có thể chí mạng. Chỉ số Chuẩn Xác cộng thêm tăng 10% Sát Thương Chí Mạng.</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_jeweledgauntletradiant.png"
         },
         {
@@ -386,7 +386,7 @@
           "name_en": "Radiant Striker's Flail",
           "name_vi": "Chùy Đoản Côn Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Đòn Chí Mạng sẽ cho <TFTCurveTable row=\"DABuff\" format=\"percent\" style=\"colorRadiant\"/> Khuếch Đại Sát Thương trong <TFTCurveTable row=\"BuffDuration\"/> giây, cộng dồn tối đa <TFTCurveTable row=\"MaxStacks\"/> lần.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_trapclawradiant.png"
         },
         {
@@ -394,7 +394,7 @@
           "name_en": "Radiant Infinity Edge",
           "name_vi": "Vô Cực Kiếm Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận <Keyword>Chuẩn Xác</>.\r\n\r\n<Rules>Chuẩn Xác: Sát thương kỹ năng có thể chí mạng. Chỉ số Chuẩn Xác cộng thêm tăng 10% Sát Thương Chí Mạng.</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_infinityedgeradiant.png"
         },
         {
@@ -402,7 +402,7 @@
           "name_en": "Radiant Red Buff",
           "name_vi": "Bùa Đỏ Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Đòn Đánh và Kỹ Năng gây <TFTCurveTable row=\"Burn\" style=\"colorRadiant\"/><Keyword>Thiêu Đốt</> <colorRadiant>%</> và <Keyword>Vết Thương Sâu</> <TFTCurveTable row=\"Wound\"/>% lên kẻ địch trong <TFTCurveTable row=\"Duration\"/> giây.\r\n\r\n<rules>Thiêu Đốt: Gây sát thương chuẩn mỗi giây theo Máu tối đa của mục tiêu</>\r\n<rules>Vết Thương Sâu: Giảm hồi máu nhận được</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_rapidfirecannonradiant.png"
         },
         {
@@ -410,7 +410,7 @@
           "name_en": "Radiant Edge of Night",
           "name_vi": "Áo Choàng Bóng Tối Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Khi còn <TFTCurveTable row=\"HPPercentageToProcAt\" format=\"percent\"/> Máu, trở nên không thể bị nhắm tới trong thoáng chốc, loại bỏ mọi hiệu ứng bất lợi và hồi lại <colorRadiant>toàn bộ Máu đã mất</>.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_guardianangelradiant.png"
         },
         {
@@ -418,7 +418,7 @@
           "name_en": "Radiant Deathblade",
           "name_vi": "Kiếm Tử Thần Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "<rules>Nó rực sáng khi đối mặt với kẻ thù. Hay đồng đội. Hay bất kỳ thứ gì, miễn là còn sống.</>{ItemTags.Deathblade.DeadlierBladeStacks}",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_deathbladeradiant.png"
         },
         {
@@ -426,7 +426,7 @@
           "name_en": "Radiant Nashor's Tooth",
           "name_vi": "Nanh Nashor Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Các đòn đánh giúp hồi lại <TFTCurveTable row=\"ManaPerAttack\" style=\"colorRadiant\"/> Năng Lượng, tăng thành <TFTAttribute attributeID=\"TFTCalculationAttributes.GenericCalc1\" fallbackRow=\"Default_CritBonus\" precision=\"0\" style=\"colorRadiant\"/> nếu là đòn chí mạng.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_leviathanradiant.png"
         },
         {
@@ -434,7 +434,7 @@
           "name_en": "Radiant Spear of Shojin",
           "name_vi": "Ngọn Giáo Shojin Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Các đòn đánh giúp hồi lại <TFTCurveTable row=\"ManaPerAttack\" style=\"colorRadiant\"/> <colorRadiant>Năng Lượng</>.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_spearofshojinradiant.png"
         },
         {
@@ -442,7 +442,7 @@
           "name_en": "Radiant Spirit Visage",
           "name_vi": "Giáp Tâm Linh Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Hồi lại <TFTCurveTable row=\"MissingHealthRegen\" style=\"colorRadiant\"/><colorRadiant>%</> Máu đã mất mỗi giây.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_spiritvisagerr.png"
         },
         {
@@ -450,7 +450,7 @@
           "name_en": "Radiant Adaptive Helm",
           "name_vi": "Mũ Thích Nghi Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận thêm <TFTCurveTable row=\"ManaMultiplierFromAllSources\" format=\"percentMinusOne\" style=\"colorRadiant\"/> Năng Lượng từ mọi nguồn. Chủ sở hữu nhận thêm hiệu ứng tùy theo Vai Trò:\r\n\r\nĐỡ Đòn và Đấu Sĩ: Nhận <TFTCurveTable row=\"ArmorForTanksAndFighters\" style=\"colorRadiant\"/> Giáp và Kháng Phép.\r\n\r\nCác Vai Trò khác: Nhận <TFTCurveTable row=\"ADForOthers\" format=\"percent\" style=\"colorRadiant\"/> Sức Mạnh Công Kích và Sức Mạnh Phép Thuật.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_adaptivehelmradiant.png"
         },
         {
@@ -458,7 +458,7 @@
           "name_en": "Radiant Kraken's Fury",
           "name_vi": "Thịnh Nộ Thủy Quái Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Đòn đánh cho <TFTCurveTable row=\"ADCounter\" style=\"colorRadiant\"/><colorRadiant>%</> Sức Mạnh Công Kích cộng dồn, tối đa 15 đòn đánh. Sau <TFTCurveTable row=\"MaxStacks\"/> đòn đánh, nhận <TFTCurveTable row=\"Bonus_AS\" format=\"percent\" style=\"colorRadiant\"/> Tốc Độ Đánh.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_krakenslayerradiant.png"
         },
         {
@@ -466,7 +466,7 @@
           "name_en": "Radiant Sterak's Gage",
           "name_vi": "Móng Vuốt Sterak Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Khi còn <TFTCurveTable row=\"MaxHealthProcThreshold\" format=\"percent\"/> Máu, nhận Lá Chắn bằng <TFTCurveTable row=\"ShieldMaxHealthRatio\" format=\"percent\" style=\"colorRadiant\"/> Máu tối đa của chủ sở hữu, giảm dần trong vòng <TFTCurveTable row=\"Duration\" style=\"colorRadiant\"/> giây.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_steraksgageradiant.png"
         },
         {
@@ -474,7 +474,7 @@
           "name_en": "Radiant Sunfire Cape",
           "name_vi": "Áo Choàng Lửa Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận <TFTCurveTable row=\"MaxHealthMultiplier\" format=\"percentMinusOne\" style=\"colorRadiant\"/> Máu tối đa.\r\n\r\nMỗi <TFTCurveTable row=\"BurnWoundFrequency\"/> giây, gây <Keyword>Thiêu Đốt</> <TFTCurveTable row=\"BurnPercent\" style=\"colorRadiant\"/><colorRadiant>%</> và <Keyword>Vết Thương Sâu</> <TFTCurveTable row=\"WoundPercent\"/>% lên 1 kẻ địch trong vòng 2 ô trong <TFTCurveTable row=\"BurnWoundDuration\"/> giây.\r\n\r\n<Rules>Thiêu Đốt: Gây sát thương chuẩn mỗi giây theo Máu tối đa của mục tiêu.</>\r\n<Rules>Vết Thương Sâu: Giảm hồi máu.</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_sunfirecaperadiant.png"
         },
         {
@@ -482,7 +482,7 @@
           "name_en": "Radiant Morellonomicon",
           "name_vi": "Quỷ Thư Morello Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Đòn Đánh và Kỹ Năng gây Thiêu Đốt <TFTCurveTable row=\"BurnPercent\" style=\"colorRadiant\"/><colorRadiant>%</> và Vết Thương Sâu <TFTCurveTable row=\"WoundPercent\"/>% lên kẻ địch trong <TFTCurveTable row=\"BurnAndWoundDuration\"/> giây.\r\n\r\n<rules>Thiêu Đốt: Gây sát thương chuẩn mỗi giây theo Máu tối đa của mục tiêu.</>\r\n<rules>Vết Thương Sâu: Giảm hồi máu nhận được.</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_morellonomiconradiant.png"
         },
         {
@@ -490,7 +490,7 @@
           "name_en": "Radiant Void Staff",
           "name_vi": "Trượng Hư Vô Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Sát thương từ Đòn Đánh và Kỹ Năng sẽ gây <Keyword>Cào Xé</> <TFTCurveTable row=\"ShredPercent\"/>% lên mục tiêu cho đến <colorRadiant>hết giao tranh.</> Hiệu ứng này không cộng dồn.\r\n\r\n<rules>Cào Xé: Giảm Kháng Phép</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_voidstaffradiant.png"
         }
       ],
@@ -500,7 +500,7 @@
           "name_en": "Radiant Hextech Gunblade",
           "name_vi": "Kiếm Súng Hextech Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Hồi máu cho đồng minh thấp Máu nhất bằng <TFTCurveTable row=\"DamageToHealRatio\" format=\"percent\" style=\"colorRadiant\"/> lượng sát thương gây ra.\r\n\r\nHồi Máu Đồng Minh: <TFTAttribute attributeID=\"TFTCalculationAttributes.HealthCalc1\" precision=\"0\"/>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_hextechgunbladeradiant.png"
         },
         {
@@ -508,7 +508,7 @@
           "name_en": "Radiant Warmog's Armor",
           "name_vi": "Giáp Máu Warmog Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận <TFTCurveTable row=\"HealthMaxMultiplier\" format=\"percentMinusOne\" style=\"colorRadiant\"/> Máu tối đa.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_warmogsarmorradiant.png"
         },
         {
@@ -516,7 +516,7 @@
           "name_en": "Radiant Gargoyle Stoneplate",
           "name_vi": "Thú Tượng Thạch Giáp Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Tăng <TFTCurveTable row=\"ArmorPerTargetingEnemy\" style=\"colorRadiant\"/> Giáp và <TFTCurveTable row=\"MRPerTargetingEnemy\" style=\"colorRadiant\"/> Kháng Phép với mỗi kẻ địch đang nhắm vào chủ sở hữu.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_gargoylestoneplateradiant.png"
         },
         {
@@ -524,7 +524,7 @@
           "name_en": "Radiant Titan's Resolve",
           "name_vi": "Quyền Năng Khổng Lồ Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận <TFTCurveTable row=\"ADAPPerStack\" format=\"percent\" style=\"colorRadiant\"/> SMCK và <TFTCurveTable row=\"ADAPPerStack\" format=\"percent\" style=\"colorRadiant\"/> SMPT khi tấn công hoặc nhận sát thương, cộng dồn tối đa <TFTCurveTable row=\"MaxStacks\"/> lần.\r\n\r\nỞ cộng dồn tối đa, nhận <TFTCurveTable row=\"DamageAmpFullStacks\" style=\"colorRadiant\"/>% Khuếch Đại Sát Thương và không thể cản phá.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_titansresolveradiant.png"
         },
         {
@@ -532,7 +532,7 @@
           "name_en": "Radiant Dragon's Claw",
           "name_vi": "Vuốt Rồng Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận <TFTCurveTable row=\"MaxHealthMultiplier\" format=\"percentMinusOne\" style=\"colorRadiant\"/> Máu tối đa.\r\n\r\nMỗi 2 giây, hồi <TFTCurveTable row=\"PercentHealthHeal\" format=\"percent\" style=\"colorRadiant\"/> Máu tối đa.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_dragonsclawradiant.png"
         },
         {
@@ -540,7 +540,7 @@
           "name_en": "Radiant Archangel's Staff",
           "name_vi": "Quyền Trượng Thiên Thần Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Bắt đầu giao tranh: Nhận <TFTCurveTable row=\"APStack\" style=\"colorRadiant\"/><colorRadiant>%</> Sức Mạnh Phép Thuật mỗi <TFTCurveTable row=\"Period\"/> giây trong giao tranh.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_archangelsstaffradiant.png"
         },
         {
@@ -548,7 +548,7 @@
           "name_en": "Radiant Ionic Spark",
           "name_vi": "Nỏ Sét Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "<TFTCurveTable row=\"ShredPercent\" format=\"percent\"/> <Keyword>Cào Xé</> những kẻ địch trong phạm vi <TFTCurveTable row=\"HexRange\"/> ô. Khi kẻ địch sử dụng Kỹ Năng, gây sát thương phép tương đương <TFTCurveTable row=\"EnemyCastManaAsDamagePercent\" format=\"percent\" style=\"colorRadiant\"/> Năng Lượng đã tiêu hao.\r\n\r\n<rules>Cào Xé: Giảm Kháng Phép</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_ionicsparkradiant.png"
         },
         {
@@ -556,7 +556,7 @@
           "name_en": "Radiant Bloodthirster",
           "name_vi": "Huyết Kiếm Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Một lần mỗi giao tranh khi còn <TFTCurveTable row=\"ThresholdMaxHealthRatio\" format=\"percent\"/> Máu, nhận Lá Chắn bằng <TFTCurveTable row=\"ShieldMaxHealthRatio\" format=\"percent\" style=\"colorRadiant\"/> Máu tối đa, duy trì trong <TFTCurveTable row=\"Duration\"/> giây.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_bloodthirsterradiant.png"
         }
       ],
@@ -566,7 +566,7 @@
           "name_en": "Radiant Crownguard",
           "name_vi": "Vương Miện Hoàng Gia Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Bắt Đầu Giao Tranh: Nhận một lá chắn bằng <TFTCurveTable row=\"MaxHealthShieldPercent\" style=\"colorRadiant\"/><colorRadiant>%</> Máu tối đa trong <TFTCurveTable row=\"ShieldDuration\"/> giây.\r\nKhi lá chắn hết hiệu lực, nhận thêm <TFTCurveTable row=\"AbilityPowerOnShieldExpire\" style=\"colorRadiant\"/><colorRadiant>% Sức Mạnh Phép Thuật</>.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_crownguardradiant.png"
         },
         {
@@ -574,7 +574,7 @@
           "name_en": "Radiant Evenshroud",
           "name_vi": "Giáp Vai Nguyệt Thần Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "<Keyword>Phân Tách</> <TFTCurveTable row=\"SunderPercent\"/>% kẻ địch trong phạm vi <TFTCurveTable row=\"HexRange\"/> ô. Nhận <TFTCurveTable row=\"ArmorOnBattleStart\" style=\"colorRadiant\"/> <colorRadiant>Giáp và Kháng Phép</> trong <TFTCurveTable row=\"OnBattleStartEffectDuration\" style=\"colorRadiant\"/> <colorRadiant>giây</> đầu tiên của giao tranh.\r\n\r\n<Rules>Phân Tách: Giảm Giáp</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_spectralgauntletradiant.png"
         },
         {
@@ -582,7 +582,7 @@
           "name_en": "Radiant Protector's Vow",
           "name_vi": "Lời Thề Hộ Vệ Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Bắt đầu giao tranh: Nhận <TFTCurveTable row=\"StartingMana\" style=\"colorRadiant\"/> Năng Lượng.\r\n\r\nKhi còn <TFTCurveTable row=\"Proc%HealthThreshold\" format=\"percent\"/> Máu, nhận <TFTCurveTable row=\"ProcGainMana\" style=\"colorRadiant\"/> <colorRadiant>Năng Lượng</> và một Lá Chắn tương đương <TFTCurveTable row=\"ProcShield%MaxHealth\" format=\"percent\" style=\"colorRadiant\"/> <colorRadiant>Máu tối đa</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_frozenheartradiant.png"
         },
         {
@@ -590,7 +590,7 @@
           "name_en": "Radiant Steadfast Heart",
           "name_vi": "Trái Tim Kiên Định Ánh Sáng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Nhận <TFTCurveTable row=\"LowHealthIncDmgMod\" style=\"colorRadiant\"/>% Chống Chịu. Khi còn hơn <TFTCurveTable row=\"MaxHealthThreshold\" format=\"percent\"/> Máu, thay vào đó nhận <TFTCurveTable row=\"HighHealthIncDmgMod\" style=\"colorRadiant\"/>% Chống Chịu.{Augment.Variant.HeartofSteel.Tooltip}",
           "icon": "assets/maps/tft/icons/items/hexcore/tft5_item_nightharvesterradiant.png"
         }
       ],
@@ -603,7 +603,7 @@
           "name_en": "Silvermere Dawn",
           "name_vi": "Chùy Bạch Ngân",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Trao miễn nhiễm Làm Choáng và đòn đánh của chủ sở hữu sẽ Làm Choáng kẻ địch trong <TFTCurveTable row=\"StunDuration\"/> giây.\r\n\r\nTốc Độ Đánh của chủ sở hữu được đặt cố định là <TFTCurveTable row=\"AttackSpeedCap\"/>.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_silvermeredawn.png"
         },
         {
@@ -611,7 +611,7 @@
           "name_en": "Wit's End",
           "name_vi": "Đao Tím",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Đòn đánh gây thêm <TFTAttribute attributeID=\"TFTCalculationAttributes.GenericCalc1\"/> sát thương phép.\r\nHồi máu cho chủ sở hữu bằng <TFTCurveTable row=\"MagicVampPercent\"/>% tổng lượng sát thương phép đã gây ra.\r\n\r\n<Rules>Sát thương tăng dựa theo Giai Đoạn.</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_witsend.png"
         },
         {
@@ -619,7 +619,7 @@
           "name_en": "Hellfire Hatchet",
           "name_vi": "Rìu Hỏa Ngục",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Các đòn đánh gây thêm sát thương vật lý bằng <TFTCurveTable row=\"PercentHPDamage\" format=\"percent\"/> Máu tối đa của chủ sở hữu. Với mỗi <TFTCurveTable row=\"MissingHealthInterval\" format=\"percent\"/> Máu đã mất, nhận <TFTCurveTable row=\"AttackSpeedPerMissingHealthPercent\" format=\"percent\"/> Tốc Độ Đánh.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_hellfirehatchet.png"
         },
         {
@@ -627,7 +627,7 @@
           "name_en": "Eternal Pact",
           "name_vi": "Khế Ước Vĩnh Hằng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Bắt đầu giao tranh: Kết giao ước với tướng đồng minh nhiều Máu nhất, nếu họ hy sinh, nhận <TFTCurveTable row=\"ManaRegenOnDeath\"/> hồi Năng Lượng và <TFTCurveTable row=\"APOnDeath\" format=\"percent\"/> Sức Mạnh Phép Thuật.\r\n\r\nKhi đồng minh dùng kỹ năng, nhận <TFTCurveTable row=\"ManaOnAbilityUse\"/> Năng Lượng. Mỗi <TFTCurveTable row=\"Frequency\"/> giây, tạo lá chắn cho đồng minh bằng <TFTCurveTable row=\"ShieldPercentOfAP\" format=\"percent\"/> Sức Mạnh Phép Thuật của chủ sở hữu.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_eternalpact.png"
         },
         {
@@ -635,7 +635,7 @@
           "name_en": "Gold Collector",
           "name_vi": "Đại Bác Hải Tặc",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Các Đòn Đánh và Kỹ Năng sẽ hành quyết kẻ địch còn dưới <TFTCurveTable row=\"ExecuteThreshold\" format=\"percent\"/> Máu tối đa. Khi hành quyết tướng, có <TFTCurveTable row=\"GoldDropChance\" format=\"percent\"/> xác suất rơi ra 1 vàng.\r\n\r\nVàng đã thu được: <TFTAttribute attributeId=\"TFTItemAttributes.Stack\" icon=\"Icon.Coin\"/>\r\n\r\n<rules>[Duy nhất - chỉ 1 mỗi tướng]</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnthecollector.png"
         }
       ],
@@ -645,7 +645,7 @@
           "name_en": "Rapid Firecannon",
           "name_vi": "Đại Bác Liên Thanh",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Tăng +1 Tầm Đánh, tăng thêm 1 mỗi khi chủ sở hữu hạ gục 1 kẻ địch.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_rapidfirecannon.png"
         },
         {
@@ -653,7 +653,7 @@
           "name_en": "Lightshield Crest",
           "name_vi": "Huy Hiệu Thánh Khiên",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Mỗi <TFTCurveTable row=\"ShieldFrequency\"/> giây, tạo Lá Chắn cho đồng minh có phần trăm Máu thấp nhất, giá trị lá chắn bằng <TFTCurveTable row=\"PercentHealthShield\" format=\"percent\"/> tổng Giáp và Kháng Phép của chủ sở hữu trong <TFTCurveTable row=\"AllyShieldDuration\"/> giây.\r\n\r\nKhi bị hạ gục, trao lá chắn này cho tất cả đồng minh.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_lightshieldcrest.png"
         },
         {
@@ -661,7 +661,7 @@
           "name_en": "Luden's Tempest",
           "name_vi": "Bão Tố Luden",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "<TFTCurveTable row=\"OverkillDamageRatio\" format=\"percent\"/> sát thương kết liễu vượt trội + <TFTCurveTable row=\"BonusFlatDamage\"/> sẽ được gây thành sát thương phép lên 2 kẻ địch gần mục tiêu nhất.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_ludenstempest.png"
         },
         {
@@ -669,7 +669,7 @@
           "name_en": "Horizon Focus",
           "name_vi": "Kính Nhắm Ma Pháp",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Làm choáng kẻ địch sẽ triệu hồi sấm sét tấn công chúng, gây sát thương phép bằng <TFTCurveTable row=\"HealthPercentDamage\" format=\"percent\"/> Máu tối đa của chúng.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_horizonfocus.png"
         },
         {
@@ -677,7 +677,7 @@
           "name_en": "Dawncore",
           "name_vi": "Lõi Bình Minh",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Giảm Năng Lượng tối đa của chủ sở hữu đi <TFTCurveTable row=\"FlatMaxManaReduction\"/>. Những lần thi triển kỹ năng tiếp theo sẽ giảm Năng Lượng tối đa đi <TFTCurveTable row=\"ReductionOnSpellcastPercent\"/>%, xuống mức tối thiểu là <TFTCurveTable row=\"MinimumMana\"/>.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_dawncore.png"
         },
         {
@@ -685,7 +685,7 @@
           "name_en": "Mittens",
           "name_vi": "Găng Đấu Sĩ",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Thu nhỏ chủ sở hữu, tăng tốc độ di chuyển và miễn nhiễm với Làm Chậm, Thiêu Đốt và Vết Thương Sâu.\r\n\r\n<rules>Làm Chậm: Giảm Tốc Độ Đánh.</>\r\n<rules>Thiêu Đốt: Gây sát thương chuẩn mỗi giây dựa trên phần trăm Máu tối đa của mục tiêu.</>\r\n<rules>Vết Thương Sâu: Giảm hồi máu nhận được.</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_mittens.png"
         },
         {
@@ -693,7 +693,7 @@
           "name_en": "Flickerblades",
           "name_vi": "Đao Chớp",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Đòn đánh cho <TFTCurveTable row=\"StackingAttackSpeed\" format=\"percentMinusOne\"/> Tốc Độ Đánh cộng dồn. Mỗi <TFTCurveTable row=\"AttacksPerADAPBuff\"/> đòn đánh cũng sẽ cho <TFTCurveTable row=\"StackingAttackDamage\" format=\"percent\"/> Sức Mạnh Công Kích và <TFTCurveTable row=\"StackingAbilityPower\" format=\"percent\"/> Sức Mạnh Phép Thuật.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_navoriflickerplade.png"
         }
       ],
@@ -703,7 +703,7 @@
           "name_en": "Infinity Force",
           "name_vi": "Tam Luyện Kiếm",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "<Rules>Tăng MỌI CHỈ SỐ!</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornninfinityforce.png"
         },
         {
@@ -711,7 +711,7 @@
           "name_en": "Talisman of Ascension",
           "name_vi": "Bùa Thăng Hoa",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Sau <TFTCurveTable row=\"DelayBeforeBuff\"/> giây, tăng <TFTCurveTable row=\"HealthMultiplierBuff\" format=\"percent\"/> Máu tối đa, <TFTCurveTable row=\"ManaGen\"/> Hồi Năng Lượng, và <TFTCurveTable row=\"DamageAmpBuff\" format=\"percent\"/> Khuếch Đại Sát Thương cho đến hết giao tranh.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_talismanofascension.png"
         },
         {
@@ -719,7 +719,7 @@
           "name_en": "Fishbones",
           "name_vi": "Pháo Xương Cá",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Đòn đánh của chủ sở hữu sẽ nhắm tới những kẻ địch ngẫu nhiên. Tăng +2 Tầm Đánh.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_fishbones.png"
         },
         {
@@ -727,7 +727,7 @@
           "name_en": "The Indomitable",
           "name_vi": "Bất Khuất",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Tốc Độ Di Chuyển của chủ sở hữu bị giảm mạnh.\r\n\r\nNhận <TFTCurveTable row=\"HealthMaxPercent\" format=\"percentMinusOne\"/> Máu tối đa, trở nên không thể cản phá và kéo mục tiêu hiện tại vào tầm đánh cận chiến.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_theindomitable.png"
         },
         {
@@ -735,7 +735,7 @@
           "name_en": "Blighting Jewel",
           "name_vi": "Đá Hắc Hóa",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Gây sát thương phép sẽ giảm Kháng Phép của mục tiêu đi <TFTCurveTable row=\"MagicResistShred\"/>. Nếu Kháng Phép của chúng bằng 0, cho chủ sở hữu <TFTCurveTable row=\"ManaGain\"/> Năng Lượng.\r\n\r\n<rules>Sát thương kỹ năng chỉ có thể kích hoạt trên mỗi kẻ địch một lần mỗi 0,5 giây.</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_blightingjewel.png"
         },
         {
@@ -743,7 +743,7 @@
           "name_en": "Mogul's Mail",
           "name_vi": "Giáp Đại Hãn",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Tăng <TFTCurveTable row=\"ArmorPerStack\"/> Giáp, <TFTCurveTable row=\"MRPerStack\"/> Kháng Phép và <TFTCurveTable row=\"HealthPerStack\"/> Máu khi nhận sát thương, cộng dồn tối đa <TFTCurveTable row=\"MaxStacks\"/> lần.\r\n\r\nKhi đạt cộng dồn tối đa, nhận <img id=\"icon.Coin\"/> 1 vàng và tiếp tục nhận <img id=\"icon.Coin\"/> 1 vàng mỗi <TFTCurveTable row=\"GoldFrequency\"/> giây.\r\n\r\nSố vàng đã tạo ra trong trận này: <TFTAttribute attributeId=\"TFTItemAttributes.Stack2\"/>\r\n\r\n<rules>[Duy nhất - chỉ 1 mỗi tướng]</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalemogulsmail.png"
         },
         {
@@ -751,7 +751,7 @@
           "name_en": "Gambler's Blade",
           "name_vi": "Kiếm Của Tay Bạc",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Cho <TFTCurveTable row=\"ScalingAttackSpeed\" format=\"percent\"/> Tốc Độ Đánh cộng thêm với mỗi vàng đang sở hữu (tối đa <TFTCurveTable row=\"MaxCoinScaling\"/> vàng).\r\n\r\nMỗi đòn đánh có <TFTCurveTable row=\"ChanceToDropCoin\" format=\"percent\"/> tỉ lệ rơi ra 1 vàng.\r\n\r\nVàng đã tạo ra trong trận này: <TFTAttribute attributeId=\"TFTItemAttributes.Stack\" icon=\"Icon.Coin\"/>\r\n\r\n<rules>Duy nhất - chỉ 1 mỗi tướng</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft7_item_shimmerscalegamblersblade.png"
         },
         {
@@ -759,7 +759,7 @@
           "name_en": "Manazane",
           "name_vi": "Thánh Kiếm Manazane",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Sau khi thi triển lần đầu trong giao tranh, hồi lại <TFTCurveTable row=\"CastManaGain\"/> Năng Lượng trong vòng <TFTCurveTable row=\"CastManaGainDuration\"/> giây.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnmuramana.png"
         },
         {
@@ -767,7 +767,7 @@
           "name_en": "Void Gauntlet",
           "name_vi": "Găng Hư Không",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Bắt Đầu Giao Tranh: Tích trữ <TFTCurveTable row=\"HealthStoreInitial\" format=\"percent\"/> Máu tối đa và thêm <TFTCurveTable row=\"HealthStoreTickAmount\" format=\"percent\"/> mỗi giây. Khi hy sinh, giải phóng sát thương phép tương đương lượng Máu đã tích trữ cho các kẻ địch trong phạm vi 4 ô.\r\n\r\n<rules>Duy nhất - chỉ 1 mỗi tướng</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft16_artifact_voidgauntlet.png"
         },
         {
@@ -775,7 +775,7 @@
           "name_en": "Aegis of Dawn",
           "name_vi": "Khiên Hừng Đông",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Mỗi <TFTCurveTable row=\"AOEFrequency\"/> giây, đánh cắp <TFTCurveTable row=\"ArmorSteal\"/> Giáp từ các kẻ địch trong phạm vi 1 ô và hồi máu bằng <TFTAttribute attributeID=\"TFTCalculationAttributes.GenericCalc1\" format=\"percent\"/> Giáp của chủ sở hữu.\r\n\r\nNếu Khiên Hoàng Hôn cũng được trang bị, thay vào đó kích hoạt hiệu ứng của trang bị này mỗi <TFTCurveTable row=\"DuskBonusFrequency\"/> giây.\r\n\r\n<Rules>Lượng hồi phục tăng lên dựa trên Giai Đoạn.</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdawn.png"
         },
         {
@@ -783,7 +783,7 @@
           "name_en": "Seeker's Armguard",
           "name_vi": "Giáp Tay Seeker",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Tham gia hạ gục sẽ tăng <TFTCurveTable row=\"TakedownArmor\"/> Sức Mạnh Phép Thuật, Giáp và Kháng Phép cho chủ sở hữu.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_seekersarmguard.png"
         },
         {
@@ -791,7 +791,7 @@
           "name_en": "Titanic Hydra",
           "name_vi": "Rìu Đại Mãng Xà",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Đòn đánh gây sát thương vật lý cộng thêm bằng <TFTCurveTable row=\"PercentHealthBonusDamage\" format=\"percent\"/> Máu tối đa + <TFTCurveTable row=\"PercentADBonusDamage\" format=\"percent\"/> Sức Mạnh Công Kích của chủ sở hữu lên mục tiêu và những kẻ địch liền kề.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_titanichydra.png"
         },
         {
@@ -799,7 +799,7 @@
           "name_en": "Hullcrusher",
           "name_vi": "Thần Búa Tiến Công",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Bắt đầu giao tranh: Nếu không có đồng minh liền kề, được tăng <TFTCurveTable row=\"HealthBonus\"/> Máu, <TFTCurveTable row=\"ADBonus\" format=\"percent\"/> Sức Mạnh Công Kích và <TFTCurveTable row=\"APBonus\" format=\"percent\"/> Sức Mạnh Phép Thuật.",
           "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft9_ornnitem_hullbreaker.png"
         },
         {
@@ -807,7 +807,7 @@
           "name_en": "Lich Bane",
           "name_vi": "Kiếm Tai Ương",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Đòn đánh đầu tiên của chủ sở hữu sau mỗi lần thi triển Kỹ Năng sẽ gây thêm <TFTAttribute attributeID=\"TFTCalculationAttributes.GenericCalc1\"/> sát thương phép.\r\n\r\n<Rules>Sát thương tăng lên theo Giai Đoạn.</>",
           "icon": "assets/maps/particles/tft/item_icons/ornn_items/tft_item_artifact_lichbane.png"
         }
       ],
@@ -817,7 +817,7 @@
           "name_en": "Statikk Shiv",
           "name_vi": "Dao Điện Statikk",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Mỗi đòn đánh thứ 3 gây thêm sát thương phép bằng <TFTCurveTable row=\"BaseDamage\"/> + <TFTCurveTable row=\"APScalar\" format=\"percent\"/> Sức Mạnh Phép Thuật của chủ sở hữu lên <TFTCurveTable row=\"NumTargets\"/> kẻ địch.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_stattikshiv.png"
         },
         {
@@ -825,7 +825,7 @@
           "name_en": "Aegis of Dusk",
           "name_vi": "Khiên Hoàng Hôn",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Cứ mỗi <TFTCurveTable row=\"Frequency\"/> giây, đánh cắp <TFTCurveTable row=\"MRSteal\"/> Kháng Phép từ kẻ địch trong phạm vi 1 ô và gây <TFTCurveTable row=\"MRDamagePercent\" format=\"percent\"/> lượng sát thương phép bằng Kháng Phép của chủ sở hữu.\r\n\r\nNếu đang trang bị Khiên Bình Minh, hiệu ứng của trang bị này sẽ kích hoạt mỗi <TFTCurveTable row=\"DawnFrequency\"/> giây.\r\n\r\n<Rules>Sát thương tăng theo Giai Đoạn.</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_aegisofdusk.png"
         },
         {
@@ -833,7 +833,7 @@
           "name_en": "Forbidden Idol",
           "name_vi": "Dị Vật Tai Ương",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "<TFTCurveTable row=\"ShieldConversionPercent\" format=\"percent\"/> giá trị lá chắn sẽ được chuyển sang Máu tối đa.",
           "icon": "assets/maps/tft/icons/items/hexcore/tft_item_artifact_forbiddenidol.png"
         },
         {
@@ -841,7 +841,7 @@
           "name_en": "Zhonya's Paradox",
           "name_vi": "Lưỡng Cực Zhonya",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Một lần mỗi giao tranh, khi còn dưới <TFTCurveTable row=\"HealthRatioThreshold\" format=\"percent\"/> Máu, trở nên bất tử và không thể chỉ định trong <TFTCurveTable row=\"InvulnerableDuration\"/> giây.\r\n\r\n<rules>Duy nhất - chỉ 1 mỗi tướng</>",
           "icon": "assets/maps/tft/icons/items/hexcore/tft4_item_ornnzhonyasparadox.png"
         }
       ],
@@ -854,7 +854,7 @@
           "name_en": "Juggernaut Emblem",
           "name_vi": "Ấn Dũng Sĩ",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Chủ sở hữu nhận thêm tộc/hệ Dũng Sĩ. \r\n\r\nNhận <TFTCurveTable row=\"ManaPerDeath\"/> năng lượng mỗi khi 1 tướng Dũng Sĩ tử trận.",
           "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_juggernaut.png"
         },
         {
@@ -862,7 +862,7 @@
           "name_en": "Brawler Emblem",
           "name_vi": "Ấn Đấu Sĩ",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Chủ sở hữu nhận thêm tộc/hệ Đấu Sĩ.\r\n\r\nĐòn đánh gây sát thương phép bằng <TFTCurveTable row=\"MaxHealthDamageRatio\" format=\"percent\"/> Máu tối đa của chủ sở hữu.",
           "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_brawler.png"
         },
         {
@@ -870,7 +870,7 @@
           "name_en": "Vanguard Emblem",
           "name_vi": "Ấn Tiên Phong",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Chủ sở hữu nhận thêm tộc/hệ Tiên Phong.\r\n\r\nNếu chủ sở hữu sống sót <TFTCurveTable row=\"SurviveTimeSeconds\"/> giây trong giao tranh người chơi, nhận <TFTCurveTable row=\"PlayerHealthGain\"/> máu người chơi.",
           "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_vanguard.png"
         },
         {
@@ -878,7 +878,7 @@
           "name_en": "Executioner Emblem",
           "name_vi": "Ấn Đao Phủ",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Chủ sở hữu nhận thêm tộc/hệ Đao Phủ.\r\n\r\nSát thương sẽ hành quyết kẻ địch còn dưới <TFTCurveTable row=\"ExecuteThreshold\" format=\"percent\"/> Máu tối đa của chúng.",
           "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_executioner.png"
         },
         {
@@ -886,7 +886,7 @@
           "name_en": "Elderwood Emblem",
           "name_vi": "Ấn Thần Rừng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Chủ sở hữu nhận thêm tộc/hệ Thần Rừng.",
           "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_elderwood.png"
         },
         {
@@ -894,7 +894,7 @@
           "name_en": "Flora Fatalis Emblem",
           "name_vi": "Ấn Thực Vật",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Chủ sở hữu nhận thêm tộc/hệ Thực Vật.",
           "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_florafatalis.png"
         },
         {
@@ -902,7 +902,7 @@
           "name_en": "Lunar Emblem",
           "name_vi": "Ấn Mặt Trăng",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Chủ sở hữu nhận thêm tộc/hệ Mặt Trăng.",
           "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_lunar.png"
         }
       ],
@@ -912,7 +912,7 @@
           "name_en": "Flora Fatalis Emblem",
           "name_vi": "Ấn Thực Vật",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Chủ sở hữu nhận thêm tộc/hệ Thực Vật.\r\n\r\n<bright>Họ được tăng</> <TFTCurveTable row=\"ExtraEffectiveness\" format=\"percent\" style=\"bright\"/> <bright>các hiệu ứng từ Thực Vật.</>",
           "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_florafatalis.png"
         },
         {
@@ -920,7 +920,7 @@
           "name_en": "Fae Emblem",
           "name_vi": "Ấn Tiên Linh",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Chủ sở hữu nhận thêm tộc/hệ Tiên Linh.",
           "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_fae.png"
         },
         {
@@ -928,7 +928,7 @@
           "name_en": "Defender Emblem",
           "name_vi": "Ấn Vệ Quân",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Chủ sở hữu nhận thêm tộc/hệ Vệ Quân. \r\n\r\nBắt Đầu Giao Tranh: Tăng <TFTCurveTable row=\"ASPerFrontlineAlly\" format=\"percent\"/> Tốc Độ Đánh với mỗi đồng minh bắt đầu giao tranh ở hàng đầu.",
           "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_defender.png"
         },
         {
@@ -936,7 +936,7 @@
           "name_en": "Ravager Emblem",
           "name_vi": "Ấn Tàn Phá",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Chủ sở hữu nhận thêm tộc/hệ Tàn Phá. \r\n\r\nNhận <TFTCurveTable row=\"DamageAmpIncrease\" format=\"percent\"/> Khuếch Đại Sát Thương với mỗi <TFTCurveTable row=\"HealingAmount\"/> Máu hồi lại.",
           "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_ravager.png"
         },
         {
@@ -944,7 +944,7 @@
           "name_en": "Spellweaver Emblem",
           "name_vi": "Ấn Thuật Sư",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Chủ sở hữu nhận thêm tộc/hệ Thuật Sư.\r\n\r\nNhận <TFTCurveTable row=\"ManaGainPerTeamCast\"/> Năng Lượng mỗi khi đồng minh sử dụng Kỹ Năng.",
           "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_spellweaver.png"
         },
         {
@@ -952,7 +952,7 @@
           "name_en": "Rapidfire Emblem",
           "name_vi": "Ấn Liên Kích",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Chủ sở hữu nhận thêm tộc/hệ Liên Kích.\r\n\r\nĐòn đánh gây sát thương chuẩn bằng <TFTCurveTable row=\"MaxHealthTrueDamageRatio\" format=\"percent\"/> Máu tối đa của mục tiêu.",
           "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_rapidfire.png"
         },
         {
@@ -960,7 +960,7 @@
           "name_en": "Invoker Emblem",
           "name_vi": "Ấn Thuật Sĩ",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Chủ sở hữu nhận thêm tộc/hệ Thuật Sĩ. \r\n\r\nKhi thi triển, nhận Sức Mạnh Phép Thuật tương đương <TFTCurveTable row=\"APPerManaSpentRatio\" format=\"percent\"/> Năng Lượng tiêu hao.",
           "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_invoker.png"
         }
       ],
@@ -970,7 +970,7 @@
           "name_en": "Inferno Emblem",
           "name_vi": "Ấn Hỏa Ngục",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Chủ sở hữu nhận thêm tộc/hệ Hỏa Ngục.",
           "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_inferno.png"
         },
         {
@@ -978,7 +978,7 @@
           "name_en": "Blackthorn Emblem",
           "name_vi": "Ấn Gai Đen",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Chủ sở hữu nhận thêm tộc/hệ Gai Đen.",
           "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_blackthorn.png"
         },
         {
@@ -986,7 +986,7 @@
           "name_en": "Primal Emblem",
           "name_vi": "Ấn Nguyên Sinh",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Chủ sở hữu nhận thêm tộc/hệ Nguyên Sinh.",
           "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_primal.png"
         },
         {
@@ -994,7 +994,7 @@
           "name_en": "Hunter Emblem",
           "name_vi": "Ấn Thợ Săn",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Chủ sở hữu nhận thêm tộc/hệ Thợ Săn.\r\n\r\nTham gia hạ gục sẽ tăng <TFTCurveTable row=\"AttackDamagePerTakedown\" format=\"percent\"/> Sức Mạnh Công Kích.",
           "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_hunter.png"
         },
         {
@@ -1002,7 +1002,7 @@
           "name_en": "Blossom Emblem",
           "name_vi": "Ấn Hoa Linh",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Chủ sở hữu nhận thêm tộc/hệ Hoa Linh.",
           "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_blossom.png"
         },
         {
@@ -1010,7 +1010,7 @@
           "name_en": "Sprykin Emblem",
           "name_vi": "Ấn Tinh Nghịch",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Người sở hữu nhận được tộc/hệ Tinh Nghịch.\r\n\r\nNếu chủ sở hữu đang cưỡi LXKL, nhận thêm \r\n<TFTCurveTable row=\"RiderAttackSpeed\" icon=\"icon.AS\" type=\"stat\" format=\"percentMinusOne\"/> <TFTCurveTable row=\"RiderArmorMR\" icon=\"icon.Armor\" type=\"stat\"/> <TFTCurveTable row=\"RiderArmorMR\" icon=\"icon.MR\" type=\"stat\"/>",
           "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_sprykin.png"
         }
       ],
@@ -1020,7 +1020,7 @@
           "name_en": "Coven Emblem",
           "name_vi": "Ấn Tiên Hắc Ám",
           "desc_en": "",
-          "desc_vi": "",
+          "desc_vi": "Chủ sở hữu nhận thêm tộc/hệ Tiên Hắc Ám.",
           "icon": "assets/maps/particles/tft/item_icons/traits/spatula/set18/tft18_emblem_coven.png"
         }
       ],
