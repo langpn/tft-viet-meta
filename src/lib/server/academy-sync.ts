@@ -984,6 +984,22 @@ export type SyncOptions = {
   logger?: (msg: string) => void;
 };
 
+// No-op syncs must not touch the files: the auto-sync workflow commits on any diff,
+// and updatedAt alone is a diff. Compare content without it and skip the write.
+export function writeIfChanged(filePath: string, data: unknown): boolean {
+  const strip = (v: unknown) => {
+    if (Array.isArray(v)) return v;
+    const { updatedAt: _ignored, ...rest } = v as Record<string, unknown>;
+    return rest;
+  };
+  const previous = fs.existsSync(filePath)
+    ? JSON.parse(fs.readFileSync(filePath, "utf-8"))
+    : null;
+  if (previous && JSON.stringify(strip(previous)) === JSON.stringify(strip(data))) return false;
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf-8");
+  return true;
+}
+
 export async function syncAcademyData(options: SyncOptions = {}): Promise<{
   comps: ParsedAcademyComp[];
   items: ItemsTierList;
@@ -1004,7 +1020,7 @@ export async function syncAcademyData(options: SyncOptions = {}): Promise<{
   const compsData = await compsRes.json();
   const comps = parseComps(compsData.guides || []);
   const compsPath = path.join(dataDir, "academy-comps.json");
-  fs.writeFileSync(compsPath, JSON.stringify(comps, null, 2), "utf-8");
+  writeIfChanged(compsPath, comps);
   log(`[AcademySync] Saved ${comps.length} comps to ${compsPath}`);
 
   log("[AcademySync] Fetching TFT Academy Items...");
@@ -1013,7 +1029,7 @@ export async function syncAcademyData(options: SyncOptions = {}): Promise<{
   const itemsData = await itemsRes.json();
   const items = parseItems(itemsData.items_tierlists || []);
   const itemsPath = path.join(dataDir, "academy-items.json");
-  fs.writeFileSync(itemsPath, JSON.stringify(items, null, 2), "utf-8");
+  writeIfChanged(itemsPath, items);
   log(`[AcademySync] Saved items tierlist to ${itemsPath}`);
 
   log("[AcademySync] Fetching TFT Academy Augments...");
@@ -1022,7 +1038,7 @@ export async function syncAcademyData(options: SyncOptions = {}): Promise<{
   const augsData = await augsRes.json();
   const augments = parseAugments(augsData.augments_tierlists || []);
   const augmentsPath = path.join(dataDir, "academy-augments.json");
-  fs.writeFileSync(augmentsPath, JSON.stringify(augments, null, 2), "utf-8");
+  writeIfChanged(augmentsPath, augments);
   log(`[AcademySync] Saved augments tierlist to ${augmentsPath}`);
 
   log("[AcademySync] Fetching TFT Academy Set 18 Learn page...");
@@ -1057,7 +1073,7 @@ export async function syncAcademyData(options: SyncOptions = {}): Promise<{
 
   const newSet = parseNewSet(newSetHtml, jsCode);
   const newSetPath = path.join(dataDir, "academy-new-set.json");
-  fs.writeFileSync(newSetPath, JSON.stringify(newSet, null, 2), "utf-8");
+  writeIfChanged(newSetPath, newSet);
   log(`[AcademySync] Saved Set 18 info (${newSet.champions.length} champs, ${newSet.traits.length} traits, ${newSet.augments.length} augs, ${newSet.wisps.length} wisps) to ${newSetPath}`);
 
   return { comps, items, augments, newSet };

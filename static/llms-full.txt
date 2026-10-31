@@ -139,18 +139,6 @@
 - Tướng chống chịu (Tank): Scuttlecrab (Đồ chuẩn: Giáp Tâm Linh, Thú Tượng Thạch Giáp, Giáp Máu Warmog)
 - Lối chơi: 2-Cost Reroll (Độ khó: EASY)
 
-### [B Tier] Eclipse Kayle
-- Link: https://tft.langpn.xyz/tierlist/comps?comp=eclipse-kayle
-- Tướng gánh chính (Carry): Kayle (Đồ chuẩn: Cuồng Đao Guinsoo, Mũ Phù Thủy Rabadon, Bùa Đỏ)
-- Tướng chống chịu (Tank): Sejuani (Đồ chuẩn: Thú Tượng Thạch Giáp, Giáp Tâm Linh, Giáp Máu Warmog)
-- Lối chơi: 2-Cost Reroll (Độ khó: EASY)
-
-### [C Tier] Spellweaver Kha'Zix
-- Link: https://tft.langpn.xyz/tierlist/comps?comp=spellweaver-kha-zix
-- Tướng gánh chính (Carry): Kha'Zix (Đồ chuẩn: Bàn Tay Công Lý, Bàn Tay Công Lý, Áo Choàng Bóng Tối)
-- Tướng chống chịu (Tank): Fiddlesticks (Đồ chuẩn: Giáp Máu Warmog, Thú Tượng Thạch Giáp, Giáp Tâm Linh)
-- Lối chơi: 3-Cost Reroll (Độ khó: MEDIUM)
-
 ### [C Tier] Malphite AP Flex
 - Link: https://tft.langpn.xyz/tierlist/comps?comp=malphite-ap-flex
 - Tướng gánh chính (Carry): Malphite (Đồ chuẩn: Thú Tượng Thạch Giáp, Giáp Máu Warmog, Vương Miện Hoàng Gia)
@@ -163,11 +151,11 @@
 - Tướng chống chịu (Tank): Hecarim (Đồ chuẩn: Giáp Máu Warmog, Thú Tượng Thạch Giáp, Lời Thề Hộ Vệ)
 - Lối chơi: 3-Cost Reroll (Độ khó: MEDIUM)
 
-### [C Tier] Fae Tristana
-- Link: https://tft.langpn.xyz/tierlist/comps?comp=fae-tristana
-- Tướng gánh chính (Carry): Tristana (Đồ chuẩn: Cuồng Đao Guinsoo, Kiếm Súng Hextech, Diệt Khổng Lồ)
-- Tướng chống chịu (Tank): Rammus (Đồ chuẩn: Thú Tượng Thạch Giáp, Giáp Tâm Linh, Giáp Máu Warmog)
-- Lối chơi: 3-Cost Reroll (Độ khó: MEDIUM)
+### [C Tier] Eclipse Kayle
+- Link: https://tft.langpn.xyz/tierlist/comps?comp=eclipse-kayle
+- Tướng gánh chính (Carry): Kayle (Đồ chuẩn: Cuồng Đao Guinsoo, Mũ Phù Thủy Rabadon, Bùa Đỏ)
+- Tướng chống chịu (Tank): Sejuani (Đồ chuẩn: Thú Tượng Thạch Giáp, Giáp Tâm Linh, Giáp Máu Warmog)
+- Lối chơi: 2-Cost Reroll (Độ khó: EASY)
 
 ### [C Tier] Embiggen Xayah
 - Link: https://tft.langpn.xyz/tierlist/comps?comp=embiggen-xayah
@@ -175,11 +163,23 @@
 - Tướng chống chịu (Tank): Rakan (Đồ chuẩn: Mũ Thích Nghi, Giáp Máu Warmog, Mũ Thích Nghi)
 - Lối chơi: 1-Cost Reroll (Độ khó: EASY)
 
+### [C Tier] Fae Tristana
+- Link: https://tft.langpn.xyz/tierlist/comps?comp=fae-tristana
+- Tướng gánh chính (Carry): Tristana (Đồ chuẩn: Cuồng Đao Guinsoo, Kiếm Súng Hextech, Diệt Khổng Lồ)
+- Tướng chống chịu (Tank): Rammus (Đồ chuẩn: Thú Tượng Thạch Giáp, Giáp Tâm Linh, Giáp Máu Warmog)
+- Lối chơi: 3-Cost Reroll (Độ khó: MEDIUM)
+
 ### [C Tier] Warwick Ravager
 - Link: https://tft.langpn.xyz/tierlist/comps?comp=warwick-ravager
 - Tướng gánh chính (Carry): Warwick (Đồ chuẩn: Móng Vuốt Sterak, Quyền Năng Khổng Lồ, Ngọn Giáo Shojin)
 - Tướng chống chịu (Tank): Malphite (Đồ chuẩn: Vương Miện Hoàng Gia, Thú Tượng Thạch Giáp, Giáp Máu Warmog)
 - Lối chơi: 2-Cost Reroll (Độ khó: MEDIUM)
+
+### [C Tier] Lunarwood Kha'zix
+- Link: https://tft.langpn.xyz/tierlist/comps?comp=lunarwood-kha-zix
+- Tướng gánh chính (Carry): Kha'Zix (Đồ chuẩn: Bàn Tay Công Lý, Bàn Tay Công Lý, Mũ Phù Thủy Rabadon)
+- Tướng chống chịu (Tank): Hecarim (Đồ chuẩn: Giáp Máu Warmog, Thú Tượng Thạch Giáp, Giáp Tâm Linh)
+- Lối chơi: 3-Cost Reroll (Độ khó: MEDIUM)
 
 ### [C Tier] Invoker Morgana
 - Link: https://tft.langpn.xyz/tierlist/comps?comp=invoker-morgana
@@ -211,6 +211,12 @@
 - Tướng chống chịu (Tank): Hecarim (Đồ chuẩn: Giáp Máu Warmog, Áo Choàng Lửa, Lời Thề Hộ Vệ)
 - Lối chơi: 2-Cost Reroll (Độ khó: EASY)
 
+### [X Tier] Aphelios Elderwood
+- Link: https://tft.langpn.xyz/tierlist/comps?comp=aphelios-elderwood
+- Tướng gánh chính (Carry): Aphelios (Đồ chuẩn: Ấn Thần Rừng, Cuồng Đao Guinsoo, Thịnh Nộ Thủy Quái)
+- Tướng chống chịu (Tank): Hecarim (Đồ chuẩn: Vương Miện Hoàng Gia, Giáp Máu Warmog, Giáp Vai Nguyệt Thần)
+- Lối chơi: 4-Cost Fast 8 (Độ khó: MEDIUM)
+
 ### [X Tier] Blackthorn Khazix
 - Link: https://tft.langpn.xyz/tierlist/comps?comp=blackthorn-khazix
 - Tướng gánh chính (Carry): Kha'Zix (Đồ chuẩn: Bàn Tay Công Lý, Bàn Tay Công Lý, Ấn Gai Đen)
@@ -222,12 +228,6 @@
 - Tướng gánh chính (Carry): Kayle (Đồ chuẩn: Cuồng Đao Guinsoo, Găng Bảo Thạch, Chùy Đoản Côn)
 - Tướng chống chịu (Tank): Ornn (Đồ chuẩn: Thú Tượng Thạch Giáp, Giáp Máu Warmog, Giáp Tâm Linh)
 - Lối chơi: 2-Cost Reroll (Độ khó: EASY)
-
-### [X Tier] Aphelios Elderwood
-- Link: https://tft.langpn.xyz/tierlist/comps?comp=aphelios-elderwood
-- Tướng gánh chính (Carry): Aphelios (Đồ chuẩn: Ấn Thần Rừng, Cuồng Đao Guinsoo, Thịnh Nộ Thủy Quái)
-- Tướng chống chịu (Tank): Hecarim (Đồ chuẩn: Vương Miện Hoàng Gia, Giáp Máu Warmog, Giáp Vai Nguyệt Thần)
-- Lối chơi: 4-Cost Fast 8 (Độ khó: MEDIUM)
 
 ### [X Tier] Bronze For Life AP
 - Link: https://tft.langpn.xyz/tierlist/comps?comp=bronze-for-life-ap
@@ -295,7 +295,7 @@
 - Tướng chống chịu (Tank): Fiddlesticks (Đồ chuẩn: Giáp Máu Warmog, Thú Tượng Thạch Giáp, Giáp Tâm Linh)
 - Lối chơi: 3-Cost Reroll (Độ khó: MEDIUM)
 
-### [B Tier] Solar Kayle
+### [C Tier] Solar Kayle
 - Link: https://tft.langpn.xyz/tierlist/comps?comp=solar-kayle
 - Tướng gánh chính (Carry): Kayle (Đồ chuẩn: Cuồng Đao Guinsoo, Đao Chớp, Mũ Phù Thủy Rabadon)
 - Tướng chống chịu (Tank): Ornn (Đồ chuẩn: Thú Tượng Thạch Giáp, Giáp Máu Warmog, Giáp Tâm Linh)
@@ -330,12 +330,6 @@
 - Tướng gánh chính (Carry): Pebbles (Đồ chuẩn: Bùa Xanh, Mũ Phù Thủy Rabadon, Kiếm Súng Hextech)
 - Tướng chống chịu (Tank): Sentinel (Đồ chuẩn: Lời Thề Hộ Vệ, Giáp Máu Warmog, Mũ Thích Nghi)
 - Lối chơi: 1-Cost Reroll (Độ khó: EASY)
-
-### [C Tier] Lunarwood Kha'zix
-- Link: https://tft.langpn.xyz/tierlist/comps?comp=lunarwood-kha-zix
-- Tướng gánh chính (Carry): Kha'Zix (Đồ chuẩn: Bàn Tay Công Lý, Bàn Tay Công Lý, Mũ Phù Thủy Rabadon)
-- Tướng chống chịu (Tank): Hecarim (Đồ chuẩn: Giáp Máu Warmog, Thú Tượng Thạch Giáp, Giáp Tâm Linh)
-- Lối chơi: 3-Cost Reroll (Độ khó: MEDIUM)
 
 ### [B Tier] 10 Riftbeast
 - Link: https://tft.langpn.xyz/tierlist/comps?comp=10-riftbeast
@@ -377,6 +371,12 @@
 - Link: https://tft.langpn.xyz/tierlist/comps?comp=azir-reroll
 - Tướng gánh chính (Carry): Azir (Đồ chuẩn: Kiếm Súng Hextech, Găng Bảo Thạch, Mũ Phù Thủy Rabadon)
 - Tướng chống chịu (Tank): Vi (Đồ chuẩn: Thú Tượng Thạch Giáp, Thú Tượng Thạch Giáp, Giáp Máu Warmog)
+- Lối chơi: 3-Cost Reroll (Độ khó: MEDIUM)
+
+### [C Tier] Spellweaver Kha'Zix
+- Link: https://tft.langpn.xyz/tierlist/comps?comp=spellweaver-kha-zix
+- Tướng gánh chính (Carry): Kha'Zix (Đồ chuẩn: Bàn Tay Công Lý, Bàn Tay Công Lý, Áo Choàng Bóng Tối)
+- Tướng chống chịu (Tank): Fiddlesticks (Đồ chuẩn: Giáp Máu Warmog, Thú Tượng Thạch Giáp, Giáp Tâm Linh)
 - Lối chơi: 3-Cost Reroll (Độ khó: MEDIUM)
 
 ### [C Tier] Blackthorn Malphite

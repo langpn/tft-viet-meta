@@ -1,5 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
 import {
   syncAcademyData,
@@ -12,6 +13,7 @@ import {
   localizeChampion,
   parseTrend,
   parseHexCoordinates,
+  writeIfChanged,
   type ParsedAcademyComp,
   type ItemsTierList,
   type AugmentsTierList,
@@ -345,9 +347,28 @@ describe("TFT Academy Full Scraper & Parser", () => {
     });
   });
 
+  test("writeIfChanged skips writes when only updatedAt differs", async () => {
+    const tmpDir = await fs.promises.mkdtemp(path.join(os.tmpdir(), "tft-wic-"));
+    const file = path.join(tmpDir, "sample.json");
+
+    expect(writeIfChanged(file, { items: [1, 2], updatedAt: "2026-01-01T00:00:00.000Z" })).toBe(true);
+    const before = fs.statSync(file).mtimeMs;
+
+    // Same payload, new timestamp: must not touch the file.
+    expect(writeIfChanged(file, { items: [1, 2], updatedAt: "2026-12-31T23:59:59.999Z" })).toBe(false);
+    expect(fs.statSync(file).mtimeMs).toBe(before);
+    expect(JSON.parse(fs.readFileSync(file, "utf-8")).updatedAt).toBe("2026-01-01T00:00:00.000Z");
+
+    // Real content change: must write.
+    expect(writeIfChanged(file, { items: [1, 3], updatedAt: "2026-12-31T23:59:59.999Z" })).toBe(true);
+    expect(JSON.parse(fs.readFileSync(file, "utf-8")).items).toEqual([1, 3]);
+  });
+
   test("syncAcademyData execution returns full structured datasets", async () => {
-    // Run sync function with mock or live fetch
-    const result = await syncAcademyData();
+    // Run sync function with mock or live fetch into a temp dir so tests never
+    // overwrite the committed data that the site actually serves.
+    const tmpDir = await fs.promises.mkdtemp(path.join(os.tmpdir(), "tft-sync-"));
+    const result = await syncAcademyData({ dataDir: tmpDir });
     expect(result.comps.length).toBeGreaterThanOrEqual(70);
     expect(result.items.categories.craftables.S.length).toBeGreaterThan(0);
     expect(result.augments.silver.S.length).toBeGreaterThan(0);

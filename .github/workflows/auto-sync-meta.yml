@@ -37,7 +37,7 @@ jobs:
             echo "New meta changes found! Committing and pushing to main..."
             git config user.name "Phạm Ngọc Lang"
             git config user.email "langpn.dev@gmail.com"
-            git add src/lib/data/
+            git add src/lib/data/ static/llms.txt static/llms-full.txt
             git commit -m "chore: auto-sync meta data from TFT Academy (Set 18)"
             git push origin main
           fi
