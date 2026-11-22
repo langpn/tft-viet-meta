@@ -265,8 +265,10 @@
     }
   }
 
-  function selectComp(comp: any | null) {
-    if (!comp) {
+  let compTrigger: HTMLElement | null = null;
+
+  function selectComp(comp: any | null, trigger?: HTMLElement) {
+    if (!comp || selectedCompId === comp.id) {
       selectedCompId = null;
       selectedDetail = null;
       if (typeof window !== 'undefined') {
@@ -274,21 +276,13 @@
         url.searchParams.delete('comp');
         history.replaceState({}, '', url.pathname + (url.search ? url.search : ''));
       }
+      const opener = trigger ?? compTrigger;
+      if (opener?.isConnected) opener.focus();
+      compTrigger = null;
       return;
     }
 
-    // Toggle behavior: if already open, clicking it again closes it
-    if (selectedCompId === comp.id) {
-      selectedCompId = null;
-      selectedDetail = null;
-      if (typeof window !== 'undefined') {
-        const url = new URL(window.location.href);
-        url.searchParams.delete('comp');
-        history.replaceState({}, '', url.pathname + (url.search ? url.search : ''));
-      }
-      return;
-    }
-
+    if (trigger) compTrigger = trigger;
     selectedCompId = comp.id;
     loadCompDetail(comp.id);
     if (typeof window !== 'undefined') {
@@ -529,10 +523,15 @@
                   <div 
                     class="relative transition-all duration-200 cursor-pointer select-none group {isGroupSelected ? 'ring-2 ring-amber-400 shadow-xl shadow-amber-400/40 scale-105 rounded-2xl' : isFiltering ? (group.isMatch ? 'opacity-100 scale-105 ring-2 ring-amber-400 shadow-lg shadow-amber-400/25 rounded-2xl' : 'opacity-20 hover:opacity-60') : (group.isMatch ? 'opacity-100 hover:scale-105' : 'opacity-25 hover:opacity-75')}"
                     title="{comp.title} ({comp.mainCarry?.name_vi || comp.mainCarry?.name_en || ''}){group.hasVariation ? ` (+${group.comps.length - 1} biến thể)` : ''}"
-                    onclick={() => selectComp(group.matchedComp || comp)}
+                    onclick={(event) => selectComp(group.matchedComp || comp, event.currentTarget)}
                     role="button"
                     tabindex="0"
-                    onkeydown={(e) => { if (e.key === 'Enter') selectComp(group.matchedComp || comp); }}
+                    aria-expanded={!!isGroupSelected}
+                    onkeydown={(event) => {
+                      if (event.key !== 'Enter' && event.key !== ' ') return;
+                      event.preventDefault();
+                      if (!event.repeat) selectComp(group.matchedComp || comp, event.currentTarget);
+                    }}
                   >
                     {#if group.hasVariation}
                       <!-- Stacked double-hex effect for champion variations (TFT Academy style) -->

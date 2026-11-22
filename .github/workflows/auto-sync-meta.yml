@@ -45,6 +45,8 @@ jobs:
           bun test
           bun run typecheck
           bun run build
+          bunx playwright install --with-deps chromium
+          bunx playwright test
 
       - name: Commit and Push if meta changed
         run: |

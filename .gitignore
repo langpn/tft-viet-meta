@@ -8,3 +8,5 @@ data/snapshots/
 build/
 .meta-publish-lock/
 .meta-stage-*/
+playwright-report/
+test-results/
