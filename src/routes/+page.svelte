@@ -8,20 +8,41 @@
 
   let selectedCompId = $state<string | null>(null);
   let showDetailModal = $state(false);
+  let selectedDetail = $state<{ comp: any; variants: any[] } | null>(null);
+  const detailCache = new Map<string, { comp: any; variants: any[] }>();
 
-  const selectedComp = $derived.by(() => {
-    if (!selectedCompId) return null;
-    return (data.allComps || data.featuredComps).find((c: any) => c.id === selectedCompId || c.slug === selectedCompId) || null;
-  });
+  let detailError = $state(false);
+
+  async function loadCompDetail(id: string) {
+    detailError = false;
+    const cached = detailCache.get(id);
+    if (cached) {
+      selectedDetail = cached;
+      return;
+    }
+    try {
+      const res = await fetch(`/api/comps/${encodeURIComponent(id)}`);
+      if (!res.ok) throw new Error('Could not load comp details');
+      const detail = await res.json();
+      detailCache.set(id, detail);
+      if (selectedCompId === id) {
+        selectedDetail = detail;
+      }
+    } catch {
+      if (selectedCompId === id) detailError = true;
+    }
+  }
 
   function openModal(comp: any) {
     selectedCompId = comp.id;
     showDetailModal = true;
+    loadCompDetail(comp.id);
   }
 
   function closeModal() {
     showDetailModal = false;
     selectedCompId = null;
+    selectedDetail = null;
   }
 
   function handleKeydown(e: KeyboardEvent) {
@@ -50,11 +71,10 @@
 </script>
 
 <svelte:head>
-  <title>TFT Academy Việt Nam · Bảng Xếp Hạng Đội Hình, Trang Bị & Explorer Meta ĐTCL Mùa 18</title>
-  <meta name="title" content="TFT Academy Việt Nam · Bảng Xếp Hạng Đội Hình, Trang Bị & Explorer Meta ĐTCL Mùa 18" />
-  <meta name="description" content="Nguồn giáo án và dữ liệu Đấu Trường Chân Lý số 1 Việt Nam. Bảng xếp hạng 73 đội hình meta từ Dishsoap & Frodan, 123 trang bị, 249 lõi nâng cấp và số liệu tactics.tools live." />
-  <meta property="og:title" content="TFT Academy Việt Nam · Cẩm Nang Meta ĐTCL Số 1" />
-  <meta property="og:description" content="Nguồn giáo án và dữ liệu Đấu Trường Chân Lý số 1 Việt Nam. Bảng xếp hạng đội hình S-Tier chuẩn nhất." />
+  <title>TFT Academy Việt Nam · Bảng Xếp Hạng Đội Hình, Trang Bị & Explorer Meta ĐTCL Mùa {data.meta.set}</title>
+  <meta name="title" content="TFT Academy Việt Nam · Bảng Xếp Hạng Đội Hình, Trang Bị & Explorer Meta ĐTCL Mùa {data.meta.set}" />
+  <meta name="description" content={`Cẩm nang Đấu Trường Chân Lý bằng tiếng Việt. Bảng xếp hạng ${data.meta.compCount} đội hình, ${data.meta.itemCount} trang bị, ${data.meta.augmentCount} lõi nâng cấp và thống kê tactics.tools.`} />
+  <meta property="og:title" content={`TFT Việt Meta · Cẩm nang ĐTCL Mùa ${data.meta.set}`} />
   <link rel="canonical" href="https://tft.langpn.xyz/" />
 </svelte:head>
 
@@ -69,18 +89,18 @@
 
     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-300 text-xs font-bold uppercase tracking-wider">
       <Sparkles class="w-3.5 h-3.5" />
-      <span>Phiên Bản Đấu Trường Chân Lý 18.5c</span>
+      <span>Mùa {data.meta.set} · Dữ liệu bản {data.meta.patch}</span>
     </div>
 
     <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white max-w-4xl leading-tight">
       Nguồn Giáo Án & Dữ Liệu <br class="hidden sm:block" />
       <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400">
-        Đấu Trường Chân Lý Số 1
+        Đấu Trường Chân Lý
       </span>
     </h1>
 
     <p class="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
-      Nâng cao bậc xếp hạng của bạn với hệ thống đội hình meta giám tuyển bởi Dishsoap (2x Vô địch thế giới) và Frodan, chuyển ngữ 100% tiếng Việt từ game gốc.
+      Đội hình từ TFT Academy của Dishsoap và Frodan, với tên tướng, trang bị và tộc hệ ưu tiên bản tiếng Việt của Riot.
     </p>
 
     <!-- CTAs -->
@@ -329,7 +349,7 @@
   </section>
 
   <!-- Modern Comp Detail Modal -->
-  {#if showDetailModal && selectedComp}
+  {#if showDetailModal && selectedCompId}
     <!-- svelte-ignore a11y_click_events_have_key_events -->
     <div 
       class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto"
@@ -345,12 +365,20 @@
         onclick={(e) => e.stopPropagation()}
         role="document"
       >
-        <CompDetailPanel 
-          comp={selectedComp} 
-          allComps={data.allComps || data.featuredComps}
-          onclose={closeModal} 
-          onselectcomp={(c) => (selectedCompId = c.id)}
-        />
+        {#if selectedDetail?.comp.id === selectedCompId}
+          <CompDetailPanel
+            comp={selectedDetail.comp}
+            allComps={selectedDetail.variants}
+            onclose={closeModal}
+            onselectcomp={(c) => openModal(c)}
+          />
+        {:else}
+          <div class="flex items-center gap-4 rounded-xl bg-[#131722] p-5 text-white">
+            <p role="status" class="flex-1">{detailError ? 'Không thể tải chi tiết đội hình.' : 'Đang tải chi tiết đội hình…'}</p>
+            {#if detailError}<button type="button" onclick={() => selectedCompId && loadCompDetail(selectedCompId)}>Thử lại</button>{/if}
+            <button type="button" onclick={closeModal}>Đóng</button>
+          </div>
+        {/if}
       </div>
     </div>
   {/if}

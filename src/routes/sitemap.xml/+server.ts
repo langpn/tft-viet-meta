@@ -1,29 +1,25 @@
 import type { RequestHandler } from './$types';
-import compsData from '$data/academy-comps.json';
+import { SITE_URL, compUrl, escapeXml } from '$lib/comp-pages';
+import { getComps } from '$server/site-meta';
 
 export const GET: RequestHandler = async () => {
-  const baseUrl = 'https://tft.langpn.xyz';
   const lastmod = new Date().toISOString().split('T')[0];
-
-  const comps = (compsData || []) as any[];
+  const comps = getComps();
 
   const staticUrls = [
-    { loc: `${baseUrl}/`, priority: '1.0', changefreq: 'daily' },
-    { loc: `${baseUrl}/tierlist/comps`, priority: '0.9', changefreq: 'daily' },
-    { loc: `${baseUrl}/tierlist/items`, priority: '0.8', changefreq: 'daily' },
-    { loc: `${baseUrl}/tierlist/augments`, priority: '0.8', changefreq: 'daily' },
-    { loc: `${baseUrl}/explorer`, priority: '0.8', changefreq: 'daily' },
-    { loc: `${baseUrl}/learn/new-set`, priority: '0.7', changefreq: 'weekly' }
+    { loc: `${SITE_URL}/`, priority: '1.0', changefreq: 'daily' },
+    { loc: `${SITE_URL}/tierlist/comps`, priority: '0.9', changefreq: 'daily' },
+    { loc: `${SITE_URL}/tierlist/items`, priority: '0.8', changefreq: 'daily' },
+    { loc: `${SITE_URL}/tierlist/augments`, priority: '0.8', changefreq: 'daily' },
+    { loc: `${SITE_URL}/explorer`, priority: '0.8', changefreq: 'daily' },
+    { loc: `${SITE_URL}/learn/new-set`, priority: '0.7', changefreq: 'weekly' }
   ];
 
-  const compUrls = comps.map((comp) => {
-    const slug = (comp.title || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-    return {
-      loc: `${baseUrl}/tierlist/comps?comp=${slug || comp.slug || comp.id}`,
-      priority: '0.8',
-      changefreq: 'daily'
-    };
-  });
+  const compUrls = comps.map((comp) => ({
+    loc: compUrl(comp),
+    priority: '0.8',
+    changefreq: 'daily'
+  }));
 
   const allUrls = [...staticUrls, ...compUrls];
 
@@ -32,10 +28,10 @@ export const GET: RequestHandler = async () => {
 ${allUrls
   .map(
     (u) => `  <url>
-    <loc>${u.loc}</loc>
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>${u.changefreq}</changefreq>
-    <priority>${u.priority}</priority>
+    <loc>${escapeXml(u.loc)}</loc>
+    <lastmod>${escapeXml(lastmod)}</lastmod>
+    <changefreq>${escapeXml(u.changefreq)}</changefreq>
+    <priority>${escapeXml(u.priority)}</priority>
   </url>`
   )
   .join('\n')}

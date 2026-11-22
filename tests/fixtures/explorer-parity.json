@@ -1,0 +1,466 @@
+{
+  "samples": [
+    {
+      "params": {
+        "patch": "16212",
+        "rank": "1",
+        "tokens": "0"
+      },
+      "url": "https://d3.tft.tools/explorer-data/16212/1/0",
+      "raw": {
+        "base": {
+          "count": 2668807,
+          "place": 12005198,
+          "top4": 1335036,
+          "won": 333745
+        }
+      },
+      "summary": {
+        "games": 2668807,
+        "avgPlace": 4.498338770844051,
+        "top4Rate": 0.5002369972800581,
+        "winRate": 0.1250540035304164
+      }
+    },
+    {
+      "params": {
+        "patch": "16212",
+        "rank": "1"
+      },
+      "url": "https://d3.tft.tools/explorer-data/16212/1/u-DA_Draven18-0",
+      "raw": {
+        "base": {
+          "count": 365548,
+          "place": 1532795,
+          "top4": 194674,
+          "won": 82358
+        },
+        "items": [
+          [
+            "DA_Draven18",
+            "DA_Deathblade",
+            {
+              "count": 99413,
+              "place": 389610,
+              "top4": 57824,
+              "won": 25277,
+              "delta": -0.37640276551246643
+            }
+          ]
+        ]
+      },
+      "summary": {
+        "games": 365548,
+        "avgPlace": 4.193142897786338,
+        "top4Rate": 0.5325538643351899,
+        "winRate": 0.2253000973880311
+      },
+      "item": {
+        "unitId": "DA_Draven18",
+        "itemId": "DA_Deathblade",
+        "games": 99413,
+        "avgPlace": 3.919105147214147,
+        "top4Rate": 0.581654310804422,
+        "winRate": 0.2542625209982598,
+        "delta": -0.37640276551246643
+      },
+      "filters": [
+        {
+          "type": "u",
+          "id": "DA_Draven18",
+          "starLevel": 0
+        }
+      ]
+    },
+    {
+      "params": {
+        "patch": "16212",
+        "rank": "0",
+        "tokens": "0"
+      },
+      "url": "https://d3.tft.tools/explorer-data/16212/0/0",
+      "raw": {
+        "base": {
+          "count": 512114,
+          "place": 2303959,
+          "top4": 256135,
+          "won": 64034
+        },
+        "traits": [
+          [
+            "DA_18_Adaptor",
+            1,
+            {
+              "count": 48583,
+              "place": 224248,
+              "top4": 23761,
+              "won": 3177,
+              "delta": 0.12910015881061554
+            }
+          ]
+        ]
+      },
+      "summary": {
+        "games": 512114,
+        "avgPlace": 4.49891820961739,
+        "top4Rate": 0.5001523098372628,
+        "winRate": 0.12503856563187102
+      },
+      "trait": {
+        "id": "DA_18_Adaptor",
+        "tier": 1,
+        "pickRate": 0.094867549022288,
+        "delta": 0.12910015881061554,
+        "games": 48583,
+        "avgPlace": 4.615770948685754,
+        "top4Rate": 0.4890805425766214,
+        "winRate": 0.06539324455056296
+      }
+    },
+    {
+      "params": {
+        "patch": "16212",
+        "rank": "2",
+        "tokens": "0"
+      },
+      "url": "https://d3.tft.tools/explorer-data/16212/2/0",
+      "raw": {
+        "base": {
+          "count": 6239261,
+          "place": 28065173,
+          "top4": 3121275,
+          "won": 780281
+        },
+        "traits": [
+          [
+            "DA_18_Adaptor",
+            1,
+            {
+              "count": 463863,
+              "place": 2081967,
+              "top4": 239921,
+              "won": 34495,
+              "delta": -0.010623332113027573
+            }
+          ]
+        ]
+      },
+      "summary": {
+        "games": 6239261,
+        "avgPlace": 4.498156592583641,
+        "top4Rate": 0.5002635728814678,
+        "winRate": 0.1250598428243345
+      },
+      "trait": {
+        "id": "DA_18_Adaptor",
+        "tier": 1,
+        "pickRate": 0.07434582396857577,
+        "delta": -0.010623332113027573,
+        "games": 463863,
+        "avgPlace": 4.488323060903758,
+        "top4Rate": 0.5172238354859086,
+        "winRate": 0.07436462921164223
+      }
+    },
+    {
+      "params": {
+        "patch": "16212",
+        "rank": "3",
+        "tokens": "0"
+      },
+      "url": "https://d3.tft.tools/explorer-data/16212/3/0",
+      "raw": {
+        "base": {
+          "count": 6239261,
+          "place": 28065173,
+          "top4": 3121275,
+          "won": 780281
+        },
+        "traits": [
+          [
+            "DA_18_Adaptor",
+            1,
+            {
+              "count": 463863,
+              "place": 2081967,
+              "top4": 239921,
+              "won": 34495,
+              "delta": -0.010623332113027573
+            }
+          ]
+        ]
+      },
+      "summary": {
+        "games": 6239261,
+        "avgPlace": 4.498156592583641,
+        "top4Rate": 0.5002635728814678,
+        "winRate": 0.1250598428243345
+      },
+      "trait": {
+        "id": "DA_18_Adaptor",
+        "tier": 1,
+        "pickRate": 0.07434582396857577,
+        "delta": -0.010623332113027573,
+        "games": 463863,
+        "avgPlace": 4.488323060903758,
+        "top4Rate": 0.5172238354859086,
+        "winRate": 0.07436462921164223
+      }
+    },
+    {
+      "params": {
+        "patch": "16212",
+        "rank": "4",
+        "tokens": "0"
+      },
+      "url": "https://d3.tft.tools/explorer-data/16212/4/0",
+      "raw": {
+        "base": {
+          "count": 268370,
+          "place": 1207437,
+          "top4": 134217,
+          "won": 33554
+        },
+        "traits": [
+          [
+            "DA_18_Adaptor",
+            1,
+            {
+              "count": 25845,
+              "place": 120036,
+              "top4": 12513,
+              "won": 1685,
+              "delta": 0.16079173982143402
+            }
+          ]
+        ]
+      },
+      "summary": {
+        "games": 268370,
+        "avgPlace": 4.499150426649774,
+        "top4Rate": 0.5001192383649439,
+        "winRate": 0.12502887804150986
+      },
+      "trait": {
+        "id": "DA_18_Adaptor",
+        "tier": 1,
+        "pickRate": 0.09630361068673846,
+        "delta": 0.16079173982143402,
+        "games": 25845,
+        "avgPlace": 4.6444573418456185,
+        "top4Rate": 0.48415554265815436,
+        "winRate": 0.06519636293286903
+      }
+    },
+    {
+      "params": {
+        "patch": "16212",
+        "rank": "1"
+      },
+      "filters": [
+        {
+          "type": "u",
+          "id": "DA_Draven18",
+          "starLevel": 0
+        },
+        {
+          "type": "i",
+          "id": "DA_Deathblade",
+          "userUnitId": "DA_Draven18"
+        }
+      ],
+      "url": "https://d3.tft.tools/explorer-data/16212/1/u-DA_Draven18-0/i-DA_Deathblade-DA_Draven18-0",
+      "raw": {
+        "base": {
+          "count": 99557,
+          "place": 390196,
+          "top4": 57909,
+          "won": 25304
+        }
+      },
+      "summary": {
+        "games": 99557,
+        "avgPlace": 3.9193225991140754,
+        "top4Rate": 0.5816667838524664,
+        "winRate": 0.25416595518145385
+      }
+    },
+    {
+      "params": {
+        "patch": "16230",
+        "rank": "0",
+        "tokens": "0"
+      },
+      "url": "https://d3.tft.tools/explorer-data/16230/0/0",
+      "raw": {
+        "base": {
+          "count": 146724,
+          "place": 660118,
+          "top4": 73382,
+          "won": 18344
+        }
+      },
+      "summary": {
+        "games": 146724,
+        "avgPlace": 4.499045827540144,
+        "top4Rate": 0.500136310351408,
+        "winRate": 0.1250238543114964
+      }
+    },
+    {
+      "params": {
+        "patch": "16230",
+        "rank": "1",
+        "tokens": "0"
+      },
+      "url": "https://d3.tft.tools/explorer-data/16230/1/0",
+      "raw": {
+        "base": {
+          "count": 942915,
+          "place": 4241746,
+          "top4": 471653,
+          "won": 117908
+        }
+      },
+      "summary": {
+        "games": 942915,
+        "avgPlace": 4.498545468043249,
+        "top4Rate": 0.5002073357619722,
+        "winRate": 0.12504626610033778
+      }
+    },
+    {
+      "params": {
+        "patch": "16230",
+        "rank": "2",
+        "tokens": "0"
+      },
+      "url": "https://d3.tft.tools/explorer-data/16230/2/0",
+      "raw": {
+        "base": {
+          "count": 2366657,
+          "place": 10646082,
+          "top4": 1183882,
+          "won": 295955
+        }
+      },
+      "summary": {
+        "games": 2366657,
+        "avgPlace": 4.498362880637118,
+        "top4Rate": 0.5002338741946974,
+        "winRate": 0.12505191922614894
+      }
+    },
+    {
+      "params": {
+        "patch": "16230",
+        "rank": "3",
+        "tokens": "0"
+      },
+      "url": "https://d3.tft.tools/explorer-data/16230/3/0",
+      "raw": {
+        "base": {
+          "count": 4653494,
+          "place": 20932657,
+          "top4": 2327900,
+          "won": 581940
+        }
+      },
+      "summary": {
+        "games": 4653494,
+        "avgPlace": 4.49826667875794,
+        "top4Rate": 0.5002477708147899,
+        "winRate": 0.1250544214734133
+      }
+    },
+    {
+      "params": {
+        "patch": "16230",
+        "rank": "4",
+        "tokens": "0"
+      },
+      "url": "https://d3.tft.tools/explorer-data/16230/4/0",
+      "raw": {
+        "base": {
+          "count": 81600,
+          "place": 367144,
+          "top4": 40808,
+          "won": 10202
+        }
+      },
+      "summary": {
+        "games": 81600,
+        "avgPlace": 4.499313725490196,
+        "top4Rate": 0.5000980392156863,
+        "winRate": 0.12502450980392157
+      }
+    },
+    {
+      "params": {
+        "patch": "16230",
+        "rank": "1",
+        "tokens": "u-DA_Draven18-0"
+      },
+      "url": "https://d3.tft.tools/explorer-data/16230/1/u-DA_Draven18-0",
+      "raw": {
+        "base": {
+          "count": 135908,
+          "place": 583026,
+          "top4": 70057,
+          "won": 28637
+        },
+        "traits": [
+          [
+            "DA_18_Adaptor",
+            1,
+            {
+              "count": 633,
+              "place": 2902,
+              "top4": 313,
+              "won": 72,
+              "delta": 0.2960391342639923
+            }
+          ]
+        ],
+        "items": [
+          [
+            "DA_Draven18",
+            "DA_Deathblade",
+            {
+              "count": 36024,
+              "place": 144117,
+              "top4": 20413,
+              "won": 8716,
+              "delta": -0.3936043083667755
+            }
+          ]
+        ]
+      },
+      "summary": {
+        "games": 135908,
+        "avgPlace": 4.289857845012802,
+        "top4Rate": 0.5154737027989522,
+        "winRate": 0.21070871471878036
+      },
+      "trait": {
+        "id": "DA_18_Adaptor",
+        "tier": 1,
+        "pickRate": 0.004657562468728846,
+        "delta": 0.2960391342639923,
+        "games": 633,
+        "avgPlace": 4.584518167456556,
+        "top4Rate": 0.49447077409162715,
+        "winRate": 0.11374407582938388
+      },
+      "item": {
+        "unitId": "DA_Draven18",
+        "itemId": "DA_Deathblade",
+        "delta": -0.3936043083667755,
+        "games": 36024,
+        "avgPlace": 4.000582944703531,
+        "top4Rate": 0.5666500111037086,
+        "winRate": 0.24194981123695314
+      }
+    }
+  ]
+}

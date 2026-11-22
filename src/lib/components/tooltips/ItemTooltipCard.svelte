@@ -1,5 +1,6 @@
 <script lang="ts">
   import { resolveItemIcon, resolveChampionIcon } from '$lib/utils/assets';
+  import { describeSegments } from '$lib/comp-pages';
 
   interface Props {
     data: any;
@@ -16,30 +17,7 @@
   };
 
   const iconSrc = $derived(resolveItemIcon(data?.icon, data?.id));
-
-  // Format and highlight keywords in description matching TFT Academy
-  function formatDescription(txt: string | undefined | null): string {
-    if (!txt) return '';
-    const clean = txt
-      .replace(/\{\{[^}]+\}\}/g, '')
-      .replace(/<[^>]+>/g, '')
-      .replace(/\s+,/g, ',')
-      .replace(/\s+\./g, '.')
-      .replace(/\s+/g, ' ')
-      .trim();
-
-    return clean
-      .replace(/\b(Attack Speed|Tốc Độ Đánh)\b/gi, '<span class="text-[#FFD790] font-bold">$1</span>')
-      .replace(/\b(Attack Damage|Sức Mạnh Công Kích)\b/gi, '<span class="text-orange-400 font-bold">$1</span>')
-      .replace(/\b(Ability Power|Sức Mạnh Phép Thuật)\b/gi, '<span class="text-sky-400 font-bold">$1</span>')
-      .replace(/\b(Health|Máu)\b/gi, '<span class="text-emerald-400 font-bold">$1</span>')
-      .replace(/\b(Armor|Giáp)\b/gi, '<span class="text-amber-300 font-bold">$1</span>')
-      .replace(/\b(Magic Resist|Kháng Phép)\b/gi, '<span class="text-sky-400 font-bold">$1</span>')
-      .replace(/\b(Stuns?|Làm Choáng)\b/gi, '<span class="text-amber-300 font-bold">$1</span>')
-      .replace(/\b(Slow|Làm Chậm)\b/gi, '<span class="text-sky-300 font-bold">$1</span>')
-      .replace(/\b(Burn|Thiêu Đốt)\b/gi, '<span class="text-orange-400 font-bold">$1</span>')
-      .replace(/\b(Wound|Vết Thương Sâu)\b/gi, '<span class="text-rose-400 font-bold">$1</span>');
-  }
+  const descSegments = $derived(describeSegments(data?.desc_vi || data?.desc_en));
 </script>
 
 {#if data}
@@ -119,10 +97,15 @@
     <div class="border-b border-[#1E2330]"></div>
 
     <!-- Clean Description with Highlighting -->
-    {#if data.desc_vi || data.desc_en}
+    {#if descSegments.length > 0}
       <p class="text-xs text-white/90 leading-relaxed font-normal">
-        <!-- eslint-disable-next-line svelte/no-at-html-tags -->
-        {@html formatDescription(data.desc_vi || data.desc_en)}
+        {#each descSegments as seg}
+          {#if seg.cls}
+            <span class={seg.cls}>{seg.text}</span>
+          {:else}
+            {seg.text}
+          {/if}
+        {/each}
       </p>
     {/if}
 

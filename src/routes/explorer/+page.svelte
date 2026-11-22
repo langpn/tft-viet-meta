@@ -8,6 +8,16 @@
     Search, X, Shield, Users, Sparkles, Flame, ArrowUpDown, 
     TrendingDown, TrendingUp, ChevronDown, Plus, ExternalLink, SlidersHorizontal 
   } from 'lucide-svelte';
+  import {
+    EXPLORER_PATCHES,
+    EXPLORER_RANKS,
+    DEFAULT_PATCH,
+    DEFAULT_RANK,
+    MAX_SEARCH_LENGTH,
+    buildTokenString,
+    removeFilterAt,
+    createLatest
+  } from '$lib/explorer-contract';
 
   export interface ActiveFilter {
     type: 'u' | 'i' | 't' | 'a';
@@ -24,16 +34,24 @@
 
   let { data }: { data: PageData } = $props();
 
-  let selectedPatch = $state('16212');
-  let selectedRank = $state('1');
+  let selectedPatch = $state(data.initialPatch || DEFAULT_PATCH);
+  let selectedRank = $state(data.initialRank || DEFAULT_RANK);
   let minSampleSize = $state(100);
   let activeTab = $state<'units' | 'traits' | 'items' | 'augments'>((data.initialTab as any) || 'units');
   let splitByStarLevel = $state(false);
   let tableSearchQuery = $state('');
 
+  const explorerSlot = createLatest();
+  const suggestionSlot = createLatest();
+
   function selectTab(tab: 'units' | 'traits' | 'items' | 'augments') {
     activeTab = tab;
     sortColumn = 'games';
+    clearTimeout(debounceTimer);
+    suggestionSlot.cancel();
+    filterLoading = false;
+    filterSuggestions = [];
+    showAddFilterPopover = false;
     if (typeof window !== 'undefined') {
       const url = new URL(window.location.href);
       url.searchParams.set('tab', tab);
@@ -43,7 +61,7 @@
 
   let selectedFilters = $state<ActiveFilter[]>([]);
   let isLoading = $state(false);
-  let error = $state<string | null>(null);
+  let error = $state<string | null>(data.initialError || null);
   let itemError = $state<string | null>(null);
   let explorerData = $state<any>(data.initialData || null);
 
@@ -65,51 +83,15 @@
     5: 'border-amber-400'
   };
 
-  const patchOptions = [
-    { value: '16212', label: 'Patch 18.5c' },
-    { value: '16211', label: 'Patch 18.5b' }
-  ];
-
-  const rankOptions = [
-    { value: '4', label: 'Grandmaster+' },
-    { value: '0', label: 'Master+' },
-    { value: '1', label: 'Diamond+' },
-    { value: '2', label: 'Emerald+' },
-    { value: '3', label: 'Platinum+' }
-  ];
+  const patchOptions = EXPLORER_PATCHES;
+  const rankOptions = EXPLORER_RANKS;
 
   const minSampleOptions = [10, 50, 100, 200, 500, 1000];
 
-  // Convert filter stack into tactics.tools query token string.
-  // Token grammar is fixed by tactics.tools explorer chunk:
-  //   u-<unitId>-<starLevel>   t-<traitId>-<rank>   i-<itemId>-<unitId>-<starLevel>   a-<augId>-<pick>
-  // Items must name the unit holding them; a bare item id returns HTTP 500 from the source.
-  const tokenString = $derived.by(() => {
-    if (selectedFilters.length === 0) return '0';
-    const firstUnit = selectedFilters.find(f => f.type === 'u');
-    return selectedFilters.map(f => {
-      if (f.type === 'u') {
-        return `u-${f.id}-${f.starLevel ?? 0}`;
-      }
-      if (f.type === 'i') {
-        const unitId = f.userUnitId || firstUnit?.id || '';
-        const star = f.userUnitId
-          ? (selectedFilters.find(x => x.type === 'u' && x.id === f.userUnitId)?.starLevel ?? 0)
-          : (firstUnit?.starLevel ?? 0);
-        if (!unitId) return '';
-        return `i-${f.id}-${unitId}-${star}`;
-      }
-      if (f.type === 't') {
-        return `t-${f.id}-${f.tier || 1}`;
-      }
-      if (f.type === 'a') {
-        return `a-${f.id}-${f.pick ?? 0}`;
-      }
-      return '';
-    }).filter(Boolean).join('/');
-  });
+  const tokenString = $derived(buildTokenString(selectedFilters));
 
   async function fetchExplorerData() {
+    const req = explorerSlot.next();
     isLoading = true;
     error = null;
     try {
@@ -121,18 +103,20 @@
         p.set('tokens', tokenString);
       }
 
-      const res = await fetch(`/api/explorer?${p}`);
+      const res = await fetch(`/api/explorer?${p}`, { signal: req.signal });
+      const payload = await res.json().catch(() => null);
+      if (!req.isCurrent()) return;
       if (!res.ok) {
-        throw new Error(`HTTP ${res.status}`);
+        throw new Error(payload?.error || `HTTP ${res.status}`);
       }
-      const data = await res.json();
-      if (data.error) throw new Error(data.error);
-      explorerData = data;
+      if (payload?.error) throw new Error(payload.error);
+      explorerData = payload;
     } catch (e: any) {
-      error = e.message || 'Không thể tải dữ liệu Explorer';
+      if (e?.name === 'AbortError' || !req.isCurrent()) return;
+      error = e?.message || 'Không thể tải dữ liệu Explorer';
       explorerData = null;
     } finally {
-      isLoading = false;
+      if (req.isCurrent()) isLoading = false;
     }
   }
 
@@ -201,12 +185,20 @@
   }
 
   function removeFilter(index: number) {
-    selectedFilters = selectedFilters.filter((_, i) => i !== index);
+    selectedFilters = removeFilterAt(selectedFilters, index);
+    itemError = null;
     fetchExplorerData();
   }
 
   function clearAllFilters() {
     selectedFilters = [];
+    itemError = null;
+    clearTimeout(debounceTimer);
+    suggestionSlot.cancel();
+    filterLoading = false;
+    filterSuggestions = [];
+    filterSearchQuery = '';
+    showAddFilterPopover = false;
     fetchExplorerData();
   }
 
@@ -222,20 +214,26 @@
 
   async function handleFilterSearchInput() {
     clearTimeout(debounceTimer);
-    if (!filterSearchQuery.trim()) {
+    const trimmed = filterSearchQuery.trim().slice(0, MAX_SEARCH_LENGTH);
+    if (!trimmed) {
+      suggestionSlot.cancel();
+      filterLoading = false;
       filterSuggestions = [];
       return;
     }
     debounceTimer = setTimeout(async () => {
+      const req = suggestionSlot.next();
       filterLoading = true;
       try {
-        const res = await fetch(`/api/options?q=${encodeURIComponent(filterSearchQuery.trim())}`);
-        const data = await res.json();
-        filterSuggestions = data.results || [];
-      } catch (e) {
+        const res = await fetch(`/api/options?q=${encodeURIComponent(trimmed)}`, { signal: req.signal });
+        const payload = await res.json();
+        if (!req.isCurrent()) return;
+        filterSuggestions = payload.results || [];
+      } catch (e: any) {
+        if (e?.name === 'AbortError' || !req.isCurrent()) return;
         filterSuggestions = [];
       } finally {
-        filterLoading = false;
+        if (req.isCurrent()) filterLoading = false;
       }
     }, 120);
   }
@@ -305,11 +303,9 @@
 </script>
 
 <svelte:head>
-  <title>Khám Phá Thống Kê Meta ĐTCL Mùa 18 (tactics.tools Live) · TFT Academy VI</title>
-  <meta name="title" content="Khám Phá Thống Kê Meta ĐTCL Mùa 18 (tactics.tools Live) · TFT Academy VI" />
-  <meta name="description" content="Công cụ tra cứu số liệu thống kê thời gian thực từ hơn 750k trận đấu ĐTCL Mùa 18 từ tactics.tools: tỷ lệ thắng, tỷ lệ top 4, delta, số trận cho từng tướng, tộc hệ và trang bị." />
-  <meta property="og:title" content="Khám Phá Thống Kê Meta ĐTCL Mùa 18 · tactics.tools Live" />
-  <meta property="og:description" content="Tra cứu số liệu thống kê thời gian thực từ hơn 750k trận đấu ĐTCL Mùa 18." />
+  <title>Thống Kê ĐTCL Mùa {data.set} · TFT Academy VI</title>
+  <meta name="description" content={`Tra cứu số trận, tỷ lệ thắng, tỷ lệ top 4 và thứ hạng trung bình của ĐTCL Mùa ${data.set} theo dữ liệu tactics.tools.`} />
+  <meta property="og:title" content={`Thống Kê ĐTCL Mùa ${data.set} · tactics.tools`} />
   <meta property="og:url" content="https://tft.langpn.xyz/explorer" />
   <link rel="canonical" href="https://tft.langpn.xyz/explorer" />
 </svelte:head>
@@ -321,10 +317,10 @@
     <div class="flex items-center gap-3">
       <h1 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
         Khám Phá Thống Kê (Stats Explorer)
-        <span class="sr-only">Thống Kê Meta ĐTCL Mùa 18 tactics.tools Live</span>
+        <span class="sr-only">ĐTCL Mùa {data.set}</span>
       </h1>
       <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-bold text-emerald-400">
-        tactics.tools live
+        tactics.tools
       </span>
     </div>
 
@@ -456,6 +452,7 @@
                 type="text" 
                 bind:value={filterSearchQuery}
                 oninput={handleFilterSearchInput}
+                maxlength={MAX_SEARCH_LENGTH}
                 placeholder="Tìm tướng, đồ, lõi..."
                 class="w-full pl-8 pr-3 py-1.5 rounded-lg bg-[#0F1E36] border border-white/10 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-sky-400"
               />
@@ -517,6 +514,7 @@
             {#each selectedFilters as filter}
               {@const chipIcon = filter.type === 'u' ? resolveChampionIcon(filter.icon, filter.id) : 
                                  filter.type === 'i' ? resolveItemIcon(filter.icon, filter.id) : 
+                                 filter.type === 'a' ? resolveAugmentIcon(filter.icon, filter.id) :
                                  resolveTraitIcon(filter.icon, filter.nameEn)}
               <div 
                 class="w-7 h-7 rounded-md bg-black border-2 {costBorderColors[filter.cost || 1] || 'border-slate-500'} overflow-hidden shadow"
@@ -533,9 +531,9 @@
           {#if explorerData?.summary}
             <div class="flex items-center gap-4 font-extrabold text-xs">
               <span>Số trận: <b class="text-white font-black">{formatGames(explorerData.summary.games)}</b></span>
-              <span>Hạng TB: <b class="text-amber-400 font-black">{explorerData.summary.avgPlace > 0 ? explorerData.summary.avgPlace.toFixed(2) : 'NaN'}</b></span>
-              <span>Top 4: <b class="text-emerald-400 font-black">{explorerData.summary.top4Rate > 0 ? (explorerData.summary.top4Rate * 100).toFixed(1) + '%' : 'NaN%'}</b></span>
-              <span>Tỷ lệ Thắng: <b class="text-rose-400 font-black">{explorerData.summary.winRate > 0 ? (explorerData.summary.winRate * 100).toFixed(1) + '%' : 'NaN%'}</b></span>
+              <span>Hạng TB: <b class="text-amber-400 font-black">{explorerData.summary.games > 0 ? explorerData.summary.avgPlace.toFixed(2) : '—'}</b></span>
+              <span>Top 4: <b class="text-emerald-400 font-black">{explorerData.summary.games > 0 ? (explorerData.summary.top4Rate * 100).toFixed(1) + '%' : '—'}</b></span>
+              <span>Tỷ lệ Thắng: <b class="text-rose-400 font-black">{explorerData.summary.games > 0 ? (explorerData.summary.winRate * 100).toFixed(1) + '%' : '—'}</b></span>
             </div>
           {/if}
         </div>
@@ -598,6 +596,7 @@
           <input 
             type="text" 
             bind:value={tableSearchQuery}
+            maxlength={MAX_SEARCH_LENGTH}
             placeholder="Lọc kết quả bên dưới (gõ tiếng Việt không dấu)..."
             class="w-full pl-8 pr-3 py-1.5 rounded-lg bg-[#0F1E36] border border-white/10 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-sky-400"
           />
@@ -620,6 +619,10 @@
       {#if isLoading}
         <div class="p-12 text-center text-xs text-slate-400 animate-pulse">
           Đang truy vấn dữ liệu tactics.tools Explorer...
+        </div>
+      {:else if error}
+        <div class="p-12 text-center text-sm font-medium text-rose-400">
+          {error}
         </div>
       {:else if sortedTableData.length === 0}
         <div class="p-12 text-center text-sm font-medium text-slate-400">
@@ -687,7 +690,7 @@
                     <div 
                       class="w-8.5 h-8.5 rounded-lg bg-black border-2 {costBorderColors[row.cost || 1] || 'border-slate-500'} overflow-hidden shrink-0 flex items-center justify-center shadow cursor-pointer hover:scale-115 transition-transform"
                       onmouseenter={(e) => showTooltip({ 
-                        type: activeTab === 'units' ? 'champion' : activeTab === 'items' ? 'item' : 'trait', 
+                        type: activeTab === 'units' ? 'champion' : activeTab === 'items' ? 'item' : activeTab === 'augments' ? 'augment' : 'trait',
                         id: row.id || row.itemId, 
                         name: row.nameVi || row.nameEn 
                       }, e.currentTarget)}

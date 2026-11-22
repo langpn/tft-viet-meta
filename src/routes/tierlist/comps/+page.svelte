@@ -8,6 +8,7 @@
   import { resolveItemIcon, resolveAugmentIcon } from '$lib/utils/assets';
   import { matchesQuery } from '$lib/utils/search';
   import { interpolateDescription } from '$lib/utils/augment-cleaner';
+  import { SITE_URL, compSlug, findComp as findCompByParam, safeJsonLd } from '$lib/comp-pages';
   import { Flame, Shield, Sparkles, ExternalLink, Clock, Layers } from 'lucide-svelte';
 
   let { data }: { data: PageData } = $props();
@@ -16,8 +17,14 @@
   let activeFilters = $state<ActiveFilter[]>([]);
   let rawQueryText = $state('');
   let selectedStyle = $state('ALL');
-  let selectedSet = $state('Set 18');
   let selectedCompId = $state<string | null>(data.initialCompId || null);
+  let selectedDetail = $state<{ comp: any; variants: any[] } | null>(
+    data.initialComp ? { comp: data.initialComp, variants: data.initialVariants || [] } : null
+  );
+  const detailCache = new Map<string, { comp: any; variants: any[] }>();
+  if (data.initialComp) {
+    detailCache.set(data.initialComp.id, { comp: data.initialComp, variants: data.initialVariants || [] });
+  }
 
   const compStyleOptions = [
     { value: 'ALL', label: 'Lối Chơi' },
@@ -28,11 +35,6 @@
     { value: '4-Cost Fast 8', label: 'Lên Cấp 8 Nhanh (Fast 8)' },
     { value: 'Fast 9', label: 'Lên Cấp 9 Nhanh (Fast 9)' },
     { value: 'Lose Streak', label: 'Đánh Chuỗi Thua' }
-  ];
-
-  const setOptions = [
-    { value: 'Set 18', label: 'Mùa 18' },
-    { value: 'Set 17', label: 'Mùa 17' }
   ];
 
   // Filtering comps by style and multi-search filter chips
@@ -233,51 +235,59 @@
   });
 
   function findComp(param: string | null) {
-    if (!param) return null;
-    const p = param.toLowerCase().trim();
-    return data.comps.find((c: any) => {
-      if (c.id === param || c.id?.toLowerCase() === p) return true;
-      if (c.slug === param || c.slug?.toLowerCase() === p) return true;
-      const titleSlug = (c.title || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-      if (titleSlug === p) return true;
-      const metaSlug = (c.metaTitle || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-      if (metaSlug === p) return true;
-      return false;
-    }) || null;
+    return findCompByParam(data.comps, param);
   }
 
   const selectedComp = $derived.by(() => {
     if (!selectedCompId) return null;
+    if (selectedDetail?.comp?.id === selectedCompId) return selectedDetail.comp;
     return findComp(selectedCompId);
   });
+  let detailError = $state(false);
 
-  function selectComp(comp: any | null) {
-    if (!comp) {
+  async function loadCompDetail(id: string) {
+    detailError = false;
+    const cached = detailCache.get(id);
+    if (cached) {
+      selectedDetail = cached;
+      return;
+    }
+    try {
+      const res = await fetch(`/api/comps/${encodeURIComponent(id)}`);
+      if (!res.ok) throw new Error('Could not load comp details');
+      const detail = await res.json();
+      detailCache.set(id, detail);
+      if (selectedCompId === id) {
+        selectedDetail = detail;
+      }
+    } catch {
+      if (selectedCompId === id) detailError = true;
+    }
+  }
+
+  let compTrigger: HTMLElement | null = null;
+
+  function selectComp(comp: any | null, trigger?: HTMLElement) {
+    if (!comp || selectedCompId === comp.id) {
       selectedCompId = null;
+      selectedDetail = null;
       if (typeof window !== 'undefined') {
         const url = new URL(window.location.href);
         url.searchParams.delete('comp');
         history.replaceState({}, '', url.pathname + (url.search ? url.search : ''));
       }
+      const opener = trigger ?? compTrigger;
+      if (opener?.isConnected) opener.focus();
+      compTrigger = null;
       return;
     }
 
-    // Toggle behavior: if already open, clicking it again closes it
-    if (selectedCompId === comp.id) {
-      selectedCompId = null;
-      if (typeof window !== 'undefined') {
-        const url = new URL(window.location.href);
-        url.searchParams.delete('comp');
-        history.replaceState({}, '', url.pathname + (url.search ? url.search : ''));
-      }
-      return;
-    }
-
+    if (trigger) compTrigger = trigger;
     selectedCompId = comp.id;
+    loadCompDetail(comp.id);
     if (typeof window !== 'undefined') {
       const url = new URL(window.location.href);
-      const titleSlug = (comp.title || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-      url.searchParams.set('comp', titleSlug || comp.slug || comp.id);
+      url.searchParams.set('comp', compSlug(comp));
       history.replaceState({}, '', url.pathname + '?' + url.searchParams.toString());
 
       setTimeout(() => {
@@ -293,8 +303,11 @@
     if (compParam) {
       const found = findComp(compParam);
       selectedCompId = found ? found.id : null;
+      if (found) loadCompDetail(found.id);
+      else selectedDetail = null;
     } else {
       selectedCompId = null;
+      selectedDetail = null;
     }
   }
 
@@ -310,6 +323,7 @@
       const found = findComp(compParam);
       if (found) {
         selectedCompId = found.id;
+        loadCompDetail(found.id);
         setTimeout(() => {
           const el = document.getElementById(`comp-detail-${found.tier}`) || document.getElementById(`tier-${found.tier}`);
           el?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -335,110 +349,50 @@
 
 <svelte:head>
   {#if selectedComp}
-    {@const compSlug = (selectedComp.title || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || selectedComp.slug || selectedComp.id}
-    <title>{selectedComp.title} - Đội Hình {selectedComp.mainCarry?.name_vi || selectedComp.mainCarry?.name_en || ''} ĐTCL Mùa 18 (Bậc {selectedComp.tier}) | TFT Academy VI</title>
-    <meta name="title" content="{selectedComp.title} - Đội Hình {selectedComp.mainCarry?.name_vi || selectedComp.mainCarry?.name_en || ''} ĐTCL Mùa 18" />
-    <meta name="description" content="Giáo án chi tiết đội hình {selectedComp.title} (Bậc {selectedComp.tier}) ĐTCL Mùa 18. Đầy đủ sơ đồ xếp cờ 28 ô hex, đồ chuẩn BIS, thứ tự nhặt đồ và hướng dẫn từng giai đoạn." />
-    <meta property="og:title" content="{selectedComp.title} - Đội Hình ĐTCL Mùa 18 (Bậc {selectedComp.tier})" />
+    {@const slug = compSlug(selectedComp)}
+    {@const canonicalCompUrl = `${SITE_URL}/tierlist/comps?comp=${encodeURIComponent(slug)}`}
+    {@const breadcrumbLd = safeJsonLd({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Trang Chủ', item: SITE_URL },
+        { '@type': 'ListItem', position: 2, name: 'Đội Hình', item: `${SITE_URL}/tierlist/comps` },
+        { '@type': 'ListItem', position: 3, name: selectedComp.title, item: canonicalCompUrl }
+      ]
+    })}
+    <title>{selectedComp.title} - Đội Hình {selectedComp.mainCarry?.name_vi || selectedComp.mainCarry?.name_en || ''} ĐTCL Mùa {data.meta.set} (Bậc {selectedComp.tier}) | TFT Academy VI</title>
+    <meta name="title" content="{selectedComp.title} - Đội Hình {selectedComp.mainCarry?.name_vi || selectedComp.mainCarry?.name_en || ''} ĐTCL Mùa {data.meta.set}" />
+    <meta name="description" content="Giáo án chi tiết đội hình {selectedComp.title} (Bậc {selectedComp.tier}) ĐTCL Mùa {data.meta.set}. Đầy đủ sơ đồ xếp cờ 28 ô hex, đồ chuẩn BIS, thứ tự nhặt đồ và hướng dẫn từng giai đoạn." />
+    <meta property="og:title" content="{selectedComp.title} - Đội Hình ĐTCL Mùa {data.meta.set} (Bậc {selectedComp.tier})" />
     <meta property="og:description" content="Giáo án chi tiết đội hình {selectedComp.title}: sơ đồ xếp cờ 28 ô hex, đồ chuẩn BIS và mẹo vận hành." />
-    <meta property="og:url" content="https://tft.langpn.xyz/tierlist/comps?comp={compSlug}" />
-    <link rel="canonical" href="https://tft.langpn.xyz/tierlist/comps?comp={compSlug}" />
+    <meta property="og:url" content={canonicalCompUrl} />
+    <link rel="canonical" href={canonicalCompUrl} />
 
     <!-- BreadcrumbList Schema for Google Search -->
-    {@html `<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Trang Chủ",
-          "item": "https://tft.langpn.xyz"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Đội Hình",
-          "item": "https://tft.langpn.xyz/tierlist/comps"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "${selectedComp.title}",
-          "item": "https://tft.langpn.xyz/tierlist/comps?comp=${compSlug}"
-        }
-      ]
-    }
-    </script>`}
+    {@html '<script type="application/ld+json">' + breadcrumbLd + '</' + 'script>'}
   {:else}
-    <title>Bảng Xếp Hạng Đội Hình ĐTCL Mùa 18 (Bản 18.5c) · TFT Academy VI</title>
-    <meta name="title" content="Bảng Xếp Hạng Đội Hình ĐTCL Mùa 18 (Bản 18.5c) · TFT Academy VI" />
-    <meta name="description" content="Bảng xếp hạng 73 đội hình meta Đấu Trường Chân Lý Mùa 18 chuẩn nhất từ TFT Academy (Dishsoap & Frodan). Đầy đủ vị trí xếp cờ 28 ô, trang bị chuẩn BIS và mẹo vận hành tiếng Việt." />
-    <meta property="og:title" content="Bảng Xếp Hạng Đội Hình ĐTCL Mùa 18 (Bản 18.5c) · TFT Academy VI" />
-    <meta property="og:description" content="Bảng xếp hạng 73 đội hình meta Đấu Trường Chân Lý Mùa 18 chuẩn nhất từ TFT Academy." />
+    {@const listLd = safeJsonLd({
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: `Bảng Xếp Hạng Đội Hình ĐTCL Mùa ${data.meta.set}`,
+      description: `Danh sách ${data.meta.compCount} đội hình meta Đấu Trường Chân Lý Mùa ${data.meta.set} phân loại theo bậc S, A, B, C, X.`,
+      itemListElement: data.topComps.map((c: any, idx: number) => ({
+        '@type': 'ListItem',
+        position: idx + 1,
+        name: `${c.title} (Bậc ${c.tier})`,
+        url: `${SITE_URL}/tierlist/comps?comp=${encodeURIComponent(c.slug)}`
+      }))
+    })}
+    <title>Bảng Xếp Hạng Đội Hình ĐTCL Mùa {data.meta.set} (Bản {data.meta.patch}) · TFT Academy VI</title>
+    <meta name="title" content="Bảng Xếp Hạng Đội Hình ĐTCL Mùa {data.meta.set} (Bản {data.meta.patch}) · TFT Academy VI" />
+    <meta name="description" content="Bảng xếp hạng {data.meta.compCount} đội hình meta Đấu Trường Chân Lý Mùa {data.meta.set} chuẩn nhất từ TFT Academy (Dishsoap & Frodan). Đầy đủ vị trí xếp cờ 28 ô, trang bị chuẩn BIS và mẹo vận hành tiếng Việt." />
+    <meta property="og:title" content="Bảng Xếp Hạng Đội Hình ĐTCL Mùa {data.meta.set} (Bản {data.meta.patch}) · TFT Academy VI" />
+    <meta property="og:description" content="Bảng xếp hạng {data.meta.compCount} đội hình meta Đấu Trường Chân Lý Mùa {data.meta.set} chuẩn nhất từ TFT Academy." />
     <meta property="og:url" content="https://tft.langpn.xyz/tierlist/comps" />
     <link rel="canonical" href="https://tft.langpn.xyz/tierlist/comps" />
 
     <!-- ItemList Schema for Comps Tierlist -->
-    {@html `<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Bảng Xếp Hạng Đội Hình ĐTCL Mùa 18",
-      "description": "Danh sách 73 đội hình meta Đấu Trường Chân Lý Mùa 18 phân loại theo bậc S, A, B, C, X.",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Draven Ezreal 9 (Bậc S)",
-          "url": "https://tft.langpn.xyz/tierlist/comps?comp=draven-ezreal-9"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "AP Fast 9 (Bậc S)",
-          "url": "https://tft.langpn.xyz/tierlist/comps?comp=ap-fast-9"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Elderwood Executioners (Bậc A)",
-          "url": "https://tft.langpn.xyz/tierlist/comps?comp=elderwood-executioners"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Tempo Riftbeast (Bậc A)",
-          "url": "https://tft.langpn.xyz/tierlist/comps?comp=tempo-riftbeast"
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "Ahri Zyra (Bậc A)",
-          "url": "https://tft.langpn.xyz/tierlist/comps?comp=ahri-zyra"
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "name": "Primal Sivir (Bậc A)",
-          "url": "https://tft.langpn.xyz/tierlist/comps?comp=primal-sivir"
-        },
-        {
-          "@type": "ListItem",
-          "position": 7,
-          "name": "Solar Blossom (Bậc A)",
-          "url": "https://tft.langpn.xyz/tierlist/comps?comp=solar-blossom"
-        },
-        {
-          "@type": "ListItem",
-          "position": 8,
-          "name": "Adaptor Reroll (Bậc A)",
-          "url": "https://tft.langpn.xyz/tierlist/comps?comp=adaptor-reroll"
-        }
-      ]
-    }
-    </script>`}
+    {@html '<script type="application/ld+json">' + listLd + '</' + 'script>'}
   {/if}
 </svelte:head>
 
@@ -452,11 +406,11 @@
     <div class="flex items-center gap-3 text-xs font-bold">
       <div class="px-3.5 py-1 rounded-full bg-[#161B26] border border-white/10 text-white flex items-center gap-2">
         <span class="text-slate-400">Bản Cập Nhật</span>
-        <span class="font-black text-amber-400">18.5c</span>
+        <span class="font-black text-amber-400">{data.meta.patch}</span>
       </div>
 
       <a href="https://tftacademy.com/tierlist/updates/comps" target="_blank" class="text-slate-400 hover:text-amber-400 transition-colors flex items-center gap-1">
-        <span>Cập nhật 13 giờ trước</span>
+        <span>Lịch sử cập nhật TFT Academy</span>
         <ExternalLink class="w-3 h-3 text-amber-400" />
       </a>
     </div>
@@ -532,14 +486,6 @@
         variant="pill"
       />
 
-      <!-- Custom Set Selector Dropdown -->
-      <CustomDropdown 
-        options={setOptions}
-        selected={selectedSet}
-        onselect={(val) => (selectedSet = val)}
-        title="Mùa 18 ▼"
-        variant="yellow-pill"
-      />
     </div>
   </div>
 
@@ -577,10 +523,15 @@
                   <div 
                     class="relative transition-all duration-200 cursor-pointer select-none group {isGroupSelected ? 'ring-2 ring-amber-400 shadow-xl shadow-amber-400/40 scale-105 rounded-2xl' : isFiltering ? (group.isMatch ? 'opacity-100 scale-105 ring-2 ring-amber-400 shadow-lg shadow-amber-400/25 rounded-2xl' : 'opacity-20 hover:opacity-60') : (group.isMatch ? 'opacity-100 hover:scale-105' : 'opacity-25 hover:opacity-75')}"
                     title="{comp.title} ({comp.mainCarry?.name_vi || comp.mainCarry?.name_en || ''}){group.hasVariation ? ` (+${group.comps.length - 1} biến thể)` : ''}"
-                    onclick={() => selectComp(group.matchedComp || comp)}
+                    onclick={(event) => selectComp(group.matchedComp || comp, event.currentTarget)}
                     role="button"
                     tabindex="0"
-                    onkeydown={(e) => { if (e.key === 'Enter') selectComp(group.matchedComp || comp); }}
+                    aria-expanded={!!isGroupSelected}
+                    onkeydown={(event) => {
+                      if (event.key !== 'Enter' && event.key !== ' ') return;
+                      event.preventDefault();
+                      if (!event.repeat) selectComp(group.matchedComp || comp, event.currentTarget);
+                    }}
                   >
                     {#if group.hasVariation}
                       <!-- Stacked double-hex effect for champion variations (TFT Academy style) -->
@@ -632,12 +583,20 @@
                 id="comp-detail-{t}" 
                 class="w-full mt-1 rounded-2xl border-2 {style.borderColor} overflow-hidden shadow-2xl transition-all duration-300 animate-in fade-in slide-in-from-top-3"
               >
-                <CompDetailPanel 
-                  comp={selectedComp} 
-                  allComps={data.comps}
-                  onclose={() => selectComp(null)} 
-                  onselectcomp={(c) => selectComp(c)}
-                />
+                {#if selectedDetail?.comp.id === selectedComp.id}
+                  <CompDetailPanel
+                    comp={selectedDetail.comp}
+                    allComps={selectedDetail.variants}
+                    onclose={() => selectComp(null)}
+                    onselectcomp={(c) => selectComp(c)}
+                  />
+                {:else}
+                  <div class="flex items-center gap-4 bg-[#131722] p-5 text-white">
+                    <p role="status" class="flex-1">{detailError ? 'Không thể tải chi tiết đội hình.' : 'Đang tải chi tiết đội hình…'}</p>
+                    {#if detailError}<button type="button" onclick={() => selectedCompId && loadCompDetail(selectedCompId)}>Thử lại</button>{/if}
+                    <button type="button" onclick={() => selectComp(null)}>Đóng</button>
+                  </div>
+                {/if}
               </div>
             {/if}
 

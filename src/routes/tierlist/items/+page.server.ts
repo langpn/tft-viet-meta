@@ -1,5 +1,6 @@
 import type { PageServerLoad } from './$types';
 import itemsData from '$data/academy-items.json';
+import { getSiteMeta } from '$server/site-meta';
 
 export const load: PageServerLoad = async ({ url }) => {
   const tab = url.searchParams.get('tab') || url.searchParams.get('category');
@@ -8,6 +9,7 @@ export const load: PageServerLoad = async ({ url }) => {
 
   return {
     items: itemsData || { craftables: {}, radiants: {}, artifacts: {}, emblems: {} },
-    initialCategory
+    initialCategory,
+    meta: getSiteMeta()
   };
 };

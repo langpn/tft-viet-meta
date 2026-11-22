@@ -1,0 +1,24 @@
+{
+  "set": 18,
+  "setName": "Enchanted Wilds",
+  "patch": "18.5c",
+  "explorer": { "patchId": "16212", "rankGroup": 1 },
+  "communityDragonRelease": "16.21",
+  "updatedAt": "2026-10-31T06:38:35.446Z",
+  "sources": [
+    { "url": "https://tftacademy.com/api/tierlist/comps", "sha256": null },
+    { "url": "https://tftacademy.com/api/tierlist/items?set=18", "sha256": null },
+    { "url": "https://tftacademy.com/api/tierlist/augments?set=18", "sha256": null },
+    { "url": "https://tftacademy.com/learn/new-set", "sha256": null }
+  ],
+  "files": {
+    "src/lib/data/academy-comps.json": "8511a84f1272b7b78b4345b5f76e2445186205356adab358c9e4a943c03b8466",
+    "src/lib/data/academy-items.json": "f4e7428f856e25b4f2b831e1de49caa181b9cfd07d0d7398176b9e456cecd285",
+    "src/lib/data/academy-augments.json": "f5040237574fae738980cf8491a20a43bb5f6af5c06c4770098ce49deefb84e0",
+    "src/lib/data/academy-new-set.json": "5a15c3521dfabda9b1495eee629a2a0dccc0759da8e90e3ee064993736e10aa0",
+    "src/lib/data/tooltip-db.json": "6f994b6f2a399c1692490e4c001b79ecedf3d81d24ab24892335947961f8933a",
+    "src/lib/data/canonical-dictionary.json": "4dea890134c62bff95c001d0f3276b1a6d09df113b57b2f0e213523b9e30ab09",
+    "src/lib/data/official-vi.json": "ca5bc939ff834611d9f33c848696878225d076c0f5ede876d8f4eec2539da5cb",
+    "src/lib/data/champion-hex-index.json": "1d0f9f75722050470b474675004952040588555ee34e42e8a6c3c033b0d0b825"
+  }
+}

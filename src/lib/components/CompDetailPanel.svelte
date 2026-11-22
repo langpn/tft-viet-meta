@@ -81,10 +81,7 @@
     const predId = cap.predecessors[0];
     if (!predId || predId.startsWith('TFT_Flex')) return null;
 
-    const champ = champMap.get(predId) || 
-                  champMap.get(predId.toLowerCase()) || 
-                  (tooltipDb.champions as any)[predId] || 
-                  (tooltipDb.champions as any)[predId.toLowerCase()];
+    const champ = champMap.get(predId) || champMap.get(predId.toLowerCase());
 
     const predCost = champ?.cost || FALLBACK_COSTS[predId.toLowerCase()] || 1;
 

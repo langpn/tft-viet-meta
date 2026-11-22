@@ -1,5 +1,9 @@
 import fs from "node:fs";
 import path from "node:path";
+import manifest from "../data/meta-manifest.json" with { type: "json" };
+import { applyCoachingTranslations, type CoachingGuide } from "./coaching-localization.js";
+import { jsonIfChanged, publishFiles } from "./publish-data.js";
+import { fetchSource, sourceRows } from "./source-fetch.js";
 import {
   getItemVi,
   getTraitVi,
@@ -85,6 +89,8 @@ export type CoreBadge = {
   icon: string;
 };
 
+type CoachingTip = { stage: string; tip: string; tip_en?: string };
+
 export type ParsedAcademyComp = {
   id: string;
   slug: string;
@@ -123,7 +129,7 @@ export type ParsedAcademyComp = {
     items: LocalizedItem[];
   }>;
   levelingCurve: CompLevelingCurve;
-  tips: Array<{ stage: string; tip: string }>;
+  tips: CoachingTip[];
   augments: Array<{
     id: string;
     name_en: string;
@@ -132,6 +138,7 @@ export type ParsedAcademyComp = {
     disabled?: boolean;
   }>;
   augmentsTip: string;
+  augmentsTip_en?: string;
   maxCap: Array<{
     id: string;
     name_en: string;
@@ -856,15 +863,23 @@ export function parseNewSet(html: string, jsCode?: string): Set18Info {
   let augments: Set18Augment[] = [];
 
   if (jsCode) {
+    const datasets: Record<string, any>[][] = [];
+    for (const [, candidate] of jsCode.matchAll(/JSON\.parse\(`(\[\{[\s\S]*?\}\])`\)/g)) {
+      try {
+        const rows: unknown = JSON.parse(candidate);
+        if (Array.isArray(rows) && rows.length && rows.every((row) => typeof row?.name === 'string')) datasets.push(rows);
+      } catch {
+        // A chunk can contain unrelated template literals. All four datasets are required before publishing.
+      }
+    }
     // 1. Wisps
-    const wispsMatch = jsCode.match(/JSON\.parse\(`(\[\{"name":"Circle of Elders"[\s\S]*?\}\])`\)/);
-    if (wispsMatch) {
-      const rawWisps = JSON.parse(wispsMatch[1]);
+    const rawWisps = datasets.find((rows) => rows.every((row) => typeof row.category === 'string' && 'cost' in row));
+    if (rawWisps) {
       wisps = rawWisps.map((w: any) => {
         const itemVi = getItemVi(w.name);
         const fallback = WISP_FALLBACKS[w.name];
         const name_vi = itemVi?.name_vi || fallback?.name_vi || w.name;
-        const desc_vi = itemVi?.desc_vi || fallback?.desc_vi || w.description;
+        const desc_vi = itemVi?.desc_vi || fallback?.desc_vi || '';
         return {
           name_en: w.name,
           name_vi,
@@ -878,9 +893,8 @@ export function parseNewSet(html: string, jsCode?: string): Set18Info {
     }
 
     // 2. Champions
-    const champsMatch = jsCode.match(/JSON\.parse\(`(\[\{"name":"Akali"[\s\S]*?\}\])`\)/);
-    if (champsMatch) {
-      const rawChamps = JSON.parse(champsMatch[1]);
+    const rawChamps = datasets.find((rows) => rows.every((row) => Array.isArray(row.traits) && 'cost' in row));
+    if (rawChamps) {
       champions = rawChamps.map((c: any) => {
         const lookupKey = CHAMPION_FALLBACKS[c.name]?.id || c.name;
         const viChamp = getChampionVi(lookupKey) || CHAMPION_FALLBACKS[c.name];
@@ -903,16 +917,15 @@ export function parseNewSet(html: string, jsCode?: string): Set18Info {
           abilityName: c.abilityName || "",
           abilityMana: c.abilityMana || "",
           ability: c.ability || "",
-          desc_vi: c.ability || "",
+          desc_vi: '',
           icon,
         };
       });
     }
 
     // 3. Traits
-    const traitsMatch = jsCode.match(/JSON\.parse\(`(\[\{"name":"Adaptor"[\s\S]*?\}\])`\)/);
-    if (traitsMatch) {
-      const rawTraits = JSON.parse(traitsMatch[1]);
+    const rawTraits = datasets.find((rows) => rows.every((row) => Array.isArray(row.breakpoints) && typeof row.type === 'string'));
+    if (rawTraits) {
       traits = rawTraits.map((t: any) => {
         const viTrait = getTraitVi(t.name) || TRAIT_FALLBACKS[t.name];
         return {
@@ -923,7 +936,7 @@ export function parseNewSet(html: string, jsCode?: string): Set18Info {
           breakpoints: t.breakpoints || [],
           colors: t.colors || [],
           desc_en: t.description || "",
-          desc_vi: viTrait?.desc_vi || t.description || "",
+          desc_vi: viTrait?.desc_vi || '',
           effects: t.effects || [],
           icon: viTrait?.icon || `https://assets.tftacademy.com/traits/trait_icon_18_${t.name.toLowerCase()}.png`,
         };
@@ -931,9 +944,8 @@ export function parseNewSet(html: string, jsCode?: string): Set18Info {
     }
 
     // 4. Augments
-    const augsMatch = jsCode.match(/JSON\.parse\(`(\[\{"name":"Augmented Power"[\s\S]*?\}\])`\)/);
-    if (augsMatch) {
-      const rawAugs = JSON.parse(augsMatch[1]);
+    const rawAugs = datasets.find((rows) => rows.every((row) => [1, 2, 3].includes(row.tier) && typeof row.description === 'string'));
+    if (rawAugs) {
       const tierNameMap: Record<number, "Silver" | "Gold" | "Prismatic"> = {
         1: "Silver",
         2: "Gold",
@@ -948,7 +960,7 @@ export function parseNewSet(html: string, jsCode?: string): Set18Info {
           tier: a.tier || 1,
           tierName: tierNameMap[a.tier] || "Silver",
           desc_en: a.description || "",
-          desc_vi: viAug?.desc_vi || a.description || "",
+          desc_vi: viAug?.desc_vi || '',
           icon: viAug?.icon || `https://assets.tftacademy.com/augments/${a.name}.webp`,
         };
       });
@@ -956,9 +968,9 @@ export function parseNewSet(html: string, jsCode?: string): Set18Info {
   }
 
   return {
-    set: 18,
-    setName: "Enchanted Wilds",
-    patch: "18.5c",
+    set: manifest.set,
+    setName: manifest.setName,
+    patch: manifest.patch,
     mechanic: {
       title: "Wisps",
       summary: wispsSummary,
@@ -979,28 +991,24 @@ export function parseNewSet(html: string, jsCode?: string): Set18Info {
 }
 
 export type SyncOptions = {
-  dataDir?: string;
+  dataDir: string;
+  previousDataDir?: string;
+  coachingTranslations?: CoachingGuide[];
   fetchFn?: typeof fetch;
   logger?: (msg: string) => void;
+  onSource?: (source: { url: string; sha256: string }) => void;
 };
 
 // No-op syncs must not touch the files: the auto-sync workflow commits on any diff,
 // and updatedAt alone is a diff. Compare content without it and skip the write.
 export function writeIfChanged(filePath: string, data: unknown): boolean {
-  const strip = (v: unknown) => {
-    if (Array.isArray(v)) return v;
-    const { updatedAt: _ignored, ...rest } = v as Record<string, unknown>;
-    return rest;
-  };
-  const previous = fs.existsSync(filePath)
-    ? JSON.parse(fs.readFileSync(filePath, "utf-8"))
-    : null;
-  if (previous && JSON.stringify(strip(previous)) === JSON.stringify(strip(data))) return false;
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf-8");
+  const content = jsonIfChanged(filePath, data);
+  if (content === null) return false;
+  publishFiles(new Map([[filePath, content]]));
   return true;
 }
 
-export async function syncAcademyData(options: SyncOptions = {}): Promise<{
+export async function syncAcademyData(options: SyncOptions): Promise<{
   comps: ParsedAcademyComp[];
   items: ItemsTierList;
   augments: AugmentsTierList;
@@ -1008,84 +1016,82 @@ export async function syncAcademyData(options: SyncOptions = {}): Promise<{
 }> {
   const fetchFn = options.fetchFn ?? fetch;
   const log = options.logger ?? console.log;
-  const dataDir = options.dataDir ?? path.resolve(import.meta.dir, "../data");
+  const { dataDir, previousDataDir = dataDir } = options;
+  const origin = 'https://tftacademy.com';
+  const get = async (url: string) => {
+    const source = await fetchSource(url, fetchFn);
+    options.onSource?.({ url, sha256: source.sha256 });
+    return source;
+  };
+  const getRows = async (route: string, key: string) => {
+    const url = origin + route;
+    const rows = sourceRows(JSON.parse((await get(url)).text)?.[key], url);
+    if (rows.some((row) => Number(row.set) !== manifest.set)) throw new Error(`${url}: expected Set ${manifest.set} records`);
+    return rows;
+  };
 
-  if (!fs.existsSync(dataDir)) {
-    fs.mkdirSync(dataDir, { recursive: true });
+  log(`[AcademySync] Checking TFT Academy Set ${manifest.set} sources`);
+  const [guides, itemTiers, augmentTiers, page] = await Promise.all([
+    getRows(`/api/tierlist/comps?set=${manifest.set}`, 'guides'),
+    getRows(`/api/tierlist/items?set=${manifest.set}`, 'items_tierlists'),
+    getRows(`/api/tierlist/augments?set=${manifest.set}`, 'augments_tierlists'),
+    get(`${origin}/learn/new-set`),
+  ]);
+  const pageHeading = page.text.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1]?.replace(/<[^>]*>/g, ' ');
+  const pageSet = pageHeading?.match(/\bSet\s+(\d+)\b/i)?.[1];
+  if (Number(pageSet) !== manifest.set) throw new Error(`Expected TFT Academy Set ${manifest.set}, got ${pageSet ? `Set ${pageSet}` : 'unknown set'}`);
+
+  if (guides.some((guide) => typeof guide.id !== 'string' || !guide.id || typeof guide.title !== 'string' || !guide.title.trim() || !Array.isArray(guide.finalComp) || !guide.finalComp.length) ||
+      new Set(guides.map((guide) => guide.id)).size !== guides.length) {
+    throw new Error('TFT Academy returned incomplete or duplicate comp guides');
+  }
+  const comps = parseComps(guides);
+  const translationFile = path.join(previousDataDir, 'academy-comps.json');
+  const translations: CoachingGuide[] = fs.existsSync(translationFile) ? JSON.parse(fs.readFileSync(translationFile, 'utf8')) : [];
+  applyCoachingTranslations(comps, translations, options.coachingTranslations);
+
+  const items = parseItems(itemTiers);
+  const augments = parseAugments(augmentTiers);
+  if (Object.values(items.categories).some((tiers) => !Object.values(tiers).some((rows) => rows.length)) ||
+      [augments.silver, augments.gold, augments.prismatic].some((tiers) => !Object.values(tiers).some((rows) => rows.length))) {
+    throw new Error('TFT Academy returned incomplete item or augment categories');
   }
 
-  log("[AcademySync] Fetching TFT Academy Comps...");
-  const compsRes = await fetchFn("https://tftacademy.com/api/tierlist/comps");
-  if (!compsRes.ok) throw new Error(`Failed to fetch comps: ${compsRes.statusText}`);
-  const compsData = await compsRes.json();
-  const comps = parseComps(compsData.guides || []);
-  const compsPath = path.join(dataDir, "academy-comps.json");
-  writeIfChanged(compsPath, comps);
-  log(`[AcademySync] Saved ${comps.length} comps to ${compsPath}`);
-
-  log("[AcademySync] Fetching TFT Academy Items...");
-  const itemsRes = await fetchFn("https://tftacademy.com/api/tierlist/items?set=18");
-  if (!itemsRes.ok) throw new Error(`Failed to fetch items: ${itemsRes.statusText}`);
-  const itemsData = await itemsRes.json();
-  const items = parseItems(itemsData.items_tierlists || []);
-  const itemsPath = path.join(dataDir, "academy-items.json");
-  writeIfChanged(itemsPath, items);
-  log(`[AcademySync] Saved items tierlist to ${itemsPath}`);
-
-  log("[AcademySync] Fetching TFT Academy Augments...");
-  const augsRes = await fetchFn("https://tftacademy.com/api/tierlist/augments?set=18");
-  if (!augsRes.ok) throw new Error(`Failed to fetch augments: ${augsRes.statusText}`);
-  const augsData = await augsRes.json();
-  const augments = parseAugments(augsData.augments_tierlists || []);
-  const augmentsPath = path.join(dataDir, "academy-augments.json");
-  writeIfChanged(augmentsPath, augments);
-  log(`[AcademySync] Saved augments tierlist to ${augmentsPath}`);
-
-  log("[AcademySync] Fetching TFT Academy Set 18 Learn page...");
-  const newSetRes = await fetchFn("https://tftacademy.com/learn/new-set");
-  const newSetHtml = await newSetRes.text();
-
-  // Try to find JS chunk containing the dataset
-  let jsCode = "";
-  const linkHeader = newSetRes.headers.get("link") || "";
-  const nodeMatch = linkHeader.match(/_app\/immutable\/nodes\/([a-zA-Z0-9._-]+\.js)/);
-  const candidates: string[] = [];
-  if (nodeMatch) {
-    candidates.push(`https://tftacademy.com/${nodeMatch[0]}`);
+  const links = `${page.headers.get('link') ?? ''}\n${page.text}`;
+  const nodes = new Set(links.match(/_app\/immutable\/nodes\/[\w.-]+\.js\b/g) ?? []);
+  let newSet: Set18Info | undefined;
+  for (const node of nodes) {
+    const candidate = parseNewSet(page.text, (await get(`${origin}/${node}`)).text);
+    if (candidate.wisps.length && candidate.champions.length && candidate.traits.length && candidate.augments.length) {
+      newSet = candidate;
+      break;
+    }
   }
-  // Also add known node chunk as fallback
-  candidates.push("https://tftacademy.com/_app/immutable/nodes/56.BpuuSMlk.js");
+  if (!newSet) throw new Error('TFT Academy new-set data is missing one or more required sections');
 
-  for (const url of candidates) {
-    try {
-      const jsRes = await fetchFn(url);
-      if (jsRes.ok) {
-        const text = await jsRes.text();
-        if (text.includes("Circle of Elders") || text.includes("Akali")) {
-          jsCode = text;
-          break;
+  const previousSetPath = path.join(previousDataDir, 'academy-new-set.json');
+  if (fs.existsSync(previousSetPath)) {
+    const previous: Set18Info = JSON.parse(fs.readFileSync(previousSetPath, 'utf8'));
+    if (previous.set === newSet.set) {
+      const previousWisps = new Map(previous.wisps.map((wisp) => [wisp.name_en, wisp]));
+      for (const wisp of newSet.wisps) {
+        const old = previousWisps.get(wisp.name_en);
+        if (old && old.desc_en === wisp.desc_en) {
+          if (!wisp.desc_vi && old.desc_vi !== old.desc_en) wisp.desc_vi = old.desc_vi;
+          if (wisp.name_vi === wisp.name_en) wisp.name_vi = old.name_vi;
         }
       }
-    } catch {
-      // try next candidate
     }
   }
 
-  const newSet = parseNewSet(newSetHtml, jsCode);
-  const newSetPath = path.join(dataDir, "academy-new-set.json");
-  writeIfChanged(newSetPath, newSet);
-  log(`[AcademySync] Saved Set 18 info (${newSet.champions.length} champs, ${newSet.traits.length} traits, ${newSet.augments.length} augs, ${newSet.wisps.length} wisps) to ${newSetPath}`);
+  const files = new Map<string, string>();
+  for (const [name, value] of Object.entries({ comps, items, augments, 'new-set': newSet })) {
+    const file = path.join(dataDir, `academy-${name}.json`);
+    const content = jsonIfChanged(file, value);
+    if (content !== null) files.set(file, content);
+  }
+  publishFiles(files);
+  log(`[AcademySync] Validated ${comps.length} comps and complete Set ${manifest.set} datasets`);
 
   return { comps, items, augments, newSet };
-}
-
-// Allow standalone script execution: bun src/lib/server/academy-sync.ts
-if (import.meta.main) {
-  try {
-    await syncAcademyData();
-    console.log("Academy data sync completed successfully!");
-  } catch (error) {
-    console.error("Academy data sync failed:", error);
-    process.exit(1);
-  }
 }

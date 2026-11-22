@@ -7,7 +7,7 @@ import {
 } from "../core/explorer.js";
 
 export type ExplorerSnapshot = {
-  status: "PASS";
+  status: "UNVERIFIED";
   url: string;
   payload: ExplorerPayload;
   metrics: ExplorerResult;
@@ -23,7 +23,7 @@ export async function fetchExplorerSnapshot(
   const url = buildExplorerUrl(input);
   const payload = (await fetchJson(url)) as ExplorerPayload;
   return {
-    status: "PASS",
+    status: "UNVERIFIED",
     url,
     payload,
     metrics: normalizeExplorerPayload(payload),

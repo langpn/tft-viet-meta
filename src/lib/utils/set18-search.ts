@@ -23,15 +23,16 @@ function normalize(s?: string): string {
     .trim();
 }
 
-// Pre-build Set 18 candidates pool (cached in memory)
-const candidates: Set18SearchEntity[] = [];
+const candidates: { item: Set18SearchEntity; nVi: string; nEn: string; words: string[] }[] = [];
 const seenKeys = new Set<string>();
 
 function addCandidate(c: Set18SearchEntity) {
-  const key = `${c.entityType}::${(c.name_vi || c.name_en).toLowerCase()}`;
+  const key = `${c.entityType}::${c.id}`;
   if (!seenKeys.has(key)) {
     seenKeys.add(key);
-    candidates.push(c);
+    const nVi = normalize(c.name_vi);
+    const nEn = normalize(c.name_en);
+    candidates.push({ item: c, nVi, nEn, words: [...nVi.split(' '), ...nEn.split(' ')] });
   }
 }
 
@@ -98,10 +99,7 @@ export function searchSet18Entities(query: string, limit: number = 12): Set18Sea
 
   const scored: Set18SearchEntity[] = [];
 
-  for (const item of candidates) {
-    const nVi = normalize(item.name_vi);
-    const nEn = normalize(item.name_en);
-
+  for (const { item, nVi, nEn, words } of candidates) {
     let score = 0;
 
     // 1. Exact match on whole name (highest priority)
@@ -113,9 +111,7 @@ export function searchSet18Entities(query: string, limit: number = 12): Set18Sea
       score = 80;
     } else {
       // 3. Word boundary prefix match (e.g. "yi" starts word "Yi" in "Master Yi")
-      const wordsVi = nVi.split(' ');
-      const wordsEn = nEn.split(' ');
-      if (wordsVi.some(w => w.startsWith(q)) || wordsEn.some(w => w.startsWith(q))) {
+      if (words.some(w => w.startsWith(q))) {
         score = 65;
       }
       // 4. Word boundary substring match (only if query length >= 3 to avoid noise)

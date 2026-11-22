@@ -1,12 +1,10 @@
 import champHexData from '../data/champion-hex-index.json';
+import manifest from '../data/meta-manifest.json';
 
-const champMap = champHexData as Record<string, {
-  apiName: string;
-  name: string;
-  cost: number;
+const champMap: Record<string, {
   hexIndex: string;
-  traits: string[];
-}>;
+  traits: (string | null)[] | null;
+}> = champHexData;
 
 /**
  * Generates official Riot Games Team Planner in-game team code.
@@ -17,7 +15,7 @@ const champMap = champHexData as Record<string, {
  * - Padded with "0" to 30 characters
  * - "TFTSet18" (set suffix)
  */
-export function generateRiotTeamCode(finalCompOrBoard: any[], set: number = 18): string {
+export function generateRiotTeamCode(finalCompOrBoard: any[], set: number = manifest.set): string {
   if (!finalCompOrBoard || !Array.isArray(finalCompOrBoard) || finalCompOrBoard.length === 0) {
     return '';
   }

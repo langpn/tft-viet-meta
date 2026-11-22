@@ -3,6 +3,7 @@ import { saveState, loadState, statePath } from "./storage.js";
 import { runSync } from "./sync.js";
 import { syncExitCode } from "./cli-policy.js";
 import { fetchJsonResponse } from "./http.js";
+import { verifyPublishedMeta } from "../../scripts/verify-meta.js";
 
 const root = process.cwd();
 const command = process.argv[2];
@@ -14,12 +15,8 @@ if (command === "sync") {
     process.exit(1);
   }
   if (target === "all" || target === "tft-academy") {
-    try {
-      const { syncAcademyData } = await import("../lib/server/academy-sync.js");
-      await syncAcademyData();
-    } catch (err) {
-      console.warn("Academy sync warning:", err);
-    }
+    await import("../../scripts/sync-and-build.js");
+    process.exit(process.exitCode ?? 0);
   }
   const previousState = await loadState(statePath(root));
   const result = await runSync({
@@ -33,10 +30,13 @@ if (command === "sync") {
 }
 
 if (command === "verify") {
-  const target = process.argv[3] ?? "all";
-  const state = await loadState(statePath(root));
-  console.log(JSON.stringify({ status: "UNVERIFIED", target, indexedDocuments: state.searchDocuments.length, sourceSnapshots: state.sourceSnapshots.length }, null, 2));
-  process.exit(2);
+  try {
+    console.log(JSON.stringify(verifyPublishedMeta(), null, 2));
+    process.exit(0);
+  } catch (error) {
+    console.error(error instanceof Error ? error.message : error);
+    process.exit(2);
+  }
 }
 
 console.error("Usage: bun run src/server/cli.ts <sync|verify> [all|tft-academy|tactics-explorer|riot-localization]");

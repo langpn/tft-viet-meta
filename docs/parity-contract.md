@@ -6,19 +6,19 @@ The crawler records public URLs and raw page snapshots. Content parity is measur
 
 ## Explorer behavior
 
-Explorer parity requires a fixture containing the query input, source snapshot, normalized result and local result. A query is `PASS` only when the normalized result matches. Missing source output is `UNVERIFIED`; a mismatch is `FAIL`.
+Explorer parity compares the production normalizer with expected results from [recorded source samples](../tests/fixtures/explorer-parity.json). The samples cover all five ranks for patches `16212` and `16230`, selected trait rows and two Draven filters, one with Deathblade. An additional filter needs its own fixture for a parity claim. The legacy connector reports `UNVERIFIED` when it only captures a response.
 
 ## Vietnamese data
 
-Riot's `vi_VN` locale is the canonical localization source when available. English data remains available as a fallback/reference. MetaTFT and tactics.tools may provide search aliases or terminology references, but cannot silently override a verified Riot locale value.
+Riot's `vi_VN` locale takes precedence when available. English data remains available as a fallback. MetaTFT can fill gaps in the locale overlay. Coaching translations match the guide ID, stage and original text, and new reviewed translations must preserve numeric values.
 
 ## Fail-closed behavior
 
-The sync process must stop or publish a partial/unverified report when:
+The sync exits with code `2` and retains the previously published files when:
 
 - A source schema changes.
 - A required catalog is missing.
-- A translation is missing or changes numeric placeholders.
+- A coaching translation is missing or a newly supplied translation changes numeric values.
 - Explorer parity fixtures fail.
 - A source page cannot be fetched.
 
