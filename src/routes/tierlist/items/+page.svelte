@@ -7,7 +7,7 @@
   import { Flame, Shield, Sparkles, Search, ExternalLink } from 'lucide-svelte';
 
   let { data }: { data: PageData } = $props();
-  const archiveSuffix = $derived(data.meta.set === 18 ? '?set=18' : '');
+  const previewSuffix = $derived(data.meta.set === 19 ? '?set=19' : '');
 
   let activeCategory = $state<'craftables' | 'radiants' | 'artifacts' | 'emblems'>(
     (data.initialCategory as any) || 'craftables'
@@ -43,13 +43,14 @@
 </script>
 
 <svelte:head>
+  {#if data.meta.set === 19}<meta name="robots" content="noindex,follow" />{/if}
   <title>Bảng Xếp Hạng Trang Bị ĐTCL Mùa {data.meta.set} (Cổ Vật Ornn, Đồ Ánh Sáng, Đồ Ghép) · TFT Academy VI</title>
   <meta name="title" content="Bảng Xếp Hạng Trang Bị ĐTCL Mùa {data.meta.set} (Cổ Vật Ornn, Đồ Ánh Sáng, Đồ Ghép) · TFT Academy VI" />
   <meta name="description" content="Bảng xếp hạng {data.meta.itemCount} trang bị ĐTCL Mùa {data.meta.set} phân loại theo bậc S, A, B, C, D: Đồ ghép thường, Trang bị ánh sáng, Cổ vật Ornn tiếng Việt và Ấn tộc hệ chuẩn in-game." />
   <meta property="og:title" content="Bảng Xếp Hạng Trang Bị ĐTCL Mùa {data.meta.set} · TFT Academy VI" />
   <meta property="og:description" content="Bảng xếp hạng {data.meta.itemCount} trang bị ĐTCL Mùa {data.meta.set}: Đồ ghép thường, Trang bị ánh sáng, Cổ vật Ornn tiếng Việt và Ấn tộc hệ." />
-  <meta property="og:url" content={`https://tft.langpn.xyz/tierlist/items${archiveSuffix}`} />
-  <link rel="canonical" href={`https://tft.langpn.xyz/tierlist/items${archiveSuffix}`} />
+  <meta property="og:url" content={`https://tft.langpn.xyz/tierlist/items${previewSuffix}`} />
+  <link rel="canonical" href={`https://tft.langpn.xyz/tierlist/items${previewSuffix}`} />
 </svelte:head>
 
 <div class="flex flex-col gap-6 pb-20" data-tft-set={data.meta.set}>
@@ -89,7 +90,7 @@
     <!-- Subnav Tabs (Comps, Items, Augments) -->
     <div class="flex items-center gap-7 text-sm font-bold tracking-tight select-none">
       <a 
-        href={`/tierlist/comps${archiveSuffix}`}
+        href={`/tierlist/comps${previewSuffix}`}
         data-sveltekit-preload-data="hover"
         class="flex items-center gap-2 pb-1.5 transition-all text-slate-400 hover:text-white cursor-pointer"
       >
@@ -98,7 +99,7 @@
       </a>
 
       <a 
-        href={`/tierlist/items${archiveSuffix}`}
+        href={`/tierlist/items${previewSuffix}`}
         data-sveltekit-preload-data="hover"
         class="flex items-center gap-2 pb-1.5 transition-all text-amber-400 border-b-2 border-amber-400 font-black cursor-pointer"
       >
@@ -107,7 +108,7 @@
       </a>
 
       <a 
-        href={`/tierlist/augments${archiveSuffix}`}
+        href={`/tierlist/augments${previewSuffix}`}
         data-sveltekit-preload-data="hover"
         class="flex items-center gap-2 pb-1.5 transition-all text-slate-400 hover:text-white cursor-pointer"
       >

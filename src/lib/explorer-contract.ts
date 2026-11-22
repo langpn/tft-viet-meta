@@ -1,20 +1,15 @@
 // Neutral (client + server) contract for the tactics.tools explorer proxy.
-// Defaults come from the catalog manifest. Additional patches are checked against tactics.tools.
+// Patch IDs are verified against tactics.tools fixtures.
 import metaManifest from './data/meta-manifest.json' with { type: 'json' };
 
 export const EXPLORER_HOST = 'https://d3.tft.tools';
 
-export const DEFAULT_PATCH = String(metaManifest.explorer.patchId);
+export const DEFAULT_PATCH = '16230';
 export const DEFAULT_RANK = String(metaManifest.explorer.rankGroup);
 
-const AVAILABLE_PATCHES = [
+export const EXPLORER_PATCHES: ReadonlyArray<{ value: string; label: string }> = [
   { value: '16230', label: 'Patch 18.7' },
   { value: '16212', label: 'Patch 18.5c' },
-] as const;
-
-export const EXPLORER_PATCHES: ReadonlyArray<{ value: string; label: string }> = [
-  { value: DEFAULT_PATCH, label: `Patch ${metaManifest.patch}` },
-  ...AVAILABLE_PATCHES.filter((p) => p.value !== DEFAULT_PATCH)
 ];
 
 export const EXPLORER_RANKS = [

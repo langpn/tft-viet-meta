@@ -5,7 +5,6 @@ import { parseAugments, parseComps, parseItems, type Set18Info } from '../src/li
 import { publishFiles } from '../src/lib/server/publish-data.js';
 import { fetchSource, sourceRows } from '../src/lib/server/source-fetch.js';
 import { captureSet19 } from './stage-set19.js';
-import { generateLlmsText } from './generate-llms-txt.js';
 import { validateTranslation } from '../src/core/localization.js';
 
 const groups = ['champions', 'items', 'augments', 'traits'] as const;
@@ -26,7 +25,7 @@ export function academyDescriptionVi(original: unknown, translation: unknown): s
   return vi !== en && validateTranslation(en, vi).ok ? vi : '';
 }
 
-function latestTierlists(rows: Row[], key: (row: Row) => string): Row[] {
+export function latestTierlists(rows: Row[], key: (row: Row) => string): Row[] {
   const latest = new Map<string, Row>();
   for (const row of rows) {
     if (!Object.values(row.tier ?? {}).some((entries) => Array.isArray(entries) && entries.length)) continue;
@@ -193,11 +192,6 @@ if (import.meta.main) {
     const previous = existsSync(path) ? JSON.parse(readFileSync(path, 'utf8')) : undefined;
     const files = new Map<string, string>();
     if (!previous || content(previous) !== content(snapshot)) files.set(path, `${JSON.stringify(snapshot)}\n`);
-    const { llms, full } = generateLlmsText(snapshot.comps, snapshot.learning);
-    for (const [file, value] of [['static/llms.txt', llms], ['static/llms-full.txt', full]]) {
-      const target = resolve(import.meta.dir, '..', file);
-      if (!existsSync(target) || readFileSync(target, 'utf8') !== value) files.set(target, value);
-    }
     publishFiles(files);
     console.log(JSON.stringify({ ...result, changedFiles: files.size }));
   } catch (error) {

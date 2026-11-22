@@ -1,8 +1,10 @@
 import { expect, test } from '@playwright/test';
-import comps from '../src/lib/data/academy-comps.json' with { type: 'json' };
+import live from '../src/lib/data/academy-live.json' with { type: 'json' };
 import newSet from '../src/lib/data/academy-new-set.json' with { type: 'json' };
-import current from '../src/lib/data/academy-set19.json' with { type: 'json' };
+import preview from '../src/lib/data/academy-set19.json' with { type: 'json' };
 import { compSlug, getVariants } from '../src/lib/comp-pages.ts';
+
+const { comps } = live;
 
 test.beforeEach(async ({ page }) => {
   await page.route('**/*', (route) => {
@@ -51,15 +53,31 @@ test('opens a comp with Space and returns focus to its card on Escape', async ({
 test('shows the current Academy season on the public content pages', async ({ page, request }) => {
   for (const path of ['/', '/tierlist/comps', '/tierlist/items', '/tierlist/augments', '/learn/new-set']) {
     await page.goto(path);
-    await expect(page).toHaveTitle(/(?:Mùa|Set) 19/);
+    await expect(page).toHaveTitle(/(?:Mùa|Set) 18/);
+    if (path !== '/learn/new-set') await expect(page.getByText(`Mùa 18 · Bản ${live.patch}`, { exact: path !== '/' })).toBeVisible();
   }
-  const sample = current.comps[0];
+  const sample = comps[0];
   const guide = await request.get(`/api/comps/${encodeURIComponent(sample.slug)}`);
   expect(guide.ok()).toBeTruthy();
   const { comp } = await guide.json();
-  expect(comp.set).toBe(19);
+  expect(comp.set).toBe(18);
   expect(comp.board.map(({ id }) => id)).toEqual(sample.board.map(({ id }) => id));
-  const item = Object.values(current.tooltips.items).find(({ name_vi, name_en }) => name_vi && name_vi !== name_en);
+});
+
+test('keeps Set 19 in the PBE preview and preserves its old comp links', async ({ page, request }) => {
+  await page.goto('/tierlist/comps');
+  await page.getByRole('link', { name: 'Xem Mùa 19 PBE' }).click();
+  await expect(page.getByText('Mùa 19 PBE', { exact: true })).toBeVisible();
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'noindex,follow');
+  await page.getByRole('link', { name: 'Về Mùa 18 chính thức' }).click();
+  await expect(page.getByText(`Mùa 18 · Bản ${live.patch}`, { exact: true })).toBeVisible();
+  const sample = preview.comps.find((comp) => !comps.some((current) => current.id === comp.id || compSlug(current) === compSlug(comp)));
+  await page.goto(`/tierlist/comps?comp=${encodeURIComponent(sample.id)}`);
+  await expect(page).toHaveURL(/set=19/);
+  await expect(page.getByRole('button', { name: 'Đóng chi tiết' })).toBeVisible();
+  const guide = await request.get(`/api/comps/${encodeURIComponent(sample.id)}?set=19`);
+  expect((await guide.json()).comp.set).toBe(19);
+  const item = Object.values(preview.tooltips.items).find(({ name_vi, name_en }) => name_vi && name_vi !== name_en);
   expect(item).toBeDefined();
   const tooltip = await request.get(`/api/tooltip?set=19&type=item&id=${encodeURIComponent(item.id)}`);
   expect((await tooltip.json()).name_vi).toBe(item.name_vi);

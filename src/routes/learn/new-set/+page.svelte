@@ -9,7 +9,7 @@
   let title = $derived(`Khám Phá Mùa ${data.set}: ${data.setName} · TFT Academy VI`);
   let description = $derived(`Thông tin ĐTCL Mùa ${data.set}, gồm ${data.newSet.champions.length} tướng, ${data.newSet.traits.length} tộc hệ và ${data.newSet.augments.length} lõi nâng cấp.`);
   let hasWisps = $derived(data.newSet.wisps.length > 0);
-  let canonical = $derived(`https://tft.langpn.xyz/learn/new-set${data.set === 18 ? '?set=18' : ''}`);
+  let canonical = $derived(`https://tft.langpn.xyz/learn/new-set${data.set === 19 ? '?set=19' : ''}`);
 
   let activeTab = $state<'wisps' | 'champions' | 'traits'>('wisps');
   let selectedWispCategory = $state('All');
@@ -54,6 +54,7 @@
 </script>
 
 <svelte:head>
+  {#if data.set === 19}<meta name="robots" content="noindex,follow" />{/if}
   <title>{title}</title>
   <meta name="description" content={description} />
   <meta property="og:title" content={title} />
@@ -74,6 +75,7 @@
       <p class="text-slate-300 text-sm md:text-base leading-relaxed">
         {#if hasWisps}
           Bước vào vùng đất cổ xưa nơi các Linh Linh (Wisps) ma thuật xuất hiện tại cửa hàng, mang lại các hiệu ứng chiến đấu, đột phá kinh tế và phần thưởng rủi ro cao.
+          Xem <a href="/tierlist/comps" class="text-amber-400 hover:underline">bảng xếp hạng bản hiện hành</a> để theo dõi meta mới nhất.
         {:else}
           Tướng và tộc hệ trong Prismatic Tour. <a href="https://tftacademy.com/learn/new-set" class="text-amber-400 hover:underline">Xem tổng quan tại TFT Academy</a>.
         {/if}

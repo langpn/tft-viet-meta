@@ -1,28 +1,34 @@
 # TFT Academy Việt Nam (tft.langpn.xyz)
 
-> Cẩm nang Đấu Trường Chân Lý bằng tiếng Việt. Nội dung lấy từ TFT Academy. Mùa 19 dùng bản địa hóa MetaTFT khi có. Explorer lấy thống kê Mùa 18 từ tactics.tools.
+> Cẩm nang Đấu Trường Chân Lý bằng tiếng Việt. Bảng xếp hạng lấy từ TFT Academy. Explorer lấy thống kê Mùa 18 từ tactics.tools.
 
 ## Bộ dữ liệu đang phục vụ
-- ĐTCL Mùa 19 (Prismatic Tour)
-- 38 đội hình, 94 tướng, 47 tộc hệ và 330 lõi trong cẩm nang
+- ĐTCL Mùa 18 (Enchanted Wilds), bản 18.7
+- 74 đội hình, 65 tướng, 36 tộc hệ và 246 lõi trong cẩm nang
 
 ## Các trang chính
 - [Bảng xếp hạng đội hình](https://tft.langpn.xyz/tierlist/comps)
 - [Bảng xếp hạng trang bị](https://tft.langpn.xyz/tierlist/items)
 - [Bảng xếp hạng lõi nâng cấp](https://tft.langpn.xyz/tierlist/augments)
 - [Thống kê Explorer Mùa 18](https://tft.langpn.xyz/explorer)
-- [Thông tin Mùa 19](https://tft.langpn.xyz/learn/new-set)
-- [Đội hình lưu trữ Mùa 18](https://tft.langpn.xyz/tierlist/comps?set=18)
+- [Thông tin Mùa 18](https://tft.langpn.xyz/learn/new-set)
+- [Đội hình Mùa 19 PBE](https://tft.langpn.xyz/tierlist/comps?set=19)
 - [Danh sách chi tiết](https://tft.langpn.xyz/llms-full.txt)
 
 ## Đội hình bậc S và A
-- [Hyperpop Reroll](https://tft.langpn.xyz/tierlist/comps?comp=set-19-hyperpop-reroll&set=19) (S)
-- [Goth Baddie](https://tft.langpn.xyz/tierlist/comps?comp=set-19-goth-baddie&set=19) (S)
-- [Ionic Spark](https://tft.langpn.xyz/tierlist/comps?comp=set-19-ionic-spark&set=19) (A)
-- [Malzahar Prodigy](https://tft.langpn.xyz/tierlist/comps?comp=set-19-malzahar-prodigy&set=19) (A)
-- [Renata Guards](https://tft.langpn.xyz/tierlist/comps?comp=set-19-renata-guards&set=19) (A)
-- [Slayer Viego](https://tft.langpn.xyz/tierlist/comps?comp=set-19-slayer-viego&set=19) (A)
-- [JAXDD](https://tft.langpn.xyz/tierlist/comps?comp=set-19-jaxdd&set=19) (A)
-- [AP Juggs (Kayle)](https://tft.langpn.xyz/tierlist/comps?comp=set-19-ap-juggs-kayle&set=19) (A)
-- [K/DA Eve Kai'Sa](https://tft.langpn.xyz/tierlist/comps?comp=set-19-kda-eve-kaisa&set=19) (A)
-- [Encore Ezreal](https://tft.langpn.xyz/tierlist/comps?comp=set-19-lucian-ez&set=19) (A)
+- [AP Fast 9](https://tft.langpn.xyz/tierlist/comps?comp=set-18-ap-95) (S)
+- [Mamawood](https://tft.langpn.xyz/tierlist/comps?comp=set-18-mamawood) (S)
+- [Adaptor Reroll](https://tft.langpn.xyz/tierlist/comps?comp=set-18-adaptor-reroll) (A)
+- [Tee-moo](https://tft.langpn.xyz/tierlist/comps?comp=set-18-sprykin-teemo-copy) (A)
+- [Solar Blossom](https://tft.langpn.xyz/tierlist/comps?comp=set-18-solara-yunara) (A)
+- [Draven Ezreal 9](https://tft.langpn.xyz/tierlist/comps?comp=set-18-elderwood-executioners-copy) (A)
+- [Riftbeast Reroll](https://tft.langpn.xyz/tierlist/comps?comp=set-18-riftbeast-reroll) (A)
+- [Tempo Riftbeast](https://tft.langpn.xyz/tierlist/comps?comp=set-18-tempo-riftbeast) (A)
+- [Ahri Morgana](https://tft.langpn.xyz/tierlist/comps?comp=set-18-ahri-morgana) (A)
+- [Primal Sivir](https://tft.langpn.xyz/tierlist/comps?comp=set-18-primal-hunters) (A)
+- [Azir Rammus](https://tft.langpn.xyz/tierlist/comps?comp=set-18-azir-rammus) (A)
+- [Cursed Crown Kayle](https://tft.langpn.xyz/tierlist/comps?comp=set-18-solar-kayle-copy) (S tình huống)
+- [10 Riftbeast](https://tft.langpn.xyz/tierlist/comps?comp=set-18-10-riftbeast) (A)
+- [Ahri Zyra](https://tft.langpn.xyz/tierlist/comps?comp=set-18-spellweavers) (A)
+- [Draven Dragon 9](https://tft.langpn.xyz/tierlist/comps?comp=set-18-dragon-princess) (A)
+- [Yi Rengar](https://tft.langpn.xyz/tierlist/comps?comp=set-18-adaptor-reroll-copy) (A)

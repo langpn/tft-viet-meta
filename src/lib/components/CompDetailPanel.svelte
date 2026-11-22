@@ -579,7 +579,7 @@
 
         <!-- General Tip Card -->
         {#if comp.augmentsTip}
-          <div lang={comp.set === 19 ? 'en' : 'vi'} class="p-4 rounded-xl bg-[#10131B] border border-[#1D2230] text-xs leading-relaxed text-slate-200 shadow-md">
+          <div lang={comp.augmentsTip_en ? 'vi' : 'en'} class="p-4 rounded-xl bg-[#10131B] border border-[#1D2230] text-xs leading-relaxed text-slate-200 shadow-md">
             {comp.augmentsTip}
           </div>
         {/if}
@@ -594,7 +594,7 @@
                     {step.stage === 'Stage 2' ? 'Giai đoạn 2' : step.stage === 'Stage 3' ? 'Giai đoạn 3' : step.stage === 'Stage 4' ? 'Giai đoạn 4' : step.stage}
                   </span>
                 </div>
-                <p lang={comp.set === 19 ? 'en' : 'vi'} class="text-xs text-slate-300 leading-relaxed font-normal">
+                <p lang={step.tip_en ? 'vi' : 'en'} class="text-xs text-slate-300 leading-relaxed font-normal">
                   {step.tip}
                 </p>
               </div>

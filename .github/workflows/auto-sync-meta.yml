@@ -36,7 +36,7 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
-      - name: Refresh Academy content and Vietnamese catalog
+      - name: Refresh the official TFT Academy tier lists
         run: bun run sync:academy
 
       - name: Verify and build candidate
@@ -50,7 +50,7 @@ jobs:
 
       - name: Commit and Push if meta changed
         run: |
-          git add src/lib/data/academy-set19.json static/llms.txt static/llms-full.txt
+          git add src/lib/data/academy-live.json static/llms.txt static/llms-full.txt
           if git diff --cached --quiet; then
             echo "No meta changes detected. Everything is up to date."
           else

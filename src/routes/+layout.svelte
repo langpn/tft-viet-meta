@@ -94,7 +94,6 @@
   
   <!-- Global Technical & Branding Meta Tags -->
   <meta name="keywords" content={`DTCL, ĐTCL, TFT, tft academy, đội hình, trang bị, lõi nâng cấp, tactics.tools, mùa ${data.currentSet}`} />
-  <meta name="robots" content="index, follow" />
   <meta name="language" content="Vietnamese" />
   <meta name="author" content="Lang Pham Ngoc" />
   <meta property="og:site_name" content="TFT Academy Việt Nam" />
