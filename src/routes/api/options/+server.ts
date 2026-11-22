@@ -9,7 +9,7 @@ const searchCurrent = createEntitySearch([
   ...Object.values(current.tooltips.items).map((entity) => ({ ...entity, entityType: 'item' as const })),
   ...current.learning.augments.map((entity) => ({ ...entity, entityType: 'augment' as const })),
   ...current.learning.traits.map((entity) => ({ ...entity, entityType: 'trait' as const })),
-].map(({ id, name_vi, name_en, icon, entityType }) => ({ id, name_vi, name_en, icon, entityType })));
+].filter(({ id }) => id).map(({ id, name_vi, name_en, icon, entityType }) => ({ id, name_vi, name_en, icon, entityType })));
 
 export const GET: RequestHandler = async ({ url }) => {
   const q = url.searchParams.get('q') || '';

@@ -6,6 +6,7 @@ import { publishFiles } from '../src/lib/server/publish-data.js';
 import { fetchSource, sourceRows } from '../src/lib/server/source-fetch.js';
 import { captureSet19 } from './stage-set19.js';
 import { generateLlmsText } from './generate-llms-txt.js';
+import { validateTranslation } from '../src/core/localization.js';
 
 const groups = ['champions', 'items', 'augments', 'traits'] as const;
 const assetUrls = groups.map((group) => `https://tftacademy.com/api/assets/${group}?set=19`);
@@ -16,6 +17,14 @@ type Row = Record<string, any>;
 const text = (value: unknown) => typeof value === 'string' ? value.replace(/<[^>]*>/g, '').trim() : '';
 const icon = (kind: Group, id: string) => `https://assets.tftacademy.com/${kind}/${kind === 'champions' ? 'champion_icons/' : ''}${encodeURIComponent(id)}.webp`;
 const academyName = (value: unknown) => text(value).replaceAll('|', '/').replaceAll('PiÃ±ata', 'Piñata').toLowerCase();
+
+export function academyDescriptionVi(original: unknown, translation: unknown): string {
+  // MetaTFT placeholders can refer to a different balance revision than Academy.
+  if (typeof translation !== 'string' || /<TFT\w+\b|@[A-Za-z][^@]*@|\{\{[^}]+\}\}/i.test(translation)) return '';
+  const en = text(original);
+  const vi = text(translation);
+  return vi !== en && validateTranslation(en, vi).ok ? vi : '';
+}
 
 function latestTierlists(rows: Row[], key: (row: Row) => string): Row[] {
   const latest = new Map<string, Row>();
@@ -49,12 +58,13 @@ export async function buildAcademySet19(fetchFn = fetch) {
   const entity = (group: Group, id: string) => {
     const en = english.get(group)?.get(id);
     const vi = vietnamese.get(group)?.get(id);
+    const desc_en = text(en?.description) || text(vi?.en_desc);
     return {
       id,
       name_en: text(en?.name) || text(vi?.en_name) || id,
       name_vi: text(vi?.name),
-      desc_en: text(en?.description) || text(vi?.en_desc),
-      desc_vi: text(vi?.desc),
+      desc_en,
+      desc_vi: academyDescriptionVi(desc_en, vi?.desc),
       icon: icon(group, id),
     };
   };
@@ -72,7 +82,7 @@ export async function buildAcademySet19(fetchFn = fetch) {
       abilityNameVi: text(vi?.ability?.name),
       abilityMana: en?.stats?.mana == null ? '' : `${en.stats.manaStart ?? 0}/${en.stats.mana}`,
       ability: text(en?.ability),
-      desc_vi: text(vi?.ability?.desc),
+      desc_vi: academyDescriptionVi(en?.ability, vi?.ability?.desc),
     };
   };
 

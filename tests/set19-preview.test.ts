@@ -1,5 +1,12 @@
 import { expect, test } from 'bun:test';
 import { captureSet19 } from '../scripts/stage-set19';
+import { academyDescriptionVi } from '../scripts/build-academy-set19';
+
+test('uses Vietnamese descriptions only when they preserve the Academy values', () => {
+  expect(academyDescriptionVi('Gain <stat>18%</stat> max Health.', 'Nhận <TFTCurveTable row="HealthMaxMultiplier"/> Máu tối đa.')).toBe('');
+  expect(academyDescriptionVi('Deal 180/270/405 damage.', 'Gây 155/235/355 sát thương.')).toBe('');
+  expect(academyDescriptionVi('Gain 18% max Health.', 'Nhận <bright>18%</> Máu tối đa.')).toBe('Nhận 18% Máu tối đa.');
+});
 
 test('captures Set 19 previews without executing Academy JavaScript', async () => {
   const champions = [{ name: 'Ahri', cost: 4, traits: ['K|DA'], ability: 'Hit an enemy marked "Hyped".' }];
