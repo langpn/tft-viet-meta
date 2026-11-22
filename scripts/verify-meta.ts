@@ -3,10 +3,11 @@ import { resolve } from 'node:path';
 import assert from 'node:assert/strict';
 import manifest from '../src/lib/data/meta-manifest.json';
 import fixture from '../tests/fixtures/explorer-parity.json';
-import { buildTokenString, EXPLORER_PATCHES, EXPLORER_RANKS, parseExplorerParams, type ExplorerFilter } from '../src/lib/explorer-contract.js';
+import { buildTokenString, DEFAULT_PATCH, EXPLORER_PATCHES, EXPLORER_RANKS, parseExplorerParams, type ExplorerFilter } from '../src/lib/explorer-contract.js';
 import { normalizeExplorerData } from '../src/lib/server/explorer-service.js';
 import { sha256 } from '../src/lib/server/source-fetch.js';
 import { verifyAcademySet19 } from './build-academy-set19.js';
+import { verifyAcademyLive } from './build-academy-live.js';
 
 export function verifyExplorerParity(patch = manifest.explorer.patchId, rank = manifest.explorer.rankGroup) {
   assert(fixture.samples.some(({ params }) => params.patch === patch && params.rank === String(rank) && params.tokens === '0'),
@@ -74,13 +75,15 @@ export function verifyPublishedMeta() {
   const read = (file: string) => readFileSync(resolve(file));
   const files = verifyMetaFiles(manifest.files, read);
   verifyCandidateMeta(read);
+  const academy = verifyAcademyLive(JSON.parse(read('src/lib/data/academy-live.json').toString('utf8')));
   return {
     status: 'PASS',
-    set: manifest.set,
-    patch: manifest.patch,
+    set: academy.set,
+    patch: academy.patch,
     files,
-    explorerFixtures: verifyExplorerParity(),
-    academy: verifyAcademySet19(JSON.parse(read('src/lib/data/academy-set19.json').toString('utf8'))),
+    explorerFixtures: verifyExplorerParity(DEFAULT_PATCH),
+    academy,
+    pbe: verifyAcademySet19(JSON.parse(read('src/lib/data/academy-set19.json').toString('utf8'))),
   };
 }
 

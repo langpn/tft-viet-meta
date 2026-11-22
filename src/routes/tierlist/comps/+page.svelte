@@ -245,8 +245,8 @@
     return findComp(selectedCompId);
   });
   let detailError = $state(false);
-  const archiveSuffix = $derived(data.meta.set === 18 ? '?set=18' : '');
-  const archiveParam = $derived(data.meta.set === 18 ? '&set=18' : '');
+  const previewSuffix = $derived(data.meta.set === 19 ? '?set=19' : '');
+  const previewParam = $derived(data.meta.set === 19 ? '&set=19' : '');
 
   async function loadCompDetail(id: string) {
     detailError = false;
@@ -256,7 +256,7 @@
       return;
     }
     try {
-      const res = await fetch(`/api/comps/${encodeURIComponent(id)}${archiveSuffix}`);
+      const res = await fetch(`/api/comps/${encodeURIComponent(id)}${previewSuffix}`);
       if (!res.ok) throw new Error('Could not load comp details');
       const detail = await res.json();
       detailCache.set(id, detail);
@@ -277,7 +277,7 @@
       if (typeof window !== 'undefined') {
         const url = new URL(window.location.href);
         url.searchParams.delete('comp');
-        if (data.meta.set === 18) url.searchParams.set('set', '18');
+        if (data.meta.set === 19) url.searchParams.set('set', '19');
         history.replaceState({}, '', url.pathname + (url.search ? url.search : ''));
       }
       const opener = trigger ?? compTrigger;
@@ -292,7 +292,7 @@
     if (typeof window !== 'undefined') {
       const url = new URL(window.location.href);
       url.searchParams.set('comp', compSlug(comp));
-      if (data.meta.set === 18) url.searchParams.set('set', '18');
+      if (data.meta.set === 19) url.searchParams.set('set', '19');
       history.replaceState({}, '', url.pathname + '?' + url.searchParams.toString());
 
       setTimeout(() => {
@@ -353,9 +353,10 @@
 </script>
 
 <svelte:head>
+  {#if data.meta.set === 19}<meta name="robots" content="noindex,follow" />{/if}
   {#if selectedComp}
     {@const slug = compSlug(selectedComp)}
-    {@const canonicalCompUrl = `${SITE_URL}/tierlist/comps?comp=${encodeURIComponent(slug)}${archiveParam}`}
+    {@const canonicalCompUrl = `${SITE_URL}/tierlist/comps?comp=${encodeURIComponent(slug)}${previewParam}`}
     {@const breadcrumbLd = safeJsonLd({
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -385,7 +386,7 @@
         '@type': 'ListItem',
         position: idx + 1,
         name: `${c.title} (Bậc ${c.tier})`,
-        url: `${SITE_URL}/tierlist/comps?comp=${encodeURIComponent(c.slug)}${archiveParam}`
+        url: `${SITE_URL}/tierlist/comps?comp=${encodeURIComponent(c.slug)}${previewParam}`
       }))
     })}
     <title>Bảng Xếp Hạng Đội Hình ĐTCL Mùa {data.meta.set} · TFT Academy VI</title>
@@ -393,8 +394,8 @@
     <meta name="description" content="Bảng xếp hạng {data.meta.compCount} đội hình Đấu Trường Chân Lý Mùa {data.meta.set} từ TFT Academy, gồm sơ đồ xếp cờ và trang bị." />
     <meta property="og:title" content="Bảng Xếp Hạng Đội Hình ĐTCL Mùa {data.meta.set} · TFT Academy VI" />
     <meta property="og:description" content="Bảng xếp hạng {data.meta.compCount} đội hình meta Đấu Trường Chân Lý Mùa {data.meta.set} chuẩn nhất từ TFT Academy." />
-    <meta property="og:url" content={`${SITE_URL}/tierlist/comps${archiveSuffix}`} />
-    <link rel="canonical" href={`${SITE_URL}/tierlist/comps${archiveSuffix}`} />
+    <meta property="og:url" content={`${SITE_URL}/tierlist/comps${previewSuffix}`} />
+    <link rel="canonical" href={`${SITE_URL}/tierlist/comps${previewSuffix}`} />
 
     <!-- ItemList Schema for Comps Tierlist -->
     {@html '<script type="application/ld+json">' + listLd + '</' + 'script>'}
@@ -443,7 +444,7 @@
     <!-- Subnav Tabs (Comps, Items, Augments) -->
     <div class="flex items-center gap-7 text-sm font-bold tracking-tight select-none">
       <a 
-        href={`/tierlist/comps${archiveSuffix}`}
+        href={`/tierlist/comps${previewSuffix}`}
         data-sveltekit-preload-data="hover"
         class="flex items-center gap-2 pb-1.5 transition-all text-amber-400 border-b-2 border-amber-400 font-black cursor-pointer"
       >
@@ -452,7 +453,7 @@
       </a>
 
       <a 
-        href={`/tierlist/items${archiveSuffix}`}
+        href={`/tierlist/items${previewSuffix}`}
         data-sveltekit-preload-data="hover"
         class="flex items-center gap-2 pb-1.5 transition-all text-slate-400 hover:text-white cursor-pointer"
       >
@@ -461,7 +462,7 @@
       </a>
 
       <a 
-        href={`/tierlist/augments${archiveSuffix}`}
+        href={`/tierlist/augments${previewSuffix}`}
         data-sveltekit-preload-data="hover"
         class="flex items-center gap-2 pb-1.5 transition-all text-slate-400 hover:text-white cursor-pointer"
       >

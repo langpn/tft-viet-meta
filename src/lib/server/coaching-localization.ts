@@ -3,7 +3,7 @@ import { validateTranslation } from '../../core/localization.js';
 
 export type CoachingGuide = Pick<ParsedAcademyComp, 'id' | 'tips' | 'augmentsTip' | 'augmentsTip_en'>;
 
-export function applyCoachingTranslations(comps: ParsedAcademyComp[], translations: CoachingGuide[], reviewed: CoachingGuide[] = []) {
+export function applyCoachingTranslations(comps: ParsedAcademyComp[], translations: CoachingGuide[], reviewed: CoachingGuide[] = [], allowEnglish = false) {
   if (!Array.isArray(reviewed)) throw new Error('Reviewed coaching must be an array of guides');
   const byGuide = new Map<string, CoachingGuide>();
   for (const guide of translations) byGuide.set(guide.id, guide);
@@ -51,5 +51,6 @@ export function applyCoachingTranslations(comps: ParsedAcademyComp[], translatio
       missing.push(`${comp.id} augmentsTip: ${original}`);
     }
   }
-  if (missing.length) throw new Error(`Missing Vietnamese coaching (${missing.length}):\n${missing.join('\n')}`);
+  if (!allowEnglish && missing.length) throw new Error(`Missing Vietnamese coaching (${missing.length}):\n${missing.join('\n')}`);
+  return missing.length;
 }

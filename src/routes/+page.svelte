@@ -89,7 +89,7 @@
 
     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-300 text-xs font-bold uppercase tracking-wider">
       <Sparkles class="w-3.5 h-3.5" />
-      <span>Mùa {data.meta.set} · Dữ liệu TFT Academy</span>
+      <span>Mùa {data.meta.set} · Bản {data.meta.patch} · Dữ liệu TFT Academy</span>
     </div>
 
     <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white max-w-4xl leading-tight">

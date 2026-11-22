@@ -1,6 +1,6 @@
 # Source attribution and provenance
 
-The [Set 19 snapshot](../src/lib/data/academy-set19.json) records the TFT Academy and MetaTFT URLs, source hashes and capture time for the current season content. The [Set 18 manifest](../src/lib/data/meta-manifest.json) records the archived content, pinned CommunityDragon release and Explorer defaults. A `null` source hash denotes a historical record whose original response bytes are unavailable.
+The official tier lists use the [live Academy snapshot](../src/lib/data/academy-live.json), which records the season and patch from the default Academy comps page and the hashes of the tier-list responses. The [Set 19 PBE snapshot](../src/lib/data/academy-set19.json) records separate Academy and MetaTFT sources. The [Set 18 manifest](../src/lib/data/meta-manifest.json) describes the learning catalog, tooltip localization, previous coaching and pinned CommunityDragon release. A `null` source hash denotes a historical record whose original response bytes are unavailable.
 
 ## Sources
 

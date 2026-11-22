@@ -18,11 +18,11 @@ import { fetchExplorer, normalizeExplorerData } from '../src/lib/server/explorer
 import { matchesQuery } from '../src/lib/utils/search';
 
 describe('explorer-contract', () => {
-  test('uses meta-manifest defaults and offers the additional verified patch', () => {
-    expect(DEFAULT_PATCH).toBe(String(metaManifest.explorer.patchId));
+  test('defaults to patch 18.7 and offers the previous verified patch', () => {
+    expect(DEFAULT_PATCH).toBe('16230');
     expect(DEFAULT_RANK).toBe(String(metaManifest.explorer.rankGroup));
-    expect(EXPLORER_PATCHES.some((p) => p.value === DEFAULT_PATCH && p.label.includes(metaManifest.patch))).toBe(true);
-    expect(EXPLORER_PATCHES.some((p) => p.value === '16230')).toBe(true);
+    expect(EXPLORER_PATCHES).toContainEqual({ value: DEFAULT_PATCH, label: 'Patch 18.7' });
+    expect(EXPLORER_PATCHES).toContainEqual({ value: metaManifest.explorer.patchId, label: `Patch ${metaManifest.patch}` });
     expect(parseExplorerParams({ patch: '16211' }).ok).toBe(false);
   });
 

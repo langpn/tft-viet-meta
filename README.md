@@ -1,6 +1,6 @@
 # TFT Việt Meta
 
-Cẩm nang Đấu Trường Chân Lý bằng tiếng Việt. Đội hình, trang bị, lõi và thông tin mùa mặc định theo Mùa 19 Prismatic Tour của TFT Academy. Explorer hiện hiển thị thống kê Mùa 18 của tactics.tools. [Website](https://tft.langpn.xyz)
+Cẩm nang Đấu Trường Chân Lý bằng tiếng Việt. Bảng xếp hạng mặc định theo Mùa 18 bản 18.7 của TFT Academy. Explorer mặc định dùng thống kê bản 18.7 từ tactics.tools. [Website](https://tft.langpn.xyz)
 
 ## Chạy hệ thống
 
@@ -38,9 +38,9 @@ Các bản đã triển khai nằm trong `~/Library/Application Support/tft-viet
 
 ## Đồng bộ dữ liệu
 
-`bun run sync:academy` lấy đội hình, trang bị, lõi và cẩm nang Mùa 19 từ TFT Academy, ghép bản địa hóa MetaTFT theo đúng ID rồi kiểm tra dữ liệu trước khi ghi. Mô tả chưa có bản dịch được hiển thị theo nguồn tiếng Anh. Các bảng hạng dùng bản có dữ liệu mới nhất của từng nhóm mà Academy cung cấp. Snapshot ghi thời điểm lấy và SHA-256 của các nguồn. CI chạy verify, test, kiểm tra kiểu, build và Playwright trước khi đẩy cập nhật lên GitHub. [Snapshot Mùa 19](src/lib/data/academy-set19.json)
+`bun run sync:academy` lấy đội hình, trang bị và lõi từ bảng xếp hạng chính thức của TFT Academy. Bản đồng bộ lưu mùa, phiên bản, thời điểm và SHA-256 của nguồn. Mẹo dùng bản dịch đã có khi nội dung gốc khớp, còn lại hiện tiếng Anh. Trang thông tin Mùa 18 và tooltip vẫn dùng danh mục Việt hóa đã lưu ở bản 18.5c. CI chạy kiểm tra dữ liệu, kiểm thử, kiểm tra kiểu, build và Playwright trước khi đẩy cập nhật lên GitHub. [Dữ liệu mùa chính thức](src/lib/data/academy-live.json)
 
-`bun run verify` chạy offline và đối chiếu cấu trúc Mùa 19, hash của dữ liệu lưu trữ và các truy vấn Explorer có fixture. Dùng `?set=18` trên các trang nội dung để xem dữ liệu lưu trữ.
+`bun run verify` chạy offline, kiểm tra dữ liệu chính thức, dữ liệu PBE, hash của dữ liệu lưu trữ và các mẫu Explorer. Dùng `?set=19` trên các trang nội dung để xem Mùa 19 PBE. Dùng `bun run sync:academy-pbe` để làm mới riêng dữ liệu PBE. [Dữ liệu Mùa 19 PBE](src/lib/data/academy-set19.json)
 
 `bun run stage:set19` tải dữ liệu gốc cho việc đối chiếu vào `data/snapshots/set-19/academy-preview.json`. Explorer cần có patch Mùa 19 và fixture đối chiếu riêng trước khi chuyển thống kê sang mùa mới. [Bản nháp coaching Mùa 19](data/translations/set-19-coaching-draft.vi.json)
 
