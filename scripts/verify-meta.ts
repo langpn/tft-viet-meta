@@ -3,15 +3,21 @@ import { resolve } from 'node:path';
 import assert from 'node:assert/strict';
 import manifest from '../src/lib/data/meta-manifest.json';
 import fixture from '../tests/fixtures/explorer-parity.json';
-import { buildTokenString, parseExplorerParams } from '../src/lib/explorer-contract.js';
+import { buildTokenString, EXPLORER_PATCHES, EXPLORER_RANKS, parseExplorerParams, type ExplorerFilter } from '../src/lib/explorer-contract.js';
 import { normalizeExplorerData } from '../src/lib/server/explorer-service.js';
 import { sha256 } from '../src/lib/server/source-fetch.js';
 
 export function verifyExplorerParity(patch = manifest.explorer.patchId, rank = manifest.explorer.rankGroup) {
   assert(fixture.samples.some(({ params }) => params.patch === patch && params.rank === String(rank) && params.tokens === '0'),
     `Missing Explorer baseline fixture for ${patch}/${rank}`);
+  for (const { value: patchId } of EXPLORER_PATCHES) {
+    for (const { value: rankId } of EXPLORER_RANKS) {
+      assert(fixture.samples.some(({ params }) => params.patch === patchId && params.rank === rankId && params.tokens === '0'),
+        `Missing Explorer baseline for rank ${rankId} on patch ${patchId}`);
+    }
+  }
   for (const sample of fixture.samples) {
-    const tokens = sample.filter ? buildTokenString([{ type: 'u', id: sample.filter.unit, starLevel: sample.filter.star }]) : sample.params.tokens;
+    const tokens = sample.filters ? buildTokenString(sample.filters as ExplorerFilter[]) : sample.params.tokens;
     const params = parseExplorerParams({ ...sample.params, tokens });
     assert(params.ok);
     const local = normalizeExplorerData(sample.raw, params.value);
@@ -21,6 +27,11 @@ export function verifyExplorerParity(patch = manifest.explorer.patchId, rank = m
       const item = local.items.find((row) => row.unitId === sample.item.unitId && row.itemId === sample.item.itemId);
       assert(item, `Missing sample item in ${sample.url}`);
       for (const [field, value] of Object.entries(sample.item)) assert.equal(item[field], value, `${sample.url} ${field}`);
+    }
+    if (sample.trait) {
+      const trait = local.traits.find((row) => row.id === sample.trait.id && row.tier === sample.trait.tier);
+      assert(trait, `Missing sample trait in ${sample.url}`);
+      for (const [field, value] of Object.entries(sample.trait)) assert.equal(trait[field], value, `${sample.url} ${field}`);
     }
   }
   return fixture.samples.length;

@@ -6,7 +6,7 @@ The crawler records public URLs and raw page snapshots. Content parity is measur
 
 ## Explorer behavior
 
-Explorer parity compares the production normalizer with expected results from [recorded source samples](../tests/fixtures/explorer-parity.json). The current samples cover patch `16212`, rank `1`, the baseline and a Draven filter. They check the summary and one filtered item. An additional patch, rank, or filter needs its own fixture for a parity claim. The legacy connector reports `UNVERIFIED` when it only captures a response.
+Explorer parity compares the production normalizer with expected results from [recorded source samples](../tests/fixtures/explorer-parity.json). The samples cover all five ranks for patches `16212` and `16230`, selected trait rows and two Draven filters, one with Deathblade. An additional filter needs its own fixture for a parity claim. The legacy connector reports `UNVERIFIED` when it only captures a response.
 
 ## Vietnamese data
 

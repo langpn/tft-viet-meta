@@ -18,11 +18,12 @@ import { fetchExplorer, normalizeExplorerData } from '../src/lib/server/explorer
 import { matchesQuery } from '../src/lib/utils/search';
 
 describe('explorer-contract', () => {
-  test('uses meta-manifest defaults and retains historical patch allowlist', () => {
+  test('uses meta-manifest defaults and offers the additional verified patch', () => {
     expect(DEFAULT_PATCH).toBe(String(metaManifest.explorer.patchId));
     expect(DEFAULT_RANK).toBe(String(metaManifest.explorer.rankGroup));
     expect(EXPLORER_PATCHES.some((p) => p.value === DEFAULT_PATCH && p.label.includes(metaManifest.patch))).toBe(true);
-    expect(EXPLORER_PATCHES.some((p) => p.value === '16211')).toBe(true);
+    expect(EXPLORER_PATCHES.some((p) => p.value === '16230')).toBe(true);
+    expect(parseExplorerParams({ patch: '16211' }).ok).toBe(false);
   });
 
   test('parseExplorerParams applies defaults when missing and rejects unknown values', () => {
@@ -36,7 +37,7 @@ describe('explorer-contract', () => {
     expect(parseExplorerParams({ rank: '9' }).ok).toBe(false);
 
     const valid = parseExplorerParams({
-      patch: '16211',
+      patch: '16230',
       rank: '0',
       tokens: 'u-TFT18_Ahri-2/i-TFT_Item_JeweledGauntlet-TFT18_Ahri-2/t-TFT18_StarGuardian-1/a-TFT18_Augment-1'
     });
