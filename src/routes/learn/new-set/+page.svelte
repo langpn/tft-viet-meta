@@ -1,12 +1,15 @@
 <script lang="ts">
   import type { PageData } from './$types';
   import HexAvatar from '$components/HexAvatar.svelte';
+  import SeasonLinks from '$components/SeasonLinks.svelte';
   import { matchesQuery } from '$lib/utils/search';
   import { Sparkles, Wand2, Users, Flame, Shield, Search } from 'lucide-svelte';
 
   let { data }: { data: PageData } = $props();
   let title = $derived(`Khám Phá Mùa ${data.set}: ${data.setName} · TFT Academy VI`);
-  let description = $derived(`Thông tin ĐTCL Mùa ${data.set}, bản ${data.patch}, gồm ${data.newSet.champions.length} tướng, ${data.newSet.traits.length} tộc hệ, ${data.newSet.augments.length} lõi nâng cấp và cơ chế Linh Linh.`);
+  let description = $derived(`Thông tin ĐTCL Mùa ${data.set}, gồm ${data.newSet.champions.length} tướng, ${data.newSet.traits.length} tộc hệ và ${data.newSet.augments.length} lõi nâng cấp.`);
+  let hasWisps = $derived(data.newSet.wisps.length > 0);
+  let canonical = $derived(`https://tft.langpn.xyz/learn/new-set${data.set === 18 ? '?set=18' : ''}`);
 
   let activeTab = $state<'wisps' | 'champions' | 'traits'>('wisps');
   let selectedWispCategory = $state('All');
@@ -55,24 +58,25 @@
   <meta name="description" content={description} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:url" content="https://tft.langpn.xyz/learn/new-set" />
-  <link rel="canonical" href="https://tft.langpn.xyz/learn/new-set" />
+  <meta property="og:url" content={canonical} />
+  <link rel="canonical" href={canonical} />
 </svelte:head>
 
-<div class="flex flex-col gap-8 pb-16">
+<div class="flex flex-col gap-8 pb-16" data-tft-set={data.set}>
   
   <!-- Hero Set 18 Banner -->
   <div class="relative rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-r from-emerald-950/60 via-[#0F131C] to-purple-950/40 p-8 md:p-12 shadow-2xl">
     <div class="relative z-10 flex flex-col gap-4 max-w-3xl">
-      <div class="flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-emerald-400">
-        <Sparkles class="w-4 h-4" />
-        <span>Mùa {data.set} · Bản {data.patch}</span>
-      </div>
+      <SeasonLinks set={data.set} patch={data.patch} path="/learn/new-set" />
       <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white leading-tight">
         TFT Set {data.set}: <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300">{data.setName}</span>
       </h1>
       <p class="text-slate-300 text-sm md:text-base leading-relaxed">
-        Bước vào vùng đất cổ xưa nơi các Linh Linh (Wisps) ma thuật xuất hiện tại cửa hàng, mang lại các hiệu ứng chiến đấu, đột phá kinh tế và phần thưởng rủi ro cao.
+        {#if hasWisps}
+          Bước vào vùng đất cổ xưa nơi các Linh Linh (Wisps) ma thuật xuất hiện tại cửa hàng, mang lại các hiệu ứng chiến đấu, đột phá kinh tế và phần thưởng rủi ro cao.
+        {:else}
+          Tướng và tộc hệ trong Prismatic Tour. <a href="https://tftacademy.com/learn/new-set" class="text-amber-400 hover:underline">Xem tổng quan tại TFT Academy</a>.
+        {/if}
       </p>
     </div>
   </div>
@@ -80,13 +84,13 @@
   <!-- Navigation Tabs & Search Controls -->
   <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 p-3 rounded-2xl bg-[#0F131C] border border-white/10 shadow-lg">
     <div class="flex items-center gap-1.5 overflow-x-auto p-1 bg-[#161B26] rounded-xl border border-white/5">
-      <button
+      {#if hasWisps}<button
         onclick={() => (activeTab = 'wisps')}
         class="flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer whitespace-nowrap {activeTab === 'wisps' ? 'bg-amber-400 text-black shadow-md' : 'text-slate-400 hover:text-white'}"
       >
         <Wand2 class="w-4 h-4" />
         <span>Linh Linh (Wisps)</span>
-      </button>
+      </button>{/if}
 
       <button
         onclick={() => (activeTab = 'champions')}
@@ -118,7 +122,7 @@
   </div>
 
   <!-- Content Sections -->
-  {#if activeTab === 'wisps'}
+  {#if activeTab === 'wisps' && hasWisps}
     <!-- Wisps Section -->
     <div class="flex flex-col gap-6">
       
@@ -161,13 +165,14 @@
       </div>
     </div>
 
-  {:else if activeTab === 'champions'}
+  {:else if activeTab !== 'traits'}
     <!-- Champions Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {#each filteredChampions as champ (champ.id)}
         <div class="flex flex-col p-4 rounded-xl bg-[#121620] border border-white/5 hover:border-amber-400/40 transition-all gap-3">
           <div class="flex items-center gap-3">
             <HexAvatar 
+              id={champ.id}
               name={champ.name_en}
               nameVi={champ.name_vi}
               iconUrl={champ.icon}
@@ -193,12 +198,12 @@
           {#if champ.abilityName}
             <div class="flex flex-col gap-1 p-2.5 rounded-lg bg-black/40 border border-white/5 text-xs">
               <div class="flex items-center justify-between font-bold text-amber-400">
-                <span>{champ.abilityName}</span>
+                <span lang={'abilityNameVi' in champ && champ.abilityNameVi ? 'vi' : 'en'}>{'abilityNameVi' in champ && champ.abilityNameVi ? champ.abilityNameVi : champ.abilityName}</span>
                 {#if champ.abilityMana}
                   <span class="text-[11px] text-sky-400">💧 {champ.abilityMana}</span>
                 {/if}
               </div>
-              <p class="text-[11px] text-slate-300 leading-snug line-clamp-3">{champ.desc_vi || champ.ability}</p>
+              <p lang={champ.desc_vi && champ.desc_vi !== champ.ability ? 'vi' : 'en'} class="text-[11px] text-slate-300 leading-snug line-clamp-3">{champ.desc_vi || champ.ability}</p>
             </div>
           {/if}
         </div>
@@ -229,7 +234,7 @@
           </div>
 
           {#if trait.desc_vi || trait.desc_en}
-            <p class="text-xs text-slate-300 leading-relaxed">{trait.desc_vi || trait.desc_en}</p>
+            <p lang={trait.desc_vi && trait.desc_vi !== trait.desc_en ? 'vi' : 'en'} class="text-xs text-slate-300 leading-relaxed">{trait.desc_vi || trait.desc_en}</p>
           {/if}
         </div>
       {/each}

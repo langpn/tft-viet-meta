@@ -119,6 +119,7 @@
 
   // Derive active trait badges (matching Screenshot 3: compact colored pills under playstyle)
   const traits = $derived.by(() => {
+    if (comp?.set === 19) return comp.traits || [];
     if (comp?.traits && Array.isArray(comp.traits) && comp.traits.length > 0 && comp.traits[0].count) {
       return comp.traits;
     }
@@ -378,7 +379,7 @@
 
         <!-- Copy & Close Buttons -->
         <div class="flex items-center gap-2 shrink-0">
-          <button 
+          {#if comp.set !== 19}<button
             type="button"
             onclick={copyCompCode}
             class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#141824] hover:bg-[#1E2538] border border-white/10 text-xs font-bold text-slate-200 transition-colors cursor-pointer"
@@ -390,7 +391,7 @@
               <Copy class="w-3.5 h-3.5 text-amber-400" />
               <span>Copy</span>
             {/if}
-          </button>
+          </button>{/if}
 
           {#if onclose}
             <button 
@@ -569,7 +570,7 @@
       </div>
 
       <!-- Tips Section (Matching Screenshot 2 exactly!) -->
-      <div class="flex flex-col gap-3 pt-2">
+      {#if comp.augmentsTip || comp.tips?.length}<div class="flex flex-col gap-3 pt-2">
         <div class="flex items-center justify-center">
           <span class="px-5 py-1 rounded-full bg-[#141824] border border-white/10 text-xs font-black text-slate-300 uppercase tracking-widest shadow-sm">
             Mẹo Vận Hành & Lời Khuyên (Tips)
@@ -578,7 +579,7 @@
 
         <!-- General Tip Card -->
         {#if comp.augmentsTip}
-          <div class="p-4 rounded-xl bg-[#10131B] border border-[#1D2230] text-xs leading-relaxed text-slate-200 shadow-md">
+          <div lang={comp.set === 19 ? 'en' : 'vi'} class="p-4 rounded-xl bg-[#10131B] border border-[#1D2230] text-xs leading-relaxed text-slate-200 shadow-md">
             {comp.augmentsTip}
           </div>
         {/if}
@@ -593,24 +594,24 @@
                     {step.stage === 'Stage 2' ? 'Giai đoạn 2' : step.stage === 'Stage 3' ? 'Giai đoạn 3' : step.stage === 'Stage 4' ? 'Giai đoạn 4' : step.stage}
                   </span>
                 </div>
-                <p class="text-xs text-slate-300 leading-relaxed font-normal">
+                <p lang={comp.set === 19 ? 'en' : 'vi'} class="text-xs text-slate-300 leading-relaxed font-normal">
                   {step.tip}
                 </p>
               </div>
             {/each}
           </div>
         {/if}
-      </div>
+      </div>{/if}
 
       <!-- Bottom Controls: Open in Builder + Show Names Toggle (Matching Screenshot 4) -->
       <div class="flex items-center justify-end gap-5 pt-3 border-t border-[#1C202B]">
-        <a 
+        {#if comp.set !== 19}<a
           href="/explorer"
           class="flex items-center gap-1.5 text-xs font-bold text-slate-400 hover:text-amber-400 transition-colors"
         >
           <span>Mở trong Explorer (Builder)</span>
           <ExternalLink class="w-3.5 h-3.5 text-amber-400" />
-        </a>
+        </a>{/if}
 
         <label class="flex items-center gap-2 text-xs font-bold text-slate-400 cursor-pointer select-none">
           <span>Hiện tên tướng</span>

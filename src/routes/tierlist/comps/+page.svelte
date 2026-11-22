@@ -5,6 +5,7 @@
   import CompDetailPanel from '$components/CompDetailPanel.svelte';
   import CustomDropdown from '$components/CustomDropdown.svelte';
   import TftSearchBar, { type ActiveFilter } from '$components/TftSearchBar.svelte';
+  import SeasonLinks from '$components/SeasonLinks.svelte';
   import { resolveItemIcon, resolveAugmentIcon } from '$lib/utils/assets';
   import { matchesQuery } from '$lib/utils/search';
   import { interpolateDescription } from '$lib/utils/augment-cleaner';
@@ -68,7 +69,7 @@
         );
         const inItems = comp.mainCarry?.items?.some((i: any) => matchesQuery(i.name_en, q) || matchesQuery(i.name_vi, q) || matchesQuery(i.id, q)) ||
                         comp.mainTank?.items?.some((i: any) => matchesQuery(i.name_en, q) || matchesQuery(i.name_vi, q) || matchesQuery(i.id, q));
-        const inTraits = comp.traits?.some((t: any) => matchesQuery(t.name, q) || matchesQuery(t.name_vi, q) || matchesQuery(t.id, q));
+        const inTraits = comp.traits?.some((t: any) => matchesQuery(t.name_en || t.name, q) || matchesQuery(t.name_vi, q) || matchesQuery(t.id, q));
         const inAugs = comp.augments?.some((a: any) => matchesQuery(a.name_en, q) || matchesQuery(a.name_vi, q) || matchesQuery(a.id, q));
         const inTitle = matchesQuery(comp.title, q) || matchesQuery(comp.metaTitle, q);
 
@@ -106,7 +107,7 @@
           if (comp.mainCarry?.items?.some((i: any) => matchesQuery(i.id, fid) || matchesQuery(i.name_en, fnameEn) || matchesQuery(i.name_vi, fnameVi))) return true;
           if (comp.mainTank?.items?.some((i: any) => matchesQuery(i.id, fid) || matchesQuery(i.name_en, fnameEn) || matchesQuery(i.name_vi, fnameVi))) return true;
           // Check traits
-          if (comp.traits?.some((t: any) => matchesQuery(t.id, fid) || matchesQuery(t.name, fnameEn) || matchesQuery(t.name_vi, fnameVi))) return true;
+          if (comp.traits?.some((t: any) => matchesQuery(t.id, fid) || matchesQuery(t.name_en || t.name, fnameEn) || matchesQuery(t.name_vi, fnameVi))) return true;
           // Check augments
           if (comp.augments?.some((a: any) => matchesQuery(a.id, fid) || matchesQuery(a.name_en, fnameEn) || matchesQuery(a.name_vi, fnameVi))) return true;
           // Check title
@@ -244,6 +245,8 @@
     return findComp(selectedCompId);
   });
   let detailError = $state(false);
+  const archiveSuffix = $derived(data.meta.set === 18 ? '?set=18' : '');
+  const archiveParam = $derived(data.meta.set === 18 ? '&set=18' : '');
 
   async function loadCompDetail(id: string) {
     detailError = false;
@@ -253,7 +256,7 @@
       return;
     }
     try {
-      const res = await fetch(`/api/comps/${encodeURIComponent(id)}`);
+      const res = await fetch(`/api/comps/${encodeURIComponent(id)}${archiveSuffix}`);
       if (!res.ok) throw new Error('Could not load comp details');
       const detail = await res.json();
       detailCache.set(id, detail);
@@ -274,6 +277,7 @@
       if (typeof window !== 'undefined') {
         const url = new URL(window.location.href);
         url.searchParams.delete('comp');
+        if (data.meta.set === 18) url.searchParams.set('set', '18');
         history.replaceState({}, '', url.pathname + (url.search ? url.search : ''));
       }
       const opener = trigger ?? compTrigger;
@@ -288,6 +292,7 @@
     if (typeof window !== 'undefined') {
       const url = new URL(window.location.href);
       url.searchParams.set('comp', compSlug(comp));
+      if (data.meta.set === 18) url.searchParams.set('set', '18');
       history.replaceState({}, '', url.pathname + '?' + url.searchParams.toString());
 
       setTimeout(() => {
@@ -350,7 +355,7 @@
 <svelte:head>
   {#if selectedComp}
     {@const slug = compSlug(selectedComp)}
-    {@const canonicalCompUrl = `${SITE_URL}/tierlist/comps?comp=${encodeURIComponent(slug)}`}
+    {@const canonicalCompUrl = `${SITE_URL}/tierlist/comps?comp=${encodeURIComponent(slug)}${archiveParam}`}
     {@const breadcrumbLd = safeJsonLd({
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -380,16 +385,16 @@
         '@type': 'ListItem',
         position: idx + 1,
         name: `${c.title} (Bậc ${c.tier})`,
-        url: `${SITE_URL}/tierlist/comps?comp=${encodeURIComponent(c.slug)}`
+        url: `${SITE_URL}/tierlist/comps?comp=${encodeURIComponent(c.slug)}${archiveParam}`
       }))
     })}
-    <title>Bảng Xếp Hạng Đội Hình ĐTCL Mùa {data.meta.set} (Bản {data.meta.patch}) · TFT Academy VI</title>
-    <meta name="title" content="Bảng Xếp Hạng Đội Hình ĐTCL Mùa {data.meta.set} (Bản {data.meta.patch}) · TFT Academy VI" />
-    <meta name="description" content="Bảng xếp hạng {data.meta.compCount} đội hình meta Đấu Trường Chân Lý Mùa {data.meta.set} chuẩn nhất từ TFT Academy (Dishsoap & Frodan). Đầy đủ vị trí xếp cờ 28 ô, trang bị chuẩn BIS và mẹo vận hành tiếng Việt." />
-    <meta property="og:title" content="Bảng Xếp Hạng Đội Hình ĐTCL Mùa {data.meta.set} (Bản {data.meta.patch}) · TFT Academy VI" />
+    <title>Bảng Xếp Hạng Đội Hình ĐTCL Mùa {data.meta.set} · TFT Academy VI</title>
+    <meta name="title" content="Bảng Xếp Hạng Đội Hình ĐTCL Mùa {data.meta.set} · TFT Academy VI" />
+    <meta name="description" content="Bảng xếp hạng {data.meta.compCount} đội hình Đấu Trường Chân Lý Mùa {data.meta.set} từ TFT Academy, gồm sơ đồ xếp cờ và trang bị." />
+    <meta property="og:title" content="Bảng Xếp Hạng Đội Hình ĐTCL Mùa {data.meta.set} · TFT Academy VI" />
     <meta property="og:description" content="Bảng xếp hạng {data.meta.compCount} đội hình meta Đấu Trường Chân Lý Mùa {data.meta.set} chuẩn nhất từ TFT Academy." />
-    <meta property="og:url" content="https://tft.langpn.xyz/tierlist/comps" />
-    <link rel="canonical" href="https://tft.langpn.xyz/tierlist/comps" />
+    <meta property="og:url" content={`${SITE_URL}/tierlist/comps${archiveSuffix}`} />
+    <link rel="canonical" href={`${SITE_URL}/tierlist/comps${archiveSuffix}`} />
 
     <!-- ItemList Schema for Comps Tierlist -->
     {@html '<script type="application/ld+json">' + listLd + '</' + 'script>'}
@@ -398,16 +403,13 @@
 
 <svelte:window onkeydown={handleKeydown} onpopstate={handlePopState} />
 
-<div class="flex flex-col gap-6 pb-24">
+<div class="flex flex-col gap-6 pb-24" data-tft-set={data.meta.set}>
   
   <!-- Top Banner: Patch & Title (Matching Screenshot 2 exactly!) -->
   <div class="flex flex-col gap-3">
     <!-- Patch & Update Tag -->
     <div class="flex items-center gap-3 text-xs font-bold">
-      <div class="px-3.5 py-1 rounded-full bg-[#161B26] border border-white/10 text-white flex items-center gap-2">
-        <span class="text-slate-400">Bản Cập Nhật</span>
-        <span class="font-black text-amber-400">{data.meta.patch}</span>
-      </div>
+      <SeasonLinks set={data.meta.set} patch={data.meta.patch} path="/tierlist/comps" />
 
       <a href="https://tftacademy.com/tierlist/updates/comps" target="_blank" class="text-slate-400 hover:text-amber-400 transition-colors flex items-center gap-1">
         <span>Lịch sử cập nhật TFT Academy</span>
@@ -430,7 +432,7 @@
         <span>COMPS</span>
         <span class="text-amber-400">•</span>
         <span class="text-amber-400">TIERLIST</span>
-        <span class="sr-only">Bảng Xếp Hạng Đội Hình ĐTCL Mùa 18 Chuẩn Meta</span>
+        <span class="sr-only">Bảng Xếp Hạng Đội Hình ĐTCL Mùa {data.meta.set}</span>
       </h1>
     </div>
   </div>
@@ -441,7 +443,7 @@
     <!-- Subnav Tabs (Comps, Items, Augments) -->
     <div class="flex items-center gap-7 text-sm font-bold tracking-tight select-none">
       <a 
-        href="/tierlist/comps"
+        href={`/tierlist/comps${archiveSuffix}`}
         data-sveltekit-preload-data="hover"
         class="flex items-center gap-2 pb-1.5 transition-all text-amber-400 border-b-2 border-amber-400 font-black cursor-pointer"
       >
@@ -450,7 +452,7 @@
       </a>
 
       <a 
-        href="/tierlist/items"
+        href={`/tierlist/items${archiveSuffix}`}
         data-sveltekit-preload-data="hover"
         class="flex items-center gap-2 pb-1.5 transition-all text-slate-400 hover:text-white cursor-pointer"
       >
@@ -459,7 +461,7 @@
       </a>
 
       <a 
-        href="/tierlist/augments"
+        href={`/tierlist/augments${archiveSuffix}`}
         data-sveltekit-preload-data="hover"
         class="flex items-center gap-2 pb-1.5 transition-all text-slate-400 hover:text-white cursor-pointer"
       >
@@ -472,6 +474,7 @@
     <div class="flex flex-wrap items-center gap-2.5">
       <!-- Search bar with chips & typeahead (Screenshot 3 & 4) -->
       <TftSearchBar 
+        set={data.meta.set}
         activeFilters={activeFilters}
         onfilterchange={(next) => (activeFilters = next)}
         ontextchange={(txt) => (rawQueryText = txt)}

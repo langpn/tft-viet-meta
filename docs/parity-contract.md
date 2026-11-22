@@ -10,7 +10,7 @@ Explorer parity compares the production normalizer with expected results from [r
 
 ## Vietnamese data
 
-Riot's `vi_VN` locale takes precedence when available. English data remains available as a fallback. MetaTFT can fill gaps in the locale overlay. Coaching translations match the guide ID, stage and original text, and new reviewed translations must preserve numeric values.
+The current Set 19 content uses TFT Academy records and joins the MetaTFT Vietnamese catalog on exact entity IDs. Descriptions with unresolved placeholders or numeric values that differ from Academy use the Academy English text. The archived Set 18 pipeline prioritizes Riot's `vi_VN` data. Reviewed coaching translations match the guide ID, stage and original text and preserve numeric values.
 
 ## Fail-closed behavior
 
@@ -18,7 +18,7 @@ The sync exits with code `2` and retains the previously published files when:
 
 - A source schema changes.
 - A required catalog is missing.
-- A coaching translation is missing or a newly supplied translation changes numeric values.
+- The Set 18 archive sync detects missing coaching translations or changes to numeric values in a new translation.
 - Explorer parity fixtures fail.
 - A source page cannot be fetched.
 

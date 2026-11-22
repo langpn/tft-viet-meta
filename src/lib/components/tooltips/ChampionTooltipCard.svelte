@@ -61,7 +61,7 @@
                 loading="lazy"
                 onerror={(e) => {
                   const target = e.currentTarget as HTMLImageElement;
-                  if (!target.dataset.triedBackup) {
+                    if (data.set !== 19 && !target.dataset.triedBackup) {
                     target.dataset.triedBackup = 'true';
                     const cleanId = (trait.name_en || '').toLowerCase().replace(/[^a-z0-9]/g, '');
                     target.src = `https://raw.communitydragon.org/latest/game/assets/ux/traiticons/trait_icon_18_${cleanId}.png`;
@@ -107,7 +107,7 @@
                 />
               {/if}
             {/if}
-            <span class="font-black text-sm text-white">
+            <span lang={data.ability.name_vi ? 'vi' : 'en'} class="font-black text-sm text-white">
               {data.ability.name_vi || data.ability.name_en}
             </span>
           </div>
@@ -120,7 +120,7 @@
         </div>
 
         {#if data.ability.desc_vi || data.ability.desc_en}
-          <p class="text-xs text-slate-300 leading-relaxed font-normal whitespace-pre-line">
+          <p lang={data.ability.desc_vi && data.ability.desc_vi !== data.ability.desc_en ? 'vi' : 'en'} class="text-xs text-slate-300 leading-relaxed font-normal whitespace-pre-line">
             {(data.ability.desc_vi || data.ability.desc_en || '').replace(/\\n/g, '\n')}
           </p>
         {/if}

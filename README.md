@@ -1,6 +1,6 @@
 # TFT Việt Meta
 
-Cẩm nang Đấu Trường Chân Lý bằng tiếng Việt, gồm bảng xếp hạng đội hình, trang bị, lõi nâng cấp và thống kê Explorer. Trang đang phục vụ bộ dữ liệu Mùa 18, bản 18.5c. [Website](https://tft.langpn.xyz)
+Cẩm nang Đấu Trường Chân Lý bằng tiếng Việt. Đội hình, trang bị, lõi và thông tin mùa mặc định theo Mùa 19 Prismatic Tour của TFT Academy. Explorer hiện hiển thị thống kê Mùa 18 của tactics.tools. [Website](https://tft.langpn.xyz)
 
 ## Chạy hệ thống
 
@@ -38,14 +38,14 @@ Các bản đã triển khai nằm trong `~/Library/Application Support/tft-viet
 
 ## Đồng bộ dữ liệu
 
-`bun run sync` chạy từ thư mục gốc. Lệnh tải các nguồn, dựng JSON và tooltip trong thư mục tạm, áp dụng bản dịch đã duyệt, kiểm tra fixture Explorer rồi cập nhật bộ dữ liệu cùng manifest. CI chạy lại verify, test, kiểm tra kiểu và build trước khi đẩy cập nhật. `bun run verify` có thể chạy offline. Lệnh đối chiếu hash các tệp đã phát hành và các truy vấn Explorer có fixture.
+`bun run sync:academy` lấy đội hình, trang bị, lõi và cẩm nang Mùa 19 từ TFT Academy, ghép bản địa hóa MetaTFT theo đúng ID rồi kiểm tra dữ liệu trước khi ghi. Mô tả chưa có bản dịch được hiển thị theo nguồn tiếng Anh. Các bảng hạng dùng bản có dữ liệu mới nhất của từng nhóm mà Academy cung cấp. Snapshot ghi thời điểm lấy và SHA-256 của các nguồn. CI chạy verify, test, kiểm tra kiểu, build và Playwright trước khi đẩy cập nhật lên GitHub. [Snapshot Mùa 19](src/lib/data/academy-set19.json)
 
-Nếu nguồn lệch mùa, thiếu dữ liệu hoặc thiếu bản dịch coaching, lệnh thoát với mã `2` và giữ bộ dữ liệu đã phát hành. Hiện trang giới thiệu mùa của TFT Academy đã chuyển sang Set 19 nên nguồn này chặn đồng bộ Set 18. [Manifest](src/lib/data/meta-manifest.json)
+`bun run verify` chạy offline và đối chiếu cấu trúc Mùa 19, hash của dữ liệu lưu trữ và các truy vấn Explorer có fixture. Dùng `?set=18` trên các trang nội dung để xem dữ liệu lưu trữ.
 
-`bun run stage:set19` tạo ứng viên Mùa 19 ở `data/snapshots/set-19/academy-preview.json`, kèm URL và SHA-256 của nguồn Academy. Bộ ứng viên chỉ dùng để rà dữ liệu. Để chuyển mùa trên website, cần catalog CommunityDragon có `TFTSet19` và locale `vi_vn`, patch Explorer cùng mùa có fixture đối chiếu, và bản dịch đã duyệt cho coaching. Các mô tả chưa có bản tiếng Việt cần hiển thị rõ ngôn ngữ nguồn. Giữ release Mùa 18 và kiểm tra các liên kết cũ trước khi chuyển mặc định. [Bản nháp coaching Mùa 19](data/translations/set-19-coaching-draft.vi.json)
+`bun run stage:set19` tải dữ liệu gốc cho việc đối chiếu vào `data/snapshots/set-19/academy-preview.json`. Explorer cần có patch Mùa 19 và fixture đối chiếu riêng trước khi chuyển thống kê sang mùa mới. [Bản nháp coaching Mùa 19](data/translations/set-19-coaching-draft.vi.json)
 
 Nếu tiến trình cập nhật bị dừng đột ngột, kiểm tra PID trong `src/lib/data/.meta-publish-lock/owner.json` và chạy `bun run verify`. Nếu hash bị lệch, dùng các bản `previous` trong `.meta-stage-*` để khôi phục bộ dữ liệu theo manifest trước khi xác minh lại. Chỉ xóa khóa khi tiến trình đã dừng và bộ dữ liệu đã được xác minh.
 
-Để bổ sung coaching đã duyệt, dùng `bun run sync --coaching path/to/translations.json`. Tệp JSON là một mảng có `id` đội hình, `tips` gồm các trường `stage`, `tip_en`, `tip`, và hai trường `augmentsTip_en`, `augmentsTip`. Các chuỗi tiếng Anh phải khớp với nguồn. Bản dịch mới được kiểm tra số liệu trước khi dùng. Nếu chỉ bổ sung mẹo theo giai đoạn, để hai trường dành cho lõi là chuỗi rỗng.
+`bun run sync` là quy trình lưu trữ Mùa 18. Lệnh giữ nguyên dữ liệu đã phát hành khi nguồn trả mùa khác hoặc thiếu bản dịch coaching. [Manifest Mùa 18](src/lib/data/meta-manifest.json)
 
 `scripts/build-tooltip-db.ts`, `scripts/build-official-vi.ts` và `scripts/apply-official-vi.ts` nhận đường dẫn thư mục staging. Lệnh sync dùng overlay tiếng Việt đã kiểm tra hash trong manifest. Script tạo overlay cho phép chuẩn bị bản mới để rà trước khi cập nhật dữ liệu nguồn. [Nguồn và xuất xứ](docs/source-attribution.md) · [Quy tắc đối chiếu](docs/parity-contract.md)

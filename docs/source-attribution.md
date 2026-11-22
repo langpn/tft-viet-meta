@@ -1,6 +1,6 @@
 # Source attribution and provenance
 
-The [published manifest](../src/lib/data/meta-manifest.json) identifies the Set, patch, Explorer query defaults, CommunityDragon release and SHA-256 hashes of the published JSON datasets. It also records URLs and hashes for sources used during a successful sync. A `null` source hash denotes a historical record whose original response bytes are unavailable.
+The [Set 19 snapshot](../src/lib/data/academy-set19.json) records the TFT Academy and MetaTFT URLs, source hashes and capture time for the current season content. The [Set 18 manifest](../src/lib/data/meta-manifest.json) records the archived content, pinned CommunityDragon release and Explorer defaults. A `null` source hash denotes a historical record whose original response bytes are unavailable.
 
 ## Sources
 

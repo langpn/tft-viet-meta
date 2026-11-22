@@ -3,11 +3,10 @@ import os from 'node:os';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import manifest from '../src/lib/data/meta-manifest.json';
-import { syncAcademyData, type ParsedAcademyComp, type Set18Info } from '../src/lib/server/academy-sync.js';
+import { syncAcademyData } from '../src/lib/server/academy-sync.js';
 import type { CoachingGuide } from '../src/lib/server/coaching-localization.js';
 import { publishFiles } from '../src/lib/server/publish-data.js';
 import { sha256 } from '../src/lib/server/source-fetch.js';
-import { generateLlmsText } from './generate-llms-txt.js';
 import { verifyCandidateMeta, verifyExplorerParity, verifyMetaFiles } from './verify-meta.js';
 
 const previousDataDir = path.resolve('src/lib/data');
@@ -34,11 +33,6 @@ try {
   const candidates = new Map(Object.keys(manifest.files).map((file) => [file, fs.readFileSync(path.join(stage, path.basename(file)))]));
   verifyCandidateMeta((file) => candidates.get(file)!);
   const files = Object.fromEntries([...candidates].map(([file, content]) => [file, sha256(content)]));
-  const comps: ParsedAcademyComp[] = JSON.parse(fs.readFileSync(path.join(stage, 'academy-comps.json'), 'utf8'));
-  const newSet: Set18Info = JSON.parse(fs.readFileSync(path.join(stage, 'academy-new-set.json'), 'utf8'));
-  const { llms, full } = generateLlmsText(comps, newSet);
-  candidates.set('static/llms.txt', Buffer.from(llms));
-  candidates.set('static/llms-full.txt', Buffer.from(full));
   const changes = new Map([...candidates].filter(([file, bytes]) => !fs.existsSync(file) || !fs.readFileSync(file).equals(bytes)));
   if (changes.size || manifest.sources.some((source) => source.sha256 === null)) {
     const dataChanged = Object.keys(files).some((file) => changes.has(file));

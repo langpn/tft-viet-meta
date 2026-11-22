@@ -317,7 +317,7 @@
     <div class="flex items-center gap-3">
       <h1 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
         Khám Phá Thống Kê (Stats Explorer)
-        <span class="sr-only">ĐTCL Mùa {data.set}</span>
+        <span class="text-base text-slate-300">Mùa {data.set}</span>
       </h1>
       <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-bold text-emerald-400">
         tactics.tools

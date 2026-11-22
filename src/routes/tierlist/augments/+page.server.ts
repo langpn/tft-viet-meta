@@ -1,10 +1,10 @@
 import type { PageServerLoad } from './$types';
-import augmentsData from '$data/academy-augments.json';
-import { getSiteMeta } from '$server/site-meta';
+import { contentSet, getContent, getSiteMeta } from '$server/site-meta';
 
-export const load: PageServerLoad = async () => {
+export const load: PageServerLoad = async ({ url }) => {
+  const set = contentSet(url);
   return {
-    augments: augmentsData || { silver: {}, gold: {}, prismatic: {} },
-    meta: getSiteMeta()
+    augments: getContent(set).augments,
+    meta: getSiteMeta(set)
   };
 };

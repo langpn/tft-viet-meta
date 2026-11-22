@@ -1,6 +1,7 @@
 <script lang="ts">
   import { resolveChampionIcon, resolveItemIcon, resolveTraitIcon, resolveAugmentIcon } from '$lib/utils/assets';
   import { searchSet18Entities, type Set18SearchEntity } from '$lib/utils/set18-search';
+  import { createLatest, MAX_SEARCH_LENGTH } from '$lib/explorer-contract';
   import { Search, Info, X, CornerDownLeft } from 'lucide-svelte';
 
   export interface ActiveFilter {
@@ -15,9 +16,10 @@
     activeFilters: ActiveFilter[];
     onfilterchange: (filters: ActiveFilter[]) => void;
     ontextchange?: (query: string) => void;
+    set?: number;
   }
 
-  let { activeFilters = [], onfilterchange, ontextchange }: Props = $props();
+  let { activeFilters = [], onfilterchange, ontextchange, set = 18 }: Props = $props();
 
   let query = $state('');
   let isFocused = $state(false);
@@ -27,22 +29,38 @@
   let dropdownContainerEl = $state<HTMLDivElement | null>(null);
   let searchContainerEl = $state<HTMLDivElement | null>(null);
 
-  function handleInput() {
-    ontextchange?.(query);
+  const requests = createLatest();
 
-    const trimmed = query.trim();
+  async function handleInput() {
+    ontextchange?.(query);
+    requests.cancel();
+    const trimmed = query.trim().slice(0, MAX_SEARCH_LENGTH);
     if (!trimmed) {
       suggestions = [];
       highlightedIndex = -1;
       return;
     }
 
-    // Instant local Set 18 in-memory search (0ms latency, zero lag)
-    suggestions = searchSet18Entities(trimmed, 10);
+    if (set === 18) {
+      suggestions = searchSet18Entities(trimmed, 10);
+    } else {
+      suggestions = [];
+      const request = requests.next();
+      try {
+        const res = await fetch(`/api/options?set=${set}&limit=10&q=${encodeURIComponent(trimmed)}`, { signal: request.signal });
+        if (!res.ok) return;
+        const { results } = await res.json();
+        if (!request.isCurrent() || query.trim().slice(0, MAX_SEARCH_LENGTH) !== trimmed) return;
+        suggestions = results;
+      } catch {
+        return;
+      }
+    }
     highlightedIndex = suggestions.length > 0 ? 0 : -1;
   }
 
   function addFilter(item: Set18SearchEntity) {
+    requests.cancel();
     const filterItem: ActiveFilter = {
       type: item.entityType || 'item',
       id: item.id,

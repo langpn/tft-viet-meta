@@ -1,6 +1,7 @@
 import { expect, test } from '@playwright/test';
 import comps from '../src/lib/data/academy-comps.json' with { type: 'json' };
 import newSet from '../src/lib/data/academy-new-set.json' with { type: 'json' };
+import current from '../src/lib/data/academy-set19.json' with { type: 'json' };
 import { compSlug, getVariants } from '../src/lib/comp-pages.ts';
 
 test.beforeEach(async ({ page }) => {
@@ -47,8 +48,25 @@ test('opens a comp with Space and returns focus to its card on Escape', async ({
   await expect(card).toBeFocused();
 });
 
+test('shows the current Academy season on the public content pages', async ({ page, request }) => {
+  for (const path of ['/', '/tierlist/comps', '/tierlist/items', '/tierlist/augments', '/learn/new-set']) {
+    await page.goto(path);
+    await expect(page).toHaveTitle(/(?:Mùa|Set) 19/);
+  }
+  const sample = current.comps[0];
+  const guide = await request.get(`/api/comps/${encodeURIComponent(sample.slug)}`);
+  expect(guide.ok()).toBeTruthy();
+  const { comp } = await guide.json();
+  expect(comp.set).toBe(19);
+  expect(comp.board.map(({ id }) => id)).toEqual(sample.board.map(({ id }) => id));
+  const item = Object.values(current.tooltips.items).find(({ name_vi, name_en }) => name_vi && name_vi !== name_en);
+  expect(item).toBeDefined();
+  const tooltip = await request.get(`/api/tooltip?set=19&type=item&id=${encodeURIComponent(item.id)}`);
+  expect((await tooltip.json()).name_vi).toBe(item.name_vi);
+});
+
 test('finds Vietnamese traits and champions with or without accents', async ({ page }) => {
-  await page.goto('/learn/new-set');
+  await page.goto('/learn/new-set?set=18');
   await page.getByRole('button', { name: /Tướng Mới/ }).click();
   const unaccent = (value) => value.normalize('NFD').replace(/\p{M}/gu, '').replace(/đ/gi, 'd');
   const trait = newSet.champions.flatMap((champion) => champion.traits)

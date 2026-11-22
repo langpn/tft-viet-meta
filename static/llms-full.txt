@@ -1,469 +1,258 @@
 # TFT Academy Việt Nam (tft.langpn.xyz)
 
-> Cẩm nang Đấu Trường Chân Lý bằng tiếng Việt. Bảng xếp hạng lấy từ TFT Academy, tên và mô tả ưu tiên dữ liệu Riot, thống kê Explorer lấy từ tactics.tools.
+> Cẩm nang Đấu Trường Chân Lý bằng tiếng Việt. Nội dung lấy từ TFT Academy. Mùa 19 dùng bản địa hóa MetaTFT khi có. Explorer lấy thống kê Mùa 18 từ tactics.tools.
 
 ## Bộ dữ liệu đang phục vụ
-- ĐTCL Mùa 18 (Enchanted Wilds), bản 18.5c
-- 73 đội hình, 65 tướng, 36 tộc hệ và 200 Linh Linh
+- ĐTCL Mùa 19 (Prismatic Tour)
+- 38 đội hình, 94 tướng, 47 tộc hệ và 330 lõi trong cẩm nang
 
 ## Các trang chính
 - [Bảng xếp hạng đội hình](https://tft.langpn.xyz/tierlist/comps)
 - [Bảng xếp hạng trang bị](https://tft.langpn.xyz/tierlist/items)
 - [Bảng xếp hạng lõi nâng cấp](https://tft.langpn.xyz/tierlist/augments)
-- [Thống kê Explorer](https://tft.langpn.xyz/explorer)
-- [Thông tin mùa 18](https://tft.langpn.xyz/learn/new-set)
+- [Thống kê Explorer Mùa 18](https://tft.langpn.xyz/explorer)
+- [Thông tin Mùa 19](https://tft.langpn.xyz/learn/new-set)
+- [Đội hình lưu trữ Mùa 18](https://tft.langpn.xyz/tierlist/comps?set=18)
 - [Danh sách chi tiết](https://tft.langpn.xyz/llms-full.txt)
 
 ## Đội hình bậc S và A
-- [Draven Ezreal 9](https://tft.langpn.xyz/tierlist/comps?comp=set-18-elderwood-executioners-copy) (S)
-- [AP Fast 9](https://tft.langpn.xyz/tierlist/comps?comp=set-18-ap-95) (S)
-- [Elderwood Executioners](https://tft.langpn.xyz/tierlist/comps?comp=set-18-elderwood-executioners) (A)
-- [Tempo Riftbeast](https://tft.langpn.xyz/tierlist/comps?comp=set-18-tempo-riftbeast) (A)
-- [Ahri Zyra](https://tft.langpn.xyz/tierlist/comps?comp=set-18-spellweavers) (A)
-- [Primal Sivir](https://tft.langpn.xyz/tierlist/comps?comp=set-18-primal-hunters) (A)
-- [Solar Blossom](https://tft.langpn.xyz/tierlist/comps?comp=set-18-solara-yunara) (A)
-- [Adaptor Reroll](https://tft.langpn.xyz/tierlist/comps?comp=set-18-adaptor-reroll) (A)
-- [Cursed Crown Kayle](https://tft.langpn.xyz/tierlist/comps?comp=set-18-solar-kayle-copy) (S tình huống)
-- [Draven Dragon 9](https://tft.langpn.xyz/tierlist/comps?comp=set-18-dragon-princess) (A)
-- [Ahri Morgana](https://tft.langpn.xyz/tierlist/comps?comp=set-18-ahri-morgana) (A)
-- [Yi Rengar](https://tft.langpn.xyz/tierlist/comps?comp=set-18-adaptor-reroll-copy) (A)
+- [Hyperpop Reroll](https://tft.langpn.xyz/tierlist/comps?comp=set-19-hyperpop-reroll&set=19) (S)
+- [Goth Baddie](https://tft.langpn.xyz/tierlist/comps?comp=set-19-goth-baddie&set=19) (S)
+- [Ionic Spark](https://tft.langpn.xyz/tierlist/comps?comp=set-19-ionic-spark&set=19) (A)
+- [Malzahar Prodigy](https://tft.langpn.xyz/tierlist/comps?comp=set-19-malzahar-prodigy&set=19) (A)
+- [Renata Guards](https://tft.langpn.xyz/tierlist/comps?comp=set-19-renata-guards&set=19) (A)
+- [Slayer Viego](https://tft.langpn.xyz/tierlist/comps?comp=set-19-slayer-viego&set=19) (A)
+- [JAXDD](https://tft.langpn.xyz/tierlist/comps?comp=set-19-jaxdd&set=19) (A)
+- [AP Juggs (Kayle)](https://tft.langpn.xyz/tierlist/comps?comp=set-19-ap-juggs-kayle&set=19) (A)
+- [K/DA Eve Kai'Sa](https://tft.langpn.xyz/tierlist/comps?comp=set-19-kda-eve-kaisa&set=19) (A)
+- [Encore Ezreal](https://tft.langpn.xyz/tierlist/comps?comp=set-19-lucian-ez&set=19) (A)
 
-## Danh sách 73 đội hình
+## Danh sách 38 đội hình
 
-### [S] Draven Ezreal 9
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-elderwood-executioners-copy
-- Tướng gánh chính Draven (Thịnh Nộ Thủy Quái, Cuồng Đao Guinsoo, Kiếm Tử Thần)
-- Tướng chống chịu Maokai (Giáp Máu Warmog, Thú Tượng Thạch Giáp, Áo Choàng Gai)
+### [S] Hyperpop Reroll
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-hyperpop-reroll&set=19
+- Tướng gánh chính Ziggs (Cuồng Đao Guinsoo, Găng Bảo Thạch, Chùy Đoản Côn)
+- Tướng chống chịu Kobuko (Giáp Máu Warmog, Thú Tượng Thạch Giáp, Giáp Tâm Linh)
+- Lối chơi 1-Cost Reroll (EASY)
+
+### [S] Goth Baddie
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-goth-baddie&set=19
+- Tướng gánh chính Zeri (Ngọn Giáo Shojin, Chùy Đoản Côn, Vô Cực Kiếm)
+- Tướng chống chịu Dr. Mundo (Giáp Máu Warmog, Vuốt Rồng, Áo Choàng Gai)
 - Lối chơi Fast 9 (HARD)
 
-### [S] AP Fast 9
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-ap-95
-- Tướng gánh chính Alune (Bùa Xanh, Quyền Trượng Thiên Thần, Găng Bảo Thạch)
-- Tướng chống chịu Người Đá (Giáp Máu Warmog, Vương Miện Hoàng Gia, Lời Thề Hộ Vệ)
-- Lối chơi Fast 9 (HARD)
-
-### [A] Elderwood Executioners
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-elderwood-executioners
-- Tướng gánh chính Ezreal (Ngọn Giáo Shojin, Cung Xanh, Kiếm Tử Thần)
-- Tướng chống chịu Hecarim (Vuốt Rồng, Áo Choàng Gai, Áo Choàng Lửa)
-- Lối chơi 4-Cost Fast 8 (MEDIUM)
-
-### [A] Tempo Riftbeast
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-tempo-riftbeast
-- Tướng gánh chính Bụi Gai Đỏ (Cuồng Đao Guinsoo, Áo Choàng Bóng Tối, Áo Choàng Thủy Ngân)
-- Tướng chống chịu Quái Đá Krug (Giáp Máu Warmog, Giáp Tâm Linh, Thú Tượng Thạch Giáp)
-- Lối chơi Fast 9 (MEDIUM)
-
-### [A] Ahri Zyra
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-spellweavers
-- Tướng gánh chính Ahri (Găng Bảo Thạch, Chùy Đoản Côn, Ngọn Giáo Shojin)
-- Tướng chống chịu Sett (Giáp Máu Warmog, Áo Choàng Gai, Giáp Tâm Linh)
-- Lối chơi 4-Cost Fast 8 (MEDIUM)
-
-### [A] Primal Sivir
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-primal-hunters
-- Tướng gánh chính Sivir (Vô Cực Kiếm, Kiếm Tử Thần, Bùa Xanh)
-- Tướng chống chịu Amumu (Giáp Máu Warmog, Lời Thề Hộ Vệ, Giáp Tâm Linh)
-- Lối chơi 4-Cost Fast 8 (MEDIUM)
-
-### [A] Solar Blossom
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-solara-yunara
-- Tướng gánh chính Karma (Bùa Xanh, Mũ Phù Thủy Rabadon, Găng Bảo Thạch)
-- Tướng chống chịu Sejuani (Thú Tượng Thạch Giáp, Giáp Máu Warmog, Thú Tượng Thạch Giáp)
-- Lối chơi 2-Cost Reroll (MEDIUM)
-
-### [A] Adaptor Reroll
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-adaptor-reroll
-- Tướng gánh chính Master Yi (Cuồng Đao Guinsoo, Áo Choàng Bóng Tối, Quyền Năng Khổng Lồ)
-- Tướng chống chịu Vi (Giáp Máu Warmog, Thú Tượng Thạch Giáp, Thú Tượng Thạch Giáp)
-- Lối chơi 3-Cost Reroll (MEDIUM)
-
-### [B] Ashe Juggernauts
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-ashe-juggernauts
-- Tướng gánh chính Ashe (Ngọn Giáo Shojin, Cung Xanh, Bùa Đỏ)
-- Tướng chống chịu Amumu (Giáp Máu Warmog, Áo Choàng Gai, Vuốt Rồng)
-- Lối chơi 4-Cost Fast 8 (HARD)
-
-### [B] Riftbeast Reroll
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-riftbeast-reroll
-- Tướng gánh chính Sỏi (Bùa Xanh, Mũ Phù Thủy Rabadon, Găng Bảo Thạch)
-- Tướng chống chịu Quái Đá Krug (Giáp Máu Warmog, Thú Tượng Thạch Giáp, Giáp Tâm Linh)
-- Lối chơi 1-Cost Reroll (EASY)
-
-### [B] Aphelios Nidalee
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-aphelios-nidalee
-- Tướng gánh chính Aphelios (Vô Cực Kiếm, Cuồng Đao Guinsoo, Thịnh Nộ Thủy Quái)
-- Tướng chống chịu Người Đá (Lời Thề Hộ Vệ, Lời Thề Hộ Vệ, Giáp Máu Warmog)
-- Lối chơi 4-Cost Fast 8 (MEDIUM)
-
-### [B] Zyra Juggernaut
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-6-juggernaut-ap
-- Tướng gánh chính Zyra (Ngọn Giáo Shojin, Quyền Trượng Thiên Thần, Kiếm Súng Hextech)
-- Tướng chống chịu Amumu (Giáp Máu Warmog, Áo Choàng Gai, Vuốt Rồng)
-- Lối chơi 4-Cost Fast 8 (HARD)
-
-### [B] Azir Rammus
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-azir-rammus
-- Tướng gánh chính Azir (Cuồng Đao Guinsoo, Mũ Phù Thủy Rabadon, Kiếm Súng Hextech)
-- Tướng chống chịu Rammus (Vương Miện Hoàng Gia, Thú Tượng Thạch Giáp, Thú Tượng Thạch Giáp)
-- Lối chơi 3-Cost Reroll (EASY)
-
-### [B] Defender Cassio
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-defender-cassio
-- Tướng gánh chính Cassiopeia (Ngọn Giáo Shojin, Kiếm Súng Hextech, Quyền Trượng Thiên Thần)
-- Tướng chống chịu Rammus (Nỏ Sét, Áo Choàng Lửa, Trái Tim Kiên Định)
-- Lối chơi 3-Cost Reroll (EASY)
-
-### [B] 6 Juggernaut AD
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-6-juggernaut-ap-copy
-- Tướng gánh chính Amumu (Giáp Máu Warmog, Áo Choàng Gai, Vuốt Rồng)
-- Tướng chống chịu Kennen (Ấn Dũng Sĩ, Áo Choàng Bóng Tối)
-- Lối chơi 4-Cost Fast 8 (HARD)
-
-### [B] Solar Melee
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-solar-melee
-- Tướng gánh chính Akali (Găng Bảo Thạch, Bàn Tay Công Lý, Áo Choàng Bóng Tối)
-- Tướng chống chịu Ornn (Thú Tượng Thạch Giáp, Vương Miện Hoàng Gia, Giáp Máu Warmog)
-- Lối chơi 1-Cost Reroll (EASY)
-
-### [B] Teemowood
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-sprykin-teemo-copy
-- Tướng gánh chính Teemo (Găng Bảo Thạch, Chùy Đoản Côn, Ngọn Giáo Shojin)
-- Tướng chống chịu Alistar (Giáp Máu Warmog, Thú Tượng Thạch Giáp, Thú Tượng Thạch Giáp)
-- Lối chơi 2-Cost Reroll (EASY)
-
-### [B] Caitlyn Hunters
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-caitlyn-hunters
-- Tướng gánh chính Caitlyn (Cuồng Đao Guinsoo, Thịnh Nộ Thủy Quái, Kiếm Súng Hextech)
-- Tướng chống chịu Cua Kỳ Cục (Giáp Tâm Linh, Thú Tượng Thạch Giáp, Giáp Máu Warmog)
-- Lối chơi 2-Cost Reroll (EASY)
-
-### [C] Malphite AP Flex
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-soraka-flex
-- Tướng gánh chính Malphite (Thú Tượng Thạch Giáp, Giáp Máu Warmog, Vương Miện Hoàng Gia)
-- Tướng chống chịu Soraka (Mũ Phù Thủy Rabadon, Mũ Thích Nghi, Găng Bảo Thạch)
-- Lối chơi 4-Cost Fast 8 (MEDIUM)
-
-### [C] Mamawood
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-mamawood
-- Tướng gánh chính Chim Mẹ (Cuồng Đao Guinsoo, Kiếm Súng Hextech, Quyền Năng Khổng Lồ)
-- Tướng chống chịu Hecarim (Giáp Máu Warmog, Thú Tượng Thạch Giáp, Lời Thề Hộ Vệ)
-- Lối chơi 3-Cost Reroll (MEDIUM)
-
-### [C] Eclipse Kayle
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-eclipse-kayle
-- Tướng gánh chính Kayle (Cuồng Đao Guinsoo, Mũ Phù Thủy Rabadon, Bùa Đỏ)
-- Tướng chống chịu Sejuani (Thú Tượng Thạch Giáp, Giáp Tâm Linh, Giáp Máu Warmog)
-- Lối chơi 2-Cost Reroll (EASY)
-
-### [C] Embiggen Xayah
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-embiggen-xayah
-- Tướng gánh chính Xayah (Cuồng Đao Guinsoo, Kiếm Tử Thần, Thịnh Nộ Thủy Quái)
-- Tướng chống chịu Rakan (Mũ Thích Nghi, Giáp Máu Warmog, Mũ Thích Nghi)
-- Lối chơi 1-Cost Reroll (EASY)
-
-### [C] Fae Tristana
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-sprykin-trist
-- Tướng gánh chính Tristana (Cuồng Đao Guinsoo, Kiếm Súng Hextech, Diệt Khổng Lồ)
-- Tướng chống chịu Rammus (Thú Tượng Thạch Giáp, Giáp Tâm Linh, Giáp Máu Warmog)
-- Lối chơi 3-Cost Reroll (MEDIUM)
-
-### [C] Warwick Ravager
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-warwick-rr
-- Tướng gánh chính Warwick (Móng Vuốt Sterak, Quyền Năng Khổng Lồ, Ngọn Giáo Shojin)
-- Tướng chống chịu Malphite (Vương Miện Hoàng Gia, Thú Tượng Thạch Giáp, Giáp Máu Warmog)
-- Lối chơi 2-Cost Reroll (MEDIUM)
-
-### [C] Lunarwood Kha'zix
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-lunarwood-khazix
-- Tướng gánh chính Kha'Zix (Bàn Tay Công Lý, Bàn Tay Công Lý, Mũ Phù Thủy Rabadon)
-- Tướng chống chịu Hecarim (Giáp Máu Warmog, Thú Tượng Thạch Giáp, Giáp Tâm Linh)
-- Lối chơi 3-Cost Reroll (MEDIUM)
-
-### [C] Invoker Morgana
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-cashout-morgana
-- Tướng gánh chính Morgana (Quỷ Thư Morello, Mũ Phù Thủy Rabadon, Trượng Hư Vô)
-- Tướng chống chịu Người Đá (Lời Thề Hộ Vệ, Giáp Máu Warmog, Mũ Thích Nghi)
-- Lối chơi Lose Streak (HARD)
-
-### [C] Sprykin Veigar
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-dark-mages
-- Tướng gánh chính Veigar (Găng Bảo Thạch, Bùa Xanh, Kiếm Súng Hextech)
-- Tướng chống chịu Rek'Sai (Giáp Máu Warmog, Thú Tượng Thạch Giáp, Trái Tim Kiên Định)
-- Lối chơi 1-Cost Reroll (EASY)
-
-### [C] Invoker Nidalee
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-adaptor-nidalee
-- Tướng gánh chính Nidalee (Găng Bảo Thạch, Cuồng Đao Guinsoo, Chùy Đoản Côn)
-- Tướng chống chịu Người Đá (Lời Thề Hộ Vệ, Giáp Máu Warmog, Mũ Thích Nghi)
-- Lối chơi 4-Cost Fast 8 (MEDIUM)
-
-### [C] Rengar Reroll
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-rengar-rr
-- Tướng gánh chính Rengar (Áo Choàng Bóng Tối, Quyền Năng Khổng Lồ, Cuồng Đao Guinsoo)
-- Tướng chống chịu Hecarim (Lời Thề Hộ Vệ, Áo Choàng Lửa, Giáp Máu Warmog)
-- Lối chơi 3-Cost Reroll (MEDIUM)
-
-### [C] LeBlanc Weavers
-- Link https://tft.langpn.xyz/tierlist/comps?comp=leblanc-weavers
-- Tướng gánh chính LeBlanc (Ngọn Giáo Shojin, Găng Bảo Thạch, Chùy Đoản Côn)
-- Tướng chống chịu Hecarim (Giáp Máu Warmog, Áo Choàng Lửa, Lời Thề Hộ Vệ)
-- Lối chơi 2-Cost Reroll (EASY)
-
-### [X] Aphelios Elderwood
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-aphelios-vanguards-copy
-- Tướng gánh chính Aphelios (Ấn Thần Rừng, Cuồng Đao Guinsoo, Thịnh Nộ Thủy Quái)
-- Tướng chống chịu Hecarim (Vương Miện Hoàng Gia, Giáp Máu Warmog, Giáp Vai Nguyệt Thần)
-- Lối chơi 4-Cost Fast 8 (MEDIUM)
-
-### [X] Blackthorn Khazix
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-infernal-khazix-copy
-- Tướng gánh chính Kha'Zix (Bàn Tay Công Lý, Bàn Tay Công Lý, Ấn Gai Đen)
-- Tướng chống chịu Malphite (Vương Miện Hoàng Gia, Giáp Máu Warmog, Thú Tượng Thạch Giáp)
-- Lối chơi 3-Cost Reroll (MEDIUM)
-
-### [X] Cursed Crown Kayle
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-solar-kayle-copy
-- Tướng gánh chính Kayle (Cuồng Đao Guinsoo, Găng Bảo Thạch, Chùy Đoản Côn)
-- Tướng chống chịu Ornn (Thú Tượng Thạch Giáp, Giáp Máu Warmog, Giáp Tâm Linh)
-- Lối chơi 2-Cost Reroll (EASY)
-
-### [X] Bronze For Life AP
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-bronze-for-life-ap
-- Tướng gánh chính Zyra (Ngọn Giáo Shojin, Trượng Hư Vô, Mũ Phù Thủy Rabadon)
-- Tướng chống chịu Malphite (Giáp Máu Warmog, Thú Tượng Thạch Giáp, Vương Miện Hoàng Gia)
-- Lối chơi 4-Cost Fast 8 (MEDIUM)
-
-### [X] Elderwood Veigar
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-veigar-consuming-flora-copy
-- Tướng gánh chính Veigar (Găng Bảo Thạch, Bùa Xanh, Lõi Bình Minh)
-- Tướng chống chịu Ornn (Giáp Máu Warmog, Vương Miện Hoàng Gia, Thú Tượng Thạch Giáp)
-- Lối chơi 1-Cost Reroll (EASY)
-
-### [X] Trait Ladder
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-trait-ladder
-- Tướng gánh chính Fiddlesticks (Giáp Máu Warmog, Áo Choàng Lửa, Giáp Tâm Linh)
-- Tướng chống chịu Kha'Zix (Ấn Tàn Phá)
-- Lối chơi Fast 9 (HARD)
-
-### [X] Solar Eclipse
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-solar-eclipse
-- Tướng gánh chính Aphelios (Thịnh Nộ Thủy Quái, Cuồng Đao Guinsoo, Cung Xanh)
-- Tướng chống chịu Lillia (Lời Thề Hộ Vệ, Mũ Thích Nghi, Giáp Máu Warmog)
-- Lối chơi 4-Cost Fast 8 (HARD)
-
-### [X] Emblem Rengar
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-fae-tristana-copy
-- Tướng gánh chính Rengar (Áo Choàng Bóng Tối, Cuồng Đao Guinsoo, Ấn Tiên Linh)
-- Tướng chống chịu Rammus (Thú Tượng Thạch Giáp, Giáp Tâm Linh, Giáp Máu Warmog)
-- Lối chơi 3-Cost Reroll (MEDIUM)
-
-### [X] Inferno Fast 9
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-inferno-fast-9
-- Tướng gánh chính Lux (Ngọn Giáo Shojin, Mũ Phù Thủy Rabadon, Găng Bảo Thạch)
-- Tướng chống chịu Amumu (Giáp Máu Warmog, Áo Choàng Gai, Vuốt Rồng)
-- Lối chơi 4-Cost Fast 8 (HARD)
-
-### [X] Moo-nara
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-moo-nara
-- Tướng gánh chính Yunara (Ngọn Giáo Shojin, Ấn Gai Đen, Cung Xanh)
-- Tướng chống chịu Alistar (Thú Tượng Thạch Giáp, Giáp Tâm Linh, Giáp Máu Warmog)
-- Lối chơi 2-Cost Reroll (MEDIUM)
-
-### [X] Coven Elise
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-coven-elise
-- Tướng gánh chính Elise (Quyền Năng Khổng Lồ, Cuồng Đao Guinsoo, Thú Tượng Thạch Giáp)
-- Tướng chống chịu Cassiopeia (Ngọn Giáo Shojin, Kiếm Súng Hextech, Quyền Trượng Thiên Thần)
-- Lối chơi 2-Cost Reroll (MEDIUM)
-
-### [X] Unrivaled Reroll
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-unrivaled-reroll
-- Tướng gánh chính Kha'Zix (Bàn Tay Công Lý, Mũ Phù Thủy Rabadon, Áo Choàng Bóng Tối)
-- Tướng chống chịu Hecarim (Giáp Máu Warmog, Thú Tượng Thạch Giáp, Giáp Tâm Linh)
-- Lối chơi 3-Cost Reroll (CONDITIONAL)
-
-### [X] Ravager Elise
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-infinite-elise
-- Tướng gánh chính Elise (Quyền Năng Khổng Lồ, Cuồng Đao Guinsoo, Quyền Trượng Thiên Thần)
-- Tướng chống chịu Người Đá (Giáp Máu Warmog, Lời Thề Hộ Vệ, Thú Tượng Thạch Giáp)
-- Lối chơi 2-Cost Reroll (MEDIUM)
-
-### [X] Double Trouble Cass
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-cass-fiddle
-- Tướng gánh chính Cassiopeia (Trượng Hư Vô, Quỷ Thư Morello, Ngọn Giáo Shojin)
-- Tướng chống chịu Fiddlesticks (Giáp Máu Warmog, Thú Tượng Thạch Giáp, Giáp Tâm Linh)
-- Lối chơi 3-Cost Reroll (MEDIUM)
-
-### [C] Solar Kayle
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-solar-kayle
-- Tướng gánh chính Kayle (Cuồng Đao Guinsoo, Đao Chớp, Mũ Phù Thủy Rabadon)
-- Tướng chống chịu Ornn (Thú Tượng Thạch Giáp, Giáp Máu Warmog, Giáp Tâm Linh)
-- Lối chơi 2-Cost Reroll (EASY)
-
-### [C] Coven Reroll
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-coven-reroll
-- Tướng gánh chính Caitlyn (Cuồng Đao Guinsoo, Thịnh Nộ Thủy Quái, Diệt Khổng Lồ)
-- Tướng chống chịu Elise (Trái Tim Kiên Định, Giáp Máu Warmog, Vương Miện Hoàng Gia)
-- Lối chơi  ()
-
-### [C] Ashe Fast 9
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-blossom-fast-9
-- Tướng gánh chính Ashe (Ngọn Giáo Shojin, Bùa Đỏ, Cung Xanh)
-- Tướng chống chịu Sett (Giáp Máu Warmog, Giáp Tâm Linh, Trái Tim Kiên Định)
-- Lối chơi Fast 9 (HARD)
-
-### [A] Draven Dragon 9
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-dragon-princess
-- Tướng gánh chính Draven (Cuồng Đao Guinsoo, Cung Xanh, Thịnh Nộ Thủy Quái)
-- Tướng chống chịu Maokai (Giáp Máu Warmog, Vương Miện Hoàng Gia, Giáp Vai Nguyệt Thần)
-- Lối chơi Fast 9 (HARD)
-
-### [C] Sprykin Teemo
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-sprykin-teemo
-- Tướng gánh chính Teemo (Ngọn Giáo Shojin, Mũ Phù Thủy Rabadon, Găng Bảo Thạch)
-- Tướng chống chịu Rek'Sai (Ấn Tinh Nghịch, Thú Tượng Thạch Giáp, Giáp Máu Warmog)
-- Lối chơi 2-Cost Reroll (EASY)
-
-### [C] Pebbles 3 Tempo
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-pebbles-3-tempo
-- Tướng gánh chính Sỏi (Bùa Xanh, Mũ Phù Thủy Rabadon, Kiếm Súng Hextech)
-- Tướng chống chịu Người Đá (Lời Thề Hộ Vệ, Giáp Máu Warmog, Mũ Thích Nghi)
-- Lối chơi 1-Cost Reroll (EASY)
-
-### [B] 10 Riftbeast
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-10-riftbeast
-- Tướng gánh chính Bụi Gai Đỏ (Áo Choàng Bóng Tối, Áo Choàng Thủy Ngân, Diệt Khổng Lồ)
-- Tướng chống chịu Người Đá (Giáp Máu Warmog, Lời Thề Hộ Vệ, Vương Miện Hoàng Gia)
-- Lối chơi Fast 9 (MEDIUM)
-
-### [A] Ahri Morgana
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-ahri-morgana
-- Tướng gánh chính Ahri (Găng Bảo Thạch, Chùy Đoản Côn, Ngọn Giáo Shojin)
-- Tướng chống chịu Người Đá (Vuốt Rồng, Áo Choàng Gai, Giáp Máu Warmog)
-- Lối chơi 4-Cost Fast 8 (MEDIUM)
-
-### [C] Fae Xayah
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-fae-xayah
-- Tướng gánh chính Xayah (Thịnh Nộ Thủy Quái, Cuồng Đao Guinsoo, Kiếm Súng Hextech)
-- Tướng chống chịu Ornn (Giáp Máu Warmog, Giáp Tâm Linh, Thú Tượng Thạch Giáp)
-- Lối chơi 1-Cost Reroll (EASY)
-
-### [A] Yi Rengar
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-adaptor-reroll-copy
-- Tướng gánh chính Master Yi (Áo Choàng Bóng Tối, Quyền Năng Khổng Lồ, Cuồng Đao Guinsoo)
-- Tướng chống chịu Vi (Giáp Máu Warmog, Thú Tượng Thạch Giáp, Giáp Vai Nguyệt Thần)
-- Lối chơi 3-Cost Reroll (MEDIUM)
-
-### [B] Aphelios Rapidfire
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-aphelios-rapidfire
-- Tướng gánh chính Aphelios (Vô Cực Kiếm, Thịnh Nộ Thủy Quái, Chùy Đoản Côn)
-- Tướng chống chịu Amumu (Giáp Máu Warmog, Thú Tượng Thạch Giáp, Áo Choàng Gai)
-- Lối chơi 4-Cost Fast 8 (MEDIUM)
-
-### [B] Primal Flex
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-primal-jungle-copy
-- Tướng gánh chính Sivir (Vô Cực Kiếm, Chùy Đoản Côn, Ngọn Giáo Shojin)
-- Tướng chống chịu Amumu (Giáp Máu Warmog, Thú Tượng Thạch Giáp, Áo Choàng Gai)
-- Lối chơi 4-Cost Fast 8 (MEDIUM)
-
-### [B] Azir Reroll
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-azir-reroll
-- Tướng gánh chính Azir (Kiếm Súng Hextech, Găng Bảo Thạch, Mũ Phù Thủy Rabadon)
-- Tướng chống chịu Vi (Thú Tượng Thạch Giáp, Thú Tượng Thạch Giáp, Giáp Máu Warmog)
-- Lối chơi 3-Cost Reroll (MEDIUM)
-
-### [C] Spellweaver Kha'Zix
-- Link https://tft.langpn.xyz/tierlist/comps?comp=spellweaver-khazix
-- Tướng gánh chính Kha'Zix (Bàn Tay Công Lý, Bàn Tay Công Lý, Áo Choàng Bóng Tối)
-- Tướng chống chịu Fiddlesticks (Giáp Máu Warmog, Thú Tượng Thạch Giáp, Giáp Tâm Linh)
-- Lối chơi 3-Cost Reroll (MEDIUM)
-
-### [C] Blackthorn Malphite
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-blackthorn-malphite
-- Tướng gánh chính Malphite (Thú Tượng Thạch Giáp, Giáp Máu Warmog, Vương Miện Hoàng Gia)
-- Tướng chống chịu Zyra (Trượng Hư Vô, Ấn Gai Đen, Ngọn Giáo Shojin)
-- Lối chơi 4-Cost Fast 8 (MEDIUM)
-
-### [B] Fae Ezreal
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-fae-ezreal
-- Tướng gánh chính Ezreal (Ngọn Giáo Shojin, Kiếm Tử Thần, Ấn Tiên Linh)
-- Tướng chống chịu Lillia (Lời Thề Hộ Vệ, Lời Thề Hộ Vệ, Vương Miện Hoàng Gia)
-- Lối chơi 4-Cost Fast 8 (MEDIUM)
-
-### [C] Solar Mama
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-solar-mama
-- Tướng gánh chính Chim Mẹ (Ấn Tiên Linh, Bùa Đỏ, Vô Cực Kiếm)
-- Tướng chống chịu Rakan (Lời Thề Hộ Vệ, Thú Tượng Thạch Giáp, Vương Miện Hoàng Gia)
-- Lối chơi 3-Cost Reroll (MEDIUM)
-
-### [C] Yazir
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-yazir
-- Tướng gánh chính Master Yi (Quyền Năng Khổng Lồ, Diệt Khổng Lồ, Áo Choàng Bóng Tối)
-- Tướng chống chịu Vi (Áo Choàng Lửa, Giáp Máu Warmog, Giáp Tâm Linh)
-- Lối chơi 3-Cost Reroll (EASY)
-
-### [B] Aphelios Vanguards
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-moon-fire
-- Tướng gánh chính Aphelios (Bùa Đỏ, Kiếm Tử Thần, Diệt Khổng Lồ)
-- Tướng chống chịu Người Đá (Lời Thề Hộ Vệ, Lời Thề Hộ Vệ, Giáp Máu Warmog)
-- Lối chơi 4-Cost Fast 8 (MEDIUM)
-
-### [C] Forest Fire
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-forest-fire
-- Tướng gánh chính Xayah (Thịnh Nộ Thủy Quái, Cuồng Đao Guinsoo, Kiếm Tử Thần)
-- Tướng chống chịu Ornn (Giáp Máu Warmog, Giáp Tâm Linh, Thú Tượng Thạch Giáp)
-- Lối chơi 1-Cost Reroll (EASY)
-
-### [C] Infernal Khazix
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-infernal-khazix
-- Tướng gánh chính Kha'Zix (Găng Bảo Thạch, Bàn Tay Công Lý, Mũ Phù Thủy Rabadon)
-- Tướng chống chịu Fiddlesticks (Vương Miện Hoàng Gia, Giáp Máu Warmog, Nỏ Sét)
-- Lối chơi 3-Cost Reroll (MEDIUM)
-
-### [B] Primal Jungle
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-invoker-nidalee-copy
-- Tướng gánh chính Sivir (Vô Cực Kiếm, Bùa Đỏ, Chùy Đoản Côn)
-- Tướng chống chịu Malphite (Thú Tượng Thạch Giáp, Giáp Máu Warmog, Vương Miện Hoàng Gia)
-- Lối chơi 4-Cost Fast 8 (MEDIUM)
-
-### [B] Woodblossom
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-woodblossom
-- Tướng gánh chính Ezreal (Ngọn Giáo Shojin, Cung Xanh, Kiếm Tử Thần)
-- Tướng chống chịu Sett (Giáp Máu Warmog, Thú Tượng Thạch Giáp, Thú Tượng Thạch Giáp)
-- Lối chơi 4-Cost Fast 8 (MEDIUM)
-
-### [B] Spellweaver Ahri
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-ahri-morgana-copy
-- Tướng gánh chính Ahri (Găng Bảo Thạch, Chùy Đoản Côn, Ngọn Giáo Shojin)
-- Tướng chống chịu Sett (Giáp Máu Warmog, Giáp Tâm Linh, Thú Tượng Thạch Giáp)
-- Lối chơi 4-Cost Fast 8 (MEDIUM)
-
-### [B] Spirit Blossom
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-spirit-blossom
-- Tướng gánh chính Ahri (Ngọn Giáo Shojin, Găng Bảo Thạch, Chùy Đoản Côn)
-- Tướng chống chịu Sett (Áo Choàng Gai, Vuốt Rồng, Giáp Máu Warmog)
+### [B] Rock Idol
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-rock-idol&set=19
+- Tướng gánh chính Vayne (Cuồng Đao Guinsoo, Vô Cực Kiếm, Cung Xanh)
+- Tướng chống chịu Swain (Áo Choàng Lửa, Lời Thề Hộ Vệ, Giáp Máu Warmog)
 - Lối chơi 4-Cost Fast 8 (EASY)
 
-### [B] Afaelios
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-afaelios
-- Tướng gánh chính Aphelios (Thịnh Nộ Thủy Quái, Ấn Tiên Linh, Vô Cực Kiếm)
-- Tướng chống chịu Amumu (Giáp Tâm Linh, Giáp Máu Warmog, Thú Tượng Thạch Giáp)
+### [A] Ionic Spark
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-ionic-spark&set=19
+- Tướng gánh chính Jinx (Cuồng Đao Guinsoo, Cung Xanh, Vô Cực Kiếm)
+- Tướng chống chịu Shyvana (Vương Miện Hoàng Gia, Giáp Máu Warmog, Giáp Tâm Linh)
 - Lối chơi 4-Cost Fast 8 (MEDIUM)
 
-### [B] Coven Ahri
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-coven-ahri
-- Tướng gánh chính Ahri (Găng Bảo Thạch, Chùy Đoản Côn, Ngọn Giáo Shojin)
-- Tướng chống chịu Người Đá (Vương Miện Hoàng Gia, Lời Thề Hộ Vệ, Giáp Máu Warmog)
+### [A] Malzahar Prodigy
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-malzahar-prodigy&set=19
+- Tướng gánh chính Malzahar (Mũ Phù Thủy Rabadon, Găng Bảo Thạch, Chùy Đoản Côn)
+- Tướng chống chịu Ekko (Thú Tượng Thạch Giáp, Vương Miện Hoàng Gia, Mũ Thích Nghi)
+- Lối chơi 3-Cost Reroll (MEDIUM)
+
+### [A] Renata Guards
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-renata-guards&set=19
+- Tướng gánh chính Renata Glasc (Quyền Trượng Thiên Thần, Kiếm Súng Hextech, Bùa Xanh)
+- Tướng chống chịu Nasus (Áo Choàng Lửa, Nỏ Sét, Giáp Máu Warmog)
+- Lối chơi 2-Cost Reroll (EASY)
+
+### [A] Slayer Viego
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-slayer-viego&set=19
+- Tướng gánh chính Viego (Áo Choàng Bóng Tối, Vô Cực Kiếm, Bàn Tay Công Lý)
+- Tướng chống chịu Amumu (Áo Choàng Lửa, Giáp Vai Nguyệt Thần, Thú Tượng Thạch Giáp)
+- Lối chơi 3-Cost Reroll (MEDIUM)
+
+### [A] JAXDD
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-jaxdd&set=19
+- Tướng gánh chính Jax (Quyền Năng Khổng Lồ, Huyết Kiếm, Ngọn Giáo Shojin)
+- Tướng chống chịu Nasus (Áo Choàng Lửa, Nỏ Sét, Giáp Máu Warmog)
+- Lối chơi 2-Cost Reroll (EASY)
+
+### [A] AP Juggs (Kayle)
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-ap-juggs-kayle&set=19
+- Tướng gánh chính Zac (Áo Choàng Lửa, Nỏ Sét, Lời Thề Hộ Vệ)
+- Tướng chống chịu Vi (Găng Đạo Tặc)
 - Lối chơi 4-Cost Fast 8 (MEDIUM)
 
-### [B] Aphelios Flex
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-aphelios-flex
-- Tướng gánh chính Aphelios (Bùa Đỏ, Kiếm Tử Thần, Diệt Khổng Lồ)
-- Tướng chống chịu Sett (Giáp Máu Warmog, Áo Choàng Gai, Vuốt Rồng)
+### [B] K/DA RE/ROLL
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-kda-reroll&set=19
+- Tướng gánh chính Neeko (Ngọn Giáo Shojin, Găng Bảo Thạch, Chùy Đoản Côn)
+- Tướng chống chịu Gragas (Thú Tượng Thạch Giáp, Giáp Tâm Linh, Áo Choàng Lửa)
+- Lối chơi 1-Cost Reroll (EASY)
+
+### [B] Draven Kai'Sa
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-draven-kaisa&set=19
+- Tướng gánh chính Draven (Bùa Xanh, Cung Xanh, Vô Cực Kiếm)
+- Tướng chống chịu Braum (Thú Tượng Thạch Giáp, Vương Miện Hoàng Gia, Lời Thề Hộ Vệ)
+- Lối chơi 3-Cost Reroll (MEDIUM)
+
+### [B] Classical Jazz
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-jazz-95&set=19
+- Tướng gánh chính Smeech (Móng Vuốt Sterak, Huyết Kiếm, Quyền Năng Khổng Lồ)
+- Tướng chống chịu Thresh (Vương Miện Hoàng Gia, Thú Tượng Thạch Giáp, Lời Thề Hộ Vệ)
+- Lối chơi Fast 9 (HARD)
+
+### [B] Jazz Jhin Flex
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-jhin-flex&set=19
+- Tướng gánh chính Jhin (Kiếm Tử Thần, Vô Cực Kiếm, Cung Xanh)
+- Tướng chống chịu Thresh (Giáp Tâm Linh, Vương Miện Hoàng Gia, Thú Tượng Thạch Giáp)
 - Lối chơi 4-Cost Fast 8 (MEDIUM)
 
-### [B] Blackthorn Ahri
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-blackthorn-ahri
-- Tướng gánh chính Ahri (Ấn Gai Đen, Găng Bảo Thạch, Bùa Xanh)
-- Tướng chống chịu Malphite (Vương Miện Hoàng Gia, Giáp Máu Warmog, Thú Tượng Thạch Giáp)
+### [B] FIRE/STARTER
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-firestarter&set=19
+- Tướng gánh chính Ahri (Ngọn Giáo Shojin, Găng Bảo Thạch, Chùy Đoản Côn)
+- Tướng chống chịu Leona (Giáp Máu Warmog, Lời Thề Hộ Vệ, Nỏ Sét)
+- Lối chơi 4-Cost Fast 8 (EASY)
+
+### [A] K/DA Eve Kai'Sa
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-kda-eve-kaisa&set=19
+- Tướng gánh chính Evelynn (Bàn Tay Công Lý, Găng Bảo Thạch, Mũ Phù Thủy Rabadon)
+- Tướng chống chịu Leona (Giáp Máu Warmog, Lời Thề Hộ Vệ, Nỏ Sét)
+- Lối chơi 3-Cost Reroll (EASY)
+
+### [C] PentaKayle
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-pentakayle&set=19
+- Tướng gánh chính Kayle (Cuồng Đao Guinsoo, Trượng Hư Vô, Quyền Trượng Thiên Thần)
+- Tướng chống chịu Yorick (Giáp Máu Warmog, Vuốt Rồng, Áo Choàng Gai)
+- Lối chơi 4-Cost Fast 8 (EASY)
+
+### [C] Gu Feng
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-gu-feng&set=19
+- Tướng gánh chính Xayah (Cung Xanh, Ngọn Giáo Shojin, Vô Cực Kiếm)
+- Tướng chống chịu Ngộ Không (Giáp Máu Warmog, Áo Choàng Gai, Vuốt Rồng)
+- Lối chơi Fast 9 (HARD)
+
+### [B] R&B Arcanist
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-r-and-b-arcanist&set=19
+- Tướng gánh chính Mel (Bùa Xanh, Trượng Hư Vô, Quyền Trượng Thiên Thần)
+- Tướng chống chịu Rell (Thú Tượng Thạch Giáp, Giáp Máu Warmog, Lời Thề Hộ Vệ)
+- Lối chơi 4-Cost Fast 8 (MEDIUM)
+
+### [C] Heartsteel
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-heartsteel&set=19
+- Tướng gánh chính Aphelios (Cuồng Đao Guinsoo, Thịnh Nộ Thủy Quái, Bùa Đỏ)
+- Tướng chống chịu K'Sante (Giáp Máu Warmog, Giáp Vai Nguyệt Thần, Thú Tượng Thạch Giáp)
+- Lối chơi 4-Cost Fast 8 (EASY)
+
+### [A] Encore Ezreal
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-lucian-ez&set=19
+- Tướng gánh chính Ezreal (Vô Cực Kiếm, Bùa Xanh, Chùy Đoản Côn)
+- Tướng chống chịu Nasus (Thú Tượng Thạch Giáp, Vương Miện Hoàng Gia, Giáp Máu Warmog)
+- Lối chơi 2-Cost Reroll (MEDIUM)
+
+### [C] Kaynarina
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-kaynarina&set=19
+- Tướng gánh chính Kayn (Vô Cực Kiếm, Móng Vuốt Sterak, Bàn Tay Công Lý)
+- Tướng chống chịu Sett (Thú Tượng Thạch Giáp, Áo Choàng Lửa, Giáp Vai Nguyệt Thần)
+- Lối chơi 1-Cost Reroll (EASY)
+
+### [C] Beach Rock
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-beach-rock&set=19
+- Tướng gánh chính Graves (Bàn Tay Công Lý, Móng Vuốt Sterak, Áo Choàng Thủy Ngân)
+- Tướng chống chịu Zac (Giáp Máu Warmog, Áo Choàng Gai, Vuốt Rồng)
+- Lối chơi 4-Cost Fast 8 (MEDIUM)
+
+### [B] Beach Spark
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-beach-spark&set=19
+- Tướng gánh chính Graves (Bàn Tay Công Lý, Móng Vuốt Sterak, Áo Choàng Thủy Ngân)
+- Tướng chống chịu Zac (Giáp Máu Warmog, Áo Choàng Gai, Vuốt Rồng)
+- Lối chơi 4-Cost Fast 8 (MEDIUM)
+
+### [C] Senna Steel
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-senna-steel&set=19
+- Tướng gánh chính Senna (Ngọn Giáo Shojin, Vô Cực Kiếm, Cung Xanh)
+- Tướng chống chịu K'Sante (Vương Miện Hoàng Gia, Thú Tượng Thạch Giáp, Thú Tượng Thạch Giáp)
+- Lối chơi 3-Cost Reroll (HARD)
+
+### [X] Gu Damage
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-gu-damage&set=19
+- Tướng gánh chính Lee Sin (chưa có trang bị)
+- Tướng chống chịu Ngộ Không (chưa có trang bị)
+- Lối chơi 4-Cost Fast 8 (HARD)
+
+### [X] EVERY 5 COST BIS
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-every-5-cost-bis&set=19
+- Tướng gánh chính Akali (Móng Vuốt Sterak, Bùa Đỏ, Áo Choàng Bóng Tối)
+- Tướng chống chịu Dr. Mundo (Giáp Tâm Linh, Thú Tượng Thạch Giáp, Trái Tim Kiên Định)
+- Lối chơi Fast 9 (CONDITIONAL)
+
+### [X] EVERY 3 COST BIS
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-every-3-cost-bis&set=19
+- Tướng gánh chính Amumu (Thú Tượng Thạch Giáp, Vương Miện Hoàng Gia, Giáp Máu Warmog)
+- Tướng chống chịu Braum (Thú Tượng Thạch Giáp, Vương Miện Hoàng Gia, Giáp Máu Warmog)
+- Lối chơi 3-Cost Reroll (CONDITIONAL)
+
+### [X] EVERY 4 COST BIS
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-every-4-cost-bis&set=19
+- Tướng gánh chính Alistar (Giáp Máu Warmog, Lời Thề Hộ Vệ, Giáp Tâm Linh)
+- Tướng chống chịu Leona (Lời Thề Hộ Vệ, Giáp Máu Warmog, Vương Miện Hoàng Gia)
+- Lối chơi 4-Cost Fast 8 (CONDITIONAL)
+
+### [X] EVERY 2 COST BIS
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-every-2-cost-bis&set=19
+- Tướng gánh chính Ashe (Cuồng Đao Guinsoo, Thịnh Nộ Thủy Quái, Cung Xanh)
+- Tướng chống chịu Annie (Thú Tượng Thạch Giáp, Vương Miện Hoàng Gia, Giáp Tâm Linh)
+- Lối chơi 2-Cost Reroll (CONDITIONAL)
+
+### [X] EVERY 1 COST BIS
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-every-1-cost-bis&set=19
+- Tướng gánh chính Elise (Lời Thề Hộ Vệ, Lời Thề Hộ Vệ, Mũ Thích Nghi)
+- Tướng chống chịu Kennen (Thú Tượng Thạch Giáp, Thú Tượng Thạch Giáp, Giáp Máu Warmog)
+- Lối chơi 1-Cost Reroll (CONDITIONAL)
+
+### [X] Dancin N Prancin Lillia
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-dancin-n-prancin-lillia&set=19
+- Tướng gánh chính Lillia (Găng Bảo Thạch, Huyết Kiếm, Quyền Năng Khổng Lồ)
+- Tướng chống chịu Gragas (Thú Tượng Thạch Giáp, Giáp Tâm Linh, Áo Choàng Lửa)
+- Lối chơi 1-Cost Reroll (EASY)
+
+### [X] He's Electric Kennen
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-hes-electric-kennen&set=19
+- Tướng gánh chính Kennen (Găng Bảo Thạch, Bàn Tay Công Lý, Áo Choàng Bóng Tối)
+- Tướng chống chịu Leona (Thú Tượng Thạch Giáp, Lời Thề Hộ Vệ, Giáp Máu Warmog)
+- Lối chơi 1-Cost Reroll (EASY)
+
+### [X] Bite Marks Elise
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-bite-marks-elise&set=19
+- Tướng gánh chính Elise (Găng Bảo Thạch, Bàn Tay Công Lý, Chùy Đoản Côn)
+- Tướng chống chịu Shyvana (Vương Miện Hoàng Gia, Thú Tượng Thạch Giáp, Lời Thề Hộ Vệ)
+- Lối chơi 1-Cost Reroll (EASY)
+
+### [X] Punch Line Sett
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-punch-line-sett&set=19
+- Tướng gánh chính Sett (Vô Cực Kiếm, Bàn Tay Công Lý, Áo Choàng Thủy Ngân)
+- Tướng chống chịu Leona (Lời Thề Hộ Vệ, Vương Miện Hoàng Gia, Thú Tượng Thạch Giáp)
+- Lối chơi 1-Cost Reroll (EASY)
+
+### [X] Axe Crescendo Olaf
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-axe-crescendo-olaf&set=19
+- Tướng gánh chính Olaf (Cuồng Đao Guinsoo, Thịnh Nộ Thủy Quái, Vô Cực Kiếm)
+- Tướng chống chịu Taric (Giáp Vai Nguyệt Thần, Vương Miện Hoàng Gia, Lời Thề Hộ Vệ)
+- Lối chơi 1-Cost Reroll (EASY)
+
+### [B] Classic Rock
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-classic-rock&set=19
+- Tướng gánh chính Jhin (Kiếm Tử Thần, Vô Cực Kiếm, Cung Xanh)
+- Tướng chống chịu Thresh (Giáp Tâm Linh, Vương Miện Hoàng Gia, Thú Tượng Thạch Giáp)
+- Lối chơi 4-Cost Fast 8 (MEDIUM)
+
+### [B] Jazz Pentakill
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-jazz-pentakill&set=19
+- Tướng gánh chính Smeech (Móng Vuốt Sterak, Huyết Kiếm, Quyền Năng Khổng Lồ)
+- Tướng chống chịu Yorick (Vương Miện Hoàng Gia, Thú Tượng Thạch Giáp, Lời Thề Hộ Vệ)
+- Lối chơi Fast 9 (HARD)
+
+### [B] AP Juggs (Yuumi)
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-19-ap-juggs-yuumi&set=19
+- Tướng gánh chính Zac (Thú Tượng Thạch Giáp, Lời Thề Hộ Vệ, Giáp Máu Warmog)
+- Tướng chống chịu Yorick (chưa có trang bị)
 - Lối chơi 4-Cost Fast 8 (MEDIUM)

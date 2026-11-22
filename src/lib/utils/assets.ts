@@ -26,7 +26,7 @@ export function resolveItemIcon(icon?: string, id?: string): string {
 
 export function resolveAugmentIcon(icon?: string, id?: string): string {
   if (icon && icon.startsWith('http')) {
-    if (icon.includes('assets.tftacademy.com/augments/')) {
+    if (icon.includes('assets.tftacademy.com/augments/') && icon.endsWith('.png')) {
       const filename = icon.split('/').pop()?.replace('.png', '').replace(/^da_/, '').toLowerCase() || '';
       return `https://raw.communitydragon.org/latest/game/assets/maps/tft/icons/augments/hexcore/${filename}.png`;
     }

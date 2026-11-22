@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { PageData } from './$types';
+  import SeasonLinks from '$components/SeasonLinks.svelte';
   import { resolveAugmentIcon } from '$lib/utils/assets';
   import { matchesQuery } from '$lib/utils/search';
   import { interpolateDescription } from '$lib/utils/augment-cleaner';
@@ -7,6 +8,7 @@
   import { Flame, Shield, Sparkles, Search, Clock, ExternalLink } from 'lucide-svelte';
 
   let { data }: { data: PageData } = $props();
+  const archiveSuffix = $derived(data.meta.set === 18 ? '?set=18' : '');
 
   let activeTierType = $state<'silver' | 'gold' | 'prismatic'>('gold');
   let selectedStage = $state<string>('All');
@@ -40,26 +42,22 @@
 <svelte:head>
   <title>Bảng Xếp Hạng Lõi Nâng Cấp ĐTCL Mùa {data.meta.set} (Bạc, Vàng, Kim Cương) · TFT Academy VI</title>
   <meta name="title" content="Bảng Xếp Hạng Lõi Nâng Cấp ĐTCL Mùa {data.meta.set} (Bạc, Vàng, Kim Cương) · TFT Academy VI" />
-  <meta name="description" content="Bảng xếp hạng {data.meta.augmentCount} lõi nâng cấp ĐTCL Mùa {data.meta.set}: Lõi Bạc, Lõi Vàng, Lõi Kim Cương theo từng giai đoạn 2-1, 3-2, 4-2. Bố cục kệ thu gọn chuẩn TFT Academy, tooltip tiếng Việt 100%." />
+  <meta name="description" content="Bảng xếp hạng {data.meta.augmentCount} lõi nâng cấp ĐTCL Mùa {data.meta.set} từ TFT Academy, theo loại lõi và giai đoạn vòng đấu." />
   <meta property="og:title" content="Bảng Xếp Hạng Lõi Nâng Cấp ĐTCL Mùa {data.meta.set} · TFT Academy VI" />
   <meta property="og:description" content="Bảng xếp hạng {data.meta.augmentCount} lõi nâng cấp ĐTCL Mùa {data.meta.set} theo bậc S, A, B, C, D và giai đoạn vòng đấu." />
-  <meta property="og:url" content="https://tft.langpn.xyz/tierlist/augments" />
-  <link rel="canonical" href="https://tft.langpn.xyz/tierlist/augments" />
+  <meta property="og:url" content={`https://tft.langpn.xyz/tierlist/augments${archiveSuffix}`} />
+  <link rel="canonical" href={`https://tft.langpn.xyz/tierlist/augments${archiveSuffix}`} />
 </svelte:head>
 
-<div class="flex flex-col gap-6 pb-20">
+<div class="flex flex-col gap-6 pb-20" data-tft-set={data.meta.set}>
   
   <!-- Top Banner: Patch & Title (Matching Screenshot 2 exactly!) -->
   <div class="flex flex-col gap-3">
     <!-- Patch & Update Tag -->
     <div class="flex items-center gap-3 text-xs font-bold">
-      <div class="px-3.5 py-1 rounded-full bg-[#161B26] border border-white/10 text-white flex items-center gap-2">
-        <span class="text-slate-400">Bản Cập Nhật</span>
-        <span class="font-black text-amber-400">{data.meta.patch}</span>
-      </div>
-
-      <a href="https://tftacademy.com/tierlist/updates/comps" target="_blank" class="text-slate-400 hover:text-amber-400 transition-colors flex items-center gap-1">
-        <span>Cập nhật 13 giờ trước</span>
+      <SeasonLinks set={data.meta.set} patch={data.meta.patch} path="/tierlist/augments" />
+      <a href="https://tftacademy.com/tierlist/augments" target="_blank" class="text-slate-400 hover:text-amber-400 transition-colors flex items-center gap-1">
+        <span>Nguồn TFT Academy</span>
         <ExternalLink class="w-3 h-3 text-amber-400" />
       </a>
     </div>
@@ -88,7 +86,7 @@
     <!-- Subnav Tabs (Comps, Items, Augments) -->
     <div class="flex items-center gap-7 text-sm font-bold tracking-tight select-none">
       <a 
-        href="/tierlist/comps"
+        href={`/tierlist/comps${archiveSuffix}`}
         data-sveltekit-preload-data="hover"
         class="flex items-center gap-2 pb-1.5 transition-all text-slate-400 hover:text-white cursor-pointer"
       >
@@ -97,7 +95,7 @@
       </a>
 
       <a 
-        href="/tierlist/items"
+        href={`/tierlist/items${archiveSuffix}`}
         data-sveltekit-preload-data="hover"
         class="flex items-center gap-2 pb-1.5 transition-all text-slate-400 hover:text-white cursor-pointer"
       >
@@ -106,7 +104,7 @@
       </a>
 
       <a 
-        href="/tierlist/augments"
+        href={`/tierlist/augments${archiveSuffix}`}
         data-sveltekit-preload-data="hover"
         class="flex items-center gap-2 pb-1.5 transition-all text-amber-400 border-b-2 border-amber-400 font-black cursor-pointer"
       >
