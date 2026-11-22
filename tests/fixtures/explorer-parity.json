@@ -394,6 +394,73 @@
         "top4Rate": 0.5000980392156863,
         "winRate": 0.12502450980392157
       }
+    },
+    {
+      "params": {
+        "patch": "16230",
+        "rank": "1",
+        "tokens": "u-DA_Draven18-0"
+      },
+      "url": "https://d3.tft.tools/explorer-data/16230/1/u-DA_Draven18-0",
+      "raw": {
+        "base": {
+          "count": 135908,
+          "place": 583026,
+          "top4": 70057,
+          "won": 28637
+        },
+        "traits": [
+          [
+            "DA_18_Adaptor",
+            1,
+            {
+              "count": 633,
+              "place": 2902,
+              "top4": 313,
+              "won": 72,
+              "delta": 0.2960391342639923
+            }
+          ]
+        ],
+        "items": [
+          [
+            "DA_Draven18",
+            "DA_Deathblade",
+            {
+              "count": 36024,
+              "place": 144117,
+              "top4": 20413,
+              "won": 8716,
+              "delta": -0.3936043083667755
+            }
+          ]
+        ]
+      },
+      "summary": {
+        "games": 135908,
+        "avgPlace": 4.289857845012802,
+        "top4Rate": 0.5154737027989522,
+        "winRate": 0.21070871471878036
+      },
+      "trait": {
+        "id": "DA_18_Adaptor",
+        "tier": 1,
+        "pickRate": 0.004657562468728846,
+        "delta": 0.2960391342639923,
+        "games": 633,
+        "avgPlace": 4.584518167456556,
+        "top4Rate": 0.49447077409162715,
+        "winRate": 0.11374407582938388
+      },
+      "item": {
+        "unitId": "DA_Draven18",
+        "itemId": "DA_Deathblade",
+        "delta": -0.3936043083667755,
+        "games": 36024,
+        "avgPlace": 4.000582944703531,
+        "top4Rate": 0.5666500111037086,
+        "winRate": 0.24194981123695314
+      }
     }
   ]
 }
