@@ -9,12 +9,12 @@ const academy = 'https://tftacademy.com';
 function readLearningSections(code: string) {
   const datasets: Record<string, unknown>[][] = [];
   for (const match of code.matchAll(/JSON\.parse\(`\[\{/g)) {
-    const start = match.index + 'JSON.parse('.length;
-    const expression = parseExpressionAt(code, start, { ecmaVersion: 'latest' });
-    if (expression.type !== 'TemplateLiteral' || expression.expressions.length) continue;
-    const text = expression.quasis[0]?.value.cooked;
-    if (!text) continue;
     try {
+      const start = match.index + 'JSON.parse('.length;
+      const expression = parseExpressionAt(code, start, { ecmaVersion: 'latest' });
+      if (expression.type !== 'TemplateLiteral' || expression.expressions.length) continue;
+      const text = expression.quasis[0]?.value.cooked;
+      if (!text) continue;
       const rows = JSON.parse(text);
       if (Array.isArray(rows) && rows.length && rows.every((row) => typeof row?.name === 'string')) {
         datasets.push(rows);
@@ -41,7 +41,7 @@ export async function captureSet19(fetchFn = fetch) {
 
   const read = (source: typeof comps, key: string) => {
     const rows = sourceRows(JSON.parse(source.text)[key], key);
-    if (rows.some((row) => row.set !== 19)) throw new Error(`${key}: expected Set 19 rows`);
+    if (rows.some((row) => Number(row.set) !== 19)) throw new Error(`${key}: expected Set 19 rows`);
     return rows;
   };
   const guides = read(comps, 'guides');

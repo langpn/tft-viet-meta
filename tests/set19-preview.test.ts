@@ -8,7 +8,7 @@ test('captures Set 19 previews without executing Academy JavaScript', async () =
   const chunk = [champions, traits, augments].map((rows) =>
     'JSON.parse(`' + JSON.stringify(rows).replaceAll('\\', '\\\\') + '`)'
   ).join(';');
-  const fetchFn = mockAcademy(19, chunk);
+  const fetchFn = mockAcademy(19, '// JSON.parse(`[{${!}`\n' + chunk);
   const preview = await captureSet19(fetchFn);
   expect(preview.status).toBe('PREVIEW');
   expect(preview.learn.champions).toEqual(champions);
@@ -26,7 +26,7 @@ function mockAcademy(set: number, chunk: string) {
     switch (url.pathname) {
       case '/api/tierlist/comps':
         expect(url.searchParams.get('set')).toBe('19');
-        return Response.json({ guides: [{ set: 19, id: 'guide', title: 'Test', finalComp: [{ apiName: 'DA_Ahri19', boardIndex: 3 }] }] });
+        return Response.json({ guides: [{ set: '19', id: 'guide', title: 'Test', finalComp: [{ apiName: 'DA_Ahri19', boardIndex: 3 }] }] });
       case '/api/tierlist/items':
         return Response.json({ items_tierlists: ['craftables', 'radiants', 'ornns', 'emblems'].map((type) => ({ set: 19, type, tier: { S: ['DA_GuinsoosRageblade'] } })) });
       case '/api/tierlist/augments':
