@@ -20,16 +20,19 @@ release="$root/releases/$commit"
 mkdir -p "$root/releases" "$(dirname "$plist")"
 mkdir "$root/.deploy-lock"
 stage=''
+switch_dir=''
 candidate_pid=''
 cleanup() {
   if [[ -n "$candidate_pid" ]]; then kill "$candidate_pid" 2>/dev/null || true; fi
   if [[ -n "$stage" ]]; then rm -rf -- "$stage"; fi
+  if [[ -n "$switch_dir" ]]; then rm -rf -- "$switch_dir"; fi
   rmdir "$root/.deploy-lock"
 }
 trap cleanup EXIT
 
 if [[ ! -f "$release/build/index.js" ]]; then
   [[ "$mode" == deploy ]] || { echo "Release unavailable: $commit" >&2; exit 2; }
+  [[ ! -e "$release" ]] || { echo "Incomplete release directory: $release" >&2; exit 2; }
   stage=$(mktemp -d "$root/releases/.stage.XXXXXXXX")
   git -C "$repo" archive "$commit" | tar -x -C "$stage"
   (
@@ -43,6 +46,12 @@ if [[ ! -f "$release/build/index.js" ]]; then
   mv "$stage" "$release"
   stage=''
 fi
+
+smoke_release() {
+  local script="$1/scripts/smoke-production.mjs"
+  [[ -f "$script" ]] || script="$repo/scripts/smoke-production.mjs"
+  "$node" "$script" "$2"
+}
 
 wait_for_app() {
   local url=$1
@@ -60,15 +69,15 @@ fi
 HOST=127.0.0.1 PORT=4382 ORIGIN="$origin" "$node" "$release/build/index.js" > "$root/candidate.log" 2>&1 &
 candidate_pid=$!
 wait_for_app http://127.0.0.1:4382
-"$node" "$repo/scripts/smoke-production.mjs" http://127.0.0.1:4382
+smoke_release "$release" http://127.0.0.1:4382
 kill "$candidate_pid"
 wait "$candidate_pid" || true
 candidate_pid=''
 
 previous=$(readlink "$root/current" || true)
+switch_dir=$(mktemp -d "$root/.switch.XXXXXXXX")
 switch_release() {
-  ln -s "$1" "$root/.next-release"
-  mv -fh "$root/.next-release" "$root/current"
+  ln -s "$1" "$switch_dir/current" && mv -fh "$switch_dir/current" "$root/current"
 }
 
 if [[ ! -f "$plist" ]]; then
@@ -93,10 +102,14 @@ restart_app() {
 }
 
 switch_release "$release"
-if ! { restart_app && wait_for_app http://127.0.0.1:4381 && "$node" "$repo/scripts/smoke-production.mjs" http://127.0.0.1:4381; }; then
+if ! { restart_app && wait_for_app http://127.0.0.1:4381 && smoke_release "$release" http://127.0.0.1:4381; }; then
   if [[ -n "$previous" ]]; then
-    switch_release "$previous"
-    restart_app
+    if [[ ! -f "$previous/build/index.js" ]] || ! switch_release "$previous" ||
+       ! restart_app || ! wait_for_app http://127.0.0.1:4381 || ! smoke_release "$previous" http://127.0.0.1:4381; then
+      echo "Rollback could not verify recovery: $previous" >&2
+      exit 1
+    fi
+    echo "Previous release restored: $previous" >&2
   else
     launchctl bootout "$domain/$label" 2>/dev/null || true
     rm "$root/current"

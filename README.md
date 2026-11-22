@@ -34,7 +34,7 @@ node scripts/smoke-production.mjs https://tft.langpn.xyz
 bash scripts/deploy-macos.sh rollback <commit-da-phat-hanh>
 ```
 
-Các bản đã triển khai nằm trong `~/Library/Application Support/tft-viet-meta/releases/`. Bản Mùa 18 được giữ ở đây để có thể quay lui nguyên trạng khi triển khai mùa mới. Nếu quy trình bị dừng bất thường, xác nhận không còn lệnh deploy chạy trước khi xử lý `.deploy-lock` hoặc `.next-release` còn sót trong cùng thư mục.
+Các bản đã triển khai nằm trong `~/Library/Application Support/tft-viet-meta/releases/`. Bản Mùa 18 được giữ ở đây để có thể quay lui nguyên trạng khi triển khai mùa mới. Mỗi release dùng smoke test đi kèm với chính commit đó. Nếu quy trình bị dừng bất thường, xác nhận không còn lệnh deploy chạy trước khi xử lý `.deploy-lock` hoặc thư mục `.switch.*` còn sót.
 
 ## Đồng bộ dữ liệu
 
