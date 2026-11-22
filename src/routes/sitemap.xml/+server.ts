@@ -1,6 +1,6 @@
 import type { RequestHandler } from './$types';
 import { SITE_URL, compUrl, escapeXml } from '$lib/comp-pages';
-import { getComps } from '$server/site-meta';
+import { ARCHIVED_SET, getComps } from '$server/site-meta';
 
 export const GET: RequestHandler = async () => {
   const lastmod = new Date().toISOString().split('T')[0];
@@ -15,8 +15,8 @@ export const GET: RequestHandler = async () => {
     { loc: `${SITE_URL}/learn/new-set`, priority: '0.7', changefreq: 'weekly' }
   ];
 
-  const compUrls = comps.map((comp) => ({
-    loc: compUrl(comp),
+  const compUrls = [...comps.map((comp) => compUrl(comp)), ...getComps(ARCHIVED_SET).map((comp) => `${compUrl(comp)}&set=${ARCHIVED_SET}`)].map((loc) => ({
+    loc,
     priority: '0.8',
     changefreq: 'daily'
   }));

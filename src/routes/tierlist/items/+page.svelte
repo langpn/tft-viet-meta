@@ -1,11 +1,13 @@
 <script lang="ts">
   import type { PageData } from './$types';
+  import SeasonLinks from '$components/SeasonLinks.svelte';
   import { resolveItemIcon } from '$lib/utils/assets';
   import { matchesQuery } from '$lib/utils/search';
   import { showTooltip, hideTooltip } from '$lib/utils/tooltip-store.svelte';
   import { Flame, Shield, Sparkles, Search, ExternalLink } from 'lucide-svelte';
 
   let { data }: { data: PageData } = $props();
+  const archiveSuffix = $derived(data.meta.set === 18 ? '?set=18' : '');
 
   let activeCategory = $state<'craftables' | 'radiants' | 'artifacts' | 'emblems'>(
     (data.initialCategory as any) || 'craftables'
@@ -46,23 +48,19 @@
   <meta name="description" content="Bảng xếp hạng {data.meta.itemCount} trang bị ĐTCL Mùa {data.meta.set} phân loại theo bậc S, A, B, C, D: Đồ ghép thường, Trang bị ánh sáng, Cổ vật Ornn tiếng Việt và Ấn tộc hệ chuẩn in-game." />
   <meta property="og:title" content="Bảng Xếp Hạng Trang Bị ĐTCL Mùa {data.meta.set} · TFT Academy VI" />
   <meta property="og:description" content="Bảng xếp hạng {data.meta.itemCount} trang bị ĐTCL Mùa {data.meta.set}: Đồ ghép thường, Trang bị ánh sáng, Cổ vật Ornn tiếng Việt và Ấn tộc hệ." />
-  <meta property="og:url" content="https://tft.langpn.xyz/tierlist/items" />
-  <link rel="canonical" href="https://tft.langpn.xyz/tierlist/items" />
+  <meta property="og:url" content={`https://tft.langpn.xyz/tierlist/items${archiveSuffix}`} />
+  <link rel="canonical" href={`https://tft.langpn.xyz/tierlist/items${archiveSuffix}`} />
 </svelte:head>
 
-<div class="flex flex-col gap-6 pb-20">
+<div class="flex flex-col gap-6 pb-20" data-tft-set={data.meta.set}>
   
   <!-- Top Banner: Patch & Title (Matching Screenshot 2 exactly!) -->
   <div class="flex flex-col gap-3">
     <!-- Patch & Update Tag -->
     <div class="flex items-center gap-3 text-xs font-bold">
-      <div class="px-3.5 py-1 rounded-full bg-[#161B26] border border-white/10 text-white flex items-center gap-2">
-        <span class="text-slate-400">Bản Cập Nhật</span>
-        <span class="font-black text-amber-400">{data.meta.patch}</span>
-      </div>
-
-      <a href="https://tftacademy.com/tierlist/updates/comps" target="_blank" class="text-slate-400 hover:text-amber-400 transition-colors flex items-center gap-1">
-        <span>Cập nhật 13 giờ trước</span>
+      <SeasonLinks set={data.meta.set} patch={data.meta.patch} path="/tierlist/items" />
+      <a href="https://tftacademy.com/tierlist/items" target="_blank" class="text-slate-400 hover:text-amber-400 transition-colors flex items-center gap-1">
+        <span>Nguồn TFT Academy</span>
         <ExternalLink class="w-3 h-3 text-amber-400" />
       </a>
     </div>
@@ -91,7 +89,7 @@
     <!-- Subnav Tabs (Comps, Items, Augments) -->
     <div class="flex items-center gap-7 text-sm font-bold tracking-tight select-none">
       <a 
-        href="/tierlist/comps"
+        href={`/tierlist/comps${archiveSuffix}`}
         data-sveltekit-preload-data="hover"
         class="flex items-center gap-2 pb-1.5 transition-all text-slate-400 hover:text-white cursor-pointer"
       >
@@ -100,7 +98,7 @@
       </a>
 
       <a 
-        href="/tierlist/items"
+        href={`/tierlist/items${archiveSuffix}`}
         data-sveltekit-preload-data="hover"
         class="flex items-center gap-2 pb-1.5 transition-all text-amber-400 border-b-2 border-amber-400 font-black cursor-pointer"
       >
@@ -109,7 +107,7 @@
       </a>
 
       <a 
-        href="/tierlist/augments"
+        href={`/tierlist/augments${archiveSuffix}`}
         data-sveltekit-preload-data="hover"
         class="flex items-center gap-2 pb-1.5 transition-all text-slate-400 hover:text-white cursor-pointer"
       >
@@ -193,11 +191,11 @@
                   <span class="font-extrabold text-sm text-white group-hover:text-amber-400 transition-colors truncate">
                     {item.name_vi || item.name_en}
                   </span>
-                  {#if item.name_en && item.name_vi !== item.name_en}
-                    <span class="text-[11px] text-slate-400 font-medium truncate">{item.name_en}</span>
+                  {#if item.name_vi && item.name_en && item.name_vi !== item.name_en}
+                    <span lang="en" class="text-[11px] text-slate-400 font-medium truncate">{item.name_en}</span>
                   {/if}
-                  {#if item.desc_vi}
-                    <p class="text-xs text-slate-300 mt-1.5 leading-relaxed line-clamp-2">{item.desc_vi}</p>
+                  {#if item.desc_vi || item.desc_en}
+                    <p lang={item.desc_vi && item.desc_vi !== item.desc_en ? 'vi' : 'en'} class="text-xs text-slate-300 mt-1.5 leading-relaxed line-clamp-2">{item.desc_vi || item.desc_en}</p>
                   {/if}
                 </div>
               </div>

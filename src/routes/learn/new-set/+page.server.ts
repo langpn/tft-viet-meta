@@ -1,12 +1,12 @@
 import type { PageServerLoad } from './$types';
-import newSetData from '$data/academy-new-set.json';
-import manifest from '$data/meta-manifest.json';
+import { contentSet, getContent } from '$server/site-meta';
 
-export const load: PageServerLoad = async () => {
+export const load: PageServerLoad = async ({ url }) => {
+  const { learning } = getContent(contentSet(url));
   return {
-    newSet: newSetData,
-    set: manifest.set,
-    setName: manifest.setName,
-    patch: manifest.patch,
+    newSet: learning,
+    set: learning.set,
+    setName: learning.setName,
+    patch: learning.patch,
   };
 };

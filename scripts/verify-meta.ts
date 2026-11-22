@@ -6,6 +6,7 @@ import fixture from '../tests/fixtures/explorer-parity.json';
 import { buildTokenString, EXPLORER_PATCHES, EXPLORER_RANKS, parseExplorerParams, type ExplorerFilter } from '../src/lib/explorer-contract.js';
 import { normalizeExplorerData } from '../src/lib/server/explorer-service.js';
 import { sha256 } from '../src/lib/server/source-fetch.js';
+import { verifyAcademySet19 } from './build-academy-set19.js';
 
 export function verifyExplorerParity(patch = manifest.explorer.patchId, rank = manifest.explorer.rankGroup) {
   assert(fixture.samples.some(({ params }) => params.patch === patch && params.rank === String(rank) && params.tokens === '0'),
@@ -79,6 +80,7 @@ export function verifyPublishedMeta() {
     patch: manifest.patch,
     files,
     explorerFixtures: verifyExplorerParity(),
+    academy: verifyAcademySet19(JSON.parse(read('src/lib/data/academy-set19.json').toString('utf8'))),
   };
 }
 

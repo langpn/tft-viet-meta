@@ -98,7 +98,7 @@
 
     <!-- Clean Description with Highlighting -->
     {#if descSegments.length > 0}
-      <p class="text-xs text-white/90 leading-relaxed font-normal">
+      <p lang={data.desc_vi && data.desc_vi !== data.desc_en ? 'vi' : 'en'} class="text-xs text-white/90 leading-relaxed font-normal">
         {#each descSegments as seg}
           {#if seg.cls}
             <span class={seg.cls}>{seg.text}</span>

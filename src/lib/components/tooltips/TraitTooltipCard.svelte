@@ -31,7 +31,7 @@
     </div>
 
     {#if data.desc_vi || data.desc_en}
-      <p class="text-xs text-slate-300 leading-relaxed font-normal border-t border-white/10 pt-2.5">
+      <p lang={data.desc_vi && data.desc_vi !== data.desc_en ? 'vi' : 'en'} class="text-xs text-slate-300 leading-relaxed font-normal border-t border-white/10 pt-2.5">
         {data.desc_vi || data.desc_en}
       </p>
     {/if}

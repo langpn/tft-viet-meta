@@ -515,7 +515,11 @@ export function parseHexCoordinates(boardIndex: number): { row: number; col: num
   };
 }
 
-export function parseComps(rawGuides: any[]): ParsedAcademyComp[] {
+export function parseComps(rawGuides: any[], {
+  champion: championFor = localizeChampion,
+  item: itemFor = localizeItem,
+  augment: augmentFor = localizeAugment,
+} = {}): ParsedAcademyComp[] {
   return rawGuides.map((g) => {
     const tier = (g.tier || "B").toUpperCase() as "S" | "A" | "B" | "C" | "X";
     const sticker = typeof g.sticker === "number" ? g.sticker : 0;
@@ -531,7 +535,7 @@ export function parseComps(rawGuides: any[]): ParsedAcademyComp[] {
     let mainItem: LocalizedItem | null = null;
 
     if (g.mainAugment && g.mainAugment.apiName) {
-      mainAugment = localizeAugment(g.mainAugment.apiName);
+      mainAugment = augmentFor(g.mainAugment.apiName);
       coreBadges.push({
         type: "augment",
         id: mainAugment.id,
@@ -542,7 +546,7 @@ export function parseComps(rawGuides: any[]): ParsedAcademyComp[] {
     }
 
     if (g.mainItem && g.mainItem.apiName) {
-      mainItem = localizeItem(g.mainItem.apiName);
+      mainItem = itemFor(g.mainItem.apiName);
       coreBadges.push({
         type: "item",
         id: mainItem.id,
@@ -560,9 +564,9 @@ export function parseComps(rawGuides: any[]): ParsedAcademyComp[] {
 
     const rawFinalComp = g.finalComp || [];
     const board: LocalizedUnit[] = rawFinalComp.map((u: any) => {
-      const champ = localizeChampion(u.apiName, u.cost || 1);
+      const champ = championFor(u.apiName, u.cost || 1);
       const boardIndex = typeof u.boardIndex === "number" ? u.boardIndex : 0;
-      const items = (u.items || []).map((it: string) => localizeItem(it));
+      const items = (u.items || []).map((it: string) => itemFor(it));
       return {
         id: u.apiName,
         name_en: champ.name_en,
@@ -596,7 +600,7 @@ export function parseComps(rawGuides: any[]): ParsedAcademyComp[] {
     if (carryItems.length < 3 && g.altBuilds) {
       const alt = g.altBuilds.find((a: any) => a.apiName === carryUnit?.id && a.items?.length > carryItems.length);
       if (alt && alt.items) {
-        carryItems = alt.items.map((it: string) => localizeItem(it));
+        carryItems = alt.items.map((it: string) => itemFor(it));
       }
     }
 
@@ -639,7 +643,7 @@ export function parseComps(rawGuides: any[]): ParsedAcademyComp[] {
     if (tankItems.length < 3 && g.altBuilds) {
       const alt = g.altBuilds.find((a: any) => a.apiName === bestTank?.id && a.items?.length > tankItems.length);
       if (alt && alt.items) {
-        tankItems = alt.items.map((it: string) => localizeItem(it));
+        tankItems = alt.items.map((it: string) => itemFor(it));
       }
     }
 
@@ -654,26 +658,26 @@ export function parseComps(rawGuides: any[]): ParsedAcademyComp[] {
 
     // Leveling curve
     const earlyComp = (g.earlyComp || []).map((u: any) => {
-      const champ = localizeChampion(u.apiName, u.cost || 1);
+      const champ = championFor(u.apiName, u.cost || 1);
       return {
         id: u.apiName,
         name_en: champ.name_en,
         name_vi: champ.name_vi,
         cost: champ.cost,
         stars: u.stars || 1,
-        items: (u.items || []).map((it: string) => localizeItem(it)),
+        items: (u.items || []).map((it: string) => itemFor(it)),
       };
     });
 
     const midComp = (g.midComp || []).map((u: any) => {
-      const champ = localizeChampion(u.apiName, u.cost || 1);
+      const champ = championFor(u.apiName, u.cost || 1);
       return {
         id: u.apiName,
         name_en: champ.name_en,
         name_vi: champ.name_vi,
         cost: champ.cost,
         stars: u.stars || 1,
-        items: (u.items || []).map((it: string) => localizeItem(it)),
+        items: (u.items || []).map((it: string) => itemFor(it)),
       };
     });
 
@@ -683,7 +687,7 @@ export function parseComps(rawGuides: any[]): ParsedAcademyComp[] {
     }));
 
     const augments = (g.augments || []).map((aug: any) => {
-      const localized = localizeAugment(aug.apiName);
+      const localized = augmentFor(aug.apiName);
       return {
         id: aug.apiName,
         name_en: localized.name_en,
@@ -694,7 +698,7 @@ export function parseComps(rawGuides: any[]): ParsedAcademyComp[] {
     });
 
     const maxCap = (g.maxCap || []).map((m: any) => {
-      const champ = localizeChampion(m.apiName, m.cost || 5);
+      const champ = championFor(m.apiName, m.cost || 5);
       return {
         id: m.apiName,
         name_en: champ.name_en,
@@ -714,13 +718,13 @@ export function parseComps(rawGuides: any[]): ParsedAcademyComp[] {
     ]);
     const finalChampions = board.filter((u) => !NON_CHAMPION_UNITS.has(u.id));
 
-    const carousel = (g.carousel || []).map((c: any) => localizeItem(c.apiName));
+    const carousel = (g.carousel || []).map((c: any) => itemFor(c.apiName));
 
     const altBuildsList = (g.altBuilds || []).map((ab: any) => {
-      const champ = localizeChampion(ab.apiName, 4);
+      const champ = championFor(ab.apiName, 4);
       return {
         champ,
-        items: (ab.items || []).map((itId: string) => localizeItem(itId))
+        items: (ab.items || []).map((itId: string) => itemFor(itId))
       };
     });
 
@@ -758,7 +762,7 @@ export function parseComps(rawGuides: any[]): ParsedAcademyComp[] {
   });
 }
 
-export function parseItems(rawItemsTierlists: any[]): ItemsTierList {
+export function parseItems(rawItemsTierlists: any[], itemFor = localizeItem): ItemsTierList {
   const result: ItemsTierList = {
     categories: {
       craftables: { S: [], A: [], B: [], C: [], D: [] },
@@ -789,7 +793,7 @@ export function parseItems(rawItemsTierlists: any[]): ItemsTierList {
     const tiers: Array<"S" | "A" | "B" | "C" | "D"> = ["S", "A", "B", "C", "D"];
     for (const t of tiers) {
       const itemsList = tierObj[t] || [];
-      const localized = itemsList.map((id: string) => localizeItem(id));
+      const localized = itemsList.map((id: string) => itemFor(id));
       result.categories[cat][t] = localized;
       result[cat][t] = localized;
     }
@@ -798,7 +802,7 @@ export function parseItems(rawItemsTierlists: any[]): ItemsTierList {
   return result;
 }
 
-export function parseAugments(rawAugmentsTierlists: any[]): AugmentsTierList {
+export function parseAugments(rawAugmentsTierlists: any[], augmentFor = localizeAugment): AugmentsTierList {
   const result: AugmentsTierList = {
     silver: { S: [], A: [], B: [], C: [], D: [] },
     gold: { S: [], A: [], B: [], C: [], D: [] },
@@ -832,7 +836,7 @@ export function parseAugments(rawAugmentsTierlists: any[]): AugmentsTierList {
 
     for (const t of tiers) {
       const augsList = tierObj[t] || [];
-      const localized = augsList.map((id: string) => localizeAugment(id));
+      const localized = augsList.map((id: string) => augmentFor(id));
       stageData[t] = localized;
 
       if (stage === "All") {

@@ -26,13 +26,17 @@ function normalize(s?: string): string {
 const candidates: { item: Set18SearchEntity; nVi: string; nEn: string; words: string[] }[] = [];
 const seenKeys = new Set<string>();
 
+function indexEntity(item: Set18SearchEntity) {
+  const nVi = normalize(item.name_vi);
+  const nEn = normalize(item.name_en);
+  return { item, nVi, nEn, words: [...nVi.split(' '), ...nEn.split(' ')] };
+}
+
 function addCandidate(c: Set18SearchEntity) {
   const key = `${c.entityType}::${c.id}`;
   if (!seenKeys.has(key)) {
     seenKeys.add(key);
-    const nVi = normalize(c.name_vi);
-    const nEn = normalize(c.name_en);
-    candidates.push({ item: c, nVi, nEn, words: [...nVi.split(' '), ...nEn.split(' ')] });
+    candidates.push(indexEntity(c));
   }
 }
 
@@ -94,12 +98,21 @@ for (const aug of newSetData.augments || []) {
  * Prevents false positives from internal ID strings or legacy sets.
  */
 export function searchSet18Entities(query: string, limit: number = 12): Set18SearchEntity[] {
+  return searchIndexedEntities(candidates, query, limit);
+}
+
+export function createEntitySearch(items: Set18SearchEntity[]) {
+  const index = items.map(indexEntity);
+  return (query: string, limit = 12) => searchIndexedEntities(index, query, limit);
+}
+
+function searchIndexedEntities(index: typeof candidates, query: string, limit: number): Set18SearchEntity[] {
   const q = normalize(query);
   if (!q) return [];
 
   const scored: Set18SearchEntity[] = [];
 
-  for (const { item, nVi, nEn, words } of candidates) {
+  for (const { item, nVi, nEn, words } of index) {
     let score = 0;
 
     // 1. Exact match on whole name (highest priority)

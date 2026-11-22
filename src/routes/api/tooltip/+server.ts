@@ -2,6 +2,7 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import tooltipDb from '$data/tooltip-db.json';
 import manifest from '$data/meta-manifest.json';
+import current from '$data/academy-set19.json';
 
 const db = tooltipDb as {
   champions: Record<string, any>;
@@ -15,6 +16,8 @@ function normalizeId(id: string): string {
 }
 
 export const GET: RequestHandler = async ({ url }) => {
+  const isCurrent = url.searchParams.get('set') === String(current.set);
+  const catalog: typeof db = isCurrent ? current.tooltips : db;
   const type = (url.searchParams.get('type') || '').toLowerCase();
   const id = url.searchParams.get('id') || '';
   const name = url.searchParams.get('name') || '';
@@ -25,14 +28,14 @@ export const GET: RequestHandler = async ({ url }) => {
   const queryKeys = [
     id,
     normalizeId(id),
-    id.replace(/^DA_18_/, '').replace(/^DA_/, '').replace(/18$/, ''),
-    normalizeId(id.replace(/^DA_18_/, '').replace(/^DA_/, '').replace(/18$/, '')),
+    ...(!isCurrent ? [id.replace(/^DA_18_/, '').replace(/^DA_/, '').replace(/18$/, ''),
+      normalizeId(id.replace(/^DA_18_/, '').replace(/^DA_/, '').replace(/18$/, ''))] : []),
     name,
     normalizeId(name)
   ].filter(Boolean);
 
   const categories = [
-    ['champion', db.champions], ['item', db.items], ['augment', db.augments], ['trait', db.traits],
+    ['champion', catalog.champions], ['item', catalog.items], ['augment', catalog.augments], ['trait', catalog.traits],
   ] as const;
   const requestedType = type === 'unit' ? 'champion' : type;
   const requested = categories.find(([entityType]) => entityType === requestedType);
@@ -41,7 +44,8 @@ export const GET: RequestHandler = async ({ url }) => {
       if (!Object.hasOwn(entries, key)) continue;
       const payload = requested ? entries[key] : { ...entries[key], entityType };
       return json(payload, {
-        headers: { 'Cache-Control': 'public, max-age=300', 'X-TFT-Patch': manifest.patch }
+        headers: { 'Cache-Control': 'public, max-age=300', 'X-TFT-Set': String(isCurrent ? current.set : manifest.set),
+          ...(!isCurrent ? { 'X-TFT-Patch': manifest.patch } : {}) }
       });
     }
   }

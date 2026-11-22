@@ -80,7 +80,7 @@
 
 <svelte:window onkeydown={handleKeydown} />
 
-<div class="flex flex-col gap-12 pb-20 pt-4">
+<div class="flex flex-col gap-12 pb-20 pt-4" data-tft-set={data.meta.set}>
   
   <!-- Hero Section -->
   <section class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#10141F] via-[#0C0F17] to-[#181124] border border-white/10 p-8 sm:p-12 lg:p-16 shadow-2xl flex flex-col items-center text-center gap-6">
@@ -89,7 +89,7 @@
 
     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-300 text-xs font-bold uppercase tracking-wider">
       <Sparkles class="w-3.5 h-3.5" />
-      <span>Mùa {data.meta.set} · Dữ liệu bản {data.meta.patch}</span>
+      <span>Mùa {data.meta.set} · Dữ liệu TFT Academy</span>
     </div>
 
     <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white max-w-4xl leading-tight">

@@ -32,6 +32,7 @@ let tooltipState = $state<TooltipState>({
 
 let hideTimer: any = null;
 let showTimer: any = null;
+let requestId = 0;
 
 export function getTooltipState() {
   return tooltipState;
@@ -64,7 +65,9 @@ export async function showTooltip(
   const placement: 'top' | 'bottom' = rect.top > 320 ? 'top' : 'bottom';
   const targetY = placement === 'top' ? rect.top - 12 : rect.bottom + 12;
 
-  const cacheKey = `${payload.type}:${payload.id || payload.name}`;
+  const set = targetEl.closest<HTMLElement>('[data-tft-set]')?.dataset.tftSet;
+  const cacheKey = `${set ?? '18'}:${payload.type}:${payload.id || payload.name}`;
+  const request = ++requestId;
 
   if (cache.has(cacheKey)) {
     tooltipState = {
@@ -116,19 +119,20 @@ export async function showTooltip(
       id: payload.id || '',
       name: payload.name || ''
     });
+    if (set) q.set('set', set);
     const res = await fetch(`/api/tooltip?${q.toString()}`);
     if (res.ok) {
       const data = await res.json();
       cache.set(cacheKey, data);
-      if (tooltipState.id === payload.id) {
+      if (request === requestId) {
         tooltipState.data = data;
         tooltipState.loading = false;
       }
-    } else {
+    } else if (request === requestId) {
       tooltipState.loading = false;
     }
   } catch (err) {
-    tooltipState.loading = false;
+    if (request === requestId) tooltipState.loading = false;
   }
 }
 
