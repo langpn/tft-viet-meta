@@ -1,6 +1,6 @@
 # Source attribution and provenance
 
-This project keeps source metadata with every imported snapshot. The local index must not present unverified data as canonical.
+The [published manifest](../src/lib/data/meta-manifest.json) identifies the Set, patch, Explorer query defaults, CommunityDragon release and SHA-256 hashes of the published JSON datasets. It also records URLs and hashes for sources used during a successful sync. A `null` source hash denotes a historical record whose original response bytes are unavailable.
 
 ## Sources
 
@@ -8,6 +8,7 @@ This project keeps source metadata with every imported snapshot. The local index
 - TFT Academy sitemap: <https://tftacademy.com/sitemap.xml>
 - Riot Teamfight Tactics developer documentation: <https://developer.riotgames.com/docs/tft>
 - Riot Data Dragon: <https://ddragon.leagueoflegends.com>
+- CommunityDragon, pinned to the release in the manifest: <https://raw.communitydragon.org>
 - MetaTFT reference: <https://www.metatft.com>
 - tactics.tools Explorer reference: <https://tactics.tools/explorer>
 
@@ -23,4 +24,4 @@ This project keeps source metadata with every imported snapshot. The local index
 
 ## Update rule
 
-Every sync stores a new timestamp and content hash. A source change must be classified as `added`, `modified`, `deleted`, or `unchanged`. A failed parity or localization check blocks publication of the new state and retains the previous state for rollback.
+The sync stores a new publication timestamp and source hashes when the output changes. The historical crawler separately classifies changes as `added`, `modified`, `deleted`, or `unchanged`. A failed source, parity, or localization check retains the previously published data.

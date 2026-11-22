@@ -1,6 +1,5 @@
 /**
- * Applies the official Vietnamese overlay to every dataset that ships to users.
- * Source of truth: src/lib/data/official-vi.json (built by build-official-vi.ts).
+ * Applies the Vietnamese locale overlay to a staged dataset.
  * Rules:
  *   - Only official strings are written. No machine translation here.
  *   - A field already holding a hand-written Vietnamese string is kept as-is
@@ -8,9 +7,13 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import { jsonIfChanged, publishFiles } from '../src/lib/server/publish-data.js';
 
-const root = path.resolve(import.meta.dir, '..');
-const official = JSON.parse(fs.readFileSync(path.join(root, 'src/lib/data/official-vi.json'), 'utf-8')) as Record<
+const target = process.argv[2];
+if (!target || fs.realpathSync(target) === fs.realpathSync(path.resolve(import.meta.dir, '../src/lib/data'))) {
+  throw new Error('Usage: bun scripts/apply-official-vi.ts <staging-data-dir>');
+}
+const official = JSON.parse(fs.readFileSync(path.join(target, 'official-vi.json'), 'utf-8')) as Record<
   string,
   { name_vi?: string; desc_vi?: string; ability_vi?: string }
 >;
@@ -34,7 +37,7 @@ function applyDesc(rec: any): void {
 }
 
 // ---------- 1. Items tierlist ----------
-const itemsPath = path.join(root, 'src/lib/data/academy-items.json');
+const itemsPath = path.join(target, 'academy-items.json');
 const items = JSON.parse(fs.readFileSync(itemsPath, 'utf-8'));
 for (const cat of ['craftables', 'radiants', 'artifacts', 'emblems'])
   for (const t of ['S', 'A', 'B', 'C', 'D'])
@@ -42,10 +45,9 @@ for (const cat of ['craftables', 'radiants', 'artifacts', 'emblems'])
       applyName(it);
       applyDesc(it);
     }
-fs.writeFileSync(itemsPath, JSON.stringify(items, null, 2), 'utf-8');
 
 // ---------- 2. Augments tierlist ----------
-const augsPath = path.join(root, 'src/lib/data/academy-augments.json');
+const augsPath = path.join(target, 'academy-augments.json');
 const augs = JSON.parse(fs.readFileSync(augsPath, 'utf-8'));
 for (const tier of ['silver', 'gold', 'prismatic'])
   for (const t of ['S', 'A', 'B', 'C', 'D'])
@@ -53,10 +55,9 @@ for (const tier of ['silver', 'gold', 'prismatic'])
       applyName(a);
       applyDesc(a);
     }
-fs.writeFileSync(augsPath, JSON.stringify(augs, null, 2), 'utf-8');
 
 // ---------- 3. Tooltip DB (champions, items, augments, traits) ----------
-const dbPath = path.join(root, 'src/lib/data/tooltip-db.json');
+const dbPath = path.join(target, 'tooltip-db.json');
 const db = JSON.parse(fs.readFileSync(dbPath, 'utf-8'));
 
 for (const rec of Object.values(db.champions) as any[]) {
@@ -80,10 +81,9 @@ for (const rec of Object.values(db.traits) as any[]) {
   applyName(rec);
   applyDesc(rec);
 }
-fs.writeFileSync(dbPath, JSON.stringify(db, null, 2), 'utf-8');
 
 // ---------- 4. Comps: champions, traits, items, augments inside each guide ----------
-const compsPath = path.join(root, 'src/lib/data/academy-comps.json');
+const compsPath = path.join(target, 'academy-comps.json');
 const comps = JSON.parse(fs.readFileSync(compsPath, 'utf-8'));
 
 function applyUnit(u: any) {
@@ -99,8 +99,8 @@ function applyItem(it: any) {
 for (const c of comps) {
   applyUnit(c.mainCarry);
   applyUnit(c.mainTank);
-  applyItem(c.mainCarry);
-  applyItem(c.mainTank);
+  for (const item of c.mainCarry.items || []) applyItem(item);
+  for (const item of c.mainTank.items || []) applyItem(item);
   for (const u of c.board || []) { applyUnit(u); (u.items || []).forEach(applyItem); }
   for (const u of c.finalChampions || []) applyUnit(u);
   for (const it of c.carousel || []) applyItem(it);
@@ -117,10 +117,9 @@ for (const c of comps) {
     for (const u of lc[part] || []) { applyUnit(u); (u.items || []).forEach(applyItem); }
   for (const m of c.maxCap || []) { const s = official[m.id]; if (s?.name_vi) m.name_vi = s.name_vi; }
 }
-fs.writeFileSync(compsPath, JSON.stringify(comps, null, 2), 'utf-8');
 
 // ---------- 5. Set 18 info page ----------
-const nsPath = path.join(root, 'src/lib/data/academy-new-set.json');
+const nsPath = path.join(target, 'academy-new-set.json');
 const ns = JSON.parse(fs.readFileSync(nsPath, 'utf-8'));
 for (const c of ns.champions || []) {
   const src = official[c.id];
@@ -138,7 +137,12 @@ for (const a of ns.augments || []) {
   if (src?.name_vi) { a.name_vi = src.name_vi; stats.name++; }
   if (src?.desc_vi) { a.desc_vi = src.desc_vi; stats.desc++; }
 }
-fs.writeFileSync(nsPath, JSON.stringify(ns, null, 2), 'utf-8');
+const files = new Map<string, string>();
+for (const [file, data] of [[itemsPath, items], [augsPath, augs], [dbPath, db], [compsPath, comps], [nsPath, ns]]) {
+  const content = jsonIfChanged(file, data);
+  if (content !== null) files.set(file, content);
+}
+publishFiles(files);
 
 console.log('Applied official Vietnamese overlay:');
 console.log(`  names updated    : ${stats.name}`);

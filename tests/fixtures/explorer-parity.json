@@ -1,0 +1,21 @@
+{
+  "samples": [
+    {
+      "params": { "patch": "16212", "rank": "1", "tokens": "0" },
+      "url": "https://d3.tft.tools/explorer-data/16212/1/0",
+      "raw": { "base": { "count": 2668807, "place": 12005198, "top4": 1335036, "won": 333745 } },
+      "summary": { "games": 2668807, "avgPlace": 4.498338770844051, "top4Rate": 0.5002369972800581, "winRate": 0.1250540035304164 }
+    },
+    {
+      "params": { "patch": "16212", "rank": "1" },
+      "filter": { "unit": "DA_Draven18", "star": 0 },
+      "url": "https://d3.tft.tools/explorer-data/16212/1/u-DA_Draven18-0",
+      "raw": {
+        "base": { "count": 365548, "place": 1532795, "top4": 194674, "won": 82358 },
+        "items": [["DA_Draven18", "DA_Deathblade", { "count": 99413, "place": 389610, "top4": 57824, "won": 25277, "delta": -0.37640276551246643 }]]
+      },
+      "summary": { "games": 365548, "avgPlace": 4.193142897786338, "top4Rate": 0.5325538643351899, "winRate": 0.2253000973880311 },
+      "item": { "unitId": "DA_Draven18", "itemId": "DA_Deathblade", "games": 99413, "avgPlace": 3.919105147214147, "top4Rate": 0.581654310804422, "winRate": 0.2542625209982598, "delta": -0.37640276551246643 }
+    }
+  ]
+}

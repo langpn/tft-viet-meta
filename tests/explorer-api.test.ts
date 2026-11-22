@@ -16,7 +16,7 @@ describe("Explorer API response", () => {
       },
     );
 
-    expect(response.status).toBe("PASS");
+    expect(response.status).toBe("UNVERIFIED");
     expect(response.base).toEqual({
       games: 100,
       averagePlacement: 3.25,

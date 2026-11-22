@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Search, X, Shield, Users, Sparkles, Flame } from 'lucide-svelte';
+  import { MAX_SEARCH_LENGTH, createLatest } from '$lib/explorer-contract';
 
   export interface FilterItem {
     type: 'u' | 'i' | 't' | 'a';
@@ -23,24 +24,36 @@
   let suggestions = $state<any[]>([]);
   let isLoading = $state(false);
   let debounceTimer: any = null;
+  const suggestionSlot = createLatest();
+
+  function resetSuggestions() {
+    clearTimeout(debounceTimer);
+    suggestionSlot.cancel();
+    isLoading = false;
+    suggestions = [];
+  }
 
   async function handleInput() {
     clearTimeout(debounceTimer);
-    if (!query.trim()) {
-      suggestions = [];
+    const trimmed = query.trim().slice(0, MAX_SEARCH_LENGTH);
+    if (!trimmed) {
+      resetSuggestions();
       return;
     }
 
     debounceTimer = setTimeout(async () => {
+      const req = suggestionSlot.next();
       isLoading = true;
       try {
-        const res = await fetch(`/api/options?q=${encodeURIComponent(query.trim())}`);
+        const res = await fetch(`/api/options?q=${encodeURIComponent(trimmed)}`, { signal: req.signal });
         const data = await res.json();
+        if (!req.isCurrent()) return;
         suggestions = data.results || [];
-      } catch (e) {
+      } catch (e: any) {
+        if (e?.name === 'AbortError' || !req.isCurrent()) return;
         suggestions = [];
       } finally {
-        isLoading = false;
+        if (req.isCurrent()) isLoading = false;
       }
     }, 150);
   }
@@ -63,8 +76,14 @@
     });
 
     query = '';
-    suggestions = [];
+    resetSuggestions();
     isFocused = false;
+  }
+
+  function handleClear() {
+    query = '';
+    resetSuggestions();
+    onclear();
   }
 
   const categoryIcons: Record<string, any> = {
@@ -98,6 +117,7 @@
         type="text"
         bind:value={query}
         oninput={handleInput}
+        maxlength={MAX_SEARCH_LENGTH}
         onfocus={() => (isFocused = true)}
         onblur={() => setTimeout(() => (isFocused = false), 200)}
         placeholder="Gõ tìm Tướng, Trang bị, Tộc hệ hoặc Lõi để lọc (vd: Ahri, Vô Cực, Thần Rừng)..."
@@ -171,7 +191,7 @@
 
       <button 
         type="button"
-        onclick={onclear}
+        onclick={handleClear}
         class="text-xs text-rose-400 hover:text-rose-300 font-bold ml-2 cursor-pointer transition-colors"
       >
         Xóa tất cả

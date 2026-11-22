@@ -15,7 +15,7 @@ describe("tactics.tools Explorer connector", () => {
       },
     );
 
-    expect(snapshot.status).toBe("PASS");
+    expect(snapshot.status).toBe("UNVERIFIED");
     expect(snapshot.metrics).toEqual({ averagePlacement: 3.25, topFourRate: 0.6, games: 100 });
   });
 

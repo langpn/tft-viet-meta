@@ -2,6 +2,7 @@ import { describe, expect, test } from "bun:test";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
+import { verifyCandidateMeta } from '../scripts/verify-meta.js';
 import {
   syncAcademyData,
   parseComps,
@@ -364,15 +365,92 @@ describe("TFT Academy Full Scraper & Parser", () => {
     expect(JSON.parse(fs.readFileSync(file, "utf-8")).items).toEqual([1, 3]);
   });
 
-  test("syncAcademyData execution returns full structured datasets", async () => {
-    // Run sync function with mock or live fetch into a temp dir so tests never
-    // overwrite the committed data that the site actually serves.
-    const tmpDir = await fs.promises.mkdtemp(path.join(os.tmpdir(), "tft-sync-"));
-    const result = await syncAcademyData({ dataDir: tmpDir });
-    expect(result.comps.length).toBeGreaterThanOrEqual(70);
-    expect(result.items.categories.craftables.S.length).toBeGreaterThan(0);
-    expect(result.augments.silver.S.length).toBeGreaterThan(0);
-    expect(result.newSet.champions.length).toBe(65);
-    expect(result.newSet.wisps.length).toBe(200);
+  const guide = {
+    id: "guide-1", set: 18, title: "Guide", tier: "S", finalComp: [{ apiName: "DA_Draven18" }],
+    tips: [{ stage: "Stage 2", tip: "Save gold" }, { stage: "Stage 3", tip: "Buy XP" }],
+    augmentsTip: "Play from a win streak",
+  };
+  const translated = {
+    id: guide.id,
+    tips: [
+      { stage: "Stage 3", tip: "Mua kinh nghiệm", tip_en: "Buy XP" },
+      { stage: "Stage 2", tip: "Giữ vàng", tip_en: "Save gold" },
+    ],
+    augmentsTip: "Chơi theo chuỗi thắng", augmentsTip_en: "Play from a win streak",
+  };
+  const setChunk = [
+    [{ name: "Different wisp", cost: 1, category: "Gold", description: "Gold", rules: "Once" }],
+    [{ name: "Draven", cost: 5, traits: ["Elderwood"], ability: "Throw an axe" }],
+    [{ name: "Elderwood", type: "Origin", breakpoints: [2], description: "Grow" }],
+    [{ name: "Level Up!", tier: 3, description: "Buy XP" }],
+  ].map((rows) => 'JSON.parse(`' + JSON.stringify(rows) + '`)').join(';');
+
+  function academyFetch(set = 18, currentGuide = guide): typeof fetch {
+    return (async (input: RequestInfo | URL) => {
+      const { pathname } = new URL(String(input));
+      switch (pathname) {
+        case '/api/tierlist/comps': return Response.json({ guides: [currentGuide] });
+        case '/api/tierlist/items': return Response.json({ items_tierlists: ['craftables', 'radiants', 'artifacts', 'emblems'].map((type) => ({ set: 18, type, tier: { S: ['DA_InfinityEdge'] } })) });
+        case '/api/tierlist/augments': return Response.json({ augments_tierlists: [1, 2, 3].map((augmenttier) => ({ set: 18, augmenttier, tier: { S: ['DA_LevelUp'] } })) });
+        case '/learn/new-set': return new Response(`<h1><span>Set ${set}</span> is here.</h1>`, { headers: { link: '<../_app/immutable/nodes/test.js>; rel="modulepreload"' } });
+        case '/_app/immutable/nodes/test.js': return new Response(setChunk);
+        default: throw new Error(`Unexpected request: ${pathname}`);
+      }
+    }) as typeof fetch;
+  }
+
+  test("syncs a complete same-set batch and preserves Vietnamese by guide and original text", async () => {
+    const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'tft-sync-'));
+    try {
+      const compsFile = path.join(dir, 'academy-comps.json');
+      fs.writeFileSync(compsFile, JSON.stringify([translated]));
+      const result = await syncAcademyData({ dataDir: dir, fetchFn: academyFetch(), logger: () => {} });
+      expect(result.comps[0].tips).toEqual([...translated.tips].reverse());
+      expect(result.comps[0].augmentsTip_en).toBe(guide.augmentsTip);
+      expect(result.items.categories.craftables.S).toHaveLength(1);
+      expect(result.augments.silver.S).toHaveLength(1);
+      expect(result.newSet.wisps[0].name_en).toBe('Different wisp');
+      expect(JSON.parse(fs.readFileSync(compsFile, 'utf8'))[0].augmentsTip).toBe(translated.augmentsTip);
+    } finally {
+      fs.rmSync(dir, { recursive: true, force: true });
+    }
+  });
+
+  test("leaves the published batch intact on set drift or changed untranslated guidance", async () => {
+    const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'tft-sync-'));
+    try {
+      const compsFile = path.join(dir, 'academy-comps.json');
+      const before = JSON.stringify([translated]);
+      fs.writeFileSync(compsFile, before);
+      await expect(syncAcademyData({ dataDir: dir, fetchFn: academyFetch(19), logger: () => {} })).rejects.toThrow('Expected TFT Academy Set 18, got Set 19');
+      await expect(syncAcademyData({ dataDir: dir, fetchFn: academyFetch(18, { ...guide, augmentsTip: 'New tip' }), logger: () => {} })).rejects.toThrow('Missing Vietnamese coaching');
+      expect(fs.readFileSync(compsFile, 'utf8')).toBe(before);
+      expect(fs.readdirSync(dir)).toEqual(['academy-comps.json']);
+    } finally {
+      fs.rmSync(dir, { recursive: true, force: true });
+    }
+  });
+
+  test('accepts a reviewed coaching update with the same numbers', async () => {
+    const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'tft-sync-'));
+    const currentGuide = { ...guide, augmentsTip: 'Save 10 gold' };
+    const options = { dataDir: dir, fetchFn: academyFetch(18, currentGuide), logger: () => {} };
+    const reviewed = { ...translated, augmentsTip_en: currentGuide.augmentsTip, augmentsTip: 'Giữ 20 vàng' };
+    try {
+      await expect(syncAcademyData({ ...options, coachingTranslations: [reviewed] })).rejects.toThrow('changed numeric values');
+      expect(fs.readdirSync(dir)).toEqual([]);
+      const result = await syncAcademyData({ ...options, coachingTranslations: [{ ...reviewed, augmentsTip: 'Giữ 10 vàng' }] });
+      expect(result.comps[0].augmentsTip).toBe('Giữ 10 vàng');
+    } finally {
+      fs.rmSync(dir, { recursive: true, force: true });
+    }
+  });
+
+  test('blocks a staged tooltip database with an empty group before publication', () => {
+    expect(() => verifyCandidateMeta((file) => {
+      const data = fs.readFileSync(path.join(dataDir, path.basename(file)));
+      if (!file.endsWith('/tooltip-db.json')) return data;
+      return Buffer.from(JSON.stringify({ ...JSON.parse(data.toString('utf8')), items: {} }));
+    })).toThrow('Missing tooltip-db.json group: items');
   });
 });

@@ -5,8 +5,10 @@
   import { Sparkles, Wand2, Users, Flame, Shield, Search } from 'lucide-svelte';
 
   let { data }: { data: PageData } = $props();
+  let title = $derived(`Khám Phá Mùa ${data.set}: ${data.setName} · TFT Academy VI`);
+  let description = $derived(`Thông tin ĐTCL Mùa ${data.set}, bản ${data.patch}, gồm ${data.newSet.champions.length} tướng, ${data.newSet.traits.length} tộc hệ, ${data.newSet.augments.length} lõi nâng cấp và cơ chế Linh Linh.`);
 
-  let activeTab = $state<'wisps' | 'champions' | 'traits' | 'augments'>('wisps');
+  let activeTab = $state<'wisps' | 'champions' | 'traits'>('wisps');
   let selectedWispCategory = $state('All');
   let searchQuery = $state('');
 
@@ -23,37 +25,36 @@
   };
 
   const filteredWisps = $derived.by(() => {
-    return (data.newSet.wisps || []).filter((w: any) => {
+    return data.newSet.wisps.filter((w) => {
       const matchQuery = matchesQuery(w.name_vi, searchQuery) || 
                          matchesQuery(w.name_en, searchQuery) || 
-                         matchesQuery(w.desc_vi, searchQuery);
+                         matchesQuery(w.desc_vi || w.desc_en, searchQuery);
       const matchCategory = selectedWispCategory === 'All' || w.category === selectedWispCategory;
       return matchQuery && matchCategory;
     });
   });
 
   const filteredChampions = $derived.by(() => {
-    return (data.newSet.champions || []).filter((c: any) => {
+    return data.newSet.champions.filter((c) => {
       return matchesQuery(c.name_vi, searchQuery) || 
-             matchesQuery(c.name, searchQuery) || 
-             c.traits?.some((t: string) => matchesQuery(t, searchQuery));
+             matchesQuery(c.name_en, searchQuery) ||
+             c.traits.some((t) => matchesQuery(t.name_vi, searchQuery) || matchesQuery(t.name_en, searchQuery));
     });
   });
 
   const filteredTraits = $derived.by(() => {
-    return (data.newSet.traits || []).filter((t: any) => {
+    return data.newSet.traits.filter((t) => {
       return matchesQuery(t.name_vi, searchQuery) || 
-             matchesQuery(t.name, searchQuery);
+             matchesQuery(t.name_en, searchQuery);
     });
   });
 </script>
 
 <svelte:head>
-  <title>Khám Phá Mùa 18: Enchanted Wilds (Rừng Phép Thuật) · TFT Academy VI</title>
-  <meta name="title" content="Khám Phá Mùa 18: Enchanted Wilds (Rừng Phép Thuật) · TFT Academy VI" />
-  <meta name="description" content="Toàn bộ thông tin cập nhật ĐTCL Mùa 18 Enchanted Wilds: 65 tướng mới, 36 tộc hệ, 246 lõi nâng cấp và cơ chế Linh Linh (Wisps) độc quyền." />
-  <meta property="og:title" content="Khám Phá Mùa 18: Enchanted Wilds · TFT Academy VI" />
-  <meta property="og:description" content="Toàn bộ thông tin cập nhật ĐTCL Mùa 18: tướng, tộc hệ và cơ chế Linh Linh (Wisps)." />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
   <meta property="og:url" content="https://tft.langpn.xyz/learn/new-set" />
   <link rel="canonical" href="https://tft.langpn.xyz/learn/new-set" />
 </svelte:head>
@@ -65,10 +66,10 @@
     <div class="relative z-10 flex flex-col gap-4 max-w-3xl">
       <div class="flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-emerald-400">
         <Sparkles class="w-4 h-4" />
-        <span>MÙA 18 CHÍNH THỨC KHỞI TRANH</span>
+        <span>Mùa {data.set} · Bản {data.patch}</span>
       </div>
       <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white leading-tight">
-        TFT Set 18: <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300">Enchanted Wilds</span>
+        TFT Set {data.set}: <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300">{data.setName}</span>
       </h1>
       <p class="text-slate-300 text-sm md:text-base leading-relaxed">
         Bước vào vùng đất cổ xưa nơi các Linh Linh (Wisps) ma thuật xuất hiện tại cửa hàng, mang lại các hiệu ứng chiến đấu, đột phá kinh tế và phần thưởng rủi ro cao.
@@ -110,7 +111,7 @@
       <input 
         type="text" 
         bind:value={searchQuery}
-        placeholder="Tìm kiếm nội dung Mùa 18..."
+        placeholder={`Tìm kiếm nội dung Mùa ${data.set}...`}
         class="w-full pl-10 pr-4 py-2 rounded-xl bg-[#161B26] border border-white/5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors"
       />
     </div>
@@ -136,7 +137,7 @@
 
       <!-- Wisps Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-        {#each filteredWisps as wisp (wisp.id || wisp.name_en)}
+        {#each filteredWisps as wisp (wisp.name_en)}
           <div class="flex flex-col justify-between p-3.5 rounded-xl bg-[#121620] border border-white/5 hover:border-emerald-500/40 hover:-translate-y-0.5 transition-all">
             <div class="flex flex-col gap-1.5">
               <div class="flex items-center justify-between gap-2">
@@ -146,8 +147,8 @@
                 </span>
               </div>
               <span class="text-[11px] text-slate-400">{wisp.name_en} • <b class="text-emerald-400">{wisp.category}</b></span>
-              {#if wisp.desc_vi}
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">{wisp.desc_vi}</p>
+              {#if wisp.desc_vi || wisp.desc_en}
+                <p class="text-xs text-slate-300 mt-1 leading-relaxed">{wisp.desc_vi || wisp.desc_en}</p>
               {/if}
             </div>
             {#if wisp.rules}
@@ -163,18 +164,18 @@
   {:else if activeTab === 'champions'}
     <!-- Champions Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-      {#each filteredChampions as champ (champ.name)}
+      {#each filteredChampions as champ (champ.id)}
         <div class="flex flex-col p-4 rounded-xl bg-[#121620] border border-white/5 hover:border-amber-400/40 transition-all gap-3">
           <div class="flex items-center gap-3">
             <HexAvatar 
-              name={champ.name}
+              name={champ.name_en}
               nameVi={champ.name_vi}
               iconUrl={champ.icon}
               cost={champ.cost}
               size="md"
             />
             <div class="flex flex-col">
-              <span class="font-black text-base text-white">{champ.name_vi || champ.name}</span>
+              <span class="font-black text-base text-white">{champ.name_vi || champ.name_en}</span>
               <span class="text-xs text-slate-400">Giá: {champ.cost} Vàng</span>
             </div>
           </div>
@@ -183,7 +184,7 @@
           <div class="flex flex-wrap gap-1">
             {#each (champ.traits || []) as trait}
               <span class="px-2 py-0.5 rounded bg-black/40 border border-white/10 text-[10px] font-semibold text-amber-300">
-                {trait}
+                {trait.name_vi || trait.name_en}
               </span>
             {/each}
           </div>
@@ -197,7 +198,7 @@
                   <span class="text-[11px] text-sky-400">💧 {champ.abilityMana}</span>
                 {/if}
               </div>
-              <p class="text-[11px] text-slate-300 leading-snug line-clamp-3">{champ.ability}</p>
+              <p class="text-[11px] text-slate-300 leading-snug line-clamp-3">{champ.desc_vi || champ.ability}</p>
             </div>
           {/if}
         </div>
@@ -207,13 +208,13 @@
   {:else if activeTab === 'traits'}
     <!-- Traits Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      {#each filteredTraits as trait (trait.name)}
+      {#each filteredTraits as trait (trait.id)}
         <div class="flex flex-col p-4.5 rounded-xl bg-[#121620] border border-white/5 gap-3">
           <div class="flex items-center justify-between border-b border-white/5 pb-2">
             <div class="flex items-center gap-2">
-              <span class="font-black text-lg text-white">{trait.name_vi || trait.name}</span>
-              {#if trait.name_vi && trait.name_vi !== trait.name}
-                <span class="text-xs text-slate-400">({trait.name})</span>
+              <span class="font-black text-lg text-white">{trait.name_vi || trait.name_en}</span>
+              {#if trait.name_vi && trait.name_vi !== trait.name_en}
+                <span class="text-xs text-slate-400">({trait.name_en})</span>
               {/if}
             </div>
             {#if trait.breakpoints}
@@ -227,8 +228,8 @@
             {/if}
           </div>
 
-          {#if trait.desc_vi || trait.description}
-            <p class="text-xs text-slate-300 leading-relaxed">{trait.desc_vi || trait.description}</p>
+          {#if trait.desc_vi || trait.desc_en}
+            <p class="text-xs text-slate-300 leading-relaxed">{trait.desc_vi || trait.desc_en}</p>
           {/if}
         </div>
       {/each}

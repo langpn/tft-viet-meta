@@ -1,55 +1,44 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import manifest from '../src/lib/data/meta-manifest.json';
+import type { ParsedAcademyComp, Set18Info } from '../src/lib/server/academy-sync.js';
+import { publishFiles } from '../src/lib/server/publish-data.js';
 
-const root = process.cwd();
-const comps = JSON.parse(fs.readFileSync(path.join(root, 'src/lib/data/academy-comps.json'), 'utf-8'));
+export function generateLlmsText(comps: ParsedAcademyComp[], newSet: Set18Info) {
+  const origin = 'https://tft.langpn.xyz';
+  const compUrl = (comp: ParsedAcademyComp) => `${origin}/tierlist/comps?comp=${encodeURIComponent(comp.slug || comp.id)}`;
+  const llms = `# TFT Academy Việt Nam (tft.langpn.xyz)
 
-const llmsTxt = `# TFT Academy Việt Nam (tft.langpn.xyz)
+> Cẩm nang Đấu Trường Chân Lý bằng tiếng Việt. Bảng xếp hạng lấy từ TFT Academy, tên và mô tả ưu tiên dữ liệu Riot, thống kê Explorer lấy từ tactics.tools.
 
-> Nền tảng cẩm nang meta Đấu Trường Chân Lý (TFT) số 1 Việt Nam. Bảng xếp hạng 73 đội hình meta giám tuyển bởi Dishsoap (2x Vô địch thế giới) & Frodan, đối soát dữ liệu Riot Games & tactics.tools với 100% bản địa hóa tiếng Việt.
+## Bộ dữ liệu đang phục vụ
+- ĐTCL Mùa ${manifest.set} (${manifest.setName}), bản ${manifest.patch}
+- ${comps.length} đội hình, ${newSet.champions.length} tướng, ${newSet.traits.length} tộc hệ và ${newSet.wisps.length} Linh Linh
 
-## Thông Tin Meta Hiện Tại
-- Phiên bản: ĐTCL Mùa 18 (Enchanted Wilds - Rừng Phép Thuật), Patch 18.5c
-- Tổng số đội hình meta: 73 đội hình (phân loại S, A, B, C, X)
-- Cơ chế mùa: Linh Linh (Wisps) tại cửa hàng, tướng Thích Ứng, Hoa Linh, Tàn Phá
-- Dữ liệu trực tuyến: https://tft.langpn.xyz
+## Các trang chính
+- [Bảng xếp hạng đội hình](${origin}/tierlist/comps)
+- [Bảng xếp hạng trang bị](${origin}/tierlist/items)
+- [Bảng xếp hạng lõi nâng cấp](${origin}/tierlist/augments)
+- [Thống kê Explorer](${origin}/explorer)
+- [Thông tin mùa ${manifest.set}](${origin}/learn/new-set)
+- [Danh sách chi tiết](${origin}/llms-full.txt)
 
-## Các Trang Chính
-- [Bảng Xếp Hạng Đội Hình (Comps Tierlist)](https://tft.langpn.xyz/tierlist/comps): 73 bài đấu kèm sơ đồ xếp cờ 28 ô hex, trang bị chuẩn BIS, thứ tự nhặt đồ và hướng dẫn từng giai đoạn.
-- [Bảng Xếp Hạng Trang Bị (Items Tierlist)](https://tft.langpn.xyz/tierlist/items): 123 trang bị gồm Đồ ghép thường, Đồ Ánh Sáng, 30 Cổ vật Ornn tiếng Việt và 21 Ấn tộc hệ.
-- [Bảng Xếp Hạng Lõi Nâng Cấp (Augments Tierlist)](https://tft.langpn.xyz/tierlist/augments): 249 lõi nâng cấp Bạc, Vàng, Kim Cương phân loại theo vòng 2-1, 3-2, 4-2.
-- [Khám Phá Thống Kê (tactics.tools Explorer)](https://tft.langpn.xyz/explorer): Tra cứu số liệu hơn 750k trận đấu xếp hạng (Tỷ lệ thắng, Top 4, Hạng TB, Delta).
-- [Thông Tin Mùa 18 (Set 18 Info)](https://tft.langpn.xyz/learn/new-set): Chi tiết 65 tướng mới, 36 tộc hệ và 200 loại Linh Linh (Wisps).
-
-## Top Đội Hình Bậc S & A (Mùa 18)
-- Draven Ezreal 9 (Bậc S): https://tft.langpn.xyz/tierlist/comps?comp=draven-ezreal-9
-- AP Fast 9 (Bậc S): https://tft.langpn.xyz/tierlist/comps?comp=ap-fast-9
-- Elderwood Executioners (Bậc A): https://tft.langpn.xyz/tierlist/comps?comp=elderwood-executioners
-- Tempo Riftbeast (Bậc A): https://tft.langpn.xyz/tierlist/comps?comp=tempo-riftbeast
-- Ahri Zyra (Bậc A): https://tft.langpn.xyz/tierlist/comps?comp=ahri-zyra
-- Primal Sivir (Bậc A): https://tft.langpn.xyz/tierlist/comps?comp=primal-sivir
-- Solar Blossom (Bậc A): https://tft.langpn.xyz/tierlist/comps?comp=solar-blossom
-- Adaptor Reroll (Bậc A): https://tft.langpn.xyz/tierlist/comps?comp=adaptor-reroll
-- Cursed Crown Kayle (Bậc X - S tình huống): https://tft.langpn.xyz/tierlist/comps?comp=cursed-crown-kayle
-
-## Chi Tiết Toàn Bộ
-- Xem tệp đầy đủ: https://tft.langpn.xyz/llms-full.txt
+## Đội hình bậc S và A
+${comps.filter((comp) => ['S', 'A'].includes(comp.tier) || comp.situationalTier === 'S')
+  .map((comp) => `- [${comp.title.trim()}](${compUrl(comp)}) (${comp.situationalTier === 'S' ? 'S tình huống' : comp.tier})`).join('\n')}
 `;
-
-fs.writeFileSync(path.join(root, 'static/llms.txt'), llmsTxt);
-console.log('Written static/llms.txt successfully');
-
-let fullTxt = llmsTxt + '\n## Danh Sách Chi Tiết 73 Đội Hình Meta\n\n';
-for (const c of comps) {
-  const slug = (c.title || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-  const carry = c.mainCarry?.name_vi || c.mainCarry?.name_en || 'Không xác định';
-  const tank = c.mainTank?.name_vi || c.mainTank?.name_en || 'Không xác định';
-  fullTxt += `### [${c.tier} Tier] ${c.title}\n`;
-  fullTxt += `- Link: https://tft.langpn.xyz/tierlist/comps?comp=${slug}\n`;
-  fullTxt += `- Tướng gánh chính (Carry): ${carry} (Đồ chuẩn: ${c.mainCarry?.items?.map((i: any) => i.name_vi || i.name_en).join(', ') || 'N/A'})\n`;
-  fullTxt += `- Tướng chống chịu (Tank): ${tank} (Đồ chuẩn: ${c.mainTank?.items?.map((i: any) => i.name_vi || i.name_en).join(', ') || 'N/A'})\n`;
-  fullTxt += `- Lối chơi: ${c.compStyle} (Độ khó: ${c.difficulty})\n\n`;
+  const detail = comps.map((comp) => `### [${comp.tier}] ${comp.title.trim()}
+- Link ${compUrl(comp)}
+- Tướng gánh chính ${comp.mainCarry.name_vi} (${comp.mainCarry.items.map((item) => item.name_vi).join(', ') || 'chưa có trang bị'})
+- Tướng chống chịu ${comp.mainTank.name_vi} (${comp.mainTank.items.map((item) => item.name_vi).join(', ') || 'chưa có trang bị'})
+- Lối chơi ${comp.compStyle} (${comp.difficulty})`).join('\n\n');
+  return { llms, full: `${llms}\n## Danh sách ${comps.length} đội hình\n\n${detail}\n` };
 }
 
-fs.writeFileSync(path.join(root, 'static/llms-full.txt'), fullTxt);
-console.log('Written static/llms-full.txt successfully');
+if (import.meta.main) {
+  const { llms, full } = generateLlmsText(
+    JSON.parse(fs.readFileSync('src/lib/data/academy-comps.json', 'utf8')),
+    JSON.parse(fs.readFileSync('src/lib/data/academy-new-set.json', 'utf8')),
+  );
+  publishFiles(new Map([[path.resolve('static/llms.txt'), llms], [path.resolve('static/llms-full.txt'), full]]));
+}

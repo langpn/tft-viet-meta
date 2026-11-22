@@ -6,3 +6,5 @@ data/snapshots/
 *.log
 .svelte-kit/
 build/
+.meta-publish-lock/
+.meta-stage-*/

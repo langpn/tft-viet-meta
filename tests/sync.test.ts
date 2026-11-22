@@ -63,7 +63,7 @@ describe("sync pipeline", () => {
     expect(result.report).toMatchObject({
       academyPages: 4,
       riotEntities: 1,
-      explorerStatus: "PASS",
+      explorerStatus: "UNVERIFIED",
       diff: { added: 4, modified: 0, deleted: 0, unchanged: 0 },
       changedUrls: {
         added: [

@@ -1,38 +1,33 @@
-# TFT Việt Meta (TFT Academy Việt Nam)
+# TFT Việt Meta
 
-> 🌐 **Website trực tuyến:** [https://tft.langpn.xyz](https://tft.langpn.xyz)  
-> Nền tảng cẩm nang meta Đấu Trường Chân Lý (TFT) số 1 Việt Nam. Bảng xếp hạng 73 đội hình meta giám tuyển bởi Dishsoap & Frodan, 123 trang bị, 249 lõi nâng cấp và số liệu tactics.tools live chuyển ngữ tiếng Việt 100%.
+Cẩm nang Đấu Trường Chân Lý bằng tiếng Việt, gồm bảng xếp hạng đội hình, trang bị, lõi nâng cấp và thống kê Explorer. Trang đang phục vụ bộ dữ liệu Mùa 18, bản 18.5c. [Website](https://tft.langpn.xyz)
 
-## Current status
+## Chạy hệ thống
 
-The repository contains the first vertical slice:
-
-- Snapshot hashing and added/modified/deleted diffing.
-- Vietnamese accent-insensitive search.
-- Numeric placeholder validation for translations.
-- Stable Explorer query hashing and parity comparison.
-- Bun HTTP server with Vietnamese home page, search API, Explorer contract and status API.
-- Explicit `BLOCKED`/`UNVERIFIED` sync states. The system never invents source data.
-- TFT Academy sync scope is intentionally limited to `/tierlist/comps`, `/tierlist/items`, `/tierlist/augments`, and `/learn/new-set`.
-- `/tierlist/updates/comps` is monitored as an update trigger; when it changes, the next sync refreshes all three tier-list pages: comps, items, and augments.
-- Guides, Study Hall, Academy+, tools, creator pages, policies, historical comp detail pages, and other routes are currently out of scope.
-
-## Run locally
+Dùng Bun 1.4.3 cho cài đặt, đồng bộ và test. Ứng dụng SvelteKit chạy production trên Node.js 22.17 trở lên. Docker và CI dùng Node.js 24.
 
 ```bash
-bun install
-bun test
-bunx tsc --noEmit
+bun install --frozen-lockfile
 bun run dev
 ```
 
-Then open http://localhost:3000.
-
-## Sync policy
-
-`sync` and `verify` currently fail closed until source connectors and fixtures are configured. This is intentional: an unverified result must not be presented as canonical TFT data.
+Trang phát triển mở tại `http://localhost:3000`. Để kiểm tra bản production, chạy `bun run build` rồi `bun run start`.
 
 ```bash
-bun run sync
 bun run verify
+bun test
+bun run typecheck
+bun run build
 ```
+
+## Đồng bộ dữ liệu
+
+`bun run sync` chạy từ thư mục gốc. Lệnh tải các nguồn, dựng JSON và tooltip trong thư mục tạm, áp dụng bản dịch đã duyệt, kiểm tra fixture Explorer rồi cập nhật bộ dữ liệu cùng manifest. CI chạy lại verify, test, kiểm tra kiểu và build trước khi đẩy cập nhật. `bun run verify` có thể chạy offline. Lệnh đối chiếu hash các tệp đã phát hành và các truy vấn Explorer có fixture.
+
+Nếu nguồn lệch mùa, thiếu dữ liệu hoặc thiếu bản dịch coaching, lệnh thoát với mã `2` và giữ bộ dữ liệu đã phát hành. Hiện trang giới thiệu mùa của TFT Academy đã chuyển sang Set 19 nên nguồn này chặn đồng bộ Set 18. [Manifest](src/lib/data/meta-manifest.json)
+
+Nếu tiến trình cập nhật bị dừng đột ngột, kiểm tra PID trong `src/lib/data/.meta-publish-lock/owner.json` và chạy `bun run verify`. Nếu hash bị lệch, dùng các bản `previous` trong `.meta-stage-*` để khôi phục bộ dữ liệu theo manifest trước khi xác minh lại. Chỉ xóa khóa khi tiến trình đã dừng và bộ dữ liệu đã được xác minh.
+
+Để bổ sung coaching đã duyệt, dùng `bun run sync --coaching path/to/translations.json`. Tệp JSON là một mảng có `id` đội hình, `tips` gồm các trường `stage`, `tip_en`, `tip`, và hai trường `augmentsTip_en`, `augmentsTip`. Các chuỗi tiếng Anh phải khớp với nguồn. Bản dịch mới được kiểm tra số liệu trước khi dùng. Nếu chỉ bổ sung mẹo theo giai đoạn, để hai trường dành cho lõi là chuỗi rỗng.
+
+`scripts/build-tooltip-db.ts`, `scripts/build-official-vi.ts` và `scripts/apply-official-vi.ts` nhận đường dẫn thư mục staging. Lệnh sync dùng overlay tiếng Việt đã kiểm tra hash trong manifest. Script tạo overlay cho phép chuẩn bị bản mới để rà trước khi cập nhật dữ liệu nguồn. [Nguồn và xuất xứ](docs/source-attribution.md) · [Quy tắc đối chiếu](docs/parity-contract.md)

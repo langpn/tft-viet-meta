@@ -44,7 +44,8 @@ describe("local search", () => {
   test("generateRiotTeamCode generates exact 40-char team code for Draven Ezreal 9", () => {
     const draven = compsData.find((c: any) => c.title === "Draven Ezreal 9");
     expect(draven).toBeDefined();
-    const code = generateRiotTeamCode(draven.finalComp || draven.board);
+    if (!draven) throw new Error('Missing Draven reference comp');
+    const code = generateRiotTeamCode(draven.board);
     expect(code).toBe("023EB3ED3FF40443040140B3FB415000TFTSet18");
   });
 });

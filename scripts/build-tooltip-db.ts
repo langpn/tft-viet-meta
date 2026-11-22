@@ -1,9 +1,21 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { interpolateDescription } from '../src/lib/utils/augment-cleaner.ts';
+import manifest from '../src/lib/data/meta-manifest.json';
+import { fetchSource, sourceRows } from '../src/lib/server/source-fetch.ts';
+import { publishFiles } from '../src/lib/server/publish-data.ts';
 
-const RAW_DIR = path.resolve(import.meta.dir, '../data/raw');
-const OUT_FILE = path.resolve(import.meta.dir, '../src/lib/data/tooltip-db.json');
+const dataDir = process.argv[2];
+if (!dataDir) throw new Error('Usage: bun scripts/build-tooltip-db.ts <staging-data-dir>');
+
+const outFile = path.join(dataDir, 'tooltip-db.json');
+const { set, communityDragonRelease } = manifest;
+const sources = new Map<string, string>();
+const getJson = async (url: string) => {
+  const response = await fetchSource(url);
+  sources.set(url, response.sha256);
+  return JSON.parse(response.text);
+};
 
 function cleanText(txt: string | undefined | null): string {
   if (!txt) return '';
@@ -30,21 +42,26 @@ function cleanIcon(icon: string | undefined | null): string {
   return icon;
 }
 
-const cdragVi = JSON.parse(fs.readFileSync(path.join(RAW_DIR, 'cdragon_tft_vi_vn.json'), 'utf8'));
-const cdragEn = JSON.parse(fs.readFileSync(path.join(RAW_DIR, 'cdragon_tft_en_us.json'), 'utf8'));
-
-console.log('Fetching live TFT Academy official assets for Set 18...');
-const [itemsRes, champsRes, augsRes, traitsRes] = await Promise.all([
-  fetch('https://tftacademy.com/api/assets/items?set=18'),
-  fetch('https://tftacademy.com/api/assets/champions?set=18'),
-  fetch('https://tftacademy.com/api/assets/augments?set=18'),
-  fetch('https://tftacademy.com/api/assets/traits?set=18')
+const communityDragon = `https://raw.communitydragon.org/${communityDragonRelease}/cdragon/tft`;
+const catalog = async (locale: string) => {
+  const url = `${communityDragon}/${locale}.json`;
+  const data = await getJson(url);
+  sourceRows(data?.items, `${url} items`);
+  sourceRows(data?.sets?.[set]?.champions, `${url} champions`);
+  sourceRows(data?.sets?.[set]?.traits, `${url} traits`);
+  return data;
+};
+const academyAssets = async (kind: string) => {
+  const url = `https://tftacademy.com/api/assets/${kind}?set=${set}`;
+  const rows = sourceRows((await getJson(url))?.[kind], url);
+  if (rows.some((row) => typeof row.apiName !== 'string' || !row.apiName.trim() || (row.set != null && Number(row.set) !== set))) {
+    throw new Error(`${url}: expected valid Set ${set} asset records`);
+  }
+  return rows;
+};
+const [cdragVi, cdragEn, academyItems, academyChamps, academyAugs, academyTraits] = await Promise.all([
+  catalog('vi_vn'), catalog('en_us'), academyAssets('items'), academyAssets('champions'), academyAssets('augments'), academyAssets('traits')
 ]);
-
-const academyItems: any[] = (await itemsRes.json()).items || [];
-const academyChamps: any[] = (await champsRes.json()).champions || [];
-const academyAugs: any[] = (await augsRes.json()).augments || [];
-const academyTraits: any[] = (await traitsRes.json()).traits || [];
 
 console.log(`Fetched ${academyItems.length} items, ${academyChamps.length} champs, ${academyAugs.length} augs, ${academyTraits.length} traits from TFT Academy`);
 
@@ -59,8 +76,8 @@ for (const [k, v] of Object.entries(cdragVi.setData || {})) {
     }
   }
 }
-const set18TraitsVi = cdragVi.sets?.['18']?.traits || [];
-const set18TraitsEn = cdragEn.sets?.['18']?.traits || [];
+const set18TraitsVi = cdragVi.sets[set].traits;
+const set18TraitsEn = cdragEn.sets[set].traits;
 
 for (const t of set18TraitsVi) {
   if (t.name && t.icon) {
@@ -96,8 +113,8 @@ for (const c of academyChamps) {
 
 // 1. Process Champions
 const championsDb: Record<string, any> = {};
-const set18ChampsVi = cdragVi.sets?.['18']?.champions || [];
-const set18ChampsEn = cdragEn.sets?.['18']?.champions || [];
+const set18ChampsVi = cdragVi.sets[set].champions;
+const set18ChampsEn = cdragEn.sets[set].champions;
 
 for (const cVi of set18ChampsVi) {
   const apiName = cVi.apiName;
@@ -476,9 +493,11 @@ const untranslatedAugmentNames = new Set([
   'March of Progress'
 ]);
 
+const augmentByEnglishId = new Map<string, any>(allCdragItemsEn.map((item: any) => [item.apiName, item]));
 for (const acAug of academyAugs) {
   const apiName = acAug.apiName;
   const cVi = allCdragItemsVi.find((x: any) => x.apiName === apiName || x.name?.toLowerCase() === acAug.name?.toLowerCase()) || {};
+  const cEn = augmentByEnglishId.get(apiName) ?? augmentByEnglishId.get(cVi.apiName);
 
   const name_en = acAug.name || cVi.name || apiName;
   let name_vi = cVi.name || name_en;
@@ -487,7 +506,7 @@ for (const acAug of academyAugs) {
   }
 
   let desc_vi = cleanText(interpolateDescription(cVi.desc || acAug.description, cVi.effects || {}));
-  let desc_en = cleanText(acAug.description || interpolateDescription(cVi.desc, cVi.effects || {}));
+  let desc_en = cleanText(acAug.description || interpolateDescription(cEn?.desc, cEn?.effects || {}));
 
   if (name_en === 'Double Trouble') {
     desc_vi = 'Khi bạn ra sân đúng 2 bản sao của một tướng, cả hai đều nhận thêm 30% Sức Mạnh Công Kích, 30 Sức Mạnh Phép Thuật, 30 Giáp và 30 Kháng Phép. Khi bạn nâng cấp lên 3 sao, nhận 1 bản sao 2 sao.';
@@ -500,7 +519,7 @@ for (const acAug of academyAugs) {
   let subtitle_en = '';
   const ruleMatchVi = (cVi.desc || '').match(/<tftitemrules>(.*?)<\/tftitemrules>/i);
   if (ruleMatchVi) subtitle_vi = cleanText(ruleMatchVi[1]);
-  const ruleMatchEn = (cVi.desc || '').match(/<tftitemrules>(.*?)<\/tftitemrules>/i);
+  const ruleMatchEn = (cEn?.desc || '').match(/<tftitemrules>(.*?)<\/tftitemrules>/i);
   if (ruleMatchEn) subtitle_en = cleanText(ruleMatchEn[1]);
 
   const pbIcon = acAug.icon && acAug.collectionId && acAug.id
@@ -586,5 +605,8 @@ const fullDb = {
   traits: traitsDb
 };
 
-fs.writeFileSync(OUT_FILE, JSON.stringify(fullDb, null, 2), 'utf8');
-console.log('Successfully saved unified tooltip DB to:', OUT_FILE, `(${(fs.statSync(OUT_FILE).size / 1024 / 1024).toFixed(2)} MB)`);
+publishFiles(new Map([
+  [outFile, JSON.stringify(fullDb, null, 2)],
+  [path.join(dataDir, 'tooltip-sources.json'), JSON.stringify([...sources].map(([url, sha256]) => ({ url, sha256 })))],
+]));
+console.log('Built unified tooltip DB:', `(${(fs.statSync(outFile).size / 1024 / 1024).toFixed(2)} MB)`);

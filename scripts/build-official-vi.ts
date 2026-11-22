@@ -1,21 +1,28 @@
 /**
- * Builds a Vietnamese translation overlay from two official sources:
+ * Builds a Vietnamese translation overlay from two sources:
  *   1. CommunityDragon cdragon/tft/vi_vn.json  — Riot's own Vietnamese strings
  *   2. data.metatft.com lookups/TFTSet18_latest_vi_vn.json — Vietnamese descriptions
  *      (Riot's item descriptions in cdragon are null; metatft carries them)
  *
- * Output: src/lib/data/official-vi.json  keyed by Riot apiName.
+ * Output: official-vi.json in the staging directory, keyed by Riot apiName.
  * Never invents a translation: an id missing from both sources stays absent.
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import manifest from '../src/lib/data/meta-manifest.json';
+import { fetchSource, sourceRows } from '../src/lib/server/source-fetch.js';
+import { publishFiles } from '../src/lib/server/publish-data.js';
 
-const RIOT_URL = 'https://raw.communitydragon.org/latest/cdragon/tft/vi_vn.json';
-const METATFT_URL = 'https://data.metatft.com/lookups/TFTSet18_latest_vi_vn.json';
+const target = process.argv[2];
+if (!target || fs.realpathSync(target) === fs.realpathSync(path.resolve(import.meta.dir, '../src/lib/data'))) {
+  throw new Error('Usage: bun scripts/build-official-vi.ts <staging-data-dir>');
+}
+const RIOT_URL = `https://raw.communitydragon.org/${manifest.communityDragonRelease}/cdragon/tft/vi_vn.json`;
+const METATFT_URL = `https://data.metatft.com/lookups/TFTSet${manifest.set}_latest_vi_vn.json`;
 
 type Entry = { name_vi?: string; desc_vi?: string; ability_vi?: string };
 
-const out: Record<string, Entry> = {};
+const out: Record<string, Entry> = Object.create(null);
 let fromRiot = 0;
 let fromMeta = 0;
 
@@ -31,16 +38,16 @@ const put = (id: string, field: keyof Entry, value?: string | null, source?: 'ri
 
 // ---------- 1. Riot cdragon ----------
 console.log('Fetching Riot cdragon vi_vn...');
-const riot = await (await fetch(RIOT_URL)).json();
+const riot = JSON.parse((await fetchSource(RIOT_URL)).text);
 
-for (const item of riot.items || []) {
+for (const item of sourceRows(riot.items, RIOT_URL)) {
   if (!item?.apiName) continue;
   put(item.apiName, 'name_vi', item.name, 'riot');
   put(item.apiName, 'desc_vi', item.desc, 'riot');
 }
 
-const set18 = (riot.setData || []).find((s: any) => s.mutator === 'TFTSet18');
-if (!set18) throw new Error('TFTSet18 not found in cdragon');
+const set18 = (riot.setData || []).find((s: any) => s.mutator === `TFTSet${manifest.set}`);
+if (!set18) throw new Error(`TFTSet${manifest.set} not found in CommunityDragon`);
 
 for (const c of set18.champions || []) {
   if (!c?.apiName) continue;
@@ -55,7 +62,7 @@ for (const t of set18.traits || []) {
 
 // ---------- 2. metatft vi_vn (fill descriptions Riot leaves null) ----------
 console.log('Fetching metatft vi_vn lookups...');
-const meta = await (await fetch(METATFT_URL)).json();
+const meta = JSON.parse((await fetchSource(METATFT_URL)).text);
 
 for (const it of meta.items || []) {
   if (!it?.apiName) continue;
@@ -79,8 +86,8 @@ for (const t of meta.traits || []) {
   put(t.apiName, 'desc_vi', t.desc, 'meta');
 }
 
-const dest = path.resolve(import.meta.dir, '../src/lib/data/official-vi.json');
-fs.writeFileSync(dest, JSON.stringify(out, null, 2), 'utf-8');
+const dest = path.join(target, 'official-vi.json');
+publishFiles(new Map([[dest, JSON.stringify(out, null, 2)]]));
 
 const withName = Object.values(out).filter(e => e.name_vi).length;
 const withDesc = Object.values(out).filter(e => e.desc_vi).length;

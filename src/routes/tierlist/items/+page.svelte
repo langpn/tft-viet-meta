@@ -41,11 +41,11 @@
 </script>
 
 <svelte:head>
-  <title>Bảng Xếp Hạng Trang Bị ĐTCL Mùa 18 (Cổ Vật Ornn, Đồ Ánh Sáng, Đồ Ghép) · TFT Academy VI</title>
-  <meta name="title" content="Bảng Xếp Hạng Trang Bị ĐTCL Mùa 18 (Cổ Vật Ornn, Đồ Ánh Sáng, Đồ Ghép) · TFT Academy VI" />
-  <meta name="description" content="Bảng xếp hạng 123 trang bị ĐTCL Mùa 18 phân loại theo bậc S, A, B, C, D: Đồ ghép thường, Trang bị ánh sáng, 30 Cổ vật Ornn tiếng Việt và 21 Ấn tộc hệ chuẩn in-game." />
-  <meta property="og:title" content="Bảng Xếp Hạng Trang Bị ĐTCL Mùa 18 · TFT Academy VI" />
-  <meta property="og:description" content="Bảng xếp hạng 123 trang bị ĐTCL Mùa 18: Đồ ghép thường, Trang bị ánh sáng, 30 Cổ vật Ornn tiếng Việt và 21 Ấn tộc hệ." />
+  <title>Bảng Xếp Hạng Trang Bị ĐTCL Mùa {data.meta.set} (Cổ Vật Ornn, Đồ Ánh Sáng, Đồ Ghép) · TFT Academy VI</title>
+  <meta name="title" content="Bảng Xếp Hạng Trang Bị ĐTCL Mùa {data.meta.set} (Cổ Vật Ornn, Đồ Ánh Sáng, Đồ Ghép) · TFT Academy VI" />
+  <meta name="description" content="Bảng xếp hạng {data.meta.itemCount} trang bị ĐTCL Mùa {data.meta.set} phân loại theo bậc S, A, B, C, D: Đồ ghép thường, Trang bị ánh sáng, Cổ vật Ornn tiếng Việt và Ấn tộc hệ chuẩn in-game." />
+  <meta property="og:title" content="Bảng Xếp Hạng Trang Bị ĐTCL Mùa {data.meta.set} · TFT Academy VI" />
+  <meta property="og:description" content="Bảng xếp hạng {data.meta.itemCount} trang bị ĐTCL Mùa {data.meta.set}: Đồ ghép thường, Trang bị ánh sáng, Cổ vật Ornn tiếng Việt và Ấn tộc hệ." />
   <meta property="og:url" content="https://tft.langpn.xyz/tierlist/items" />
   <link rel="canonical" href="https://tft.langpn.xyz/tierlist/items" />
 </svelte:head>
@@ -58,7 +58,7 @@
     <div class="flex items-center gap-3 text-xs font-bold">
       <div class="px-3.5 py-1 rounded-full bg-[#161B26] border border-white/10 text-white flex items-center gap-2">
         <span class="text-slate-400">Bản Cập Nhật</span>
-        <span class="font-black text-amber-400">18.5c</span>
+        <span class="font-black text-amber-400">{data.meta.patch}</span>
       </div>
 
       <a href="https://tftacademy.com/tierlist/updates/comps" target="_blank" class="text-slate-400 hover:text-amber-400 transition-colors flex items-center gap-1">

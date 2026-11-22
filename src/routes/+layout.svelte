@@ -3,6 +3,7 @@
   import { page } from '$app/state';
   import GlobalTooltipProvider from '$components/tooltips/GlobalTooltipProvider.svelte';
   import { ChevronDown, Globe, Flame, Shield, Sparkles } from 'lucide-svelte';
+  import manifest from '$data/meta-manifest.json';
 
   let { children } = $props();
   let currentPath = $derived(page.url.pathname);
@@ -94,7 +95,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
   <!-- Global Technical & Branding Meta Tags -->
-  <meta name="keywords" content="DTCL, ĐTCL, TFT, dau truong chan ly, tft academy, doi hinh dtcl, trang bi dtcl, loi nang cap, tactics tools, meta dtcl mua 18" />
+  <meta name="keywords" content={`DTCL, ĐTCL, TFT, tft academy, đội hình, trang bị, lõi nâng cấp, tactics.tools, mùa ${manifest.set}`} />
   <meta name="robots" content="index, follow" />
   <meta name="language" content="Vietnamese" />
   <meta name="author" content="Lang Pham Ngoc" />
@@ -181,7 +182,7 @@
           </div>
 
           <a href="/learn/new-set" class="px-3 py-1.5 rounded-full {currentPath.startsWith('/learn/new-set') ? 'bg-amber-400 text-black shadow-md' : 'text-slate-300 hover:text-white hover:bg-white/5'} transition-all">
-            Thông Tin Mùa 18
+            Thông Tin Mùa {manifest.set}
           </a>
 
           <a href="/explorer" class="px-3 py-1.5 rounded-full {currentPath.startsWith('/explorer') ? 'bg-emerald-400 text-black shadow-md' : 'text-emerald-400 hover:bg-emerald-400/10'} transition-all">
@@ -227,7 +228,7 @@
       <a href="/tierlist/comps" class="hover:text-amber-400">Đội Hình</a>
       <a href="/tierlist/items" class="hover:text-amber-400">Trang Bị</a>
       <a href="/tierlist/augments" class="hover:text-amber-400">Lõi Nâng Cấp</a>
-      <a href="/learn/new-set" class="hover:text-amber-400">Mùa 18</a>
+      <a href="/learn/new-set" class="hover:text-amber-400">Mùa {manifest.set}</a>
       <a href="/explorer" class="hover:text-emerald-400">Khám Phá Explorer</a>
     </div>
     <p>© 2023 - 2026 TFT ACADEMY. Dữ liệu đối soát tiếng Việt chính thức từ Riot Games & tactics.tools.</p>

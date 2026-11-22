@@ -10,7 +10,7 @@ type ExplorerRow = {
 };
 
 export type ExplorerViewModel = {
-  status: "PASS";
+  status: "UNVERIFIED";
   sourceUrl: string;
   query: ExplorerQuery;
   base: {
@@ -29,7 +29,7 @@ export function buildExplorerResponse(
 ): ExplorerViewModel {
   const metrics = normalizeExplorerPayload(payload);
   return {
-    status: "PASS",
+    status: "UNVERIFIED",
     sourceUrl,
     query,
     base: {
@@ -50,13 +50,15 @@ export function buildExplorerResponse(
 
 function normalizeRows(rows: unknown[] | undefined): ExplorerRow[] {
   return (rows ?? []).map((entry) => {
-    const [id, values] = entry as [string, { count: number; place: number; top4: number; won: number; delta?: number }];
+    const tuple = entry as unknown[];
+    const id = String(tuple[0]);
+    const values = tuple.at(-1) as { count: number; place: number; top4: number; won: number; delta?: number };
     return {
       id,
       games: values.count,
-      averagePlacement: values.place / values.count,
-      topFourRate: values.top4 / values.count,
-      winRate: values.won / values.count,
+      averagePlacement: values.count > 0 ? values.place / values.count : 0,
+      topFourRate: values.count > 0 ? values.top4 / values.count : 0,
+      winRate: values.count > 0 ? values.won / values.count : 0,
       delta: values.delta,
     };
   });

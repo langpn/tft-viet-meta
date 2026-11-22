@@ -29,7 +29,7 @@ describe("Vietnamese canonical localization", () => {
   });
 
   test("Ornn Artifacts have official Riot Vietnamese translations", () => {
-    const itemsData = require("../src/lib/data/academy-items.json");
+    const itemsData: { categories: { artifacts: Record<string, { id: string; name_vi: string }[]> } } = require("../src/lib/data/academy-items.json");
     const artifacts = itemsData.categories?.artifacts || {};
     const all = Object.values(artifacts).flat();
     expect(all.length).toBeGreaterThan(0);

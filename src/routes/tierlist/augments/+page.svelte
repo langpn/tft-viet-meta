@@ -38,11 +38,11 @@
 </script>
 
 <svelte:head>
-  <title>Bảng Xếp Hạng Lõi Nâng Cấp ĐTCL Mùa 18 (Bạc, Vàng, Kim Cương) · TFT Academy VI</title>
-  <meta name="title" content="Bảng Xếp Hạng Lõi Nâng Cấp ĐTCL Mùa 18 (Bạc, Vàng, Kim Cương) · TFT Academy VI" />
-  <meta name="description" content="Bảng xếp hạng 249 lõi nâng cấp ĐTCL Mùa 18: Lõi Bạc, Lõi Vàng, Lõi Kim Cương theo từng giai đoạn 2-1, 3-2, 4-2. Bố cục kệ thu gọn chuẩn TFT Academy, tooltip tiếng Việt 100%." />
-  <meta property="og:title" content="Bảng Xếp Hạng Lõi Nâng Cấp ĐTCL Mùa 18 · TFT Academy VI" />
-  <meta property="og:description" content="Bảng xếp hạng 249 lõi nâng cấp ĐTCL Mùa 18 theo bậc S, A, B, C, D và giai đoạn vòng đấu." />
+  <title>Bảng Xếp Hạng Lõi Nâng Cấp ĐTCL Mùa {data.meta.set} (Bạc, Vàng, Kim Cương) · TFT Academy VI</title>
+  <meta name="title" content="Bảng Xếp Hạng Lõi Nâng Cấp ĐTCL Mùa {data.meta.set} (Bạc, Vàng, Kim Cương) · TFT Academy VI" />
+  <meta name="description" content="Bảng xếp hạng {data.meta.augmentCount} lõi nâng cấp ĐTCL Mùa {data.meta.set}: Lõi Bạc, Lõi Vàng, Lõi Kim Cương theo từng giai đoạn 2-1, 3-2, 4-2. Bố cục kệ thu gọn chuẩn TFT Academy, tooltip tiếng Việt 100%." />
+  <meta property="og:title" content="Bảng Xếp Hạng Lõi Nâng Cấp ĐTCL Mùa {data.meta.set} · TFT Academy VI" />
+  <meta property="og:description" content="Bảng xếp hạng {data.meta.augmentCount} lõi nâng cấp ĐTCL Mùa {data.meta.set} theo bậc S, A, B, C, D và giai đoạn vòng đấu." />
   <meta property="og:url" content="https://tft.langpn.xyz/tierlist/augments" />
   <link rel="canonical" href="https://tft.langpn.xyz/tierlist/augments" />
 </svelte:head>
@@ -55,7 +55,7 @@
     <div class="flex items-center gap-3 text-xs font-bold">
       <div class="px-3.5 py-1 rounded-full bg-[#161B26] border border-white/10 text-white flex items-center gap-2">
         <span class="text-slate-400">Bản Cập Nhật</span>
-        <span class="font-black text-amber-400">18.5c</span>
+        <span class="font-black text-amber-400">{data.meta.patch}</span>
       </div>
 
       <a href="https://tftacademy.com/tierlist/updates/comps" target="_blank" class="text-slate-400 hover:text-amber-400 transition-colors flex items-center gap-1">

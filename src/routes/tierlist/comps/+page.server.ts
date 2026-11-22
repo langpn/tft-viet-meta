@@ -1,8 +1,7 @@
 import type { PageServerLoad } from './$types';
 import { redirect } from '@sveltejs/kit';
-import compsData from '$data/academy-comps.json';
-import itemsData from '$data/academy-items.json';
-import augmentsData from '$data/academy-augments.json';
+import { compSlug, getCompDetail, toCompCard } from '$lib/comp-pages';
+import { getComps, getSiteMeta } from '$server/site-meta';
 
 export const load: PageServerLoad = async ({ url }) => {
   const tab = url.searchParams.get('tab');
@@ -13,25 +12,15 @@ export const load: PageServerLoad = async ({ url }) => {
     throw redirect(307, '/tierlist/augments');
   }
 
-  const compParam = url.searchParams.get('comp');
-  let initialComp = null;
-  if (compParam) {
-    const p = compParam.toLowerCase().trim();
-    initialComp = (compsData || []).find((c: any) => {
-      if (c.id === compParam || c.id?.toLowerCase() === p) return true;
-      if (c.slug === compParam || c.slug?.toLowerCase() === p) return true;
-      const titleSlug = (c.title || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-      if (titleSlug === p) return true;
-      const metaSlug = (c.metaTitle || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-      if (metaSlug === p) return true;
-      return false;
-    }) || null;
-  }
+  const comps = getComps();
+  const initialDetail = getCompDetail(comps, url.searchParams.get('comp'));
 
   return {
-    comps: compsData || [],
-    items: itemsData || { craftables: {}, radiants: {}, artifacts: {}, emblems: {} },
-    augments: augmentsData || { silver: {}, gold: {}, prismatic: {} },
-    initialCompId: initialComp ? initialComp.id : null
+    comps: comps.map(toCompCard),
+    initialCompId: initialDetail ? initialDetail.comp.id : null,
+    initialComp: initialDetail ? initialDetail.comp : null,
+    initialVariants: initialDetail ? initialDetail.variants : [],
+    topComps: comps.slice(0, 8).map((c) => ({ title: c.title, tier: c.tier, slug: compSlug(c) })),
+    meta: getSiteMeta()
   };
 };
