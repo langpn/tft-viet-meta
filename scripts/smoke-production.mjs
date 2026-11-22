@@ -18,6 +18,8 @@ const comp = await (await request('/api/comps/draven-ezreal-9')).json();
 assert(comp.comp?.board?.length > 0);
 const search = await (await request('/api/options?q=master%20yi')).json();
 assert(search.results.some((row) => row.name_en === 'Master Yi'));
+const tooltip = await (await request('/api/tooltip?type=item&id=DA_InfinityEdge')).json();
+assert.equal(tooltip.name_vi, 'Vô Cực Kiếm');
 await request('/api/explorer?patch=unknown', 400);
 await request('/learn/new-set');
 const sitemap = await request('/sitemap.xml');
