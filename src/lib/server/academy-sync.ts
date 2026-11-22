@@ -1032,7 +1032,7 @@ export async function syncAcademyData(options: SyncOptions): Promise<{
 
   log(`[AcademySync] Checking TFT Academy Set ${manifest.set} sources`);
   const [guides, itemTiers, augmentTiers, page] = await Promise.all([
-    getRows('/api/tierlist/comps', 'guides'),
+    getRows(`/api/tierlist/comps?set=${manifest.set}`, 'guides'),
     getRows(`/api/tierlist/items?set=${manifest.set}`, 'items_tierlists'),
     getRows(`/api/tierlist/augments?set=${manifest.set}`, 'augments_tierlists'),
     get(`${origin}/learn/new-set`),
