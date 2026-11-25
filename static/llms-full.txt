@@ -18,18 +18,16 @@
 ## Đội hình bậc S và A
 - [AP Fast 9](https://tft.langpn.xyz/tierlist/comps?comp=set-18-ap-95) (S)
 - [Mamawood](https://tft.langpn.xyz/tierlist/comps?comp=set-18-mamawood) (S)
-- [Adaptor Reroll](https://tft.langpn.xyz/tierlist/comps?comp=set-18-adaptor-reroll) (A)
+- [Adaptor Reroll](https://tft.langpn.xyz/tierlist/comps?comp=set-18-adaptor-reroll) (S)
 - [Tee-moo](https://tft.langpn.xyz/tierlist/comps?comp=set-18-sprykin-teemo-copy) (A)
 - [Solar Blossom](https://tft.langpn.xyz/tierlist/comps?comp=set-18-solara-yunara) (A)
 - [Draven Ezreal 9](https://tft.langpn.xyz/tierlist/comps?comp=set-18-elderwood-executioners-copy) (A)
 - [Riftbeast Reroll](https://tft.langpn.xyz/tierlist/comps?comp=set-18-riftbeast-reroll) (A)
-- [Tempo Riftbeast](https://tft.langpn.xyz/tierlist/comps?comp=set-18-tempo-riftbeast) (A)
-- [Ahri Morgana](https://tft.langpn.xyz/tierlist/comps?comp=set-18-ahri-morgana) (A)
-- [Primal Sivir](https://tft.langpn.xyz/tierlist/comps?comp=set-18-primal-hunters) (A)
 - [Azir Rammus](https://tft.langpn.xyz/tierlist/comps?comp=set-18-azir-rammus) (A)
+- [Tempo Riftbeast](https://tft.langpn.xyz/tierlist/comps?comp=set-18-tempo-riftbeast) (A)
+- [Zyra Juggernaut](https://tft.langpn.xyz/tierlist/comps?comp=set-18-6-juggernaut-ap) (A)
 - [Cursed Crown Kayle](https://tft.langpn.xyz/tierlist/comps?comp=set-18-solar-kayle-copy) (S tình huống)
 - [10 Riftbeast](https://tft.langpn.xyz/tierlist/comps?comp=set-18-10-riftbeast) (A)
-- [Ahri Zyra](https://tft.langpn.xyz/tierlist/comps?comp=set-18-spellweavers) (A)
 - [Draven Dragon 9](https://tft.langpn.xyz/tierlist/comps?comp=set-18-dragon-princess) (A)
 - [Yi Rengar](https://tft.langpn.xyz/tierlist/comps?comp=set-18-adaptor-reroll-copy) (A)
 
@@ -47,7 +45,7 @@
 - Tướng chống chịu Hecarim (Giáp Máu Warmog, Thú Tượng Thạch Giáp, Lời Thề Hộ Vệ)
 - Lối chơi 3-Cost Reroll (MEDIUM)
 
-### [A] Adaptor Reroll
+### [S] Adaptor Reroll
 - Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-adaptor-reroll
 - Tướng gánh chính Master Yi (Cuồng Đao Guinsoo, Áo Choàng Bóng Tối, Quyền Năng Khổng Lồ)
 - Tướng chống chịu Vi (Giáp Máu Warmog, Thú Tượng Thạch Giáp, Thú Tượng Thạch Giáp)
@@ -77,29 +75,41 @@
 - Tướng chống chịu Krug (Giáp Máu Warmog, Thú Tượng Thạch Giáp, Giáp Tâm Linh)
 - Lối chơi 1-Cost Reroll (EASY)
 
+### [A] Azir Rammus
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-azir-rammus
+- Tướng gánh chính Azir (Cuồng Đao Guinsoo, Mũ Phù Thủy Rabadon, Kiếm Súng Hextech)
+- Tướng chống chịu Rammus (Vương Miện Hoàng Gia, Thú Tượng Thạch Giáp, Thú Tượng Thạch Giáp)
+- Lối chơi 3-Cost Reroll (EASY)
+
 ### [A] Tempo Riftbeast
 - Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-tempo-riftbeast
 - Tướng gánh chính Brambleback (Cuồng Đao Guinsoo, Áo Choàng Bóng Tối, Áo Choàng Thủy Ngân)
 - Tướng chống chịu Krug (Giáp Máu Warmog, Giáp Tâm Linh, Thú Tượng Thạch Giáp)
 - Lối chơi Fast 9 (MEDIUM)
 
-### [A] Ahri Morgana
+### [A] Zyra Juggernaut
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-6-juggernaut-ap
+- Tướng gánh chính Zyra (Ngọn Giáo Shojin, Quyền Trượng Thiên Thần, Kiếm Súng Hextech)
+- Tướng chống chịu Amumu (Giáp Máu Warmog, Áo Choàng Gai, Vuốt Rồng)
+- Lối chơi 4-Cost Fast 8 (HARD)
+
+### [B] Warwick Ravager
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-warwick-rr
+- Tướng gánh chính Warwick (Móng Vuốt Sterak, Quyền Năng Khổng Lồ, Ngọn Giáo Shojin)
+- Tướng chống chịu Malphite (Vương Miện Hoàng Gia, Thú Tượng Thạch Giáp, Giáp Máu Warmog)
+- Lối chơi 2-Cost Reroll (MEDIUM)
+
+### [B] Ahri Morgana
 - Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-ahri-morgana
 - Tướng gánh chính Ahri (Găng Bảo Thạch, Chùy Đoản Côn, Ngọn Giáo Shojin)
 - Tướng chống chịu Sett (Giáp Máu Warmog, Áo Choàng Gai, Vuốt Rồng)
 - Lối chơi 4-Cost Fast 8 (MEDIUM)
 
-### [A] Primal Sivir
+### [B] Primal Sivir
 - Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-primal-hunters
 - Tướng gánh chính Sivir (Vô Cực Kiếm, Kiếm Tử Thần, Bùa Xanh)
 - Tướng chống chịu Amumu (Giáp Máu Warmog, Giáp Tâm Linh, Thú Tượng Thạch Giáp)
 - Lối chơi 4-Cost Fast 8 (MEDIUM)
-
-### [A] Azir Rammus
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-azir-rammus
-- Tướng gánh chính Azir (Cuồng Đao Guinsoo, Mũ Phù Thủy Rabadon, Kiếm Súng Hextech)
-- Tướng chống chịu Rammus (Vương Miện Hoàng Gia, Thú Tượng Thạch Giáp, Thú Tượng Thạch Giáp)
-- Lối chơi 3-Cost Reroll (EASY)
 
 ### [B] Elderwood Executioners
 - Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-elderwood-executioners
@@ -125,18 +135,6 @@
 - Tướng chống chịu Rammus (Nỏ Sét, Áo Choàng Lửa, Trái Tim Kiên Định)
 - Lối chơi 3-Cost Reroll (EASY)
 
-### [B] Warwick Ravager
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-warwick-rr
-- Tướng gánh chính Warwick (Móng Vuốt Sterak, Quyền Năng Khổng Lồ, Ngọn Giáo Shojin)
-- Tướng chống chịu Malphite (Vương Miện Hoàng Gia, Thú Tượng Thạch Giáp, Giáp Máu Warmog)
-- Lối chơi 2-Cost Reroll (MEDIUM)
-
-### [B] Zyra Juggernaut
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-6-juggernaut-ap
-- Tướng gánh chính Zyra (Ngọn Giáo Shojin, Quyền Trượng Thiên Thần, Kiếm Súng Hextech)
-- Tướng chống chịu Amumu (Giáp Máu Warmog, Áo Choàng Gai, Vuốt Rồng)
-- Lối chơi 4-Cost Fast 8 (HARD)
-
 ### [B] 6 Juggernaut AD
 - Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-6-juggernaut-ap-copy
 - Tướng gánh chính Amumu (Giáp Máu Warmog, Áo Choàng Gai, Vuốt Rồng)
@@ -155,13 +153,13 @@
 - Tướng chống chịu Rakan (Thú Tượng Thạch Giáp, Giáp Tâm Linh, Giáp Máu Warmog)
 - Lối chơi 1-Cost Reroll (EASY)
 
-### [B] Eclipse Kayle
+### [C] Eclipse Kayle
 - Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-eclipse-kayle
 - Tướng gánh chính Kayle (Cuồng Đao Guinsoo, Mũ Phù Thủy Rabadon, Bùa Đỏ)
 - Tướng chống chịu Sejuani (Thú Tượng Thạch Giáp, Giáp Tâm Linh, Giáp Máu Warmog)
 - Lối chơi 2-Cost Reroll (EASY)
 
-### [B] Solar Melee
+### [C] Solar Melee
 - Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-solar-melee
 - Tướng gánh chính Akali (Găng Bảo Thạch, Bàn Tay Công Lý, Áo Choàng Bóng Tối)
 - Tướng chống chịu Ornn (Thú Tượng Thạch Giáp, Vương Miện Hoàng Gia, Giáp Máu Warmog)
@@ -221,12 +219,6 @@
 - Tướng chống chịu Ornn (Thú Tượng Thạch Giáp, Giáp Máu Warmog, Giáp Tâm Linh)
 - Lối chơi 2-Cost Reroll (EASY)
 
-### [X] Aphelios Elderwood
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-aphelios-vanguards-copy
-- Tướng gánh chính Aphelios (Ấn Thần Rừng, Cuồng Đao Guinsoo, Thịnh Nộ Thủy Quái)
-- Tướng chống chịu Hecarim (Vương Miện Hoàng Gia, Giáp Máu Warmog, Giáp Vai Nguyệt Thần)
-- Lối chơi 4-Cost Fast 8 (MEDIUM)
-
 ### [X] Elderwood Veigar
 - Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-veigar-consuming-flora-copy
 - Tướng gánh chính Veigar (Găng Bảo Thạch, Bùa Xanh, Lõi Bình Minh)
@@ -250,6 +242,12 @@
 - Tướng gánh chính Lux (Ngọn Giáo Shojin, Mũ Phù Thủy Rabadon)
 - Tướng chống chịu Amumu (Giáp Máu Warmog, Áo Choàng Gai, Vuốt Rồng)
 - Lối chơi 4-Cost Fast 8 (HARD)
+
+### [X] Aphelios Elderwood
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-aphelios-vanguards-copy
+- Tướng gánh chính Aphelios (Ấn Thần Rừng, Cuồng Đao Guinsoo, Thịnh Nộ Thủy Quái)
+- Tướng chống chịu Hecarim (Vương Miện Hoàng Gia, Giáp Máu Warmog, Giáp Vai Nguyệt Thần)
+- Lối chơi 4-Cost Fast 8 (MEDIUM)
 
 ### [X] Coven Elise
 - Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-coven-elise
@@ -335,13 +333,13 @@
 - Tướng chống chịu Rakan (Lời Thề Hộ Vệ, Thú Tượng Thạch Giáp, Vương Miện Hoàng Gia)
 - Lối chơi 3-Cost Reroll (MEDIUM)
 
-### [B] Solar Kayle
+### [C] Solar Kayle
 - Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-solar-kayle
 - Tướng gánh chính Kayle (Cuồng Đao Guinsoo, Đao Chớp, Mũ Phù Thủy Rabadon)
 - Tướng chống chịu Ornn (Thú Tượng Thạch Giáp, Giáp Máu Warmog, Giáp Tâm Linh)
 - Lối chơi 2-Cost Reroll (EASY)
 
-### [A] Ahri Zyra
+### [B] Ahri Zyra
 - Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-spellweavers
 - Tướng gánh chính Ahri (Găng Bảo Thạch, Chùy Đoản Côn, Ngọn Giáo Shojin)
 - Tướng chống chịu Sett (Giáp Máu Warmog, Áo Choàng Gai, Giáp Tâm Linh)
