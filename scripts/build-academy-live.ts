@@ -4,7 +4,7 @@ import { resolve } from 'node:path';
 import previousComps from '../src/lib/data/academy-comps.json';
 import learning from '../src/lib/data/academy-new-set.json';
 import { parseAugments, parseComps, parseItems } from '../src/lib/server/academy-sync.js';
-import { applyCoachingTranslations } from '../src/lib/server/coaching-localization.js';
+import { applyCoachingTranslations, type CoachingGuide } from '../src/lib/server/coaching-localization.js';
 import { publishFiles } from '../src/lib/server/publish-data.js';
 import { fetchSource, sourceRows } from '../src/lib/server/source-fetch.js';
 import { latestTierlists } from './build-academy-set19.js';
@@ -42,7 +42,11 @@ export async function buildAcademyLive(fetchFn = fetch) {
   guides.sort((a, b) => a.displayIndex - b.displayIndex || a.id.localeCompare(b.id));
   const comps = parseComps(guides).map((comp) => ({ ...comp, set }));
   for (const comp of comps) comp.tips = comp.tips.filter((tip) => tip.tip.trim());
-  const englishCoaching = applyCoachingTranslations(comps, previousComps, [], true);
+  const coachingPath = resolve('coaching-live-translations.json');
+  const reviewed: CoachingGuide[] = existsSync(coachingPath)
+    ? JSON.parse(readFileSync(coachingPath, 'utf8'))
+    : [];
+  const englishCoaching = applyCoachingTranslations(comps, previousComps, reviewed, true);
   return {
     set, patch, updatedAt: new Date().toISOString(),
     sources: [page, ...data].map(({ sha256 }, index) => ({ url: origin + endpoints[index], sha256 })),
