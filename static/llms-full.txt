@@ -22,8 +22,8 @@
 - [Tee-moo](https://tft.langpn.xyz/tierlist/comps?comp=set-18-sprykin-teemo-copy) (A)
 - [Solar Blossom](https://tft.langpn.xyz/tierlist/comps?comp=set-18-solara-yunara) (A)
 - [Draven Ezreal 9](https://tft.langpn.xyz/tierlist/comps?comp=set-18-elderwood-executioners-copy) (A)
-- [Riftbeast Reroll](https://tft.langpn.xyz/tierlist/comps?comp=set-18-riftbeast-reroll) (A)
 - [Azir Rammus](https://tft.langpn.xyz/tierlist/comps?comp=set-18-azir-rammus) (A)
+- [Riftbeast Reroll](https://tft.langpn.xyz/tierlist/comps?comp=set-18-riftbeast-reroll) (A)
 - [Tempo Riftbeast](https://tft.langpn.xyz/tierlist/comps?comp=set-18-tempo-riftbeast) (A)
 - [Zyra Juggernaut](https://tft.langpn.xyz/tierlist/comps?comp=set-18-6-juggernaut-ap) (A)
 - [Cursed Crown Kayle](https://tft.langpn.xyz/tierlist/comps?comp=set-18-solar-kayle-copy) (S tình huống)
@@ -69,17 +69,17 @@
 - Tướng chống chịu Maokai (Giáp Máu Warmog, Thú Tượng Thạch Giáp, Áo Choàng Gai)
 - Lối chơi Fast 9 (HARD)
 
-### [A] Riftbeast Reroll
-- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-riftbeast-reroll
-- Tướng gánh chính Pebbles (Bùa Xanh, Mũ Phù Thủy Rabadon, Găng Bảo Thạch)
-- Tướng chống chịu Krug (Giáp Máu Warmog, Thú Tượng Thạch Giáp, Giáp Tâm Linh)
-- Lối chơi 1-Cost Reroll (EASY)
-
 ### [A] Azir Rammus
 - Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-azir-rammus
 - Tướng gánh chính Azir (Cuồng Đao Guinsoo, Mũ Phù Thủy Rabadon, Kiếm Súng Hextech)
 - Tướng chống chịu Rammus (Vương Miện Hoàng Gia, Thú Tượng Thạch Giáp, Thú Tượng Thạch Giáp)
 - Lối chơi 3-Cost Reroll (EASY)
+
+### [A] Riftbeast Reroll
+- Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-riftbeast-reroll
+- Tướng gánh chính Pebbles (Bùa Xanh, Mũ Phù Thủy Rabadon, Găng Bảo Thạch)
+- Tướng chống chịu Krug (Giáp Máu Warmog, Thú Tượng Thạch Giáp, Giáp Tâm Linh)
+- Lối chơi 1-Cost Reroll (EASY)
 
 ### [A] Tempo Riftbeast
 - Link https://tft.langpn.xyz/tierlist/comps?comp=set-18-tempo-riftbeast
